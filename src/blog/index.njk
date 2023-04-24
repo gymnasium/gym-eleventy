@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+permalink: /blog/
+title: Blog
+---
+<h1>Blog</h1>
+<p>These are our blog article titles imported from Medium.</p>
+<ul>
+{% for article in data.items.blog %}
+	<li><a href="{{ article.link }}" >{{ article.pubDate }} {{ article.title }}</a></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,18 @@
+---javascript
+
+module.exports = {
+  layout: 'layouts/base.njk',
+  eleventyComputed: {
+    title: (data) => `About`,
+    imported: (data) => {
+
+    }
+  }
+}
+---
+{% for items in data.items.pages %}
+  {%- if items.url == '/about/' -%}
+  [This content is imported directly from gymcms via a JSON feed]
+	{{ items.content | safe }}
+  {% endif %}
+{% endfor %}

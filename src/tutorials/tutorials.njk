@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: data.items.tutorials
+    size: 1
+    alias: tutorial
+permalink: "tutorials/{{ tutorial.title | slugify }}/"
+title: Tutorials
+---
+<h1>{{ tutorial.title }}</h1>
+<h4>{{ tutorial.id }}</h4>
+<p>{{ tutorial.description }}</p>
+{{ content | safe }}

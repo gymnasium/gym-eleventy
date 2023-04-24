@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: data.items.courses
+    size: 1
+    alias: course
+permalink: "courses/{{ course.title | slugify }}/"
+title: Courses
+---
+<h1>{{ course.title }}</h1>
+<h4>{{ course.id }}</h4>
+<p>{{ course.description }}</p>
+{{ content | safe }}

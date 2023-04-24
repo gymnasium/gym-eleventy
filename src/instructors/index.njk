@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+permalink: /instructors/
+title: Instructors
+---
+<h1>Bios</h1>
+<p>This is a list of all the Gymnasium instructors.</p>
+<ul>
+{% for bio in data.items.bios %}
+	<li><a href="/instructors/{{ bio.name | slugify }}" >{{ bio.name }}</a></li>
+{% endfor %}
+</ul>

@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+permalink: /courses/
+title: Courses
+---
+<h1>Courses</h1>
+<p>This is the courses index.</p>
+<ul>
+{% for course in data.items.courses %}
+	<li><a href="/courses/{{ course.title | slugify }}" >{{ course.title }}</a></li>
+{% endfor %}
+</ul>

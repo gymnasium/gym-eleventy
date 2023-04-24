@@ -1,0 +1,15 @@
+// | -------------------------------------------------------------
+// | Root
+// | -------------------------------------------------------------
+
+@use "colors" as *;
+
+:root {
+  --font-family-default: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+}

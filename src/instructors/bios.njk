@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: data.items.bios
+    size: 1
+    alias: bio
+permalink: "instructors/{{ bio.name | slugify }}/"
+title: "{{ bio.name }} | Instructors | {{ site.title}}"
+---
+<h1>{{ bio.name }}</h1>
+<h4>{{ bio.id }}</h4>
+<p>{{ bio.description }}</p>
+{{ content | safe }}

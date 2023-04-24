@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+permalink: /webinars/
+title: Webinars
+---
+<h1>Webinars</h1>
+<p>This is the webinars index.</p>
+<ul>
+{% for webinar in data.items.webinars %}
+	<li><a href="/webinars/{{ webinar.title | slugify }}" >{{ webinar.title }}</a></li>
+{% endfor %}
+</ul>

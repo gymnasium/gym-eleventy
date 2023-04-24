@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    {%- for link in site.navigation -%}
+    <li>
+      <a href="{{link.url}}">{{link.text}}</a>
+    </li>
+    {%- endfor -%}
+  </ul>
+</nav>
