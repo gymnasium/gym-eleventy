@@ -7,6 +7,6 @@ title: Instructors
 <p>This is a list of all the Gymnasium instructors.</p>
 <ul>
 {% for bio in data.items.bios %}
-	<li><a href="/instructors/{{ bio.name | slugify }}" >{{ bio.name }}</a></li>
+	<li><a href="/instructors/{{ bio.title | slugify }}" >{{ bio.title }}</a></li>
 {% endfor %}
 </ul>

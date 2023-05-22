@@ -9,5 +9,6 @@ title: Courses
 ---
 <h1>{{ course.title }}</h1>
 <h4>{{ course.id }}</h4>
+<img src={{site.cms_url}}{{course.img}} alt="Image for {{course.title}}">
 <p>{{ course.description }}</p>
 {{ content | safe }}

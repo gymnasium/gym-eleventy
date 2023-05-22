@@ -10,18 +10,13 @@ module.exports = async function() {
 
     let feed = await parser.parseURL(site.blog_feed);
  
-    let bios = await EleventyFetch(`${source}/feeds/bios.json`, {
-      duration: "1h",
+    let complete = await EleventyFetch(`${source}/feeds/complete.json`, {
+      duration: "1m",
       type: "json"
     });
 
     let pages = await EleventyFetch(`${source}/feeds/pages.json`, {
       duration: "1m",
-      type: "json"
-    });
-
-    let courses = await EleventyFetch(`${source}/feeds/courses.json`, {
-      duration: "1h",
       type: "json"
     });
 
@@ -37,8 +32,8 @@ module.exports = async function() {
 
     return {
       items: {
-        bios: bios.items,
-        courses: courses.items,
+        bios: complete.items.bios,
+        courses: complete.items.courses,
         webinars: webinars.items,
         tutorials: tutorials.items,
         blog: feed.items,
@@ -46,9 +41,9 @@ module.exports = async function() {
       }
     };
   } catch(e) {
-    console.warn( "Failed fetching courses.", e );
+    console.warn( "Failed fetching data feeds.", e );
     return {
-      courses: false
+      items: false
     };
   }
 };
