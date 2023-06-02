@@ -5,7 +5,8 @@ pagination:
     size: 1
     alias: bio
 permalink: "instructors/{{ bio.title | slugify }}/"
-title: "{{ bio.title }} | Instructors"
+eleventyComputed:
+    title: "{{ bio.title }} | Instructors"
 ---
 <h1>{{ bio.title }}</h1>
 <h4>{{ bio.id }}</h4>

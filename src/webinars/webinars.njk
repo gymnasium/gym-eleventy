@@ -5,7 +5,8 @@ pagination:
     size: 1
     alias: webinar
 permalink: "webinars/{{ webinar.title | slugify }}/"
-title: Webinars
+eleventyComputed:
+    title: "{{ webinar.title }} | Webinars"
 ---
 <h1>{{ webinar.title }}</h1>
 <h4>{{ webinar.id }}</h4>
