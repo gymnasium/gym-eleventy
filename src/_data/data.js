@@ -15,7 +15,7 @@ module.exports = async function() {
       type: "json"
     });
 
-    let pages = await EleventyFetch(`${CMS_URL}/feeds/pages.json`, {
+    let pages = await EleventyFetch(`${CMS_URL}/feeds/generated-pages.json`, {
       duration: ENV === 'local' ? 0 : '1m',
       type: "json"
     });
