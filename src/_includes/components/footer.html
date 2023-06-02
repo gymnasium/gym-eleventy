@@ -1,9 +1,21 @@
 <footer>
-  <ul>
-    {%- for link in site.social -%}
-    <li>
-      <a href="{{link.url}}">{{link.text}}</a>
-    </li>
-    {%- endfor -%}
-  </ul>
+  {%- for item in data.items.config.navigation.footer -%}
+  <div id="{{item.title | slugify}}" class="footer-section {{item.title | slugify}}">
+    <h4>{{item.title}}</h4>
+    <ul>
+      {%- for link in item.links -%}
+      <li><a href="{{link.href}}" rel="{{link.rel}}" target="{{link.target}}">{{link.title}}</a></li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- endfor -%}
+  <div class="footer-section">
+    <h4>Development Links</h4>
+    <ul>
+      <li><a href="https://thegymnasium.com">Gymnasium (Production)</a></li>
+      <li><a href="{{data.items.config.astro_url}}">Gym Astro</a></li>
+      <li><a href="{{data.items.config.eleventy_url}}">Gym Eleventy</a></li>
+      <li><a href="{{data.items.config.cms_url}}">Gym Soy Data</a></li>
+    </ul>
+  </div>
 </footer>

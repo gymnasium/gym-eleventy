@@ -2,40 +2,35 @@ const EleventyFetch = require('@11ty/eleventy-fetch');
 const Parser = require('rss-parser');
 let parser = new Parser();
 
-const site = require('./site.js');
-const source = site.cms_url;
+const ENV = process.env.ENV;
+const CMS_URL = ENV === 'local' ? 'http://localhost:4000' : 'https://data.gym.soy';
+// const CMS_URL = 'https://data.gym.soy';
+console.log(ENV, CMS_URL);
 
 module.exports = async function() {
   try {
 
-    let feed = await parser.parseURL(site.blog_feed);
- 
-    let complete = await EleventyFetch(`${source}/feeds/complete.json`, {
-      duration: "1m",
+    let complete = await EleventyFetch(`${CMS_URL}/feeds/complete.json`, {
+      duration: ENV === 'local' ? 0 : '1m',
       type: "json"
     });
 
-    let pages = await EleventyFetch(`${source}/feeds/pages.json`, {
-      duration: "1m",
+    let pages = await EleventyFetch(`${CMS_URL}/feeds/pages.json`, {
+      duration: ENV === 'local' ? 0 : '1m',
       type: "json"
     });
 
-    let webinars = await EleventyFetch(`${source}/feeds/webinars.json`, {
-      duration: "1h",
-      type: "json"
-    });
+    let feed_url = await complete.items.config.feeds[0].blog;
 
-    let tutorials = await EleventyFetch(`${source}/feeds/tutorials.json`, {
-      duration: "1h",
-      type: "json"
-    });
+    let feed = await parser.parseURL(feed_url);
 
     return {
       items: {
         bios: complete.items.bios,
+        config: complete.items.config,
         courses: complete.items.courses,
-        webinars: webinars.items,
-        tutorials: tutorials.items,
+        webinars: complete.items.webinars,
+        tutorials: complete.items.tutorials,
         blog: feed.items,
         pages: pages.items
       }

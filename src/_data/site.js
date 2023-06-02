@@ -2,7 +2,7 @@ module.exports = {
   title: "Aquent Gymnasium",
   description: "The alarm still oscillated, louder here, the rear of the arcade showed him broken lengths of damp chipboard and the chassis of a gutted game console.",
   url: "https://thegymnasium.com",
-  cms_url: "https://data--thegymcms.netlify.app",
+  cms_url: "https://data.gym.soy",
   lms_url: "https://learn.gym.soy",
   blog_feed: "https://medium.com/feed/gymnasium",
   navigation: [

@@ -5,10 +5,10 @@ pagination:
     size: 1
     alias: course
 permalink: "courses/{{ course.title | slugify }}/"
-title: Courses
+title: "{{ course.title }} | Courses"
 ---
 <h1>{{ course.title }}</h1>
 <h4>{{ course.id }}</h4>
-<img src={{site.cms_url}}{{course.img}} alt="Image for {{course.title}}">
+<img src="{{data.items.config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">
 <p>{{ course.description }}</p>
 {{ content | safe }}

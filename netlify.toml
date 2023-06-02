@@ -1,7 +1,6 @@
 [build]
-  command = "eleventy"
+  command = "ENV=production npx @11ty/eleventy"
   publish = "dist"
-
 
 [[plugins]]
 package = "netlify-plugin-cache"
