@@ -8,9 +8,7 @@ module.exports = function(eleventyConfig) {
     return string.toUpperCase();
   });
 
-  eleventyConfig.addFilter("year", () => {
-    return (new Date()).toLocaleString('en-US', {year: 'numeric'});
-  });
+  eleventyConfig.addShortcode("year", () => `${(new Date()).toLocaleString('en-US', {year: 'numeric'})}`);
 
   eleventyConfig.addPlugin(pluginRev);
 
