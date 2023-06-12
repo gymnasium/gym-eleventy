@@ -3,6 +3,15 @@ const eleventySass = require("eleventy-sass");
 const pluginRev = require("eleventy-plugin-rev");
 
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.addAsyncFilter("uppercase", async function(string) {
+    return string.toUpperCase();
+  });
+
+  eleventyConfig.addFilter("year", () => {
+    return (new Date()).toLocaleString('en-US', {year: 'numeric'});
+  });
+
   eleventyConfig.addPlugin(pluginRev);
 
   eleventyConfig.addPlugin(eleventySass, {

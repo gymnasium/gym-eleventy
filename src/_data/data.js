@@ -4,8 +4,6 @@ let parser = new Parser();
 
 const ENV = process.env.ENV;
 const CMS_URL = ENV === 'local' ? 'http://localhost:4000' : 'https://data.gym.soy';
-// const CMS_URL = 'https://data.gym.soy';
-console.log(ENV, CMS_URL);
 
 module.exports = async function() {
   try {
