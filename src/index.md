@@ -37,3 +37,4 @@ Welcome to the Gymnasium 11ty test area, in which we explore its various feature
 - https://www.brycewray.com/posts/2022/12/things-worth-watching-astro-eleventy-pipelines/
 - https://11ty.rocks/eleventyjs/
 - https://rphunt.github.io/eleventy-walkthrough/
+- https://bryanlrobinson.com/blog/11ty-second-11ty-creating-template-filters/
