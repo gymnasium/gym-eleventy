@@ -1,12 +1,18 @@
 <nav>
-  <ul>
-    <li>
-      <a href="/">Home</a>
-    </li>
-    {%- for link in data.items.config.navigation.main -%}
-    <li>
-      <a href="{{link.href}}">{{link.title}}</a>
-    </li>
-    {%- endfor -%}
-  </ul>
+  <p>{{data.items.config.logos.main.srcset}}</p>
+  <a href="/" >
+    <img src="{{data.items.config.cms_url}}{{data.items.config.logos.main.src}}" srcset="{{data.items.config.cms_url}}{{data.items.config.logos.main.srcset}}" alt="{{data.items.config.meta.author}}">
+  </a>
+  <div class="wrapper">
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      {%- for link in data.items.config.navigation.main -%}
+      <li>
+        <a href="{{link.href}}">{{link.title}}</a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
 </nav>
