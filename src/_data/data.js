@@ -18,7 +18,7 @@ module.exports = async function() {
       type: "json"
     });
 
-    let feed_url = await complete.items.config.feeds[0].blog;
+    let feed_url = await complete.items.config.feeds.blog;
 
     let feed = await parser.parseURL(feed_url);
 
