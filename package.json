@@ -5,19 +5,37 @@
   "main": "index.js",
   "scripts": {
     "dev": "ENV=local npx @11ty/eleventy --serve",
+    "start": "ENV=local npx @11ty/eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "@edx/browserslist-config": "^1.2.0",
+    "@edx/frontend-build": "^12.9.0",
+    "@edx/reactifex": "^2.2.0"
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^4.0.0",
+    "@edx/brand": "npm:@edx/brand-openedx@1.2.0",
+    "@edx/frontend-platform": "^4.6.0",
+    "@edx/paragon": "^20.45.3",
     "eleventy-plugin-rev": "^1.1.1",
     "eleventy-sass": "^2.2.1",
     "netlify-plugin-cache": "^1.0.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-helmet": "6.1.0",
+    "react-redux": "7.2.9",
+    "react-router": "5.3.4",
+    "react-router-dom": "5.3.4",
+    "redux": "4.2.1",
+    "redux-devtools-extension": "2.13.9",
+    "redux-logger": "3.0.6",
+    "redux-saga": "1.2.3",
+    "redux-thunk": "2.4.2",
     "rss-parser": "^3.13.0"
   }
 }
