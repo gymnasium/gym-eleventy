@@ -1,5 +1,5 @@
 <footer>
-  {%- for item in data.items.config.navigation.footer -%}
+  {%- for item in config.navigation.footer -%}
   <div id="{{item.title | slugify}}" class="footer-section {{item.title | slugify}}">
     <h4>{{item.title}}</h4>
     <ul>

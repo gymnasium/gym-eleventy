@@ -6,9 +6,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% if title %}{{title}} | {% endif %}{{data.items.config.meta.title}}</title>
-<meta name="description" content="{% if description %}{{description}}{% else %}{{data.items.config.meta.description}}{% endif %}"/>
-<meta name="author" content="{{data.items.config.meta.author}}"/>
+<title>{% if title %}{{title}} | {% endif %}{{config.meta.title}}</title>
+<meta name="description" content="{% if description %}{{description}}{% else %}{{config.meta.description}}{% endif %}"/>
+<meta name="author" content="{{config.meta.author}}"/>
 <meta name="generator" content="{{ eleventy.generator }}">
 <link rel="stylesheet" href="{{ "/css/global.css" | rev }}" />
 </head>
