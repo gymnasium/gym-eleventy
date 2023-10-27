@@ -10,6 +10,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addShortcode("year", () => `${(new Date()).toLocaleString('en-US', {year: 'numeric'})}`);
 
+  eleventyConfig.addFilter('stringify', (data) => {
+    return JSON.stringify(data, null, "\t")
+  })
+
   eleventyConfig.addPlugin(pluginRev);
 
   eleventyConfig.addPlugin(eleventySass, {
