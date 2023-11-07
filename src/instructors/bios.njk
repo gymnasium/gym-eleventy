@@ -1,14 +1,15 @@
 ---
-layout: layouts/base.njk
+layout: layouts/main.njk
 pagination:
-    data: data.items.bios
-    size: 1
-    alias: bio
-permalink: "instructors/{{ bio.title | slugify }}/"
+  data: bios
+  size: 1
+  alias: bio
+  resolve: values
+permalink: "instructors/{{ bio.name | slugify }}/"
 eleventyComputed:
-    title: "{{ bio.title }} | Instructors"
+  title: "{{ bio.name }} | Instructors"
 ---
-<h1>{{ bio.title }}</h1>
-<h4>{{ bio.id }}</h4>
-<p>{{ bio.description }}</p>
-{{ content | safe }}
+<h1>{{ bio.name }}</h1>
+<h4>{{ bio.subtitle }}</h4>
+<p>{{ bio.description | safe }}</p>
+<img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bio.img }}" alt="Image of {{ bio.name }}">
