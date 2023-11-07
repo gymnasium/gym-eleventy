@@ -24,6 +24,7 @@
     "@edx/paragon": "^20.45.3",
     "eleventy-plugin-rev": "^1.1.1",
     "eleventy-sass": "^2.2.1",
+    "js-yaml": "^4.1.0",
     "netlify-plugin-cache": "^1.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",

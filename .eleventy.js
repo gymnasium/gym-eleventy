@@ -1,8 +1,13 @@
 // docs: https://www.11ty.io/docs/config/
 const eleventySass = require("eleventy-sass");
 const pluginRev = require("eleventy-plugin-rev");
+const yaml = require("js-yaml");
 
 module.exports = function(eleventyConfig) {
+
+  eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+
+  eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
 
   eleventyConfig.addAsyncFilter("uppercase", async function(string) {
     return string.toUpperCase();
@@ -12,7 +17,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('stringify', (data) => {
     return JSON.stringify(data, null, "\t")
-  })
+  });
 
   eleventyConfig.addPlugin(pluginRev);
 
@@ -72,6 +77,6 @@ module.exports = function(eleventyConfig) {
     dir: {
       input: "src",
       output: "dist"
-    }
+    },
   };
 };
