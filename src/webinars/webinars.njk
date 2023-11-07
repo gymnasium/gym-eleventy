@@ -1,14 +1,24 @@
 ---
-layout: layouts/base.njk
+layout: layouts/main.njk
 pagination:
-    data: data.items.webinars
-    size: 1
-    alias: webinar
-permalink: "webinars/{{ webinar.title | slugify }}/"
+  data: webinars
+  size: 1
+  alias: webinar
+  resolve: values
+permalink: "webinars/{{ webinar.slug }}/"
 eleventyComputed:
-    title: "{{ webinar.title }} | Webinars"
+  title: "{{ webinar.title | strip_html }} | Webinars"
 ---
-<h1>{{ webinar.title }}</h1>
-<h4>{{ webinar.id }}</h4>
+<h1>{{ webinar.title | safe }}</h1>
+<p>{{ webinar.event_guests | safe }}</p>
 <p>{{ webinar.description }}</p>
-{{ content | safe }}
+<p>{% bio_name webinar.host, bios %}</p>
+<p>{% bio_description webinar.host, bios %}</p>
+
+{%- if webinar.content -%}
+  <p>{{ webinar.content | safe }}</p>
+{%- endif -%}
+
+{%- if webinar.video_id -%}
+  {%- youtube webinar.video_id -%}
+{%- endif -%}

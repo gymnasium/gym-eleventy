@@ -33,8 +33,23 @@ module.exports = function(eleventyConfig) {
     `;
   });
 
+  eleventyConfig.addShortcode("bio_name", (slug, data) => {
+    const bio = data[`${slug}`].name;
+    return bio;
+  });
+
+  eleventyConfig.addShortcode("bio_description", (slug, data) => {
+    const bio = data[`${slug}`].description;
+    return bio;
+  });
+
   eleventyConfig.addFilter('stringify', (data) => {
     return JSON.stringify(data, null, "\t")
+  });
+
+  eleventyConfig.addFilter("strip_html", (post) => {
+    const content = post.replace(/(<([^>]+)>)/gi, "");
+    return content;
   });
 
   eleventyConfig.addPlugin(pluginRev);
