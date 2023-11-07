@@ -12,26 +12,22 @@
   },
   "navigation": {
     "main": [
-      { "title": "About", "href": "/about/" },
       { "title": "Courses", "href": "/courses/" },
       { "title": "Tutorials", "href": "/tutorials/" },
-      { "title": "Webinars", "href": "/webinars/" },
-      { "title": "Instructors", "href": "/instructors/" },
-      { "title": "Blog", "href": "/blog/" }
+      { "title": "Jobs", "href": "/jobs/" },
+      { "title": "About", "href": "/about/" }
     ],
     "footer": [
       {
         "title": "What We Do",
         "links": [
           { "title": "Courses", "href": "/courses/" },
-          { "title": "Tutorials", "href": "/courses/take5/" },
+          { "title": "Tutorials", "href": "/tutorials/" },
           { "title": "Jobs", "href": "/jobs/" },
           { "title": "Webinars", "href": "/webinars/" },
           {
             "title": "Articles",
-            "href": "https://medium.com/gymnasium",
-            "target": "_blank",
-            "rel": "noopener"
+            "href": "/blog/"
           },
           { "title": "About", "href": "/about/" }
         ]
