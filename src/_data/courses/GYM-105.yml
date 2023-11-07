@@ -1,0 +1,25 @@
+id: GYM-105
+title: "Writing for Web & Mobile"
+date: 2022-05-26T00:00:00-04:00
+type: full
+live: false
+retired_message:
+  1: "<strong>This course has been retired.</strong>"
+url: /courses/GYM/105/0/about
+img: /img/course-artwork/png/gym-105.png
+topic: "Career Skills"
+description: "This course has been retired."
+description_orig: "Learn how to write compelling content through meaningful audience research and find the right words to attract and engage users."
+instructor: shay
+skills:
+  - label: "Online writing strategies"
+  - label: "Content-first UX design"
+  - label: "Audience research"
+audience:
+  - label: "Copy Editors"
+  - label: "Marketers"
+  - label: "Web Designers"
+  - label: "Content Strategists"
+lessons_duration:
+completion_duration:
+skill_level: "Beginner"

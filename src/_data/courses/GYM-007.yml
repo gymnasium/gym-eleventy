@@ -1,0 +1,21 @@
+id: GYM-007
+title: "Structuring and Organizing HTML5 Forms"
+date: 2019-10-28T00:00:00-04:00
+type: short
+live: true
+url: /courses/GYM/007/0/about
+img: /img/course-artwork/png/gym-007.png
+topic: "Development"
+description: "Learn some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes."
+instructor: jkramer
+skills:
+  - label: "Web Forms"
+  - label: "HTML"
+  - label: "CSS"
+audience:
+  - label: "Developers"
+  - label: "Designers"
+  - label: "Digital Creatives"
+lessons_duration: "1 hour"
+completion_duration: "Up to 2 hours"
+skill_level: "Intermediate"

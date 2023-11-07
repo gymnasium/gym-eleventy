@@ -1,0 +1,23 @@
+id: GYM-104
+title: "JavaScript Foundations"
+date: 2019-10-28T00:00:00-04:00
+type: full
+live: true
+url: /courses/GYM/104/0/about
+img: /img/course-artwork/png/gym-104.png
+topic: "Development"
+subtopics:
+  - label: "JavaScript"
+description: "Learn the fundamentals of programming with JavaScript and get started on the road to its mastery."
+instructor: kpeters
+skills:
+  - label: "JavaScript"
+  - label: "Programming basics"
+  - label: "The interaction between JavaScript and HTML"
+audience:
+  - label: "Designers with coding chops"
+  - label: "Front-End Developers"
+  - label: "jQuery Developers"
+lessons_duration: "5 hours"
+completion_duration: "Up to 21 hours"
+skill_level: "Intermediate"

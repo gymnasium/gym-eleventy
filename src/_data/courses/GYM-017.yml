@@ -1,0 +1,23 @@
+id: GYM-017
+title: "Design Systems for Everyone"
+date: 2019-10-28T00:00:00-04:00
+type: short
+live: true
+url: /courses/course-v1:GYM+017+0/about
+img: /img/course-artwork/png/gym-017.png
+topic: "Design"
+subtopics:
+  - label: "Design Systems"
+description: "Learn how to effectively integrate pattern libraries and design systems into your organization’s workflow."
+instructor: emarcotte
+skills:
+  - label: "Design Thinking"
+  - label: "User Experience Design"
+  - label: "Working with pattern libraries"
+audience:
+  - label: "Anyone interested in design systems"
+  - label: "Designers, developers, and product managers"
+  - label: "Teams that are new to the design systems process"
+lessons_duration: "Under 1 hour"
+completion_duration: "Up to 1 hour"
+skill_level: "Beginner"

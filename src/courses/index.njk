@@ -1,12 +1,18 @@
 ---
-layout: layouts/base.njk
+layout: layouts/main.njk
 permalink: /courses/
 title: Courses
 ---
 <h1>Courses</h1>
-<p>This is the courses index.</p>
+<p>This is the courses index. The list below is produced directly from local YAML files.</p>
+
 <ul>
-{% for course in data.items.courses %}
-	<li><a href="/courses/{{ course.title | slugify }}" >{{ course.title }}</a></li>
+{% for id, course in courses %}
+  <li>
+    <a href="/courses/{{ course.title | slugify }}">
+      {{ course.title }}
+      <img style="max-width: 5rem;" src="{{config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">
+    </a>
+  </li>
 {% endfor %}
 </ul>

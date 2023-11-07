@@ -1,0 +1,27 @@
+id: GYM-015
+title: "Prototyping for Digital Products and Websites"
+date: 2019-10-28T00:00:00-04:00
+type: short
+live: true
+url: /courses/course-v1:GYM+015+0/about
+img: /img/course-artwork/png/gym-015.png
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
+  - label: "Sketch"
+  - label: "Axure"
+  - label: "Figma"
+  - label: "Adobe XD"
+description: "Learn how to use prototypes as a communication and collaboration device for building digital products and websites."
+instructor: jbantjes
+skills:
+  - label: "How to choose the right method of prototyping"
+  - label: "How to articulate the benefits of prototyping"
+  - label: "How to evaluate prototyping services and software"
+audience:
+  - label: "Anyone interested in building website, mobile, or web app prototypes"
+  - label: "Aspiring UX and/or UI designers"
+  - label: "Web designers and developers"
+lessons_duration: "1 hour"
+completion_duration: "Up to 1.5 hours"
+skill_level: "Beginner"

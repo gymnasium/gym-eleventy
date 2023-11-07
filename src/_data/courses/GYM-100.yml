@@ -1,0 +1,26 @@
+id: GYM-100
+title: "Coding for Designers"
+date: 2019-10-28T00:00:00-04:00
+type: full
+live: false
+retired_message:
+  1: "<strong>This course is retiring on March 25, 2022.</strong> All coursework needs to be completed by that date."
+  2: "<strong>This course has been retired.</strong> We recommend taking the course <a href='https://thegymnasium.com/courses/GYM/107/0/about'>Modern Web Design</a> instead. It’s a bit more advanced, but we think you’d get a lot out of it."
+url: /courses/GYM/100/0/about
+img: /img/course-artwork/png/gym-100.png
+topic: "Development"
+description: "This course has been retired."
+description_orig: "Learn HTML and CSS and become the Web Designer that Developers love. Professional design experience is a prerequisite, but no prior web or coding experience is necessary."
+instructor: jwebb
+skills:
+  - label: "HTML basics"
+  - label: "CSS basics"
+  - label: "Bootstrap basics"
+audience:
+  - label: "Designers"
+  - label: "Creatives"
+  - label: "Copy Editors"
+  - label: "Anyone struggling with HTML"
+lessons_duration: "5 hour"
+completion_duration: "Up to 25 hours"
+skill_level: "Beginner"

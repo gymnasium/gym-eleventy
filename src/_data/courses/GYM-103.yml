@@ -1,0 +1,22 @@
+id: GYM-103
+title: "UX Fundamentals"
+date: 2019-10-28T00:00:00-04:00
+type: full
+live: true
+url: /courses/GYM/103/0/about
+img: /img/course-artwork/png/gym-103.png
+topic: "UX"
+description: "Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in design and development."
+instructor: jwebb
+skills:
+  - label: "User research"
+  - label: "Wireframing and prototyping"
+  - label: "User testing"
+audience:
+  - label: "Web Designers"
+  - label: "Creatives"
+  - label: "UX Designers"
+  - label: "Anyone who works on UX projects"
+lessons_duration: "3 hours"
+completion_duration: "Up to 12 hours"
+skill_level: "Beginner"

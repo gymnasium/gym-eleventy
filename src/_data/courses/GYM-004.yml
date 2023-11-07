@@ -1,0 +1,21 @@
+id: GYM-004
+title: "Creating A WordPress Theme"
+date: 2019-10-28T00:00:00-04:00
+type: short
+live: true
+url: /courses/GYM/004/0/about
+img: /img/course-artwork/png/gym-004.png
+topic: "Development"
+description: "Learn how to convert your HTML/CSS design into a WordPress website. Discover how to set up a local development environment, and add WordPress tags to your design."
+instructor: ghodgkinson
+skills:
+  - label: "Intermediate HTML/CSS"
+  - label: "WordPress themes"
+  - label: "WordPress tags"
+audience:
+  - label: "Developers"
+  - label: "Designers with coding chops"
+  - label: "WordPress beginners"
+lessons_duration: "1 hour"
+completion_duration: "Up to 3 hours"
+skill_level: "Intermediate"

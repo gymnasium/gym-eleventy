@@ -1,15 +1,15 @@
 ---
-layout: layouts/base.njk
+layout: layouts/main.njk
 pagination:
-    data: data.items.courses
+    data: courses
     size: 1
     alias: course
+    resolve: values
 permalink: "courses/{{ course.title | slugify }}/"
 eleventyComputed:
     title: "{{ course.title }} | Courses"
 ---
 <h1>{{ course.title }}</h1>
 <h4>{{ course.id }}</h4>
-<img src="{{data.items.config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">
+<img src="{{config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">
 <p>{{ course.description }}</p>
-{{ content | safe }}

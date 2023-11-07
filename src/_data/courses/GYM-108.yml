@@ -1,0 +1,24 @@
+id: GYM-108
+title: "JavaScript and jQuery Survival Guide"
+date: 2019-10-28T00:00:00-04:00
+type: full
+live: true
+url: /courses/course-v1:GYM+108+0/about
+img: /img/course-artwork/png/gym-108.png
+topic: "Development"
+subtopics:
+  - label: "JavaScript"
+  - label: "jQuery"
+description: "This course will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples."
+instructor: kchisholm
+skills:
+  - label: "Developer Tools"
+  - label: "Events and Event Handlers"
+  - label: "Manipulating HTML & CSS With jQuery"
+audience:
+  - label: "Front-End Developers"
+  - label: "JavaScript Developers"
+  - label: "Full Stack Developers"
+lessons_duration: "3 hours"
+completion_duration: "Up to 12 hours"
+skill_level: "Intermediate"
