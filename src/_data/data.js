@@ -26,7 +26,6 @@ module.exports = async function() {
     return {
       items: {
         bios: complete.items.bios,
-        config: complete.items.config,
         courses: complete.items.courses,
         webinars: complete.items.webinars,
         tutorials: complete.items.tutorials,
