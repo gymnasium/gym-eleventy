@@ -6,7 +6,6 @@ const yaml = require("js-yaml");
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
-
   eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
 
   eleventyConfig.addAsyncFilter("uppercase", async function(string) {
@@ -14,6 +13,25 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("year", () => `${(new Date()).toLocaleString('en-US', {year: 'numeric'})}`);
+
+  // Modified version, original via @https://www.seanmcp.com/articles/add-a-youtube-embedder-shortcode-to-your-eleventy-site/
+  eleventyConfig.addShortcode("youtube", (embedId, title) => {
+    let id;
+    if (embedId.includes('//')) {
+      const url = new URL(id);
+      id = url.searchParams.get("v");
+    } else {
+      id = embedId;
+    }
+
+    return `
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="yt-shortcode" src="https://www.youtube-nocookie.com/embed/${id}" title="YouTube video player${
+        title ? ` for ${title}` : ""
+      }" frameborder="0" allowfullscreen></iframe>
+      </div>
+    `;
+  });
 
   eleventyConfig.addFilter('stringify', (data) => {
     return JSON.stringify(data, null, "\t")

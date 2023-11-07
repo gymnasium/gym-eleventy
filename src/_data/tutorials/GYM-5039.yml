@@ -1,0 +1,26 @@
+id: GYM-5039
+title: "Designing Accessible Data Tables"
+date: 2020-09-22T00:00:00-04:00
+type: take5
+url: /courses/take5/GYM-5039/
+img: /img/take5/posters/gym-5039.jpg
+live: true
+instructor: "Clarissa Peterson"
+instructor_bio: "Strategy Director at Forum One"
+topic: "Accessibility"
+video_id: npto50RJpDc
+video_duration: "4:28"
+featured: false
+description: "Learn how to make the data tables in your HTML documents more accessible for everyone in this tutorial."
+project_file_source: CodePen
+project_files:
+- label: "Completed Project"
+  url: "https://codepen.io/gymnasium/pen/NWNzOKo"
+related_content:
+- label: "HTML table advanced features and accessibility"
+  url: "https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced"
+- label: "Creating Accessible Tables"
+  url: "https://webaim.org/techniques/tables/data"
+- label: "Accessibility Tutorials: Tables Concepts"
+  url: "https://www.w3.org/WAI/tutorials/tables/"
+skill_level: "Beginner"

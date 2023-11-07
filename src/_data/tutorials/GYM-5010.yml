@@ -1,0 +1,20 @@
+id: GYM-5010
+title: "Using the KJ Method"
+date: 2019-11-22T00:00:00-04:00
+type: take5
+url: /courses/take5/GYM-5010/
+img: /img/take5/posters/gym-5010.jpg
+live: true
+instructor: "Jeremy Osborn"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "UX"
+video_id: PwuPv7JwzCA
+video_duration: "4:50"
+featured: false
+description: "Learn how to silently collaborate with a team in order to get group consensus in this tutorial."
+related_content:
+- label: "18F Methods instructions on the KJ method"
+  url: "https://methods.18f.gov/discover/kj-method/"
+- label: "The KJ-Technique: A Group Process for Establishing Priorities an article by Jared Spool"
+  url: "https://articles.uie.com/kj_technique/"
+skill_level: "Intermediate"

@@ -1,0 +1,32 @@
+id: GYM-5057
+title: "Leveling Up Your Layouts in Web Design"
+date: 2023-07-05T00:00:00-04:00
+course_type: take5
+url: /courses/take5/GYM-5057/
+poster_art: /img/take5/posters/gym-5057.jpg
+live: true
+instructor: "Meagan Fisher"
+instructor_bio: "Web Designer and Developer at Owltastic"
+topic: "Design"
+subtopics:
+  - label: "Accessibility"
+video_id: FDlpkWUp8wk
+video_duration: "4:39"
+featured: false
+description: Learn how to use grids, whitespace, and responsive design to make better layouts for your web pages in this tutorial.
+project_file_source:
+project_files:
+related_content:
+- label: "Gridulator"
+  url: "https://www.gridulator.com"
+- label: "Building Better UI Designs With Layout Grids by Nick Babich"
+  url: "https://www.smashingmagazine.com/2017/12/building-better-ui-designs-layout-grids/"
+- label: "The Paradox of White Space by Adnan Puzic"
+  url: "https://idratherbewriting.com/2007/07/09/white-space-in-web-design/"
+- label: "What is Mobile First by Interaction Design Foundation"
+  url: "https://www.interaction-design.org/literature/topics/mobile-first"
+- label: "Gymnasium: Getting Contrast Right in Your Typography"
+  url: "https://thegymnasium.com/courses/take5/getting-contrast-right-in-your-typography"
+- label: "Gymnasium: Creating an Effective Color Palette in Design"
+  url: "https://thegymnasium.com/courses/take5/creating-an-effective-color-palette-in-design"
+skill_level: "Beginner"

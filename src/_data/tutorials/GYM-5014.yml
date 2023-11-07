@@ -1,0 +1,30 @@
+id: GYM-5014
+title: "Using Auto-Animate in Adobe XD"
+date: 2019-11-07T00:00:00-04:00
+type: take5
+url: /courses/take5/GYM-5014/
+img: /img/take5/posters/gym-5014.jpg
+live: true
+instructor: "Jeremy Osborn"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
+video_id: TJqqgchPraE
+video_duration: "4:57"
+featured: false
+description: "Learn how to use Auto-Animate in Adobe XD in this hands-on tutorial."
+project_file_source: GitHub
+project_files:
+- label: "Lesson Files"
+  url: "https://gymnasium.github.io/take5/gym-5014.zip"
+related_content:
+- label: "Official Adobe XD documentation for Auto-Animate"
+  url: "https://helpx.adobe.com/xd/help/animate-prototypes.html"
+- label: "Auto-Animate UI Kit"
+  url: "https://www.behance.net/gallery/72065227/Auto-Animate-UI-Kit-for-Adobe-XD"
+- label: "Auto-Animate Tips & Tricks"
+  url: "https://www.youtube.com/watch?v=RNXpEQqbWRM"
+- label: "The Basics of Easing by Paul Lewis"
+  url: "https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing"
+skill_level: "Beginner"

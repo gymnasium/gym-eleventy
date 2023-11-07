@@ -1,0 +1,30 @@
+id: GYM-5005
+title: "Creating a Duotone with CSS"
+date: 2019-11-01T00:00:00-04:00
+type: take5
+url: /courses/take5/GYM-5005/
+img: /img/take5/posters/gym-5005.jpg
+live: true
+instructor: "Jeremy Osborn"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "Development"
+video_id: _12cCrECCdY
+video_duration: "4:59"
+featured: false
+description: "Learn how to turn a grayscale image into a duotone using CSS blend modes in this hands-on tutorial."
+project_file_source: CodePen
+project_files:
+- label: "Starting Project"
+  url: "https://codepen.io/josborn/pen/bydwJo"
+- label: "Completed Project"
+  url: "https://codepen.io/josborn/pen/ZNYxjy"
+related_content:
+- label: "Basics of CSS Blend Modes by Chris Coyier"
+  url: "https://css-tricks.com/basics-css-blend-modes/"
+- label: "CSS Image Effects #1: Vintage Washout by Una Kravets"
+  url: "https://una.im/vintage-washout/"
+- label: "Colofilter.css"
+  url: "https://lukyvj.github.io/colofilter.css/"
+- label: "Jazz Icons: Thelonious Monk"
+  url: "https://www.youtube.com/watch?v=LR-7Mo8IZsI"
+skill_level: "Intermediate"

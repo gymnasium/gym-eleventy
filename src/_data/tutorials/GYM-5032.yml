@@ -1,0 +1,32 @@
+id: GYM-5032
+title: "Introduction to Screen Readers Using VoiceOver"
+date: 2020-06-22T00:00:00-04:00
+type: take5
+url: /courses/take5/GYM-5032/
+img: /img/take5/posters/gym-5032.jpg
+live: true
+instructor: "Ethan Marcotte"
+instructor_bio: "Partner at Autogram"
+topic: "Accessibility"
+video_id: Y2vjyDxkIPs
+video_duration: "4:59"
+featured: false
+description: "Learn how to get started with VoiceOver, Apple’s built-in screen reader, to read and navigate web pages in this tutorial."
+project_file_source: CodePen
+project_files:
+- label: "Completed Project"
+  url: "https://cdpn.io/eYpGVvJ"
+related_content:
+- label: "VoiceOver User Guide"
+  url: "https://help.apple.com/voiceover/mac/"
+- label: "Complete guide to Narrator (for Windows 10)"
+  url: "https://support.microsoft.com/en-us/help/22798/windows-10-complete-guide-to-narrator"
+- label: "Quick tip: ARIA Landmark roles"
+  url: "https://a11yproject.com/posts/aria-landmark-roles/"
+- label: "Use VoiceOver to navigate webpages using landmarks on Mac"
+  url: "https://help.apple.com/voiceover/mac/#/vo35709"
+- label: "ARIA: Complementary role"
+  url: "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
+- label: "Using VoiceOver to Evaluate Web Accessibility"
+  url: "https://webaim.org/articles/voiceover/"
+skill_level: "Beginner"

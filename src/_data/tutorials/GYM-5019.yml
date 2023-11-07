@@ -1,0 +1,24 @@
+id: GYM-5019
+title: "Self-Promotion Through Your Online Presence"
+date: 2019-11-14T00:00:00-04:00
+type: take5
+url: /courses/take5/GYM-5019/
+img: /img/take5/posters/gym-5019.jpg
+live: true
+instructor: "Anne Ditmeyer"
+instructor_bio: "Creative Coach"
+topic: "Career Skills"
+video_id: m1vO-v2UGmk
+video_duration: "4:13"
+featured: false
+description: "Learn how to promote yourself via your website and social media in this tutorial."
+related_content:
+- label: "Owltastic - Portfolio site by Meagan Fisher"
+  url: "https://owltastic.com"
+- label: "On Self-Promotion by Jeffrey Zeldman"
+  url: "https://www.zeldman.com/2009/11/24/on-self-promotion/"
+- label: "Formatting profile and header images for Twitter"
+  url: "https://sproutsocial.com/insights/social-media-image-sizes-guide/#twitter"
+- label: "Formatting profile and header images for LinkedIn"
+  url: "https://sproutsocial.com/insights/social-media-image-sizes-guide/#linkedin"
+skill_level: "Beginner"

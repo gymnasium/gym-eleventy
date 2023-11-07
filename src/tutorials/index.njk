@@ -1,12 +1,14 @@
 ---
-layout: layouts/base.njk
+layout: layouts/main.njk
 permalink: /tutorials/
 title: Tutorials
 ---
 <h1>Tutorials</h1>
-<p>This is the tutorials index.</p>
+<p>This is the tutorials index, also pulling in from local YAML files.</p>
 <ul>
-{% for tutorial in data.items.tutorials %}
-	<li><a href="/tutorials/{{ tutorial.title | slugify }}" >{{ tutorial.title }}</a></li>
+{% for id, tutorial in tutorials %}
+  <li>
+    <a href="/tutorials/{{ tutorial.title | slugify }}">{{ tutorial.title }}</a>
+    </li>
 {% endfor %}
 </ul>

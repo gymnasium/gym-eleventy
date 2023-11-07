@@ -1,0 +1,26 @@
+id: GYM-5048
+title: "Using Motion and Web Animation Responsibly"
+date: 2020-11-24T00:00:00-04:00
+type: take5
+url: /courses/take5/GYM-5048/
+img: /img/take5/posters/gym-5048.jpg
+live: true
+instructor: "Clarissa Peterson"
+instructor_bio: "Strategy Director at Forum One"
+topic: "Accessibility"
+video_id: Njn6CQwiafQ
+video_duration: "3:41"
+featured: false
+description: "You don’t have to forgo animation entirely to accommodate users with disabilities. Learn how to ensure that animated elements won’t compromise the accessibility of your website in this tutorial."
+related_content:
+- label: "An Introduction to the Reduced Motion Media Query"
+  url: "https://css-tricks.com/introduction-reduced-motion-media-query/"
+- label: "A Guide to Creating Accessible Animations"
+  url: "https://webdesign.tutsplus.com/tutorials/a-guide-to-creating-accessible-animations--cms-32038/"
+- label: "Web accessibility for seizures and physical reactions"
+  url: "https://developer.mozilla.org/en-US/docs/Web/Accessibility/Seizure_disorders"
+- label: "Photosensitivity and Seizures"
+  url: "https://epilepsy.com/learn/triggers-seizures/photosensitivity-and-seizures"
+- label: "Understanding Success Criterion 2.3.1: Three Flashes or Below Threshold"
+  url: "https://w3.org/tr/understanding-wcag20/seizure-does-not-violate.html"
+skill_level: "Beginner"

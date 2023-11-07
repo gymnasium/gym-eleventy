@@ -1,0 +1,36 @@
+id: GYM-5033
+title: "Designing Beautiful Focus States"
+date: 2020-06-23T00:00:00-04:00
+type: take5
+url: /courses/take5/GYM-5033/
+img: /img/take5/posters/gym-5033.jpg
+live: true
+instructor: "Ethan Marcotte"
+instructor_bio: "Partner at Autogram"
+topic: "Development"
+subtopics:
+  - label: "Accessibility"
+video_id: mmXdKhB7Ueg
+video_duration: "4:50"
+featured: false
+description: "Learn how to design beautiful and accessible link focus states in this tutorial."
+project_file_source: CodePen
+project_files:
+- label: "Starting Project"
+  url: "https://cdpn.io/ExVXrEQ"
+- label: "Completed Project"
+  url: "https://cdpn.io/PoPjVyo"
+related_content:
+- label: "WebAIM: Keyboard Accessibility"
+  url: "https://webaim.org/techniques/keyboard/"
+- label: "I Threw Away my Mouse by Manuel Matuzovic"
+  url: "https://www.24a11y.com/2018/i-threw-away-my-mouse/"
+- label: "I Used The Web For A Day with Just A Keyboard by Chris Ashton"
+  url: "https://www.smashingmagazine.com/2018/07/web-with-just-a-keyboard/"
+- label: "MDN: The filter CSS property"
+  url: "https://developer.mozilla.org/en-US/docs/Web/CSS/filter"
+- label: "MDN: The transition CSS property"
+  url: "https://developer.mozilla.org/en-US/docs/Web/CSS/transition"
+- label: "MDN: The transform CSS property"
+  url: "https://developer.mozilla.org/en-US/docs/Web/CSS/transform"
+skill_level: "Intermediate"
