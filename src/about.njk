@@ -1,7 +1,7 @@
 ---javascript
 
 module.exports = {
-  layout: 'layouts/base.njk',
+  layout: 'layouts/main.njk',
   eleventyComputed: {
     title: (data) => `About`,
     imported: (data) => {
@@ -10,9 +10,22 @@ module.exports = {
   }
 }
 ---
-{% for items in data.items.pages %}
-  {%- if items.url == '/about/' -%}
-  [This content is imported directly from gymcms via a JSON feed]
-	{{ items.content | safe }}
-  {% endif %}
-{% endfor %}
+<h1>About</h1>
+
+<p class="hero-text">Aquent Gymnasium offers free, online courses for digital, creative, and communications professionals to equip them with in-demand skills and advance their careers.</p>
+
+<h2>Free Courses</h2>
+
+<p><strong>Why free?</strong> Lifelong learning is central to Aquent’s cultural values and finds its way into almost all of our business strategies. Because we’ve always known that there is a clear connection between learning and career advancement, Gymnasium was created to serve both our talent and our clients in meeting the demand for skilled professionals. To date, hundreds of newly-certified professionals have been placed in roles with our clients.</p>
+
+<h2>Gymnasium Courses</h2>
+
+<p>Browse our <a href="/courses">course catalog</a> to find out more.</p>
+
+<h2>Practical Skills</h2>
+
+<p>Our instructors are practicing professionals and leaders in their field who, in collaboration with Gymnasium, have designed courses to give you knowledge that can be applied immediately to your next project or job. These courses were designed to bridge the skills gap as identified by our clients and from our job placement analytics. Our mission is to help you build your skills to meet the current demand.</p>
+
+<h2>Unlimited Potential</h2>
+
+{%- youtube "bQ-NdoBzd1A" -%}
