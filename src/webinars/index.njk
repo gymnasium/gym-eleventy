@@ -3,10 +3,23 @@ layout: layouts/main.njk
 permalink: /webinars/
 title: Webinars
 ---
+
 <h1>Webinars</h1>
-<p>This is the webinars index.</p>
+<p>Insightful conversations with trailblazers in the web community.</p>
+
+{%- if webinars -%}
 <ul>
-{% for id, webinar in webinars %}
-  <li><a href="/webinars/{{ webinar.slug }}" >{{ webinar.title | strip_html }}</a></li>
-{% endfor %}
+  {%- for id, webinar in webinars -%}
+  <li>
+    <header>
+      <p>{{ webinar.content_category }}</p>
+      <h2>{{ webinar.title | safe }}</h2>
+    </header>
+    <p>{{ webinar.event_guests | safe }}</p>
+    <a href="/webinars/{{ webinar.slug }}">Watch Recording</a>
+  </li>
+  {%- endfor -%}
 </ul>
+{%- else -%}
+  <p>No webinars found!!</p>
+{%- endif -%}
