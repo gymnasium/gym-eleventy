@@ -12,8 +12,11 @@ eleventyComputed:
 <h1>{{ webinar.title | safe }}</h1>
 <p>{{ webinar.event_guests | safe }}</p>
 <p>{{ webinar.description }}</p>
-<p>{% bio_name webinar.host, bios %}</p>
-<p>{% bio_description webinar.host, bios %}</p>
+
+Host:
+<p>{{ bios[webinar.host]['name'] }}</p>
+<p>{{ bios[webinar.host]['subtitle'] }}</p>
+<p>{{ bios[webinar.host]['description'] }}</p>
 
 {%- if webinar.content -%}
   <p>{{ webinar.content | safe }}</p>
