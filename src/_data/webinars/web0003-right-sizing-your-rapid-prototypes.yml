@@ -13,6 +13,8 @@ speaker:
   - eyoung
   - tsingleton
 content_category: ux
+tags:
+  - ux
 landing: true
 register: false
 video: true

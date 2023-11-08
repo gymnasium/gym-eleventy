@@ -12,6 +12,8 @@ host: josborn
 speaker:
   - emarcotte
 content_category: design
+tags:
+  - design
 landing: true
 register: false
 video: true

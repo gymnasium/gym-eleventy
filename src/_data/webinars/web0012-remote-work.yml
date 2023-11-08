@@ -13,6 +13,8 @@ speaker:
   - rbanfield
   - dbuckner
 content_category: skills
+tags:
+  - skills
 landing: true
 register: false
 video: true

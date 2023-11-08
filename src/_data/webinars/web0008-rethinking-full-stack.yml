@@ -13,6 +13,8 @@ speaker:
   - emeyer
   - dmall
 content_category: dev
+tags:
+  - design
 landing: true
 register: false
 video: true

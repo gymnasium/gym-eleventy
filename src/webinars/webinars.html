@@ -1,0 +1,62 @@
+---
+layout: layouts/main.njk
+pagination:
+  data: webinars
+  size: 1
+  alias: webinar
+  resolve: values
+permalink: "webinars/{{ webinar.slug }}/"
+eleventyComputed:
+  title: "{{ webinar.title | strip_html }} | Webinars"
+---
+
+<article>
+  <header>
+    <h1>Webinar Recording</h1>
+    <h2>{{ webinar.title | safe }}</h2>
+    <h3>{{ webinar.event_guests | safe }}</h3>
+  </header>
+
+  <p>{{ webinar.description }}</p>
+
+  {%- if webinar.video_id -%}
+    {%- youtube webinar.video_id -%}
+  {%- endif -%}
+
+  {# Hidden for now, likely because this is more relevant to the "event" version of the page  #}
+  {# {%- if webinar.content -%}
+    <p>{{ webinar.content | safe }}</p>
+  {%- endif -%} #}
+</article>
+
+<aside>
+  <header>
+    <h1>Guest Speaker{%- if webinar.speaker[1] -%}s{%- endif -%}</h1>
+  </header>
+
+  {%- if webinar.speaker[0] -%}
+    <section>
+      <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[webinar.speaker[0]]['img'] }}" alt="Image of {{ bios[webinar.speaker[0]]['name'] }}">
+      <h2>{{ bios[webinar.speaker[0]]['name'] }}</h2>
+      <p>{{ bios[webinar.speaker[0]]['description'] | safe }}</p>
+    </section>
+  {%- endif -%}
+
+  {%- if webinar.speaker[1] -%}
+    <section>
+      <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[webinar.speaker[1]]['img'] }}" alt="Image of {{ bios[webinar.speaker[1]]['name'] }}">
+      <h2>{{ bios[webinar.speaker[1]]['name'] }}</h2>
+      <p>{{ bios[webinar.speaker[1]]['description'] | safe }}</p>
+    </section>
+  {%- endif -%}
+
+  <header>
+    <h1>Host</h1>
+  </header>
+
+  <section>
+    <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[webinar.host]['img'] }}" alt="Image of {{ bios[webinar.host]['name'] }}">
+    <h2>{{ bios[webinar.host]['name'] }}</h2>
+    <p>{{ bios[webinar.host]['description'] }}</p>
+  </section>
+</aside>

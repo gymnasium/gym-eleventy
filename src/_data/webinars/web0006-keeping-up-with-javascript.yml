@@ -13,6 +13,8 @@ speaker:
   - kchisholm
   - kpeters
 content_category: dev
+tags:
+  - dev
 landing: true
 register: false
 video: true
