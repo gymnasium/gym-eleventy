@@ -18,6 +18,20 @@ Host:
 <p>{{ bios[webinar.host]['subtitle'] }}</p>
 <p>{{ bios[webinar.host]['description'] }}</p>
 
+Speakers:
+
+{%- if webinar.speaker[0] -%}
+  <p>{{ bios[webinar.speaker[0]]['name'] }}</p>
+  <p>{{ bios[webinar.speaker[0]]['subtitle'] }}</p>
+  <p>{{ bios[webinar.speaker[0]]['description'] }}</p>
+{%- endif -%}
+
+{%- if webinar.speaker[1] -%}
+  <p>{{ bios[webinar.speaker[1]]['name'] }}</p>
+  <p>{{ bios[webinar.speaker[1]]['subtitle'] }}</p>
+  <p>{{ bios[webinar.speaker[1]]['description'] }}</p>
+{%- endif -%}
+
 {%- if webinar.content -%}
   <p>{{ webinar.content | safe }}</p>
 {%- endif -%}
