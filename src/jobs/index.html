@@ -75,75 +75,7 @@ title: Jobs
   <header>
     <h2>Jobs</h2>
   </header>
-
-  <form id="location" class="location">
-    <select name="m" id="m" class="form-control">
-      <option value="">Select a location nearest you</option>
-      <option value="remote">Remote, all locations</option>
-
-      <optgroup label="Australia">
-        {%- for market in data.markets -%}
-          {%- if market.countryCode == 'AU' -%}
-            <option value="{{ market.id }}">{{ market.title }}</option>
-          {%- endif -%}
-        {%- endfor -%}
-      </optgroup>
-
-      <optgroup label="Canada">
-        {%- for market in data.markets -%}
-          {%- if market.countryCode == 'CA' -%}
-            <option value="{{ market.id }}">{{ market.title }}</option>
-          {%- endif -%}
-        {%- endfor -%}
-      </optgroup>
-      <optgroup label="Europe">
-        {%- for market in data.markets -%}
-          {%- if market.countryCode == 'DE' or market.countryCode == 'FR' or market.countryCode == 'NL' or market.countryCode == 'UK' -%}
-            <option value="{{ market.id }}">{{ market.title }}</option>
-          {%- endif -%}
-        {%- endfor -%}
-      </optgroup>
-
-      <optgroup label="Japan">
-        {%- for market in data.markets -%}
-          {%- if market.countryCode == 'JP' -%}
-            <option value="{{ market.id }}">{{ market.title }}</option>
-          {%- endif -%}
-        {%- endfor -%}
-      </optgroup>
-
-      <optgroup label="United States">
-        {%- for market in data.markets -%}
-          {%- if market.countryCode == 'US' -%}
-            <option value="{{ market.id }}">{{ market.title }}</option>
-          {%- endif -%}
-        {%- endfor -%}
-      </optgroup>
-    </select>
-  </form>
-
-  <div id="messages">
-    <div id="loading" class="loading hide">
-      <p>Please wait while we find you some jobs…</p>
-    </div>
-    <div id="error-results" class="hide">
-      <h3>It’s Not You, It’s Us</h3>
-      <p>We’re unable to find  jobs in this location.</p>
-      <p>Please try another location or check back later for new jobs.</p>
-    </div>
-    <div id="error-general" class="hide">
-      <h3>We’re On It</h3>
-      <p>Something broke on our end and we’re working on fixing it.</p>
-      <p>Continue exploring jobs at <a href="https://aquent.com/find-work/?utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=job-module&amp;utm_content=textlink" target="_blank" rel="noopener">Aquent</a>.</p>
-    </div>
-    <div id="jobs-container" class="jobs-container list-hr" data-options="heading:h3;category:false;limit:10;" data-utm="utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=job-module&amp;utm_content=textlink" data-script="https://assets.aquent.com/apps/gym/jobs.json?limit=1500&amp;callback=processJobs" data-script-fallback="{{ config.cms_url }}/feeds/jobs.jsonp">
-      <ul>
-        {%- for job in data.jobs -%}
-          <li><a href="{{ job.url }}?utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=job-module&amp;utm_content=textlink" title="{{ job.title | safe }}"><span class="job-title">{{ job.title | safe }} </span><span class="job-location"> {{ job.city }}</span></a></li>
-        {%- endfor -%}
-      </ul>
-    </div>
-  </div>
+  {%- include 'components/jobs.html' -%}
 </section>
 
 <section class="section" id="salary-guides">
