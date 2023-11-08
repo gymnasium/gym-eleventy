@@ -1,9 +1,15 @@
 // docs: https://www.11ty.io/docs/config/
 const eleventySass = require("eleventy-sass");
 const pluginRev = require("eleventy-plugin-rev");
+const pluginImages = require("./eleventy.config.images.js");
 const yaml = require("js-yaml");
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy({
+    "./public/": "/",
+  });
+
+  eleventyConfig.addPlugin(pluginImages);
 
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
   eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
@@ -96,10 +102,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setQuietMode(true);
   
   return {
+    htmlTemplateEngine: "njk",
     passthroughFileCopy: true,
     dir: {
       input: "src",
-      output: "dist"
+      output: "dist",
+      includes: "_includes",  // default: "_includes"
+      data: "_data",          // default: "_data"
     },
   };
 };
