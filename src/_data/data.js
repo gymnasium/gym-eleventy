@@ -23,13 +23,21 @@ module.exports = async function() {
 
     let feed = await parser.parseURL(feed_url);
 
+    let jobs = await EleventyFetch(`https://assets.aquent.com/apps/gym/jobs.json?limit=1500`, {
+      duration: ENV === 'local' ? 0 : '30m',
+      type: "json"
+    });
+
+    let markets = await EleventyFetch(`https://assets.aquent.com/apps/gym/markets.json`, {
+      duration: ENV === 'local' ? 0 : '30m',
+      type: "json"
+    });
+
     return {
+      jobs: jobs.items,
+      markets: markets.items,
       items: {
-        bios: complete.items.bios,
-        webinars: complete.items.webinars,
-        tutorials: complete.items.tutorials,
         blog: feed.items,
-        pages: pages.items
       }
     };
   } catch(e) {
