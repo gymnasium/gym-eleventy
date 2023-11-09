@@ -27,6 +27,15 @@ eleventyComputed:
   {# {%- if webinar.content -%}
     <p>{{ webinar.content | safe }}</p>
   {%- endif -%} #}
+
+  {%- if webinar.resources -%}
+    <h2>Resources</h2>
+    <ul>
+      {%- for resource in webinar.resources -%}
+        <li><a href="{{ resource.label }}" target="_blank" rel="noopener">{{ resource.label }}</a></li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
 </article>
 
 <aside>
