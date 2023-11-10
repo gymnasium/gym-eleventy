@@ -8,6 +8,7 @@ pagination:
 permalink: "instructors/{{ bio.name | slugify }}/"
 eleventyComputed:
   title: "{{ bio.name }} | Instructors"
+  description: "{{ bio.description | strip_html }}"
 ---
 <h1>{{ bio.name }}</h1>
 <h4>{{ bio.subtitle }}</h4>

@@ -1,13 +1,14 @@
 ---
 layout: layouts/main.njk
 pagination:
-    data: courses
-    size: 1
-    alias: course
-    resolve: values
+  data: courses
+  size: 1
+  alias: course
+  resolve: values
 permalink: "courses/{{ course.title | slugify }}/"
 eleventyComputed:
-    title: "{{ course.title }} | Courses"
+  title: "{{ course.title }} | Courses"
+  description: "{{ course.description | strip_html }}"
 ---
 <h1>{{ course.title }}</h1>
 <h4>{{ course.id }}</h4>

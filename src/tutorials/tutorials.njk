@@ -8,6 +8,7 @@ pagination:
 permalink: "tutorials/{{ tutorial.title | slugify }}/"
 eleventyComputed:
   title: "{{ tutorial.title }} | Tutorials"
+  description: "{{ tutorial.description | strip_html }}"
 ---
 <h1>{{ tutorial.title }}</h1>
 <h4>{{ tutorial.id }}</h4>
