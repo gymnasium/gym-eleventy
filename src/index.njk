@@ -1,0 +1,22 @@
+---
+layout: layouts/main.njk
+---
+<h2>Featured</h2>
+<ul>
+{%- for item in featured['home'] -%}
+  {%- set id = item | uppercase -%}
+  <li>
+    <div id="featured-{{ item }}">
+      <img src="{{ config.cms_url }}{{ courses[id]['img'] }}" alt="Image for {{ courses[id]['title'] }}">
+      <span>{{ courses[id]['topic'] }}</span>
+      <h3>{{ courses[id]['title'] }}</h3>
+      <p>{{ courses[id]['description'] }}</p>
+      <p>with {{ bios[courses[id]['instructor']].name }}</p>
+      <p>{{ bios[courses[id]['instructor']].subtitle }}</p>
+      <a class="button" href="/courses/{{ courses[id]['title'] | slugify }}">Learn More</a>
+    </div>
+    {# DEBUG:<br>
+    {{ courses[id] | dump }} #}
+  </li>
+{%- endfor -%}
+</ul>

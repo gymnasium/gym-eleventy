@@ -1,0 +1,22 @@
+home:
+  - gym-107
+  - gym-104
+  - gym-103
+catalog:
+  full:
+    - gym-107
+  short:
+    - gym-017
+  tutorial:
+    - gym-5054
+  collection:
+    - design-systems
+popular:
+  full:
+    - gym-107
+    - gym-104
+    - gym-103
+  short:
+    - gym-018
+    - gym-016
+    - gym-015

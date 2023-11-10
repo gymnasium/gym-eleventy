@@ -1,0 +1,39 @@
+---
+layout: layouts/main.njk
+permalink: /catalog/
+title: Catalog
+---
+<h2>Featured on Home</h2>
+<ul>
+{%- for item in featured['home'] -%}
+  <li>{{ item }}</li>
+{%- endfor -%}
+</ul>
+
+<h2>Popular By Type</h2>
+<ul>
+{%- for type, items in featured['popular'] -%}
+<li>
+  <h3>{{ type }}</h3>
+  <ul>
+    {%- for item in items -%}
+    <li>{{ item }}</li>
+    {%- endfor -%}
+  </ul>
+</li>
+{%- endfor -%}
+</ul>
+
+<h2>Catalog Featured</h2>
+<ul>
+{%- for type, items in featured['catalog'] -%}
+<li>
+  <h3>{{ type }}</h3>
+  <ul>
+    {%- for item in items -%}
+    <li>{{ item }}</li>
+    {%- endfor -%}
+  </ul>
+</li>
+{%- endfor -%}
+</ul>
