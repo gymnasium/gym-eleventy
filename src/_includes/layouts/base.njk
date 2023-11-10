@@ -10,7 +10,10 @@
 <meta name="description" content="{% if description %}{{description}}{% else %}{{config.meta.description}}{% endif %}"/>
 <meta name="author" content="{{config.meta.author}}"/>
 <meta name="generator" content="{{ eleventy.generator }}">
+<meta content="ie=edge" http-equiv=X-UA-Compatible>
+<link href=/favicon.svg rel=icon type=image/svg+xml>
 <link rel="stylesheet" href="{{ "/css/global.css" | rev }}" />
+
 </head>
 <body>
   {% include 'components/header.html' %}
