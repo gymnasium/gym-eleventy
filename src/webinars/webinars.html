@@ -8,6 +8,7 @@ pagination:
 permalink: "webinars/{{ webinar.slug }}/"
 eleventyComputed:
   title: "{{ webinar.title | strip_html }} | Webinars"
+  description: "{{ webinar.description | strip_html }}"
 ---
 
 <article>
@@ -23,7 +24,7 @@ eleventyComputed:
     {%- youtube webinar.video_id -%}
   {%- endif -%}
 
-  {# Hidden for now, likely because this is more relevant to the "event" version of the page  #}
+  {# TODO: Hidden for now, likely because this is more relevant to the "event" version of the page  #}
   {# {%- if webinar.content -%}
     <p>{{ webinar.content | safe }}</p>
   {%- endif -%} #}

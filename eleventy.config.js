@@ -48,6 +48,19 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  // Modified version, original @https://stevenwoodson.com/blog/a-step-by-step-guide-to-sorting-eleventy-global-data-files-by-date/
+  eleventyConfig.addFilter("sortDataByDate", (obj, dateField="date", order="asc") => {
+    const sorted = {};
+
+    Object.keys(obj)
+      .sort((a,b) => {
+        let sortOrder = order === 'desc' ? obj[a][dateField] > obj[b][dateField] : obj[b][dateField] > obj[a][dateField];
+        return sortOrder ? 1 : -1;
+      })
+      .forEach((name) => (sorted[name] = obj[name]));
+    return sorted;
+  });
+
   eleventyConfig.addPlugin(pluginRev);
 
   eleventyConfig.addPlugin(eleventySass, {
