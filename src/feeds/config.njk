@@ -2,4 +2,7 @@
 permalink: /feeds/config.json
 eleventyExcludeFromCollections: true
 ---
+{%- set config = config | replace("GYM_ROOT_URL", config.root_url) -%}
+{%- set config = config | replace("GYM_LMS_URL", config.lms_url) -%}
+{%- set config = config | replace("GYM_DATA_URL", config.cms_url) -%}
 {{ config | stringify | safe }}

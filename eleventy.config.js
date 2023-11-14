@@ -5,6 +5,11 @@ const pluginImages = require("./eleventy.config.images.js");
 const yaml = require("js-yaml");
 
 module.exports = function(eleventyConfig) {
+  // Generic functions
+  function replaceAll(string, find, replace) {
+    return string.replace(new RegExp(find, 'g'), replace);
+  }
+
   eleventyConfig.addPassthroughCopy({
     "./public/": "/",
   });
@@ -73,6 +78,13 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('is_string', function(obj) {
     return typeof obj == 'string'
+  })
+
+  // smart-ish replace filter, which works on strings and objects
+  eleventyConfig.addFilter('replace', function(input, string, replace) {
+    let stringified = typeof input === 'object' ? JSON.stringify(input) : input;
+    let output = JSON.parse(replaceAll(stringified, string, replace));
+    return output;
   })
 
   // Modified version, original @https://stevenwoodson.com/blog/a-step-by-step-guide-to-sorting-eleventy-global-data-files-by-date/
