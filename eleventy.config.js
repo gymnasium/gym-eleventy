@@ -48,6 +48,32 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addFilter("redirect_course", (id, force) => {
+    idString = id.split('-')[1]
+    let idNum = Number(idString);
+    let path;
+    let format;
+
+    if (idNum <= 9 || ( idNum >= 100 && idNum < 108 ) ) {
+      format = 'old';
+    } else {
+      format = 'new';
+    }
+
+    if (format === 'new' || force === true) {
+      path = `/courses/course-v1:GYM+${idString}+0/`
+    } else if (format === 'old') {
+      path = `/courses/GYM/${idString}/0/`
+    }
+
+    // console.log(idNum, idString, path)
+    return path;
+  });
+
+  eleventyConfig.addFilter('is_string', function(obj) {
+    return typeof obj == 'string'
+  })
+
   // Modified version, original @https://stevenwoodson.com/blog/a-step-by-step-guide-to-sorting-eleventy-global-data-files-by-date/
   eleventyConfig.addFilter("sortDataByDate", (obj, dateField="date", order="asc") => {
     const sorted = {};
