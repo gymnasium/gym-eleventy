@@ -48,7 +48,7 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
-  eleventyConfig.addFilter("redirectify_course", (id, force) => {
+  eleventyConfig.addFilter("redirect_course", (id, force) => {
     idString = id.split('-')[1]
     let idNum = Number(idString);
     let path;
