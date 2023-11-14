@@ -48,6 +48,7 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  // Modified, original @ https://willvincent.com/2022/07/27/redirects-with-11ty-and-netlify/
   eleventyConfig.addFilter("redirect_course", (id, force) => {
     idString = id.split('-')[1]
     let idNum = Number(idString);
