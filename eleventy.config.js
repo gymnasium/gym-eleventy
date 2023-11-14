@@ -67,7 +67,11 @@ module.exports = function(eleventyConfig) {
     }
 
     if (format === 'new' || force === true) {
-      path = `/courses/course-v1:GYM+${idString}+0/`
+      if (force === true) {
+        path = `/learning/course/course-v1:GYM+${idString}+0/`
+      } else {
+        path = `/courses/course-v1:GYM+${idString}+0/`
+      }
     } else if (format === 'old') {
       path = `/courses/GYM/${idString}/0/`
     }
@@ -105,7 +109,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventySass, {
     compileOptions: {
       permalink: function(contents, inputPath) {
-        return (data) => data.page.filePathStem.replace(/^\/scss\//, "/css/") + ".css";
+        return (data) => `${data.page.filePathStem.replace(/^\/scss\//, "/css/")}.css`;
       }
     },
     sass: {
