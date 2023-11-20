@@ -1,0 +1,28 @@
+id: GYM-019
+title: "Design Systems for Developers"
+date: 2019-10-28T00:00:00-04:00
+type: short
+tags:
+  - course
+  - gym-short
+  - short
+  - short-course
+live: true
+url: /courses/course-v1:GYM+019+0/about
+img: /img/course-artwork/png/gym-019.png
+topic: "Development"
+subtopics:
+  - label: "Design Systems"
+description: "Learn how to use your development skills to help build and support an effective and thriving design system."
+instructor: emarcotte
+skills:
+  - label: "Organizing and naming best practices"
+  - label: "Working with design tokens"
+  - label: "Pattern library versioning"
+audience:
+  - label: "Front-end developers"
+  - label: "Teams beginning the design systems process"
+  - label: "Designers with coding skills"
+lessons_duration: "1 hour"
+completion_duration: "Up to 1.5 hours"
+skill_level: "Intermediate"

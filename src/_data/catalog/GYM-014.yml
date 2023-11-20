@@ -1,0 +1,29 @@
+id: GYM-014
+title: "Working with Atomic Design and Pattern Lab"
+date: 2019-10-28T00:00:00-04:00
+type: short
+tags:
+  - course
+  - gym-short
+  - short
+  - short-course
+live: true
+url: /courses/course-v1:GYM+014+0/about
+img: /img/course-artwork/png/gym-014.png
+topic: "Development"
+subtopics:
+  - label: "Design Systems"
+  - label: "Pattern Library"
+description: "Learn how to use Atomic Design methodology within Pattern Lab in order to create reusable user interface components."
+instructor: bfrost
+skills:
+  - label: "Website prototyping"
+  - label: "Designing with dynamic data"
+  - label: "Structuring a design system"
+audience:
+  - label: "Anyone interested in building design systems"
+  - label: "Anyone interested in building website or web app prototypes"
+  - label: "UX designers with coding chops"
+lessons_duration: "2 hours"
+completion_duration: "Up to 4 hours"
+skill_level: "Intermediate"

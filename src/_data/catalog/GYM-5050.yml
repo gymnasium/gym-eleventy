@@ -1,0 +1,33 @@
+id: GYM-5050
+title: "Working with Auto Layout in Figma"
+date: 2021-06-15T00:00:00-04:00
+type: take5
+tags:
+  - tutorial
+  - take5
+url: /courses/take5/GYM-5050/
+img: /img/take5/posters/gym-5050.jpg
+live: true
+instructor: "Jeremy Osborn"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
+video_id: 5wvVjAZgf0Y
+video_duration: "4:59"
+featured: false
+description: "Learn the fundamentals of Auto Layout in Figma to design responsive interfaces, components, and even entire layouts."
+project_file_source: Figma Community
+project_files:
+- label: "Starting Project"
+  url: "https://bit.ly/3x880Tu"
+- label: "Completed Project"
+  url: "https://bit.ly/3xpGYY7"
+related_content:
+- label: "Create dynamic designs with auto layout"
+  url: "https://help.figma.com/hc/en-us/articles/360040451373"
+- label: "Figma Auto Layout playground"
+  url: "https://www.figma.com/community/file/784448220678228461"
+- label: "Working with Auto Layout for responsive design"
+  url: "https://designcode.io/figma-handbook-auto-layout"
+skill_level: "Intermediate"

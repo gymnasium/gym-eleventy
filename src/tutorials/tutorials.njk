@@ -1,16 +1,32 @@
+---js
+{
+  layout: "layouts/main.njk",
+  pagination: {
+    data: "catalog",
+    size: 1,
+    alias: "item",
+    resolve: "values",
+    before: function(data) {
+      const items = data.filter(x => x.tags.includes('tutorial'));
+      // console.log(items);
+      return items;
+    },
+    addAllPagesToCollections: true,
+  },
+  permalink: "tutorials/{{ item.title | slugify }}/",
+  eleventyComputed: {
+    title: "{{ item.title }} | Tutorials",
+    description: "{{ item.description | strip_html }}",
+    sitemapDate: "{{ item.date.toISOString() }}",
+    sitemapExclude: function(data) {
+      const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
+      return bool;
+    },
+  },
+}
 ---
-layout: layouts/main.njk
-pagination:
-  data: tutorials
-  size: 1
-  alias: tutorial
-  resolve: values
-permalink: "tutorials/{{ tutorial.title | slugify }}/"
-eleventyComputed:
-  title: "{{ tutorial.title }} | Tutorials"
-  description: "{{ tutorial.description | strip_html }}"
----
-<h1>{{ tutorial.title }}</h1>
-<h4>{{ tutorial.id }}</h4>
-<p>{{ tutorial.description }}</p>
-{%- youtube tutorial.video_id, tutorial.title -%}
+
+<h1>{{ item.title }}</h1>
+<h4>{{ item.id }}</h4>
+<p>{{ item.description }}</p>
+{%- youtube item.video_id, item.title -%}

@@ -1,0 +1,27 @@
+id: GYM-102
+title: "jQuery Building Blocks"
+date: 2019-10-28T00:00:00-04:00
+type: full
+tags:
+  - course
+  - full
+  - full-course
+live: true
+url: /courses/GYM/102/0/about
+img: /img/course-artwork/png/gym-102.png
+topic: "Development"
+subtopics:
+  - label: "JavaScript"
+description: "This course will teach you 5 easy techniques for adding interactivity to your web pages. By the end of the course, you’ll be able to add features and style to your web pages, from simple animations to complex dynamic content."
+instructor: dporter
+skills:
+  - label: "Navigation, animation, and server interaction"
+  - label: "JavaScript"
+  - label: "HTML/CSS"
+audience:
+  - label: "Designers with coding chops"
+  - label: "Front-End Developers"
+  - label: "JavaScript Developers"
+lessons_duration: "3.5 hours"
+completion_duration: "Up to 17 hours"
+skill_level: "Intermediate"

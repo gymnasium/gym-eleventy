@@ -1,0 +1,31 @@
+id: GYM-5003
+title: "Adding a CSS Gradient Overlay to an Image"
+date: 2019-10-30T00:00:00-04:00
+type: take5
+tags:
+  - tutorial
+  - take5
+url: /courses/take5/GYM-5003/
+img: /img/take5/posters/gym-5003.jpg
+live: true
+instructor: "Jeremy Osborn"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "Development"
+video_id: SaO2hO-4yEY
+video_duration: "4:13"
+featured: false
+description: "Learn how to add a gradient overlay to an image more efficiently using only CSS in this hands-on tutorial."
+project_file_source: CodePen
+project_files:
+- label: "Starting Project"
+  url: "https://codepen.io/josborn/pen/WWzBwO"
+- label: "Completed Project"
+  url: "https://codepen.io/josborn/pen/JVavQN"
+related_content:
+- label: "HSL Color Picker"
+  url: "https://hslpicker.com"
+- label: "Multiple Backgrounds and CSS Gradients by Jonathan Snook"
+  url: "https://snook.ca/archives/html_and_css/multiple-bg-css-gradients"
+- label: "Can I Use: CSS Gradients"
+  url: "https://caniuse.com/css-gradients"
+skill_level: "Intermediate"

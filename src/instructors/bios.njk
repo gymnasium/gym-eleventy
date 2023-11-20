@@ -6,6 +6,7 @@ pagination:
   alias: bio
   resolve: values
 permalink: "instructors/{{ bio.name | slugify }}/"
+eleventyExcludeFromCollections: true
 eleventyComputed:
   title: "{{ bio.name }} | Instructors"
   description: "{{ bio.description | strip_html }}"

@@ -2,23 +2,29 @@
 layout: layouts/main.njk
 eleventyComputed:
   title: "{{ config.meta.subtitle }}"
+sitemapPriority: 1.0
+sitemapChangeFreq: weekly
 ---
-<h2>Featured</h2>
+<h2>Featured Courses</h2>
 <ul>
 {%- for item in featured['home'] -%}
   {%- set id = item | uppercase -%}
   <li>
     <div id="featured-{{ item }}">
-      <img src="{{ config.cms_url }}{{ courses[id]['img'] }}" alt="Image for {{ courses[id]['title'] }}">
-      <span>{{ courses[id]['topic'] }}</span>
-      <h3>{{ courses[id]['title'] }}</h3>
-      <p>{{ courses[id]['description'] }}</p>
-      <p>with {{ bios[courses[id]['instructor']].name }}</p>
-      <p>{{ bios[courses[id]['instructor']].subtitle }}</p>
-      <a class="button" href="/courses/{{ courses[id]['title'] | slugify }}">Learn More</a>
+      <img src="{{ config.cms_url }}{{ catalog[id]['img'] }}" alt="Image for {{ catalog[id]['title'] }}">
+      <span>{{ catalog[id]['topic'] }}</span>
+      <h3>{{ catalog[id]['title'] }}</h3>
+      <p>{{ catalog[id]['description'] }}</p>
+      <p>with {{ bios[catalog[id]['instructor']].name }}</p>
+      <p>{{ bios[catalog[id]['instructor']].subtitle }}</p>
+      <a class="button" href="/courses/{{ catalog[id]['title'] | slugify }}">Learn More</a>
     </div>
     {# DEBUG:<br>
     {{ courses[id] | dump }} #}
   </li>
 {%- endfor -%}
 </ul>
+
+<p>Design a career you love with free online courses on design, development, UX, accessibility, and career skills.</p>
+
+<a class="button" href="/courses/">View all Courses</a>

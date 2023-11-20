@@ -1,0 +1,31 @@
+id: GYM-5055
+title: "Creating an Effective Color Palette in Design"
+date: 2023-03-16T00:00:00-04:00
+course_type: take5
+tags:
+  - tutorial
+  - take5
+url: /courses/take5/GYM-5055/
+poster_art: /img/take5/posters/gym-5055.jpg
+live: true
+instructor: "Meagan Fisher"
+instructor_bio: "Web Designer and Developer at Owltastic"
+topic: "Design"
+subtopics:
+  - label: "Accessibility"
+video_id: KrN5qckZ7iA
+video_duration: "4:14"
+featured: false
+description: "Learn how to choose a color palette that strengthens the branding, accessibility, and UX of your design in this tutorial."
+project_file_source:
+project_files:
+related_content:
+- label: "Colour Contrast Checker"
+  url: "https://colourcontrast.cc"
+- label: "Color Theory 101: A Complete Guide to Color Wheels & Color Scheme by Bethany Cartwright"
+  url: "https://blog.hubspot.com/marketing/color-theory-design"
+- label: "Happy Hues: Curated colors in context"
+  url: "https://www.happyhues.co"
+- label: "Gymnasium: Getting Contrast Right in Your Typography"
+  url: "https://thegymnasium.com/courses/take5/getting-contrast-right-in-your-typography"
+skill_level: "Beginner"

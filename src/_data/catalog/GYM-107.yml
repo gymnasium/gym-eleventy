@@ -1,0 +1,25 @@
+id: GYM-107
+title: "Modern Web Design"
+date: 2019-10-28T00:00:00-04:00
+type: full
+tags:
+  - course
+  - full
+  - full-course
+live: true
+url: /courses/GYM/107/0/about
+img: /img/course-artwork/png/gym-107.png
+topic: "Development"
+description: "This course will prepare you to be a front-end developer by walking you through the process of building a simple, responsive website using HTML, CSS, and JavaScript."
+instructor: agustafson
+skills:
+  - label: "HTML Markup"
+  - label: "Using CSS as a design tool"
+  - label: "Adding interactivity with JavaScript"
+audience:
+  - label: "Aspiring Front-End Developers"
+  - label: "Designers"
+  - label: "Creatives"
+lessons_duration: "5 hours"
+completion_duration: "Up to 22 hours"
+skill_level: "Intermediate"

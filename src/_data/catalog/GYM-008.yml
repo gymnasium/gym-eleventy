@@ -1,0 +1,32 @@
+id: GYM-008
+title: "Advanced Rapid Prototyping with Axure"
+date: 2019-10-28T00:00:00-04:00
+type: short
+tags:
+  - course
+  - gym-short
+  - short
+  - short-course
+live: false
+sitemapExclude: true
+retired_message:
+  1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons."
+url: /courses/GYM/008/0/about
+img: /img/course-artwork/png/gym-008.png
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
+description: "This course has been retired."
+description_orig: "Learn how to use the conditional logic features in Axure in order to quickly create an interactive prototype."
+instructor: tslate
+skills:
+  - label: "Interactive prototyping"
+  - label: "Basic programming logic"
+  - label: "User flows"
+audience:
+  - label: "UX Designers"
+  - label: "Interactive Designers"
+  - label: "Information Architects"
+lessons_duration: "1 hour"
+completion_duration: "Up to 2 hours"
+skill_level: "Intermediate"

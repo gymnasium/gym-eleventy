@@ -1,38 +1,53 @@
----
-layout: layouts/main.njk
-pagination:
-  data: webinars
-  size: 1
-  alias: webinar
-  resolve: values
-permalink: "webinars/{{ webinar.slug }}/"
-eleventyComputed:
-  title: "{{ webinar.title | strip_html }} | Webinars"
-  description: "{{ webinar.description | strip_html }}"
+---js
+{
+  layout: "layouts/main.njk",
+  pagination: {
+    data: "catalog",
+    size: 1,
+    alias: "item",
+    resolve: "values",
+    before: function(data) {
+      const items = data.filter(x => x.tags.includes('webinar'));
+      // console.log(items);
+      return items;
+    },
+    addAllPagesToCollections: true,
+  },
+  permalink: "webinars/{{ item.slug }}/",
+  eleventyComputed: {
+    title: "{{ item.title | strip_html }} | Webinars",
+    description: "{{ item.description | strip_html }}",
+    sitemapDate: "{{ item.event_date.toISOString() }}",
+    sitemapExclude: function(data) {
+      const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
+      return bool;
+    },
+  },
+}
 ---
 
 <article>
   <header>
     <h1>Webinar Recording</h1>
-    <h2>{{ webinar.title | safe }}</h2>
-    <h3>{{ webinar.event_guests | safe }}</h3>
+    <h2>{{ item.title | safe }}</h2>
+    <h3>{{ item.event_guests | safe }}</h3>
   </header>
 
-  <p>{{ webinar.description }}</p>
+  <p>{{ item.description }}</p>
 
-  {%- if webinar.video_id -%}
-    {%- youtube webinar.video_id -%}
+  {%- if item.video_id -%}
+    {%- youtube item.video_id -%}
   {%- endif -%}
 
   {# TODO: Hidden for now, likely because this is more relevant to the "event" version of the page  #}
-  {# {%- if webinar.content -%}
-    <p>{{ webinar.content | safe }}</p>
+  {# {%- if item.content -%}
+    <p>{{ item.content | safe }}</p>
   {%- endif -%} #}
 
-  {%- if webinar.resources -%}
+  {%- if item.resources -%}
     <h2>Resources</h2>
     <ul>
-      {%- for resource in webinar.resources -%}
+      {%- for resource in item.resources -%}
         <li><a href="{{ resource.label }}" target="_blank" rel="noopener">{{ resource.label }}</a></li>
       {%- endfor -%}
     </ul>
@@ -41,22 +56,22 @@ eleventyComputed:
 
 <aside>
   <header>
-    <h1>Guest Speaker{%- if webinar.speaker[1] -%}s{%- endif -%}</h1>
+    <h1>Guest Speaker{%- if item.speaker[1] -%}s{%- endif -%}</h1>
   </header>
 
-  {%- if webinar.speaker[0] -%}
+  {%- if item.speaker[0] -%}
     <section>
-      <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[webinar.speaker[0]]['img'] }}" alt="Image of {{ bios[webinar.speaker[0]]['name'] }}">
-      <h2>{{ bios[webinar.speaker[0]]['name'] }}</h2>
-      <p>{{ bios[webinar.speaker[0]]['description'] | safe }}</p>
+      <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[item.speaker[0]]['img'] }}" alt="Image of {{ bios[item.speaker[0]]['name'] }}">
+      <h2>{{ bios[item.speaker[0]]['name'] }}</h2>
+      <p>{{ bios[item.speaker[0]]['description'] | safe }}</p>
     </section>
   {%- endif -%}
 
-  {%- if webinar.speaker[1] -%}
+  {%- if item.speaker[1] -%}
     <section>
-      <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[webinar.speaker[1]]['img'] }}" alt="Image of {{ bios[webinar.speaker[1]]['name'] }}">
-      <h2>{{ bios[webinar.speaker[1]]['name'] }}</h2>
-      <p>{{ bios[webinar.speaker[1]]['description'] | safe }}</p>
+      <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[item.speaker[1]]['img'] }}" alt="Image of {{ bios[item.speaker[1]]['name'] }}">
+      <h2>{{ bios[item.speaker[1]]['name'] }}</h2>
+      <p>{{ bios[item.speaker[1]]['description'] | safe }}</p>
     </section>
   {%- endif -%}
 
@@ -65,8 +80,8 @@ eleventyComputed:
   </header>
 
   <section>
-    <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[webinar.host]['img'] }}" alt="Image of {{ bios[webinar.host]['name'] }}">
-    <h2>{{ bios[webinar.host]['name'] }}</h2>
-    <p>{{ bios[webinar.host]['description'] }}</p>
+    <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[item.host]['img'] }}" alt="Image of {{ bios[item.host]['name'] }}">
+    <h2>{{ bios[item.host]['name'] }}</h2>
+    <p>{{ bios[item.host]['description'] }}</p>
   </section>
 </aside>

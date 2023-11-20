@@ -2,13 +2,32 @@
 layout: layouts/main.njk
 permalink: /courses/
 title: Courses
+collection: course
+sitemapPriority: 0.7
+sitemapChangeFreq: weekly
 ---
+
 <h1>Courses</h1>
 <p>This is the courses index. The list below is produced directly from local YAML files.</p>
 
+<h2>Full Courses</h2>
 <ul>
-{% for id, course in courses %}
-  <li>
+{% for course in collections.catalog | pluck('tags','full') %}
+  {%- if course.live -%}
+    <li>{{ course.id }} | 
+      <a href="/courses/{{ course.title | slugify }}">
+        {{ course.title }}
+        <img style="max-width: 5rem;" src="{{config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">
+      </a>
+    </li>
+  {%- endif -%}
+{% endfor %}
+</ul>
+
+<h2>Short Courses (Gym Shorts)</h2>
+<ul>
+{% for course in collections.catalog | pluck('tags','short') %}
+  <li>{{ course.id }} | 
     <a href="/courses/{{ course.title | slugify }}">
       {{ course.title }}
       <img style="max-width: 5rem;" src="{{config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">

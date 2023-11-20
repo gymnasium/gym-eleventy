@@ -1,0 +1,25 @@
+id: GYM-5038
+title: "Making Headings and Lists More Accessible"
+date: 2020-09-15T00:00:00-04:00
+type: take5
+tags:
+  - tutorial
+  - take5
+url: /courses/take5/GYM-5038/
+img: /img/take5/posters/gym-5038.jpg
+live: true
+instructor: "Clarissa Peterson"
+instructor_bio: "Strategy Director at Forum One"
+topic: "Accessibility"
+video_id: 9ylBqOnEXos
+video_duration: "4:39"
+featured: false
+description: "Learn how to make the headings and lists in your HTML documents more accessible for everyone in this tutorial."
+related_content:
+- label: "Accessibility Tutorials: Headings"
+  url: "https://www.w3.org/WAI/tutorials/page-structure/headings/"
+- label: "Accessible Heading Structure"
+  url: "https://www.a11yproject.com/posts/how-to-accessible-heading-structure/"
+- label: "Lists in HTML"
+  url: "https://accessibility.psu.edu/listshtml/"
+skill_level: "Beginner"
