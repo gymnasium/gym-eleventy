@@ -34,4 +34,8 @@ module.exports = eleventyConfig => {
     return `<a href="${href}" rel="noopener" target="_blank">${title}</a>`
   });
 
+  eleventyConfig.addShortcode('mail_link', (href, title) => {
+    return `<a href="mailto:${href}">${title}</a>`
+  });
+
 }
