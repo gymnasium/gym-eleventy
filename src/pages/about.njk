@@ -10,7 +10,10 @@ module.exports = {
   }
 }
 ---
-{# Here is an example of using a YAML file to generate tags and content(!) #}
+{# Note:
+Here is an example of using a YAML file to generate tags and content(!) 
+This generally works best with a straightforward, top-down layout, but this approach could be leveraged for more complex layouts.
+#}
 {%- set items = pages['about'] -%}
 {%- for id, section in items -%}
   <section id="{{ id }}" class="page-section {{ id }}">
