@@ -7,18 +7,18 @@ eleventyComputed:
 {%- set items = pages['faq'] -%}
 {%- for id, section in items -%}
   {%- if loop.first -%}
-  <header id="{{ id }}" class="page-header {{ id }}">
-    {%- for tag, item in section -%}
-      <{{ tag }}>{{ item | safe }}</{{ tag }}>
-    {%- endfor -%}
-  </header>
-  <ul>
+    <header id="{{ id }}" class="page-header {{ id }}">
+      {%- for tag, item in section -%}
+        <{{ tag }}>{{ item | safe }}</{{ tag }}>
+      {%- endfor -%}
+    </header>
+    <ul>
   {%- else -%}
-  <li id="{{ id }}" class="page-section {{ id }}">
-    {%- for tag, item in section -%}
-      <{{ tag }}>{{ item | safe }}</{{ tag }}>
-    {%- endfor -%}
-  </li>
+    <li id="{{ id }}" class="page-section {{ id }}">
+      {%- for tag, item in section -%}
+        <{{ tag }}>{{ item | safe }}</{{ tag }}>
+      {%- endfor -%}
+    </li>
   {%- endif -%}
   {%- if loop.last -%}</ul>{%- endif -%}
 {%- endfor -%}
