@@ -85,6 +85,10 @@ module.exports = eleventyConfig => {
     return typeof obj === 'string';
   });
 
+  eleventyConfig.addFilter('is_object', (obj) => {
+    return typeof obj === 'object';
+  });
+
   // smart-ish replace filter, which works on strings and objects
   eleventyConfig.addFilter('replace', (input, string, replace) => {
     let stringified = typeof input === 'object' ? JSON.stringify(input) : input;

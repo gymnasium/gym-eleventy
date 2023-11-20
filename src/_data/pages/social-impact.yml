@@ -1,0 +1,69 @@
+intro:
+  h1: Social Impact
+  p: We at Gymnasium believe that diversity is a feature, not a bug. Please join us in supporting causes we care about — from working toward closing the gender gap in tech to connecting marginalized communities with job opportunities. Together we can make a difference.
+article:
+  causes-we-care-about:
+    h2: Causes We Care About
+  aquent-social-impact:
+    h3: Aquent Social Impact
+    ul:
+      - href: https://my.care.org/site/Donation2?31667.donation=form1&amp;df_id=31667&amp;mfc_pref=T&amp;s_src=382248000000&amp;s_subsrc=FY22UkraineCrisisFundMGAquent
+        label: CARE Ukraine Crisis Fund
+      - href: https://designingforgood.com
+        label: Designing for Good
+      - href: https://aquenttalent.com/services/diversity-recruiting
+        label: Diversity+ Recruiting Solution
+      - href: https://aquent.com/about-us/sustainability
+        label: Global Sustainability Efforts
+  education-nonprofits:
+    h3: Education Nonprofits
+    ul:
+      - href: https://www.writeboston.org/tip/
+        label: Teens in Print
+      - href: https://826national.org
+        label: 826 National
+      - href: https://www.possefoundation.org
+        label: The Posse Foundation
+      - href: https://thelastmile.org
+        label: The Last Mile
+  creative-nonprofits:
+    h3: Creative Nonprofits
+    ul:
+      - href: https://www.afhboston.org
+        label: Artists for Humanity
+      - href: https://youngarts.org
+        label: YoungArts
+  diversity-in-tech:
+    h3: Diversity in Tech
+    ul:
+      - href: https://www.empowrco.org
+        label: Empowr
+      - href: https://www.resilientcoders.org
+        label: Resilient Coders
+      - href: https://blacktechpipeline.com
+        label: Black Tech Pipeline
+  women-in-tech:
+    h3: Women in Tech
+    ul:
+      - href: https://girlswhocode.com
+        label: Girls Who Code
+      - href: https://wearebgc.org
+        label: Black Girls Code
+  lgbtq+-in-tech:
+    h3: LGBTQ+ in Tech
+    ul:
+      - href: https://outintech.com
+        label: Out in Tech
+      - href: https://startout.org
+        label: StartOut
+      - href: https://lgbtq.technology
+        label: LGBTQ in Technology Slack
+  social-justice:
+    h3: Social Justice
+    ul:
+      - href: https://www.raicestexas.org
+        label: RAICES
+      - href: https://www.naacpldf.org
+        label: NAACP Legal Defense Fund
+      - href: https://colorofchange.org
+        label: Color of Change

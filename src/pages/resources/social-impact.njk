@@ -1,0 +1,40 @@
+---
+layout: layouts/main.njk
+permalink: /social-impact/
+title: "Social Impact"
+---
+{%- set items = pages['social-impact'] -%}
+{%- for id, section in items -%}
+  {%- if loop.first -%}
+    <header id="{{ id }}" class="page-header {{ id }}">
+      {%- for tag, item in section -%}
+        <{{ tag }}>{{ item | safe }}</{{ tag }}>
+      {%- endfor -%}
+    </header>
+  {%- else -%}
+    <article id="{{ id }}" class="page-article {{ id }}">
+      {%- for ident, sections in section -%}
+        {%- if loop.first -%}
+          {%- set markup = 'header' -%}
+        {%- else -%}
+          {%- set markup = 'section' -%}
+        {%- endif -%}
+        <{{ markup }} id="{{ ident }}">
+          {%- for a, b in sections -%}
+            {%- if a | is_string -%}
+              <{{ a }}>
+                {%- if b | is_string -%}
+                  {{ b }}
+                {%- elseif b | is_object -%}
+                  {%- for idx in range(0, b.length) -%}
+                    <li><a href="{{ b[idx].href }}" rel="noopener" target="_blank">{{ b[idx].label }}</a></li>
+                  {%- endfor -%}
+                {%- endif -%}
+              </{{ a }}>
+            {%- endif -%}
+          {%- endfor -%}
+        </{{ markup }}>
+      {%- endfor -%}
+    </article>
+  {%- endif -%}
+{%- endfor -%}
