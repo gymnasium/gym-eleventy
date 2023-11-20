@@ -26,4 +26,12 @@ module.exports = eleventyConfig => {
     `<h1>${title}</h1>
     <p>${subtitle}</p>`);
 
+  eleventyConfig.addShortcode('back_to_top', () => {
+    return `<div class="to-top-link"><a href="#main">Back to top</a></div>`
+  });
+
+  eleventyConfig.addShortcode('external_link', (href, title) => {
+    return `<a href="${href}" rel="noopener" target="_blank">${title}</a>`
+  });
+
 }
