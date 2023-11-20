@@ -16,12 +16,9 @@ sitemapChangeFreq: monthly
   {%- for webinar in webinars | sortDataByDate('event_date') | reverse -%}
   <li>
     <header>
-      DEBUG<br>
+      {# DEBUG<br>
         Event Date: <time datetime="{{ webinar.event_date }}">{{ webinar.event_date }}</time><br>
-
-        Date: <time datetime="{{ webinar.date }}">{{ webinar.date }}</time>
-     
-
+        Date: <time datetime="{{ webinar.date }}">{{ webinar.date }}</time> #}
       <p>{{ webinar.content_category }}</p>
       <h2>{{ webinar.title | safe }}</h2>
     </header>
