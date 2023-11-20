@@ -1,0 +1,30 @@
+---
+layout: layouts/main.njk
+permalink: /support/
+eleventyComputed:
+  title: "FAQ"
+---
+{%- set items = pages['support'] -%}
+{%- for id, section in items -%}
+  {%- if loop.first -%}
+    <header id="{{ id }}" class="page-header {{ id }}">
+      {%- for tag, item in section -%}
+        <{{ tag }}>{{ item | safe }}</{{ tag }}>
+      {%- endfor -%}
+    </header>
+  {%- else -%}
+    <section id="{{ id }}" class="page-section {{ id }}">
+      {%- for tag, item in section -%}
+        {%- if loop.first -%}
+          <{{ tag }}>{{ item | safe }}</{{ tag }}>
+        {%- else -%}
+          <{{ tag }}>
+            {%- for idx in range(0, item.length) -%}
+              <li>{{ item[idx] | safe }}</li>
+            {%- endfor -%}
+          </{{ tag }}>
+        {%- endif -%}
+      {%- endfor -%}
+    </section>
+  {%- endif -%}
+{%- endfor -%}
