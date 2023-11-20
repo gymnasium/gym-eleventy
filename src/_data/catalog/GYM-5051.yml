@@ -1,0 +1,35 @@
+id: GYM-5051
+title: "Advanced Auto Layout in Figma"
+date: 2021-06-29T00:00:00-04:00
+type: take5
+tags:
+  - tutorial
+  - take5
+url: /courses/take5/GYM-5051/
+img: /img/take5/posters/gym-5051.jpg
+live: true
+instructor: "Jeremy Osborn"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "UX"
+subtopics:
+  - label: "Prototyping"
+video_id: UYsT7xAhQZM
+video_duration: "4:55"
+featured: false
+description: "Learn advanced Auto Layout techniques in Figma such as alignment, distribution, resizing, and nesting to create complex interfaces."
+project_file_source: Figma Community
+project_files:
+- label: "Starting Project"
+  url: "https://bit.ly/3wNuwkK"
+- label: "Completed Project"
+  url: "https://bit.ly/3zXzT2O"
+related_content:
+- label: "Best practices for nested frames by Thomas Lowry"
+  url: "https://www.figma.com/best-practices/component-architecture/nested-components/"
+- label: "Mastering frame nesting in Figma by Chuck Rice"
+  url: "https://uxdesign.cc/mastering-frame-nesting-in-figma-df0ddecdeb92"
+- label: "Figma tutorial: Auto Layout navigation menu"
+  url: "https://youtu.be/bh98SF7OjUk"
+- label: "Gymnasium: Working with Auto Layout in Figma"
+  url: "https://thegymnasium.com/courses/take5/working-with-auto-layout-in-figma"
+skill_level: "Intermediate"

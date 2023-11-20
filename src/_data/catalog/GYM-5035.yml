@@ -1,0 +1,37 @@
+id: GYM-5035
+title: "Responsively Designing with Viewport Units"
+date: 2020-06-25T00:00:00-04:00
+type: take5
+tags:
+  - tutorial
+  - take5
+url: /courses/take5/GYM-5035/
+img: /img/take5/posters/gym-5035.jpg
+live: true
+instructor: "Ethan Marcotte"
+instructor_bio: "Partner at Autogram"
+topic: "Development"
+subtopics:
+  - label: "Accessibility"
+video_id: m1_iOLbtEFM
+video_duration: "4:59"
+featured: false
+description: "Learn how to responsively spice up your designs with viewport units in this tutorial."
+project_file_source: CodePen
+project_files:
+- label: "Starting Project"
+  url: "https://cdpn.io/ExVwEop"
+- label: "Completed Project"
+  url: "https://cdpn.io/WNQZzJR"
+related_content:
+- label: "Flexible typography with CSS locks by Tim Brown"
+  url: "https://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/"
+- label: "Precise control over responsive typography by Mike Riethmuller"
+  url: "https://www.madebymike.com.au/writing/precise-control-responsive-typography/"
+- label: "MDN: The object-fit CSS property"
+  url: "https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit"
+- label: "MDN: The object-position CSS property"
+  url: "https://developer.mozilla.org/en-US/docs/Web/CSS/object-position"
+- label: "MDN: The calc CSS function"
+  url: "https://developer.mozilla.org/en-US/docs/Web/CSS/calc"
+skill_level: "Intermediate"

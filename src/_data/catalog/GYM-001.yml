@@ -1,0 +1,26 @@
+id: GYM-001
+title: "Defeating Busy"
+date: 2019-10-28T00:00:00-04:00
+type: short
+tags:
+  - course
+  - gym-short
+  - short
+  - short-course
+url: /courses/GYM/001/0/about
+img: /img/course-artwork/png/gym-001.png
+live: true
+topic: "Career Skills"
+description: "Learn how to estimate, plan, track, and manage your time in order to complete projects. Being busy isn’t a bad thing, but not being in control of your own time is."
+instructor: bharned
+skills:
+  - label: "Project estimation"
+  - label: "Time tracking"
+  - label: "Team/client communication skills"
+audience:
+  - label: "Designers"
+  - label: "Developers"
+  - label: "Anyone with a deadline"
+lessons_duration: "Under 1 hour"
+completion_duration: "Up to 1.5 hours"
+skill_level: "Beginner"

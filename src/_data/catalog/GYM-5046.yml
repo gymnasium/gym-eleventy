@@ -1,0 +1,41 @@
+id: GYM-5046
+title: "Creating Accessible Video and Audio Content"
+date: 2020-11-10T00:00:00-04:00
+type: take5
+tags:
+  - tutorial
+  - take5
+url: /courses/take5/GYM-5046/
+img: /img/take5/posters/gym-5046.jpg
+live: true
+instructor: "Clarissa Peterson"
+instructor_bio: "Strategy Director at Forum One"
+topic: "Accessibility"
+video_id: mCIFslxi1yU
+video_duration: "4:44"
+featured: false
+description: "With more video and audio being published online than ever before, it’s critical to make this content as accessible as possible. Learn strategies for improving multimedia accessibility on your websites in this tutorial."
+related_content:
+- label: "Audio Description for the Blind (Video)"
+  url: "https://accessibility.psu.edu/video/audiodescription/"
+- label: "Making Audio and Video Media Accessible"
+  url: "https://www.w3.org/WAI/media/av/"
+- label: "Multimedia Accessibility FAQ"
+  url: "https://www.w3.org/2008/06/video-notes"
+- label: "7 Different Ways to Transcribe your Video"
+  url: "https://designrr.io/ways-to-transcribe-video/"
+- label: "YouTube Help: Add your own subtitles & closed captions"
+  url: "https://support.google.com/youtube/answer/2734796"
+- label: "3Play Media"
+  url: "https://3playmedia.com"
+- label: "Rev"
+  url: "https://rev.com"
+- label: "Captioning Star"
+  url: "https://captioningstar.com"
+- label: "Descript"
+  url: "https://descript.com"
+- label: "Otter"
+  url: "https://otter.ai"
+- label: "Sonix"
+  url: "https://sonix.ai"
+skill_level: "Beginner"

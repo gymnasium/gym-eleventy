@@ -1,0 +1,33 @@
+id: GYM-5031
+title: "Creating an Interactive Chart for the Web"
+date: 2020-03-31T00:00:00-04:00
+type: take5
+tags:
+  - tutorial
+  - take5
+url: /courses/take5/GYM-5031/
+img: /img/take5/posters/gym-5031.jpg
+live: true
+instructor: "Jeremy Osborn"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "Development"
+video_id: 0X4uxoKMwew
+video_duration: "4:59"
+featured: false
+description: "Learn how to make an interactive column chart using Google Charts in this tutorial."
+project_file_source: CodePen
+project_files:
+- label: "Completed Project"
+  url: "https://codepen.io/josborn/pen/abOLorN"
+related_content:
+- label: "Google Charts Quick Start Guide"
+  url: "https://developers.google.com/chart/interactive/docs/quick_start"
+- label: "Aquent Gymnasium’s free course: Information Design and Visualization Fundamentals"
+  url: "https://thegymnasium.com/courses/GYM/106/0/about"
+- label: "Google Chart Gallery"
+  url: "https://developers.google.com/chart/interactive/docs/gallery"
+- label: "DataTables and DataViews (Different ways to create and populate a DataTable)"
+  url: "https://developers.google.com/chart/interactive/docs/datatables_dataviews"
+- label: "Uxtools.co 2019 Design Tools Survey Results"
+  url: "https://uxtools.co/survey-2019/"
+skill_level: "Intermediate"

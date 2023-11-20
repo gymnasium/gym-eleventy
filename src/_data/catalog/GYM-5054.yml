@@ -1,0 +1,31 @@
+id: GYM-5054
+title: "Getting Contrast Right in Your Typography"
+date: 2023-07-25T00:00:00-04:00
+course_type: take5
+tags:
+  - tutorial
+  - take5
+url: /courses/take5/GYM-5054/
+poster_art: /img/take5/posters/gym-5054.jpg
+live: true
+instructor: "Meagan Fisher"
+instructor_bio: "Web Designer and Developer at Owltastic"
+topic: "Design"
+subtopics:
+  - label: "Accessibility"
+video_id: oaAJzDFXHvc
+video_duration: "4:17"
+featured: true
+description: "Learn how contrast in your typography can improve your content’s structure, readability, and accessibility in this tutorial."
+project_file_source:
+project_files:
+related_content:
+- label: "Gymnasium: Improving Accessibility with Color Contrast"
+  url: "https://thegymnasium.com/courses/take5/improving-accessibility-with-color-contrast"
+- label: "Pairing typefaces by Eliot Jay Stocks"
+  url: "https://fonts.google.com/knowledge/choosing_type/pairing_typefaces"
+- label: "WebAIM’s Contrast Checker"
+  url: "https://webaim.org/resources/contrastchecker/"
+- label: "Gymnasium: Creating an Effective Color Palette in Design"
+  url: "https://thegymnasium.com/courses/take5/creating-an-effective-color-palette-in-design"
+skill_level: "Beginner"

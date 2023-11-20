@@ -19,7 +19,7 @@ module.exports = async function() {
       type: "json"
     });
 
-    let feed_url = await complete.items.config.feeds.blog;
+    let feed_url = `https://medium.com/feed/gymnasium`;
 
     let feed = await parser.parseURL(feed_url);
 

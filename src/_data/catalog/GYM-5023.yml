@@ -1,0 +1,35 @@
+id: GYM-5023
+title: "Creating A Harmonious Color Scheme with HSL"
+date: 2020-01-13T00:00:00-04:00
+type: take5
+tags:
+  - tutorial
+  - take5
+url: /courses/take5/GYM-5023/
+img: /img/take5/posters/gym-5023.jpg
+live: true
+instructor: "Jeremy Osborn"
+instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic: "Design"
+subtopics:
+  - label: "Development"
+video_id: 1430bmqJ9xw
+video_duration: "4:57"
+featured: false
+description: "Learn how to create a pleasing analogous color scheme using the HSL color system with this tutorial."
+project_file_source: CodePen
+project_files:
+- label: "Starting Project"
+  url: "https://codepen.io/josborn/pen/QWwbxyM"
+- label: "Completed Project"
+  url: "https://codepen.io/josborn/pen/JjooGVQ"
+related_content:
+- label: "Color Theory: Brief Guide For Designers by Tubik Studio"
+  url: "https://uxplanet.org/color-theory-brief-guide-for-designers-76e11c57eaa"
+- label: "Analogous color schemes"
+  url: "https://www.paletton.com/wiki/index.php?title=Analogous_color_scheme"
+- label: "A Nerd’s Guide to Color on the Web by Sarah Drasner"
+  url: "https://css-tricks.com/nerds-guide-color-web/"
+- label: "HSL() / HSLa() is great for programmatic color control by Chris Coyier"
+  url: "https://css-tricks.com/hsl-hsla-is-great-for-programmatic-color-control/"
+skill_level: "Intermediate"

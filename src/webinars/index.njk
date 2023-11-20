@@ -2,22 +2,23 @@
 layout: layouts/main.njk
 permalink: /webinars/
 title: Webinars
+sitemapPriority: 0.5
+sitemapChangeFreq: monthly
 ---
 
 <h1>Webinars</h1>
 <p>Insightful conversations with trailblazers in the web community.</p>
 
+{%- set webinars = collections.catalog | pluck('tags','webinar') -%}
+
 {%- if webinars -%}
 <ul>
-  {%- for id, webinar in webinars | sortDataByDate("event_date", "desc") -%}
+  {%- for webinar in webinars | sortDataByDate('event_date') | reverse -%}
   <li>
     <header>
-      <!-- DEBUG<br>
+      {# DEBUG<br>
         Event Date: <time datetime="{{ webinar.event_date }}">{{ webinar.event_date }}</time><br>
-
-        Date: <time datetime="{{ webinar.date }}">{{ webinar.date }}</time> -->
-     
-
+        Date: <time datetime="{{ webinar.date }}">{{ webinar.date }}</time> #}
       <p>{{ webinar.content_category }}</p>
       <h2>{{ webinar.title | safe }}</h2>
     </header>
