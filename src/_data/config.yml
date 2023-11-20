@@ -10,18 +10,12 @@ meta:
   twitter_handle: "@AquentGymnasium"
 navigation:
   main:
-  - title: About
-    href: GYM_ROOT_URL/about/
   - title: Courses
     href: GYM_ROOT_URL/courses/
-  - title: Tutorials
-    href: GYM_ROOT_URL/tutorials/
-  - title: Webinars
-    href: GYM_ROOT_URL/webinars/
-  - title: Instructors
-    href: GYM_ROOT_URL/instructors/
-  - title: Blog
-    href: GYM_ROOT_URL/blog/
+  - title: Jobs
+    href: GYM_ROOT_URL/jobs/
+  - title: About
+    href: GYM_ROOT_URL/about/
   footer:
   - title: What We Do
     links:
