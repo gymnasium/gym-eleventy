@@ -1,0 +1,14 @@
+---
+layout: layouts/main.njk
+permalink: /faq/
+eleventyComputed:
+  title: "FAQ"
+---
+{%- set items = pages['faq'] -%}
+{%- for id, section in items -%}
+  <section id="{{ id }}" class="page-section {{ id }}">
+    {%- for tag, item in section -%}
+      <{{ tag }}>{{ item | safe }}</{{ tag }}>
+    {%- endfor -%}
+  </section>
+{%- endfor -%}
