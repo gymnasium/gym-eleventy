@@ -26,25 +26,38 @@
   },
 }
 ---
-
-<h1>{{ item.title }}</h1>
-<h4>{{ item.id }}</h4>
-<p>{{ item.description }}</p>
+{# 
+Note: several of the 6 collections have similar layouts. 
+TODO:
+- write some logic to support a collection layout/type
+- add support for different modules, like dynamically fetched courses, tutorials, webinars
+- add jobs module
+#}
+<header>
+  <h1>{{ item.title }}</h1>
+  <h4>{{ item.id }}</h4>
+  <p>{{ item.description }}</p>
+</header>
 
 {# Here we're omitting some object keys to be able to loop through the content fields #}
 {%- set content = item | omit(['id', 'title', 'topic', 'description', 'slug', 'order', 'redirectFrom', 'exclude', 'sitemapExclude', 'tags', 'category', 'categories']) -%}
 
 {%- if content -%}
   {%- for key, section in content -%}
-  <section id="{{ key }}">
-    <h2>{{ section.heading }}</h2>
-    {%- if section.links -%}
-      <ul>
-      {%- for idx in range(0, section.links.length) -%}
-        <li>{%- external_link section.links[idx].url,section.links[idx].label -%}</li>
-      {%- endfor -%}
-      </ul>
-    {%- endif -%}
-  </section>
+    <section id="{{ key }}">
+      {%- if (not section.module) -%}
+        <h2>{{ section.heading }}</h2>
+        {%- if section.links -%}
+          <ul>
+          {%- for idx in range(0, section.links.length) -%}
+            <li>{%- external_link section.links[idx].url,section.links[idx].label -%}</li>
+          {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      
+      {%- else -%}
+        {% include 'components/' + key + '.html' %}
+      {%- endif -%}
+    </section>
   {%- endfor -%}
 {%- endif -%}
