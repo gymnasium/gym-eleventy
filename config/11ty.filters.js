@@ -103,8 +103,8 @@ module.exports = eleventyConfig => {
     return output;
   });
 
-  eleventyConfig.addFilter('replace_after_pipe', (input, replace) => {
-    const regex = new RegExp(/\|(.*)/, 'g');
+  eleventyConfig.addFilter('replace_after', (input, find, replace) => {
+    const regex = new RegExp('[' + find + '].+', 'g');
     const repl = input.replaceAll(regex, replace);
     return repl;
   });

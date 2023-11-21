@@ -8,7 +8,7 @@ title: Sitemap
 <ul>
 {%- for item in collections.all | sortByUrl -%}
   {%- if (not item.data.draft) and (not item.data.sitemapExclude) -%}
-  {%- set title = item.data.title | replace_after_pipe("") | replace(config.meta.subtitle,"Home") -%}
+  {%- set title = item.data.title | replace_after("|","") | replace(config.meta.subtitle,"Home") -%}
   <li>
     <a href="{{ item.url }}">{{ title }}</a>
   </li>
