@@ -20,8 +20,68 @@ module.exports = function (eleventyConfig) {
     './public/': '/',
   });
 
-  eleventyConfig.addPlugin(shortcodes);
+  eleventyConfig.addCollection('catalog', (collection) => {
+    return collection.getAll()[0].data.catalog;
+  });
+
+  // Get all static pages and perform intentional exclusions by directory
+  eleventyConfig.addCollection('static', function(collectionApi) {
+    let col = collectionApi.getFilteredByGlob("**/pages/**/**.{njk,html,md}");
+
+    return col.filter(item => {
+      if (
+        !item.page.filePathStem.startsWith('/pages/courses/') && 
+        !item.page.filePathStem.startsWith('/pages/tutorials/') && 
+        !item.page.filePathStem.startsWith('/pages/webinars/') &&
+        !item.page.filePathStem.startsWith('/pages/privacy-policy/')
+        ) {
+        return item;
+      }
+    })
+  });
+
+  eleventyConfig.addCollection('privacy', function(collectionApi) {
+    let col = collectionApi.getFilteredByGlob("**/pages/**/**.{njk,html,md}");
+
+    return col.filter(item => {
+      if (item.page.filePathStem.startsWith('/pages/privacy-policy/')) {
+        return item;
+      }
+    })
+  });
+
+  eleventyConfig.addCollection('courses_full', function (collection) {
+    const col = Object.values(collection.getAll()[0].data.catalog)
+      .filter(item => {
+        const bool = item.type === 'full' && item.live;
+        return bool ? item : false;
+      });
+
+    return col;
+  });
+
+  eleventyConfig.addCollection('courses_short', function (collection) {
+    const col = Object.values(collection.getAll()[0].data.catalog)
+      .filter(item => {
+        const bool = item.type === 'short' && item.live;
+        return bool ? item : false;
+      });
+
+    return col;
+  });
+
+  eleventyConfig.addCollection('tutorials', function (collection) {
+    const col = Object.values(collection.getAll()[0].data.catalog)
+      .filter(item => {
+        const bool = item.type === 'tutorial' && item.live;
+        return bool ? item : false;
+      });
+
+    return col;
+  });
+
   eleventyConfig.addPlugin(filters);
+  eleventyConfig.addPlugin(shortcodes);
   eleventyConfig.addPlugin(pluginRev);
   eleventyConfig.addPlugin(pluginImages);
 
@@ -40,10 +100,6 @@ module.exports = function (eleventyConfig) {
       sourceMap: true,
     },
     rev: true,
-  });
-
-  eleventyConfig.addCollection('catalog', (collection, arg) => {
-    return collection.getAll()[0].data.catalog;
   });
 
   eleventyConfig.setServerOptions({
