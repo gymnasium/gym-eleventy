@@ -9,8 +9,6 @@ sitemapChangeFreq: monthly
 <h1>Webinars</h1>
 <p>Insightful conversations with trailblazers in the web community.</p>
 
-{%- set webinars = collections.catalog | pluck('tags','webinar') -%}
-
 {%- if webinars -%}
 <ul>
   {%- for webinar in webinars | sortDataByDate('event_date') | reverse -%}
