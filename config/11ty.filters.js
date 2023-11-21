@@ -4,9 +4,16 @@ function replaceAll(string, find, replace) {
 }
 
 // sort by order
-function sortByOrder(values) {
+function sortByOrder(values, field = ['data']['order']) {
   let vals = [...values]; // this *seems* to prevent collection mutation...
-  return vals.sort((a, b) => Math.sign(a.data.order - b.data.order));
+  if (field) {
+    order = [`${field}`];
+  }
+  // console.log(vals, field);
+  return vals.sort((a, b) => {
+
+    Math.sign(a.order - b.order)
+  });
 }
 
 module.exports = eleventyConfig => {
@@ -18,6 +25,11 @@ module.exports = eleventyConfig => {
 
   // DEBUG: Show object values
   eleventyConfig.addFilter('object_entries', (obj) => Object.entries(obj));
+
+  // very helpful function to omit select object keys, via @ https://www.30secondsofcode.org/js/s/omit-object-keys/
+  eleventyConfig.addFilter('omit', (obj, arr) => Object.keys(obj)
+    .filter(k => !arr.includes(k))
+    .reduce((acc, key) => ((acc[key] = obj[key]), acc), {}));
 
   // extract items from objects or arrays
   eleventyConfig.addFilter('pluck', function (obj, attr, value) {
@@ -39,6 +51,10 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addFilter('uppercase', (string) => {
     return string.toUpperCase();
+  });
+
+  eleventyConfig.addFilter('lowercase', (string) => {
+    return string.toLowerCase();
   });
   
   eleventyConfig.addFilter('date', (date, dateFormat) => {

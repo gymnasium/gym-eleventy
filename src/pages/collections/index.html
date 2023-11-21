@@ -1,0 +1,34 @@
+---
+layout: layouts/main.njk
+permalink: /collections/
+title: Collections
+sitemapPriority: 0.7
+sitemapChangeFreq: monthly
+intro:
+  heading: Content Collections
+  content: Explore specific topics with free courses, tutorials, resources, and jobs.
+---
+<header class="collections--about" id="about">
+  <h1>{{ intro.heading }}</h1>
+  <p>{{ intro.content }}</p>
+</header>
+
+<ul>
+  {%- for col in collections.collection | sortByOrder('order') -%}
+  
+  <li class="collection">
+    <div class="collection--card {{ col.title | slugify }}" id="{{ col.id | lowercase }}">
+      <div class="collection--main">
+        <header>
+          <h2 class="title">{{ col.title }}</h2>
+          <p class="description">{{ col.description }}</p>
+          <span>order: {{ col.order }}</span>
+        </header>
+      </div>
+      <div class="collection--cta">
+        <a class="button" href="/{{ col.title | slugify }}/">Learn More</a>
+      </div>
+    </div>
+  </li>
+  {%- endfor -%}
+</ul>

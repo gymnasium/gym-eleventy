@@ -50,6 +50,17 @@ module.exports = function (eleventyConfig) {
     })
   });
 
+  eleventyConfig.addCollection('collection', function (collection) {
+    const col = Object.values(collection.getAll()[0].data.collection)
+      .filter(item => {
+        return item.exclude ? false : item;
+      });
+    // console.log(col);
+
+    return col;
+  });
+
+  // return only live full courses
   eleventyConfig.addCollection('courses_full', function (collection) {
     const col = Object.values(collection.getAll()[0].data.catalog)
       .filter(item => {
@@ -60,6 +71,7 @@ module.exports = function (eleventyConfig) {
     return col;
   });
 
+  // return only live short courses
   eleventyConfig.addCollection('courses_short', function (collection) {
     const col = Object.values(collection.getAll()[0].data.catalog)
       .filter(item => {
@@ -70,6 +82,7 @@ module.exports = function (eleventyConfig) {
     return col;
   });
 
+  // return only live tutorials
   eleventyConfig.addCollection('tutorials', function (collection) {
     const col = Object.values(collection.getAll()[0].data.catalog)
       .filter(item => {
