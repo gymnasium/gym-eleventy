@@ -1,0 +1,17 @@
+---
+layout: layouts/main.njk
+permalink: /sitemap/
+eleventyExcludeFromCollections: true
+title: Sitemap
+---
+<h1>Sitemap</h1>
+<ul>
+{%- for item in collections.all | sortByUrl -%}
+  {%- if (not item.data.draft) and (not item.data.sitemapExclude) -%}
+  {%- set title = item.data.title | replace_after_pipe("") | replace(config.meta.subtitle,"Home") -%}
+  <li>
+    <a href="{{ item.url }}">{{ title }}</a>
+  </li>
+  {%- endif -%}
+{%- endfor -%}
+</ul>

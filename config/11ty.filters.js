@@ -91,9 +91,22 @@ module.exports = eleventyConfig => {
 
   // smart-ish replace filter, which works on strings and objects
   eleventyConfig.addFilter('replace', (input, string, replace) => {
-    let stringified = typeof input === 'object' ? JSON.stringify(input) : input;
-    let output = JSON.parse(replaceAll(stringified, string, replace));
+    let output;
+    if (typeof input === 'object') {
+      output = JSON.parse(replaceAll(JSON.stringify(input), string, replace));
+    } else if (typeof input === 'string') {
+      output = replaceAll(input, string, replace);
+    } else {
+      console.warn(`input must be a string or object!`);
+    }
+
     return output;
+  });
+
+  eleventyConfig.addFilter('replace_after_pipe', (input, replace) => {
+    const regex = new RegExp(/\|(.*)/, 'g');
+    const repl = input.replaceAll(regex, replace);
+    return repl;
   });
 
   // Modified version, original @https://stevenwoodson.com/blog/a-step-by-step-guide-to-sorting-eleventy-global-data-files-by-date/
