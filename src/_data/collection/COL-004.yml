@@ -4,3 +4,11 @@ topic: "Accessibility"
 description: "No matter what your title is, creating an inclusive web is everyone’s job."
 slug: accessibility
 order: 5
+
+courses:
+  module: true
+  heading: "Accessibility Courses"
+
+tutorials:
+  module: true
+  heading: "Accessibility Tutorials"

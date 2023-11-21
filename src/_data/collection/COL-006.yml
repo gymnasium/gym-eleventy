@@ -4,3 +4,4 @@ topic: "Design Systems"
 description: "Teamwork (and creating effective pattern libraries) makes the dream work."
 slug: design-systems
 order: 1
+unique: true

@@ -6,6 +6,14 @@ slug: career-skills
 order: 6
 redirectFrom: '/remote-work/'
 
+courses:
+  module: true
+  heading: "Courses"
+
+tutorials:
+  module: true
+  heading: "Tutorials"
+
 portfolio:
   heading: "Portfolio Development"
   links:
