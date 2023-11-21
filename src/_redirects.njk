@@ -5,27 +5,28 @@ eleventyExcludeFromCollections: true
 {# modified, via @https://willvincent.com/2022/07/27/redirects-with-11ty-and-netlify/ #}
 {%- set courses = catalog | pluck('tags','course') -%}
 {%- for course in courses -%}
-
 {{ course.id | redirect_course }}about  /courses/{{ course.title | slugify }}  301
 {{ course.id | redirect_course }}info  {{ config.lms_url }}{{ course.id | redirect_course(true) }}home  301
 {{ course.id | redirect_course }}courseware  {{ config.lms_url }}{{ course.id | redirect_course(true) }}home  301
-  {%- if not loop.last -%}
-    {{ '\n' }}
-  {%- endif -%}
+{%- if not loop.last -%}
+  {{ '\n' }}
+{%- endif -%}
 {%- endfor -%}
-
+{{ '\n' }}
 {%- for page in collections.all -%}
   {%- if page.url and page.data.redirectFrom -%}
     {%- if page.data.redirectFrom | is_string -%}
-      {{ page.data.redirectFrom }}  {{ page.url }}  {{ page.data.redirectCode or '301'}}
-    {%- else -%}
+      {{ page.data.redirectFrom }}  {{ page.url }}  {{ page.data.redirectCode or '301' }}
+      {%- if not loop.last -%}
+        {{ '\n' }}
+      {%- endif -%}
+    {%- else %}
       {%- for oldUrl in page.data.redirectFrom -%}
-        {{ oldUrl }}  {{ page.url }}  {{ page.data.redirectCode or '301'}}
+        {{ oldUrl }}  {{ page.url }}  {{ page.data.redirectCode or '301' }}
         {%- if not loop.last -%}
           {{ '\n' }}
         {%- endif -%}
       {%- endfor -%}
     {%- endif -%}
-    {{ '\n' }}
   {%- endif -%}
 {%- endfor -%}
