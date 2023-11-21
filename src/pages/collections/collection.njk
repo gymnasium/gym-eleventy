@@ -56,6 +56,9 @@ TODO:
         {%- endif -%}
       
       {%- else -%}
+        {%- if section.heading -%}
+          <h2>{{ section.heading }}</h2>
+        {%- endif -%}
         {% include 'components/' + key + '.html' %}
       {%- endif -%}
     </section>
