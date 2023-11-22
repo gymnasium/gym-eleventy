@@ -5,7 +5,8 @@ pagination:
   size: 1
   alias: item
   generatePageOnEmptyData: true
-permalink: "/blog/{{ item.title | slugify }}/"
+  before:
+permalink: "/blog/{{ item.title | slugify }}-{{ item.guid | replace('https://medium.com/p/','') }}/"
 eleventyExcludeFromCollections: true
 eleventyComputed:
   title: "{{ item.title }} | Blog"

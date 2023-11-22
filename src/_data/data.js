@@ -19,9 +19,9 @@ module.exports = async function() {
       type: "json"
     });
 
-    let feed_url = `https://medium.com/feed/gymnasium`;
+    let feed1 = await parser.parseURL(`https://medium.com/feed/gymnasium`);
 
-    let feed = await parser.parseURL(feed_url);
+    let feed2 = await parser.parseURL(`https://medium.com/feed/@aquentgymnasium`);
 
     let jobs = await EleventyFetch(`https://assets.aquent.com/apps/gym/jobs.json?limit=1500`, {
       duration: ENV === 'local' ? 0 : '30m',
@@ -33,10 +33,12 @@ module.exports = async function() {
       type: "json"
     });
 
+    const feed = feed1.items.concat(feed2.items);
+
     return {
       jobs: jobs.items,
       markets: markets.items,
-      blog: feed.items,
+      blog: feed,
     };
   } catch(e) {
     console.warn( "Failed fetching data feeds.", e );

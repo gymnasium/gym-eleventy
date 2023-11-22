@@ -6,6 +6,7 @@ title: Blog
 <h1>Blog</h1>
 <p>These are our blog article titles imported from Medium.</p>
 <ul>
+
 {% for article in data.blog %}
   {# DEBUG
   {{ article | dump }}
@@ -28,7 +29,6 @@ title: Blog
       </ul>
     </dd>
   </dl> #}
-
-  <li><a href="/blog/{{ article.title | slugify }}" ><span class="hide">{{ article.pubDate }}</span> {{ article.title }}</a></li>
+  <li><a href="/blog/{{ article.title | slugify }}-{{ article.guid | replace('https://medium.com/p/','') }}/" ><span class="hide">{{ article.pubDate }}</span> {{ article.title }}</a></li>
 {% endfor %}
 </ul>
