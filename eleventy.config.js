@@ -1,9 +1,9 @@
 // docs: https://www.11ty.io/docs/config/
 const eleventySass = require('eleventy-sass');
 const pluginRev = require('eleventy-plugin-rev');
-const filters = require('./config/11ty.filters.js');
-const shortcodes = require('./config/11ty.shortcodes.js');
-const pluginImages = require('./config/11ty.images.js');
+const filters = require('./11ty.config/filters.js');
+const shortcodes = require('./11ty.config/shortcodes.js');
+const pluginImages = require('./11ty.config/images.js');
 const yaml = require('js-yaml');
 
 function filter(arr, criteria) {

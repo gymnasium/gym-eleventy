@@ -1,3 +1,5 @@
+var urlRegex = new RegExp('^(?:[a-z+]+:)?//', 'i');
+
 // Generic functions
 function replaceAll(string, find, replace) {
   return string.replace(new RegExp(find, 'g'), replace);
@@ -99,6 +101,21 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addFilter('is_string', (obj) => {
     return typeof obj === 'string';
+  });
+
+  
+
+  eleventyConfig.addFilter('is_external_link', (href) => {
+    let isExternal;
+    if (urlRegex.test(href)) {
+      console.log(`url is absolute`)
+      isExternal = true;
+    } else {
+      console.log(`url is relative`);
+      isExternal = false;
+    }
+
+    return isExternal;
   });
 
   eleventyConfig.addFilter('is_object', (obj) => {
