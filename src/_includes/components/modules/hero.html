@@ -1,1 +1,38 @@
-<em>{ Hero Module Placeholder }</em>
+{%- if hero -%}
+  {# {{ hero | dump }} #}
+  {%- if hero.img.url -%}
+    {# TODO: do something if we have an anomalous URL that doesn't fit the pattern below #}
+  {%- endif -%}
+  <article class="hero" id="{{ hero.slug }}">
+    <div class="image">
+      {%- macro picture() -%}
+        <picture decoding="async" fetchpriority="high">
+          <source srcset="{{ config.cms_url }}/home/img/heros/articles/{{ hero.slug }}/{{ hero.slug }}-768w.jpg" width="768" height="714" media="(min-width: 1200px)">
+          <img alt="{{ hero.img.description }}" src="{{ config.cms_url }}/home/img/heros/articles/{{ hero.slug }}/{{ hero.slug }}-1280w.jpg" width="1280" height="720">
+        </picture>
+      {%- endmacro -%}
+      {%- if hero.cta.url | is_external_link -%}
+        {%- external_link hero.cta.url, picture() -%}
+      {%- else -%}
+        <a href="{{ hero.cta.url }}">{{ picture() }}</a>
+      {%- endif -%}
+    </div>
+    <header>
+      <hgroup>
+        <p>{{ hero.subtitle }}</p>
+        <h1>{{ hero.title }}</h1>
+      </hgroup>
+      <p>{{ hero.description }}</p>
+    </header>
+    <div class="cta">
+      {%- if hero.cta.url | is_external_link -%}
+        {%- external_link hero.cta.url, hero.cta.label -%}
+      {%- else -%}
+        <a href="{{ hero.cta.url }}">{{ hero.cta.label }}</a>
+      {%- endif -%}
+    </div>
+  </article>
+{%- else -%}
+  <em>{ Hero Module Placeholder }</em>
+  <p>Pass in the hero variable to make this work</p>
+{%- endif -%}

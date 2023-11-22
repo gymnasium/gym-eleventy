@@ -5,9 +5,9 @@ title: Catalog
 sitemapPriority: 1.0
 sitemapChangeFreq: weekly
 ---
-<h2>Featured on Home</h2>
+<h2>Featured Courses on Home</h2>
 <ul>
-{%- for item in featured['home'] -%}
+{%- for item in featured['home']['courses'] -%}
   <li>{{ item }}</li>
 {%- endfor -%}
 </ul>
