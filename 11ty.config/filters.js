@@ -103,15 +103,14 @@ module.exports = eleventyConfig => {
     return typeof obj === 'string';
   });
 
-  
 
   eleventyConfig.addFilter('is_external_link', (href) => {
     let isExternal;
     if (urlRegex.test(href)) {
-      console.log(`url is absolute`)
+      // console.log(`url is absolute`);
       isExternal = true;
     } else {
-      console.log(`url is relative`);
+      // console.log(`url is relative`);
       isExternal = false;
     }
 
