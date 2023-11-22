@@ -30,8 +30,9 @@ module.exports = eleventyConfig => {
     return `<div class="to-top-link"><a href="#main">Back to top</a></div>`
   });
 
-  eleventyConfig.addShortcode('external_link', (href, title) => {
-    return `<a href="${href}" rel="noopener" target="_blank">${title}</a>`
+  eleventyConfig.addShortcode('external_link', (href, title, className) => {
+    const cls = className ? ` class="${className}"` : '';
+    return `<a href="${href}" rel="noopener" target="_blank"${cls}>${title}</a>`
   });
 
   eleventyConfig.addShortcode('mail_link', (href, title) => {
