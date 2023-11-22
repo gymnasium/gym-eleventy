@@ -1,12 +1,34 @@
 ---
-layout: layouts/base.njk
+layout: layouts/main.njk
 permalink: /blog/
 title: Blog
 ---
 <h1>Blog</h1>
 <p>These are our blog article titles imported from Medium.</p>
 <ul>
-{% for article in data.items.blog %}
-	<li><a href="{{ article.link }}" >{{ article.pubDate }} {{ article.title }}</a></li>
+{% for article in data.blog %}
+  {# DEBUG
+  {{ article | dump }}
+  <dl>
+    <dt>article.isoDate</dt>
+    <dd>{{ article.isoDate }}</dd>
+
+    <dt>article.creator</dt>
+    <dd>{{ article.creator }}</dd>
+    <dt>article.content:encoded</dt>
+    <dd>{{ article['content:encoded'] | safe }}</dd>
+    <dt>article.content:encodedSnippet</dt>
+    <dd>{{ article['content:encodedSnippet'] }}</dd>
+    <dt>article.categories</dt>
+    <dd>
+      <ul>
+        {%- for category in article.categories -%}
+        <li>{{ category }}</li>
+        {% endfor -%}
+      </ul>
+    </dd>
+  </dl> #}
+
+  <li><a href="/blog/{{ article.title | slugify }}" ><span class="hide">{{ article.pubDate }}</span> {{ article.title }}</a></li>
 {% endfor %}
 </ul>

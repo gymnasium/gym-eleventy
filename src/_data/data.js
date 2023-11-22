@@ -36,9 +36,7 @@ module.exports = async function() {
     return {
       jobs: jobs.items,
       markets: markets.items,
-      items: {
-        blog: feed.items,
-      }
+      blog: feed.items,
     };
   } catch(e) {
     console.warn( "Failed fetching data feeds.", e );

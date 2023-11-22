@@ -1,0 +1,18 @@
+---
+layout: layouts/main.njk
+pagination:
+  data: data.blog
+  size: 1
+  alias: item
+  generatePageOnEmptyData: true
+permalink: "/blog/{{ item.title | slugify }}/"
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: "{{ item.title }} | Blog"
+  description: "{{ item.description }}"
+---
+<article class="medium-article">
+  <h1>{{ item.title }}</h1>
+  {# TODO: write a more elegant solution for external vs internal hrefs #}
+  {{ item['content:encoded'] | replace('href','rel="nofollow" target="_blank" href') | safe }}
+</article>
