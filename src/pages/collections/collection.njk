@@ -56,10 +56,17 @@ TODO:
         {%- endif -%}
       
       {%- else -%}
-        {%- if section.heading -%}
-          <h2>{{ section.heading }}</h2>
+        {# Load modules! #}
+        {# Let's rename sections to modules, so we can keep track of what we're dealing with #}
+        {%- set module = section -%}
+        {%- if module.heading -%}
+          <h2>{{ module.heading }}</h2>
         {%- endif -%}
-        {% include 'components/' + key + '.html' %}
+        {%- if module.subdir -%}
+          {%- include 'components/modules/' + module.subdir + '/' + key + '.html' -%}
+        {%- else -%}
+          {%- include 'components/modules/' + key + '.html' -%}
+        {%- endif -%}
       {%- endif -%}
     </section>
   {%- endfor -%}

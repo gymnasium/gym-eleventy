@@ -8,7 +8,9 @@ order: 5
 courses:
   module: true
   heading: "Accessibility Courses"
+  subdir: 'collections'
 
 tutorials:
   module: true
   heading: "Accessibility Tutorials"
+  subdir: 'collections'

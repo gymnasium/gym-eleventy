@@ -8,14 +8,17 @@ order: 3
 courses:
   module: true
   heading: "UX Courses"
+  subdir: 'collections'
 
 tutorials:
   module: true
   heading: "UX Tutorials"
+  subdir: 'collections'
 
 webinars:
   module: true
   heading: "UX Webinars"
+  subdir: 'collections'
 
 articles:
   heading: "UX Articles"

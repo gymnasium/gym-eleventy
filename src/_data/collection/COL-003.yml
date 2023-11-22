@@ -8,14 +8,17 @@ order: 4
 courses:
   module: true
   heading: "Prototyping Courses"
+  subdir: 'collections'
 
 tutorials:
   module: true
   heading: "Prototyping Tutorials"
+  subdir: 'collections'
 
 webinars:
   module: true
   heading: "Prototyping Webinars"
+  subdir: 'collections'
 
 articles:
   heading: "Prototyping Articles"

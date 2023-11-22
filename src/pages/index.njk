@@ -6,26 +6,79 @@ eleventyComputed:
 sitemapPriority: 1.0
 sitemapChangeFreq: weekly
 ---
-<h2>Featured Courses</h2>
-<ul>
-{%- for item in featured['home'] -%}
-  {%- set id = item | uppercase -%}
-  <li>
-    <div id="featured-{{ item }}">
-      <img src="{{ config.cms_url }}{{ catalog[id]['img'] }}" alt="Image for {{ catalog[id]['title'] }}">
-      <span>{{ catalog[id]['topic'] }}</span>
-      <h3>{{ catalog[id]['title'] }}</h3>
-      <p>{{ catalog[id]['description'] }}</p>
-      <p>with {{ bios[catalog[id]['instructor']].name }}</p>
-      <p>{{ bios[catalog[id]['instructor']].subtitle }}</p>
-      <a class="button" href="/courses/{{ catalog[id]['title'] | slugify }}">Learn More</a>
-    </div>
-    {# DEBUG:<br>
-    {{ courses[id] | dump }} #}
-  </li>
-{%- endfor -%}
-</ul>
+{%- include 'components/modules/hero.html' -%}
 
-<p>Design a career you love with free online courses on design, development, UX, accessibility, and career skills.</p>
+<section>
+  <h2>How Gymnasium Works</h2>
+  <ul>
+    <li>
+      <h2>Free Online Courses</h2>
+      <p>Our courses are taught by industry experts. You can enroll anytime,
+        anywhere.</p>
+    </li>
+    <li>
+      <h2>New Skills</h2>
+      <p>You can share your achievement with your network when you pass a final
+        exam.</p>
+    </li>
+    <li>
+      <h2>Career Opportunities</h2>
+      <p>We get you jobs through Aquent, one of the largest staffing agencies in
+        the world.</p>
+    </li>
+    <li>
+      <h2>Lifelong Learning</h2>
+      <p>We produce articles, tutorials, and webinars with trailblazers in the
+        web community.</p>
+    </li>
+  </ul>
+</section>
+<section>
+  <h2>Featured Courses</h2>
+  <ul>
+    {%- for item in featured['home'] -%} {%- set id = item | uppercase -%}
+    <li>
+      <div id="featured-{{ item }}">
+        <img
+          src="{{ config.cms_url }}{{ catalog[id]['img'] }}"
+          alt="Image for {{ catalog[id]['title'] }}"
+        />
+        <span>{{ catalog[id]["topic"] }}</span>
+        <h3>{{ catalog[id]["title"] }}</h3>
+        <p>{{ catalog[id]["description"] }}</p>
+        <p>with {{ bios[catalog[id]["instructor"]].name }}</p>
+        <p>{{ bios[catalog[id]["instructor"]].subtitle }}</p>
+        <a class="button" href="/courses/{{ catalog[id]['title'] | slugify }}"
+          >Learn More</a
+        >
+      </div>
+      {# DEBUG:<br />
+      {{ courses[id] | dump }} #}
+    </li>
+    {%- endfor -%}
+  </ul>
+  <p>Design a career you love with free online courses on design, development, UX,
+    accessibility, and career skills.</p>
+  
+  <a class="button" href="/courses/">View all Courses</a>
+</section>
 
-<a class="button" href="/courses/">View all Courses</a>
+<section>
+  <header>
+    <h2>Find Work</h2>
+  </header>
+  {%- include 'components/modules/jobs.html' -%}
+</section>
+
+<section>
+  <header>
+    <h2>As Seen In</h2>
+  </header>
+  <ul>
+    {%- for i in range(1,6) -%}
+    <li>
+      <img src="https://placehold.co/200x50?text=logo {{ i }}" alt="Logo">
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>

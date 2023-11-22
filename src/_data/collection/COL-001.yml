@@ -8,14 +8,17 @@ order: 2
 courses:
   module: true
   heading: "Development Courses"
+  subdir: 'collections'
 
 tutorials:
   module: true
   heading: "Development Tutorials"
+  subdir: 'collections'
 
 webinars:
   module: true
   heading: "Development Webinars"
+  subdir: 'collections'
 
 articles:
   heading: "Articles"

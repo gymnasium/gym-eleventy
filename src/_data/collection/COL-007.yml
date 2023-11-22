@@ -9,10 +9,12 @@ redirectFrom: '/remote-work/'
 courses:
   module: true
   heading: "Courses"
+  subdir: 'collections'
 
 tutorials:
   module: true
   heading: "Tutorials"
+  subdir: 'collections'
 
 portfolio:
   heading: "Portfolio Development"
