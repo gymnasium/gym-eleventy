@@ -22,15 +22,13 @@ navigation:
       - title: Courses
         href: GYM_ROOT_URL/courses/
       - title: Tutorials
-        href: GYM_ROOT_URL/courses/take5/
+        href: GYM_ROOT_URL/tutorials/
       - title: Jobs
         href: GYM_ROOT_URL/jobs/
       - title: Webinars
         href: GYM_ROOT_URL/webinars/
       - title: Articles
-        href: https://medium.com/gymnasium
-        target: _blank
-        rel: noopener
+        href: GYM_ROOT_URL/blog/
       - title: About
         href: GYM_ROOT_URL/about/
   - title: Content Collections

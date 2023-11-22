@@ -10,7 +10,7 @@ sitemapChangeFreq: weekly
 <ul>
 {% for tutorial in collections.catalog | pluck('tags','tutorial') %}
   <li>
-    <a href="/tutorials/{{ tutorial.title | slugify }}">{{ tutorial.title }}</a>
+    <a href="/tutorials/{{ tutorial.title | slugify }}">{{ tutorial.id }} | {{ tutorial.title }}</a>
   </li>
 {% endfor %}
 </ul>

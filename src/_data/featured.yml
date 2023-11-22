@@ -2,6 +2,7 @@ home:
   - gym-107
   - gym-104
   - gym-103
+
 catalog:
   full:
     - gym-107
@@ -11,6 +12,7 @@ catalog:
     - gym-5054
   collection:
     - design-systems
+
 popular:
   full:
     - gym-107
@@ -20,3 +22,30 @@ popular:
     - gym-018
     - gym-016
     - gym-015
+
+collection:
+  design-systems:
+    - gym-018
+    - gym-019
+    - gym-020
+    - gym-017
+  development:
+    - gym-016
+    - gym-5005
+    - web0013
+  ux:
+    - gym-015
+    - gym-5008
+    - web0013
+  prototyping:
+    - gym-015
+    - gym-5012
+    - web0011
+  accessibility:
+    - gym-016
+    - (direct link to youtube video?)
+    - (direct link to medium article)
+  career-skills:
+    - gym-017
+    - gym-5052
+    - (direct link to medium article)
