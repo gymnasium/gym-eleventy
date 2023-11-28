@@ -42,15 +42,15 @@ sitemapChangeFreq: weekly
       <li>
         <div id="featured-{{ item }}">
           <img
-            src="{{ config.cms_url }}{{ catalog[id]['img'] }}"
-            alt="Image for {{ catalog[id]['title'] }}"
+            src="{{ config.cms_url }}{{ collections.catalog[id]['img'] }}"
+            alt="Image for {{ collections.catalog[id]['title'] }}"
           />
-          <span>{{ catalog[id]["topic"] }}</span>
-          <h3>{{ catalog[id]["title"] }}</h3>
-          <p>{{ catalog[id]["description"] }}</p>
-          <p>with {{ bios[catalog[id]["instructor"]].name }}</p>
-          <p>{{ bios[catalog[id]["instructor"]].subtitle }}</p>
-          <a class="button" href="/courses/{{ catalog[id]['title'] | slugify }}"
+          <span>{{ collections.catalog[id]["topic"] }}</span>
+          <h3>{{ collections.catalog[id]["title"] }}</h3>
+          <p>{{ collections.catalog[id]["description"] }}</p>
+          <p>with {{ bios[collections.catalog[id]["instructor"]].name }}</p>
+          <p>{{ bios[collections.catalog[id]["instructor"]].subtitle }}</p>
+          <a class="button" href="/courses/{{ collections.catalog[id]['title'] | slugify }}"
             >Learn More</a
           >
         </div>

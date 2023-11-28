@@ -20,8 +20,15 @@ module.exports = function (eleventyConfig) {
     './public/': '/',
   });
 
+  // create a catalog collection combining courses, tutorials, webinars
   eleventyConfig.addCollection('catalog', (collection) => {
-    return collection.getAll()[0].data.catalog;
+    const courses = collection.getAll()[0].data.courses;
+    const tutorials = collection.getAll()[0].data.tutorials;
+    const webinars = collection.getAll()[0].data.webinars;
+
+    const catalog = {...courses, ...tutorials, ...webinars}
+
+    return catalog;
   });
 
   // Get all static pages and perform intentional exclusions by directory
@@ -50,6 +57,7 @@ module.exports = function (eleventyConfig) {
     })
   });
 
+  // this is our `hub pages` collection
   eleventyConfig.addCollection('collection', function (collection) {
     const col = Object.values(collection.getAll()[0].data.collection)
       .filter(item => {
@@ -62,7 +70,7 @@ module.exports = function (eleventyConfig) {
 
   // return only live full courses
   eleventyConfig.addCollection('courses_full', function (collection) {
-    const col = Object.values(collection.getAll()[0].data.catalog)
+    const col = Object.values(collection.getAll()[0].data.courses)
       .filter(item => {
         const bool = item.type === 'full' && item.live;
         return bool ? item : false;
@@ -73,7 +81,7 @@ module.exports = function (eleventyConfig) {
 
   // return only live short courses
   eleventyConfig.addCollection('courses_short', function (collection) {
-    const col = Object.values(collection.getAll()[0].data.catalog)
+    const col = Object.values(collection.getAll()[0].data.courses)
       .filter(item => {
         const bool = item.type === 'short' && item.live;
         return bool ? item : false;
@@ -84,7 +92,7 @@ module.exports = function (eleventyConfig) {
 
   // return only live tutorials
   eleventyConfig.addCollection('tutorials', function (collection) {
-    const col = Object.values(collection.getAll()[0].data.catalog)
+    const col = Object.values(collection.getAll()[0].data.tutorials)
       .filter(item => {
         const bool = item.type === 'tutorial' && item.live;
         return bool ? item : false;
