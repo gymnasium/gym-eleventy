@@ -11,6 +11,7 @@ courses:
   heading: "Web Development Courses"
   description: Learn web development with industry experts.
   dev-courses:
+    schema: true
     ids:
     - id: GYM-107
     - id: GYM-109
