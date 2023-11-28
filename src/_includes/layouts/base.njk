@@ -12,7 +12,9 @@
 <meta name="generator" content="{{ eleventy.generator }}">
 <meta content="ie=edge" http-equiv=X-UA-Compatible>
 <link href=/favicon.svg rel=icon type=image/svg+xml>
+{% block css %}
 <link rel="stylesheet" href="{{ '/css/global.css' | rev }}" />
+{% endblock %}
 
 </head>
 <body>

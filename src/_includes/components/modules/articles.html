@@ -2,45 +2,45 @@
   {%- if module.heading -%}
     <h2>{{ module.heading }}</h2>
     {%- if module.description -%}
-      <p>{{ module.description }}</p>
+      <p>{{ module.description | safe }}</p>
     {%- endif -%}
   {%- endif -%}
   {%- set filtered = module | omit(['module', 'heading', 'description']) -%}
-  {%- for id, article in filtered -%}
+  {%- for id, item in filtered -%}
     <div class="{{id}}">
     {%- if module.heading -%}
-      <h3>{{ article.heading }}</h3>
+      <h3>{{ item.heading }}</h3>
     {%- else -%}
-      <h2>{{ article.heading }}</h2>
+      <h2>{{ item.heading }}</h2>
     {%- endif -%}
   
-    {%- if article.description -%}
-      <p>{{ article.description }}</p>
+    {%- if item.description -%}
+      <p>{{ item.description | safe }}</p>
     {%- endif -%}
 
     {% block links %}
       {# If we pass in data IDs, use those to fetch data directly #}
-      {%- if article.ids -%}
+      {%- if item.ids -%}
         <ul>
-          {%- for idx in range(0, article.ids.length) -%}
-            {%- set path = collections.catalog[article.ids[idx].id].id | get_path -%}
-            {%- set slug = collections.catalog[article.ids[idx].id].title | strip_html | slugify -%}
-            {%- set title = collections.catalog[article.ids[idx].id].title | strip_html -%}
+          {%- for idx in range(0, item.ids.length) -%}
+            {%- set path = collections.catalog[item.ids[idx].id].id | get_path -%}
+            {%- set slug = collections.catalog[item.ids[idx].id].title | strip_html | slugify -%}
+            {%- set title = collections.catalog[item.ids[idx].id].title | strip_html -%}
             <li><a href="{{ path }}{{ slug }}">{{ title }}</a></li>
           {%- endfor -%}
         </ul>
-      {%- elseif article.links -%}
+      {%- elseif item.links -%}
         <ul>
-        {%- for idx in range(0, article.links.length) -%}
+        {%- for idx in range(0, item.links.length) -%}
           <li>
             {# Figure out if we are using an internal or external URL #}
-            {% if (article.links[idx].url | is_external_link) -%}
-              {%- external_link article.links[idx].url,article.links[idx].label -%}
+            {% if (item.links[idx].url | is_external_link) -%}
+              {%- external_link item.links[idx].url,item.links[idx].label -%}
             {%- else -%}
-              <a href="{{ article.links[idx].url }}">{{ article.links[idx].label }}</a>
+              <a href="{{ item.links[idx].url }}">{{ item.links[idx].label }}</a>
             {%- endif -%}
-            {%- if article.links[idx].description -%}
-              <p>{{ article.links[idx].description }}</p>
+            {%- if item.links[idx].description -%}
+              <p>{{ item.links[idx].description | safe }}</p>
             {%- endif -%}
           </li>
         {%- endfor -%}
@@ -52,5 +52,5 @@
   {%- endfor -%}
 {%- else -%}
   <em>{ Articles Module Placeholder }</em>
-  <p>Pass in the `articles` variable to make this work</p>
+  <p>Pass in the `module` variable to make this work</p>
 {%- endif -%}

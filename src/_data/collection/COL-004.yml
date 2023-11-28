@@ -105,3 +105,19 @@ resources:
       label: Accessibility Tools for Designers and Developers
     - url: https://www.a11yproject.com/resources/#development-tools"
       label: Accessibility Tools for Developers
+
+services:
+  module: articles
+  heading: Accessibility Services
+  description: Explore people, projects, and training that deliver truly inclusive experiences from <a href="https://aquent.com" target="_blank" rel="noopener">Aquent</a>.
+  accessibility-services:
+    links:
+    - url: https://aquenttalent.com/services/talent-recruiting
+      label: Staffing
+      description: Finding people with deep knowledge of accessibility can be like finding a needle in a haystack. Luckily, we know where to look. Our experienced recruiters and vast talent pool mean you can complete accessibility projects and bring in specialized skill sets when you need them.
+    - url: https://aquent.com/brands/aquent-studios
+      label: Projects
+      description: If you’re looking to outsource accessibility projects, Aquent Studios can assemble and lead a team of accessibility experts and specialists in design, development, experience, and content to achieve your goals.
+    - url: /courses/
+      label: Professional Development
+      description: Upskill your team on the latest A11Y best practices for design and development from quick online courses to full-day workshops.
