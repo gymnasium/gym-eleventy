@@ -1,0 +1,36 @@
+{%- if module -%}
+  {%- if module.heading -%}
+    <h2>{{ module.heading }}</h2>
+    {%- if module.description -%}
+      <p>{{ module.description }}</p>
+    {%- endif -%}
+  {%- endif -%}
+  {%- set filtered = module | omit(['module', 'heading', 'description']) -%}
+  {%- for id, article in filtered -%}
+    <div class="{{id}}">
+    {%- if module.heading -%}
+      <h3>{{ article.heading }}</h3>
+    {%- else -%}
+      <h2>{{ article.heading }}</h2>
+    {%- endif -%}
+  
+    {%- if article.description -%}
+      <p>{{ article.description }}</p>
+    {%- endif -%}
+    {%- if article.links -%}
+      <ul>
+      {%- for idx in range(0, article.links.length) -%}
+        <li>{%- external_link article.links[idx].url,article.links[idx].label -%}
+          {%- if article.links[idx].description -%}
+            <p>{{ article.links[idx].description }}</p>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+      </ul>
+    {%- endif -%}
+    </div>
+  {%- endfor -%}
+{%- else -%}
+  <em>{ Articles Module Placeholder }</em>
+  <p>Pass in the `articles` variable to make this work</p>
+{%- endif -%}

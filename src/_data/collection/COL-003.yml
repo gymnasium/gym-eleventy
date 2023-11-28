@@ -21,19 +21,21 @@ webinars:
   subdir: 'collections'
 
 articles:
-  heading: "Prototyping Articles"
-  links:
-  - url: "https://medium.com/gymnasium/from-filler-to-matter-wireframes-and-prototypes-in-ux-design-a73b0c0c27cd"
-    label: "From Filler to Matter: Wireframes and Prototypes in UX Design"
-  - url: "https://medium.com/gymnasium/brad-frost-on-how-and-why-to-use-pattern-lab-49607f89d7f0"
-    label: "Brad Frost on How (and Why) to Use Pattern Lab"
-  - url: "https://medium.com/gymnasium/writing-meaningful-content-is-easier-than-you-think-45e0cb05dea6"
-    label: "Writing Meaningful Content Is Easier Than You Think"
-  - url: "https://medium.com/gymnasium/are-you-designing-for-real-people-or-just-personas-2ffdb6c3cd9b"
-    label: "Are You Designing for Real People or Just Personas?"
-  - url: "https://medium.com/gymnasium/https-medium-com-gymnasiumtweets-approaches-to-successful-rapid-prototyping-320361571f83"
-    label: "Approaches to Successful Rapid Prototyping"
+  module: articles
+  prototyping:
+    heading: "Prototyping Articles"
+    links:
+    - url: "https://medium.com/gymnasium/from-filler-to-matter-wireframes-and-prototypes-in-ux-design-a73b0c0c27cd"
+      label: "From Filler to Matter: Wireframes and Prototypes in UX Design"
+    - url: "https://medium.com/gymnasium/brad-frost-on-how-and-why-to-use-pattern-lab-49607f89d7f0"
+      label: "Brad Frost on How (and Why) to Use Pattern Lab"
+    - url: "https://medium.com/gymnasium/writing-meaningful-content-is-easier-than-you-think-45e0cb05dea6"
+      label: "Writing Meaningful Content Is Easier Than You Think"
+    - url: "https://medium.com/gymnasium/are-you-designing-for-real-people-or-just-personas-2ffdb6c3cd9b"
+      label: "Are You Designing for Real People or Just Personas?"
+    - url: "https://medium.com/gymnasium/https-medium-com-gymnasiumtweets-approaches-to-successful-rapid-prototyping-320361571f83"
+      label: "Approaches to Successful Rapid Prototyping"
 
 jobs:
-  module: true
+  module: jobs
   heading: "Jobs"

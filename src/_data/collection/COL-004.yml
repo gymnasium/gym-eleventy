@@ -14,3 +14,29 @@ tutorials:
   module: true
   heading: "Accessibility Tutorials"
   subdir: 'collections'
+
+webinars:
+  module: true
+  heading: "Accessibility Webinars"
+  subdir: 'collections'
+
+articles:
+  module: articles
+  accessibility:
+    heading: "Accessibility Articles"
+    links:
+    - url: https://medium.com/gymnasium/advocating-for-accessibility-with-aaron-gustafson-54079c132152
+      label: "Advocating for Accessibility with Aaron Gustafson"
+      description: "Learn the fundamentals of how to get started with creating a more inclusive web. (Hint: It starts with awareness.)"
+    - url: https://aquentstudios.com/thinking/web-accessibility-drivers-start-your-engines-wcag-2-2-is-here/
+      label: "Web Accessibility Drivers, Start Your Engines. WCAG 2.2 Is Here."
+      description: "Learn about the new global guidelines and what to expect."
+    - url: https://aquenttalent.com/blog/seven-steps-to-improving-accessibility
+      label: "Seven Steps to Improving Accessibility"
+      description: "Improve the accessibility of your website with these seven starting points for designers, writers, and developers."
+    - url: https://medium.com/gymnasium/i-can-see-clearly-now-color-and-accessibility-in-design-1fe6382755ff
+      label: "I Can See Clearly Now: Color and Accessibility in Design"
+      description: "Read up on the role of color in accessibility and how to design with inclusion in mind."
+    - url: https://justingagne.design/words/rethinking-accessible-drop-caps/
+      label: "Rethinking Accessible Drop Caps"
+      description: "An alternative approach to designing accessible drop caps by Justin Gagne, Design Lead at Aquent Gymnasium."

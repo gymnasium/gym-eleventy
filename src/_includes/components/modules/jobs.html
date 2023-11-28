@@ -1,3 +1,10 @@
+{%- if module.heading -%}
+  <h2>{{ module.heading }}</h2>
+  {%- if module.description -%}
+    <p>{{ module.description }}</p>
+  {%- endif -%}
+{%- endif -%}
+
 <form id="location" class="location">
   <select name="m" id="m" class="form-control">
     <option value="">Select a location nearest you</option>

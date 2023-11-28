@@ -40,33 +40,18 @@ TODO:
 </header>
 
 {# Here we're omitting some object keys to be able to loop through the content fields #}
-{%- set content = item | omit(['id', 'title', 'topic', 'description', 'slug', 'order', 'redirectFrom', 'exclude', 'sitemapExclude', 'tags', 'category', 'categories']) -%}
+{%- set content = item | omit(['id', 'title', 'topic', 'description', 'slug', 'order', 'redirectFrom', 'exclude', 'sitemapExclude', 'tags', 'category', 'categories', 'unique']) -%}
 
 {%- if content -%}
   {%- for key, section in content -%}
     <section id="{{ key }}">
-      {%- if (not section.module) -%}
-        <h2>{{ section.heading }}</h2>
-        {%- if section.links -%}
-          <ul>
-          {%- for idx in range(0, section.links.length) -%}
-            <li>{%- external_link section.links[idx].url,section.links[idx].label -%}</li>
-          {%- endfor -%}
-          </ul>
-        {%- endif -%}
-      
+      {# Load modules! #}
+      {# Let's rename sections to modules, so we can keep track of what we're dealing with #}
+      {%- set module = section -%}
+      {%- if module.subdir -%}
+        {%- include 'components/modules/' + module.subdir + '/' + key + '.html' -%}
       {%- else -%}
-        {# Load modules! #}
-        {# Let's rename sections to modules, so we can keep track of what we're dealing with #}
-        {%- set module = section -%}
-        {%- if module.heading -%}
-          <h2>{{ module.heading }}</h2>
-        {%- endif -%}
-        {%- if module.subdir -%}
-          {%- include 'components/modules/' + module.subdir + '/' + key + '.html' -%}
-        {%- else -%}
-          {%- include 'components/modules/' + key + '.html' -%}
-        {%- endif -%}
+        {%- include 'components/modules/' + key + '.html' -%}
       {%- endif -%}
     </section>
   {%- endfor -%}

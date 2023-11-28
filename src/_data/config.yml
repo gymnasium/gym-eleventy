@@ -36,15 +36,15 @@ navigation:
       - title: Design Systems
         href: GYM_ROOT_URL/design-systems/
       - title: Web Development
-        href: GYM_ROOT_URL/web-development/
+        href: GYM_ROOT_URL/development/
       - title: UX Design
         href: GYM_ROOT_URL/ux-design/
       - title: Prototyping
         href: GYM_ROOT_URL/prototyping/
       - title: Accessibility
         href: GYM_ROOT_URL/accessibility/
-      - title: Remote Work
-        href: GYM_ROOT_URL/remote-work/
+      - title: Career Skills
+        href: GYM_ROOT_URL/career-skills/
   - title: Resources
     links:
       - title: FAQ
