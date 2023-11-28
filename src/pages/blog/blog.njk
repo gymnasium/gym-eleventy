@@ -11,6 +11,7 @@ eleventyExcludeFromCollections: true
 eleventyComputed:
   title: "{{ item.title }} | Blog"
   description: "{{ item.description }}"
+  canonicalUrl: "{{ item.link }}"
 ---
 <article class="medium-article">
   <h1>{{ item.title }}</h1>

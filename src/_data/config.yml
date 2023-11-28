@@ -35,7 +35,7 @@ navigation:
     links:
       - title: Design Systems
         href: GYM_ROOT_URL/design-systems/
-      - title: Web Development
+      - title: Development
         href: GYM_ROOT_URL/development/
       - title: UX Design
         href: GYM_ROOT_URL/ux-design/
