@@ -21,7 +21,7 @@ webinars:
   subdir: 'collections'
 
 articles:
-  module: articles
+  module: lists
   prototyping:
     heading: "Prototyping Articles"
     links:

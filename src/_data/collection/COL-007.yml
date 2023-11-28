@@ -17,7 +17,7 @@ tutorials:
   subdir: 'collections'
 
 articles:
-  module: articles
+  module: lists
   heading: Articles
   description: Read bookmark-worthy blog posts on career skills.
   portfolio:

@@ -7,14 +7,28 @@ order: 2
 redirectFrom: '/web-development/'
 
 courses:
-  module: courses
-  heading: "Development Courses"
-  subdir: 'collections'
+  module: image-lists
+  heading: "Web Development Courses"
+  description: Learn web development with industry experts.
+  dev-courses:
+    ids:
+    - id: GYM-107
+    - id: GYM-109
+    - id: GYM-016
+    - id: GYM-011
+    - id: GYM-007
+    - id: GYM-004
+    - id: GYM-009
+    - id: GYM-104
+    - id: GYM-108
+    - id: GYM-012
+    - id: GYM-006
+    - id: GYM-014
+
 
 tutorials:
-  module: tutorials
+  module: image-lists
   heading: "Development Tutorials"
-  subdir: 'collections'
 
 webinars:
   module: webinars
@@ -22,7 +36,7 @@ webinars:
   subdir: 'collections'
 
 articles:
-  module: articles
+  module: lists
   development:
     heading: "Articles"
     links:

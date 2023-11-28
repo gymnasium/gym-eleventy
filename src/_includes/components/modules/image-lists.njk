@@ -1,0 +1,23 @@
+{%- extends "components/modules/lists.njk" -%}
+
+{%- for id, item in filtered -%}
+  {% block item %}
+    <ul>
+      {%- for idx in range(0, item.ids.length) -%}
+        {%- set path = collections.catalog[item.ids[idx].id].id | get_path -%}
+        {%- set slug = collections.catalog[item.ids[idx].id].title | strip_html | slugify -%}
+        {%- set title = collections.catalog[item.ids[idx].id].title | strip_html -%}
+        {%- set id = collections.catalog[item.ids[idx].id].id -%}
+        <li>
+          <figure class="course-artwork bg-web-development">
+            <a class="img-link" href="{{ path }}{{ slug }}" title="{{ title }}">
+              <img style="max-width: 5rem;" alt="{{ title }}" srcset="https://thegymcms.com/img/course-artwork/svg/{{ id }}.svg" src="https://thegymcms.com/img/course-artwork/png/{{ id }}.png">
+            </a>
+          </figure>
+          <h3><a href="{{ path }}{{ slug }}">{{ title }}</a></h3>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {% endblock %}
+
+{%- endfor -%}
