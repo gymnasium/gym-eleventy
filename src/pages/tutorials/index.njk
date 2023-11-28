@@ -8,7 +8,7 @@ sitemapChangeFreq: weekly
 <h1>Tutorials</h1>
 <p>This is the tutorials index, also pulling in from local YAML files.</p>
 <ul>
-{% for tutorial in collections.catalog | pluck('tags','tutorial') %}
+{% for id, tutorial in tutorials %}
   <li>
     <a href="/tutorials/{{ tutorial.title | slugify }}">{{ tutorial.id }} | {{ tutorial.title }}</a>
   </li>
