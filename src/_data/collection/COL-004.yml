@@ -6,19 +6,44 @@ slug: accessibility
 order: 5
 
 courses:
-  module: true
+  module: articles
   heading: "Accessibility Courses"
-  subdir: 'collections'
+  accessibility-courses:
+    ids:
+    - id: GYM-016
+    - id: GYM-007
 
 tutorials:
-  module: true
+  module: articles
   heading: "Accessibility Tutorials"
-  subdir: 'collections'
+  live-coding:
+    heading: "Live Coding"
+    description: Learn how to improve your website through accessibility testing in the time it takes to step away for lunch.
+    links:
+    - url: https://youtu.be/B1y5aNsVVLQ"
+      label: How to Improve Your Website Through Accessibility Testing (Part 1)
+      description: In this live coding tutorial, you’ll learn how you can use the free Web Accessibility Evaluation Tool (WAVE) to perform a series of automated tests to improve the accessibility of a website.
+    - url: https://youtu.be/NnsT90GVAVw"
+      label: How to Improve Your Website Through Accessibility Testing (Part 2)
+      description: In this live coding tutorial, you’ll learn four common techniques for manually checking (and then fixing) accessibility issues on your websites.
+  take-5:
+    heading: "Take 5"
+    description: Learn how you can help make a more inclusive web in just 5 minutes.
+    ids:
+    - id: GYM-5032
+    - id: GYM-5036
+    - id: GYM-5037
+    - id: GYM-5038
+    - id: GYM-5039
 
 webinars:
-  module: true
+  module: articles
   heading: "Accessibility Webinars"
-  subdir: 'collections'
+  accessibility-webinars:
+    links:
+    - url: https://aquenttalent.com/events/why-digital-accessibility-and-inclusive-design-matters"
+      label: Why Digital Accessibility and Inclusive Design Matters
+      description: Learn how to put inclusive design first and avoid common accessibility mistakes.
 
 articles:
   module: articles
@@ -40,3 +65,43 @@ articles:
     - url: https://justingagne.design/words/rethinking-accessible-drop-caps/
       label: "Rethinking Accessible Drop Caps"
       description: "An alternative approach to designing accessible drop caps by Justin Gagne, Design Lead at Aquent Gymnasium."
+
+resources:
+  module: articles
+  heading: Accessibility Resources
+  description: All the basics and tools to get started with accessibility.
+
+  basics: 
+    heading: "Learning the Basics"
+    links:
+    - url: https://brand.aquent.com/Accessibility?utm_source=partner&amp;utm_medium=web&amp;utm_campaign=AQ_UK_gymnasium&amp;utm_content=2021
+      label: How to Get Started with Digital Accessibility
+      description: Learn how (and why) to make digital accessibility a priority with Aquent’s PDF guide.
+    - url: https://webaim.org/intro/
+      label: Introduction to Web Accessibility
+    - url: https://www.deque.com/web-accessibility-beginners-guide/
+      label: The Beginner’s Guide to Web Accessibility
+    - url: https://developer.mozilla.org/en-US/docs/Learn/Accessibility
+      label: Accessibility for Web Developers
+  guides: 
+    heading: "In-Depth Guides"
+    links:
+    - url: https://universaldesign.ie/technology-ict/web-and-mobile-app-accessibility/web-accessibility-techniques/content-provider-s-introduction-and-index/
+      label: Guidelines for Content Providers and Editors
+    - url: https://webaim.org/resources/designers/
+      label: Accessibility for Designers
+    - url: https://www.accessibility-developer-guide.com
+      label: Accessibility Developer Guide
+    - url: https://accessibility.18f.gov
+      label: 18F Accessibility Guide
+    - url: https://www.a11yproject.com
+      label: The A11Y Project
+  tools:
+    heading: Tools for Testing
+    links:
+    - url: https://www.solidstart.info"
+      label: Accessibility Tools for Everyone
+    - url: https://a11y.me/#tools"
+      label: Accessibility Tools for Designers and Developers
+    - url: https://www.a11yproject.com/resources/#development-tools"
+      label: Accessibility Tools for Developers

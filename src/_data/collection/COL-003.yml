@@ -6,17 +6,17 @@ slug: prototyping
 order: 4
 
 courses:
-  module: true
+  module: courses
   heading: "Prototyping Courses"
   subdir: 'collections'
 
 tutorials:
-  module: true
+  module: tutorials
   heading: "Prototyping Tutorials"
   subdir: 'collections'
 
 webinars:
-  module: true
+  module: webinars
   heading: "Prototyping Webinars"
   subdir: 'collections'
 

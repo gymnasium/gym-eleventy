@@ -17,7 +17,7 @@ intro:
 
 <h2>Full Courses</h2>
 <ul>
-{% for course in collections.courses_full %}
+{% for course in collections.live_courses_full %}
   <li>{{ course.id }} | 
     <a href="/courses/{{ course.title | slugify }}">
       {{ course.title }}
@@ -29,7 +29,7 @@ intro:
 
 <h2>Short Courses (Gym Shorts)</h2>
 <ul>
-{% for course in collections.courses_short %}
+{% for course in collections.live_courses_short %}
   <li>{{ course.id }} | 
     <a href="/courses/{{ course.title | slugify }}">
       {{ course.title }}

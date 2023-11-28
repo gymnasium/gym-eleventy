@@ -103,6 +103,36 @@ module.exports = eleventyConfig => {
     return typeof obj === 'string';
   });
 
+  eleventyConfig.addFilter('get_path', (id) => {
+    idString = id.split('-')[1];
+    let idNum = Number(idString);
+    let type;
+    let path;
+
+    if (id.startsWith('web')) {
+      type = 'webinar';
+      path = '/webinars/';
+    } else {
+      if (idNum <= 100) {
+        type = 'short';
+        path = '/courses/';
+      } else if (idNum >= 700 && idNum < 800) {
+        type = 'workshop';
+        path = '/courses/';
+      } else if (idNum >= 100 && idNum < 200) {
+        type = 'full';
+        path = '/courses/';
+      } else if (idNum >= 5000) {
+        type = 'tutorial';
+        path = '/tutorials/';
+      } else {
+        console.warn(`the ID passed in doesn't match any ranges`);
+      }
+    }
+
+    return path;
+  });
+
 
   eleventyConfig.addFilter('is_external_link', (href) => {
     let isExternal;

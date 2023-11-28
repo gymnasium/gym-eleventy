@@ -51,7 +51,7 @@ TODO:
       {%- if module.subdir -%}
         {%- include 'components/modules/' + module.subdir + '/' + key + '.html' -%}
       {%- else -%}
-        {%- include 'components/modules/' + key + '.html' -%}
+        {%- include 'components/modules/' + section.module + '.html' -%}
       {%- endif -%}
     </section>
   {%- endfor -%}

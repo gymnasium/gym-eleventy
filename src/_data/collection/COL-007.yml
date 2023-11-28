@@ -7,12 +7,12 @@ order: 6
 redirectFrom: '/remote-work/'
 
 courses:
-  module: true
+  module: courses
   heading: "Courses"
   subdir: 'collections'
 
 tutorials:
-  module: true
+  module: tutorials
   heading: "Tutorials"
   subdir: 'collections'
 

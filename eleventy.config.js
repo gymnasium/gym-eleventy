@@ -69,7 +69,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // return only live full courses
-  eleventyConfig.addCollection('courses_full', function (collection) {
+  eleventyConfig.addCollection('live_courses_full', function (collection) {
     const col = Object.values(collection.getAll()[0].data.courses)
       .filter(item => {
         const bool = item.type === 'full' && item.live;
@@ -80,7 +80,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // return only live short courses
-  eleventyConfig.addCollection('courses_short', function (collection) {
+  eleventyConfig.addCollection('live_courses_short', function (collection) {
     const col = Object.values(collection.getAll()[0].data.courses)
       .filter(item => {
         const bool = item.type === 'short' && item.live;
@@ -91,7 +91,7 @@ module.exports = function (eleventyConfig) {
   });
 
   // return only live tutorials
-  eleventyConfig.addCollection('tutorials', function (collection) {
+  eleventyConfig.addCollection('live_tutorials', function (collection) {
     const col = Object.values(collection.getAll()[0].data.tutorials)
       .filter(item => {
         const bool = item.type === 'tutorial' && item.live;

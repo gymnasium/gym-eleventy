@@ -7,17 +7,17 @@ order: 2
 redirectFrom: '/web-development/'
 
 courses:
-  module: true
+  module: courses
   heading: "Development Courses"
   subdir: 'collections'
 
 tutorials:
-  module: true
+  module: tutorials
   heading: "Development Tutorials"
   subdir: 'collections'
 
 webinars:
-  module: true
+  module: webinars
   heading: "Development Webinars"
   subdir: 'collections'
 

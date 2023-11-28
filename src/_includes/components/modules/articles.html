@@ -17,17 +17,37 @@
     {%- if article.description -%}
       <p>{{ article.description }}</p>
     {%- endif -%}
-    {%- if article.links -%}
-      <ul>
-      {%- for idx in range(0, article.links.length) -%}
-        <li>{%- external_link article.links[idx].url,article.links[idx].label -%}
-          {%- if article.links[idx].description -%}
-            <p>{{ article.links[idx].description }}</p>
-          {%- endif -%}
-        </li>
-      {%- endfor -%}
-      </ul>
-    {%- endif -%}
+
+    {% block links %}
+      {# If we pass in data IDs, use those to fetch data directly #}
+      {%- if article.ids -%}
+        <ul>
+          {%- for idx in range(0, article.ids.length) -%}
+            {%- set path = collections.catalog[article.ids[idx].id].id | get_path -%}
+            {%- set slug = collections.catalog[article.ids[idx].id].title | strip_html | slugify -%}
+            {%- set title = collections.catalog[article.ids[idx].id].title | strip_html -%}
+            <li><a href="{{ path }}{{ slug }}">{{ title }}</a></li>
+          {%- endfor -%}
+        </ul>
+      {%- elseif article.links -%}
+        <ul>
+        {%- for idx in range(0, article.links.length) -%}
+          <li>
+            {# Figure out if we are using an internal or external URL #}
+            {% if (article.links[idx].url | is_external_link) -%}
+              {%- external_link article.links[idx].url,article.links[idx].label -%}
+            {%- else -%}
+              <a href="{{ article.links[idx].url }}">{{ article.links[idx].label }}</a>
+            {%- endif -%}
+            {%- if article.links[idx].description -%}
+              <p>{{ article.links[idx].description }}</p>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    {% endblock %}
+
     </div>
   {%- endfor -%}
 {%- else -%}
