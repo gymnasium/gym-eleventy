@@ -5,28 +5,31 @@ title: Courses
 collection: course
 sitemapPriority: 0.7
 sitemapChangeFreq: weekly
+intro:
+  heading: Courses
+  subheading: Free online courses and tutorials.
+  content: Learn design, development, UX, accessibility, and career skills from industry experts.
 ---
-
-<h1>Courses</h1>
-<p>This is the courses index. The list below is produced directly from local YAML files.</p>
+<header>
+  <h1>{{ intro.heading }}</h1>
+  <p><strong>{{ intro.subheading }}</strong> {{ intro.content }}</p>
+</header>
 
 <h2>Full Courses</h2>
 <ul>
-{% for id, course in courses | pluck('tags','full') %}
-  {%- if course.live -%}
-    <li>{{ course.id }} | 
-      <a href="/courses/{{ course.title | slugify }}">
-        {{ course.title }}
-        <img style="max-width: 5rem;" src="{{config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">
-      </a>
-    </li>
-  {%- endif -%}
+{% for course in collections.courses_full %}
+  <li>{{ course.id }} | 
+    <a href="/courses/{{ course.title | slugify }}">
+      {{ course.title }}
+      <img style="max-width: 5rem;" src="{{config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">
+    </a>
+  </li>
 {% endfor %}
 </ul>
 
 <h2>Short Courses (Gym Shorts)</h2>
 <ul>
-{% for id, course in courses | pluck('tags','short') %}
+{% for course in collections.courses_short %}
   <li>{{ course.id }} | 
     <a href="/courses/{{ course.title | slugify }}">
       {{ course.title }}
