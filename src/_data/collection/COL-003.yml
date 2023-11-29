@@ -6,19 +6,50 @@ slug: prototyping
 order: 4
 
 courses:
-  module: courses
+  module: lists/image
   heading: "Prototyping Courses"
-  subdir: 'collections'
+  description: Learn prototyping with industry experts.
+  cta:
+    url: /courses/
+    label: View More Courses
+    type: button
+  prototyping-courses:
+    schema: true
+    ids:
+    - id: GYM-103
+    - id: GYM-015
 
 tutorials:
-  module: tutorials
+  module: lists/image
   heading: "Prototyping Tutorials"
-  subdir: 'collections'
+  description: Learn a new prototyping skill in 5 minutes.
+  cta:
+    url: /tutorials/
+    label: View More Tutorials
+    type: button
+  prototyping-tutorials:
+    ids:
+    - id: GYM-5011
+    - id: GYM-5012
+    - id: GYM-5013
+    - id: GYM-5014
+    - id: GYM-5015
 
 webinars:
-  module: webinars
-  heading: "Prototyping Webinars"
-  subdir: 'collections'
+  module: lists/image
+  heading: Prototyping Webinars
+  description: Insightful conversations with trailblazers in the web community.
+  cta:
+    url: /webinars/
+    label: View More Webinars
+    type: button
+  prototyping-webinars:
+    ids:
+    - id: web0011
+    - id: web0010
+    - id: web0003
+    - id: web0002
+    - id: web0001
 
 articles:
   module: lists/standard
@@ -38,4 +69,4 @@ articles:
 
 jobs:
   module: jobs
-  heading: "Jobs"
+  heading: Remote Jobs
