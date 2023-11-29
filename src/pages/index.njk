@@ -38,7 +38,7 @@ sitemapChangeFreq: weekly
   <h2>Featured Courses</h2>
   <ul>
     {%- for item in featured['home']['courses'] -%}
-      {%- set id = item | uppercase -%}
+      {%- set id = item | upper -%}
       <li>
         <div id="featured-{{ item }}">
           <img

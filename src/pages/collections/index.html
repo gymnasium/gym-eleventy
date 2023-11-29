@@ -17,7 +17,7 @@ intro:
   {%- for col in collections.collection | sortByOrder('order') -%}
   
   <li class="collection">
-    <div class="collection--card {{ col.title | slugify }}" id="{{ col.id | lowercase }}">
+    <div class="collection--card {{ col.title | slugify }}" id="{{ col.id | lower }}">
       <div class="collection--main">
         <header>
           <h2 class="title">{{ col.title }}</h2>
