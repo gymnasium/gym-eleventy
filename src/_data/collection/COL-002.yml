@@ -6,19 +6,52 @@ slug: ux-design
 order: 3
 
 courses:
-  module: courses
+  module: lists/image
   heading: "UX Courses"
-  subdir: 'collections'
+  description: Learn UX design with industry experts from Capital One to <cite>The New York Times</cite>.
+  cta:
+    url: /courses/
+    label: View More Courses
+    type: button
+  ux-courses:
+    schema: true
+    ids:
+    - id: GYM-103
+    - id: GYM-014
+    - id: GYM-015
 
 tutorials:
-  module: tutorials
+  module: lists/image
   heading: "UX Tutorials"
-  subdir: 'collections'
+  description: Learn a new UX skill in 5 minutes.
+  cta:
+    url: /tutorials/
+    label: View More Tutorials
+    type: button
+  ux-tutorials:
+    ids:
+    - id: GYM-5006
+    - id: GYM-5007
+    - id: GYM-5008
+    - id: GYM-5009
+    - id: GYM-5010
 
 webinars:
-  module: webinars
-  heading: "UX Webinars"
-  subdir: 'collections'
+  module: lists/image
+  heading: UX Webinars
+  description: Insightful conversations with trailblazers in the web community.
+  cta:
+    url: /webinars/
+    label: View More Webinars
+    type: button
+  ux-webinars:
+    ids:
+    - id: web0013
+    - id: web0011
+    - id: web0010
+    - id: web0003
+    - id: web0002
+    - id: web0001
 
 articles:
   module: lists/standard

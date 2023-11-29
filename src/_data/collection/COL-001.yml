@@ -59,9 +59,14 @@ webinars:
   dev-webinars:
     ids:
     - id: web0013
-    - id: web0001
-    - id: web0003
+    - id: web0011
+    - id: web0010
+    - id: web0009
+    - id: web0008
+    - id: web0007
     - id: web0006
+    - id: web0005
+    - id: web0004
 
 articles:
   module: lists/standard
