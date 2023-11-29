@@ -5,3 +5,18 @@ description: "Teamwork (and creating effective pattern libraries) makes the drea
 slug: design-systems
 order: 1
 unique: true
+
+courses:
+  module: panels/standard
+  ids:
+  - id: GYM-018
+  - id: GYM-019
+  - id: GYM-020
+  - id: GYM-017
+  subtitle:
+    pre: with
+    data: bios
+    post: 
+  cta:
+    label: View Course
+    type: button
