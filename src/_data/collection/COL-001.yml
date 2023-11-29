@@ -7,9 +7,13 @@ order: 2
 redirectFrom: '/web-development/'
 
 courses:
-  module: image-lists
+  module: lists/image
   heading: "Web Development Courses"
   description: Learn web development with industry experts.
+  cta:
+    url: /courses/
+    label: View More Courses
+    type: button
   dev-courses:
     schema: true
     ids:
@@ -28,16 +32,39 @@ courses:
 
 
 tutorials:
-  module: image-lists
+  module: lists/image
   heading: "Development Tutorials"
+  description: Learn a development skill in 5 minutes.
+  cta:
+    url: /tutorials/
+    label: View More Tutorials
+    type: button
+  dev-tutorials:
+    ids:
+    - id: GYM-5001
+    - id: GYM-5002
+    - id: GYM-5003
+    - id: GYM-5004
+    - id: GYM-5005
+    - id: GYM-5006
 
 webinars:
-  module: webinars
-  heading: "Development Webinars"
-  subdir: 'collections'
+  module: lists/image
+  heading: Development Webinars
+  description: Insightful conversations with trailblazers in the web community.
+  cta:
+    url: /webinars/
+    label: View More Webinars
+    type: button
+  dev-webinars:
+    ids:
+    - id: web0013
+    - id: web0001
+    - id: web0003
+    - id: web0006
 
 articles:
-  module: lists
+  module: lists/standard
   development:
     heading: "Articles"
     links:

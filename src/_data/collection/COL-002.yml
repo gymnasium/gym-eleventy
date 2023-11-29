@@ -21,7 +21,7 @@ webinars:
   subdir: 'collections'
 
 articles:
-  module: lists
+  module: lists/standard
   ux:
     heading: "UX Articles"
     links:

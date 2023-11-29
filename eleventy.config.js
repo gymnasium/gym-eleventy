@@ -31,6 +31,14 @@ module.exports = function (eleventyConfig) {
     return catalog;
   });
 
+  eleventyConfig.addFilter('find_webinar_id', (obj, id) => {
+
+
+    const found = Object.keys(obj).filter(k => k.startsWith(id));
+
+    return found;
+  });
+
   // Get all static pages and perform intentional exclusions by directory
   eleventyConfig.addCollection('static', function(collectionApi) {
     let col = collectionApi.getFilteredByGlob("**/pages/**/**.{njk,html,md}");

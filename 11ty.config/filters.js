@@ -104,15 +104,17 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addFilter('get_path', (id) => {
-    idString = id.split('-')[1];
-    let idNum = Number(idString);
     let type;
     let path;
 
     if (id.startsWith('web')) {
       type = 'webinar';
       path = '/webinars/';
+
     } else {
+      idString = id.split('-')[1];
+      let idNum = Number(idString);
+
       if (idNum <= 100) {
         type = 'short';
         path = '/courses/';

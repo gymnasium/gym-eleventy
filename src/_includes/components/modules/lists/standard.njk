@@ -5,7 +5,7 @@
       <p>{{ module.description | safe }}</p>
     {%- endif -%}
   {%- endif -%}
-  {%- set filtered = module | omit(['module', 'heading', 'description', 'schema']) -%}
+  {%- set filtered = module | omit(['module', 'heading', 'description', 'schema', 'cta']) -%}
   {%- for id, item in filtered -%}
     <div class="{{id}}">
     {%- if module.heading -%}
@@ -18,40 +18,10 @@
       <p>{{ item.description | safe }}</p>
     {%- endif -%}
 
-    {%- if item.schema -%}
-      {%- if item.ids -%}
-        {% block schema %}
-          <script type="application/ld+json">
-            {
-            "@context":"http://schema.org",
-            "@type": "ItemList",
-            "itemListElement": [
-              {%- for idx in range(0, item.ids.length) -%}
-                {%- set path = collections.catalog[item.ids[idx].id].id | get_path -%}
-                {%- set slug = collections.catalog[item.ids[idx].id].title | strip_html | slugify -%}
-                {%- set title = collections.catalog[item.ids[idx].id].title | strip_html -%}
-                {%- set description = collections.catalog[item.ids[idx].id].description | strip_html -%}
-                {%- set id = collections.catalog[item.ids[idx].id].id -%}
-                {
-                  "@type": "Course",
-                  "name": "{{ title }}",
-                  "description": "{{ description }}",
-                  "image": "https://thegymcms.com/img/social/courses/{{ id }}-social.png",
-                  "url": "https://thegymnasium.com{{ path}}{{ slug }}",
-                  "position": 1,
-                  "provider": {
-                    "@type": "School",
-                    "name": "Gymnasium",
-                    "sameAs": "https://thegymnasium.com"
-                  }
-                }{%- if not loop.last -%},{%- endif -%}
-              {%- endfor -%}
-            
-            ]
-            }
-          </script>
-        {% endblock %}
-      {%- endif -%}
+    {%- if (item.schema and item.ids) -%}
+      {% block schema %}
+        {% include 'components/modules/schema.njk' %}
+      {% endblock %}
     {%- endif -%}
 
     {% block item %}
@@ -89,10 +59,10 @@
 
   {%- if module.cta -%}
     <div class="cta">
-
+      <a class="{{ module.cta.type }}" href="{{ module.cta.url }}">{{ module.cta.label }}</a>
     </div>
   {%- endif -%}
 {%- else -%}
-  <em>{ Articles Module Placeholder }</em>
+  <em>{ List Module Placeholder }</em>
   <p>Pass in the `module` variable to make this work</p>
 {%- endif -%}
