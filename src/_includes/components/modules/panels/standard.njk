@@ -40,9 +40,25 @@
           <img style="max-width: 5rem;" alt="{{ title }}" srcset="{{ srcSet }}" src="{{ src }}">
         </figure>
         <div>
-          {{ description }}
+          <p>{{ description }}</p>
           <div class="cta">
             <a class="{{ module.cta.type }}" href="{{ path }}{{ slug }}">{{ module.cta.label }}</a>
+          </div>
+          <div class="skills">
+            <h3>Skills Covered</h3>
+            <ul>
+            {%- for i in range(0, obj.skills.length) -%}
+              <li>{{ obj.skills[i].label }}</li>
+            {%- endfor -%}
+            </ul>
+          </div>
+          <div class="audience">
+            <h3>This Course is For</h3>
+            <ul>
+            {%- for i in range(0, obj.audience.length) -%}
+              <li>{{ obj.audience[i].label }}</li>
+            {%- endfor -%}
+            </ul>
           </div>
         </div>
       </section>
