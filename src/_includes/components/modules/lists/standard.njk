@@ -24,20 +24,37 @@
       {% endblock %}
     {%- endif -%}
 
-    {% block item %}
       {# If we pass in data IDs, use those to fetch data directly #}
       {%- if item.ids -%}
         <ul>
           {%- for idx in range(0, item.ids.length) -%}
-            {%- set path = collections.catalog[item.ids[idx].id].id | get_path -%}
-            {%- set slug = collections.catalog[item.ids[idx].id].title | strip_html | slugify -%}
-            {%- set title = collections.catalog[item.ids[idx].id].title | strip_html -%}
+            {%- set filteredId = collections.catalog | get_key(item.ids[idx].id) -%}
+            {%- set obj = collections.catalog[filteredId] -%}
+            {%- set path = item.ids[idx].id | get_path -%}
+            {%- set title = obj.title | strip_html -%}
+            {%- set slug = title | slugify -%}
+            {%- set shortId = obj.id -%}
+            {%- set type = obj.type -%}
+            {# TODO: standardize image locations for ease of development #}
+            {%- set src = config.cms_url + '/img/course-artwork/png/' +  shortId + '.png' -%}
+            {%- set srcSet = config.cms_url + '/img/course-artwork/svg/' +  shortId + '.svg' -%}
+            {%- if type === 'tutorial' -%}
+              {%- set src = config.cms_url + '/img/take5/posters/' +  shortId + '.jpg' -%}
+              {%- set srcSet = src -%}
+            {%- elseif type === 'webinar' -%}
+              {%- set slug = obj.slug -%}
+              {%- set src = config.cms_url + '/img/hub-pages/webinars/posters/' +  slug + '.jpg' -%}
+              {%- set srcSet = src -%}
+            {%- endif -%}
+            {% block item %}
             <li><a href="{{ path }}{{ slug }}">{{ title }}</a></li>
+            {% endblock %}
           {%- endfor -%}
         </ul>
       {%- elseif item.links -%}
         <ul>
         {%- for idx in range(0, item.links.length) -%}
+          
           <li>
             {# Figure out if we are using an internal or external URL #}
             {% if (item.links[idx].url | is_external_link) -%}
@@ -49,10 +66,10 @@
               <p>{{ item.links[idx].description | safe }}</p>
             {%- endif -%}
           </li>
+          
         {%- endfor -%}
         </ul>
       {%- endif -%}
-    {% endblock %}
 
     </div>
   {%- endfor -%}

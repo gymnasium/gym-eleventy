@@ -103,6 +103,13 @@ module.exports = eleventyConfig => {
     return typeof obj === 'string';
   });
 
+  // helps get a full id (object.key) when provided with a short id (good for webibnars)
+  eleventyConfig.addFilter('get_key', (obj, id) => {
+    const key = Object.keys(obj).filter(k => k.startsWith(id));
+
+    return key;
+  });
+
   eleventyConfig.addFilter('get_path', (id) => {
     let type;
     let path;
