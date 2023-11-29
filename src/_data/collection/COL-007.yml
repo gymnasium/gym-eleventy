@@ -7,14 +7,38 @@ order: 6
 redirectFrom: '/remote-work/'
 
 courses:
-  module: courses
-  heading: "Courses"
-  subdir: 'collections'
+  module: lists/image
+  heading: Courses
+  description: Learn career skills from industry experts at your own pace.
+  cta:
+    url: /courses/
+    label: View More Courses
+    type: button
+  prototyping-courses:
+    schema: true
+    ids:
+    - id: GYM-017
+    - id: GYM-001
 
 tutorials:
-  module: tutorials
-  heading: "Tutorials"
-  subdir: 'collections'
+  module: lists/image
+  heading: Tutorials
+  description: Take 5 minutes to learn new career skills.
+  cta:
+    url: /tutorials/
+    label: View More Tutorials
+    type: button
+  prototyping-tutorials:
+    ids:
+    - id: GYM-5052
+    - id: GYM-5053
+    - id: GYM-5056
+    - id: GYM-5016
+    - id: GYM-5018
+    - id: GYM-5020
+    - id: GYM-5019
+    - id: GYM-5017
+    - id: GYM-5027
 
 articles:
   module: lists/standard
