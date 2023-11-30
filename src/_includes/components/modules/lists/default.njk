@@ -32,6 +32,7 @@
             {%- set filteredId = collections.catalog | get_key(item.ids[idx].id) -%}
             {%- set obj = collections.catalog[filteredId] -%}
             {%- set path = item.ids[idx].id | get_path -%}
+            {%- set imgPath = item.ids[idx].id | get_path(true) -%}
             {%- set title = obj.title | strip_html -%}
             {%- set description = obj.description -%}
       
@@ -52,7 +53,7 @@
               {%- set src = config.cms_url + imgPath +  slug + '.jpg' -%}
             {%- endif -%}
             {%- set srcSet = src -%}
-            
+
             {% block item %}
             <li><a href="{{ path }}{{ slug }}">{{ title }}</a></li>
             {% endblock %}
