@@ -41,7 +41,7 @@ tutorials:
     - id: GYM-5027
 
 articles:
-  module: lists/standard
+  module: lists/default
   heading: Articles
   description: Read bookmark-worthy blog posts on career skills.
   portfolio:

@@ -52,7 +52,7 @@ webinars:
     - id: web0001
 
 articles:
-  module: lists/standard
+  module: lists/default
   prototyping:
     heading: "Prototyping Articles"
     links:

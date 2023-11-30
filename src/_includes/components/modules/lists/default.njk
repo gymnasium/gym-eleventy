@@ -33,20 +33,26 @@
             {%- set obj = collections.catalog[filteredId] -%}
             {%- set path = item.ids[idx].id | get_path -%}
             {%- set title = obj.title | strip_html -%}
-            {%- set slug = title | slugify -%}
+            {%- set description = obj.description -%}
+      
+            {%- if obj.slug -%}
+              {%- set slug = obj.slug -%}
+            {%- else -%}
+              {%- set slug = title | slugify -%}
+            {%- endif -%}
+
             {%- set shortId = obj.id -%}
             {%- set type = obj.type -%}
+
             {# TODO: standardize image locations for ease of development #}
-            {%- set src = config.cms_url + '/img/course-artwork/png/' +  shortId + '.png' -%}
-            {%- set srcSet = config.cms_url + '/img/course-artwork/svg/' +  shortId + '.svg' -%}
+            {%- set src = config.cms_url + imgPath +  shortId + '.svg' -%}
             {%- if type === 'tutorial' -%}
-              {%- set src = config.cms_url + '/img/take5/posters/' +  shortId + '.jpg' -%}
-              {%- set srcSet = src -%}
+              {%- set src = config.cms_url + imgPath +  shortId + '.jpg' -%}
             {%- elseif type === 'webinar' -%}
-              {%- set slug = obj.slug -%}
-              {%- set src = config.cms_url + '/img/hub-pages/webinars/posters/' +  slug + '.jpg' -%}
-              {%- set srcSet = src -%}
+              {%- set src = config.cms_url + imgPath +  slug + '.jpg' -%}
             {%- endif -%}
+            {%- set srcSet = src -%}
+            
             {% block item %}
             <li><a href="{{ path }}{{ slug }}">{{ title }}</a></li>
             {% endblock %}

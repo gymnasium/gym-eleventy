@@ -69,7 +69,7 @@ webinars:
     - id: web0004
 
 articles:
-  module: lists/standard
+  module: lists/default
   development:
     heading: "Articles"
     links:

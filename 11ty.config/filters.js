@@ -103,24 +103,26 @@ module.exports = eleventyConfig => {
     return typeof obj === 'string';
   });
 
-  // helps get a full id (object.key) when provided with a short id (good for webibnars)
+  // helps get a full id (object.key) when provided with a short id (good for webinars)
   eleventyConfig.addFilter('get_key', (obj, id) => {
     const key = Object.keys(obj).filter(k => k.startsWith(id));
 
     return key;
   });
 
-  eleventyConfig.addFilter('get_path', (id) => {
+  eleventyConfig.addFilter('get_path', (id, img) => {
     let type;
     let path;
+    let imgPath;
 
     if (id.startsWith('web')) {
       type = 'webinar';
       path = '/webinars/';
-
+      imgPath = `/img/hub-pages/webinars/posters/`;
     } else {
       idString = id.split('-')[1];
       let idNum = Number(idString);
+      imgPath = `/img/course-artwork/svg/`;
 
       if (idNum <= 100) {
         type = 'short';
@@ -134,9 +136,14 @@ module.exports = eleventyConfig => {
       } else if (idNum >= 5000) {
         type = 'tutorial';
         path = '/tutorials/';
+        imgPath = `/img/take5/posters/`;
       } else {
         console.warn(`the ID passed in doesn't match any ranges`);
       }
+    }
+
+    if (img) {
+      path = imgPath;
     }
 
     return path;

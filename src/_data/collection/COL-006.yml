@@ -7,7 +7,7 @@ order: 1
 unique: true
 
 courses:
-  module: panels/standard
+  module: panels/default
   ids:
   - id: GYM-018
   - id: GYM-019

@@ -1,10 +1,14 @@
 {%- if module -%}
-  {%- if module.ids -%}
+  {%- if (module.id and module.id | is_string) -%}
+
+  {%- elif module.ids -%}
     {%- for idx in range(0, module.ids.length) -%}
       {%- set filteredId = collections.catalog | get_key(module.ids[idx].id) -%}
       {%- set obj = collections.catalog[filteredId] -%}
       {%- set path = module.ids[idx].id | get_path -%}
+      {%- set imgPath = module.ids[idx].id | get_path(true) -%}
       {%- set title = obj.title | strip_html -%}
+      
       {%- if obj.subtitle -%}
         {%- set subtitle = obj.subtitle | strip_html -%}
       {%- elif module.subtitle -%}
@@ -16,20 +20,24 @@
       {%- endif -%}
       
       {%- set description = obj.description -%}
-      {%- set slug = title | slugify -%}
+      
+      {%- if obj.slug -%}
+        {%- set slug = obj.slug -%}
+      {%- else -%}
+        {%- set slug = title | slugify -%}
+      {%- endif -%}
+
       {%- set shortId = obj.id -%}
       {%- set type = obj.type -%}
+
       {# TODO: standardize image locations for ease of development #}
-      {%- set src = config.cms_url + '/img/course-artwork/png/' +  shortId + '.png' -%}
-      {%- set srcSet = config.cms_url + '/img/course-artwork/svg/' +  shortId + '.svg' -%}
+      {%- set src = config.cms_url + imgPath +  shortId + '.svg' -%}
       {%- if type === 'tutorial' -%}
-        {%- set src = config.cms_url + '/img/take5/posters/' +  shortId + '.jpg' -%}
-        {%- set srcSet = src -%}
+        {%- set src = config.cms_url + imgPath +  shortId + '.jpg' -%}
       {%- elseif type === 'webinar' -%}
-        {%- set slug = obj.slug -%}
-        {%- set src = config.cms_url + '/img/hub-pages/webinars/posters/' +  slug + '.jpg' -%}
-        {%- set srcSet = src -%}
+        {%- set src = config.cms_url + imgPath +  slug + '.jpg' -%}
       {%- endif -%}
+      {%- set srcSet = src -%}
 
       <section id="{{ shortId | lower }}">
         <header>
@@ -40,26 +48,34 @@
           <img style="max-width: 5rem;" alt="{{ title }}" srcset="{{ srcSet }}" src="{{ src }}">
         </figure>
         <div>
-          <p>{{ description }}</p>
-          <div class="cta">
-            <a class="{{ module.cta.type }}" href="{{ path }}{{ slug }}">{{ module.cta.label }}</a>
-          </div>
-          <div class="skills">
-            <h3>Skills Covered</h3>
-            <ul>
-            {%- for i in range(0, obj.skills.length) -%}
-              <li>{{ obj.skills[i].label }}</li>
-            {%- endfor -%}
-            </ul>
-          </div>
-          <div class="audience">
-            <h3>This Course is For</h3>
-            <ul>
-            {%- for i in range(0, obj.audience.length) -%}
-              <li>{{ obj.audience[i].label }}</li>
-            {%- endfor -%}
-            </ul>
-          </div>
+          {%- if description -%}
+            <p>{{ description }}</p>
+          {%- endif -%}
+          {%- if module.cta -%}
+            <div class="cta">
+              <a class="{{ module.cta.type }}" href="{{ path }}{{ slug }}">{{ module.cta.label }}</a>
+            </div>
+          {%- endif -%}
+          {%- if (obj.skills) -%}
+            <div class="skills">
+              <h3>Skills Covered</h3>
+              <ul>
+              {%- for i in range(0, obj.skills.length) -%}
+                <li>{{ obj.skills[i].label }}</li>
+              {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+          {%- if (obj.audience) -%}
+            <div class="audience">
+              <h3>This Course is For</h3>
+              <ul>
+              {%- for i in range(0, obj.audience.length) -%}
+                <li>{{ obj.audience[i].label }}</li>
+              {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
         </div>
       </section>
     {%- endfor -%}

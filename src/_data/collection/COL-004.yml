@@ -6,7 +6,7 @@ slug: accessibility
 order: 5
 
 courses:
-  module: lists/standard
+  module: lists/default
   heading: "Accessibility Courses"
   accessibility-courses:
     ids:
@@ -14,7 +14,7 @@ courses:
     - id: GYM-007
 
 tutorials:
-  module: lists/standard
+  module: lists/default
   heading: "Accessibility Tutorials"
   live-coding:
     heading: "Live Coding"
@@ -37,7 +37,7 @@ tutorials:
     - id: GYM-5039
 
 webinars:
-  module: lists/standard
+  module: lists/default
   heading: "Accessibility Webinars"
   accessibility-webinars:
     links:
@@ -46,7 +46,7 @@ webinars:
       description: Learn how to put inclusive design first and avoid common accessibility mistakes.
 
 articles:
-  module: lists/standard
+  module: lists/default
   accessibility:
     heading: "Accessibility Articles"
     links:
@@ -67,7 +67,7 @@ articles:
       description: "An alternative approach to designing accessible drop caps by Justin Gagne, Design Lead at Aquent Gymnasium."
 
 resources:
-  module: lists/standard
+  module: lists/default
   heading: Accessibility Resources
   description: All the basics and tools to get started with accessibility.
 
@@ -107,7 +107,7 @@ resources:
       label: Accessibility Tools for Developers
 
 services:
-  module: lists/standard
+  module: lists/default
   heading: Accessibility Services
   description: Explore people, projects, and training that deliver truly inclusive experiences from <a href="https://aquent.com" target="_blank" rel="noopener">Aquent</a>.
   accessibility-services:
