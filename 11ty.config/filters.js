@@ -113,7 +113,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('get_path', (id, img) => {
     let type;
     let path;
-    let imgPath;
+    
 
     if (id.startsWith('web')) {
       type = 'webinar';
@@ -122,28 +122,24 @@ module.exports = eleventyConfig => {
     } else {
       idString = id.split('-')[1];
       let idNum = Number(idString);
-      imgPath = `/img/course-artwork/svg/`;
+      path = '/courses/';
 
       if (idNum <= 100) {
         type = 'short';
-        path = '/courses/';
       } else if (idNum >= 700 && idNum < 800) {
         type = 'workshop';
-        path = '/courses/';
       } else if (idNum >= 100 && idNum < 200) {
         type = 'full';
-        path = '/courses/';
       } else if (idNum >= 5000) {
         type = 'tutorial';
         path = '/tutorials/';
-        imgPath = `/img/take5/posters/`;
       } else {
         console.warn(`the ID passed in doesn't match any ranges`);
       }
     }
 
     if (img) {
-      path = imgPath;
+      path = `/img${path}`;
     }
 
     return path;
