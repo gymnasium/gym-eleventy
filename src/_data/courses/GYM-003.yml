@@ -12,7 +12,7 @@ sitemapExclude: true
 retired_message:
   1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons. <span class='text-wrap'>We recommend watching the tutorial <a href='https://thegymnasium.com/courses/take5/prototyping-in-the-browser-with-css-grid-layout'>Prototyping in the Browser with CSS Grid Layout</a> instead.</span>"
 url: /courses/GYM/003/0/about
-img: /img/course-artwork/png/gym-003.png
+img: /img/courses/gym-003.svg
 topic: "Development"
 description: "This course has been retired."
 description_orig: "Get up to speed with the Twitter Bootstrap’s grid layout system and learn how to build a responsive layout that looks great on multiple screen sizes and devices."

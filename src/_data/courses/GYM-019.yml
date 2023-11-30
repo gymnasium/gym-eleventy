@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/course-v1:GYM+019+0/about
-img: /img/course-artwork/png/gym-019.png
+img: /img/courses/gym-019.svg
 topic: "Development"
 subtopics:
   - label: "Design Systems"

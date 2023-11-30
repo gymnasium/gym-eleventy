@@ -8,7 +8,7 @@ tags:
   - full-course
 live: true
 url: /courses/GYM/107/0/about
-img: /img/course-artwork/png/gym-107.png
+img: /img/courses/gym-107.svg
 topic: "Development"
 description: "This course will prepare you to be a front-end developer by walking you through the process of building a simple, responsive website using HTML, CSS, and JavaScript."
 instructor: agustafson

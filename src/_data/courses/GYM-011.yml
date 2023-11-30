@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/course-v1:GYM+011+0/about
-img: /img/course-artwork/png/gym-011.png
+img: /img/courses/gym-011.svg
 topic: "Development"
 description: "In this course, you will get a familiarity with all aspects of the built-in developer tools within the Chrome browser. Understanding how to use these tools will speed up your development time and help you create bug-free, high-performing pages and web applications."
 instructor: kpeters

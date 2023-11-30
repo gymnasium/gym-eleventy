@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/course-v1:GYM+015+0/about
-img: /img/course-artwork/png/gym-015.png
+img: /img/courses/gym-015.svg
 topic: "UX"
 subtopics:
   - label: "Prototyping"

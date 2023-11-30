@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/GYM/004/0/about
-img: /img/course-artwork/png/gym-004.png
+img: /img/courses/gym-004.svg
 topic: "Development"
 description: "Learn how to convert your HTML/CSS design into a WordPress website. Discover how to set up a local development environment, and add WordPress tags to your design."
 instructor: ghodgkinson

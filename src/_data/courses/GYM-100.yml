@@ -12,7 +12,7 @@ retired_message:
   1: "<strong>This course is retiring on March 25, 2022.</strong> All coursework needs to be completed by that date."
   2: "<strong>This course has been retired.</strong> We recommend taking the course <a href='https://thegymnasium.com/courses/GYM/107/0/about'>Modern Web Design</a> instead. It’s a bit more advanced, but we think you’d get a lot out of it."
 url: /courses/GYM/100/0/about
-img: /img/course-artwork/png/gym-100.png
+img: /img/courses/gym-100.svg
 topic: "Development"
 description: "This course has been retired."
 description_orig: "Learn HTML and CSS and become the Web Designer that Developers love. Professional design experience is a prerequisite, but no prior web or coding experience is necessary."
