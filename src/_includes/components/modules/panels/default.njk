@@ -5,10 +5,10 @@
     {%- for idx in range(0, module.ids.length) -%}
       {%- set filteredId = collections.catalog | get_key(module.ids[idx].id) -%}
       {%- set obj = collections.catalog[filteredId] -%}
-      {%- set path = module.ids[idx].id | get_path -%}
-      {%- set imgPath = module.ids[idx].id | get_path(true) -%}
+      {%- set path = obj.id | get_path -%}
+      {%- set img = obj.img -%}
       {%- set title = obj.title | strip_html -%}
-      
+
       {%- if obj.subtitle -%}
         {%- set subtitle = obj.subtitle | strip_html -%}
       {%- elif module.subtitle -%}
@@ -31,12 +31,11 @@
       {%- set type = obj.type -%}
 
       {# TODO: standardize image locations for ease of development #}
-      {%- set src = config.cms_url + imgPath +  shortId + '.svg' -%}
-      {%- if type === 'tutorial' -%}
-        {%- set src = config.cms_url + imgPath +  shortId + '.jpg' -%}
-      {%- elseif type === 'webinar' -%}
-        {%- set src = config.cms_url + imgPath +  slug + '.jpg' -%}
+      {%- set src = config.cms_url + img -%}
+      {%- if type === 'webinar' -%}
+        {%- set src = config.cms_url + '/img/webinars/' +  slug + '.jpg' -%}
       {%- endif -%}
+
       {%- set srcSet = src -%}
 
       <section id="{{ shortId | lower }}">
