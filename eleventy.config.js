@@ -57,6 +57,17 @@ module.exports = function (eleventyConfig) {
     })
   });
 
+  // bios collections
+  eleventyConfig.addCollection('bios', function (collection) {
+    const col = Object.values(collection.getAll()[0].data.bios)
+      .filter(item => {
+        return item.exclude ? false : item;
+      });
+    // console.log(col);
+
+    return col;
+  });
+
   // this is our `hub pages` collection
   eleventyConfig.addCollection('collection', function (collection) {
     const col = Object.values(collection.getAll()[0].data.collection)
