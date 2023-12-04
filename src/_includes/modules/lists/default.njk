@@ -21,7 +21,7 @@
       {# Include a schema block #}
       {%- if (item.schema and item.ids) -%}
         {% block schema %}
-          {% include 'components/modules/schema.njk' %}
+          {% include 'modules/schema.njk' %}
         {% endblock %}
       {%- endif -%}
 
@@ -59,7 +59,7 @@
             {% endblock %}
           {%- endfor -%}
         </ul>
-      {%- elseif item.links -%}
+      {%- elif item.links -%}
         <ul>
         {%- for idx in range(0, item.links.length) -%}
           

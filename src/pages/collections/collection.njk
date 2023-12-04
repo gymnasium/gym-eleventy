@@ -49,9 +49,9 @@ TODO:
       {# Let's rename sections to modules, so we can keep track of what we're dealing with #}
       {%- set module = section -%}
       {%- if module.subdir -%}
-        {%- include 'components/modules/' + module.subdir + '/' + key + '.html' -%}
+        {%- include 'modules/' + module.subdir + '/' + key + '.html' -%}
       {%- else -%}
-        {%- include 'components/modules/' + section.module + '.njk' -%}
+        {%- include 'modules/' + section.module + '.njk' -%}
       {%- endif -%}
     </section>
   {%- endfor -%}
