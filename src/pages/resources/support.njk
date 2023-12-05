@@ -3,27 +3,19 @@ layout: layouts/main.njk
 permalink: /support/
 title: "Support"
 ---
-{%- set items = pages['support'] -%}
-{%- for id, section in items -%}
-  {%- if loop.first -%}
-    <header id="{{ id }}" class="page-header {{ id }}">
-      {%- for tag, item in section -%}
-        <{{ tag }}>{{ item | safe }}</{{ tag }}>
+{%- set intro = pages['support'].intro -%}
+<header id="{{ id }}" class="page-header {{ id }}">
+  <h1>{{ intro.heading }}</h1>
+  <p>{{ intro.description }}</p>
+</header>
+{%- set sections = pages['support'] | omit(['intro']) -%}
+{%- for id, section in sections -%}
+  <section id="{{ id }}" class="page-section {{ id }}">
+    <h2>{{ section.heading | safe }}</h2>
+    <ul>
+      {%- for idx in range(0, section.list.length) -%}
+        <li>{{ section.list[idx] | safe }}</li>
       {%- endfor -%}
-    </header>
-  {%- else -%}
-    <section id="{{ id }}" class="page-section {{ id }}">
-      {%- for tag, item in section -%}
-        {%- if loop.first -%}
-          <{{ tag }}>{{ item | safe }}</{{ tag }}>
-        {%- else -%}
-          <{{ tag }}>
-            {%- for idx in range(0, item.length) -%}
-              <li>{{ item[idx] | safe }}</li>
-            {%- endfor -%}
-          </{{ tag }}>
-        {%- endif -%}
-      {%- endfor -%}
+    </ul>
     </section>
-  {%- endif -%}
 {%- endfor -%}

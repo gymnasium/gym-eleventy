@@ -25,7 +25,7 @@ title: "Social Impact"
             <ul>
             {%- for idx in range(0, item.length) -%}
               <li>
-                {%- external_link(item[idx].url,item[idx].label) - %}
+                {%- external_link item[idx].url, item[idx].label -%}
               </li>
             {%- endfor -%}
             </ul>
