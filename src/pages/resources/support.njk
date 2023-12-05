@@ -7,7 +7,9 @@ meta:
 {%- set intro = pages['support'].intro -%}
 <header id="{{ id }}" class="page-header {{ id }}">
   <h1>{{ intro.heading }}</h1>
-  <p>{{ intro.description }}</p>
+  {%- if intro.description -%}
+    <p>{{ intro.description | safe }}</p>
+  {%- endif -%}
 </header>
 {%- set sections = pages['support'] | omit(['intro']) -%}
 {%- for id, section in sections -%}
