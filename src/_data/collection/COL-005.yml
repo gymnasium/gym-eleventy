@@ -1,8 +1,9 @@
-id: COL-005
-title: "Remote Work"
-topic: "Career Skills"
-description: "Whether you’re WFH or a digital nomad, we’ve got you covered."
-slug: remote-work
-order: null
-exclude: true
-sitemapExclude: true
+meta:
+  id: COL-005
+  title: "Remote Work"
+  topic: "Career Skills"
+  description: "Whether you’re WFH or a digital nomad, we’ve got you covered."
+  slug: remote-work
+  order: null
+  exclude: true
+  sitemapExclude: true

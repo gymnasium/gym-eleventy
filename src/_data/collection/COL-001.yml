@@ -1,10 +1,11 @@
-id: COL-001
-title: "Development"
-topic: "Development"
-description: "Develop the skills you need to build fast, responsive websites."
-slug: development
-order: 2
-redirectFrom: '/web-development/'
+meta:
+  id: COL-001
+  title: "Development"
+  topic: "Development"
+  description: "Develop the skills you need to build fast, responsive websites."
+  slug: development
+  order: 2
+  redirectFrom: '/web-development/'
 
 courses:
   module: lists/image

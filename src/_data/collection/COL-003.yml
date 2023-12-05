@@ -1,9 +1,10 @@
-id: COL-003
-title: "Prototyping"
-topic: "Prototyping"
-description: "Take the guesswork out of your design process and build better products."
-slug: prototyping
-order: 4
+meta:
+  id: COL-003
+  title: "Prototyping"
+  topic: "Prototyping"
+  description: "Take the guesswork out of your design process and build better products."
+  slug: prototyping
+  order: 4
 
 courses:
   module: lists/image

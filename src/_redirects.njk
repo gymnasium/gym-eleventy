@@ -13,15 +13,15 @@ eleventyExcludeFromCollections: true
 {%- endfor -%}
 {{ '\n' }}
 {%- for page in collections.all -%}
-  {%- if page.url and page.data.redirectFrom -%}
-    {%- if page.data.redirectFrom | is_string -%}
-      {{ page.data.redirectFrom }}  {{ page.url }}  {{ page.data.redirectCode or '301' }}
+  {%- if page.url and page.data.meta.redirectFrom -%}
+    {%- if page.data.meta.redirectFrom | is_string -%}
+      {{ page.data.meta.redirectFrom }}  {{ page.url }}  {{ page.data.meta.redirectCode or '301' }}
       {%- if not loop.last -%}
         {{ '\n' }}
       {%- endif -%}
     {%- else %}
-      {%- for oldUrl in page.data.redirectFrom -%}
-        {{ oldUrl }}  {{ page.url }}  {{ page.data.redirectCode or '301' }}
+      {%- for oldUrl in page.data.meta.redirectFrom -%}
+        {{ oldUrl }}  {{ page.url }}  {{ page.data.meta.redirectCode or '301' }}
         {%- if not loop.last -%}
           {{ '\n' }}
         {%- endif -%}

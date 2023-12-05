@@ -12,17 +12,17 @@
     },
     addAllPagesToCollections: true,
   },
-  permalink: "/{{ item.title | slugify }}/",
+  permalink: "/{{ item.meta.title | slugify }}/",
   eleventyComputed: {
     meta: {
-      title: "{{ item.title }} | Collections",
-      description: "{{ item.description | strip_html }}",
+      title: "{{ item.meta.title }} | Collections",
+      description: "{{ item.meta.description | strip_html }}",
       sitemapExclude: function(data) {
-        const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
+        const bool = data.item.meta.sitemapExclude ? data.item.meta.sitemapExclude : false;
         return bool;
       },
       redirectFrom: function(data) {
-        return data.item.redirectFrom;
+        return data.item.meta.redirectFrom;
       }
     }
   },
@@ -36,13 +36,13 @@ TODO:
 - add jobs module
 #}
 <header>
-  <h1>{{ item.title }}</h1>
-  <h4>{{ item.id }}</h4>
-  <p>{{ item.description }}</p>
+  <h1>{{ item.meta.title }}</h1>
+  <h4>{{ item.meta.id }}</h4>
+  <p>{{ item.meta.description }}</p>
 </header>
 
 {# Here we're omitting some object keys to be able to loop through the content fields #}
-{%- set content = item | omit(['id', 'title', 'topic', 'description', 'slug', 'order', 'redirectFrom', 'exclude', 'sitemapExclude', 'tags', 'category', 'categories', 'unique']) -%}
+{%- set content = item | omit(['id', 'meta']) -%}
 
 {%- if content -%}
   {%- for key, section in content -%}

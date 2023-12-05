@@ -14,8 +14,7 @@
     {% set collect = collections[module.subtitle.data] %}
     {{collect.key}}
 
-
-    {%- set subtitle -%}{%- if module.subtitle['pre'] -%}{{ module.subtitle['pre'] }} {% endif -%}{{ bios[obj.instructor]['name'] }} {{ module.subtitle['post'] }}{%- endset -%}
+    {%- set subtitle -%}{%- if module.subtitle['pre'] -%}{{ module.subtitle['pre'] }} {% endif -%}{{ bios[obj.instructor]['name'] }}{%- if module.subtitle['post'] -%} {{ module.subtitle['post'] }}{% endif -%}{%- endset -%}
   {%- endif -%}
 {%- endif -%}
 

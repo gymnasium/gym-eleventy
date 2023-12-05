@@ -1,10 +1,11 @@
-id: COL-007
-title: "Career Skills"
-topic: "Career Skills"
-description: "Whether you’re a newbie or a pro, we’ve got you covered."
-slug: career-skills
-order: 6
-redirectFrom: '/remote-work/'
+meta:
+  id: COL-007
+  title: "Career Skills"
+  topic: "Career Skills"
+  description: "Whether you’re a newbie or a pro, we’ve got you covered."
+  slug: career-skills
+  order: 6
+  redirectFrom: '/remote-work/'
 
 courses:
   module: lists/image

@@ -1,10 +1,11 @@
-id: COL-006
-title: "Design Systems"
-topic: "Design Systems"
-description: "Teamwork (and creating effective pattern libraries) makes the dream work."
-slug: design-systems
-order: 1
-unique: true
+meta:
+  id: COL-006
+  title: "Design Systems"
+  topic: "Design Systems"
+  description: "Teamwork (and creating effective pattern libraries) makes the dream work."
+  slug: design-systems
+  order: 1
+  unique: true
 
 courses:
   module: panels/default
@@ -16,6 +17,7 @@ courses:
   subtitle:
     pre: with
     data: bios
+    key: instructor
     post: 
   cta:
     label: View Course
