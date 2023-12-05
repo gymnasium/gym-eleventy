@@ -7,63 +7,63 @@ article:
   aquent-social-impact:
     heading: Aquent Social Impact
     links:
-      - url: https://my.care.org/site/Donation2?31667.donation=form1&amp;df_id=31667&amp;mfc_pref=T&amp;s_src=382248000000&amp;s_subsrc=FY22UkraineCrisisFundMGAquent
-        label: CARE Ukraine Crisis Fund
-      - url: https://designingforgood.com
-        label: Designing for Good
-      - url: https://aquenttalent.com/services/diversity-recruiting
-        label: Diversity+ Recruiting Solution
-      - url: https://aquent.com/about-us/sustainability
-        label: Global Sustainability Efforts
+    - url: https://my.care.org/site/Donation2?31667.donation=form1&amp;df_id=31667&amp;mfc_pref=T&amp;s_src=382248000000&amp;s_subsrc=FY22UkraineCrisisFundMGAquent
+      label: CARE Ukraine Crisis Fund
+    - url: https://designingforgood.com
+      label: Designing for Good
+    - url: https://aquenttalent.com/services/diversity-recruiting
+      label: Diversity+ Recruiting Solution
+    - url: https://aquent.com/about-us/sustainability
+      label: Global Sustainability Efforts
   education-nonprofits:
     heading: Education Nonprofits
     links:
-      - url: https://www.writeboston.org/tip/
-        label: Teens in Print
-      - url: https://826national.org
-        label: 826 National
-      - url: https://www.possefoundation.org
-        label: The Posse Foundation
-      - url: https://thelastmile.org
-        label: The Last Mile
+    - url: https://www.writeboston.org/tip/
+      label: Teens in Print
+    - url: https://826national.org
+      label: 826 National
+    - url: https://www.possefoundation.org
+      label: The Posse Foundation
+    - url: https://thelastmile.org
+      label: The Last Mile
   creative-nonprofits:
     heading: Creative Nonprofits
     links:
-      - url: https://www.afhboston.org
-        label: Artists for Humanity
-      - url: https://youngarts.org
-        label: YoungArts
+    - url: https://www.afhboston.org
+      label: Artists for Humanity
+    - url: https://youngarts.org
+      label: YoungArts
   diversity-in-tech:
     heading: Diversity in Tech
     links:
-      - url: https://www.empowrco.org
-        label: Empowr
-      - url: https://www.resilientcoders.org
-        label: Resilient Coders
-      - url: https://blacktechpipeline.com
-        label: Black Tech Pipeline
+    - url: https://www.empowrco.org
+      label: Empowr
+    - url: https://www.resilientcoders.org
+      label: Resilient Coders
+    - url: https://blacktechpipeline.com
+      label: Black Tech Pipeline
   women-in-tech:
     heading: Women in Tech
     links:
-      - url: https://girlswhocode.com
-        label: Girls Who Code
-      - url: https://wearebgc.org
-        label: Black Girls Code
+    - url: https://girlswhocode.com
+      label: Girls Who Code
+    - url: https://wearebgc.org
+      label: Black Girls Code
   lgbtq+-in-tech:
     heading: LGBTQ+ in Tech
     links:
-      - url: https://outintech.com
-        label: Out in Tech
-      - url: https://startout.org
-        label: StartOut
-      - url: https://lgbtq.technology
-        label: LGBTQ in Technology Slack
+    - url: https://outintech.com
+      label: Out in Tech
+    - url: https://startout.org
+      label: StartOut
+    - url: https://lgbtq.technology
+      label: LGBTQ in Technology Slack
   social-justice:
     heading: Social Justice
     links:
-      - url: https://www.raicestexas.org
-        label: RAICES
-      - url: https://www.naacpldf.org
-        label: NAACP Legal Defense Fund
-      - url: https://colorofchange.org
-        label: Color of Change
+    - url: https://www.raicestexas.org
+      label: RAICES
+    - url: https://www.naacpldf.org
+      label: NAACP Legal Defense Fund
+    - url: https://colorofchange.org
+      label: Color of Change
