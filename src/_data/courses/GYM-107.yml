@@ -51,3 +51,15 @@ outline:
     description: In this lesson you’ll expand your CSS toolbox by exploring a number of stylistic techniques you can use to enhance the appearance of your pages, including CSS backgrounds, text and drop shadows, borders, and positioning of elements. You will also learn how to begin constructing pages designed to adapt to multiple screen sizes, including phones and tablets, through the use of CSS media queries.
   - heading: "Lesson 6: Getting Started with JavaScript"
     description: This lesson wraps up your tour of learning how to be a front-end developer with a look at JavaScript, the language used to add interactivity to your website. In addition to reviewing the basic concepts of this powerful scripting language, you will also walk through a real-world project and build a robust site navigation component which uses JavaScript to adapt to small screens (such as smartphones).
+
+prerequisites:
+  - label: "Familiarity with the web"
+  - label: "Experience with a text editor (such as <a href=\"https://code.visualstudio.com\" target=\"_blank\" rel=\"noopener\">Visual Code Studio</a>, <a href=\"https://atom.io\" target=\"_blank\" rel=\"noopener\">Atom</a>, <a href=\"https://www.sublimetext.com\" target=\"_blank\" rel=\"noopener\">Sublime Text</a>, etc.)"
+
+requirements:
+  description: "The requirements for this class are flexible and vary. Many of the assignments rely either on writing/sketching or using design software that you are familiar with. That being said, here’s what you’ll need:"
+  list:
+    - label: "Mac or Windows desktop or laptop"
+    - label: "A text editor (We suggest <a href=\"https://code.visualstudio.com\" target=\"_blank\" rel=\"noopener\">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)"
+    - label: "Google Chrome web browser"
+

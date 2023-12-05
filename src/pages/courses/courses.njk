@@ -89,6 +89,42 @@
     {%- endif -%}
   {%- endif -%}
 
+  {%- if item.audience -%}
+    <h2>Audience</h2>
+    <ul>
+      {%- for idx in range(0, item.audience.length) -%}
+        <li>{{ item.audience[idx].label }}</li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  {%- if item.skills -%}
+    <h2>Skills</h2>
+    <ul>
+      {%- for idx in range(0, item.skills.length) -%}
+        <li>{{ item.skills[idx].label }}</li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+
+  {%- if item.prerequisites -%}
+    <h2>Prerequisites</h2>
+    <ul>
+      {%- for idx in range(0, item.prerequisites.length) -%}
+        <li>{{ item.prerequisites[idx].label | safe }}</li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  {%- if item.requirements -%}
+    <h2>Requirements</h2>
+    <ul>
+      {%- for idx in range(0, item.requirements.list.length) -%}
+        <li>{{ item.requirements.list[idx].label | safe }}</li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
 </main>
 
 <aside>
