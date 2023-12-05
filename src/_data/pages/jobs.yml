@@ -1,0 +1,164 @@
+intro:
+  heading: Jobs
+  description: |
+    Explore our free resources for creative pros — from in-depth
+    <a href="#resume-tips">articles</a> and 5-minute
+    <a href="#take5-tutorials">tutorials</a> to contract and full-time
+    <a href="#jobs">jobs</a>.
+  cards:
+  - heading: Salary Guides
+    subheading: See How Your Salary & Benefits Stack Up
+    cta:
+      url: /jobs/#salary-guides
+      label: Check Salary
+    img:
+      src: /img/jobs/featured/salary-guide-2023.jpg
+      alt: 2023 Salary Guide
+  - heading: Job Search
+    subheading: Find Contract and Full-Time Work
+    cta:
+      url: /jobs/#jobs
+      label: Explore Jobs
+    img:
+      src: /img/jobs/featured/find-work.jpg
+      alt: Find work with Aquent in over 35 offices around the globe.
+  - heading: Tutorials
+    subheading: Learn Career Skills in 5 Minutes
+    cta:
+      url: /jobs/#take5-tutorials
+      label: Watch Now
+    img:
+      src: /img/tutorials/gym-5016.jpg
+      alt: Tell your story in a compelling way to advance your career and salary.
+
+jobs:
+  module: jobs
+  heading: "Jobs"
+
+salary-guides:
+  module: lists/default
+  heading: Salary Guides
+  articles:
+    links:
+    - url: https://aquenttalent.com/check-salary
+      label: Check Salary
+    - url: https://brand.aquent.com/salary-guide?utm_source=gymnasium&utm_medium=web&utm_campaign=AQ_NA_slg23&utm_content=jobs-salary-guides
+      label: US Salary Guide
+    - url: https://brand.aquent.com/UK-salary-guide?utm_source=gymnasium&utm_medium=web&utm_campaign=AQ_UK_slg23&utm_content=slg23
+      label: UK Salary Guide
+
+resume-tips:
+  module: lists/default
+  heading: Résumé Tips
+  articles:
+    links:
+    - url: https://aquenttalent.com/blog/how-to-apply-online-and-actually-get-a-job
+      label: How to Apply Online (and Actually Get a Job)
+    - url: https://medium.com/gymnasium/considering-contract-work-heres-why-you-should-go-for-it-7ec5eb246175
+      label: Considering Contract Work? Here’s Why You Should Go for It
+
+portfolio-tips:
+  module: lists/default
+  heading: Portfolio Tips
+  articles:
+    links:
+    - url: https://aquenttalent.com/blog/top-5-free-portfolio-sites
+      label: Top 5 Free Portfolio Sites for Creatives
+
+networking-tips:
+  module: lists/default
+  heading: Networking Tips
+  articles:
+    links:
+    - url: https://aquenttalent.com/blog/8-networking-techniques-for-meeting-people-face-to-face
+      label: "8 Networking Techniques for Meeting People Face-to-Face"
+    - url: https://aquenttalent.com/blog/are-you-making-the-most-of-linkedin-to-build-your-personal-brand
+      label: "Are You Making the Most of LinkedIn to Build Your Personal Brand?"
+    - url: https://aquenttalent.com/blog/how-to-create-a-great-linkedin-profile-for-designers
+      label: "How to Create a Great LinkedIn Profile for Designers"
+    - url: https://aquenttalent.com/blog/linkedins-and-outs-get-noticed-and-find-opportunities
+      label: "LinkedIns & Outs: Get Noticed and Find Opportunities"
+    - url: https://aquenttalent.com/blog/the-5-rules-of-personal-branding-and-how-to-use-them
+      label: "The 5 Rules of Personal Branding and How to Use Them"
+
+interview-tips:
+  module: lists/default
+  heading: Interview Tips
+  articles:
+    links:
+    - url: https://medium.com/gymnasium/how-to-conduct-an-interview-like-a-boss-7de5c9810c4c
+      label: "How to Conduct an Interview Like a Boss"
+    - url: https://aquenttalent.com/blog/52-favorite-interview-questions-from-top-design-leaders
+      label: "52 Favorite Interview Questions From Top Design Leaders"
+    - url: https://aquenttalent.com/blog/how-to-win-your-next-video-interview
+      label: "How to Win Your Next Video Interview"
+    - url: https://aquenttalent.com/blog/interviewing-better-have-answers-to-these-7-questions
+      label: "Interviewing? Better Have Answers to These 7 Questions"
+    - url: https://aquenttalent.com/blog/14-best-interview-questions-for-creatives
+      label: "14 Best Interview Questions for Creatives"
+    - url: https://aquenttalent.com/blog/top-10-must-ask-interview-questions-for-designers
+      label: "Top 10 Must-Ask Interview Questions for Designers"
+
+take-5-tutorials:
+  module: lists/default
+  heading: Take 5 Tutorials
+  tutorials:
+    ids:
+    - id: GYM-5020
+    - id: GYM-5019
+    - id: GYM-5018
+    - id: GYM-5017
+    - id: GYM-5016
+    - id: GYM-5027
+
+tips-for-designers:
+  module: lists/default
+  heading: Tips for Designers
+  articles:
+    links:
+    - url: https://aquenttalent.com/blog/how-to-create-a-ux-profile-that-will-help-you-land-your-dream-job
+      label: "How to Create a UX Profile That Will Help You Land Your Dream Job"
+    - url: https://medium.com/aquent-off-hours/the-design-leader-job-search-its-all-about-the-brand-yours-3ca9e4d0c983
+      label: "The Design Leader Job Search. It’s All about the Brand (Yours)"
+    - url: https://medium.com/gymnasium/4-reasons-web-designers-should-learn-to-code-2d1770d7866d
+      label: "4 Reasons Web Designers Should Learn to Code"
+    - url: https://medium.com/gymnasium/the-importance-of-storytelling-for-designers-cbe6541fa12a
+      label: "The Importance of Storytelling for Designers"
+    - url: https://medium.com/gymnasium/adaptability-as-the-key-to-success-in-design-ea64c1ed4044
+      label: "Adaptability As the Key to Success in Design"
+    - url: https://aquenttalent.com/blog/how-to-navigate-the-7-stages-of-your-design-career
+      label: "How to Navigate the 7 Stages of Your Design Career"
+    - url: https://aquenttalent.com/blog/the-5-critical-skills-you-need-to-advance-in-ux
+      label: "The 5 Critical Skills You Need to Advance in UX"
+    - url: https://aquenttalent.com/blog/advice-for-planning-your-next-career-move-in-ux
+      label: "Advice for Planning Your Next Career Move in UX"
+
+tips-for-managers:
+  module: lists/default
+  heading: "Tips for Managers"
+  articles:
+    links:
+    - url: https://medium.com/aquent-off-hours/ux-hiring-is-not-easy-even-for-a-company-full-of-ux-recruiters-4bd2ce1e6720
+      label: "UX Hiring Is Not Easy, Even for a Company Full of UX Recruiters"
+    - url: https://medium.com/aquent-off-hours/one-way-to-hire-faster-and-better-embrace-flexibility-c83a9fdedd3e
+      label: "One Way to Hire Faster (and Better)? Embrace Flexibility"
+    - url: https://aquenttalent.com/blog/7-non-technical-skills-your-creative-candidates-should-have
+      label: "7 Non-Technical Skills Your Creative Candidates Should Have"
+    - url: https://medium.com/aquent-off-hours/if-your-team-isnt-learning-they-re-falling-behind-fix-it-52331858383d
+      label: "If Your Team Isn’t Learning, They’re Falling Behind. Fix It."
+
+diversity-and-inclusion:
+  module: lists/default
+  heading: "Diversity & Inclusion"
+  articles:
+    links:
+    - url: https://aquenttalent.com/blog/how-to-fix-your-talent-pipeline-to-be-more-inclusive
+      label: "How to Fix Your Talent Pipeline to Be More Inclusive"
+    - url: https://aquenttalent.com/blog/unlocking-creativity-through-diversity
+      label: "Unlocking Creativity Through Diversity"
+    - url: https://aquenttalent.com/blog/unpacking-the-hiring-process-questions-you-can-ask-to-identify-bias
+      label: "Unpacking the Hiring Process: Questions You Can Ask to Identify Bias"
+    - url: https://aquenttalent.com/blog/how-addressing-our-diversity-challenges-inspired-our-diversity-recruiting-solution
+      label: "How Addressing Our Diversity Challenges Inspired Our Diversity Recruiting Solution"
+    - url: https://medium.com/gymnasium/working-toward-closing-the-gender-gap-in-tech-eb43d17a72ab
+      label: "Working Toward Closing the Gender Gap in Tech"

@@ -4,443 +4,58 @@ permalink: /jobs/
 meta:
   title: Jobs
 ---
-<header>
-  <h1>Jobs</h1>
-  <p>
-    Explore our free resources for creative pros — from in-depth
-    <a href="#resume-tips">articles</a> and 5-minute
-    <a href="#take5-tutorials">tutorials</a> to contract and full-time
-    <a href="#jobs">jobs</a>.
-  </p>
+{%- set intro = pages['jobs'].intro -%}
+<header id="{{ id }}" class="page-header {{ id }}">
+  <h1>{{ intro.heading }}</h1>
+  {%- if intro.description -%}
+    <p>{{ intro.description | safe }}</p>
+  {%- endif -%}
+    {%- if intro.cards -%}
+      <ul>
+      {%- for idx in range(0, intro.cards.length) -%}
+        {%- set card = intro.cards[idx] -%}
+        {%- set heading = card.heading -%}
+        {%- set subheading = card.subheading -%}
+        {%- set url = card.cta.url -%}
+        {%- set label = card.cta.label -%}
+        {%- set src = config.cms_url + card.img.src -%}
+        {%- if card.img.srcSet -%}
+          {%- set srcSet = config.cms_url + card.img.srcSet -%}
+        {%- else -%}
+          {%- set srcSet = src -%}
+        {%- endif -%}
+        <li>
+          <article class="card">
+            <header>
+              <h2>{{ heading }}</h2>
+              {%- if subheading -%}
+                <h3>{{ subheading }}</h3>
+              {%- endif -%}
+            </header>
+            <figure class="artwork">
+              <img style="max-width: 5rem;" alt="{{ heading }}" srcset="{{ srcSet }}" src="{{ src }}">
+            </figure>
+            {%- if card.cta -%}
+              <div class="cta"><a href="{{ url }}">{{label }}</a></div>
+            {%- endif -%}
+          </article>
+        </li>
+      {%- endfor -%}
+      </ul>
+  {%- endif -%}
 </header>
-<section>
-  <ul>
-    <li>
-      <article class="card">
-        <div class="card-content featured">
-          <div class="card-main no-subhead equal-h">
-            <header class="full-width">
-              <h2>Salary Guides</h2>
-            </header>
-            <figure class="full-width">
-              <img alt="2023 Salary Guide" src="{{ config.cms_url }}/img/jobs/featured/salary-guide-2023.jpg" width="1280" height="720" decoding="async">
-            </figure>
-            <h3 hidden="">See How Your Salary &amp; Benefits Stack Up</h3>
-          </div>
-          <div class="card-cta card-cta-button">
-            <a class="button" href="#salary-guides">Check Salary</a>
-          </div>
-        </div>
-      </article>
-    </li>
-    <li>
-      <article class="card">
-        <div class="card-content featured">
-          <div class="card-main no-subhead equal-h">
-            <header class="full-width">
-              <h2>Job Search</h2>
-            </header>
-            <figure class="full-width">
-              <img alt="Find work with Aquent in over 35 offices around the globe." src="{{ config.cms_url }}/img/jobs/featured/find-work.jpg" width="1280" height="720" decoding="async">
-            </figure>
-            <h3 hidden="">Find Contract and Full-Time Work</h3>
-          </div>
-          <div class="card-cta card-cta-button">
-            <a class="button" href="#jobs">Explore Jobs</a>
-          </div>
-        </div>
-      </article>
-    </li>
-    <li>
-      <article class="card">
-        <div class="card-content featured">
-          <div class="card-main no-subhead equal-h">
-            <header class="full-width">
-              <h2>Tutorials</h2>
-            </header>
-            <figure class="full-width">
-              <img alt="Tell your story in a compelling way to advance your career and salary." src="{{ config.cms_url }}/img/take5/posters/gym-5016.jpg" width="1280" height="720" decoding="async">
-            </figure>
-          <h3 hidden="">Learn Career Skills in 5 Minutes</h3>
-          </div>
-          <div class="card-cta card-cta-button">
-            <a class="button" href="#take5-tutorials">Watch Now</a>
-          </div>
-        </div>
-      </article>
-    </li>
-  </ul>
-</section>
 
-<section>
-  <header>
-    <h2>Jobs</h2>
-  </header>
-  {%- include 'modules/jobs.njk' -%}
-</section>
+{# Here we're omitting some object keys to be able to loop through the content fields #}
+{%- set content = pages['jobs'] | omit(['intro']) -%}
 
-<section class="section" id="salary-guides">
-  <div class="section-content">
-    <header>
-      <h2>
-        Salary Guides
-      </h2>
-    </header>
-    <div>
-      <ul>
-        <li>
-          <h3>
-            <a href="https://aquenttalent.com/check-salary" target="_blank" rel="noopener">Check Salary</a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            <a href="https://brand.aquent.com/salary-guide?utm_source=gymnasium&utm_medium=web&utm_campaign=AQ_NA_slg23&utm_content=jobs-salary-guides" target="_blank" rel="noopener">US Salary Guide</a>
-          </h3>
-        </li>
-        <li>
-          <h3>
-            <a href="https://brand.aquent.com/UK-salary-guide?utm_source=gymnasium&utm_medium=web&utm_campaign=AQ_UK_slg23&utm_content=slg23" target="_blank" rel="noopener">UK Salary Guide</a>
-          </h3>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="to-top-link">
-    <a href="#main">Back to top</a>
-  </div>
-</section>
-
-<section class="section" id="resume-tips">
-  <div class="section-content">
-    <header>
-      <h2>
-        Résumé Tips
-      </h2>
-    </header>
-    <div>
-      <ul>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/how-to-apply-online-and-actually-get-a-job" target="_blank" rel="noopener">How to Apply Online (and Actually Get a Job)</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://medium.com/gymnasium/considering-contract-work-heres-why-you-should-go-for-it-7ec5eb246175" target="_blank" rel="noopener">Considering Contract Work? Here’s Why You Should Go for It</a>
-        </h3>
-        </li>
-        </h3>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="to-top-link">
-    <a href="#main">Back to top</a>
-  </div>
-</section>
-
-<section class="section" id="portfolio-tips">
-  <div class="section-content">
-    <header>
-      <h2>
-        Portfolio Tips
-      </h2>
-    </header>
-    <div>
-      <ul>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/top-5-free-portfolio-sites" target="_blank" rel="noopener">Top 5 Free Portfolio Sites for Creatives</a>
-        </h3>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="to-top-link">
-    <a href="#main">Back to top</a>
-  </div>
-</section>
-
-<section class="section" id="networking-tips">
-  <div class="section-content">
-    <header>
-      <h2>
-        Networking Tips
-      </h2>
-    </header>
-    <div>
-      <ul>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/8-networking-techniques-for-meeting-people-face-to-face" target="_blank" rel="noopener">8 Networking Techniques for Meeting People Face-to-Face</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/are-you-making-the-most-of-linkedin-to-build-your-personal-brand" target="_blank" rel="noopener">Are You Making the Most of LinkedIn to Build Your Personal Brand?</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/how-to-create-a-great-linkedin-profile-for-designers" target="_blank" rel="noopener">How to Create a Great LinkedIn Profile for Designers</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/linkedins-and-outs-get-noticed-and-find-opportunities" target="_blank" rel="noopener">LinkedIns & Outs: Get Noticed and Find Opportunities</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/the-5-rules-of-personal-branding-and-how-to-use-them" target="_blank" rel="noopener">The 5 Rules of Personal Branding and How to Use Them</a>
-        </h3>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="to-top-link">
-    <a href="#main">Back to top</a>
-  </div>
-</section>
-
-<section class="section" id="interview-tips">
-  <div class="section-content">
-    <header>
-      <h2>
-        Interview Tips
-      </h2>
-      <p>
-      </p>
-    </header>
-    <div>
-      <ul>
-        <li>
-        <h3>
-          <a href="https://medium.com/gymnasium/how-to-conduct-an-interview-like-a-boss-7de5c9810c4c" target="_blank" rel="noopener">How to Conduct an Interview Like a Boss</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/52-favorite-interview-questions-from-top-design-leaders" target="_blank" rel="noopener">52 Favorite Interview Questions From Top Design Leaders</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/how-to-win-your-next-video-interview" target="_blank" rel="noopener">How to Win Your Next Video Interview</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/interviewing-better-have-answers-to-these-7-questions" target="_blank" rel="noopener">Interviewing? Better Have Answers to These 7 Questions</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/14-best-interview-questions-for-creatives" target="_blank" rel="noopener">14 Best Interview Questions for Creatives</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/top-10-must-ask-interview-questions-for-designers" target="_blank" rel="noopener">Top 10 Must-Ask Interview Questions for Designers</a>
-        </h3>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="to-top-link">
-    <a href="#main">Back to top</a>
-  </div>
-</section>
-
-<section class="section" id="take5-tutorials">
-  <div class="section-content">
-    <header>
-      <h2>
-        Take 5 Tutorials
-      </h2>
-    </header>
-    <div>
-      <ul>
-        <li>
-        <h3>
-          <a href="https://thegymnasium.com/courses/take5/knowing-your-audience">Knowing Your Audience</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://thegymnasium.com/courses/take5/self-promotion-through-your-online-presence">Self-Promotion Through Your Online Presence</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://thegymnasium.com/courses/take5/crafting-your-story">Crafting Your Story</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://thegymnasium.com/courses/take5/how-to-tell-the-story-of-a-mid-career-pivot">How to Tell the Story of a Mid-Career Pivot</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://thegymnasium.com/courses/take5/storytelling-for-designers">Storytelling for Designers</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://thegymnasium.com/courses/take5/managing-your-time-like-a-pro">Managing Your Time Like a Pro</a>
-        </h3>
-        </li>
-      </ul>
-    </div>
-    <div class="cta">
-      <a class="button" href="https://thegymnasium.com/courses/take5">View More Tutorials</a>
-    </div>
-  </div>
-  <div class="to-top-link">
-    <a href="#main">Back to top</a>
-  </div>
-</section>
-
-<section class="section" id="tips-for-designers">
-  <div class="section-content">
-    <header>
-      <h2>
-        Tips for Designers
-      </h2>
-      <p>
-      </p>
-    </header>
-    <div>
-      <ul>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/how-to-create-a-ux-profile-that-will-help-you-land-your-dream-job" target="_blank" rel="noopener">How to Create a UX Profile That Will Help You Land Your Dream Job</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://medium.com/aquent-off-hours/the-design-leader-job-search-its-all-about-the-brand-yours-3ca9e4d0c983" target="_blank" rel="noopener">The Design Leader Job Search. It’s All about the Brand (Yours)</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://medium.com/gymnasium/4-reasons-web-designers-should-learn-to-code-2d1770d7866d" target="_blank" rel="noopener">4 Reasons Web Designers Should Learn to Code</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://medium.com/gymnasium/the-importance-of-storytelling-for-designers-cbe6541fa12a" target="_blank" rel="noopener">The Importance of Storytelling for Designers</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://medium.com/gymnasium/adaptability-as-the-key-to-success-in-design-ea64c1ed4044" target="_blank" rel="noopener">Adaptability As the Key to Success in Design</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/how-to-navigate-the-7-stages-of-your-design-career" target="_blank" rel="noopener">How to Navigate the 7 Stages of Your Design Career</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/the-5-critical-skills-you-need-to-advance-in-ux" target="_blank" rel="noopener">The 5 Critical Skills You Need to Advance in UX</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/advice-for-planning-your-next-career-move-in-ux" target="_blank" rel="noopener">Advice for Planning Your Next Career Move in UX</a>
-        </h3>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="to-top-link">
-    <a href="#main">Back to top</a>
-  </div>
-</section>
-
-<section class="section" id="tips-for-managers">
-  <div class="section-content">
-    <header>
-      <h2>
-        Tips for Managers
-      </h2>
-      <p>
-      </p>
-    </header>
-    <div>
-      <ul>
-        <li>
-        <h3>
-          <a href="https://medium.com/aquent-off-hours/ux-hiring-is-not-easy-even-for-a-company-full-of-ux-recruiters-4bd2ce1e6720" target="_blank" rel="noopener">UX Hiring Is Not Easy, Even for a Company Full of UX Recruiters</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://medium.com/aquent-off-hours/one-way-to-hire-faster-and-better-embrace-flexibility-c83a9fdedd3e" target="_blank" rel="noopener">One Way to Hire Faster (and Better)? Embrace Flexibility</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/7-non-technical-skills-your-creative-candidates-should-have" target="_blank" rel="noopener">7 Non-Technical Skills Your Creative Candidates Should Have</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://medium.com/aquent-off-hours/if-your-team-isnt-learning-they-re-falling-behind-fix-it-52331858383d" target="_blank" rel="noopener">If Your Team Isn’t Learning, They’re Falling Behind. Fix It.</a>
-        </h3>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="to-top-link">
-    <a href="#main">Back to top</a>
-  </div>
-</section>
-
-<section class="section" id="diversity-and-inclusion">
-  <div class="section-content">
-    <header>
-      <h2>
-        Diversity & Inclusion
-      </h2>
-      <p>
-      </p>
-    </header>
-    <div>
-      <ul>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/how-to-fix-your-talent-pipeline-to-be-more-inclusive" target="_blank" rel="noopener">How to Fix Your Talent Pipeline to Be More Inclusive</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/unlocking-creativity-through-diversity" target="_blank" rel="noopener">Unlocking Creativity Through Diversity</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/unpacking-the-hiring-process-questions-you-can-ask-to-identify-bias" target="_blank" rel="noopener">Unpacking the Hiring Process: Questions You Can Ask to Identify Bias</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://aquenttalent.com/blog/how-addressing-our-diversity-challenges-inspired-our-diversity-recruiting-solution" target="_blank" rel="noopener">How Addressing Our Diversity Challenges Inspired Our Diversity Recruiting Solution</a>
-        </h3>
-        </li>
-        <li>
-        <h3>
-          <a href="https://medium.com/gymnasium/working-toward-closing-the-gender-gap-in-tech-eb43d17a72ab" target="_blank" rel="noopener">Working Toward Closing the Gender Gap in Tech</a>
-        </h3>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="to-top-link">
-    <a href="#main">Back to top</a>
-  </div>
-</section>
+{%- if content -%}
+  {%- for key, section in content -%}
+    <section id="{{ key }}">
+      {# Load modules! #}
+      {# Let's rename sections to modules, so we can keep track of what we're dealing with #}
+      {%- set module = section -%}
+      {%- include 'modules/' + section.module + '.njk' -%}
+      {%- back_to_top -%}
+    </section>
+  {%- endfor -%}
+{%- endif -%}
