@@ -1,15 +1,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% if title %}{{title}} | {% endif %}{{config.meta.title}}</title>
-<meta name="description" content="{% if description %}{{description}}{% else %}{{config.meta.description}}{% endif %}"/>
+<title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ config.meta.title }}</title>
+<meta name="description" content="{% if meta.description %}{{ meta.description }}{% else %}{{ config.meta.description }}{% endif %}"/>
 <meta name="author" content="{{config.meta.author}}"/>
 <meta name="generator" content="{{ eleventy.generator }}">
-{%- if canonicalUrl -%}
-<link rel="canonical" href="{{ canonicalUrl }}">
+{%- if meta.canonicalUrl -%}
+<link rel="canonical" href="{{ meta.canonicalUrl }}">
 {% endif %}
 {# TODO: add OG meta #}
 <meta content="ie=edge" http-equiv=X-UA-Compatible>
-<link href=/favicon.svg rel=icon type=image/svg+xml>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml">
 {% block css %}
 <link rel="stylesheet" href="{{ '/css/global.css' | rev }}" />
 {% endblock %}

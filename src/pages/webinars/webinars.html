@@ -10,12 +10,14 @@
   },
   permalink: "webinars/{{ item.slug }}/",
   eleventyComputed: {
-    title: "{{ item.title | strip_html }} | Webinars",
-    description: "{{ item.description | strip_html }}",
-    sitemapDate: "{{ item.event_date.toISOString() }}",
-    sitemapExclude: function(data) {
-      const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
-      return bool;
+    meta: {
+      title: "{{ item.title | strip_html }} | Webinars",
+      description: "{{ item.description | strip_html }}",
+      sitemapDate: "{{ item.event_date.toISOString() }}",
+      sitemapExclude: function(data) {
+        const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
+        return bool;
+      },
     },
   },
 }

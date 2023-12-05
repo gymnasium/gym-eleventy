@@ -15,12 +15,14 @@
   },
   permalink: "courses/{{ item.title | slugify }}/",
   eleventyComputed: {
-    title: "{{ item.title }} | Courses",
-    description: "{{ item.description | strip_html }}",
-    sitemapDate: "{{ item.date.toISOString() }}",
-    sitemapExclude: function(data) {
-      const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
-      return bool;
+    meta: {
+      title: "{{ item.title }} | Courses",
+      description: "{{ item.description | strip_html }}",
+      sitemapDate: "{{ item.date.toISOString() }}",
+      sitemapExclude: function(data) {
+        const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
+        return bool;
+      },
     },
   },
 }

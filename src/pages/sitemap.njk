@@ -2,21 +2,22 @@
 layout: layouts/main.njk
 permalink: /sitemap/
 eleventyExcludeFromCollections: true
-title: Sitemap
+meta:
+  title: Sitemap
 ---
 <h1>Sitemap</h1>
 <ul>
 {%- for item in collections.static | sortByUrl -%}
-  {%- if (not item.data.draft) and (not item.data.sitemapExclude) -%}
-  {%- set title = item.data.title | replace_after("|","") | replace(config.meta.subtitle,"Home") -%}
+  {%- if (not item.data.meta.draft) and (not item.data.meta.sitemapExclude) -%}
+  {%- set title = item.data.meta.title | replace_after("|","") | replace(config.meta.subtitle,"Home") -%}
   <li>
     <a href="{{ item.url }}">{{ title }}</a>
   </li>
   {%- endif -%}
 {%- endfor -%}
 {%- for item in collections.privacy | sortByUrl -%}
-  {%- if (not item.data.draft) and (not item.data.sitemapExclude) -%}
-  {%- set title = item.data.title | replace_after("|","") -%}
+  {%- if (not item.data.meta.draft) and (not item.data.meta.sitemapExclude) -%}
+  {%- set title = item.data.meta.title | replace_after("|","") -%}
   <li>
     <a href="{{ item.url }}">{{ title }}</a>
   </li>
@@ -26,17 +27,16 @@ title: Sitemap
 
 <h2>Full Courses</h2>
 <ul>
-{%- for item in collections.courses_full -%}
+{%- for item in collections.live_courses_full -%}
   <li>
     <a href="/courses/{{ item.title | slugify }}"><span>{{ item.id }}:</span> {{ item.title }}</a>
   </li>
 {%- endfor -%}
 </ul>
 
-
 <h2>Gym Shorts</h2>
 <ul>
-{%- for item in collections.courses_short -%}
+{%- for item in collections.live_courses_short -%}
   <li>
     <a href="/courses/{{ item.title | slugify }}"><span>{{ item.id }}:</span> {{ item.title }}</a>
   </li>
@@ -45,13 +45,12 @@ title: Sitemap
 
 <h2>Take 5 Tutorials</h2>
 <ul>
-{%- for item in collections.tutorials -%}
+{%- for item in collections.live_tutorials -%}
   <li>
     <a href="/tutorials/{{ item.title | slugify }}"><span>{{ item.id }}:</span> {{ item.title }}</a>
   </li>
 {%- endfor -%}
 </ul>
-
 
 <h2>Webinars</h2>
 <ul>

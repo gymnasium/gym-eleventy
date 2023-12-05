@@ -9,9 +9,10 @@ pagination:
 permalink: "/blog/{{ item.title | slugify }}-{{ item.guid | replace('https://medium.com/p/','') }}/"
 eleventyExcludeFromCollections: true
 eleventyComputed:
-  title: "{{ item.title }} | Blog"
-  description: "{{ item.description }}"
-  canonicalUrl: "{{ item.link }}"
+  meta:
+    title: "{{ item.title }} | Blog"
+    description: "{{ item.description }}"
+    canonicalUrl: "{{ item.link }}"
 ---
 <article class="medium-article">
   <h1>{{ item.title }}</h1>

@@ -2,9 +2,11 @@
 layout: layouts/main.njk
 permalink: /
 eleventyComputed:
-  title: "{{ config.meta.subtitle }}"
-sitemapPriority: 1.0
-sitemapChangeFreq: weekly
+  meta:
+    title: "{{ config.meta.subtitle }}"
+meta:
+  sitemapPriority: 1.0
+  sitemapChangeFreq: weekly
 ---
 {%- set hero = heros[featured['home']['hero']] -%}
 {%- include 'modules/hero.html' -%}

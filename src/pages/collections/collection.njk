@@ -14,14 +14,16 @@
   },
   permalink: "/{{ item.title | slugify }}/",
   eleventyComputed: {
-    title: "{{ item.title }} | Collections",
-    description: "{{ item.description | strip_html }}",
-    sitemapExclude: function(data) {
-      const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
-      return bool;
-    },
-    redirectFrom: function(data) {
-      return data.item.redirectFrom;
+    meta: {
+      title: "{{ item.title }} | Collections",
+      description: "{{ item.description | strip_html }}",
+      sitemapExclude: function(data) {
+        const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
+        return bool;
+      },
+      redirectFrom: function(data) {
+        return data.item.redirectFrom;
+      }
     }
   },
 }
