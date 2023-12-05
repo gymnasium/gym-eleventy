@@ -3,20 +3,16 @@ layout: layouts/main.njk
 permalink: /faq/
 title: "FAQ"
 ---
-{%- set items = pages['faq'] -%}
-{%- for id, section in items -%}
-  {%- if loop.first -%}
-    <header id="{{ id }}" class="page-header {{ id }}">
-      {%- for tag, item in section -%}
-        <{{ tag }}>{{ item | safe }}</{{ tag }}>
-      {%- endfor -%}
-    </header>
-    <ul>
-  {%- else -%}
+{%- set intro = pages['faq'].intro -%}
+<header id="{{ id }}" class="page-header {{ id }}">
+  <h1>{{ intro.heading }}</h1>
+</header>
+{%- set sections = pages['faq'] | omit(['intro']) -%}
+{%- for id, section in sections -%}
+  {%- if loop.first -%}<ul>{%- else -%}
     <li id="{{ id }}" class="page-section {{ id }}">
-      {%- for tag, item in section -%}
-        <{{ tag }}>{{ item | safe }}</{{ tag }}>
-      {%- endfor -%}
+      <h2>{{ section.heading | safe }}</h2>
+      <p>{{ section.description | safe }}</p>
     </li>
   {%- endif -%}
   {%- if loop.last -%}</ul>{%- endif -%}
