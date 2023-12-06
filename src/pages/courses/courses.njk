@@ -132,13 +132,8 @@
   <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[item.instructor].img }}" alt="">
   <h3>{{ bios[item.instructor].name }}</h3>
   <p>{{ bios[item.instructor].description | safe }}</p>
-  
 
   {%- if bios[item.instructor].extended_description -%}
     {{ bios[item.instructor].extended_description | safe }}
   {%- endif -%}
 </aside>
-
-
-
-
