@@ -23,3 +23,41 @@ audience:
 lessons_duration: "4 hours"
 completion_duration: "Up to 16 hours"
 skill_level: "Intermediate"
+
+intro: "<strong><cite>Responsive Web Design Fundamentals</cite></strong> is a hands-on, code-intensive course on how to build high-performance, responsive websites that look great across multiple screen sizes and devices."
+
+preview:
+  heading: Course Preview
+  video_id: XyEbM_e_fAw
+
+about:
+  heading: Responsive Web Design Fundamentals
+  description: |
+    This course is an introduction to responsive web design strategies and how to implement those strategies through HTML, CSS and JavaScript. You’ll learn how responsive thinking affects content writing and structure as well as your design and development workflow. You’ll also explore best practices for responsive typography and images, creative tips to improve the visuals of your designs and how to identify and improve site performance across mobile and desktop.
+
+outline:
+  heading: Course Outline
+  list:
+    - heading: "Lesson 1: Setting the Stage"
+      description: You’ll start by looking at the objectives and structure of the course and what you’ll be learning. Then you’ll begin to explore the technical, conceptual, and design considerations involved with Responsive Web Design. Concepts covered include understanding how mobile web browsing influences our design and development, why design patterns are becoming increasingly important and how to identify challenges when responsively designing for content management systems.
+    - heading: "Lesson 2: Basic Mechanics and Leveling Up"
+      description: In this lesson, you’ll dive into the core concepts of fluid layouts, flexible media, and CSS media queries. You’ll learn strategies for converting a static layout into a flexible layout, how to best use media query breakpoints to make layouts look great, and when to use the right unit of measure for the job (pixels versus percentages versus ems). You’ll also get a chance to learn about new units of measure that are gaining traction on the web and decide whether they make sense for your upcoming projects.
+    - heading: "Lesson 3: Typography and Layout"
+      description: You’ll learn best practices for adding web fonts to your projects. In the typography section, you’ll learn how to effectively use web fonts to improve the readability and aesthetics of your design. In addition you’ll learn the latest methods of how to mitigate the performance hit your users face when loading fonts. In the layout section, you’ll implement enhancements to your design using CSS Columns and Flexbox. You’ll also get a preview of CSS Grid Layout, a new technology with the potential to revolutionize the way we design for the web.
+    - heading: "Lesson 4: Navigation Patterns"
+      description: This lesson focuses on how to determine the appropriate context for responsive navigation and how to tailor your user interface for touch screens as well as for smartphones versus desktop. You’ll take a tour of a number of desktop and mobile navigation patterns and learn the pros and cons of each. Finally, you’ll walk through a detailed tutorial on how to build an “off-canvas” navigation that works well on mobile and translates effectively to desktop screens.
+    - heading: "Lesson 5: Advanced Enhancement"
+      description: Discover how to integrate responsive images into your websites through a series of hands-on exercises using the picture element and other techniques. You’ll acknowledge the past by looking at how to support older browsers with polyfills and look toward the future with a discussion of the potential of Element Queries.
+    - heading: "Lesson 6: Performance"
+      description: Learn why website performance is one of the most important elements of the design process, especially for users in mobile and/or low-bandwidth scenarios. You’ll learn which tools are useful for testing your sites and walk through a number of exercises involving the optimization of our sample site. Specifically, you’ll learn when a Content Delivery Network (CDN) makes sense. You’ll also learn recent techniques involving inline CSS and JavaScript configurations that can cut page-load time dramatically for your users.
+
+prerequisites:
+  - label: "Familiarity with the concepts covered in our <a href=\"https://thegymnasium.com/courses/GYM/107/0/about\" target=\"_blank\" rel=\"noopener\">Modern Web Design</a> course (or the equivalent)."
+  - label: "Basic understanding of how to use browser developer tools."
+
+requirements:
+  description: "The requirements for this class are flexible and vary. Many of the assignments rely either on writing/sketching or using design software that you are familiar with. That being said, here’s what you’ll need:"
+  list:
+    - label: "Mac or Windows desktop or laptop"
+    - label: "Permissions to download lesson files from GitHub"
+    - label: "A text editor (We suggest <a href=\"https://code.visualstudio.com\" target=\"_blank\" rel=\"noopener\">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)"
