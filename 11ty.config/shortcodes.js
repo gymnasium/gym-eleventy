@@ -2,6 +2,7 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addShortcode('year', () => `${new Date().toLocaleString('en-US', { year: 'numeric' })}`);
 
+  // TODO: add support for playlist links
   // Modified version, original via @https://www.seanmcp.com/articles/add-a-youtube-embedder-shortcode-to-your-eleventy-site/
   eleventyConfig.addShortcode('youtube', (embedId, title) => {
     let id;

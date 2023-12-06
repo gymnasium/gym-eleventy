@@ -26,3 +26,55 @@ audience:
 lessons_duration: "3 hours"
 completion_duration: "Up to 12 hours"
 skill_level: "Intermediate"
+
+# Begin overview data
+intro: "<strong><cite>JavaScript and jQuery Survival Guide</cite></strong> will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples."
+
+preview:
+  heading: Course Preview
+  video_id: 4T1Ei46h41o
+
+about:
+  heading: JavaScript & jQuery Survival Guide
+  description: |
+    Learn basic yet critical skills for working with JavaScript & jQuery in the browser. By the end of this tutorial, the student will understand how to debug problems using the JavaScript console, write simple event handlers, and perform common manipulation of Document Object Model (DOM) elements. These three lessons are designed to prepare the student for typical challenges that they will face when adding or modifying interactive elements on a web page.
+
+outline:
+  heading: Course Outline
+  list:
+    - headline: "Lesson 1: Getting Started"
+      description: In this lesson you’ll begin with a tutorial on how to install Bower, a package manager, and Gulp, a toolkit for automating common tasks in front-end development. Next, you’ll review how browser development tools — specifically the JavaScript console — are critical components of a modern development workflow. Finally, you’ll walk through a brief and important review of JavaScript expressions as a preparation for the coding in Lessons 2 and 3.
+    - headline: "Lesson 2: Managing Events"
+      description: Handling events is one of the most common tasks in front-end web development. In this lesson, you’ll start with a look at the basics of events and event handlers and then move on to topics including anonymous functions and event binding methods. You’ll end the lesson with an in-depth look at how to add interactivity to a form in order to improve the user experience.
+    - headline: "Lesson 3: DOM Manipulation with jQuery"
+      description: In this lesson, you will learn how to modify various portions of a page using jQuery. Specifically, you will explore how to dynamically modify CSS styles and how to inject HTML content into a document as well as learn basic animation techniques to enhance the UI of your page.
+
+prerequisites:
+  - label: "Basic to intermediate competency with HTML and CSS. Specifically, an understanding of how the DOM functions is helpful, as well as experience working with with complex CSS stylesheets."
+  - label: "Experience with a text editor (such as <a href=\"https://code.visualstudio.com\" target=\"_blank\" rel=\"noopener\">Visual Code Studio</a>, <a href=\"https://atom.io\" target=\"_blank\" rel=\"noopener\">Atom</a>, <a href=\"https://www.sublimetext.com\" target=\"_blank\" rel=\"noopener\">Sublime Text</a>, etc.)"
+  - label: "Although not strictly required, a familiarity with our <a href =\"https://www.thegymnasium.com/courses/GYM/104/0/about\" target=\"_blank\" rel=\"noopener\">JavaScript Foundations</a> course is highly recommended."
+
+requirements:
+  list:
+    - label: "Mac or Windows desktop or laptop"
+    - label: "Web browser"
+    - label: "A text editor (We suggest <a href=\"https://code.visualstudio.com\" target=\"_blank\" rel=\"noopener\">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)"
+  additional: "In addition to the requirements listed above, there are a few supporting technologies that need to be installed on your system in order to follow along with the lesson files. The instructor covers how to install these on your own system in Lesson 1, Chapter 2, but we are providing the links here for your convenience."
+  links:
+    - url: https://nodejs.org
+      label: Node
+    - url: https://git-scm.com
+      label: Git
+    - url: https://bower.io
+      label: Bower
+    - url: https://gulpjs.com
+      label: Gulp
+
+# End overview data
+
+
+
+
+
+
+

@@ -24,7 +24,8 @@ lessons_duration: "5 hours"
 completion_duration: "Up to 22 hours"
 skill_level: "Intermediate"
 
-# Attempt to replicate the existing course about page content
+# Begin overview data
+
 intro: "<strong><cite>Modern Web Design</cite></strong> will prepare you to be a front-end developer by walking you through the basics of HTML, CSS, and JavaScript."
 
 preview:
@@ -63,3 +64,4 @@ requirements:
     - label: "A text editor (We suggest <a href=\"https://code.visualstudio.com\" target=\"_blank\" rel=\"noopener\">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)"
     - label: "Google Chrome web browser"
 
+# End overview data

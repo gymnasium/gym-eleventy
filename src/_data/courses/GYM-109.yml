@@ -24,6 +24,8 @@ lessons_duration: "4 hours"
 completion_duration: "Up to 16 hours"
 skill_level: "Intermediate"
 
+# Begin overview data
+
 intro: "<strong><cite>Responsive Web Design Fundamentals</cite></strong> is a hands-on, code-intensive course on how to build high-performance, responsive websites that look great across multiple screen sizes and devices."
 
 preview:
@@ -61,3 +63,5 @@ requirements:
     - label: "Mac or Windows desktop or laptop"
     - label: "Permissions to download lesson files from GitHub"
     - label: "A text editor (We suggest <a href=\"https://code.visualstudio.com\" target=\"_blank\" rel=\"noopener\">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)"
+
+# End overview data
