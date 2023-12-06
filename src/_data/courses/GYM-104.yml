@@ -78,7 +78,7 @@ requirements:
   heading: Software Requirements
   list:
     - label: |
-    Mac or Windows desktop or laptop
+        Mac or Windows desktop or laptop
     - label: |
         A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)
     - label: |
