@@ -55,7 +55,7 @@
   {%- endif -%}
 
   {%- if item.preview -%}
-    <h2>{{ item.preview.heading }}</h2>
+    <h2>{% if item.preview.heading %}{{ item.preview.heading }}{% else %}Preview{% endif %}</h2>
 
     {%- if item.preview.video_id -%}
       {%- youtube item.preview.video_id -%}
@@ -63,7 +63,7 @@
   {%- endif -%}
 
   {%- if item.about -%}
-    <h2>{{ item.about.heading }}</h2>
+    <h2>{% if item.about.heading %}{{ item.about.heading }}{% else %}About{% endif %}</h2>
     
     {%- if item.about.description -%}
       <p>{{ item.about.description }}</p>
@@ -71,7 +71,7 @@
   {%- endif -%}
 
   {%- if item.outline -%}
-    <h2>{{ item.outline.heading }}</h2>
+    <h2>{% if item.outline.heading %}{{ item.outline.heading }}{% else %}Outline{% endif %}</h2>
     
     {%- if item.outline.description -%}
       <p>{{ item.outline.description }}</p>
@@ -90,7 +90,7 @@
   {%- endif -%}
 
   {%- if item.audience -%}
-    <h2>Audience</h2>
+    <h2>{% if item.audience.heading %}{{ item.audience.heading }}{% else %}Audience{% endif %}</h2>
     <ul>
       {%- for idx in range(0, item.audience.length) -%}
         <li>{{ item.audience[idx].label }}</li>
@@ -99,7 +99,7 @@
   {%- endif -%}
 
   {%- if item.skills -%}
-    <h2>Skills</h2>
+    <h2>{% if item.skills.heading %}{{ item.skills.heading }}{% else %}Skills{% endif %}</h2>
     <ul>
       {%- for idx in range(0, item.skills.length) -%}
         <li>{{ item.skills[idx].label }}</li>
@@ -109,7 +109,7 @@
 
 
   {%- if item.prerequisites -%}
-    <h2>Prerequisites</h2>
+    <h2>{% if item.prerequisites.heading %}{{ item.prerequisites.heading }}{% else %}Prerequisites{% endif %}</h2>
     <ul>
       {%- for idx in range(0, item.prerequisites.length) -%}
         <li>{{ item.prerequisites[idx].label | safe }}</li>
@@ -118,7 +118,7 @@
   {%- endif -%}
 
   {%- if item.requirements -%}
-    <h2>Requirements</h2>
+    <h2>{% if item.requirements.heading %}{{ item.requirements.heading }}{% else %}Requirements{% endif %}</h2>
     <ul>
       {%- for idx in range(0, item.requirements.list.length) -%}
         <li>{{ item.requirements.list[idx].label | safe }}</li>
@@ -129,7 +129,7 @@
 
 <aside>
   <h2>Meet the Instructor</h2>
-  <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[item.instructor].img }}" alt="">
+  <img src="{{ config.cms_url }}/img/webinar-bio-headshots/{{ bios[item.instructor].img }}" alt="Image of {{ bios[item.instructor].name }}">
   <h3>{{ bios[item.instructor].name }}</h3>
   <p>{{ bios[item.instructor].description | safe }}</p>
 
