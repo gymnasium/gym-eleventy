@@ -9,17 +9,39 @@ $breakpoints: (
   "large": 75em
 ) !default;
 
-@mixin breakpoint($breakpoint) {
+// Modified, via @ https://rimdev.io/making-media-query-mixins-with-sass
+@mixin breakpoint($breakpoint, $direction: min) {
   @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
-      @content;
+
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    
+    @if $direction == max {
+      @media (max-width: ($breakpoint-value - 1)) {
+        @content;
+      }
+    } @else if $direction == min {
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+    } 
+  
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+    @if ($direction == min or $direction == max) {
+      // if we have a unitless value, convert it to px
+      @if (type_of($breakpoint) == number) {
+        @media (min-width: "#{$breakpoint}px") {
+          @content;
+        }
+      } @else {
+        // spit out the direction
+        @media (#{$direction}-width: $breakpoint) {
+          @content;
+        }
+      }
+    } @else {
+      @error "The direction has to be min or max.";
     }
-  } @else if (type_of($breakpoint) == number) {
-    @media (min-width: $breakpoint+"px") {
-      @content;
-    }
-  }
-  @else {
-    @error "Not a correct value, check _base-breakpoints for available values.";
   }
 }

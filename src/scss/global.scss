@@ -4,7 +4,6 @@
 
 @use 'base/resets';
 @use 'base/root';
-@use 'base/fonts';
 @use 'base/typography';
 @use 'base/lists';
 @use 'base/containers';
@@ -15,6 +14,6 @@
 @use 'base/flex';
 
 // Includes
+@use 'components/webfonts';
 @use 'components/header';
-@use 'components/nav';
 @use 'components/footer';
