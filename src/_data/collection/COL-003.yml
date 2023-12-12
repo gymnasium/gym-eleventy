@@ -7,7 +7,7 @@ meta:
   order: 4
 
 courses:
-  module: lists/image
+  module: lists/image-course
   heading: "Prototyping Courses"
   description: Learn prototyping with industry experts.
   cta:
@@ -21,7 +21,7 @@ courses:
     - id: GYM-015
 
 tutorials:
-  module: lists/image
+  module: lists/image-course
   heading: "Prototyping Tutorials"
   description: Learn a new prototyping skill in 5 minutes.
   cta:
@@ -37,7 +37,7 @@ tutorials:
     - id: GYM-5015
 
 webinars:
-  module: lists/image
+  module: lists/image-course
   heading: Prototyping Webinars
   description: Insightful conversations with trailblazers in the web community.
   cta:

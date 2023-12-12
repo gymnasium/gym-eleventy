@@ -8,7 +8,7 @@ meta:
   redirectFrom: '/web-development/'
 
 courses:
-  module: lists/image
+  module: lists/image-course
   heading: "Web Development Courses"
   description: Learn web development with industry experts.
   cta:
@@ -33,7 +33,7 @@ courses:
 
 
 tutorials:
-  module: lists/image
+  module: lists/image-course
   heading: "Development Tutorials"
   description: Learn a development skill in 5 minutes.
   cta:
@@ -50,7 +50,7 @@ tutorials:
     - id: GYM-5006
 
 webinars:
-  module: lists/image
+  module: lists/image-course
   heading: Development Webinars
   description: Insightful conversations with trailblazers in the web community.
   cta:

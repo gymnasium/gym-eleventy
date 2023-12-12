@@ -8,7 +8,7 @@ meta:
   redirectFrom: '/remote-work/'
 
 courses:
-  module: lists/image
+  module: lists/image-course
   heading: Courses
   description: Learn career skills from industry experts at your own pace.
   cta:
@@ -22,7 +22,7 @@ courses:
     - id: GYM-001
 
 tutorials:
-  module: lists/image
+  module: lists/image-course
   heading: Tutorials
   description: Take 5 minutes to learn new career skills.
   cta:

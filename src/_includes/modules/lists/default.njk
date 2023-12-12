@@ -54,7 +54,7 @@
 
             {%- set srcSet = src -%}
 
-            {% block item %}
+            {% block id_list_item %}
               <li><a href="{{ path }}{{ slug }}">{{ title }}</a></li>
             {% endblock %}
           {%- endfor -%}
@@ -62,7 +62,10 @@
       {%- elif item.links -%}
         <ul>
         {%- for idx in range(0, item.links.length) -%}
-          
+          {%- set title = item.links[idx].label -%}
+          {%- set url = item.links[idx].url -%}
+
+          {% block item %}
           <li>
             {# Figure out if we are using an internal or external URL #}
             {% if (item.links[idx].url | is_external_link) -%}
@@ -74,6 +77,7 @@
               <p>{{ item.links[idx].description | safe }}</p>
             {%- endif -%}
           </li>
+          {% endblock %}
           
         {%- endfor -%}
         </ul>
@@ -87,6 +91,7 @@
       <a class="{{ module.cta.type }}" href="{{ module.cta.url }}">{{ module.cta.label }}</a>
     </div>
   {%- endif -%}
+
 {%- else -%}
   <em>{ List Module Placeholder }</em>
   <p>Pass in the `module` variable to make this work</p>

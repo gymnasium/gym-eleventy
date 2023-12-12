@@ -3,7 +3,7 @@
       {%- set filteredId = collections.catalog | get_key(module.id) -%}
 
       {%- include './partial-course.njk' -%}
-      
+
   {%- elif module.ids -%}
     {%- for idx in range(0, module.ids.length) -%}
       {%- set filteredId = collections.catalog | get_key(module.ids[idx].id) -%}

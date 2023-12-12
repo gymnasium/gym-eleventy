@@ -7,7 +7,7 @@ meta:
   order: 3
 
 courses:
-  module: lists/image
+  module: lists/image-course
   heading: "UX Courses"
   description: Learn UX design with industry experts from Capital One to <cite>The New York Times</cite>.
   cta:
@@ -22,7 +22,7 @@ courses:
     - id: GYM-015
 
 tutorials:
-  module: lists/image
+  module: lists/image-course
   heading: "UX Tutorials"
   description: Learn a new UX skill in 5 minutes.
   cta:
@@ -38,7 +38,7 @@ tutorials:
     - id: GYM-5010
 
 webinars:
-  module: lists/image
+  module: lists/image-course
   heading: UX Webinars
   description: Insightful conversations with trailblazers in the web community.
   cta:
