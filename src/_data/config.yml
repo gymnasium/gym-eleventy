@@ -1,6 +1,7 @@
 root_url: https://gym.soy
 cms_url: https://data.gym.soy
 lms_url: https://learn.gym.soy
+mfe_url: https://apps.learn.gym.soy
 meta: 
   title: Gymnasium
   subtitle: Free online courses on design and development
