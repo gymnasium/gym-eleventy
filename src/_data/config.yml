@@ -16,6 +16,17 @@ navigation:
     href: GYM_ROOT_URL/jobs/
   - title: About
     href: GYM_ROOT_URL/about/
+  auth:
+    public:
+    - title: Sign In
+      href: GYM_LMS_URL/login
+    - title: Sign Up
+      href: GYM_LMS_URL/register
+    private:
+    - title: Dashboard
+      href: GYM_LMS_URL/dashboard
+    - title: Log Out
+      href: GYM_LMS_URL/logout
   footer:
   - title: What We Do
     links:
