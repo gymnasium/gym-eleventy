@@ -16,9 +16,10 @@
 
   &:hover,
   &:focus {
-    text-decoration: underline;
-    background-color: var(--primary-200);
-    border-color: var(--primary-200);
+    color: var(--neutral-100);
+    background-color: var(--neutral-600);
+    border-color: var(--neutral-600);
+    text-decoration: none;
   }
 
   &:visited {
@@ -29,66 +30,66 @@
     background-color: var(--secondary-100);
     border-color: (var(--secondary-100));
 
-    &:hover,
-    &:focus {
-      background-color: var(--secondary-400);
-      border-color: var(--secondary-400);
-    }
+    // &:hover,
+    // &:focus {
+    //   background-color: var(--secondary-400);
+    //   border-color: var(--secondary-400);
+    // }
   }
 
   &.color-neutral {
     background-color: var(--neutral-500);
     border-color: (var(--neutral-500));
 
-    &:hover,
-    &:focus {
-      background-color: var(--neutral-400);
-      border-color: var(--neutral-400);
-    }
+    // &:hover,
+    // &:focus {
+    //   background-color: var(--neutral-400);
+    //   border-color: var(--neutral-400);
+    // }
   }
 
   &.color-info {
     background-color: var(--info-300);
     border-color: (var(--info-300));
 
-    &:hover,
-    &:focus {
-      background-color: var(--info-200);
-      border-color: var(--info-200);
-    }
+    // &:hover,
+    // &:focus {
+    //   background-color: var(--info-200);
+    //   border-color: var(--info-200);
+    // }
   }
 
   &.color-success {
     background-color: var(--success-400);
     border-color: (var(--success-400));
 
-    &:hover,
-    &:focus {
-      background-color: var(--success-300);
-      border-color: var(--success-300);
-    }
+    // &:hover,
+    // &:focus {
+    //   background-color: var(--success-300);
+    //   border-color: var(--success-300);
+    // }
   }
 
   &.color-warning {
     background-color: var(--warning-400);
     border-color: (var(--warning-400));
 
-    &:hover,
-    &:focus {
-      background-color: var(--warning-300);
-      border-color: var(--warning-300);
-    }
+    // &:hover,
+    // &:focus {
+    //   background-color: var(--warning-300);
+    //   border-color: var(--warning-300);
+    // }
   }
 
   &.color-error {
     background-color: var(--error-300);
     border-color: (var(--error-300));
 
-    &:hover,
-    &:focus {
-      background-color: var(--error-200);
-      border-color: var(--error-200);
-    }
+    // &:hover,
+    // &:focus {
+    //   background-color: var(--error-200);
+    //   border-color: var(--error-200);
+    // }
   }
 
   &.size-tiny {

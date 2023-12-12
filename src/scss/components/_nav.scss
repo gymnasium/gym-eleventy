@@ -10,13 +10,28 @@ nav.main {
 
   li {
     display: block;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     margin: 0;
 
     a {
       display: block;
       padding: 0;
       margin: auto;
+      text-decoration: none;
+      font-weight: normal;
+
+      &:not(.button):hover {
+        color: var(--secondary-100);
+      }
+
+      &.button {
+        border: 0;
+
+        &:hover {
+          
+          
+        }
+      }
     }
   }
 
