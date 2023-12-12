@@ -25,10 +25,6 @@
     text-decoration: none;
   }
 
-  &:visited {
-    color: var(--neutral-900);
-  }
-
   &.color-secondary {
     background-color: var(--secondary-100);
     border-color: (var(--secondary-100));
