@@ -131,7 +131,7 @@ module.exports = function (eleventyConfig) {
       style: 'compressed',
       sourceMap: true,
     },
-    rev: true,
+    rev: false,
   });
 
   eleventyConfig.setServerOptions({
