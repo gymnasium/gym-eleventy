@@ -4,7 +4,7 @@
   </a>
   <div class="wrapper">
     <ul>
-      {%- for link in config.navigation.main | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.lms_url) -%}
+      {%- for link in config.navigation.main | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.lms_url) | replace("GYM_MFE_URL", config.mfe_url) -%}
       <li>
         <a href="{{link.href}}">{{link.title}}</a>
       </li>

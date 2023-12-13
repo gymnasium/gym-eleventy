@@ -5,9 +5,8 @@
       <div id="{{item.title | slugify}}" class="footer-section {{item.title | slugify}}">
         <h4>{{item.title}}</h4>
         <ul>
-          {%- set links =  item.links | replace("GYM_ROOT_URL", "") -%}
-          {%- set links =  links | replace("GYM_LMS_URL", config.lms_url) -%}
-          {%- set links =  links | replace("GYM_DATA_URL", config.cms_url) -%}
+          {%- set links =  item.links -%}
+          {%- set links =  links | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.lms_url) | replace("GYM_DATA_URL", config.cms_url) | replace("GYM_MFE_URL", config.mfe_url) -%}
           {%- for link in links -%}
           <li><a href="{{link.href}}"{%- if link.target -%} target="{{link.target}}"{%- endif -%}{%- if link.rel -%} rel="{{link.rel}}"{%- endif -%}>{{link.title}}</a></li>
           {%- endfor -%}
