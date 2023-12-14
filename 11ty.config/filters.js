@@ -19,88 +19,17 @@ function sortByOrder(values, field = ['data']['order']) {
 }
 
 module.exports = eleventyConfig => {
-  // DEBUG: Show object keys
-  eleventyConfig.addFilter('object_keys', (obj) => Object.keys(obj));
 
-  // DEBUG: Show object values
-  eleventyConfig.addFilter('object_values', (obj) => Object.values(obj));
-
-  // DEBUG: Show object values
-  eleventyConfig.addFilter('object_entries', (obj) => Object.entries(obj));
-
-  // very helpful function to omit select object keys, via @ https://www.30secondsofcode.org/js/s/omit-object-keys/
-  eleventyConfig.addFilter('omit', (obj, arr) => Object.keys(obj)
-    .filter(k => !arr.includes(k))
-    .reduce((acc, key) => ((acc[key] = obj[key]), acc), {}));
-
-  // extract items from objects or arrays
-  eleventyConfig.addFilter('pluck', function (obj, attr, value) {
-    let arr;
-    if (typeof obj === 'object') {
-      arr = Object.values(obj);
-    } else if (typeof obj === 'array') {
-      arr = obj;
-    } else {
-      console.error(`Oops, the pluck filter accepts either an object or an array!`);
-    }
-
-    const filtered = arr.filter((item) => {
-      return item[attr].includes(value);
-    });
-
-    return filtered;
+  // modified, via @https://bnijenhuis.nl/notes/cache-busting-in-eleventy/
+  eleventyConfig.addFilter('cachebust', (url) => {
+    const [urlPart, paramPart] = url.split('?');
+    const params = new URLSearchParams(paramPart || '');
+    params.set('v', Date.now());
+    return `${urlPart}?${params}`;
   });
 
-  eleventyConfig.addFilter('uppercase', (string) => {
-    return string.toUpperCase();
-  });
-
-  eleventyConfig.addFilter('lowercase', (string) => {
-    return string.toLowerCase();
-  });
-  
   eleventyConfig.addFilter('date', (date, dateFormat) => {
     return format(date, dateFormat);
-  });
-
-  eleventyConfig.addFilter('stringify', (data) => {
-    return JSON.stringify(data, null, '\t');
-  });
-
-  eleventyConfig.addFilter('strip_html', (post) => {
-    const content = post.replace(/(<([^>]+)>)/gi, '');
-    return content;
-  });
-
-  // Modified, original @ https://willvincent.com/2022/07/27/redirects-with-11ty-and-netlify/
-  eleventyConfig.addFilter('redirect_course', (id, force) => {
-    idString = id.split('-')[1];
-    let idNum = Number(idString);
-    let path;
-    let courseType;
-
-    if (idNum <= 9 || (idNum >= 100 && idNum < 108)) {
-      courseType = 'old';
-    } else {
-      courseType = 'new';
-    }
-
-    if (courseType === 'new' || force === true) {
-      if (force === true) {
-        path = `/learning/course/course-v1:GYM+${idString}+0/`;
-      } else {
-        path = `/courses/course-v1:GYM+${idString}+0/`;
-      }
-    } else if (courseType === 'old') {
-      path = `/courses/GYM/${idString}/0/`;
-    }
-
-    // console.log(idNum, idString, path)
-    return path;
-  });
-
-  eleventyConfig.addFilter('is_string', (obj) => {
-    return typeof obj === 'string';
   });
 
   // helps get a full id (object.key) when provided with a short id (good for webinars)
@@ -163,6 +92,73 @@ module.exports = eleventyConfig => {
     return typeof obj === 'object';
   });
 
+  eleventyConfig.addFilter('is_string', (obj) => {
+    return typeof obj === 'string';
+  });
+
+  eleventyConfig.addFilter('lowercase', (string) => {
+    return string.toLowerCase();
+  });
+
+  // DEBUG: Show object keys
+  eleventyConfig.addFilter('object_keys', (obj) => Object.keys(obj));
+
+  // DEBUG: Show object values
+  eleventyConfig.addFilter('object_values', (obj) => Object.values(obj));
+
+  // DEBUG: Show object values
+  eleventyConfig.addFilter('object_entries', (obj) => Object.entries(obj));
+
+  // very helpful function to omit select object keys, via @ https://www.30secondsofcode.org/js/s/omit-object-keys/
+  eleventyConfig.addFilter('omit', (obj, arr) => Object.keys(obj)
+    .filter(k => !arr.includes(k))
+    .reduce((acc, key) => ((acc[key] = obj[key]), acc), {}));
+
+  // extract items from objects or arrays
+  eleventyConfig.addFilter('pluck', function (obj, attr, value) {
+    let arr;
+    if (typeof obj === 'object') {
+      arr = Object.values(obj);
+    } else if (typeof obj === 'array') {
+      arr = obj;
+    } else {
+      console.error(`Oops, the pluck filter accepts either an object or an array!`);
+    }
+
+    const filtered = arr.filter((item) => {
+      return item[attr].includes(value);
+    });
+
+    return filtered;
+  });
+
+  // Modified, original @ https://willvincent.com/2022/07/27/redirects-with-11ty-and-netlify/
+  eleventyConfig.addFilter('redirect_course', (id, force) => {
+    idString = id.split('-')[1];
+    let idNum = Number(idString);
+    let path;
+    let courseType;
+
+    if (idNum <= 9 || (idNum >= 100 && idNum < 108)) {
+      courseType = 'old';
+    } else {
+      courseType = 'new';
+    }
+
+    if (courseType === 'new' || force === true) {
+      if (force === true) {
+        path = `/learning/course/course-v1:GYM+${idString}+0/`;
+      } else {
+        path = `/courses/course-v1:GYM+${idString}+0/`;
+      }
+    } else if (courseType === 'old') {
+      path = `/courses/GYM/${idString}/0/`;
+    }
+
+    // console.log(idNum, idString, path)
+    return path;
+  });
+
   // smart-ish replace filter, which works on strings and objects
   eleventyConfig.addFilter('replace', (input, string, replace) => {
     let output;
@@ -202,12 +198,24 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addFilter('sortByOrder', sortByOrder);
 
-
   eleventyConfig.addFilter('sortByTitle', values => {
     return values.sort((a, b) => a.title.localeCompare(b.title))
-  })
+  });
 
   eleventyConfig.addFilter('sortByUrl', values => {
     return values.sort((a, b) => a.url.localeCompare(b.url))
-  })
+  });
+
+  eleventyConfig.addFilter('stringify', (data) => {
+    return JSON.stringify(data, null, '\t');
+  });
+
+  eleventyConfig.addFilter('strip_html', (post) => {
+    const content = post.replace(/(<([^>]+)>)/gi, '');
+    return content;
+  });
+
+  eleventyConfig.addFilter('uppercase', (string) => {
+    return string.toUpperCase();
+  });
 }
