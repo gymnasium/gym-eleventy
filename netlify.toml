@@ -7,3 +7,31 @@ package = "netlify-plugin-cache"
 
   [plugins.inputs]
   paths = [ ".cache" ]
+
+[[headers]]
+  for = "/favicon/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+[[headers]]
+  for = "/feeds/*"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+[[headers]]
+  for = "/manifest.json"
+    [headers.values]
+    Access-Control-Allow-Origin = "*"
+[[headers]]
+  for = "*.js"
+  [headers.values] # cache for 1 year
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=31536000"
+[[headers]]
+  for = "*.css"
+  [headers.values] # cache for 1 year
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=31536000"
+[[headers]]
+  for = "/*.(svg|jpg|jpeg|png|gif|webp|ico|ttf|ttc|otf|eot|woff|woff2)"
+  [headers.values] # cache for 1 year
+    Access-Control-Allow-Origin = "*"
+    Cache-Control = "public, max-age=31536000, immutable"
