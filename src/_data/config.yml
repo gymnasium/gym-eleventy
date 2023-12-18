@@ -137,7 +137,9 @@ logos:
       src: /img/brand/png/gymnasium-logo-black-lg.png
       srcset: /img/brand/svg/gymnasium-logo-black.svg
   openedx:
-    src: /img/openedx/edx-logo-bw.png
+    src: /img/brand/png/edx-openedx-logo-tag-dark.png
+  tutor:
+    src:
 colors:
   orange: "#ff5f14"
   blue: "#0077c8"
