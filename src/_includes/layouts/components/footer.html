@@ -14,6 +14,17 @@
       </div>
     {%- endfor -%}
     </nav>
-    &copy; {% year %}
+    <div class="open-edx">
+      <a title="Open edX" href="https://openedx.org" target="_blank" rel="noopener">
+        {# TODO: add alt text to config? #}
+        <img class="open-edx-logo" alt="Powered by Open edX logo." src="{{ config.cms_url }}{{ config.logos.openedx.src }}" decoding="async" fetchpriority="low" width="175" height="70">
+      </a>
+      {# TODO: add locally hosted file to this repo #}
+      <a href="https://docs.tutor.overhang.io" target="_blank" rel="noopener">
+        <img src="{{ config.lms_url }}/static/gym-theme/images/tutor-logo.png" alt="Runs on Tutor" width="125">
+        </a>
+    </div>
+    <div class="copyright"><small>&copy; {% year %}  <a href="{{ config.root_url }}">{{ config.meta.author }}</a></small></div>
+    
   </div><!-- .container -->
 </footer>
