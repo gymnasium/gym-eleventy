@@ -1,3 +1,9 @@
+# root_url: http://local.overhang.io:4040
+# cms_url: https://data.gym.soy
+# lms_url: http://local.overhang.io:8000
+# lms_css_url: http://local.overhang.io:4040/css/theme.css
+# mfe_css_url: http://local.overhang.io:4040/css/mfe.css
+# mfe_url: http://apps.local.overhang.io
 root_url: https://gym.soy
 cms_url: https://data.gym.soy
 lms_url: https://learn.gym.soy
@@ -31,6 +37,15 @@ navigation:
       href: GYM_LMS_URL/dashboard
     - title: Log Out
       href: GYM_LMS_URL/logout
+  courses:
+    - title: Full Courses
+      href: GYM_ROOT_URL/courses/full/
+    - title: Gym Shorts
+      href: GYM_ROOT_URL/courses/short/
+    - title: Take 5 Tutorials
+      href: GYM_ROOT_URL/courses/tutorials/
+    - title: Collections
+      href: GYM_ROOT_URL/collections/
   footer:
   - title: What We Do
     links:
