@@ -15,7 +15,10 @@
   eleventyComputed: {
     items: (data) => {
       const filtered = data.collections.collection.filter(item => !item.meta.exclude);
-      return filtered;
+      const sorted = filtered.sort((a, b) => {
+        return Math.sign(a.meta.order - b.meta.order);
+      });
+      return sorted;
     },
   }
 }
