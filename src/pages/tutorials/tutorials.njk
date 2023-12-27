@@ -14,7 +14,11 @@
     addAllPagesToCollections: true,
   },
   permalink: "tutorials/{{ item.title | slugify }}/",
-  secondaryNav: "courses",
+  nav: {
+    secondary: "courses",
+    parent: "/courses/",
+    secondaryParent: "/tutorials/",
+  },
   eleventyComputed: {
     meta: {
       title: "{{ item.title }} | Tutorials",

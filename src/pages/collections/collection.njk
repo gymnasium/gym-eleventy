@@ -13,9 +13,11 @@
     addAllPagesToCollections: true,
   },
   permalink: "/{{ item.meta.title | slugify }}/",
-  secondaryNav: "courses",
-  navParent: "/courses/",
-  secondaryNavParent: "/collections/",
+  nav: {
+    parent: "/courses/",
+    secondary: "courses",
+    secondaryParent: "/collections",
+  },
   eleventyComputed: {
     meta: {
       title: "{{ item.meta.title }} | Collections",

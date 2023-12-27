@@ -1,6 +1,6 @@
 ---
 layout: layouts/main.njk
-permalink: /courses/
+permalink: /courses/full/
 collection: course
 meta:
   title: Courses
@@ -8,8 +8,9 @@ meta:
   sitemapChangeFreq: weekly
 nav:
   secondary: courses
+  parent: "/courses/"
 intro:
-  heading: Courses
+  heading: Full Courses
   subheading: Free online courses and tutorials.
   content: Learn design, development, UX, accessibility, and career skills from industry experts.
 ---
@@ -21,18 +22,6 @@ intro:
 <h2>Full Courses</h2>
 <ul>
 {% for course in collections.live_courses_full %}
-  <li>{{ course.id }} | 
-    <a href="/courses/{{ course.title | slugify }}">
-      {{ course.title }}
-      <img style="max-width: 5rem;" src="{{config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">
-    </a>
-  </li>
-{% endfor %}
-</ul>
-
-<h2>Short Courses (Gym Shorts)</h2>
-<ul>
-{% for course in collections.live_courses_short %}
   <li>{{ course.id }} | 
     <a href="/courses/{{ course.title | slugify }}">
       {{ course.title }}

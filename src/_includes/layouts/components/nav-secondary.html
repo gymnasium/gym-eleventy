@@ -1,8 +1,8 @@
-<nav class="secondary {{ secondaryNav }}" role="Secondary Navigation" aria-label="{{ secondaryNav | capitalize }}">
+<nav class="secondary {{ nav.secondary }}" role="Secondary Navigation" aria-label="{{ nav.secondary | capitalize }}">
   <ul role="list">
-    {%- for link in config.navigation[secondaryNav] | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.lms_url) | replace("GYM_MFE_URL", config.mfe_url) -%}
+    {%- for link in config.navigation[nav.secondary] | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.lms_url) | replace("GYM_MFE_URL", config.mfe_url) -%}
     <li>
-      <a href="{{link.href}}"{%- if (link.href in permalink) or (secondaryNavParent in link.href) -%} class="active" aria-current="page" {%- endif -%}>{{link.title}}</a>
+      <a href="{{link.href}}"{%- if (link.href in permalink) or (nav.secondaryParent in link.href) -%} class="active" aria-current="page" {%- endif -%}>{{link.title}}</a>
     </li>
     {%- endfor -%}
   </ul>
