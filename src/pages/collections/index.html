@@ -8,6 +8,7 @@ meta:
 intro:
   heading: Content Collections
   content: Explore specific topics with free courses, tutorials, resources, and jobs.
+secondaryNav: courses
 ---
 <header class="collections--about" id="about">
   <h1>{{ intro.heading }}</h1>
@@ -15,19 +16,18 @@ intro:
 </header>
 
 <ul>
-  {%- for col in collections.collection | sortByOrder('order') -%}
-  
+  {%- for id, col in collection -%}
   <li class="collection">
-    <div class="collection--card {{ col.title | slugify }}" id="{{ col.id | lower }}">
+    <div class="collection--card {{ col.meta.title | slugify }}" id="{{ col.meta.id | lower }}">
       <div class="collection--main">
         <header>
-          <h2 class="title">{{ col.title }}</h2>
-          <p class="description">{{ col.description }}</p>
-          <span>order: {{ col.order }}</span>
+          <h2 class="title">{{ col.meta.title }}</h2>
+          <p class="description">{{ col.meta.description }}</p>
+          <span>order: {{ col.meta.order }}</span>
         </header>
       </div>
       <div class="collection--cta">
-        <a class="button" href="/{{ col.title | slugify }}/">Learn More</a>
+        <a class="button" href="/{{ col.meta.title | slugify }}/">Learn More</a>
       </div>
     </div>
   </li>
