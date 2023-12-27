@@ -32,6 +32,8 @@ module.exports = eleventyConfig => {
     return format(date, dateFormat);
   });
 
+  eleventyConfig.addFilter('env', key => process.env[key]);
+
   // helps get a full id (object.key) when provided with a short id (good for webinars)
   eleventyConfig.addFilter('get_key', (obj, id) => {
     const key = Object.keys(obj).filter(k => k.startsWith(id));
