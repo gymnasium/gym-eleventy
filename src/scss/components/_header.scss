@@ -3,7 +3,7 @@
 
 .site-header {
   color: var(--neutral-100);
-  background-color: var(--dark-100);
+  // background-color: var(--dark-100);
 
   nav {
     font-family: var(--font-family-custom);
@@ -31,6 +31,11 @@
         &:hover,
         &:focus {
           color: var(--secondary-100);
+        }
+
+        &.active {
+          background-color: var(--neutral-900);
+          box-shadow: 0 -0.75rem var(--neutral-900), 0 0.75rem var(--neutral-900);
         }
       }
     }
@@ -74,6 +79,27 @@
           padding: rem-calc(12 0);
           margin: rem-calc(0 16 0 15);
           border-left: 1px solid var(--neutral-700);
+        }
+      }
+
+      &.secondary {
+        a:not(.button) {
+          padding: 0.25rem 0 0.25rem;
+          margin: 0 1.5rem 0 0;
+          border-bottom: 1px solid transparent;
+          
+
+          &[aria-current="page"] {
+            box-shadow: none;
+            border-bottom-color: var(--neutral-100);
+
+            &:hover,
+            &:focus {
+              border-bottom-color: var(--secondary-100);
+              border-bottom-width: 2px;
+              margin-bottom: -1px;
+            }
+          }
         }
       }
     }

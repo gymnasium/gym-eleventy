@@ -43,7 +43,7 @@ navigation:
     - title: Gym Shorts
       href: GYM_ROOT_URL/courses/short/
     - title: Take 5 Tutorials
-      href: GYM_ROOT_URL/courses/tutorials/
+      href: GYM_ROOT_URL/tutorials/
     - title: Collections
       href: GYM_ROOT_URL/collections/
   footer:

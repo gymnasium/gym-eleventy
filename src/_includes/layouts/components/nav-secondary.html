@@ -2,7 +2,7 @@
   <ul role="list">
     {%- for link in config.navigation[secondaryNav] | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.lms_url) | replace("GYM_MFE_URL", config.mfe_url) -%}
     <li>
-      <a href="{{link.href}}">{{link.title}}</a>
+      <a href="{{link.href}}"{%- if (link.href in permalink) or (secondaryNavParent in link.href) -%} class="active" aria-current="page" {%- endif -%}>{{link.title}}</a>
     </li>
     {%- endfor -%}
   </ul>

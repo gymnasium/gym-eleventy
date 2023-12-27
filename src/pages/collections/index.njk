@@ -12,6 +12,7 @@
     content: "Explore specific topics with free courses, tutorials, resources, and jobs.",
   },
   secondaryNav: "courses",
+  navParent: "/courses/",
   eleventyComputed: {
     items: (data) => {
       const filtered = data.collections.collection.filter(item => !item.meta.exclude);
