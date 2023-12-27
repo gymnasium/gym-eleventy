@@ -1,5 +1,11 @@
 <header class="site-header">
-  <div class="container">
-    {% include './nav.html' %}
-  </div><!-- .container -->
+  <div class="container bg-dark-100">
+    {% include './nav-main.html' %}
+  </div>
+  {%- if secondaryNav -%}
+  <div class="container bg-neutral-900">
+    {% include './nav-secondary.html' %}
+  </div>
+  {%- endif -%}
+  {# TODO: design/add individual course header(s) for use in MFEs #}
 </header>

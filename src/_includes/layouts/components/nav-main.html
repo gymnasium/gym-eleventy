@@ -3,14 +3,14 @@
     <img src="{{config.cms_url}}{{config.logos.white.main.src}}" srcset="{{config.cms_url}}{{config.logos.main.white.srcset}}" alt="{{config.meta.author}} Home">
   </a>
   <div class="wrapper">
-    <ul>
+    <ul role="list">
       {%- for link in config.navigation.main | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.lms_url) | replace("GYM_MFE_URL", config.mfe_url) -%}
       <li>
         <a href="{{link.href}}">{{link.title}}</a>
       </li>
       {%- endfor -%}
     </ul>
-    <ul class="auth">
+    <ul class="auth" role="list">
       {%- for link in config.navigation.auth.public | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.lms_url) -%}
       <li>
         <a href="{{link.href}}"{%- if link.type === 'button' -%} class="button"{%- endif -%}>{{link.title}}</a>
