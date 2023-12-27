@@ -1,14 +1,24 @@
----
-layout: layouts/main.njk
-permalink: /collections/
-meta:
-  title: Collections
-  sitemapPriority: 0.7
-  sitemapChangeFreq: monthly
-intro:
-  heading: Content Collections
-  content: Explore specific topics with free courses, tutorials, resources, and jobs.
-secondaryNav: courses
+---js
+{
+  layout: "layouts/main.njk",
+  permalink: "/collections/",
+  meta: {
+    title: "Collections",
+    sitemapPriority: 0.7,
+    sitemapChangeFreq: "monthly",
+  },
+  intro: {
+    heading: "Content Collections",
+    content: "Explore specific topics with free courses, tutorials, resources, and jobs.",
+  },
+  secondaryNav: "courses",
+  eleventyComputed: {
+    items: (data) => {
+      const filtered = data.collections.collection.filter(item => !item.meta.exclude);
+      return filtered;
+    },
+  }
+}
 ---
 <header class="collections--about" id="about">
   <h1>{{ intro.heading }}</h1>
@@ -16,7 +26,7 @@ secondaryNav: courses
 </header>
 
 <ul>
-  {%- for id, col in collection -%}
+  {%- for col in items -%}
   <li class="collection">
     <div class="collection--card {{ col.meta.title | slugify }}" id="{{ col.meta.id | lower }}">
       <div class="collection--main">
