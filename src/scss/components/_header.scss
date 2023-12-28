@@ -3,9 +3,18 @@
 
 .site-header {
   color: var(--neutral-100);
-  // background-color: var(--dark-100);
+  background-color: var(--dark-100);
+
+  [class*='bg-dark'] {
+    box-shadow: -75rem 0 var(--dark-100), 75rem 0 var(--dark-100), -150rem 0 var(--dark-100), 150rem 0 var(--dark-100);
+  }
+
+  [class*='bg-neutral'] {
+    box-shadow: -75rem 0 var(--neutral-900), 75rem 0 var(--neutral-900), -150rem 0 var(--neutral-900), 150rem 0 var(--neutral-900);
+  }
 
   nav {
+
     font-family: var(--font-family-custom);
     padding: rem-calc(12 0);
     font-size: rem-calc(16);
@@ -83,6 +92,7 @@
       }
 
       &.secondary {
+
         a:not(.button) {
           padding: 0.25rem 0 0.25rem;
           margin: 0 1.5rem 0 0;
@@ -105,5 +115,3 @@
     }
   }
 }
-
-
