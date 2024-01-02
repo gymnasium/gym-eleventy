@@ -10,6 +10,13 @@ lms_url: https://learn.gym.soy
 lms_css_url: https://gym.soy/css/theme.css
 mfe_css_url: https://gym.soy/css/mfe.css
 mfe_url: https://apps.learn.gym.soy
+css:
+  lms_css_url: https://gym.soy/css/theme.css
+  mfe_css_url: https://gym.soy/css/mfe.css
+  mfe_url: https://apps.learn.gym.soy
+  # lms_css_url: http://local.overhang.io:4040/css/theme.css
+  # mfe_css_url: http://local.overhang.io:4040/css/mfe.css
+  # mfe_url: http://apps.local.overhang.io
 meta: 
   title: Gymnasium
   subtitle: Free online courses on design and development
