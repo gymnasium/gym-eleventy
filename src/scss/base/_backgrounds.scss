@@ -10,4 +10,17 @@
       background-color: var(--#{$color}-#{$shade});
     }
   }
+  @if (length($shades) > 1) {
+    @each $shade, $value in $shades {
+      .bg-#{$color}-#{$shade} {
+        background-color: var(--#{$color}-#{$shade});
+      }
+    }
+  } @else {
+    @each $shade, $value in $shades {
+      .bg-#{$color} {
+        background-color: var(--#{$color});
+      }
+    }
+  }
 }

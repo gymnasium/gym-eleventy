@@ -11,23 +11,23 @@
   line-height: 1;
   text-decoration: none;
   text-align: center;
-  color: var(--neutral-100);
-  background-color: var(--primary-100);
-  border: 3px solid var(--primary-100);
+  color: var(--mono-100);
+  background-color: var(--primary);
+  border: 3px solid var(--primary);
   border-radius: 3px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
   &:hover,
   &:focus {
-    color: var(--neutral-100);
-    background-color: var(--neutral-600);
-    border-color: var(--neutral-600);
+    color: var(--mono-100);
+    background-color: var(--mono-600);
+    border-color: var(--mono-600);
     text-decoration: none;
   }
 
   &.color-secondary {
-    background-color: var(--secondary-100);
-    border-color: (var(--secondary-100));
+    background-color: var(--secondary);
+    border-color: (var(--secondary));
 
     // &:hover,
     // &:focus {
@@ -37,13 +37,13 @@
   }
 
   &.color-neutral {
-    background-color: var(--neutral-500);
-    border-color: (var(--neutral-500));
+    background-color: var(--mono-500);
+    border-color: (var(--mono-500));
 
     // &:hover,
     // &:focus {
-    //   background-color: var(--neutral-400);
-    //   border-color: var(--neutral-400);
+    //   background-color: var(--mono-400);
+    //   border-color: var(--mono-400);
     // }
   }
 
@@ -141,5 +141,5 @@
 }
 
 .darkmode .button.type-secondary {
-  color: var(--neutral-100);
+  color: var(--mono-100);
 }

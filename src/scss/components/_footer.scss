@@ -2,8 +2,8 @@
 @use 'base/functions' as *;
 
 .site-footer {
-  background-color: var(--dark-100);
-  color: var(--neutral-100);
+  background-color: var(--mono-900);
+  color: var(--mono-100);
   padding: 1rem 0;
 
   nav {

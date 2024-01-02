@@ -2,15 +2,19 @@
 @use 'base/functions' as *;
 
 .site-header {
-  color: var(--neutral-100);
-  background-color: var(--dark-100);
+  color: var(--mono-100);
+  background-color: var(--mono-900);
 
-  [class*='bg-dark'] {
-    box-shadow: -75rem 0 var(--dark-100), 75rem 0 var(--dark-100), -150rem 0 var(--dark-100), 150rem 0 var(--dark-100);
-  }
-
-  [class*='bg-neutral'] {
-    box-shadow: -75rem 0 var(--neutral-900), 75rem 0 var(--neutral-900), -150rem 0 var(--neutral-900), 150rem 0 var(--neutral-900);
+  > {
+    div:nth-of-type(1) {
+      background-color: var(--mono-900);
+      box-shadow: -75rem 0 var(--mono-900), 75rem 0 var(--mono-900), -150rem 0 var(--mono-900), 150rem 0 var(--mono-900);
+    }
+  
+    div:nth-of-type(2) {
+      background-color: var(--mono-800);
+      box-shadow: -75rem 0 var(--mono-800), 75rem 0 var(--mono-800), -150rem 0 var(--mono-800), 150rem 0 var(--mono-800);
+    }
   }
 
   nav {
@@ -39,19 +43,19 @@
 
         &:hover,
         &:focus {
-          color: var(--secondary-100);
+          color: var(--secondary);
         }
 
         &.active {
-          background-color: var(--neutral-900);
-          box-shadow: 0 -0.75rem var(--neutral-900), 0 0.75rem var(--neutral-900);
+          background-color: var(--mono-800);
+          box-shadow: 0 -0.75rem var(--mono-800), 0 0.75rem var(--mono-800);
         }
       }
     }
 
     @include breakpoint(medium, max) {
       li {
-        border-top: 1px solid var(--neutral-700);
+        border-top: 1px solid var(--mono-700);
       }
 
       ul:first-child {
@@ -87,7 +91,7 @@
           content: "";
           padding: rem-calc(12 0);
           margin: rem-calc(0 16 0 15);
-          border-left: 1px solid var(--neutral-700);
+          border-left: 1px solid var(--mono-700);
         }
       }
 
@@ -101,11 +105,11 @@
 
           &[aria-current="page"] {
             box-shadow: none;
-            border-bottom-color: var(--neutral-100);
+            border-bottom-color: var(--mono-100);
 
             &:hover,
             &:focus {
-              border-bottom-color: var(--secondary-100);
+              border-bottom-color: var(--secondary);
               border-bottom-width: 2px;
               margin-bottom: -1px;
             }
