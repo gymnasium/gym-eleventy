@@ -5,6 +5,7 @@ const filters = require('./11ty.config/filters.js');
 const shortcodes = require('./11ty.config/shortcodes.js');
 const pluginImages = require('./11ty.config/images.js');
 const yaml = require('js-yaml');
+require('dotenv').config();
 
 function filter(arr, criteria) {
   return arr.filter(function (obj) {
@@ -15,6 +16,8 @@ function filter(arr, criteria) {
 }
 
 module.exports = function (eleventyConfig) {
+
+  eleventyConfig.addGlobalData('env', process.env);
 
   eleventyConfig.addPassthroughCopy({
     './public/': '/',

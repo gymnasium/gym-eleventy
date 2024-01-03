@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ENV=local npx @11ty/eleventy --serve",
-    "build": "ENV=production npx @11ty/eleventy",
-    "start": "ENV=local npx @11ty/eleventy --serve",
+    "dev": "ELEVENTY_ENV=local npx @11ty/eleventy --serve",
+    "build": "ELEVENTY_ENV=production npx @11ty/eleventy",
+    "start": "ELEVENTY_ENV=local npx @11ty/eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

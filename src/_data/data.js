@@ -2,13 +2,12 @@ const EleventyFetch = require('@11ty/eleventy-fetch');
 const Parser = require('rss-parser');
 let parser = new Parser();
 
-const ENV = process.env.ENV;
+const ENV = process.env.ELEVENTY_ENV;
 // const CMS_URL = ENV === 'local' ? 'http://localhost:4000' : 'https://data.gym.soy';
 const CMS_URL = 'https://data.gym.soy';
 
 module.exports = async function() {
-  const ENV = process.env.ENV;
-  
+
   try {
 
     let complete = await EleventyFetch(`${CMS_URL}/feeds/complete.json`, {
