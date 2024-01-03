@@ -22,7 +22,7 @@ intro:
 <ul>
 {% for course in collections.live_courses_full %}
   <li>{{ course.id }} | 
-    <a href="{{ config.mfe_url }}{% if (config['mfe']['course-about']['port']) %}:{{ config['mfe']['course-about']['port'] }}{% endif %}/courses/course-v1:{{ course.id | replace('-','+')}}+0/about">
+    <a href="{{ config.mfe_url }}{% if (ENV == 'local' and config['mfe']['course-about']['port']) %}:{{ config['mfe']['course-about']['port'] }}{% endif %}/courses/course-v1:{{ course.id | replace('-','+')}}+0/about">
       {{ course.title }}
       <img style="max-width: 5rem;" src="{{config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">
     </a>

@@ -7,6 +7,8 @@ const ENV = process.env.ENV;
 const CMS_URL = 'https://data.gym.soy';
 
 module.exports = async function() {
+  const ENV = process.env.ENV;
+  
   try {
 
     let complete = await EleventyFetch(`${CMS_URL}/feeds/complete.json`, {

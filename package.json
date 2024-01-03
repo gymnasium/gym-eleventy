@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "ENV=local npx @11ty/eleventy --serve",
+    "build": "ENV=production npx @11ty/eleventy",
     "start": "ENV=local npx @11ty/eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

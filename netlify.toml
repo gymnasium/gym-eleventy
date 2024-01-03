@@ -1,5 +1,5 @@
 [build]
-  command = "ENV=production npx @11ty/eleventy"
+  command = "npm run build" # runs with ENV=production
   publish = "dist"
 
 [[plugins]]
