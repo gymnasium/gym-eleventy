@@ -10,6 +10,21 @@ lms_url: https://learn.gym.soy
 lms_css_url: https://gym.soy/css/theme.css
 mfe_css_url: https://gym.soy/css/mfe.css
 mfe_url: https://apps.learn.gym.soy
+mfe:
+  account:
+    port: 1997
+  authn:
+    port: 1999
+  course-about:
+    port: 3000
+  discussions:
+    port: 2002
+  learner-dashboard:
+    port: 1996
+  learning:
+    port: 2000
+  profile:
+    port: 1995
 css:
   lms_css_url: https://gym.soy/css/theme.css
   mfe_css_url: https://gym.soy/css/mfe.css
