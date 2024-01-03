@@ -4,12 +4,12 @@
 # lms_css_url: http://local.overhang.io:4040/css/theme.css
 # mfe_css_url: http://local.overhang.io:4040/css/mfe.css
 # mfe_url: http://apps.local.overhang.io
-root_url: https://gym.soy
-cms_url: https://data.gym.soy
-lms_url: https://learn.gym.soy
-lms_css_url: https://gym.soy/css/theme.css
-mfe_css_url: https://gym.soy/css/mfe.css
-mfe_url: https://apps.learn.gym.soy
+# root_url: https://gym.soy
+# cms_url: https://data.gym.soy
+# lms_url: https://learn.gym.soy
+# mfe_url: https://apps.learn.gym.soy
+# lms_css_url: https://gym.soy/css/theme.css
+# mfe_css_url: https://gym.soy/css/mfe.css
 mfe:
   account:
     port: 1997
