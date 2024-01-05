@@ -169,7 +169,7 @@ module.exports = eleventyConfig => {
     } else if (typeof input === 'string') {
       output = replaceAll(input, string, replace);
     } else {
-      console.warn(`input must be a string or object!`);
+      console.warn(`[replace filter]: input must be a string or object!`);
     }
 
     return output;
