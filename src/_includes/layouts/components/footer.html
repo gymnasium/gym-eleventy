@@ -6,7 +6,7 @@
         <h4>{{item.title}}</h4>
         <ul>
           {%- set links =  item.links -%}
-          {%- set links =  links | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.lms_url) | replace("GYM_DATA_URL", config.cms_url) | replace("GYM_MFE_URL", config.mfe_url) -%}
+          {%- set links =  links | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.urls.lms) | replace("GYM_DATA_URL", config.urls.cms) | replace("GYM_MFE_URL", config.urls.mfe) -%}
           {%- for link in links -%}
           <li><a href="{{link.href}}"{%- if link.target -%} target="{{link.target}}"{%- endif -%}{%- if link.rel -%} rel="{{link.rel}}"{%- endif -%}>{{link.title}}</a></li>
           {%- endfor -%}
@@ -17,14 +17,14 @@
     <div class="open-edx">
       <a title="Open edX" href="https://openedx.org" target="_blank" rel="noopener">
         {# TODO: add alt text to config? #}
-        <img class="open-edx-logo" alt="Powered by Open edX logo." src="{{ config.cms_url }}{{ config.logos.openedx.src }}" decoding="async" fetchpriority="low" width="175" height="70">
+        <img class="open-edx-logo" alt="Powered by Open edX logo." src="{{ config.urls.cms }}{{ config.logos.openedx.src }}" decoding="async" fetchpriority="low" width="175" height="70">
       </a>
       {# TODO: add locally hosted file to this repo #}
       <a href="https://docs.tutor.overhang.io" target="_blank" rel="noopener">
-        <img src="{{ config.lms_url }}/static/gym-theme/images/tutor-logo.png" alt="Runs on Tutor" width="125">
+        <img src="{{ config.urls.lms }}/static/gym-theme/images/tutor-logo.png" alt="Runs on Tutor" width="125">
         </a>
     </div>
-    <div class="copyright"><small>&copy; {% year %}  <a href="{{ config.root_url }}">{{ config.meta.author }}</a></small></div>
+    <div class="copyright"><small>&copy; {% year %}  <a href="{{ config.urls.root }}">{{ config.meta.author }}</a></small></div>
     
   </div><!-- .container -->
 </footer>

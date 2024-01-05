@@ -22,11 +22,11 @@ intro:
 <ul>
 {% for course in collections.live_courses_full %}
   <li>{{ course.id }} | 
-    <a href="{{ config.mfe_url }}
-      {%- if (env.ELEVENTY_ENV == 'local' and config['mfe']['course-about']['port']) %}:{{ config['mfe']['course-about']['port'] }}{% endif -%}
+    <a href="{{ config.urls.mfe }}
+      {%- if (env.ELEVENTY_ENV == 'local' and config['ports']['course_about']) %}:{{ config['ports']['course_about'] }}{% endif -%}
       /courses/course-v1:{{ course.id | replace('-','+')}}+0/about">
       {{ course.title }}
-      <img style="max-width: 5rem;" src="{{config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">
+      <img style="max-width: 5rem;" src="{{config.urls.cms}}{{course.img}}" alt="Image for {{course.title}}">
     </a>
   </li>
 {% endfor %}
@@ -38,7 +38,7 @@ intro:
   <li>{{ course.id }} | 
     <a href="/courses/{{ course.title | slugify }}">
       {{ course.title }}
-      <img style="max-width: 5rem;" src="{{config.cms_url}}{{course.img}}" alt="Image for {{course.title}}">
+      <img style="max-width: 5rem;" src="{{config.urls.cms}}{{course.img}}" alt="Image for {{course.title}}">
     </a>
   </li>
 {% endfor %}

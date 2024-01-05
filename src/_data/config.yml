@@ -1,35 +1,3 @@
-# root_url: http://local.overhang.io:4040
-# cms_url: https://data.gym.soy
-# lms_url: http://local.overhang.io:8000
-# lms_css_url: http://local.overhang.io:4040/css/theme.css
-# mfe_css_url: http://local.overhang.io:4040/css/mfe.css
-# mfe_url: http://apps.local.overhang.io
-# root_url: https://gym.soy
-# cms_url: https://data.gym.soy
-# lms_url: https://learn.gym.soy
-# mfe_url: https://apps.learn.gym.soy
-# lms_css_url: https://gym.soy/css/theme.css
-# mfe_css_url: https://gym.soy/css/mfe.css
-mfe:
-  account:
-    port: 1997
-  authn:
-    port: 1999
-  course-about:
-    port: 3000
-  discussions:
-    port: 2002
-  learner-dashboard:
-    port: 1996
-  learning:
-    port: 2000
-  profile:
-    port: 1995
-css:
-  lms_css_url: https://gym.soy/css/theme.css
-  mfe_css_url: https://gym.soy/css/mfe.css
-  # lms_css_url: http://local.overhang.io:4040/css/theme.css
-  # mfe_css_url: http://local.overhang.io:4040/css/mfe.css
 meta: 
   title: Gymnasium
   subtitle: Free online courses on design and development
@@ -176,11 +144,14 @@ logos:
   tutor:
     src:
 colors:
-  orange: "#ff5f14"
-  blue: "#0077c8"
+  primary: "#0077c8"
+  secondary: "#ff5f14"
   white: "#fff"
   light-gray: "#ccc"
   gray: "#a6a6a6"
   medium-gray: "#737373"
   dark-gray: "#444"
   black: "#181818"
+css:
+  lms: /css/theme.css
+  mfe: /css/mfe.css

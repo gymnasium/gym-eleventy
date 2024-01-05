@@ -5,8 +5,8 @@ eleventyExcludeFromCollections: true
 {# modified, via @https://willvincent.com/2022/07/27/redirects-with-11ty-and-netlify/ #}
 {%- for id, course in courses -%}
 {{ course.id | redirect_course }}about  /courses/{{ course.title | slugify }}  301
-{{ course.id | redirect_course }}info  {{ config.lms_url }}{{ course.id | redirect_course(true) }}home  301
-{{ course.id | redirect_course }}courseware  {{ config.lms_url }}{{ course.id | redirect_course(true) }}home  301
+{{ course.id | redirect_course }}info  {{ config.urls.lms }}{{ course.id | redirect_course(true) }}home  301
+{{ course.id | redirect_course }}courseware  {{ config.urls.lms }}{{ course.id | redirect_course(true) }}home  301
 {%- if not loop.last -%}
   {{ '\n' }}
 {%- endif -%}

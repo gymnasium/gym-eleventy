@@ -71,7 +71,7 @@
     data-options="heading:h3;category:false;limit:10;"
     data-utm="utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=job-module&amp;utm_content=textlink"
     data-script="https://assets.aquent.com/apps/gym/jobs.json?limit=1500&amp;callback=processJobs"
-    data-script-fallback="{{ config.cms_url }}/feeds/jobs.jsonp"
+    data-script-fallback="{{ config.urls.cms }}/feeds/jobs.jsonp"
   >
     <ul>
       {%- for job in data.jobs.slice(0, 10) -%}

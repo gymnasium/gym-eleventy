@@ -1,8 +1,17 @@
 module.exports = {
-  root_url: process.env.ROOT_URL || 'https://gym.soy',
-  cms_url: process.env.CMS_URL || 'https://data.gym.soy',
-  lms_url: process.env.LMS_URL || 'https://learn.gym.soy',
-  mfe_url: process.env.MFE_URL || 'https://apps.learn.gym.soy',
-  lms_css_url: process.env.LMS_CSS_URL || 'https://gym.soy/css/theme.css',
-  mfe_css_url: process.env.MFE_CSS_URL || 'https://gym.soy/css/mfe.css',
+  urls: {
+    root: process.env.ROOT_URL || 'https://gym.soy',
+    cms: process.env.CMS_URL || 'https://data.gym.soy',
+    lms: process.env.LMS_URL || 'https://learn.gym.soy',
+    mfe: process.env.MFE_URL || 'https://apps.learn.gym.soy',
+  },
+  ports: {
+    account: 1997,
+    authn: 1999,
+    course_about: 3000,
+    discussions: 2002,
+    learner_dashboard: 1996,
+    learning: 2000,
+    profile: 1995,
+  }
 };

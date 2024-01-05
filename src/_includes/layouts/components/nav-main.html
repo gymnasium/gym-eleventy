@@ -1,17 +1,17 @@
 <nav class="main" role="navigation" aria-label="Main">
   <a href="/">
-    <img src="{{config.cms_url}}{{config.logos.white.main.src}}" srcset="{{config.cms_url}}{{config.logos.main.white.srcset}}" alt="{{config.meta.author}} Home">
+    <img src="{{config.urls.cms}}{{config.logos.white.main.src}}" srcset="{{config.urls.cms}}{{config.logos.main.white.srcset}}" alt="{{config.meta.author}} Home">
   </a>
   <div class="wrapper">
     <ul role="list">
-      {%- for link in config.navigation.main | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.lms_url) | replace("GYM_MFE_URL", config.mfe_url) -%}
+      {%- for link in config.navigation.main | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.urls.lms) | replace("GYM_MFE_URL", config.urls.mfe) -%}
       <li>
         <a href="{{link.href}}"{%- if (link.href in permalink) or (nav.parent in link.href) -%} class="active" aria-current="page" {%- endif -%}>{{link.title}}</a>
       </li>
       {%- endfor -%}
     </ul>
     <ul class="auth" role="list">
-      {%- for link in config.navigation.auth.public | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.lms_url) -%}
+      {%- for link in config.navigation.auth.public | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.urls.lms) -%}
       <li>
         <a href="{{link.href}}"{%- if link.type === 'button' -%} class="button"{%- endif -%}>{{link.title}}</a>
       </li>

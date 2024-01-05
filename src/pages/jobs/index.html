@@ -18,9 +18,9 @@ meta:
         {%- set subheading = card.subheading -%}
         {%- set url = card.cta.url -%}
         {%- set label = card.cta.label -%}
-        {%- set src = config.cms_url + card.img.src -%}
+        {%- set src = config.urls.cms + card.img.src -%}
         {%- if card.img.srcSet -%}
-          {%- set srcSet = config.cms_url + card.img.srcSet -%}
+          {%- set srcSet = config.urls.cms + card.img.srcSet -%}
         {%- else -%}
           {%- set srcSet = src -%}
         {%- endif -%}
