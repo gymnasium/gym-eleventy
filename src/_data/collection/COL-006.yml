@@ -8,7 +8,7 @@ meta:
   unique: true
 
 courses:
-  module: panels/default
+  module: panels/course
   ids:
   - id: GYM-018
   - id: GYM-019
