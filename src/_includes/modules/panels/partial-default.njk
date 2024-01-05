@@ -1,14 +1,7 @@
 {%- set obj = collections.catalog[filteredId] -%}
+{%- set path = obj.id | get_path -%}
 {%- set img = obj.img -%}
 {%- set title = obj.title | strip_html -%}
-
-{%- set path = "/courses/course-v1:" + obj.id | replace('-','+') + "+0/about" -%}
-{%- set url = config.urls.mfe + path -%}
-{%- if (env.ELEVENTY_ENV == 'local' and config['ports']['course_about']) %}
-  {%- set url -%}
-    {{ config.urls.mfe }}:{{ config['ports']['course_about'] }}{{ path }}
-  {%- endset -%}
-{% endif -%}
 
 {%- if obj.subtitle -%}
   {%- set subtitle = obj.subtitle | strip_html -%}
@@ -38,6 +31,10 @@
 
 {# TODO: standardize image locations for ease of development #}
 {%- set src = config.urls.cms + img -%}
+{%- if type === 'webinar' -%}
+  {%- set src = config.urls.cms + '/img/webinars/' +  slug + '.jpg' -%}
+{%- endif -%}
+
 {%- set srcSet = src -%}
 
 <section id="{{ shortId | lower }}">
@@ -52,9 +49,11 @@
     {%- if description -%}
       <p>{{ description }}</p>
     {%- endif -%}
-    <div class="cta">
-      <a class="button" href="{{ url }}">View Course</a>
-    </div>
+    {%- if module.cta -%}
+      <div class="cta">
+        <a class="{{ module.cta.type }}" href="{{ path }}{{ slug }}">{{ module.cta.label }}</a>
+      </div>
+    {%- endif -%}
     {%- if (obj.skills) -%}
       <div class="skills">
         <h3>Skills Covered</h3>

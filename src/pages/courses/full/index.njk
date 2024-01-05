@@ -20,13 +20,7 @@ intro:
 </header>
 
 <h2>Full Courses</h2>
-<ul>
 {% for course in collections.live_courses_full %}
-  <li>{{ course.id }} | 
-    <a href="/courses/{{ course.title | slugify }}">
-      {{ course.title }}
-      <img style="max-width: 5rem;" src="{{config.urls.cms}}{{course.img}}" alt="Image for {{course.title}}">
-    </a>
-  </li>
+  {%- set module = course -%}
+  {%- include 'modules/panels/course.njk' -%}
 {% endfor %}
-</ul>
