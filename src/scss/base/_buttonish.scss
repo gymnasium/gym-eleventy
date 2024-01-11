@@ -25,7 +25,7 @@
     text-decoration: none;
   }
 
-  &.color-secondary {
+  &.secondary {
     background-color: var(--secondary);
     border-color: (var(--secondary));
 
@@ -36,7 +36,7 @@
     // }
   }
 
-  &.color-neutral {
+  &.mono {
     background-color: var(--mono-500);
     border-color: (var(--mono-500));
 
