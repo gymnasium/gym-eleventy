@@ -155,3 +155,10 @@ colors:
 css:
   lms: /css/theme.css
   mfe: /css/mfe.css
+messages:
+  mfe:
+    authn:
+      welcome: "<p>This is an example of a welcome message on the registration page.</p>"
+      
+  theme:
+    custom: "<p>This is an example of a custom message for anywhere in the theme.</p>"
