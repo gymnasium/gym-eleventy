@@ -15,7 +15,7 @@ nvm list
 
 If the list doesn't include the version referenced in `.nvmrc`, be sure to install it:
 ```
-nvm install {version referenced in `.nvmrc`}
+nvm install 18.17 # for example
 ```
 
 Switch to the referenced version:
