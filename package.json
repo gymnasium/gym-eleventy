@@ -16,6 +16,11 @@
     "@11ty/eleventy": "^2.0.1",
     "netlify-cli": "^17.15.3"
   },
+  "overrides": {
+    "@11ty/eleventy-img": {
+      "sharp": "^0.33.2"
+    }
+  },
   "dependencies": {
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-img": "^3.1.8",
