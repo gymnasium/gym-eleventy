@@ -13,7 +13,7 @@
     <ul class="auth" role="list">
       {%- for link in config.navigation.auth.public | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.urls.lms) -%}
       <li>
-        <a href="{{link.href}}"{%- if link.type === 'button' -%} class="button"{%- endif -%}>{{link.title}}</a>
+        <a href="{{link.href}}"{%- if link.type === 'button' -%} class="btn"{%- endif -%}>{{link.title}}</a>
       </li>
       {%- endfor -%}
     </ul>

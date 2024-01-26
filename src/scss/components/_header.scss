@@ -33,7 +33,7 @@
       display: block;
       margin: 0;
   
-      a:not(.button) {
+      a:not(.btn) {
         display: block;
         padding: 1rem;
         margin: auto;
@@ -97,7 +97,7 @@
 
       &.secondary {
 
-        a:not(.button) {
+        a:not(.btn) {
           padding: 0.25rem 0 0.25rem;
           margin: 0 1.5rem 0 0;
           border-bottom: 1px solid transparent;

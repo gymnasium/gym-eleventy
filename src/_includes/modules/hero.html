@@ -26,9 +26,9 @@
     </header>
     <div class="cta">
       {%- if hero.cta.url | is_external_link -%}
-        {%- external_link hero.cta.url, hero.cta.label, 'button' -%}
+        {%- external_link hero.cta.url, hero.cta.label, 'btn' -%}
       {%- else -%}
-        <a href="{{ hero.cta.url }}" class="button">{{ hero.cta.label }}</a>
+        <a href="{{ hero.cta.url }}" class="btn">{{ hero.cta.label }}</a>
       {%- endif -%}
     </div>
   </article>
