@@ -19,7 +19,7 @@ navigation:
       href: GYM_LMS_URL/login
     - title: Sign Up
       href: GYM_LMS_URL/register
-      type: button
+      class: btn
     private:
     - title: Dashboard
       href: GYM_LMS_URL/dashboard
