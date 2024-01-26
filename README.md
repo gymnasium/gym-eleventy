@@ -1,4 +1,4 @@
-# Gym 11ty
+# GYM 11ty
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/655fce6b-0f21-4083-8b06-2d87de788b79/deploy-status)](https://app.netlify.com/sites/gym-11ty/deploys)
 
@@ -15,7 +15,7 @@ nvm list
 
 If the list doesn't include the version referenced in `.nvmrc`, be sure to install it:
 ```
-nvm install 18.17 # for example
+nvm install 18.17
 ```
 
 Switch to the referenced version:
@@ -42,3 +42,8 @@ The server will be available at [http://localhost:4040](http://localhost:4040).
 npx netlify dev
 ```
 The server will be available at [http://localhost](http://localhost).
+
+
+### References
+- [Paragon Design System](https://paragon-openedx.netlify.app/)
+- [Eleventy](https://www.11ty.dev/)
