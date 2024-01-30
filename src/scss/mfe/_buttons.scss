@@ -3,7 +3,10 @@
 @use 'base/buttonish';
 
 .btn {
-  // Learning: "Launch Tour" button/link
+  
+  /*
+  - Learning: "Launch Tour" button/link
+  */
   &-link {
     background: none;
     text-decoration: underline;
@@ -17,7 +20,11 @@
     }
   }
 
-  // Learner Dashboard: For the "Refine" button
+  /*
+  - Learner Dashboard: For the "Refine" button
+  - Learning: "Expand All" button
+  */
+
   &-outline-primary {
     padding: rem-calc(9 16);
     color: var(--primary);
