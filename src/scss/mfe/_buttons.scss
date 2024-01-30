@@ -1,0 +1,28 @@
+@use 'base/functions' as *;
+
+@use 'base/buttonish';
+
+.btn {
+  // Learning: "Launch Tour" button/link
+  &-link {
+    background: none;
+    text-decoration: underline;
+    color: var(--mono, 100);
+    border: transparent;
+    border-radius: 0;
+
+    &:hover {
+      background-color: transparent;
+      color: var(--primary);
+    }
+  }
+
+  // Learner Dashboard: For the "Refine" button
+  &-outline-primary {
+    padding: rem-calc(9 16);
+    color: var(--primary);
+    border-color: (var(--primary));
+    background-color: transparent;
+    display: initial;
+  }
+}
