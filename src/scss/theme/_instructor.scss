@@ -1,3 +1,9 @@
+@use 'base/containers';
+
+.wrapper-course-material {
+  @extend .container;
+}
+
 .course-tabs .tab a {
   color: black !important;
 }
@@ -9,35 +15,14 @@
 .course-tabs .tab a:visited {
   font-weight: 400;
 }
-.course-tabs .tab a,
-.course-tabs .tab a:visited {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+
 .course-tabs .tab a,
 .course-tabs .tab a:visited {
   font-size: 14px;
   line-height: 20.72px;
 }
-.wrapper-course-material {
-  box-sizing: border-box;
-  border-bottom: none;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
-}
-.wrapper-course-material:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-@media (max-width: 991.98px) {
-  .wrapper-course-material .course-material {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-  }
-}
-.wrapper-course-material .course-tabs {
+
+.course-tabs {
   -webkit-border-top-left-radius: 4px;
   -moz-border-topleft-radius: 4px;
   border-top-left-radius: 4px;
@@ -46,17 +31,17 @@
   border-top-right-radius: 4px;
   padding: 15px 0 15px 0;
 }
-.wrapper-course-material .course-tabs:after {
+.course-tabs:after {
   content: "";
   display: table;
   clear: both;
 }
-.wrapper-course-material .course-tabs .tab {
+.course-tabs .tab {
   display: inline-block;
   list-style: none;
 }
-.wrapper-course-material .course-tabs .tab a,
-.wrapper-course-material .course-tabs .tab a:visited {
+.course-tabs .tab a,
+.course-tabs .tab a:visited {
   padding: 10px 15px 13px 15px;
   color: #313131;
   display: block;
@@ -64,32 +49,29 @@
   text-decoration: none;
   border-bottom: 4px hidden #0075b4;
 }
-.wrapper-course-material .course-tabs .tab a:hover,
-.wrapper-course-material .course-tabs .tab a:focus,
-.wrapper-course-material .course-tabs .tab a.active,
-.wrapper-course-material .course-tabs .tab a:visited:hover,
-.wrapper-course-material .course-tabs .tab a:visited:focus,
-.wrapper-course-material .course-tabs .tab a:visited.active {
+.course-tabs .tab a:hover,
+.course-tabs .tab a:focus,
+.course-tabs .tab a.active,
+.course-tabs .tab a:visited:hover,
+.course-tabs .tab a:visited:focus,
+.course-tabs .tab a:visited.active {
   color: #0075b4;
   border-bottom-style: solid;
   background-color: transparent;
 }
 
-.wrapper-course-material .course-material {
+.course-material {
   margin: 0 auto;
   max-width: 1920px;
   width: 100%;
 }
-body.view-in-course .wrapper-course-material {
-  padding: 0;
-}
-body.view-in-course .wrapper-course-material .course-material {
+
+.course-material {
   width: auto;
-}
-body.view-in-course .wrapper-course-material .course-material {
   padding: 0;
 }
-body.view-in-course .wrapper-course-material .course-material .course-tabs {
+
+.course-material .course-tabs {
   padding: 0;
 }
 
@@ -108,18 +90,6 @@ body.view-in-course .wrapper-course-material .course-material .course-tabs {
 }
 .fa-times-circle:before {
   content: "\f057";
-}
-
-.btn-link {
-  color: #0075b4;
-}
-.btn-link:hover,
-.btn-link:focus {
-  color: #0075b4;
-}
-.btn-link:hover,
-.btn-link:focus {
-  text-decoration: underline !important;
 }
 
 .msg {
@@ -146,34 +116,7 @@ body.view-in-course .wrapper-course-material .course-material .course-tabs {
 .btn-link {
   font-weight: 600;
 }
-.instructor-dashboard-content-2 .instructor-nav .nav-item,
-.instructor-dashboard-wrapper-2
-  section.idash-section#membership
-  .member-lists-management
-  .auth-list-container
-  .member-list-widget
-  .label,
-.instructor-dashboard-wrapper-2
-  section.idash-section#membership
-  .member-lists-management
-  .auth-list-container
-  .member-list-widget
-  .member-list
-  th,
-.instructor-dashboard-wrapper-2
-  section.idash-section#membership
-  .member-lists-management
-  .auth-list-container
-  .member-list-widget
-  .member-list
-  td,
-.wrap-instructor-info .instructor-info-action,
-.instructor-dashboard-wrapper-2
-  section.idash-section#membership
-  .enroll-option
-  .hint {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+
 .instructor-dashboard-content-2 .instructor-nav .nav-item {
   font-size: 16px;
   line-height: 23.68px;
