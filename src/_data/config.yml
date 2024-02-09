@@ -1,6 +1,6 @@
-meta: 
+meta:
   title: Gymnasium
-  subtitle: Free online courses on design and development
+  subtitle: Free online courses on design and development.
   author: Aquent Gymnasium
   description: Design a career you love with free online courses on design, development, accessibility, prototyping, UX, and career skills.
   og_img: /img/brand/og/gym-brand-og.png
@@ -35,100 +35,107 @@ navigation:
     - title: Collections
       href: GYM_ROOT_URL/collections/
   footer:
-  - title: What We Do
-    links:
-      - title: Courses
-        href: GYM_ROOT_URL/courses/
-      - title: Tutorials
-        href: GYM_ROOT_URL/tutorials/
-      - title: Jobs
-        href: GYM_ROOT_URL/jobs/
-      - title: Webinars
-        href: GYM_ROOT_URL/webinars/
-      - title: Articles
-        href: GYM_ROOT_URL/blog/
-      - title: About
-        href: GYM_ROOT_URL/about/
-  - title: Content Collections
-    links:
-      - title: Design Systems
-        href: GYM_ROOT_URL/design-systems/
-      - title: Development
-        href: GYM_ROOT_URL/development/
-      - title: UX Design
-        href: GYM_ROOT_URL/ux-design/
-      - title: Prototyping
-        href: GYM_ROOT_URL/prototyping/
-      - title: Accessibility
-        href: GYM_ROOT_URL/accessibility/
-      - title: Career Skills
-        href: GYM_ROOT_URL/career-skills/
-  - title: Resources
-    links:
-      - title: FAQ
-        href: GYM_ROOT_URL/faq/
-      - title: Support
-        href: GYM_ROOT_URL/support/
-      - title: Social Impact
-        href: GYM_ROOT_URL/social-impact/
-      - title: Privacy Policy
-        href: GYM_ROOT_URL/privacy-policy/
-      - title: Corporate Social Responsibility
-        href: https://aquent.com/csr-policy
-        target: _blank
-        rel: noopener
-      - title: Impressum
-        href: https://aquent.de/impressum
-        target: _blank
-        rel: noopener
-  - title: Social
-    links:
-      - title: Twitter
-        href: https://twitter.com/AquentGymnasium
-      - title: Facebook
-        href: https://www.facebook.com/aquentgymnasium/
-      - title: Instagram
-        href: https://www.instagram.com/aquent_gymnasium/
-      - title: YouTube
-        href: https://www.youtube.com/channel/UCsAAa0dL-ZJpq4gN1zEcXYw
-      - title: LinkedIn
-        href: https://www.linkedin.com/school/gymnasium/
-      - title: Medium
-        href: https://medium.com/gymnasium
-      - title: Github
-        href: https://github.com/gymnasium
-      - title: TikTok
-        href: https://tiktok.com/@aquentgymnasium
-  - title: Affiliated Sites
-    links:
-      - title: Aquent
-        href: https://aquent.com
-        target: _blank
-        rel: noopener
-      - title: Aquent Talent
-        href: https://aquenttalent.com
-        target: _blank
-        rel: noopener
-      - title: Aquent Studios
-        href: https://aquentstudios.com
-        target: _blank
-        rel: noopener
-      - title: Aquent RoboHead
-        href: https://www.robohead.net
-        target: _blank
-        rel: noopener
-      - title: Aquent Scout
-        href: https://aquentscout.com
-        target: _blank
-        rel: noopener
-  - title: Dev Links
-    links:
-      - title: Gymnasium (Production)
-        href: https://thegymnasium.com
-      - title: Gym Soy Data
-        href: GYM_DATA_URL
-      - title: Gym LMS
-        href: GYM_LMS_URL
+    tagline: Design a career you love with free online courses.
+    sections:
+      - label: What We Do
+        links:
+          - label: Courses
+            href: GYM_ROOT_URL/courses/
+          - label: Tutorials
+            href: GYM_ROOT_URL/tutorials/
+          - label: Jobs
+            href: GYM_ROOT_URL/jobs/
+          - label: Articles
+            href: GYM_ROOT_URL/blog/
+          - label: Livestreams
+            href: https://www.youtube.com/@AquentGymnasium/streams
+            target: _blank
+            rel: noopener
+          - label: Webinars
+            href: GYM_ROOT_URL/webinars/
+          - label: About
+            href: GYM_ROOT_URL/about/
+      - label: Content Collections
+        links:
+          - label: Design Systems
+            href: GYM_ROOT_URL/design-systems/
+          - label: Development
+            href: GYM_ROOT_URL/development/
+          - label: UX Design
+            href: GYM_ROOT_URL/ux-design/
+          - label: Prototyping
+            href: GYM_ROOT_URL/prototyping/
+          - label: Accessibility
+            href: GYM_ROOT_URL/accessibility/
+          - label: Career Skills
+            href: GYM_ROOT_URL/career-skills/
+      - label: Resources
+        links:
+          - label: FAQ
+            href: GYM_ROOT_URL/faq/
+          - label: Support
+            href: GYM_ROOT_URL/support/
+          - label: Social Impact
+            href: GYM_ROOT_URL/social-impact/
+          - label: Privacy Policy
+            href: GYM_ROOT_URL/privacy-policy/
+            rel: privacy-policy
+          - label: Corporate Social Responsibility
+            href: https://aquent.com/csr-policy
+            target: _blank
+            rel: noopener
+          - label: Impressum
+            href: https://aquent.de/impressum
+            target: _blank
+            rel: noopener
+      - label: Social
+        links:
+          - label: Twitter
+            href: https://twitter.com/AquentGymnasium
+          - label: Facebook
+            href: https://www.facebook.com/aquentgymnasium/
+          - label: Instagram
+            href: https://www.instagram.com/aquent_gymnasium/
+          - label: YouTube
+            href: https://www.youtube.com/channel/UCsAAa0dL-ZJpq4gN1zEcXYw
+          - label: LinkedIn
+            href: https://www.linkedin.com/school/gymnasium/
+          - label: Medium
+            href: https://medium.com/gymnasium
+          - label: Github
+            href: https://github.com/gymnasium
+          - label: TikTok
+            href: https://tiktok.com/@aquentgymnasium
+      - label: Affiliated Sites
+        links:
+          - label: Aquent
+            href: https://aquent.com
+            target: _blank
+            rel: noopener
+          - label: Aquent Talent
+            href: https://aquenttalent.com
+            target: _blank
+            rel: noopener
+          - label: Aquent Studios
+            href: https://aquentstudios.com
+            target: _blank
+            rel: noopener
+          - label: Aquent RoboHead
+            href: https://www.robohead.net
+            target: _blank
+            rel: noopener
+          - label: Aquent Scout
+            href: https://aquentscout.com
+            target: _blank
+            rel: noopener
+      - label: Dev Links
+        links:
+          - label: Gymnasium (Production)
+            href: https://thegymnasium.com
+          - label: Gym Soy Data
+            href: GYM_DATA_URL
+          - label: Gym LMS
+            href: GYM_LMS_URL
 feeds:
   blog: https://medium.com/feed/gymnasium
 logos:
@@ -159,6 +166,6 @@ messages:
   mfe:
     authn:
       welcome: "<p>This is an example of a welcome message on the registration page.</p>"
-      
+
   theme:
     custom: "<p>This is an example of a custom message for anywhere in the theme.</p>"
