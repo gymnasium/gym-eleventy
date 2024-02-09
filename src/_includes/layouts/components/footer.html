@@ -1,30 +1,37 @@
-<footer id="footer" class="site-footer">
+<footer class="site-footer" role="contentinfo">
   <div class="container">
-    <nav aria-label="Footer Navigation">
-    {%- for item in config.navigation.footer -%}
-      <div id="{{item.title | slugify}}" class="footer-section {{item.title | slugify}}">
-        <h4>{{item.title}}</h4>
+    <div class="main">
+      <div class="header">
+        <a href="/" aria-label="Gymnasium homepage">
+          <img alt="{{ config.meta.author }}" src="{{ config.urls.cms }}{{ config.logos.white.main.src }}" srcset="{{ config.urls.cms }}{{ config.logos.main.white.srcset }}">
+        </a>
+        <p>{{ config.navigation.footer.tagline }}</p>
+      </div>
+      {%- for item in config.navigation.footer.sections -%}
+      <nav id="{{ item.label | slugify }}" class="footer-section" aria-labelledby="{{ item.label | slugify }}-menu-label">
+        <h2 id="{{ item.label | slugify }}-menu-label">{{ item.label }}</h2>
         <ul>
           {%- set links =  item.links -%}
           {%- set links =  links | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.urls.lms) | replace("GYM_DATA_URL", config.urls.cms) | replace("GYM_MFE_URL", config.urls.mfe) -%}
           {%- for link in links -%}
-          <li><a href="{{link.href}}"{%- if link.target -%} target="{{link.target}}"{%- endif -%}{%- if link.rel -%} rel="{{link.rel}}"{%- endif -%}>{{link.title}}</a></li>
+          <li><a href="{{ link.href }}"{%- if link.target -%} target="{{ link.target }}"{%- endif -%}{%- if link.rel -%} rel="{{ link.rel }}"{%- endif -%}>{{ link.label }}</a></li>
           {%- endfor -%}
         </ul>
-      </div>
+      </nav>
     {%- endfor -%}
-    </nav>
-    <div class="open-edx">
-      <a title="Open edX" href="https://openedx.org" target="_blank" rel="noopener">
+    </div>
+    <aside class="stack" aria-label="Built with">
+      <a href="https://openedx.org" target="_blank" rel="noopener">
         {# TODO: add alt text to config? #}
-        <img class="open-edx-logo" alt="Powered by Open edX logo." src="{{ config.urls.cms }}{{ config.logos.openedx.src }}" decoding="async" fetchpriority="low" width="175" height="70">
+        <img class="open-edx-logo" alt="Powered by Open edX." src="{{ config.urls.cms }}{{ config.logos.openedx.src }}" decoding="async" fetchpriority="low" width="175" height="70">
       </a>
       {# TODO: add locally hosted file to this repo #}
       <a href="https://docs.tutor.overhang.io" target="_blank" rel="noopener">
-        <img src="{{ config.urls.lms }}/static/gym-theme/images/tutor-logo.png" alt="Runs on Tutor" width="125">
+        <img alt="Runs on Tutor." src="{{ config.urls.lms }}/static/gym-theme/images/tutor-logo.png" decoding="async" fetchpriority="low" width="125" height="24">
         </a>
-    </div>
-    <div class="copyright"><small>&copy; {% year %}  <a href="{{ config.urls.root }}">{{ config.meta.author }}</a></small></div>
-    
+    </aside>
+    <p class="copyright">
+      <small>© {% year %}  <a href="/" aria-label="Gymnasium homepage">{{ config.meta.author }}</a></small>
+    </p>
   </div><!-- .container -->
 </footer>
