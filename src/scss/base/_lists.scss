@@ -4,6 +4,16 @@
 
 @use 'breakpoints' as *;
 
+nav ul {
+  list-style: none linear-gradient(transparent, transparent);  // Fallback
+  list-style: ""; // Re-add list semantics
+  padding-left: 0;
+}
+
+nav ul:not([class]) {
+  margin-left: 0;
+}
+
 ul:not([class]),
 ol:not([class]) {
   margin-left: 1rem;
