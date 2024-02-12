@@ -9,6 +9,7 @@
 
   p {
     letter-spacing: 0.05ex;
+    margin-bottom: 0;
   }
 
   a {
@@ -17,8 +18,16 @@
 
   .main {
     display: grid;
-    grid-auto-flow: column;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 2rem 2.8rem;
+    justify-content: start;
+  }
+
+  @include breakpoint(large, min) {
+    .main {
+      grid-auto-flow: column;
+      grid-template-columns: auto;
+    }
   }
 
   .header {
@@ -73,24 +82,23 @@
   }
 
   .stack {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
 
     .openedx-logo {
       width: 11rem;
       margin: 0 -2rem;
     }
-
   }
 
   .copyright {
-    margin-top: 1rem;
-    margin-bottom: 0;
 
     a {
       color: var(--secondary);
     }
   }
 
-    // TODO: Remove style rule
+  // TODO: Remove style rule
   nav:last-child,
   aside a:last-child {
     display: none;
