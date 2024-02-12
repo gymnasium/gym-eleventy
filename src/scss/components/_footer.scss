@@ -18,20 +18,13 @@
 
   .main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     gap: 2rem 2.8rem;
     justify-content: start;
   }
 
-  @include breakpoint(large, min) {
-    .main {
-      grid-auto-flow: column;
-      grid-template-columns: auto;
-    }
-  }
-
   .header {
-     max-width: 14rem;
+     grid-column: 1 / -1;
 
     img {
       max-width: none;
@@ -40,6 +33,20 @@
     * + p {
       text-wrap: pretty;
       margin-top: 1.35rem;
+    }
+  }
+
+  @include breakpoint(large, min) {
+    .main {
+      grid-auto-flow: column;
+      grid-template-columns: auto;
+    }
+    .header {
+      grid-column: auto;
+      max-width: 14rem;
+    }
+    #resources {
+      max-width: 8rem;
     }
   }
 
@@ -75,10 +82,6 @@
         color: var(--secondary);
       }
     }
-  }
-
-  #resources {
-    max-width: 8rem;
   }
 
   .stack {
