@@ -36,8 +36,8 @@ navigation:
       href: GYM_ROOT_URL/collections/
   footer:
     tagline: Design a career you love with free online courses.
-    sections:
-      - label: What We Do
+    menus:
+      - title: What We Do
         links:
           - label: Courses
             href: GYM_ROOT_URL/courses/
@@ -55,7 +55,7 @@ navigation:
             href: GYM_ROOT_URL/webinars/
           - label: About
             href: GYM_ROOT_URL/about/
-      - label: Content Collections
+      - title: Content Collections
         links:
           - label: Design Systems
             href: GYM_ROOT_URL/design-systems/
@@ -69,7 +69,7 @@ navigation:
             href: GYM_ROOT_URL/accessibility/
           - label: Career Skills
             href: GYM_ROOT_URL/career-skills/
-      - label: Resources
+      - title: Resources
         links:
           - label: FAQ
             href: GYM_ROOT_URL/faq/
@@ -88,25 +88,37 @@ navigation:
             href: https://aquent.de/impressum
             target: _blank
             rel: noopener
-      - label: Social
+      - title: Social
         links:
-          - label: Twitter
-            href: https://twitter.com/AquentGymnasium
-          - label: Facebook
-            href: https://www.facebook.com/aquentgymnasium/
-          - label: Instagram
-            href: https://www.instagram.com/aquent_gymnasium/
-          - label: YouTube
-            href: https://www.youtube.com/channel/UCsAAa0dL-ZJpq4gN1zEcXYw
           - label: LinkedIn
             href: https://www.linkedin.com/school/gymnasium/
+            src: icon-linkedin.svg
+            alt: LinkedIn “in” icon.
+          - label: YouTube
+            href: https://www.youtube.com/AquentGymnasium
+            src: icon-youtube.svg
+            alt: YouTube play button icon.
           - label: Medium
             href: https://medium.com/gymnasium
-          - label: Github
+            src: icon-medium.svg
+            alt: Medium ellipsis (dot, oval, thin oval) icon.
+          - label: Threads
+            href: https://www.threads.net/@aquent_gymnasium
+            src: icon-threads.svg
+            alt: Threads ampersand-esque icon.
+          - label: Instagram
+            href: https://www.instagram.com/aquent_gymnasium/
+            src: icon-instagram.svg
+            alt: Instagram camera icon.
+          - label: Facebook
+            href: https://www.facebook.com/aquentgymnasium/
+            src: icon-facebook.svg
+            alt: Facebook “f” icon.
+          - label: GitHub
             href: https://github.com/gymnasium
-          - label: TikTok
-            href: https://tiktok.com/@aquentgymnasium
-      - label: Affiliated Sites
+            src: icon-github.svg
+            alt: GitHub Octocat silhouette icon.
+      - title: Affiliated Sites
         links:
           - label: Aquent
             href: https://aquent.com
@@ -128,7 +140,7 @@ navigation:
             href: https://aquentscout.com
             target: _blank
             rel: noopener
-      - label: Dev Links
+      - title: Dev Links
         links:
           - label: Gymnasium (Production)
             href: https://thegymnasium.com
@@ -136,6 +148,7 @@ navigation:
             href: GYM_DATA_URL
           - label: Gym LMS
             href: GYM_LMS_URL
+    social_icons_path: /img/social/icons/svg/
 feeds:
   blog: https://medium.com/feed/gymnasium
 logos:
@@ -148,8 +161,10 @@ logos:
       srcset: /img/brand/svg/gymnasium-logo-black.svg
   openedx:
     src: /img/brand/png/edx-openedx-logo-tag-dark.png
+    alt: Powered by Open edX.
   tutor:
-    src:
+    src: /static/gym-theme/images/tutor-logo.png
+    alt: Runs on Tutor.
 colors:
   primary: "#0077c8"
   secondary: "#ff5f14"
