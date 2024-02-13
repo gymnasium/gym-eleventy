@@ -58,7 +58,7 @@
 
   {%- if item.speaker[0] -%}
     <section>
-      <img src="{{ config.urls.cms }}/img/webinar-bio-headshots/{{ bios[item.speaker[0]]['img'] }}" alt="Image of {{ bios[item.speaker[0]]['name'] }}">
+      <img src="{{ config.urls.data }}/img/webinar-bio-headshots/{{ bios[item.speaker[0]]['img'] }}" alt="Image of {{ bios[item.speaker[0]]['name'] }}">
       <h2>{{ bios[item.speaker[0]]['name'] }}</h2>
       <p>{{ bios[item.speaker[0]]['description'] | safe }}</p>
     </section>
@@ -66,7 +66,7 @@
 
   {%- if item.speaker[1] -%}
     <section>
-      <img src="{{ config.urls.cms }}/img/webinar-bio-headshots/{{ bios[item.speaker[1]]['img'] }}" alt="Image of {{ bios[item.speaker[1]]['name'] }}">
+      <img src="{{ config.urls.data }}/img/webinar-bio-headshots/{{ bios[item.speaker[1]]['img'] }}" alt="Image of {{ bios[item.speaker[1]]['name'] }}">
       <h2>{{ bios[item.speaker[1]]['name'] }}</h2>
       <p>{{ bios[item.speaker[1]]['description'] | safe }}</p>
     </section>
@@ -77,7 +77,7 @@
   </header>
 
   <section>
-    <img src="{{ config.urls.cms }}/img/webinar-bio-headshots/{{ bios[item.host]['img'] }}" alt="Image of {{ bios[item.host]['name'] }}">
+    <img src="{{ config.urls.data }}/img/webinar-bio-headshots/{{ bios[item.host]['img'] }}" alt="Image of {{ bios[item.host]['name'] }}">
     <h2>{{ bios[item.host]['name'] }}</h2>
     <p>{{ bios[item.host]['description'] }}</p>
   </section>

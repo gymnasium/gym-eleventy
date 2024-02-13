@@ -1,7 +1,7 @@
 module.exports = {
   urls: {
     root: process.env.ROOT_URL || 'https://gym.soy',
-    cms: process.env.CMS_URL || 'https://data.gym.soy',
+    data: process.env.DATA_URL || 'https://data.gym.soy',
     lms: process.env.LMS_URL || 'https://learn.gym.soy',
     mfe: process.env.MFE_URL || 'https://apps.learn.gym.soy',
   },

@@ -7,8 +7,8 @@
     <div class="image">
       {%- macro picture() -%}
         <picture decoding="async" fetchpriority="high">
-          <source srcset="{{ config.urls.cms }}/home/img/heros/articles/{{ hero.slug }}/{{ hero.slug }}-768w.jpg" width="768" height="714" media="(min-width: 1200px)">
-          <img alt="{{ hero.img.description }}" src="{{ config.urls.cms }}/home/img/heros/articles/{{ hero.slug }}/{{ hero.slug }}-1280w.jpg" width="1280" height="720">
+          <source srcset="{{ config.urls.data }}/home/img/heros/articles/{{ hero.slug }}/{{ hero.slug }}-768w.jpg" width="768" height="714" media="(min-width: 1200px)">
+          <img alt="{{ hero.img.description }}" src="{{ config.urls.data }}/home/img/heros/articles/{{ hero.slug }}/{{ hero.slug }}-1280w.jpg" width="1280" height="720">
         </picture>
       {%- endmacro -%}
       {%- if hero.cta.url | is_external_link -%}
