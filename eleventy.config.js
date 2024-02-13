@@ -157,7 +157,7 @@ module.exports = function (eleventyConfig) {
     watch: [],
 
     // Show local network IP addresses for device testing
-    showAllHosts: false,
+    showAllHosts: true,
 
     // Use a local key/certificate to opt-in to local HTTP/2 with https
     https: {
