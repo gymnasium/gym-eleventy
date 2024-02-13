@@ -11,18 +11,15 @@
       <nav id="{{ item.title | slugify }}" aria-labelledby="{{ item.title | slugify }}-menu-label">
         <h2 id="{{ item.title | slugify }}-menu-label">{{ item.title }}</h2>
         <ul>
-          {%- set links =  item.links -%}
-          {%- set links =  links | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.urls.lms) | replace("GYM_DATA_URL", config.urls.data) | replace("GYM_MFE_URL", config.urls.mfe) -%}
+          {%- set links =  item.links | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.urls.lms) | replace("GYM_DATA_URL", config.urls.data) | replace("GYM_MFE_URL", config.urls.mfe) -%}
           {%- for link in links -%}
           <li>
             <a href="{{ link.href }}"
               {%- if link.target -%} target="{{ link.target }}"{%- endif -%}
               {%- if link.rel -%} rel="{{ link.rel }}"{%- endif -%}>
               {%- if link.src -%}
-                {%- set img_base_path = item.img.base_path | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.urls.lms) | replace("GYM_DATA_URL", config.urls.data) | replace("GYM_MFE_URL", config.urls.mfe) -%}
-
+              {%- set img_base_path = item.img.base_path | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.urls.lms) | replace("GYM_DATA_URL", config.urls.data) | replace("GYM_MFE_URL", config.urls.mfe) -%}
                 <img alt="{{ link.alt }}" src="{{ img_base_path }}{{ link.src }}" srcset="{{ img_base_path }}{{ link.srcset }}" decoding="{{ item.img.decoding }}" fetchpriority="{{ item.img.fetchpriority }}" width="{{ item.img.width }}" height="{{ item.img.height }}">
-
               {%- endif -%}
               {{ link.label }}
             </a>
