@@ -8,9 +8,10 @@
   "os": ["darwin", "linux"],
   "main": "index.js",
   "scripts": {
-    "dev": "npm run start",
-    "start": "ELEVENTY_ENV=local npx @11ty/eleventy --serve",
-    "build": "ELEVENTY_ENV=production npx @11ty/eleventy",
+    "dev": "NODE_ENV=development ELEVENTY_ENV=development npx @11ty/eleventy --serve",
+    "local": "NODE_ENV=local ELEVENTY_ENV=local npx netlify dev",
+    "start": "npx @11ty/eleventy --serve",
+    "build": "NODE_ENV=production ELEVENTY_ENV=production npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -5,7 +5,7 @@ const filters = require('./11ty.config/filters.js');
 const shortcodes = require('./11ty.config/shortcodes.js');
 const pluginImages = require('./11ty.config/images.js');
 const yaml = require('js-yaml');
-require('dotenv').config();
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 
 function filter(arr, criteria) {
   return arr.filter(function (obj) {

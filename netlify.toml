@@ -38,5 +38,5 @@ package = "netlify-plugin-cache"
 
 
 [dev]
-  port=80
+  port=8888
   targetPort=4040
