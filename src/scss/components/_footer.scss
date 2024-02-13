@@ -100,4 +100,9 @@
       color: var(--secondary);
     }
   }
+
+  // TODO: Remove style rule
+  aside a:last-child {
+    display: none;
+  }
 }
