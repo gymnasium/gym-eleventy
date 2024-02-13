@@ -100,10 +100,4 @@
       color: var(--secondary);
     }
   }
-
-  // TODO: Remove style rule
-  nav:last-child,
-  aside a:last-child {
-    display: none;
-  }
 }
