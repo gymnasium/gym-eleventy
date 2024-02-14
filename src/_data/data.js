@@ -3,18 +3,18 @@ const Parser = require('rss-parser');
 let parser = new Parser();
 
 const ENV = process.env.ELEVENTY_ENV;
-const CMS_URL = process.env.CMS_URL || 'https://data.gym.soy';
+const DATA_URL = process.env.DATA_URL || 'https://data.gym.soy';
 
 module.exports = async function() {
 
   try {
 
-    let complete = await EleventyFetch(`${CMS_URL}/feeds/complete.json`, {
+    let complete = await EleventyFetch(`${DATA_URL}/feeds/complete.json`, {
       duration: ENV === 'local' ? 0 : '1m',
       type: "json"
     });
 
-    let pages = await EleventyFetch(`${CMS_URL}/feeds/generated-pages.json`, {
+    let pages = await EleventyFetch(`${DATA_URL}/feeds/generated-pages.json`, {
       duration: ENV === 'local' ? 0 : '1m',
       type: "json"
     });
