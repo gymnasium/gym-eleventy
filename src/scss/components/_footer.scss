@@ -18,7 +18,7 @@
 
   .main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(13rem, auto));
     gap: 2rem 2.8rem;
     justify-content: start;
   }
@@ -39,11 +39,7 @@
   @include breakpoint(large, min) {
     .main {
       grid-auto-flow: column;
-      grid-template-columns: auto;
-    }
-    .header {
-      grid-column: auto;
-      max-width: 14rem;
+      grid-template-columns: 1fr;
     }
     #resources {
       max-width: 8rem;
