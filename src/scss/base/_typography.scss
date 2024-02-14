@@ -5,11 +5,11 @@
 
 body {
   font-family: var(--font-family-default);
-  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  // text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
   text-rendering: optimizeLegibility;
   font-synthesis: none;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   // TODO: although using these smooths stuff out, it makes the rendering different from our current Gymnasium site.
   // -moz-osx-font-smoothing: grayscale;

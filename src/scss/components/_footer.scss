@@ -4,17 +4,105 @@
 .site-footer {
   background-color: var(--mono-900);
   color: var(--mono-100);
-  padding: 1rem 0;
+  padding: 2.6rem 0;
+  border-top: 0.625rem solid var(--secondary);
 
-  nav {
-    a {
-      font-family: var(--font-family-custom);
+  p {
+    letter-spacing: 0.05ex;
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 2rem 2.8rem;
+    justify-content: start;
+  }
+
+  .header {
+     grid-column: 1 / -1;
+
+    img {
+      max-width: none;
+    }
+
+    * + p {
+      text-wrap: pretty;
+      margin-top: 1.35rem;
     }
   }
 
-  h4 {
-    font-family: var(--font-family-custom);
-    text-transform: uppercase;
-    font-size: 1rem;
+  @include breakpoint(large, min) {
+    .main {
+      grid-auto-flow: column;
+      grid-template-columns: auto;
+    }
+    .header {
+      grid-column: auto;
+      max-width: 14rem;
+    }
+    #resources {
+      max-width: 8rem;
+    }
+  }
+
+  nav {
+
+    h2 {
+      font-family: var(--font-family-custom);
+      font-size: 1rem;
+      line-height: 1.35;
+      text-transform: uppercase;
+      letter-spacing: 0.2ex;
+      margin-top: 0.5rem;
+    }
+    li {
+      font-size: 1.05rem;
+      letter-spacing: 0.1ex;
+
+      &:not(first-child) {
+        margin-top: 0.6rem;
+      }
+
+      img {
+        width: 1.25rem;
+        vertical-align: -0.225rem;
+        margin-right: 0.5rem;
+      }
+    }
+    a {
+      font-family: var(--font-family-custom);
+
+      &:hover,
+      &:focus {
+        color: var(--secondary);
+      }
+    }
+  }
+
+  .stack {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+
+    .openedx-logo {
+      width: 11rem;
+      margin: 0 -2rem;
+    }
+  }
+
+  .copyright {
+
+    a {
+      color: var(--secondary);
+    }
+  }
+
+  // TODO: Remove style rule
+  aside a[href*="tutor"] {
+    display: none;
   }
 }

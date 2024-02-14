@@ -37,7 +37,7 @@
   <header id="{{ item.id }}" class="page-header {{ item.id }}">
     <h1>{{ item.title }}</h1>
     <h4>{{ item.id }}</h4>
-    <img src="{{config.urls.cms}}{{item.img}}" alt="Course image for {{item.title}}">
+    <img src="{{config.urls.data}}{{item.img}}" alt="Course image for {{item.title}}">
   </header>
 
   {# TODO: sort out the retired message business #}
@@ -135,7 +135,7 @@
 
 <aside>
   <h2>Meet the Instructor</h2>
-  <img src="{{ config.urls.cms }}/img/webinar-bio-headshots/{{ bios[item.instructor].img }}" alt="Image of {{ bios[item.instructor].name }}">
+  <img src="{{ config.urls.data }}/img/webinar-bio-headshots/{{ bios[item.instructor].img }}" alt="Image of {{ bios[item.instructor].name }}">
   <h3>{{ bios[item.instructor].name }}</h3>
   <p>{{ bios[item.instructor].description | safe }}</p>
 
