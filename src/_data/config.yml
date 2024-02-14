@@ -3,6 +3,7 @@ meta:
   subtitle: Free online courses on design and development.
   author: Aquent Gymnasium
   description: Design a career you love with free online courses on design, development, accessibility, prototyping, UX, and career skills.
+  short_description: Design a career you love with free online courses.
   og_img: /img/brand/og/gym-brand-og.png
   twitter_handle: "@AquentGymnasium"
 header:
@@ -36,7 +37,6 @@ header:
       - label: Collections
         href: GYM_ROOT_URL/collections/
 footer:
-  tagline: Design a career you love with free online courses.
   nav:
     - title: What We Do
       links:

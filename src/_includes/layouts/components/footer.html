@@ -5,7 +5,7 @@
         <a href="/" aria-label="{{ config.meta.title }} homepage">
           <img alt="{{ config.meta.author }}" src="{{ config.urls.data }}{{ config.logos.white.main.src }}" srcset="{{ config.urls.data }}{{ config.logos.main.white.srcset }}" decoding="async" fetchpriority="low" width="208" height="24">
         </a>
-        <p>{{ config.footer.tagline }}</p>
+        <p>{{ config.meta.short_description }}</p>
       </div>
       {%- for item in config.footer.nav -%}
       <nav id="{{ item.title | slugify }}" aria-labelledby="{{ item.title | slugify }}-menu-label">
