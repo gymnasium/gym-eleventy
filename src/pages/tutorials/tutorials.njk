@@ -84,9 +84,13 @@
         <h3>Related Content</h3>
       </header>
       <ul>
-        {%- for file in item.related_content -%}
+        {%- for link in item.related_content -%}
+          {%- set attr -%} target="_blank" rel="noopener"{% endset -%}
+          {%- if not 'http' in link.url -%}
+            {%- set attr = "" -%}
+          {%- endif -%}
           <li>
-            <a href="{{ file.url }}" target="_blank" rel="noopener">{{ file.label }}</a>
+            <a href="{{ link.url }}"{{ attr }}>{{ link.label }}</a>
           </li>
         {%- endfor -%}
       </ul>

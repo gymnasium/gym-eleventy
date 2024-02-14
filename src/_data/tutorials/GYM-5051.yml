@@ -31,5 +31,5 @@ related_content:
 - label: "Figma tutorial: Auto Layout navigation menu"
   url: "https://youtu.be/bh98SF7OjUk"
 - label: "Gymnasium: Working with Auto Layout in Figma"
-  url: "https://thegymnasium.com/courses/take5/working-with-auto-layout-in-figma"
+  url: "/tutorials/working-with-auto-layout-in-figma"
 skill_level: "Intermediate"
