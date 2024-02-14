@@ -33,7 +33,81 @@
 }
 ---
 
-<h1>{{ item.title }}</h1>
-<h4>{{ item.id }}</h4>
-<p>{{ item.description }}</p>
+{# TODO: remove later - this is just here for reference #}
+<span>{{ item.id }}</span>
+
+<p class="topic">{{ item.topic }}</p>
+<h1 class="title">{{ item.title }}</h1>
+<p class="instructor">With {{ bios[item.instructor].name }}
+  {# TODO: seems a bit redundant to have an additional bio field inside the tutorial data file. Ideally, all of that info would just be pulled from the instructor bios data files #}
+  {%- if item.instructor_bio -%}, {{ item.instructor_bio }}{%- endif -%}
+</p>
+<p class="description">{{ item.description }}</p>
+
+{# Note: this a custom shortcode that wraps the video in a div. Find it in
+./11ty.config/shortcodes.js #}
+
 {%- youtube item.video_id, item.title -%}
+
+<details class="resources" id="tutorial-resources" open="">
+  <summary aria-expanded="true/false" tabindex="0" role="button">Resources</summary>
+  {%- if item.project_files -%}
+    <div class="project-files">
+      <header>
+        <h3>Project Files</h3>
+        {%- if item.project_file_source -%}<p>on {{ item.project_file_source }}</p>{%- endif -%}
+      </header>
+      <ul>
+        {%- for file in item.project_files -%}
+          <li>
+            <a href="{{ file.url }}" target="_blank" rel="noopener">{{ file.label }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endif -%}
+
+  {%- if item.related_content -%}
+    <div class="related">
+      <header>
+        <h3>Related Content</h3>
+        {%- if item.project_file_source -%}<p>on {{ item.project_file_source }}</p>{%- endif -%}
+      </header>
+      <ul>
+        {%- for file in item.related_content -%}
+          <li>
+            <a href="{{ file.url }}" target="_blank" rel="noopener">{{ file.label }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  {%- endif -%}
+</details>
+
+{# TODO: figure out how to do the transcript in eleventy. We will probably need to handle it differently from how we do it in jekyll. #}
+{%- if item.transcript -%}
+<details class="resources" id="tutorial-transcript" open="">
+  <summary class="gym-summary-link" aria-expanded="true/false" tabindex="0" role="button">Transcript</summary>
+  <article class="transcript" id="{{ item.id }}-transcript">
+    <header class="visuallyhidden">
+      <h1>Designing Beautiful Focus States</h1>
+      <p>with Ethan Marcotte</p>
+    </header>
+  {{ item.transcript }}
+
+  </article>
+</details>
+{%- endif -%}
+
+{# TODO: probably don't need this here, but I put it here as a reference of how
+to accomplish this. #}
+<aside>
+  <h2>Meet the Instructor</h2>
+  <img src="{{ config.urls.data }}/img/webinar-bio-headshots/{{ bios[item.instructor].img }}" alt="Image of {{ bios[item.instructor].name }}" />
+
+  <p>{{ bios[item.instructor].description | safe }}</p>
+
+  {%- if bios[item.instructor].extended_description -%}
+    {{ bios[item.instructor].extended_description | safe }}
+  {%- endif -%}
+</aside>
