@@ -32,23 +32,34 @@
   },
 }
 ---
-
 {# TODO: remove later - this is just here for reference #}
 <span>{{ item.id }}</span>
 
+{# Set fallbacks for missing bio YAML #}
+{#- TODO: seems a bit redundant to have an additional bio fields inside the tutorial data file. Ideally, all of that info would just be pulled from the instructor bios data files. Let's discuss. -#}
+{%- set instructor = item.instructor -%}
+{%- if bios[instructor] -%}
+  {%- set instructor = bios[instructor].name -%}
+{%- endif -%}
+{%- set instructor_blurb = instructor -%}
+{%- if item.instructor_bio -%}
+  {%- set instructor_blurb -%}
+    with {{ instructor}}, {{ item.instructor_bio }}
+  {%- endset -%}
+{%- endif -%}
+
 <p class="topic">{{ item.topic }}</p>
 <h1 class="title">{{ item.title }}</h1>
-<p class="instructor">With {{ bios[item.instructor].name }}
-  {# TODO: seems a bit redundant to have an additional bio field inside the tutorial data file. Ideally, all of that info would just be pulled from the instructor bios data files #}
-  {%- if item.instructor_bio -%}, {{ item.instructor_bio }}{%- endif -%}
-</p>
+<p class="instructor">{{ instructor_blurb }}</p>
 <p class="description">{{ item.description }}</p>
 
 {# Note: this a custom shortcode that wraps the video in a div. Find it in
 ./11ty.config/shortcodes.js #}
+{%- if item.video_id -%}
+  {%- youtube item.video_id, item.title -%}
+{%- endif -%}
 
-{%- youtube item.video_id, item.title -%}
-
+{%- if item.project_files or item.related_content -%}
 <details class="resources" id="tutorial-resources" open="">
   <summary aria-expanded="true/false" tabindex="0" role="button">Resources</summary>
   {%- if item.project_files -%}
@@ -71,7 +82,6 @@
     <div class="related">
       <header>
         <h3>Related Content</h3>
-        {%- if item.project_file_source -%}<p>on {{ item.project_file_source }}</p>{%- endif -%}
       </header>
       <ul>
         {%- for file in item.related_content -%}
@@ -83,6 +93,7 @@
     </div>
   {%- endif -%}
 </details>
+{%- endif -%}
 
 {# TODO: figure out how to do the transcript in eleventy. We will probably need to handle it differently from how we do it in jekyll. #}
 {%- if item.transcript -%}
@@ -90,7 +101,7 @@
   <summary class="gym-summary-link" aria-expanded="true/false" tabindex="0" role="button">Transcript</summary>
   <article class="transcript" id="{{ item.id }}-transcript">
     <header class="visuallyhidden">
-      <h1>Designing Beautiful Focus States</h1>
+      <h1>{{ item.title }}</h1>
       <p>with Ethan Marcotte</p>
     </header>
   {{ item.transcript }}
@@ -101,8 +112,10 @@
 
 {# TODO: probably don't need this here, but I put it here as a reference of how
 to accomplish this. #}
+{%- if bios[item.instructor] -%}
 <aside>
   <h2>Meet the Instructor</h2>
+
   <img src="{{ config.urls.data }}/img/webinar-bio-headshots/{{ bios[item.instructor].img }}" alt="Image of {{ bios[item.instructor].name }}" />
 
   <p>{{ bios[item.instructor].description | safe }}</p>
@@ -111,3 +124,5 @@ to accomplish this. #}
     {{ bios[item.instructor].extended_description | safe }}
   {%- endif -%}
 </aside>
+{%- endif -%}
+
