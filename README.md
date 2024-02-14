@@ -31,13 +31,17 @@ npm install
 
 ### Getting Started
 Once installed, there are two ways to get this running, depending on your needs.
-1. Default: running without netlify-cli, in which case you'd just run:
+
+#### 1. Default
+Just run:
 ```
 npm run dev
 ```
 The server will be available at [http://localhost:4040](http://localhost:4040).
 
-2. Specialized (for running in parallel with Tutor): this approach uses netlify-cli, which has the advantage of serving up relevant CORS headers, redirects, etc. This useful for running locally in parallel with other applications (such as the Tutor distribution of Open edX).
+#### 2. Running in Parallel with Tutor
+
+This approach uses netlify-cli, which has the advantage of serving up relevant CORS headers, redirects, etc. This useful for running locally in parallel with other applications (such as the Tutor distribution of Open edX).
 ```
 npm run local
 ```
@@ -45,10 +49,15 @@ This command changes sets `NODE_ENV=local` and runs `npx netlify dev`. The serve
 
 Note: Depending on your system, prior to starting up Tutor, you may need to add `127.0.0.1 edly.io` to your `/etc/hosts` file. Once that's done, you should be able to access [http://edly.io:8888](http://edly.io:8888).
 
-#### Running in Parallel with Tutor
 This static site generates a JSON feed at `/feeds/config.json`, which is consumed by the various Open edX components - [the theme](https://github.com/gymnasium/gym-theme), the MFEs, and our [customized MFE frontend components](https://github.com/gymnasium/gym-frontend-components).
 
 ### References
-- [Paragon Design System](https://paragon-openedx.netlify.app/)
 - [Eleventy](https://www.11ty.dev/)
+
+#### Open EdX
+- [Paragon Design System](https://paragon-openedx.netlify.app/)
 - [Tutor](https://github.com/overhangio/tutor)
+
+#### Nunjucks
+- [Nunjucks Templating](https://mozilla.github.io/nunjucks/templating.html)
+- [Check for a string in an array – Liquid vs Nunjucks](https://bryanlrobinson.com/blog/using-nunjucks-if-expressions-to-create-an-active-navigation-state-in-11ty/)
