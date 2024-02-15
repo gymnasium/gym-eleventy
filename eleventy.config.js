@@ -1,10 +1,13 @@
 // docs: https://www.11ty.io/docs/config/
 const eleventySass = require('eleventy-sass');
 const pluginRev = require('eleventy-plugin-rev');
+const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const filters = require('./11ty.config/filters.js');
 const shortcodes = require('./11ty.config/shortcodes.js');
 const pluginImages = require('./11ty.config/images.js');
 const yaml = require('js-yaml');
+const markdownIt = require("markdown-it");
+
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 
 function filter(arr, criteria) {
@@ -22,6 +25,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     './public/': '/',
   });
+
+  let mdOpts = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+
+  eleventyConfig.setLibrary('md', markdownIt(mdOpts));
 
   // create a catalog collection combining courses, tutorials, webinars
   eleventyConfig.addCollection('catalog', (collection) => {
@@ -119,6 +130,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(shortcodes);
   eleventyConfig.addPlugin(pluginRev);
   eleventyConfig.addPlugin(pluginImages);
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));
   eleventyConfig.addDataExtension('yml', (contents) => yaml.load(contents));

@@ -1,3 +1,5 @@
+const fs = require("node:fs");
+
 var urlRegex = new RegExp('^(?:[a-z+]+:)?//', 'i');
 
 // Generic functions
@@ -33,6 +35,11 @@ module.exports = eleventyConfig => {
   });
 
   eleventyConfig.addFilter('env', key => process.env[key]);
+
+  // via @ https://github.com/11ty/eleventy/issues/3051#issuecomment-1722342440
+  eleventyConfig.addFilter('file_exists', function (filename) {
+    return fs.existsSync(filename);
+  });
 
   // helps get a full id (object.key) when provided with a short id (good for webinars)
   eleventyConfig.addFilter('get_key', (obj, id) => {
