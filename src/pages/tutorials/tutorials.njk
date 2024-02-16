@@ -60,7 +60,7 @@
 {%- endif -%}
 
 {%- if item.project_files or item.related_content -%}
-<details class="resources" id="tutorial-resources" open="">
+<details class="resources" id="tutorial-resources" open="open">
   <summary aria-expanded="true/false" tabindex="0" role="button">Resources</summary>
   {%- if item.project_files -%}
     <div class="project-files">
@@ -99,16 +99,18 @@
 </details>
 {%- endif -%}
 
-{# TODO: figure out how to do the transcript in eleventy. We will probably need to handle it differently from how we do it in jekyll. #}
-{%- if item.transcript -%}
-<details class="resources" id="tutorial-transcript" open="">
+{# TODO: current markdown plugin doesn't support kramdown style features, like link attributes. #}
+{% set transcript = "./src/_includes/md/transcripts/" + item.id + ".md" %}
+{%- if transcript | file_exists -%}
+<details class="resources" id="tutorial-transcript">
   <summary class="gym-summary-link" aria-expanded="true/false" tabindex="0" role="button">Transcript</summary>
   <article class="transcript" id="{{ item.id }}-transcript">
     <header class="visuallyhidden">
       <h1>{{ item.title }}</h1>
-      <p>with Ethan Marcotte</p>
+      <p>{{ instructor_blurb }}</p>
     </header>
-  {{ item.transcript }}
+
+  {% renderFile transcript, "njk" %}
 
   </article>
 </details>
