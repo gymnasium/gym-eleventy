@@ -26,7 +26,7 @@ tutorials:
   heading: Tutorials
   description: Take 5 minutes to learn new career skills.
   cta:
-    url: /tutorials/
+    url: /courses/take5/
     label: View More Tutorials
     type: button
   prototyping-tutorials:

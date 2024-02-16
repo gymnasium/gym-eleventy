@@ -26,7 +26,7 @@ tutorials:
   heading: "UX Tutorials"
   description: Learn a new UX skill in 5 minutes.
   cta:
-    url: /tutorials/
+    url: /courses/take5/
     label: View More Tutorials
     type: button
   ux-tutorials:

@@ -1,6 +1,6 @@
 ---
 layout: layouts/main.njk
-permalink: /tutorials/
+permalink: /courses/take5/
 meta:
   title: Tutorials
   sitemapPriority: 0.7
@@ -8,14 +8,14 @@ meta:
 nav:
   secondary: courses
   parent: /courses/
-  secondaryParent: /tutorials/
+  secondaryParent: /courses/take5/
 ---
 <h1>Tutorials</h1>
 <p>This is the tutorials index, also pulling in from local YAML files.</p>
 <ul>
 {% for id, tutorial in tutorials %}
   <li>
-    <a href="/tutorials/{{ tutorial.title | slugify }}">{{ tutorial.id }} | {{ tutorial.title }}</a>
+    <a href="/courses/take5/{{ tutorial.title | slugify }}">{{ tutorial.id }} | {{ tutorial.title }}</a>
   </li>
 {% endfor %}
 </ul>

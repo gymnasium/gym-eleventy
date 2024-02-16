@@ -33,7 +33,7 @@ header:
       - label: Gym Shorts
         href: GYM_ROOT_URL/courses/short/
       - label: Take 5 Tutorials
-        href: GYM_ROOT_URL/tutorials/
+        href: GYM_ROOT_URL/courses/take5/
       - label: Collections
         href: GYM_ROOT_URL/collections/
 footer:
@@ -43,7 +43,7 @@ footer:
         - label: Courses
           href: GYM_ROOT_URL/courses/
         - label: Tutorials
-          href: GYM_ROOT_URL/tutorials/
+          href: GYM_ROOT_URL/courses/take5/
         - label: Jobs
           href: GYM_ROOT_URL/jobs/
         - label: Articles

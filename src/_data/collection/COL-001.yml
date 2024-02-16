@@ -37,7 +37,7 @@ tutorials:
   heading: "Development Tutorials"
   description: Learn a development skill in 5 minutes.
   cta:
-    url: /tutorials/
+    url: /courses/take5/
     label: View More Tutorials
     type: button
   dev-tutorials:
