@@ -31,7 +31,7 @@ header:
       - label: Full Courses
         href: GYM_ROOT_URL/courses/full/
       - label: Gym Shorts
-        href: GYM_ROOT_URL/courses/short/
+        href: GYM_ROOT_URL/courses/gym-shorts/
       - label: Take 5 Tutorials
         href: GYM_ROOT_URL/courses/take5/
       - label: Collections
