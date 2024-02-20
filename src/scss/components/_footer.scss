@@ -88,6 +88,11 @@
       width: 11rem;
       margin: 0 -2rem;
     }
+
+    .tutor-logo {
+      width: 8rem;
+      margin: 0 0 0 1rem;
+    }
   }
 
   .copyright {
@@ -95,10 +100,5 @@
     a {
       color: var(--secondary);
     }
-  }
-
-  // TODO: Remove style rule
-  aside a[href*="tutor"] {
-    display: none;
   }
 }
