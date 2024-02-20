@@ -34,7 +34,7 @@
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-img": "^3.1.8",
     "dotenv": "^16.3.1",
-    "eleventy-plugin-clean": "github:rediris/eleventy-plugin-clean#support-eleventy-2.0.1",
+    "eleventy-plugin-clean": "github:kentaroi/eleventy-plugin-clean#v1.2.6",
     "eleventy-plugin-rev": "^1.1.1",
     "eleventy-sass": "^2.2.1",
     "js-yaml": "^4.1.0",
