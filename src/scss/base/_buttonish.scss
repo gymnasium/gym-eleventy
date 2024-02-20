@@ -4,16 +4,18 @@
 @use 'base/functions' as *;
 
 .btn {
-  display: inline-flex;
-  padding: rem-calc(16.8);
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
-  text-align: center;
-  color: var(--mono-100);
   background-color: var(--primary);
   border: 3px solid var(--primary);
   border-radius: 3px;
+  color: var(--mono-100);
+  display: inline-flex;
+  font-family: var(--font-family-custom);
+  font-size: rem-calc(20);
+  font-weight: bold;
+  line-height: 1;
+  padding: rem-calc(16.8);
+  text-align: center;
+  text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
   &:hover,

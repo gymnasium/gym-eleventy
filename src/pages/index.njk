@@ -7,12 +7,14 @@ eleventyComputed:
 meta:
   sitemapPriority: 1.0
   sitemapChangeFreq: weekly
+  bodyClass: home
 ---
 {%- set hero = heros[featured['home']['hero']] -%}
-{%- include 'modules/hero.html' -%}
+{%- set heroClass = "home-hero bg-mono-800 full-bleed" -%}
+{%- include 'modules/hero.njk' -%}
 
-<section>
-  <h2>How Gymnasium Works</h2>
+<section class="how-gymnasium-works">
+  <h1>How Gymnasium Works</h1>
   <ul>
     <li>
       <h2>Free Online Courses</h2>
@@ -36,8 +38,8 @@ meta:
     </li>
   </ul>
 </section>
-<section>
-  <h2>Featured Courses</h2>
+<section class="home-featured-courses">
+  <h1>Featured Courses</h1>
   <ul>
     {%- for item in featured['home']['courses'] -%}
       {%- set id = item | upper -%}
@@ -67,16 +69,16 @@ meta:
   <a class="btn" href="/courses/">View all Courses</a>
 </section>
 
-<section>
+<section class="home-find-work bg-mono-700 full-bleed">
   <header>
-    <h2>Find Work</h2>
+    <h1>Find Work</h1>
   </header>
   {%- include 'modules/jobs.njk' -%}
 </section>
 
-<section>
+<section class="as-seen-in">
   <header>
-    <h2>As Seen In</h2>
+    <h1>As Seen In</h1>
   </header>
   <ul>
     {%- for i in range(1,6) -%}

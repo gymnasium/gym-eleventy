@@ -1,11 +1,17 @@
 ---
 ---
+{# Define a unique class per page automatically (meta.bodyClass overrides this) #}
+{%- if meta.bodyClass -%}
+  {%- set bodyClass = meta.bodyClass -%}
+{%- else -%}
+  {%- set bodyClass = page.url.slice(1, -1).split('/') | join('-') -%}
+{%- endif -%}
 <!doctype html>
 <html lang="en">
 <head>
 {% include './components/head.html' %}
 </head>
-<body>
+<body class="{{bodyClass}}">
 {% include './components/header.html' %}
 {{ content | safe }}
 {% include './components/footer.html' %}
