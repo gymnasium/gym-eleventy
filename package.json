@@ -41,5 +41,8 @@
     "netlify-cli": "^17.15.3",
     "netlify-plugin-cache": "^1.0.3",
     "rss-parser": "^3.13.0"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.33.2"
   }
 }
