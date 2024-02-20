@@ -168,7 +168,7 @@ logos:
     src: /img/brand/png/edx-openedx-logo-tag-dark.png
     alt: Powered by Open edX.
   tutor:
-    src: /static/gym-theme/images/tutor-logo.png
+    src: /img/brand/png/tutor-logo.png
     alt: Runs on Tutor.
 colors:
   primary: "#0077c8"
