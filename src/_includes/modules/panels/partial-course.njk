@@ -4,7 +4,7 @@
 
 {%- set path = "/courses/course-v1:" + obj.id | replace('-','+') + "+0/about" -%}
 {%- set url = config.urls.mfe + path -%}
-{%- if (env.ELEVENTY_ENV == 'local' and config['ports']['course_about']) %}
+{%- if (env.ELEVENTY_ENV == ('local' or 'dev') and config['ports']['course_about']) %}
   {%- set url -%}
     {{ config.urls.mfe }}:{{ config['ports']['course_about'] }}{{ path }}
   {%- endset -%}

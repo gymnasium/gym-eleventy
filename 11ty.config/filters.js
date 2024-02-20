@@ -142,7 +142,7 @@ module.exports = eleventyConfig => {
   });
 
   // Modified, original @ https://willvincent.com/2022/07/27/redirects-with-11ty-and-netlify/
-  eleventyConfig.addFilter('redirect_course', (id, force) => {
+  eleventyConfig.addFilter('course_path', (id, dest_format) => {
     idString = id.split('-')[1];
     let idNum = Number(idString);
     let path;
@@ -154,9 +154,13 @@ module.exports = eleventyConfig => {
       courseType = 'new';
     }
 
-    if (courseType === 'new' || force === true) {
-      if (force === true) {
-        path = `/learning/course/course-v1:GYM+${idString}+0/`;
+    if (courseType === 'new' || !!dest_format) {
+      if (!!dest_format) {
+        if (dest_format === 'about') {
+          path = `/courses/course-v1:GYM+${idString}+0/about`;
+        } else if (dest_format === 'learning') {
+          path = `/learning/course/course-v1:GYM+${idString}+0/home`;
+        }
       } else {
         path = `/courses/course-v1:GYM+${idString}+0/`;
       }
