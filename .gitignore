@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # Eleventy Edge Build Data files
 netlify/edge-functions/_generated
+
+# Eleventy clean plugin
+.plugin-clean

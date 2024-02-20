@@ -5,6 +5,7 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy");
 const filters = require('./11ty.config/filters.js');
 const shortcodes = require('./11ty.config/shortcodes.js');
 const pluginImages = require('./11ty.config/images.js');
+const clean = require("eleventy-plugin-clean");
 const yaml = require('js-yaml');
 const markdownIt = require("markdown-it");
 
@@ -126,6 +127,7 @@ module.exports = function (eleventyConfig) {
     return col;
   });
 
+  eleventyConfig.addPlugin(clean);
   eleventyConfig.addPlugin(filters);
   eleventyConfig.addPlugin(shortcodes);
   eleventyConfig.addPlugin(pluginRev);
