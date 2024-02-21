@@ -92,43 +92,58 @@ footer:
     - title: Social
       img:
         base_path: GYM_DATA_URL/img/social/icons
-        decoding: async
-        fetchpriority: low
-        width: 20
-        height: 20
+        attr:
+          decoding: async
+          fetchpriority: low
+          width: 20
+          height: 20
       links:
         - label: LinkedIn
           href: https://www.linkedin.com/school/gymnasium/
+          target: _blank
+          rel: noopener
           src: /png/icon-linkedin-4x.png
           srcset: /svg/icon-linkedin.svg
           alt: LinkedIn “in” icon.
         - label: YouTube
           href: https://www.youtube.com/AquentGymnasium
+          target: _blank
+          rel: noopener
           src: /png/icon-youtube-4x.png
           srcset: /svg/icon-youtube.svg
           alt: YouTube play button icon.
         - label: Medium
           href: https://medium.com/gymnasium
+          target: _blank
+          rel: noopener
           src: /png/icon-medium-4x.png
           srcset: /svg/icon-medium.svg
           alt: Medium ellipsis (dot, oval, thin oval) icon.
         - label: Threads
           href: https://www.threads.net/@aquent_gymnasium
+          target: _blank
+          rel: noopener
           src: /png/icon-threads-4x.png
           srcset: /svg/icon-threads.svg
           alt: Threads ampersand-esque icon.
         - label: Instagram
           href: https://www.instagram.com/aquent_gymnasium/
+          target: _blank
+          rel: noopener
           src: /png/icon-instagram-4x.png
           srcset: /svg/icon-instagram.svg
           alt: Instagram camera icon.
         - label: Facebook
           href: https://www.facebook.com/aquentgymnasium/
+          target: _blank
+          rel: noopener
           src: /png/icon-facebook-4x.png
           srcset: /svg/icon-facebook.svg
           alt: Facebook “f” icon.
         - label: GitHub
           href: https://github.com/gymnasium
+          target: _blank
+          rel: noopener
           src: /png/icon-github-4x.png
           srcset: /svg/icon-github.svg
           alt: GitHub Octocat silhouette icon.
