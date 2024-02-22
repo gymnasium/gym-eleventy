@@ -1,0 +1,53 @@
+{# Footer Component
+This component is used to generate HTML fragments, which in turn are processed for URL replacement. See footer-processed.html and /pages/feeds/config.njk for more details.
+
+Please use the following strings instead of directly coding domain names:
+- GYM_ROOT_URL: the static site domain
+- GYM_LMS_URL: the LMS theme domain
+- GYM_MFE_URL: the LMS MFE domain
+- GYM_DATA_URL: the (temporary) data.gym.soy domain for serving up images etc
+#}
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="main">
+      <div class="header">
+        <a href="GYM_ROOT_URL" aria-label="{{ config.meta.title }} homepage">
+          <img alt="{{ config.meta.author }}" src="GYM_DATA_URL{{ config.logos.white.main.src }}" srcset="GYM_DATA_URL{{ config.logos.main.white.srcset }}" decoding="async" fetchpriority="low" width="208" height="24">
+        </a>
+        <p>{{ config.meta.short_description }}</p>
+      </div>
+      {%- for item in config.footer.nav -%}
+      <nav id="{{ item.title | slugify }}" aria-labelledby="{{ item.title | slugify }}-menu-label">
+        <h2 id="{{ item.title | slugify }}-menu-label">{{ item.title }}</h2>
+        <ul>
+          {%- set links =  item.links -%}
+          {%- for link in links -%}
+          <li>
+            <a href="{{ link.href }}"
+              {%- if link.target %} target="{{ link.target }}"{%- endif -%}
+              {%- if link.rel %} rel="{{ link.rel }}"{%- endif -%}>
+              {%- if link.src -%}
+                {%- set img_base_path = item.img.base_path -%}
+                <img alt="{{ link.alt }}" src="{{ img_base_path }}{{ link.src }}" srcset="{{ img_base_path }}{{ link.srcset }}" {% for key, val in item.img.attr %}{{key}}="{{ val }}"{%- endfor -%}>
+              {%- endif -%}
+              {{ link.label }}</a>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    {%- endfor -%}
+    </div>
+    {# TODO: consider writing the stack aside directly into the config for consistency #}
+    <aside class="stack" aria-label="Built with">
+      <a href="https://openedx.org" target="_blank" rel="noopener">
+        <img class="openedx-logo" alt="{{ config.logos.openedx.alt }}" src="GYM_DATA_URL{{ config.logos.openedx.src }}" decoding="async" fetchpriority="low" width="175" height="70">
+      </a>
+      <a href="https://docs.tutor.overhang.io" target="_blank" rel="noopener">
+        <img class="tutor-logo" alt="{{ config.logos.tutor.alt }}" src="GYM_DATA_URL{{ config.logos.tutor.src }}" decoding="async" fetchpriority="low" width="125" height="24">
+      </a>
+    </aside>
+    <p class="copyright">
+      <small>© {% year %} <a href="GYM_ROOT_URL" aria-label="{{ config.meta.title }} homepage">{{ config.meta.author }}</a></small>
+    </p>
+  </div><!-- .container -->
+</footer>
