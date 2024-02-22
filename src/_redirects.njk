@@ -3,22 +3,10 @@ permalink: /_redirects
 eleventyExcludeFromCollections: true
 ---
 {# modified, via @https://willvincent.com/2022/07/27/redirects-with-11ty-and-netlify/ #}
-{# Establish MFE destinations/ports #}
-{%- set mfe_url_course_about = config.urls.mfe -%}
-{%- set mfe_url_learning = config.urls.mfe -%}
-{%- if env.ELEVENTY_ENV == ('local' or 'dev') %}
-  {%- if config['ports']['course_about'] -%}
-    {%- set mfe_url_course_about -%}{{ mfe_url_course_about }}:{{ config['ports']['course_about'] }}{%- endset -%}
-  {%- endif -%}
-  {%- if config['ports']['learning'] -%}
-    {%- set mfe_url_learning -%}{{ mfe_url_learning }}:{{ config['ports']['learning'] }}{%- endset -%}
-  {%- endif -%}
-{%- endif -%}
-
 {%- for id, course in courses -%}
-{{ course.id | course_path }}about  {{ mfe_url_course_about }}{{ course.id | course_path('about') }}  301
-{{ course.id | course_path }}info  {{ mfe_url_learning }}{{ course.id | course_path('learning') }}  301
-{{ course.id | course_path }}courseware  {{ mfe_url_learning }}{{ course.id | course_path('learning') }}  301
+{{ course.id | course_endpoint }}about  {{ course.id | course_endpoint('course_about') }}  301
+{{ course.id | course_endpoint }}info  {{ course.id | course_endpoint('learning') }}  301
+{{ course.id | course_endpoint }}courseware  {{ course.id | course_endpoint('learning') }}  301
 {%- if not loop.last -%}
   {{ '\n' }}
 {%- endif -%}

@@ -12,9 +12,9 @@ courses:
   heading: Courses
   description: Learn career skills from industry experts at your own pace.
   cta:
-    url: /courses/
+    href: /courses/
     label: View More Courses
-    type: button
+    class: btn
   prototyping-courses:
     schema: true
     ids:
@@ -26,9 +26,9 @@ tutorials:
   heading: Tutorials
   description: Take 5 minutes to learn new career skills.
   cta:
-    url: /courses/take5/
+    href: /courses/take5/
     label: View More Tutorials
-    type: button
+    class: btn
   prototyping-tutorials:
     ids:
     - id: GYM-5052
@@ -49,102 +49,102 @@ articles:
     heading: "Portfolio Development"
     links:
     - label: "Top 5 Free Portfolio Sites for Creatives"
-      url: "https://aquenttalent.com/blog/top-5-free-portfolio-sites"
+      href: "https://aquenttalent.com/blog/top-5-free-portfolio-sites"
     - label: "Improving Your Portfolio is Easier Than You Think"
-      url: "https://medium.com/gymnasium/improving-your-portfolio-is-easier-than-you-think-b1430bbe1007"
+      href: "https://medium.com/gymnasium/improving-your-portfolio-is-easier-than-you-think-b1430bbe1007"
     - label: "BTW: Developers Need Portfolios Too"
-      url: "https://medium.com/gymnasium/btw-developers-need-portfolios-too-a7f00f70a307"
+      href: "https://medium.com/gymnasium/btw-developers-need-portfolios-too-a7f00f70a307"
 
   networking:
     heading: "Networking 101"
     links:
     - label: "8 Networking Techniques for Meeting People Face-to-Face"
-      url: "https://aquenttalent.com/blog/8-networking-techniques-for-meeting-people-face-to-face"
+      href: "https://aquenttalent.com/blog/8-networking-techniques-for-meeting-people-face-to-face"
     - label: "Are You Making the Most of LinkedIn to Build Your Personal Brand?"
-      url: "https://aquenttalent.com/blog/are-you-making-the-most-of-linkedin-to-build-your-personal-brand"
+      href: "https://aquenttalent.com/blog/are-you-making-the-most-of-linkedin-to-build-your-personal-brand"
     - label: "How to Create a Great LinkedIn Profile for Designers"
-      url: "https://aquenttalent.com/blog/how-to-create-a-great-designer-linkedin-profile"
+      href: "https://aquenttalent.com/blog/how-to-create-a-great-designer-linkedin-profile"
     - label: "LinkedIns & Outs: Get Noticed and Find Opportunities"
-      url: "https://aquenttalent.com/blog/linkedins-and-outs-get-noticed-and-find-opportunities"
+      href: "https://aquenttalent.com/blog/linkedins-and-outs-get-noticed-and-find-opportunities"
     - label: "The 5 Rules of Personal Branding and How to Use Them"
-      url: "https://aquenttalent.com/blog/linkedins-and-outs-get-noticed-and-find-opportunities"
+      href: "https://aquenttalent.com/blog/linkedins-and-outs-get-noticed-and-find-opportunities"
     - label: "It Pays to Build a Network of Recruiters Who See Your Value"
-      url: "https://aquenttalent.com/blog/it-pays-to-build-a-network-of-recruiters-who-see-your-value"
+      href: "https://aquenttalent.com/blog/it-pays-to-build-a-network-of-recruiters-who-see-your-value"
     - label: "How to Apply Online (and Actually Get a Job)"
-      url: "https://aquenttalent.com/blog/how-to-apply-online-and-actually-get-a-job"
+      href: "https://aquenttalent.com/blog/how-to-apply-online-and-actually-get-a-job"
 
   interview:
     heading: "Ace the Interview"
     links:
     - label: "How to Conduct an Interview Like a Boss"
-      url: "https://medium.com/gymnasium/how-to-conduct-an-interview-like-a-boss-7de5c9810c4c"
+      href: "https://medium.com/gymnasium/how-to-conduct-an-interview-like-a-boss-7de5c9810c4c"
     - label: "52 Favorite Interview Questions From Top Design Leaders"
-      url: "https://aquent.com/blog/52-favorite-interview-questions-from-top-design-leaders"
+      href: "https://aquent.com/blog/52-favorite-interview-questions-from-top-design-leaders"
     - label: "How to Win Your Next Video Interview"
-      url: "https://aquenttalent.com/blog/how-to-win-your-next-video-interview"
+      href: "https://aquenttalent.com/blog/how-to-win-your-next-video-interview"
     - label: "Interviewing? Better Have Answers to These 7 Questions"
-      url: "https://aquenttalent.com/blog/interviewing-better-have-answers-to-these-7-questions"
+      href: "https://aquenttalent.com/blog/interviewing-better-have-answers-to-these-7-questions"
     - label: "14 Best Interview Questions for Creatives"
-      url: "https://aquenttalent.com/blog/14-best-interview-questions-for-creatives"
+      href: "https://aquenttalent.com/blog/14-best-interview-questions-for-creatives"
     - label: "Top 10 Must-Ask Interview Questions for Designers"
-      url: "https://aquenttalent.com/blog/top-10-must-ask-design-interview-questions"
+      href: "https://aquenttalent.com/blog/top-10-must-ask-design-interview-questions"
 
   designers:
     heading: "Tips for Designers"
     links:
     - label: "How to Create a UX Profile That Will Help You Land Your Dream Job"
-      url: "https://aquenttalent.com/blog/how-to-create-a-ux-profile-that-will-help-you-land-your-dream-job"
+      href: "https://aquenttalent.com/blog/how-to-create-a-ux-profile-that-will-help-you-land-your-dream-job"
     - label: "The Design Leader Job Search. It’s All about the Brand (Yours)"
-      url: "https://medium.com/aquent-off-hours/the-design-leader-job-search-its-all-about-the-brand-yours-3ca9e4d0c983"
+      href: "https://medium.com/aquent-off-hours/the-design-leader-job-search-its-all-about-the-brand-yours-3ca9e4d0c983"
     - label: "Considering Contract Work? Here’s Why You Should Go for It"
-      url: "https://medium.com/gymnasium/considering-contract-work-heres-why-you-should-go-for-it-7ec5eb246175"
+      href: "https://medium.com/gymnasium/considering-contract-work-heres-why-you-should-go-for-it-7ec5eb246175"
     - label: "4 Reasons Web Designers Should Learn to Code"
-      url: "https://medium.com/gymnasium/4-reasons-web-designers-should-learn-to-code-2d1770d7866d"
+      href: "https://medium.com/gymnasium/4-reasons-web-designers-should-learn-to-code-2d1770d7866d"
     - label: "The Importance of Storytelling for Designers"
-      url: "https://medium.com/gymnasium/the-importance-of-storytelling-for-designers-cbe6541fa12a"
+      href: "https://medium.com/gymnasium/the-importance-of-storytelling-for-designers-cbe6541fa12a"
     - label: "Adaptability As the Key to Success in Design"
-      url: "https://medium.com/gymnasium/adaptability-as-the-key-to-success-in-design-ea64c1ed4044"
+      href: "https://medium.com/gymnasium/adaptability-as-the-key-to-success-in-design-ea64c1ed4044"
     - label: "How to Navigate the 7 Stages of Your Design Career"
-      url: "https://aquenttalent.com/blog/how-to-navigate-the-7-stages-of-your-design-career"
+      href: "https://aquenttalent.com/blog/how-to-navigate-the-7-stages-of-your-design-career"
     - label: "The 5 Critical Skills You Need to Advance in UX"
-      url: "https://aquenttalent.com/blog/the-5-critical-ux-designer-skills-you-need-to-advance"
+      href: "https://aquenttalent.com/blog/the-5-critical-ux-designer-skills-you-need-to-advance"
     - label: "Advice for Planning Your Next Career Move in UX"
-      url: "https://aquenttalent.com/blog/advice-for-planning-your-next-career-move-in-ux"
+      href: "https://aquenttalent.com/blog/advice-for-planning-your-next-career-move-in-ux"
     - label: "Advice on Landing Your Dream Design Leadership Job"
-      url: "https://aquent.com/blog/advice-on-landing-your-dream-design-leadership-job"
+      href: "https://aquent.com/blog/advice-on-landing-your-dream-design-leadership-job"
 
   managers:
     heading: "Tips for Managers"
     links:
     - label: "UX Hiring Is Not Easy, Even for a Company Full of UX Recruiters"
-      url: "https://medium.com/aquent-off-hours/ux-hiring-is-not-easy-even-for-a-company-full-of-ux-recruiters-4bd2ce1e6720"
+      href: "https://medium.com/aquent-off-hours/ux-hiring-is-not-easy-even-for-a-company-full-of-ux-recruiters-4bd2ce1e6720"
     - label: "7 Non-Technical Skills Your Creative Candidates Should Have"
-      url: "https://aquenttalent.com/blog/7-non-technical-skills-your-creative-candidates-should-have"
+      href: "https://aquenttalent.com/blog/7-non-technical-skills-your-creative-candidates-should-have"
     - label: "If Your Team Isn’t Learning, They’re Falling Behind. Fix It"
-      url: "https://medium.com/aquent-off-hours/if-your-team-isnt-learning-they-re-falling-behind-fix-it-52331858383d"
+      href: "https://medium.com/aquent-off-hours/if-your-team-isnt-learning-they-re-falling-behind-fix-it-52331858383d"
     - label: "Eight Steps to Launching a Successful Mentorship Program"
-      url: "https://aquent.com/blog/eight-steps-to-launching-a-successful-mentorship-program"
+      href: "https://aquent.com/blog/eight-steps-to-launching-a-successful-mentorship-program"
     - label: "InsideOut Leadership Community"
-      url: "https://aquent.com/communities/inside-out"
+      href: "https://aquent.com/communities/inside-out"
     - label: "Navigating the Realities of Remote Work"
-      url: "https://medium.com/gymnasium/navigating-the-realities-of-remote-work-3b99baa5de76"
+      href: "https://medium.com/gymnasium/navigating-the-realities-of-remote-work-3b99baa5de76"
 
   diversity:
     heading: "Diversity & Inclusion"
     links:
     - label: "How to Fix Your Talent Pipeline to Be More Inclusive"
-      url: "https://aquenttalent.com/blog/how-to-fix-your-talent-pipeline-to-be-more-inclusive"
+      href: "https://aquenttalent.com/blog/how-to-fix-your-talent-pipeline-to-be-more-inclusive"
     - label: "Unlocking Creativity Through Diversity"
-      url: "https://aquenttalent.com/blog/unlocking-creativity-through-diversity"
+      href: "https://aquenttalent.com/blog/unlocking-creativity-through-diversity"
     - label: "Unpacking the Hiring Process: Questions You Can Ask to Identify Bias"
-      url: "https://aquenttalent.com/blog/questions-you-need-to-ask-to-identify-hiring-bias"
+      href: "https://aquenttalent.com/blog/questions-you-need-to-ask-to-identify-hiring-bias"
     - label: "How Addressing Our Diversity Challenges Inspired Our Diversity Recruiting Solution"
-      url: "https://aquenttalent.com/blog/how-addressing-our-diversity-challenges-inspired-our-diversity-recruiting-solution"
+      href: "https://aquenttalent.com/blog/how-addressing-our-diversity-challenges-inspired-our-diversity-recruiting-solution"
     - label: "Working Toward Closing the Gender Gap in Tech"
-      url: "https://medium.com/gymnasium/working-toward-closing-the-gender-gap-in-tech-eb43d17a72ab"
+      href: "https://medium.com/gymnasium/working-toward-closing-the-gender-gap-in-tech-eb43d17a72ab"
     - label: "Helpful Diversity Recruiting Strategies You Need to Know"
-      url: "https://aquenttalent.com/blog/helpful-diversity-recruiting-strategies-you-need-to-know"
+      href: "https://aquenttalent.com/blog/helpful-diversity-recruiting-strategies-you-need-to-know"
     - label: "Diversity Recruiting Tools To Match Your Organization"
-      url: "https://aquenttalent.com/blog/diversity-recruiting-tools-to-match-your-organization"
+      href: "https://aquenttalent.com/blog/diversity-recruiting-tools-to-match-your-organization"
     - label: "Advice on How to Approach Culturally Sensitive Topics"
-      url: "https://aquenttalent.com/blog/advice-on-how-to-approach-culturally-sensitive-topics"
+      href: "https://aquenttalent.com/blog/advice-on-how-to-approach-culturally-sensitive-topics"

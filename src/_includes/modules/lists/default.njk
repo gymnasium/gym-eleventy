@@ -46,10 +46,10 @@
             {%- set type = obj.type -%}
 
             {# TODO: standardize image locations for ease of development #}
-            {%- set src = config.urls.data + img -%}
+            {%- set src = config.hrefs.data + img -%}
 
             {%- if type === 'webinar' -%}
-              {%- set src = config.urls.data + '/img/webinars/' +  slug + '.jpg' -%}
+              {%- set src = config.hrefs.data + '/img/webinars/' +  slug + '.jpg' -%}
             {%- endif -%}
 
             {%- set srcSet = src -%}
@@ -63,15 +63,15 @@
         <ul>
         {%- for idx in range(0, item.links.length) -%}
           {%- set title = item.links[idx].label -%}
-          {%- set url = item.links[idx].url -%}
+          {%- set href = item.links[idx].href -%}
 
           {% block item %}
           <li>
             {# Figure out if we are using an internal or external URL #}
-            {% if (item.links[idx].url | is_external_link) -%}
-              {%- external_link item.links[idx].url,item.links[idx].label -%}
+            {% if (item.links[idx].href | is_external_link) -%}
+              {%- external_link item.links[idx].href,item.links[idx].label -%}
             {%- else -%}
-              <a href="{{ item.links[idx].url }}">{{ item.links[idx].label }}</a>
+              <a href="{{ item.links[idx].href }}">{{ item.links[idx].label }}</a>
             {%- endif -%}
             {%- if item.links[idx].description -%}
               <p>{{ item.links[idx].description | safe }}</p>
@@ -88,7 +88,7 @@
 
   {%- if module.cta -%}
     <div class="cta">
-      <a class="{{ module.cta.type }}" href="{{ module.cta.url }}">{{ module.cta.label }}</a>
+      <a class="{{ module.cta.class }}" href="{{ module.cta.href }}">{{ module.cta.label }}</a>
     </div>
   {%- endif -%}
 

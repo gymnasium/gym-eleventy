@@ -21,10 +21,10 @@ tutorials:
     heading: "Live Coding"
     description: Learn how to improve your website through accessibility testing in the time it takes to step away for lunch.
     links:
-    - url: https://youtu.be/B1y5aNsVVLQ"
+    - href: https://youtu.be/B1y5aNsVVLQ"
       label: How to Improve Your Website Through Accessibility Testing (Part 1)
       description: In this live coding tutorial, you’ll learn how you can use the free Web Accessibility Evaluation Tool (WAVE) to perform a series of automated tests to improve the accessibility of a website.
-    - url: https://youtu.be/NnsT90GVAVw"
+    - href: https://youtu.be/NnsT90GVAVw"
       label: How to Improve Your Website Through Accessibility Testing (Part 2)
       description: In this live coding tutorial, you’ll learn four common techniques for manually checking (and then fixing) accessibility issues on your websites.
   take-5:
@@ -42,7 +42,7 @@ webinars:
   heading: "Accessibility Webinars"
   accessibility-webinars:
     links:
-    - url: https://aquenttalent.com/events/why-digital-accessibility-and-inclusive-design-matters"
+    - href: https://aquenttalent.com/events/why-digital-accessibility-and-inclusive-design-matters"
       label: Why Digital Accessibility and Inclusive Design Matters
       description: Learn how to put inclusive design first and avoid common accessibility mistakes.
 
@@ -51,19 +51,19 @@ articles:
   accessibility:
     heading: "Accessibility Articles"
     links:
-    - url: https://medium.com/gymnasium/advocating-for-accessibility-with-aaron-gustafson-54079c132152
+    - href: https://medium.com/gymnasium/advocating-for-accessibility-with-aaron-gustafson-54079c132152
       label: "Advocating for Accessibility with Aaron Gustafson"
       description: "Learn the fundamentals of how to get started with creating a more inclusive web. (Hint: It starts with awareness.)"
-    - url: https://aquentstudios.com/thinking/web-accessibility-drivers-start-your-engines-wcag-2-2-is-here/
+    - href: https://aquentstudios.com/thinking/web-accessibility-drivers-start-your-engines-wcag-2-2-is-here/
       label: "Web Accessibility Drivers, Start Your Engines. WCAG 2.2 Is Here."
       description: "Learn about the new global guidelines and what to expect."
-    - url: https://aquenttalent.com/blog/seven-steps-to-improving-accessibility
+    - href: https://aquenttalent.com/blog/seven-steps-to-improving-accessibility
       label: "Seven Steps to Improving Accessibility"
       description: "Improve the accessibility of your website with these seven starting points for designers, writers, and developers."
-    - url: https://medium.com/gymnasium/i-can-see-clearly-now-color-and-accessibility-in-design-1fe6382755ff
+    - href: https://medium.com/gymnasium/i-can-see-clearly-now-color-and-accessibility-in-design-1fe6382755ff
       label: "I Can See Clearly Now: Color and Accessibility in Design"
       description: "Read up on the role of color in accessibility and how to design with inclusion in mind."
-    - url: https://justingagne.design/words/rethinking-accessible-drop-caps/
+    - href: https://justingagne.design/words/rethinking-accessible-drop-caps/
       label: "Rethinking Accessible Drop Caps"
       description: "An alternative approach to designing accessible drop caps by Justin Gagne, Design Lead at Aquent Gymnasium."
 
@@ -75,36 +75,36 @@ resources:
   basics: 
     heading: "Learning the Basics"
     links:
-    - url: https://brand.aquent.com/Accessibility?utm_source=partner&amp;utm_medium=web&amp;utm_campaign=AQ_UK_gymnasium&amp;utm_content=2021
+    - href: https://brand.aquent.com/Accessibility?utm_source=partner&amp;utm_medium=web&amp;utm_campaign=AQ_UK_gymnasium&amp;utm_content=2021
       label: How to Get Started with Digital Accessibility
       description: Learn how (and why) to make digital accessibility a priority with Aquent’s PDF guide.
-    - url: https://webaim.org/intro/
+    - href: https://webaim.org/intro/
       label: Introduction to Web Accessibility
-    - url: https://www.deque.com/web-accessibility-beginners-guide/
+    - href: https://www.deque.com/web-accessibility-beginners-guide/
       label: The Beginner’s Guide to Web Accessibility
-    - url: https://developer.mozilla.org/en-US/docs/Learn/Accessibility
+    - href: https://developer.mozilla.org/en-US/docs/Learn/Accessibility
       label: Accessibility for Web Developers
   guides: 
     heading: "In-Depth Guides"
     links:
-    - url: https://universaldesign.ie/technology-ict/web-and-mobile-app-accessibility/web-accessibility-techniques/content-provider-s-introduction-and-index/
+    - href: https://universaldesign.ie/technology-ict/web-and-mobile-app-accessibility/web-accessibility-techniques/content-provider-s-introduction-and-index/
       label: Guidelines for Content Providers and Editors
-    - url: https://webaim.org/resources/designers/
+    - href: https://webaim.org/resources/designers/
       label: Accessibility for Designers
-    - url: https://www.accessibility-developer-guide.com
+    - href: https://www.accessibility-developer-guide.com
       label: Accessibility Developer Guide
-    - url: https://accessibility.18f.gov
+    - href: https://accessibility.18f.gov
       label: 18F Accessibility Guide
-    - url: https://www.a11yproject.com
+    - href: https://www.a11yproject.com
       label: The A11Y Project
   tools:
     heading: Tools for Testing
     links:
-    - url: https://www.solidstart.info"
+    - href: https://www.solidstart.info"
       label: Accessibility Tools for Everyone
-    - url: https://a11y.me/#tools"
+    - href: https://a11y.me/#tools"
       label: Accessibility Tools for Designers and Developers
-    - url: https://www.a11yproject.com/resources/#development-tools"
+    - href: https://www.a11yproject.com/resources/#development-tools"
       label: Accessibility Tools for Developers
 
 services:
@@ -113,12 +113,12 @@ services:
   description: Explore people, projects, and training that deliver truly inclusive experiences from <a href="https://aquent.com" target="_blank" rel="noopener">Aquent</a>.
   accessibility-services:
     links:
-    - url: https://aquenttalent.com/services/talent-recruiting
+    - href: https://aquenttalent.com/services/talent-recruiting
       label: Staffing
       description: Finding people with deep knowledge of accessibility can be like finding a needle in a haystack. Luckily, we know where to look. Our experienced recruiters and vast talent pool mean you can complete accessibility projects and bring in specialized skill sets when you need them.
-    - url: https://aquent.com/brands/aquent-studios
+    - href: https://aquent.com/brands/aquent-studios
       label: Projects
       description: If you’re looking to outsource accessibility projects, Aquent Studios can assemble and lead a team of accessibility experts and specialists in design, development, experience, and content to achieve your goals.
-    - url: /courses/
+    - href: /courses/
       label: Professional Development
       description: Upskill your team on the latest A11Y best practices for design and development from quick online courses to full-day workshops.

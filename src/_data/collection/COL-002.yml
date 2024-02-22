@@ -11,9 +11,9 @@ courses:
   heading: "UX Courses"
   description: Learn UX design with industry experts from Capital One to <cite>The New York Times</cite>.
   cta:
-    url: /courses/
+    href: /courses/
     label: View More Courses
-    type: button
+    class: btn
   ux-courses:
     schema: true
     ids:
@@ -26,9 +26,9 @@ tutorials:
   heading: "UX Tutorials"
   description: Learn a new UX skill in 5 minutes.
   cta:
-    url: /courses/take5/
+    href: /courses/take5/
     label: View More Tutorials
-    type: button
+    class: btn
   ux-tutorials:
     ids:
     - id: GYM-5006
@@ -42,9 +42,9 @@ webinars:
   heading: UX Webinars
   description: Insightful conversations with trailblazers in the web community.
   cta:
-    url: /webinars/
+    href: /webinars/
     label: View More Webinars
-    type: button
+    class: btn
   ux-webinars:
     ids:
     - id: web0013
@@ -59,19 +59,19 @@ articles:
   ux:
     heading: "UX Articles"
     links:
-    - url: "https://medium.com/gymnasium/from-filler-to-matter-wireframes-and-prototypes-in-ux-design-a73b0c0c27cd"
+    - href: "https://medium.com/gymnasium/from-filler-to-matter-wireframes-and-prototypes-in-ux-design-a73b0c0c27cd"
       label: "From Filler to Matter: Wireframes and Prototypes in UX Design"
-    - url: "https://medium.com/gymnasium/the-dangers-of-generalism-in-ux-and-the-t-shaped-solution-72548bc67337"
+    - href: "https://medium.com/gymnasium/the-dangers-of-generalism-in-ux-and-the-t-shaped-solution-72548bc67337"
       label: "Generalism in UX: It’s About Balance"
-    - url: "https://medium.com/gymnasium/brad-frost-on-how-and-why-to-use-pattern-lab-49607f89d7f0"
+    - href: "https://medium.com/gymnasium/brad-frost-on-how-and-why-to-use-pattern-lab-49607f89d7f0"
       label: "Brad Frost on How (and Why) to Use Pattern Lab"
-    - url: "https://medium.com/gymnasium/writing-meaningful-content-is-easier-than-you-think-45e0cb05dea6"
+    - href: "https://medium.com/gymnasium/writing-meaningful-content-is-easier-than-you-think-45e0cb05dea6"
       label: "Writing Meaningful Content Is Easier Than You Think"
-    - url: "https://medium.com/gymnasium/are-you-designing-for-real-people-or-just-personas-2ffdb6c3cd9b"
+    - href: "https://medium.com/gymnasium/are-you-designing-for-real-people-or-just-personas-2ffdb6c3cd9b"
       label: "Are You Designing for Real People or Just Personas?"
-    - url: "https://medium.com/gymnasium/https-medium-com-gymnasiumtweets-approaches-to-successful-rapid-prototyping-320361571f83"
+    - href: "https://medium.com/gymnasium/https-medium-com-gymnasiumtweets-approaches-to-successful-rapid-prototyping-320361571f83"
       label: "Approaches to Successful Rapid Prototyping"
-    - url: "https://medium.com/gymnasium/creating-a-vector-logo-in-sketch-3-6d67e72a1449"
+    - href: "https://medium.com/gymnasium/creating-a-vector-logo-in-sketch-3-6d67e72a1449"
       label: "Creating a Vector Logo in Sketch"
 
 jobs:

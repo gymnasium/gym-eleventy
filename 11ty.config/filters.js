@@ -142,7 +142,7 @@ module.exports = eleventyConfig => {
   });
 
   // Modified, original @ https://willvincent.com/2022/07/27/redirects-with-11ty-and-netlify/
-  eleventyConfig.addFilter('course_path', (id, dest_format) => {
+  eleventyConfig.addFilter('course_endpoint', (id, dest_format) => {
     idString = id.split('-')[1];
     let idNum = Number(idString);
     let path;
@@ -156,10 +156,16 @@ module.exports = eleventyConfig => {
 
     if (courseType === 'new' || !!dest_format) {
       if (!!dest_format) {
-        if (dest_format === 'about') {
-          path = `/courses/course-v1:GYM+${idString}+0/about`;
+        let mfeUrl = process.env.MFE_URL;
+        if (process.env.ELEVENTY_ENV === ('local' || 'dev')) {
+          const port = process.env[`MFE_PORT_${dest_format.toUpperCase()}`];
+          mfeUrl = `${mfeUrl}:${port}`
+        }
+
+        if (dest_format === 'course_about') {
+          path = `${mfeUrl}/courses/course-v1:GYM+${idString}+0/about`;
         } else if (dest_format === 'learning') {
-          path = `/learning/course/course-v1:GYM+${idString}+0/home`;
+          path = `${mfeUrl}/learning/course/course-v1:GYM+${idString}+0/home`;
         }
       } else {
         path = `/courses/course-v1:GYM+${idString}+0/`;
