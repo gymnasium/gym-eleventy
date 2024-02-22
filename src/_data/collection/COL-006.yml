@@ -21,4 +21,4 @@ courses:
     post: 
   cta:
     label: View Course
-    type: button
+    class: btn

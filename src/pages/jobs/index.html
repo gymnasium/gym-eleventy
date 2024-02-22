@@ -16,7 +16,7 @@ meta:
         {%- set card = intro.cards[idx] -%}
         {%- set heading = card.heading -%}
         {%- set subheading = card.subheading -%}
-        {%- set url = card.cta.url -%}
+        {%- set url = card.cta.href -%}
         {%- set label = card.cta.label -%}
         {%- set src = config.urls.data + card.img.src -%}
         {%- if card.img.srcSet -%}

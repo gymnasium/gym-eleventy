@@ -12,9 +12,9 @@ courses:
   heading: "Web Development Courses"
   description: Learn web development with industry experts.
   cta:
-    url: /courses/
+    href: /courses/
     label: View More Courses
-    type: button
+    class: btn
   dev-courses:
     schema: true
     ids:
@@ -37,9 +37,9 @@ tutorials:
   heading: "Development Tutorials"
   description: Learn a development skill in 5 minutes.
   cta:
-    url: /courses/take5/
+    href: /courses/take5/
     label: View More Tutorials
-    type: button
+    class: btn
   dev-tutorials:
     ids:
     - id: GYM-5001
@@ -54,9 +54,9 @@ webinars:
   heading: Development Webinars
   description: Insightful conversations with trailblazers in the web community.
   cta:
-    url: /webinars/
+    href: /webinars/
     label: View More Webinars
-    type: button
+    class: btn
   dev-webinars:
     ids:
     - id: web0013
@@ -75,19 +75,19 @@ articles:
     heading: "Articles"
     links:
     - label: "Brad Frost on How (and Why) to Use Pattern Lab"
-      url: "https://medium.com/gymnasium/brad-frost-on-how-and-why-to-use-pattern-lab-49607f89d7f0"
+      href: "https://medium.com/gymnasium/brad-frost-on-how-and-why-to-use-pattern-lab-49607f89d7f0"
     - label: "Adaptability As the Key to Success in Design"
-      url: "https://medium.com/gymnasium/adaptability-as-the-key-to-success-in-design-ea64c1ed4044"
+      href: "https://medium.com/gymnasium/adaptability-as-the-key-to-success-in-design-ea64c1ed4044"
     - label: "4 Reasons Web Designers Should Learn to Code"
-      url: "https://medium.com/gymnasium/4-reasons-web-designers-should-learn-to-code-2d1770d7866d"
+      href: "https://medium.com/gymnasium/4-reasons-web-designers-should-learn-to-code-2d1770d7866d"
     - label: "3 Tips for Chrome DevTools Users"
-      url: "https://medium.com/gymnasium/three-tips-for-chrome-devtools-users-b1bbbc07daab"
+      href: "https://medium.com/gymnasium/three-tips-for-chrome-devtools-users-b1bbbc07daab"
     - label: "CSS Grid Layout: A Cornucopia of Options"
-      url: "https://medium.com/gymnasium/css-grid-layout-a-cornucopia-of-options-90a5ee10ad9f"
+      href: "https://medium.com/gymnasium/css-grid-layout-a-cornucopia-of-options-90a5ee10ad9f"
     - label: "A Year of Gymnasium on Open edX"
-      url: "https://medium.com/gymnasium/a-year-of-gymnasium-on-open-edx-2f0c6df2afee"
+      href: "https://medium.com/gymnasium/a-year-of-gymnasium-on-open-edx-2f0c6df2afee"
     - label: "Experts Agree: Web Design is Hard"
-      url: "https://medium.com/gymnasium/experts-agree-web-design-is-hard-42dd883b42ef"
+      href: "https://medium.com/gymnasium/experts-agree-web-design-is-hard-42dd883b42ef"
 
 jobs:
   module: jobs
