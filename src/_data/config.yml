@@ -206,4 +206,4 @@ messages:
     custom: "<p>This is an example of a custom message for anywhere in the theme.</p>"
 html:
   footer: FOOTER_HTML
-  header: HEADER_HTML
+  header: HEADER_HTML # we will likely end up not using the HTML for the header on account of the required functionality
