@@ -1,18 +1,18 @@
 {# Footer Component
-This component is used to generate HTML fragments, which in turn are processed for URL replacement. See footer-processed.html and /pages/feeds/config.njk for more details.
+This component is used to generate the footer for the static site and the LMS theme + MFEs.
 
 Please use the following strings instead of directly coding domain names:
-- GYM_ROOT_URL: the static site domain
-- GYM_LMS_URL: the LMS theme domain
-- GYM_MFE_URL: the LMS MFE domain
-- GYM_DATA_URL: the (temporary) data.gym.soy domain for serving up images etc
+- {{ config.urls.root }}: the static site domain
+- {{ config.urls.lms }}: the LMS theme domain
+- {{ config.urls.mfe }}: the LMS MFE domain
+- {{ config.urls.data }}: the (temporary) data.gym.soy domain for serving up images etc
 #}
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="main">
       <div class="header">
-        <a href="GYM_ROOT_URL" aria-label="{{ config.meta.title }} homepage">
-          <img alt="{{ config.meta.author }}" src="GYM_DATA_URL{{ config.logos.white.main.src }}" srcset="GYM_DATA_URL{{ config.logos.main.white.srcset }}" decoding="async" fetchpriority="low" width="208" height="24">
+        <a href="{{ config.urls.root }}" aria-label="{{ config.meta.title }} homepage">
+          <img alt="{{ config.meta.author }}" src="{{ config.urls.data }}{{ config.logos.white.main.src }}" srcset="{{ config.urls.data }}{{ config.logos.main.white.srcset }}" decoding="async" fetchpriority="low" width="208" height="24">
         </a>
         <p>{{ config.meta.short_description }}</p>
       </div>
@@ -40,14 +40,14 @@ Please use the following strings instead of directly coding domain names:
     {# TODO: consider writing the stack aside directly into the config for consistency #}
     <aside class="stack" aria-label="Built with">
       <a href="https://openedx.org" target="_blank" rel="noopener">
-        <img class="openedx-logo" alt="{{ config.logos.openedx.alt }}" src="GYM_DATA_URL{{ config.logos.openedx.src }}" decoding="async" fetchpriority="low" width="175" height="70">
+        <img class="openedx-logo" alt="{{ config.logos.openedx.alt }}" src="{{ config.urls.data }}{{ config.logos.openedx.src }}" decoding="async" fetchpriority="low" width="175" height="70">
       </a>
       <a href="https://docs.tutor.overhang.io" target="_blank" rel="noopener">
-        <img class="tutor-logo" alt="{{ config.logos.tutor.alt }}" src="GYM_DATA_URL{{ config.logos.tutor.src }}" decoding="async" fetchpriority="low" width="125" height="24">
+        <img class="tutor-logo" alt="{{ config.logos.tutor.alt }}" src="{{ config.urls.data }}{{ config.logos.tutor.src }}" decoding="async" fetchpriority="low" width="125" height="24">
       </a>
     </aside>
     <p class="copyright">
-      <small>© {% year %} <a href="GYM_ROOT_URL" aria-label="{{ config.meta.title }} homepage">{{ config.meta.author }}</a></small>
+      <small>© {% year %} <a href="{{ config.urls.root }}" aria-label="{{ config.meta.title }} homepage">{{ config.meta.author }}</a></small>
     </p>
   </div><!-- .container -->
 </footer>

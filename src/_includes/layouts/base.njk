@@ -14,6 +14,15 @@
 <body class="{{bodyClass}}">
 {% include './components/header.html' %}
 {{ content | safe }}
-{% include './components/footer-processed.html' %}
+{%- set footer -%}{%- include './components/footer.html' -%}{%- endset -%}
+{# In the static site footer, convert absolute urls to relative #}
+{{ footer
+  | replace(config.urls.root, '/')
+  | replace('GYM_ROOT_URL', '')
+  | replace('GYM_LMS_URL', config.urls.lms)
+  | replace('GYM_DATA_URL', config.urls.data)
+  | replace('GYM_MFE_URL', config.urls.mfe)
+  | safe
+}}
 </body>
 </html>
