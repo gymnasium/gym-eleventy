@@ -10,12 +10,16 @@
       </li>
       {%- endfor -%}
     </ul>
+    
     <ul class="auth" role="list">
+      <is-land on:visible on:idle>
       {%- for link in config.header.nav.auth.public | replace("GYM_ROOT_URL", "") | replace("GYM_LMS_URL", config.urls.lms) -%}
       <li>
         <a href="{{link.href}}"{%- if link.class -%} class="{{link.class}}"{%- endif -%}>{{link.label}}</a>
       </li>
       {%- endfor -%}
+      </is-land>
     </ul>
+    
   </div>
 </nav>
