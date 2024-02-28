@@ -9,12 +9,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-{% include './components/head.html' %}
+{% include './components/head.njk' %}
 </head>
 <body class="{{bodyClass}}">
-{% include './components/header.html' %}
+{% include './components/header.njk' %}
 {{ content | safe }}
-{% include './components/footer.html' %}
+{% include './components/footer.njk' %}
 <script type="module" src="{{ '/js/gym.js' | cachebust }}"></script>
 </body>
 </html>
