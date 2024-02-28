@@ -1,6 +1,5 @@
-import { readCookie, createCookie, eraseCookie } from 'cookies.js'
-
-import { checkAccountButtons } from 'account-buttons.js'
+// import { readCookie, createCookie, eraseCookie } from 'cookies.js';
+// import { checkAccountButtons } from 'account-buttons.js';
 
 // are we logged in?
 let auth = readCookie('edxloggedin');
@@ -26,7 +25,7 @@ if (typeof userinfo !== 'undefined' && userinfo !== null) {
 }
 
 // wait for astro's view transitions
-document.addEventListener('astro:page-load', () => {
+document.addEventListener('load', () => {
   checkAccountButtons(auth);
   console.log(`auth: ${auth}\nuserinfo: `,userinfo)
 });

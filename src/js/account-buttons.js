@@ -17,4 +17,4 @@ export function checkAccountButtons(auth) {
   });
 }
 
-export default checkAccountButtons;
+// export default checkAccountButtons;

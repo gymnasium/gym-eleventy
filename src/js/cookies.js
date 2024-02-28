@@ -30,4 +30,4 @@ export function eraseCookie(name) {
   createCookie(name,"",-1);
 }
 
-export default { readCookie, createCookie, eraseCookie }
+// export default { readCookie, createCookie, eraseCookie }
