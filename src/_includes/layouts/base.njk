@@ -15,9 +15,6 @@
 {% include './components/header.html' %}
 {{ content | safe }}
 {% include './components/footer.html' %}
-<script type="module">
-import "/is-land.js";
-</script>
-<script type="module" src="/js/gym.js" async defer></script>
+<script type="module" src="{{ '/js/gym.js' | cachebust }}"></script>
 </body>
 </html>
