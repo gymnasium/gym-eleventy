@@ -1,7 +1,7 @@
 // docs: https://www.11ty.io/docs/config/
 const eleventySass = require('eleventy-sass');
 const pluginRev = require('eleventy-plugin-rev');
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
+const { EleventyEdgePlugin, EleventyRenderPlugin } = require("@11ty/eleventy");
 const filters = require('./11ty.config/filters.js');
 const shortcodes = require('./11ty.config/shortcodes.js');
 const pluginImages = require('./11ty.config/images.js');
@@ -132,6 +132,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(shortcodes);
   eleventyConfig.addPlugin(pluginRev);
   eleventyConfig.addPlugin(pluginImages);
+  eleventyConfig.addPlugin(EleventyEdgePlugin);
   eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));
@@ -168,7 +169,9 @@ module.exports = function (eleventyConfig) {
     // Accepts an Array of file paths or globs (passed to `chokidar.watch`).
     // Works great with a separate bundler writing files to your output folder.
     // e.g. `watch: ["_site/**/*.css"]`
-    watch: [],
+    watch: [
+
+    ],
 
     // Show local network IP addresses for device testing
     showAllHosts: true,

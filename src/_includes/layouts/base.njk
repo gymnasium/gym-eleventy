@@ -9,12 +9,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-{% include './components/head.html' %}
+{% include './components/head.njk' %}
 </head>
 <body class="{{bodyClass}}">
-{% include './components/header.html' %}
+{% include './components/header.njk' %}
 {{ content | safe }}
-{%- set footer -%}{%- include './components/footer.html' -%}{%- endset -%}
+{%- set footer -%}{%- include './components/footer.njk' -%}{%- endset -%}
 {# In the static site footer, convert absolute urls to relative #}
 {{ footer
   | replace(config.urls.root, '/')
@@ -24,5 +24,6 @@
   | replace('GYM_MFE_URL', config.urls.mfe)
   | safe
 }}
+<script type="module" src="{{ '/js/gym.js' | cachebust }}"></script>
 </body>
 </html>
