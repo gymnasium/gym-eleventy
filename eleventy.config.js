@@ -170,7 +170,6 @@ module.exports = function (eleventyConfig) {
     // Works great with a separate bundler writing files to your output folder.
     // e.g. `watch: ["_site/**/*.css"]`
     watch: [
-      'src/js/**',
 
     ],
 

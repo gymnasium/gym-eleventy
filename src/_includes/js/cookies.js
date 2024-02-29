@@ -1,4 +1,4 @@
-export function createCookie(name,value,days) {
+function createCookie(name,value,days) {
   if (days) {
     var date = new Date();
     date.setTime(date.getTime()+(days*24*60*60*1000));
@@ -9,7 +9,7 @@ export function createCookie(name,value,days) {
 }
 
 // Read either document cookie or a string of cookie data
-export function readCookie(name, string) {
+function readCookie(name, string) {
   var nameEQ = name + "=";
   var ca;
   if (string) {
@@ -26,8 +26,8 @@ export function readCookie(name, string) {
   return null;
 }
 
-export function eraseCookie(name) {
+function eraseCookie(name) {
   createCookie(name,"",-1);
 }
 
-// export default { readCookie, createCookie, eraseCookie }
+export { readCookie, createCookie, eraseCookie };
