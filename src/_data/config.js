@@ -14,5 +14,5 @@ module.exports = {
     learner_dashboard: process.env.MFE_PORT_LEARNER_DASHBOARD || 1996,
     learning: process.env.MFE_PORT_LEARNING || 2000,
     profile: process.env.MFE_PORT_PROFILE || 1995,
-  }
+  },
 };
