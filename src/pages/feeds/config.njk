@@ -2,7 +2,15 @@
 permalink: /feeds/config.json
 eleventyExcludeFromCollections: true
 ---
-{%- set config = config | replace("GYM_ROOT_URL", config.urls.root) -%}
-{%- set config = config | replace("GYM_LMS_URL", config.urls.lms) -%}
-{%- set config = config | replace("GYM_DATA_URL", config.urls.data) -%}
-{{ config | stringify | safe }}
+{%- set footer -%}{%- include 'layouts/components/footer.html' -%}{%- endset -%}
+{%- set footer = footer | stringify -%}
+{# Important: note the inclusion of double quotes when replacing '"FOOTER_HTML"' #}
+{%- set config = config
+  | stringify
+  | replace('"FOOTER_HTML"', footer)
+  | replace('GYM_ROOT_URL', config.urls.root)
+  | replace('GYM_LMS_URL', config.urls.lms)
+  | replace('GYM_MFE_URL', config.urls.mfe)
+  | replace('GYM_DATA_URL', config.urls.data)
+-%}
+{{ config | safe }}
