@@ -4,7 +4,7 @@
 
 @use 'breakpoints' as *;
 
-// TODO: consider better naming conventions
+// TODO: consider better/different naming conventions
 .layout-1fr-2fr {
   display: grid;
   grid-template-columns: 1fr 2fr;
