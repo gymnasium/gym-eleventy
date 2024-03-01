@@ -1,13 +1,29 @@
 ---
 ---
+{# Define a unique class per page automatically (meta.bodyClass overrides this) #}
+{%- if meta.bodyClass -%}
+  {%- set bodyClass = meta.bodyClass -%}
+{%- else -%}
+  {%- set bodyClass = page.url.slice(1, -1).split('/') | join('-') -%}
+{%- endif -%}
 <!doctype html>
 <html lang="en">
 <head>
-{% include './components/head.html' %}
+{% include './components/head.njk' %}
 </head>
-<body>
-{% include './components/header.html' %}
+<body class="{{bodyClass}}">
+{% include './components/header.njk' %}
 {{ content | safe }}
-{% include './components/footer.html' %}
+{%- set footer -%}{%- include './components/footer.njk' -%}{%- endset -%}
+{# In the static site footer, convert absolute urls to relative #}
+{{ footer
+  | replace(config.urls.root, '/')
+  | replace('GYM_ROOT_URL', '')
+  | replace('GYM_LMS_URL', config.urls.lms)
+  | replace('GYM_DATA_URL', config.urls.data)
+  | replace('GYM_MFE_URL', config.urls.mfe)
+  | safe
+}}
+<script type="module" src="{{ '/js/gym.js' | cachebust }}"></script>
 </body>
 </html>

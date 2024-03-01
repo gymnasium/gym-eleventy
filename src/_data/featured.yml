@@ -1,9 +1,17 @@
 home:
   hero: ai-mockup-magic
-  courses:
-  - gym-107
-  - gym-104
-  - gym-103
+  featured:
+    heading: Featured Courses
+    description: "Design a career you love with free online courses on design, development, UX, accessibility, and career skills."
+    wrapper_class: home
+    cta:
+      href: /courses/
+      label: View all Courses
+      class: btn
+    items:
+    - gym-109
+    - gym-105
+    - gym-016
 
 catalog:
   full:

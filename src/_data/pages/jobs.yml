@@ -9,7 +9,7 @@ intro:
   - heading: Salary Guides
     subheading: See How Your Salary & Benefits Stack Up
     cta:
-      url: /jobs/#salary-guides
+      href: /jobs/#salary-guides
       label: Check Salary
     img:
       src: /img/jobs/featured/salary-guide-2023.jpg
@@ -17,7 +17,7 @@ intro:
   - heading: Job Search
     subheading: Find Contract and Full-Time Work
     cta:
-      url: /jobs/#jobs
+      href: /jobs/#jobs
       label: Explore Jobs
     img:
       src: /img/jobs/featured/find-work.jpg
@@ -25,7 +25,7 @@ intro:
   - heading: Tutorials
     subheading: Learn Career Skills in 5 Minutes
     cta:
-      url: /jobs/#take5-tutorials
+      href: /jobs/#take5-tutorials
       label: Watch Now
     img:
       src: /img/tutorials/gym-5016.jpg

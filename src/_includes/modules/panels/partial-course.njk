@@ -2,14 +2,6 @@
 {%- set img = obj.img -%}
 {%- set title = obj.title | strip_html -%}
 
-{%- set path = "/courses/course-v1:" + obj.id | replace('-','+') + "+0/about" -%}
-{%- set url = config.urls.mfe + path -%}
-{%- if (env.ELEVENTY_ENV == 'local' and config['ports']['course_about']) %}
-  {%- set url -%}
-    {{ config.urls.mfe }}:{{ config['ports']['course_about'] }}{{ path }}
-  {%- endset -%}
-{% endif -%}
-
 {%- if obj.subtitle -%}
   {%- set subtitle = obj.subtitle | strip_html -%}
 {%- elif module.subtitle -%}
@@ -52,7 +44,7 @@
       <p>{{ description }}</p>
     {%- endif -%}
     <div class="cta">
-      <a class="btn" href="{{ url }}">View Course</a>
+      <a class="btn" href="{{ obj.id | course_endpoint('course_about') }}">View Course</a>
     </div>
     {%- if (obj.skills) -%}
       <div class="skills">

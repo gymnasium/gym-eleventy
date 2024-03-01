@@ -13,11 +13,11 @@
     },
     addAllPagesToCollections: true,
   },
-  permalink: "tutorials/{{ item.title | slugify }}/",
+  permalink: "courses/take5/{{ item.title | slugify }}/",
   nav: {
     secondary: "courses",
     parent: "/courses/",
-    secondaryParent: "/tutorials/",
+    secondaryParent: "/courses/take5/",
   },
   eleventyComputed: {
     meta: {
@@ -50,7 +50,7 @@
 
 <p class="topic">{{ item.topic }}</p>
 <h1 class="title">{{ item.title }}</h1>
-<p class="instructor">{{ instructor_blurb }}</p>
+<p class="instructor">{{ instructor_blurb | safe }}</p>
 <p class="description">{{ item.description }}</p>
 
 {# Note: this a custom shortcode that wraps the video in a div. Find it in

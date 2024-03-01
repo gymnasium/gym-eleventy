@@ -7,12 +7,12 @@ module.exports = {
     mfe: process.env.MFE_URL || 'https://apps.learn.gym.soy',
   },
   ports: {
-    account: 1997,
-    authn: 1999,
-    course_about: 3000,
-    discussions: 2002,
-    learner_dashboard: 1996,
-    learning: 2000,
-    profile: 1995,
-  }
+    account: process.env.MFE_PORT_ACCOUNT || 1997,
+    authn: process.env.MFE_PORT_AUTHN || 1999,
+    course_about: process.env.MFE_PORT_COURSE_ABOUT || 3000,
+    discussions: process.env.MFE_PORT_DISCUSSIONS || 2002,
+    learner_dashboard: process.env.MFE_PORT_LEARNER_DASHBOARD || 1996,
+    learning: process.env.MFE_PORT_LEARNING || 2000,
+    profile: process.env.MFE_PORT_PROFILE || 1995,
+  },
 };

@@ -84,9 +84,18 @@
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
 
+    a + a {
+      margin-left: 1rem;
+    }
+
     .openedx-logo {
       width: 11rem;
       margin: 0 -2rem;
+    }
+
+    .tutor-logo {
+      width: 7.5rem;
+      filter: brightness(0) invert(1); // Faux b/w
     }
   }
 
@@ -95,10 +104,5 @@
     a {
       color: var(--secondary);
     }
-  }
-
-  // TODO: Remove style rule
-  aside a[href*="tutor"] {
-    display: none;
   }
 }
