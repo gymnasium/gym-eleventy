@@ -1,0 +1,12 @@
+// | -------------------------------------------------------------
+// | Layouts
+// | -------------------------------------------------------------
+
+@use 'breakpoints' as *;
+
+// TODO: consider better naming conventions
+.layout-1fr-2fr {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 2.6em;
+}
