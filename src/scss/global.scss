@@ -4,9 +4,9 @@
 
 @use 'shared';
 
-// Static-site (eleventy-specific) components?
+// Static-site only (eleventy-specific) components below
 
 
 // Specific pages
-
+@use 'pages/home';
 @use 'pages/example';

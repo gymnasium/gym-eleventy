@@ -38,5 +38,10 @@ package = "netlify-plugin-cache"
 
 
 [dev]
+  # framework = "#static"
   port=8888
   targetPort=4040
+
+[[edge_functions]]
+function = "eleventy-edge"
+path = "/*"
