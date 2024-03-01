@@ -8,6 +8,8 @@ const pluginImages = require('./11ty.config/images.js');
 const clean = require("eleventy-plugin-clean");
 const yaml = require('js-yaml');
 const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+const markdownItAttrs = require("markdown-it-attrs");
 
 require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 
@@ -27,13 +29,25 @@ module.exports = function (eleventyConfig) {
     './public/': '/',
   });
 
+  // markdown-it options
   let mdOpts = {
     html: true,
     breaks: true,
     linkify: true
   };
 
-  eleventyConfig.setLibrary('md', markdownIt(mdOpts));
+  // markdown-it-attrs options
+  const mdAttrs = {
+    // optional, these are default options
+    leftDelimiter: '{:', // modified to use `{:` instead of `{`
+    rightDelimiter: '}',
+    allowedAttributes: []  // empty array = all attributes are allowed
+  }
+
+  eleventyConfig.setLibrary('md', markdownIt(mdOpts)
+    .use(markdownItAnchor)
+    .use(markdownItAttrs, mdAttrs)
+    );
 
   // create a catalog collection combining courses, tutorials, webinars
   eleventyConfig.addCollection('catalog', (collection) => {
