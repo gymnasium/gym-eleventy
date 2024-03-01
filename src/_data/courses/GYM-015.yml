@@ -31,6 +31,27 @@ lessons_duration: "1 hour"
 completion_duration: "Up to 1.5 hours"
 skill_level: "Beginner"
 # Begin Overview
-
-
+overview:
+  intro:
+    heading:
+    description:
+  preview:
+    heading:
+    video_id:
+  about:
+    heading:
+    description:
+  outline:
+    heading:
+    list:
+  prerequisites:
+    heading:
+    list:
+  requirements:
+    heading:
+    list:
+  audience:
+    heading:
+  instructor:
+    heading:
 # End Overview
