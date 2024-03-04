@@ -201,6 +201,16 @@ messages:
   mfe:
     authn:
       welcome: "<p>This is an example of a welcome message on the registration page.</p>"
+    course_about:
+      headings:
+        about: About This Course
+        preview: Course Preview
+        outline: Course Outline
+        prerequisites: Prerequisites
+        requirements: Requirements
+        audience: This Course is For
+        instructor: Meet the Instructor
+
 
   theme:
     custom: "<p>This is an example of a custom message for anywhere in the theme.</p>"
