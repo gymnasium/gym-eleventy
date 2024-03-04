@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/GYM/006/0/about
-img: /img/courses/gym-006.svg
+img: /img/courses/svg/gym-006.svg
 topic: "Development"
 description: "Learn the basics of version control and get a high-level overview of both Git and GitHub. Perfect for someone with little to no first-hand experience with either."
 instructor: jausura

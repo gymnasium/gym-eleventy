@@ -8,7 +8,7 @@ tags:
   - full-course
 live: true
 url: /courses/GYM/102/0/about
-img: /img/courses/gym-102.svg
+img: /img/courses/svg/gym-102.svg
 topic: "Development"
 subtopics:
   - label: "JavaScript"
@@ -27,23 +27,29 @@ completion_duration: "Up to 17 hours"
 skill_level: "Intermediate"
 # Begin Overview
 overview:
-  intro:
-    heading:
-    description: >
-      <strong><cite>jQuery Building Blocks</cite></strong> will teach you 5 easy techniques for adding interactivity to your web pages. By the end of the course, you’ll be able to add features and style to your web pages, from simple animations to complex dynamic content.
-  preview:
-    video_src: https://www.youtube.com/embed/ZvBf89VaMJI?list=PL0Y6L6nQtNzeGtsX5_rVuf2TUz709ybIk
-  about:
-    heading: 5 Ways To Cut Your Web Development Time In Half
-    description: >
-      In this practical introduction to the technology, students will learn how to use jQuery to create a variety of visual effects, how to add complex, fully-functional widgets (such as an image carousel) to a page, how to work with and customize jQuery plug-ins, how to handle “events,” and how to pull in data for use in a web page or application. In addition to learning these specific techniques, students will also walk away with a framework for figuring out how jQuery can help them solve any development challenges they might face.
+  intro: >
+    <strong><cite>jQuery Building Blocks</cite></strong> will teach you 5 easy techniques for adding interactivity to your web pages. By the end of the course, you’ll be able to add features and style to your web pages, from simple animations to complex dynamic content.
+  preview_video_src: https://www.youtube.com/embed/ZvBf89VaMJI?list=PL0Y6L6nQtNzeGtsX5_rVuf2TUz709ybIk
+  about: >
+    In this practical introduction to the technology, students will learn how to use jQuery to create a variety of visual effects, how to add complex, fully-functional widgets (such as an image carousel) to a page, how to work with and customize jQuery plug-ins, how to handle “events,” and how to pull in data for use in a web page or application. In addition to learning these specific techniques, students will also walk away with a framework for figuring out how jQuery can help them solve any development challenges they might face.
   outline:
-    list:
-      - heading: 'Lesson 1: Welcome to jQuery'
-        description: > 
-          This lesson outlines the course and gives a brief introduction to jQuery. Learn how jQuery fits into the context of web technologies and has evolved as a solution for adding interactivity to your pages in the least painful and most efficient way possible. This lesson provides an overview of the five projects covered in this course and introduces you to jQuery selector syntax, as well as how to use a browser console for interactive “sleuthing” of web page code.
+    - title: "Lesson 1: Welcome to jQuery"
+      description: "This lesson outlines the course and gives a brief introduction to jQuery. Learn how jQuery fits into the context of web technologies and has evolved as a solution for adding interactivity to your pages in the least painful and most efficient way possible. This lesson provides an overview of the five projects covered in this course and introduces you to jQuery selector syntax, as well as how to use a browser console for interactive “sleuthing” of web page code."
+    - title: "Lesson 2: That Certain Sparkle"
+      description: "Learn how the appropriate use of animation in web pages can benefit users through examples currently found on the web. To begin, you will learn the importance of jQuery’s `.ready` function and then move on to explore the use of jQuery’s `.animate()` method with its ability to control the duration and relative smoothness of your animations."
+    - title: "Lesson 3: The jQuery Carousel(s)"
+      description: "Learn the vast world of functionality that jQuery’s plugin ecosystem provides access to. You will walk through the process of downloading, including initializing a plugin—in this case, the jQuery cycle plugin. The coding project involves the use of a carousel, and before learning to configure it, you will also learn the advantages and disadvantages of this user interface component. The user experience of carousels is currently a hot topic in web development and you will learn what aspects are necessary to consider before you add one, as well as which features you should look for (and which to avoid!)."
+    - title: "Lesson 4: Building Tabs…To Last"
+      description: "This lesson will turn you into a more powerful and savvy developer by diving deeper into the world of plugins covered in Lesson 3 and instructing you on how to create your own. In this scenario you will learn how to add custom jQuery tabs to a section of your page and then convert this to a plugin for future use."
+    - title: "Lesson 5: Introspective Dynamism"
+      description: "This lesson will move you toward becoming fluent in event handling, including what events are and why we need to handle them. Specifically, you will explore the use of the click and draggable events."
+    - title: "Lesson 6: External Dynamism and Epilogue"
+      description: "You will learn the role of Ajax and JSON as techniques used to work with data on the web and how jQuery relies on the `.ajax()` method to retrieve data for use on a page. Additionally, you will walk through the process for basic templating, which is the process for translating data to HTML. Lastly, you will explore resources for working with various Web APIs as a way to fold public sources of data into your projects."
   prerequisites:
-    list:
+    - The ability to code HTML/CSS by hand
+    - Some experience using and modifying JavaScript without necessarily having written JavaScript from scratch
   requirements:
-    list:
+    - Mac or Windows desktop or laptop
+    - A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)
+    - Google Chrome web browser is recommended, although any modern browser with Developer Tools will suffice.
 # End Overview

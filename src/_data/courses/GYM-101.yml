@@ -11,7 +11,7 @@ sitemapExclude: true
 retired_message:
   1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a certificate for this course, but you can still view the lessons. <span class='text-wrap'>We recommend taking the course <a href='https://thegymnasium.com/courses/course-v1:GYM+109+0/about'>Responsive Web Design Fundamentals</a> (and earning a certificate) instead.</span>"
 url: /courses/GYM/101/0/about
-img: /img/courses/gym-101.svg
+img: /img/courses/svg/gym-101.svg
 topic: "Development"
 description: "This course has been retired."
 description_orig: "In this course, you’ll learn best practices for building responsive websites that adapt to different devices and user behaviors."

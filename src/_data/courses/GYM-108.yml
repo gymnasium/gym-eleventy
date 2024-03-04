@@ -8,7 +8,7 @@ tags:
   - full-course
 live: true
 url: /courses/course-v1:GYM+108+0/about
-img: /img/courses/gym-108.svg
+img: /img/courses/svg/gym-108.svg
 topic: "Development"
 subtopics:
   - label: "JavaScript"

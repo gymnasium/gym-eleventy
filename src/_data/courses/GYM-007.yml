@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/GYM/007/0/about
-img: /img/courses/gym-007.svg
+img: /img/courses/svg/gym-007.svg
 topic: "Development"
 description: "Learn some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes."
 instructor: jkramer
