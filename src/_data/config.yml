@@ -102,51 +102,51 @@ footer:
           href: https://www.linkedin.com/school/gymnasium/
           target: _blank
           rel: noopener
+          alt: LinkedIn “in” icon.
           src: /png/icon-linkedin-4x.png
           srcset: /svg/icon-linkedin.svg
-          alt: LinkedIn “in” icon.
         - label: YouTube
           href: https://www.youtube.com/AquentGymnasium
           target: _blank
           rel: noopener
+          alt: YouTube play button icon.
           src: /png/icon-youtube-4x.png
           srcset: /svg/icon-youtube.svg
-          alt: YouTube play button icon.
         - label: Medium
           href: https://medium.com/gymnasium
           target: _blank
           rel: noopener
+          alt: Medium ellipsis (dot, oval, thin oval) icon.
           src: /png/icon-medium-4x.png
           srcset: /svg/icon-medium.svg
-          alt: Medium ellipsis (dot, oval, thin oval) icon.
         - label: Threads
           href: https://www.threads.net/@aquent_gymnasium
           target: _blank
           rel: noopener
+          alt: Threads ampersand-esque icon.
           src: /png/icon-threads-4x.png
           srcset: /svg/icon-threads.svg
-          alt: Threads ampersand-esque icon.
         - label: Instagram
           href: https://www.instagram.com/aquent_gymnasium/
           target: _blank
           rel: noopener
+          alt: Instagram camera icon.
           src: /png/icon-instagram-4x.png
           srcset: /svg/icon-instagram.svg
-          alt: Instagram camera icon.
         - label: Facebook
           href: https://www.facebook.com/aquentgymnasium/
           target: _blank
           rel: noopener
+          alt: Facebook “f” icon.
           src: /png/icon-facebook-4x.png
           srcset: /svg/icon-facebook.svg
-          alt: Facebook “f” icon.
         - label: GitHub
           href: https://github.com/gymnasium
           target: _blank
           rel: noopener
+          alt: GitHub Octocat silhouette icon.
           src: /png/icon-github-4x.png
           srcset: /svg/icon-github.svg
-          alt: GitHub Octocat silhouette icon.
     - title: Affiliated Sites
       links:
         - label: Aquent
@@ -169,6 +169,75 @@ footer:
           href: https://aquentscout.com
           target: _blank
           rel: noopener
+  aside:
+    - title: Platforms
+      img:
+        base_path: /img/brand/png/
+      links:
+        - href: https://openedx.org
+          alt: Powered by Open edX.
+          src: edx-openedx-logo-tag-dark.png
+          srcset:
+          width: 175
+          height: 70
+        - href: https://docs.tutor.overhang.io
+          alt: Runs on Tutor.
+          src: tutor-logo.png
+          srcset:
+          width: 125
+          height: 24
+    - title: Awards
+      img:
+        base_path: /img/footer/logos/
+      links:
+        - href: https://americanstaffing.net/posts/2020/10/01/asa-honors-best-work-based-learning-programs/
+          alt: American Staffing Association Elevete Awards.
+          src: asa-elevate-awards.png
+          srcset:
+          width: 254
+          height: 170
+    - title: Press
+      img:
+        base_path: /img/footer/logos/
+      links:
+        - href: https://www.fastcompany.com/3024661/hacking-hack-schools-to-make-them-work
+          alt: Fast Company logo.
+          src: fast-company.svg
+          srcset: fast-company.svg
+          width: 223
+          height: 32
+        - href: https://www.forbes.com/sites/sap/2015/02/23/hate-formal-career-training-go-guerrilla-on-it/
+          alt: Forbes logo.
+          src: forbes.svg
+          srcset: forbes.svg
+          width: 128
+          height: 32
+        - href: https://www.inc.com/issie-lapowsky/how-moocs-training-tomorrow-workforce.html
+          alt: Inc logo.
+          src: inc.svg
+          srcset: inc.svg
+          width: 93
+          height: 32
+        - href: https://www.lemonde.fr/emploi/article/2014/06/30/les-firmes-americaines-recrutent-dans-les-mooc_4448062_1698637.html
+          alt: Le Monde .fr logo.
+          src: le-monde-fr.svg
+          srcset: le-monde-fr.svg
+          width: 186
+          height: 32
+        - href: https://www.foxbusiness.com/features/training-workers-the-netflix-way-moocs-in-the-job-industry
+          alt: Fox Business logo.
+          src: fox-business.svg
+          srcset: fox-business.svg
+          width: 64
+          height: 32
+  a:
+    attr:
+      target: _blank
+      rel: noopener
+  img:
+    attr:
+      decoding: async
+      fetchpriority: low
 feeds:
   blog: https://medium.com/feed/gymnasium
 logos:
@@ -179,12 +248,6 @@ logos:
     black:
       src: /img/brand/png/gymnasium-logo-black-lg.png
       srcset: /img/brand/svg/gymnasium-logo-black.svg
-  openedx:
-    src: /img/brand/png/edx-openedx-logo-tag-dark.png
-    alt: Powered by Open edX.
-  tutor:
-    src: /img/brand/png/tutor-logo.png
-    alt: Runs on Tutor.
 colors:
   primary: "#0077c8"
   secondary: "#ff5f14"
