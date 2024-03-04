@@ -26,25 +26,15 @@ skill_level: "Intermediate"
 # Begin Overview
 overview:
   intro:
-    heading:
     description:
   preview:
-    heading:
     video_id:
   about:
-    heading:
     description:
   outline:
-    heading:
     list:
   prerequisites:
-    heading:
     list:
   requirements:
-    heading:
     list:
-  audience:
-    heading:
-  instructor:
-    heading:
 # End Overview

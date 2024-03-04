@@ -32,26 +32,18 @@ overview:
     description: >
       <strong><cite>jQuery Building Blocks</cite></strong> will teach you 5 easy techniques for adding interactivity to your web pages. By the end of the course, you’ll be able to add features and style to your web pages, from simple animations to complex dynamic content.
   preview:
-    heading: Course Preview
     video_src: https://www.youtube.com/embed/ZvBf89VaMJI?list=PL0Y6L6nQtNzeGtsX5_rVuf2TUz709ybIk
   about:
     heading: 5 Ways To Cut Your Web Development Time In Half
     description: >
       In this practical introduction to the technology, students will learn how to use jQuery to create a variety of visual effects, how to add complex, fully-functional widgets (such as an image carousel) to a page, how to work with and customize jQuery plug-ins, how to handle “events,” and how to pull in data for use in a web page or application. In addition to learning these specific techniques, students will also walk away with a framework for figuring out how jQuery can help them solve any development challenges they might face.
   outline:
-    heading: Course Outline
     list:
       - heading: 'Lesson 1: Welcome to jQuery'
         description: > 
           This lesson outlines the course and gives a brief introduction to jQuery. Learn how jQuery fits into the context of web technologies and has evolved as a solution for adding interactivity to your pages in the least painful and most efficient way possible. This lesson provides an overview of the five projects covered in this course and introduces you to jQuery selector syntax, as well as how to use a browser console for interactive “sleuthing” of web page code.
   prerequisites:
-    heading:
     list:
   requirements:
-    heading:
     list:
-  audience:
-    heading:
-  instructor:
-    heading:
 # End Overview
