@@ -99,6 +99,12 @@
     margin-top: 1.6rem;
     margin-bottom: 1.6rem;
 
+    @include breakpoint(large, min) {
+      & {
+        justify-content: space-between;
+      }
+    }
+
     section {
       padding: 0;
     }
@@ -141,14 +147,21 @@
       margin-top: -0.25rem;
     }
 
+    [src*="11ty"] {
+      max-width: 4.75rem;
+      filter: grayscale(1) brightness(0.606); // Faux #999
+      margin: -1rem;
+    }
+
     [src*="asa"] {
       max-width: 7.375rem;
       filter: grayscale(1) brightness(0.84); // Faux #999 (Elevate)
       margin: -2rem -0.4rem -0.5rem;
     }
 
+    // TODO: Update layout
     section:first-child {
-      padding-right: 1.25rem;
+      padding-right: 2.25rem;
     }
 
     section:last-child {

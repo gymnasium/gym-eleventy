@@ -172,7 +172,7 @@ footer:
   aside:
     - title: Platforms
       img:
-        base_path: /img/brand/png/
+        base_path: /img/footer/logos/
       links:
         - href: https://openedx.org
           alt: Powered by Open edX.
@@ -180,12 +180,12 @@ footer:
           srcset:
           width: 175
           height: 70
-        - href: https://docs.tutor.overhang.io
-          alt: Runs on Tutor.
-          src: tutor-logo.png
+        - href: https://www.11ty.dev
+          alt: 11ty or eleventy.
+          src: 11ty-logo-400x400.png
           srcset:
-          width: 125
-          height: 24
+          width: 400
+          height: 400
     - title: Awards
       img:
         base_path: /img/footer/logos/
@@ -248,6 +248,13 @@ logos:
     black:
       src: /img/brand/png/gymnasium-logo-black-lg.png
       srcset: /img/brand/svg/gymnasium-logo-black.svg
+  tutor:
+    - href: https://docs.tutor.overhang.io
+      alt: Runs on Tutor.
+      src: tutor-logo.png
+      srcset:
+      width: 125
+      height: 24
 colors:
   primary: "#0077c8"
   secondary: "#ff5f14"
