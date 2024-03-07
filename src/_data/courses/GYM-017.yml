@@ -27,17 +27,33 @@ lessons_duration: "Under 1 hour"
 completion_duration: "Up to 1 hour"
 skill_level: "Beginner"
 # Begin Overview
-overview:
-  intro:
-    description:
-  preview:
-    video_id:
-  about:
-    description:
-  outline:
-    list:
-  prerequisites:
-    list:
-  requirements:
-    list:
+intro: >
+  <b><cite>Design Systems for Everyone</cite></b> will teach you how to anticipate many of the common challenges faced when creating a design system and equip you with some helpful ways to guide your work.
+preview_video_src:
+about: >
+  <p>Working with design systems can be challenging. It involves a lot of consensus-building, learning new skills, and developing new ways of working. As more organizations are integrating design systems into their culture, understanding how to work with these systems is more important than ever before. In this course, you will walk through the process of building a design system from beginning to end with helpful exercises along the way. By the end, you’ll know how to conduct a pattern inventory,  how to evolve a pattern library into an effective design, and how to measure whether your design system is working.</p>
+outline:
+  - label: "Chapter 1: Introduction"
+    description: "Discover the key concepts of design systems and, in particular, how they can benefit organizations. You’ll also learn the goals for this course as well as which topics are covered."
+  - label: "Chapter 2: What Is a Design System?"
+    description: "Explore the definition and history of design systems by looking at classic examples from print design as well as modern examples of digital products. You’ll also learn the difference between design patterns and design systems."
+  - label: "Chapter 3: Why Do We Need Design Systems?"
+    description: "Learn some of the reasons why design systems are so important and, more specifically, who design systems are for. You’ll take a look at how designers, developers, and product managers typically interact with design systems and how to evaluate if the system is addressing their needs."
+  - label: "Chapter 4: Conducting a Pattern Inventory"
+    description: "Walk through the process of how to take inventory of the design patterns on a website or digital product and then get some practice doing it on your own or with colleagues."
+  - label: "Chapter 5: Naming and Organizing Your Design Patterns"
+    description: "Examine techniques and strategies for naming the design patterns you’ve inventoried, as well as how to organize them into clear, sensible structures. Specifically, you’ll learn how to create an effective naming system that helps people find the pattern they need when they need it."
+  - label: "Chapter 6: Creating a Pattern Library"
+    description: "Explore the world of automation in this brief tour of pattern management software that includes a look at Storybook and Fractal, two popular solutions for managing the user interface components in your pattern library."
+  - label: "Chapter 7: Evolving Your Pattern Library Into a Design System"
+    description: "Learn strategies and best practices for putting your pattern library to work as you begin to build the foundation for a robust design system."
+  - label: "Chapter 8: Defining the Shape of Your Design System"
+    description: "Define the scope and direction of your design system as you learn how to research the needs of your audience. Specifically, you’ll be learning the difference between contributors and consumers and, most importantly, how to determine if your design system is working as intended."
+  - label: "Chapter 9: Common Myths About Design Systems"
+    description: "Examine a few of the assumptions that people and organizations make about design systems. In particular, you’ll learn best practices on topics such as when to release updates to your design system and how to build a system that incorporates the values of an organization."
+  - label: "Chapter 10: Next Steps"
+    description: "Review the concepts covered in this course including strategies for naming and organizing patterns and defining the shape of your design system. You’ll also be given four specific steps for taking your design systems work to the next level."
+prerequisites:
+  - label: Mac or Windows desktop or laptop
+  - label: A passion for learning about design systems
 # End Overview
