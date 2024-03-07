@@ -35,30 +35,52 @@ preview_video_src:
 about: >
   <p>In this course you will learn how to get up and running with Bootstrap 3 in a matter of minutes and build a responsive layout that looks great on multiple screen sizes and devices. We will focus specifically on grid layout in Bootstrap with an emphasis on prototyping. By the end of the course you will be able to use Bootstrap for virtually any layout you can imagine and have a strategy for moving it quickly into production.</p>
 outline:
-  - label: "Chapter 1: Introduction"
-    description: "An overview of Bohemian Sketch, the digital design tool for macOS. You’ll get set up with the lesson files for the course as well as receive a brief overview of the role of Sketch in User Experience (UX) and User Interface (UI) projects."
-  - label: "Chapter 2: Workspace and Artboards"
-    description: "Dive right in and begin to learn the Sketch workspace (updated for Sketch 52). You’ll be using Sketch’s Artboard feature in order to begin building a series of screens for a mobile website."
-  - label: "Chapter 3: Layer Styles and Text Styles"
-    description: "Discover how Sketch’s Layer Styles and Text Styles allow you to control the appearance of your artwork and text from a central location and how this will improve your workflow."
-  - label: "Chapter 4: Using Symbols: The Basics"
-    description: "Using Symbols allows you to synchronize multiple elements within your project. Understanding the role of Symbols is critical to mastering Sketch. In this chapter you’ll learn the basics of creating, applying, and modifying Symbols."
-  - label: "Chapter 5: Nested Symbols"
-    description: "Nested Symbols take the power of Symbols to the next level and allow you more control of your design elements. with greater control also comes greater complexity, so you’ll want to follow along closely."
-  - label: "Chapter 6: Group & Symbol Resizing"
-    description: "Continue your tour of Symbols in Sketch with Group & Symbol Resizing. This useful feature allows you to specify how multiple elements within a Group or Symbol react when resized. If you’re creating prototypes for responsive websites, this chapter has your name on it."
-  - label: "Chapter 7: Using Templates & Libraries"
-    description: "You’ll learn how to create and use Templates in order to save time when starting a new project. In addition, you’ll discover how to use Libraries in order to access (or share) commonly used Symbols across a project — an extremely useful feature for design and development teams."
-  - label: "Chapter 8: Working with Pages"
-    description: "Pages allows you to organize your prototypes into logical sections and make navigating your project a lot easier. You’ll learn how to create, delete, and organize your Pages in an efficient manner."
-  - label: "Chapter 9: Designing with Data"
-    description: "New as of Sketch 52, the Data feature allows you to populate your prototypes with realistic data values, including names, cities and images. You’ll learn how to use Sketch’s default data sources as well as how to create and generate custom data sources."
-  - label: "Chapter 10: Sketch Plugins"
-    description: "Plugins extend the functionality of the Sketch application and are part of why the program is so popular for UX Designers. You’ll learn how to locate and add Plugins to Sketch and how to take advantage of the rich ecosystem of Plugins that have been created by third-party developers."
-  - label: "Chapter 11: Exporting"
-    description: "Exporting assets is a task that few designers look forward to, but Sketch manages to make the process fun and rewarding. You’ll learn how to export wireframes/mockups to PDF, learn the difference between exporting layers vs. slices and discover other cool and useful exporting tips."
-  - label: "Chapter 12: Adding Interactivity in Sketch"
-    description: "Sketch now allows you to turn your static Artboards into interactive ones. Discover how to organize your projects, add hotspots, create basic animations, and export your prototypes for collaborative purposes."
+  - label: "Chapter 1: Lesson Intro"
+    description: >
+      In this video, you will learn some of the pros and cons of working with
+      Bootstrap as well as the new features introduced in Boostrap 3-in
+      particular the responsive layout capabilities.
+  - label: "Chapter 2: Working With Lesson Files In Codepen"
+    description: >
+      You will recieve a brief introduction to Codepen and walk through the
+      simple steps to begin working with the lesson files used throughout this
+      course.
+  - label: "Chapter 3: Working with Rows and Columns in Bootstrap"
+    description: >
+      Learn the basics of Bootstrap's 12 grid system and how to create rows and
+      columns in particular.
+  - label: "Chapter 4: Using All Four Breakpoints for Layout"
+    description: >
+      You will begin to experiment and understand the 4 primary breakpoints that
+      are part of Bootstrap 3's responsive layout system.
+  - label: "Chapter 5: Starting Your Mobile Layout"
+    description: >
+      You will begin adding content and working within Bootstrap's
+      "mobile-first" single-column grid layout.
+  - label: "Chapter 6: A Two-Column Mobile Layout"
+    description: >
+      Just because a layout is "mobile" doesn't mean everything has to be a
+      single column. Learn how to divide the mobile layout you created in the
+      previous chapter into two columns.
+  - label: "Chapter 7: Using Offsets In A Desktop Layout"
+    description: >
+      In this chapter you'll begin to address how to adapt your layout for wider
+      screens; in particular, you will focus on layout for "desktop" screens. In
+      order to accomplish this, you will look at the powerful "offset" styles in
+      Bootstrap.
+  - label: "Chapter 8: Creating Advanced Layouts with Nested Rows"
+    description: >
+      Typically, the more room you have to work with on a screen, the more
+      complex your layout can be. In order to achieve advanced layouts with
+      multiple columns you'll need to learn how to use Bootstrap's nesting
+      capabilities.
+  - label: "Chapter 8: Icing On The Cake"
+    description: >
+      This lesson focuses on the grid layout features in Bootstrap, but there
+      are a number of other convincing reasons to use Bootstrap for quick and
+      easy layout design. In this chapter, you'll take a look at some of those
+      reasons, including the ability to add your custom CSS and button styling,
+      as well as an introduction to Helper Classes and Responsive Utilities.
 prerequisites:
   - label: A basic knowledge of HTML and CSS is recommended
   - label: Familiarity with responsive design principles, specifically the use of CSS media queries is recommended
