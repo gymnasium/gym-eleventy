@@ -27,17 +27,31 @@ lessons_duration: "1 hour"
 completion_duration: "Up to 1.5 hours"
 skill_level: "Beginner"
 # Begin Overview
-overview:
-  intro:
-    description:
-  preview:
-    video_id:
-  about:
-    description:
-  outline:
-    list:
-  prerequisites:
-    list:
-  requirements:
-    list:
+intro: >
+  <b><cite>Design Systems for Product Managers</cite></b> will teach you strategies for defining and building design systems more collaboratively. Specifically, you will learn the overall arc of a design systems initiative and how to guide a team toward success.
+preview_video_src:
+about: >
+  <p>Digital teams have embraced increasingly modular design practices as the web continues to become more sophisticated and complex. As more organizations adopt design systems into their culture, understanding how to manage the people working with these systems is more important than ever before. In this course, you will get a high-level overview of how people work with pattern libraries and design systems and learn some strategies for making that process as productive as possible. By the end, you’ll be able to help members of your design and implementation teams work better together and build a successful and well-maintained design system as a result.</p>
+outline:
+  - label: "Chapter 1: Introduction"
+    description: "Learn how design systems can help provide structure for the direction of an organization’s digital products."
+  - label: "Chapter 2: How Design Systems Get Made"
+    description: "Discover the difference between design patterns and design systems and learn the right questions to ask as you built the foundation of an effective design system."
+  - label: "Chapter 3: How Teams Work with Your Design System"
+    description: "Explore some of the ways in which different teams might interact with your design system and learn some strategies for making that process as productive as possible. Specifically, you’ll be examining the difference between the contributors and consumers of a design system, and look at a few of the models for design system governance."
+  - label: "Chapter 4: Defining Your Design System’s Purpose and Principles"
+    description: "Examine why it’s so important to understand your design system’s purpose and how to begin defining clear, well-understood design principles to keep your system moving forward. In particular, you’ll learn what changes are worth incorporating into your design system and how to integrate your team into the process."
+  - label: "Chapter 5: New Workflows for Design Systems Teams"
+    description: "Discover how design and implementation teams can work more closely together. Specifically, you’ll learn about the collaborative design review process and how prototyping across desktop and mobile devices is critical to the development of a modern design system."
+  - label: "Chapter 6: Defining Your Design System’s Roadmap"
+    description: "Learn how to plan for your design system’s future health and success by following the steps in this chapter. Roadmap questions you’ll explore include: how to plan for releasing new components or deprecating old ones and how to best communicate changes to users."
+  - label: "Chapter 7: Improving Design System Adoption"
+    description: "Explore the four characteristics of a thriving design system to help you answer the question of whether your design system is working. In particular, you’ll learn how to keep your system visible and relevant, and perhaps most importantly, how to create clear channels for receiving feedback from your users."
+  - label: "Chapter 8: Common Assumptions About Design Systems"
+    description: "Discover how problems with design systems can be avoided by digging a little deeper into how they work. Specifically, you’ll be learning how to think and talk about your system as a platform instead of a project."
+  - label: "Chapter 9: Laying the Groundwork for Your Design System Today"
+    description: "Review the concepts covered in this course including the importance of defining a shared language with your team and exploring governance models and contribution workflows. You’ll also be given three specific steps for taking your design systems work to the next level."
+prerequisites:
+  - label: Mac or Windows desktop or laptop
+  - label: A passion for learning about design systems
 # End Overview
