@@ -3,10 +3,46 @@
 // | -------------------------------------------------------------
 
 @use 'breakpoints' as *;
+@use 'variables' as *;
 
-// TODO: consider better naming conventions
-.layout-1fr-2fr {
+// Any class containing `grid-` will automatically display as a grid
+[class*="grid-"] {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 2.6em;
+  gap: $grid-gap;
 }
+
+// Used in hero, course about MFE, courses index
+.grid-col-1-2 {
+  @media (min-width: 75em) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+// TODO: consider improved stacking/breakpoints, etc
+.grid-col-3 {
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  
+
+  // TODO: Check breakpoints for consistency
+  @media (min-width: 38em) and (max-width: 57em) {
+    :first-child {
+      grid-column: span 2; // TODO: check `span all` support
+    }
+  }
+}
+
+// TODO: refine as necessary
+.grid-col-4 {
+  // see home page text for the implementation
+  gap: $grid-gap;
+
+  @media (min-width: 38em) {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+
+  @media (min-width: 58em) {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+}
+
+
