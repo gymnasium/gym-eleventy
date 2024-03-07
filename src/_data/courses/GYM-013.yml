@@ -26,7 +26,7 @@ completion_duration: "Up to 4 hours"
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
-  <b><cite>3D Modeling for Virtual Reality Creation</cite></b>
+  <b><cite>3D Modeling for Virtual Reality Creation</cite></b> will teach you the basics of Autodesk Maya to create 3D-generated imagery for use in virtual reality production.
 preview_video_src:
 about: >
   <p>This course will teach you how to navigate through Maya's complex interface and then use the core modeling, animation, and rendering tools in order to build a 3D-animated model. Additionally, you will learn how to install a special VR camera plugin into Maya in order to export your projects for virtual reality environments as well as 360˚ video formats.</p>
