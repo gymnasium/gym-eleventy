@@ -27,17 +27,30 @@ lessons_duration: "1 hour"
 completion_duration: "Up to 2 hours"
 skill_level: "Intermediate"
 # Begin Overview
-overview:
-  intro:
-    description:
-  preview:
-    video_id:
-  about:
-    description:
-  outline:
-    list:
-  prerequisites:
-    list:
-  requirements:
-    list:
+intro: >
+  <b><cite>Introduction to Node.js</cite></b> demonstrates the benefits of using Node.js for building lightweight, scalable web applications. This is a hands-on course that will walk you through the process of building a simple to-do list application.
+preview_video_src:
+about: >
+  <p>This course will teach you how to install the various components needed to get you up and running with Node.js including how to configure a local web server, how to leverage the Node Package Manager (NPM) to make web development easier and how to use a template engine to dynamically generate HTML within your web applications.</p>
+outline:
+  - label: "Chapter 1: Overview"
+    description: "Begin your tour of what makes Node.js unique and popular among front-end and back-end developers. You’ll take a look at the technical advantages of Node and why these have translated into business advantages for major companies across the Web who have chosen the Node environment to build complex web applications."
+  - label: "Chapter 2: Developing with Node"
+    description: "Learn how to install Node.js on your system using the command line as well as how to access the lesson files for this course. Additionally, you’ll walk through the steps of installing and connecting to a server using the ‘HTTP’ package."
+  - label: "Chapter 3: Installing Packages & NPM"
+    description: "Discover how to take advantage of Node Package Manager (NPM), a command-line tool that allows you to install specific software modules from a global repository. You will be using it specifically to install Express.js, a framework that delivers a number of powerful features for web and mobile applications."
+  - label: "Chapter 4: Working with a Template Engine"
+    description: "Explore the benefits of a template engine, a tool for generating reusable HTML structure and content. You’ll be installing the popular EJS template engine and then using it build the tasks within your web application."
+  - label: "Chapter 5: Working with HTML Forms"
+    description: "Bring your sample project to life in this chapter as you create interactive text input fields within a simple web form. You’ll accomplish this through the use of the Express.js ‘body-parser’ package which will be used to handle form data."
+  - label: "Chapter 6: Developing Your Skills"
+    description: "Review the benefits and power of developing with Node.js, and we’ll guide you towards additional resources that will encourage and inspire you to learn more about developing with Node.js."
+prerequisites:
+  - label: A familiarity with using the command line in Windows and/or the terminal in macOS
+  - label: Basic knowledge of writing JavaScript syntax by hand
+  - label: General understanding of web technologies such as HTML, scripting languages such as PHP, and web forms
+requirements:
+  - label: Mac, Windows or Linux
+  - label: A text editor (We suggest <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
+  - label: System privileges allowing you to install local software
 # End Overview
