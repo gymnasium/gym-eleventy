@@ -29,17 +29,73 @@ lessons_duration:
 completion_duration:
 skill_level: "Beginner"
 # Begin Overview
-overview:
-  intro:
-    description:
-  preview:
-    video_id:
-  about:
-    description:
-  outline:
-    list:
-  prerequisites:
-    list:
-  requirements:
-    list:
+intro: >
+  <b><cite>Writing For Web &amp; Mobile</cite></b> is for anyone who has to write content that users see. Designers, developers, marketing folks, copywriters, and product/project managers can all benefit from taking a data-driven approach to their content decision-making.
+preview_video_src: https://www.youtube.com/embed/videoseries?list=PL0Y6L6nQtNzew8j6uFJNIyLJ9tbbUp9Fk
+about: >
+  <p>If you’re looking for a course on how to “spice up” existing content with flowery language, this isn’t it. We’re going to use real data from tools like Google Analytics and Google Keyword Planner to help us make content decisions. Some people might think this is boring and uncreative, but our goal is to be “authentic” rather than “viral,” and rest assured, the two aren’t mutually exclusive — as you’ll soon see for yourself!</p>
+  <p>Here are 6 things you’ll get from this course:</p>
+  <ul>
+    <li>Case studies of companies whose content is compelling and builds trust</li>
+    <li>Tools for finding the “right” words (Hint: We’ll be researching our audience!)</li>
+    <li>How to distill audience research into a Language Board that guides your writing</li>
+    <li>A methodology for doing Content-First UX Design for any device</li>
+    <li>Practice writing compelling content for email messages and blog posts</li>
+    <li>Content, context, and device considerations for desktop versus mobile</li>
+  </ul>
+outline:
+  - label: "Lesson 1: Seeing Content As Conversation"
+    description: >
+      Train your inner copywriter to begin recognizing Reliable, Authentic, and
+      Direct content which we refer to in this course as "Lean Content." We will
+      review case studies of companies whose content is compelling and, as a
+      result, builds trust. Additionally, we will define the difference between
+      Content Strategy and Content Marketing and discuss the importance of how
+      to measure engagement and conversions.
+  - label: "Lesson 2: Finding The Content Our Customers Want"
+    description: >
+      To help find the “right” words for your content you need to study your
+      customer’s natural (organic) language. Writing content based on the words
+      that customers use helps produce content that your customers will respond
+      to. We will use Google Analytics to study the analytics of an existing
+      website in order to understand the content customers want. We will use
+      Google Keyword Planner to study the keywords customers are using on search
+      engines. We will also look at other tools such as organic search results
+      and social networks.
+  - label: "Lesson 3: Creating A Content Workbook"
+    description: >
+      A Content Workbook is a simple document (similar to an outline) that
+      serves as a content roadmap for your website or mobile project. The
+      Workbook incorporates audience research/data, uses the language we want to
+      use with customers, and provides real content that will eventually be
+      useful for the user experience process. We will walk through the process
+      of building a Content Workbook from scratch in Google Docs.
+  - label: "Lesson 4: Using Data To Write A Language Board"
+    description: >
+      A Language Board represents the core conversation that a company wants to
+      have with its highest value target customers. It’s built upon the existing
+      research and content recommendations and is where “real” content starts to
+      be written. We will walk through the process of building a Language Board
+      in Google Docs.
+  - label: "Lesson 5: Content-First UX Design With Conversation Maps"
+    description: >
+      A Conversation Map is a text-only representation of an end-to-end
+      transaction and includes the messaging a user will see from start to
+      finish. From a practical perspective, the Conversation Map becomes the
+      labels, callouts and microcopy that your team needs to design and develop
+      your website or mobile app. We will build upon the previous lessons and
+      build a Conversation Map that will be ready to hand off to developers
+      and/or others on a project team.
+  - label: "Lesson 6: Making Content-First Design Work In Real Life"
+    description: >
+      In this lesson, we take a look at how the entire process covered in the
+      first five lessons actually works by walking through a case study of the
+      Annie E. Casey Foundation. All the concepts introduced in the course
+      including the Content Workbook, Language Board, and Conversation Maps will
+      be covered in depth.
+prerequisites:
+  - label: You will have an easier time if you grasp basic English grammar and are willing to use data (analytics) to make content decisions.
+requirements:
+  - label: Mac or PC
+  - label: A Google Analytics or Google Drive account is recommended although not technically required.
 # End Overview
