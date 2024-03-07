@@ -27,17 +27,95 @@ lessons_duration: "6 hours"
 completion_duration: "Up to 24 hours"
 skill_level: "Beginner"
 # Begin Overview
-overview:
-  intro:
-    description:
-  preview:
-    video_id:
-  about:
-    description:
-  outline:
-    list:
-  prerequisites:
-    list:
-  requirements:
-    list:
+intro: >
+  <b><cite>Responsive Web Design</cite></b> will teach you best practices for building responsive websites that adapt to different devices and user behaviors.
+preview_video_src: https://www.youtube.com/embed/n0SHr9Ig-6I?list=PL0Y6L6nQtNzdxIdocpFi92_B1t0IAQ6bf
+about: >
+  <p>At the end of this course you’ll have a responsive portfolio website you’ve built from scratch. You will learn the essential elements of responsive web design: designing with ﬂexible grids; creating layouts which incorporate typography and fluid media; using CSS media queries; responsive web typography; the Mobile First approach; in-browser design, tools, and resources; and Responsive Web Design workﬂows.</p>
+outline:
+  - label: "Lesson 1: What Is Responsive Web Design?"
+    description: >
+      An introduction to Responsive Web Design. We'll explore examples and
+      discuss context, but you won't begin coding yet.
+  - label: "Lesson 2: Setting The Stage With HTML5 And CSS3"
+    description: >
+      You will learn the HTML5 and CSS3 syntax that is the most relevant to the
+      sample portfolio site that is being used for the course. Coding begins in
+      this lesson, and if you’re confident in your HTML5 and CSS3 knowledge you
+      could skip to Chapter 3, but be aware that the structural logic of the
+      final responsive layout begins here.
+  - label: "Lesson 3: Mobile First"
+    description: >
+      Learn about the Mobile First approach, which forces designers and
+      developers to focus on the content and user experience of their websites
+      in all contexts. This chapter involves the coding of a single column
+      layout designed for the smartphone.
+  - label: "Lesson 4: CSS3 Media Queries"
+    description: >
+      Understand how media queries are used to adjust the design and layout of a
+      website as the viewport changes. From a coding perspective you will be
+      adding media queries to your single column smartphone layout and setting
+      the stage for the eventual fluid grid layout.
+  - label: "Lesson 5: Responsive Typography"
+    description: >
+      The heart of any website is content, and more specifically: text. This
+      lesson discusses the challenges of managing the properties of line-height,
+      line length, and font-size in a responsive layout. This lesson represents
+      a deep dive into the code as you create a baseline grid and typographic
+      scale that will serve as a foundation for your page.
+  - label: "Lesson 6: Using A Fluid Grid"
+    description: >
+      Learn about the role of grid layout in web design in general and
+      responsive layout in particular. Within the code, you will build upon your
+      core mobile layout to create a flexible three-column design with
+      consistent gutters.
+  - label: "Lesson 7: Responsive Layout: Stay Flexible"
+    description: >
+      Page components such as tables and forms work well on wider desktop
+      screens, but present challenges on the smaller screen. In this lesson you
+      will explore how to look for solutions to common layout problems using
+      responsive design patterns. You will get a chance to solve one particular
+      problem as you integrate a responsive form into your existing design.
+  - label: "Lesson 8: Responsive Images"
+    description: >
+      Learn how to add images that work across the range of devices from the
+      smallest phone to the largest high-definition (Retina) displays. In the
+      coding example, you will learn a few techniques (including the Picturefill
+      technique) that deliver the highest-quality image to your users while
+      simultaneously avoiding performance penalties.
+  - label: "Lesson 9: Responsive Navigation Methods"
+    description: >
+      Take a look at the unique challenges and potential solutions involved with
+      responsive navigation. In the code, you will get a chance to create a
+      responsive toggle menu that conserves space on smaller screens and expands
+      to full size when possible.
+  - label: "Lesson 10: Optimization And Performance"
+    description: >
+      When you begin treating performance as another component of design such as
+      layout or color, things fall into place. In this lesson, you will identify
+      potential performance issues with your site using free online tools and
+      then explore ways to optimize your assets in order to improve performance.
+  - label: "Lesson 11: Grid Systems"
+    description: >
+      Now that you have learned how to build a responsive layout from scratch,
+      it’s time to start looking at grid systems as a way to rapidly prototype
+      responsive sites and/or begin using a grid system for production. You will
+      walk through an overview of popular systems including Zurb Foundation,
+      Twitter Bootstrap, and Gridset.
+  - label: "Lesson 12: Responsive Web Design Workflow"
+    description: >
+      Putting it all together, this lesson compares the classic workflow of a
+      web designer to that of someone who designs and builds responsively.
+      Concepts, tools, and best practices will be discussed. Specifically, you
+      will get a quick look at the benefits of using a CSS preprocessor such as
+      Sass.
+prerequisites:
+  - label: "You will be asked to understand and write code in order to learn and practice responsive techniques with both HTML and CSS."
+  - label: "Knowledge of graphic design software: Minimal use of Photoshop, Fireworks, or any graphic design tool may be required to complete lesson assignments."
+  - label: "Experience designing for the web: Knowledge of designing for the web and its components, creating image assets, and styling HTML with CSS to create the full web experience."
+  - label: "An understanding of device differences: You should be familiar with the differences among various systems, devices, and web browsers."
+requirements:
+  - label: Mac or Windows desktop or laptop
+  - label: A text editor (We suggest <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
+  - label: Google Chrome web browser is recommended, although any modern browser with Developer Tools will suffice.
 # End Overview
