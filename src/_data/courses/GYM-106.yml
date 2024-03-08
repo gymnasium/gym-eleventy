@@ -44,7 +44,7 @@ outline:
     description: "You will walk through the thought process and tools used to develop this animated information graphic from beginning to end."
 prerequisites:
   - label: Some experience in the fundamentals and principles of design will be helpful to get the most out of this class. You should also have a general sense of current web technologies as well.
-  - label: Intermediate experience with at least one of the following technologies will be useful: Adobe Illustrator, HTML and CSS, JavaScript, Prototyping, Storyboarding or 3D software such as Maya.
+  - label: "Intermediate experience with at least one of the following technologies will be useful: Adobe Illustrator, HTML and CSS, JavaScript, Prototyping, Storyboarding or 3D software such as Maya."
 requirements:
   - label: Mac or Windows desktop or laptop
   - label: Google Chrome web browser
