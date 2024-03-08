@@ -43,10 +43,18 @@ prerequisites:
   - label: Basic to intermediate competency with HTML and CSS. Specifically, an understanding of how the DOM functions is helpful, as well as experience working with with complex CSS stylesheets.
   - label: Experience with a text editor (such as <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>, <a href="https://atom.io" target="_blank" rel="noopener">Atom</a>, <a href="https://www.sublimetext.com" target="_blank" rel="noopener">Sublime Text</a>, etc.)
   - label: Although not strictly required, a familiarity with our <a href="/courses/GYM/104/0/about" target="_blank" rel="noopener">JavaScript Foundations</a> course is highly recommended.
-requirements:
-  - label: Mac or Windows desktop or laptop
-  - label: A text editor (We suggest <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
-  - label: Google Chrome web browser
-  - >
-    In addition to the requirements listed above, there are a few supporting technologies that need to be installed on your system in order to follow along with the lesson files. The instructor covers how to install these on your own system in Lesson 1, Chapter 2, but we are providing the links here for your convenience: <a href="https://nodejs.org" target="_blank" rel="noopener">Node</a>, <a href="https://git-scm.com" target="_blank" rel="noopener">Git</a>, <a href="https://bower.io" target="_blank" rel="noopener">Bower</a>, <a href="https://gulpjs.com" target="_blank" rel="noopener">Gulp</a>.
+# Note: this section's content is an exception to the typical list we use. As such, we are providing the raw html instead.
+requirements: |
+  <ul>
+    <li>Mac or Windows desktop or laptop</li>
+    <li>Web browser</li>
+    <li>A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)</li>
+  </ul>
+  <p>In addition to the requirements listed above, there are a few supporting technologies that need to be installed on your system in order to follow along with the lesson files. The instructor covers how to install these on your own system in Lesson 1, Chapter 2, but we are providing the links here for your convenience.</p>
+  <ul>
+    <li><a href="https://nodejs.org" target="_blank" rel="noopener">Node</a></li>
+    <li><a href="https://git-scm.com" target="_blank" rel="noopener">Git</a></li>
+    <li><a href="https://bower.io" target="_blank" rel="noopener">Bower</a></li>
+    <li><a href="https://gulpjs.com" target="_blank" rel="noopener">Gulp</a></li>
+  </ul>
 # End Overview

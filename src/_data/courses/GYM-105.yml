@@ -93,8 +93,10 @@ outline:
       Annie E. Casey Foundation. All the concepts introduced in the course
       including the Content Workbook, Language Board, and Conversation Maps will
       be covered in depth.
-prerequisites:
-  - label: You will have an easier time if you grasp basic English grammar and are willing to use data (analytics) to make content decisions.
+# Note: this section's content is an exception to the typical list we use. As such, we are providing the raw html instead.
+# TODO: consider making this a bulleted item like the single prerequisite in GYM-005
+prerequisites: |
+  <p>You will have an easier time if you grasp basic English grammar and are willing to use data (analytics) to make content decisions.</p>
 requirements:
   - label: Mac or PC
   - label: A Google Analytics or Google Drive account is recommended although not technically required.

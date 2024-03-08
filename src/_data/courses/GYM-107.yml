@@ -45,8 +45,12 @@ outline:
 prerequisites:
   - label: Familiarity with the web
   - label: Experience with a text editor (such as <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>, <a href="https://atom.io" target="_blank" rel="noopener">Atom</a>, <a href="https://www.sublimetext.com" target="_blank" rel="noopener">Sublime Text</a>, etc.)
-requirements:
-  - label: Mac or Windows desktop or laptop
-  - label: A text editor (We suggest <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
-  - label: Google Chrome web browser
+# Note: this section's content is an exception to the typical list we use. As such, we are providing the raw html instead.
+requirements: |
+  <p>The requirements for this class are flexible and vary. Many of the assignments rely either on writing/sketching or using design software that you are familiar with. That being said, here’s what you’ll need:</p>
+  <ul>
+    <li>Mac or Windows desktop or laptop</li>
+    <li>A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)</li>
+    <li>Google Chrome web browser</li>
+  </ul>
 # End Overview

@@ -52,8 +52,12 @@ prerequisites:
   - label: 5+ Years professional graphic/web design experience (page layout, color, typography, visual communication).
   - label: Expertise with Adobe Photoshop, Illustrator, or InDesign, or equivalent graphic design software.
   - label: No coding experience required (in fact, if you know how to code, you might be bored).
-requirements:
-  - label: Mac or Windows desktop or laptop
-  - label: A text editor (We suggest <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
-  - label: Google Chrome web browser
+# Note: this section's content is an exception to the typical list we use. As such, we are providing the raw html instead.
+requirements: |
+  <p>The software requirements for this class are somewhat flexible. It makes no difference whether your computer setup is old or more modern, or whether you have the Adobe suite of design software or not. Many of the assignments can use whatever design software you are most familiar with. That being said, here's what you'll need:</p>
+  <ul>
+    <li>Mac or Windows desktop or laptop</li>
+    <li>A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)</li>
+    <li>Google Chrome web browser</li>
+  </ul>
 # End Overview
