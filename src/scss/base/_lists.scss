@@ -4,6 +4,7 @@
 
 @use 'breakpoints' as *;
 
+// TODO: revisit these contraptions, as Justin described them...
 nav ul {
   list-style: none linear-gradient(transparent, transparent);  // Fallback
   list-style: ""; // Re-add list semantics
@@ -74,4 +75,12 @@ ol.incremented {
       content: '';
     }
   }
+}
+
+// TODO: if we rename, be sure to search/replace everywhere (static, MFE, theme)
+.unstyled-list {
+  list-style: none linear-gradient(transparent, transparent);  // Fallback
+  list-style: ""; // Re-add list semantics
+  margin: 0;
+  padding-left: 0;
 }

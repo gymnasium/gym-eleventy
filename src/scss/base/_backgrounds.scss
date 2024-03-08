@@ -18,6 +18,7 @@
         }
 
         // TODO: determine if this is the best way to handle a 'full bleed' approach
+        // TODO: this full bleed breaks on small screens (see the home hero for an example
         &.full-bleed {
           box-shadow: -30rem 0 var(--#{$color}-#{$shade}), 30rem 0 var(--#{$color}-#{$shade}), -70rem 0 var(--#{$color}-#{$shade}), 70rem 0 var(--#{$color}-#{$shade}), -140rem 0 var(--#{$color}-#{$shade}), 140rem 0 var(--#{$color}-#{$shade});
         }

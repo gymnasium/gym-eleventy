@@ -9,13 +9,6 @@
     margin-top: 0;
   }
 
-  // hero styling (full compiled class name is`.home-hero`)
-  &-hero {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 2.6em;
-  }
-
   // top/bottom padding for each component of the home page
   article,
   section {
@@ -26,42 +19,5 @@
     h1 {
       text-align: center;
     }
-  }
-}
-
-
-
-.how-gymnasium-works {
-
-  ul {
-    list-style: none;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 2.6em;
-  }
-}
-
-.home-featured-courses {
-  ul {
-    list-style: none;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2.6em;
-  }
-}
-
-.home-find-work {
-
-}
-
-.as-seen-in {
-  ul {
-    list-style: none;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 2.6em;
   }
 }

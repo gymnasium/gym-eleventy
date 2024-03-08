@@ -3,7 +3,7 @@
   {%- if module.heading -%}
     <h2>{{ module.heading }}</h2>
   {%- endif -%}
-  <ul>
+  <ul class="grid-col-3 unstyled-list">
     {%- for item in module.items -%}
       {%- set id = item | upper -%}
       <li>

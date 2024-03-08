@@ -10,6 +10,7 @@ $colors: (
   secondary: (
     100: hsl(19, 100%, 54%), // #ff5f14
   ),
+  // TODO: consider remapping this from dark (100) to light (900)
   mono: (
     100: hsl(0 0% 100%), // white
     200: hsl(0 0% 92%), // #ebebeb

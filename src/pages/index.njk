@@ -10,12 +10,12 @@ meta:
   bodyClass: home
 ---
 {%- set hero = heros[featured['home']['hero']] -%}
-{%- set heroClass = "home-hero bg-mono-800 full-bleed" -%}
+{%- set heroClass = "home-hero bg-mono-800 full-bleed grid-col-1-2" -%}
 {%- include 'modules/hero.njk' -%}
 
 <section class="how-gymnasium-works">
   <h1>How Gymnasium Works</h1>
-  <ul>
+  <ul class="grid-col-4 unstyled-list">
     <li>
       <h2>Free Online Courses</h2>
       <p>Our courses are taught by industry experts. You can enroll anytime,
@@ -48,17 +48,4 @@ meta:
     <h1>Find Work</h1>
   </header>
   {%- include 'modules/jobs.njk' -%}
-</section>
-
-<section class="as-seen-in">
-  <header>
-    <h1>As Seen In</h1>
-  </header>
-  <ul>
-    {%- for i in range(1,6) -%}
-    <li>
-      <img src="https://placehold.co/200x50?text=logo {{ i }}" alt="Logo">
-    </li>
-    {%- endfor -%}
-  </ul>
 </section>
