@@ -55,5 +55,5 @@ prerequisites:
 requirements:
   - label: Mac or Windows desktop or laptop
   - label: A text editor (We suggest <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
-  - Google Chrome web browser
+  - label: Google Chrome web browser
 # End Overview
