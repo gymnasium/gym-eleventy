@@ -49,6 +49,6 @@ prerequisites:
   - label: Some experience using and modifying JavaScript without necessarily having written JavaScript from scratch
 requirements:
   - label: Mac or Windows desktop or laptop
-  - label: A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)
+  - label: A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
   - label: Google Chrome web browser is recommended, although any modern browser with Developer Tools will suffice.
 # End Overview
