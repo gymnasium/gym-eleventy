@@ -28,7 +28,7 @@ completion_duration: "Up to 24 hours"
 skill_level: "Beginner"
 # Begin Overview
 intro: >
-  <b><cite>Responsive Web Design</cite></b> will teach you best practices for building responsive websites that adapt to different devices and user behaviors.
+  <strong><cite>Responsive Web Design</cite></strong> will teach you best practices for building responsive websites that adapt to different devices and user behaviors.
 preview_video_src: https://www.youtube.com/embed/n0SHr9Ig-6I?list=PL0Y6L6nQtNzdxIdocpFi92_B1t0IAQ6bf
 about: >
   <p>At the end of this course you’ll have a responsive portfolio website you’ve built from scratch. You will learn the essential elements of responsive web design: designing with ﬂexible grids; creating layouts which incorporate typography and fluid media; using CSS media queries; responsive web typography; the Mobile First approach; in-browser design, tools, and resources; and Responsive Web Design workﬂows.</p>

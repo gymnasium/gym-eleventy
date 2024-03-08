@@ -32,7 +32,7 @@ completion_duration: "Up to 5 hours"
 skill_level: "Beginner"
 # Begin Overview
 intro: >
-  <b><cite>Introducing Sketch for UX and UI</cite></b> will teach you how to use Sketch tools and features in order to build an interactive prototype for a mobile website.
+  <strong><cite>Introducing Sketch for UX and UI</cite></strong> will teach you how to use Sketch tools and features in order to build an interactive prototype for a mobile website.
 preview_video_src:
 about: >
   <p>In this course, you will learn the basics of creating artwork in Bohemian Sketch, with an emphasis on building wireframes, mockups, and prototypes. We will focus specifically on how to take advantage of Sketch’s Artboard, Symbols, and Styles features, in order to create a prototype for a mobile website. Along the way, you’ll discover useful tips and tricks using Nested Symbols, Group Resizing and the new Data feature.</p>
@@ -65,6 +65,6 @@ outline:
 prerequisites:
   - label: This course has no specific prerequisites, although a general familiarity with prototyping techniques and other vector applications will be useful.
 requirements:
-  - label: Sketch is a Mac-only application. <b>The latest version of Sketch requires macOS High Sierra (10.13.4) or newer.</b>
+  - label: Sketch is a Mac-only application. <strong>The latest version of Sketch requires macOS High Sierra (10.13.4) or newer.</strong>
   - label: If you do not have a registered copy of Sketch you may <a href="https://www.sketch.com/signup" target="_blank" rel="noopener">download a 30 day free trial</a> from the Sketch website.
 # End Overview

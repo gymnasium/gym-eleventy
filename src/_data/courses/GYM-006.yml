@@ -26,7 +26,7 @@ completion_duration: "Up to 2 hours"
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
-  <b><cite>Introduction to Git and GitHub</cite></b> will teach you the basics of version control and present a high-level overview of both Git and GitHub.
+  <strong><cite>Introduction to Git and GitHub</cite></strong> will teach you the basics of version control and present a high-level overview of both Git and GitHub.
 preview_video_src:
 about: >
   <p>Git is a popular version control system primarily used for web and software development. Increasingly, designers and developers are expected to know and use Git as part of their collaborative workflow.</p> 

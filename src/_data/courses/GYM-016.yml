@@ -31,7 +31,7 @@ intro: >
   Intro text
 preview_video_src:
 about: >
-  <b><cite>Designing Accessible and Responsive Websites</cite></b> will teach you a series of front-end techniques to help you improve the accessibility and overall user experience of your websites.
+  <strong><cite>Designing Accessible and Responsive Websites</cite></strong> will teach you a series of front-end techniques to help you improve the accessibility and overall user experience of your websites.
 outline:
   - label: "Lesson 1: Introduction"
     description: "Learn what topics are covered in this course and take a quick look at the demo project you’ll be working on. You’ll also discover how the principles of responsive web design are connected to the foundations of web accessibility and why designers and developers need to make the web more functional for everyone."

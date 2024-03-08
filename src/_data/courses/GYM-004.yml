@@ -26,7 +26,7 @@ completion_duration: "Up to 3 hours"
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
-  <b><cite>Creating A WordPress Theme</cite></b> will show you how to convert your HTML/CSS design into a WordPress website. You’ll also discover how to set up a local development environment,and add WordPress tags to your design.
+  <strong><cite>Creating A WordPress Theme</cite></strong> will show you how to convert your HTML/CSS design into a WordPress website. You’ll also discover how to set up a local development environment,and add WordPress tags to your design.
 preview_video_src:
 about: >
   <p>By the end of the course, you will understand which WordPress tags are needed to translate your HTML/CSS design into a website that takes advantage of WordPress content management features including posts, pages, and plugins.</p>

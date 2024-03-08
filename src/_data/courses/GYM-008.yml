@@ -32,7 +32,7 @@ completion_duration: "Up to 2 hours"
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
-  <b><cite>Advanced Rapid Prototyping with Axure</cite></b> will teach you how to use Axure’s variable and conditional logic in order to create rapid prototypes that are richer and more representative of the final product.
+  <strong><cite>Advanced Rapid Prototyping with Axure</cite></strong> will teach you how to use Axure’s variable and conditional logic in order to create rapid prototypes that are richer and more representative of the final product.
 preview_video_src:
 about: >
   <p>Rapid prototyping is used to quickly simulate an interactive experience long before a developer even cracks his or her knuckles. It can help save time and money by refining interactions early on and is a great way to ensure that your end-users and stakeholders can visualize your UI plans well enough to give you feedback. Prototyping tools such as Axure allow us to create simulations of web applications, websites, mobile applications, and mobile sites in a fraction of the time it’d take for actual development.</p>
