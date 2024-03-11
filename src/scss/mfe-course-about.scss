@@ -1,0 +1,19 @@
+// | -------------------------------------------------------------
+// | This file is intended to only serve the Course About MFE
+// | -------------------------------------------------------------
+
+@use 'shared';
+
+@use 'mfe/buttons';
+
+
+.gym-course-about {
+  main {
+    margin-top: 0;
+  }
+}
+
+.course-header, .course-overview {
+  padding: 2rem 0;
+}
+
