@@ -288,3 +288,15 @@ html:
   footer: FOOTER_HTML
 bios: BIOS_DATA
 courses: COURSES_DATA
+# TODO: consider refactoring to support global path definitions
+paths:
+  img:
+    hero: /img/hero/
+    brand: /img/brand/
+    courses: /img/courses/
+    tutorials: /img/tutorials/
+    bios: /img/bios/
+    og: /img/og/
+    footer:
+      icons: GYM_DATA_URL/img/social/icons
+      logos: /img/footer/logos/
