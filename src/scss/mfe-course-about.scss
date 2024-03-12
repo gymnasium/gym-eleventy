@@ -1,6 +1,8 @@
 // | -------------------------------------------------------------
 // | This file is intended to only serve the Course About MFE
 // | -------------------------------------------------------------
+@use 'base/fonts' as *;
+@use 'base/functions' as *;
 
 @use 'shared';
 
@@ -44,4 +46,43 @@
   > aside {
     grid-area: sidebar;
   }
+}
+
+.course-intro {
+  font-family: $gym-font-stack;
+  font-size: rem-calc(25);
+  line-height: 1.5;
+  letter-spacing: rem-calc(0.256);
+  word-spacing: rem-calc(0.512);
+}
+
+article {
+  section:not(:first-child) {
+    border-top: 1px solid var(--mono-300);
+    margin-top: rem-calc(19);
+  }
+}
+
+.course-about {
+  h2 {
+    letter-spacing: rem-calc(1.152);
+    text-transform: uppercase;
+  }
+  h3 {
+    letter-spacing: rem-calc(0.384);
+  }
+  h2, h3 {
+    font-size: rem-calc(19);
+    line-height: 1.5;
+    margin-top: rem-calc(19);
+    word-spacing: rem-calc(0.768);
+  }
+}
+
+.course-metabar {
+  // Anything to add here?
+}
+
+.course-type {
+  font-size: rem-calc(22.4);
 }
