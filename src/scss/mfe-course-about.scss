@@ -8,11 +8,16 @@
 
 @use 'mfe/buttons';
 
+main {
+  margin-top: 0;
+}
 
-.gym-course-about {
-  main {
-    margin-top: 0;
-  }
+.course-metabar {
+  // Anything to add here?
+}
+
+.course-type {
+  font-size: rem-calc(22.4);
 }
 
 .course-header, .course-overview {
@@ -20,7 +25,7 @@
 }
 
 // TODO: move to layouts partial
-.layout-sidebar {
+.grid-sidebar {
   display: grid;
   gap: 2rem;
   grid-template-areas:
@@ -41,6 +46,11 @@
 
   > div {
     grid-area: content;
+
+    @media (min-width: 52em) {
+      border-right: 1px dashed #ccc;
+      padding-right: 1rem;
+    }
   }
 
   > aside {
@@ -63,7 +73,7 @@ article {
   }
 }
 
-.course-about {
+article {
   h2 {
     letter-spacing: rem-calc(1.152);
     text-transform: uppercase;
@@ -79,10 +89,9 @@ article {
   }
 }
 
-.course-metabar {
-  // Anything to add here?
-}
-
-.course-type {
-  font-size: rem-calc(22.4);
+// Line up top of sidebar
+@media (min-width: 52em) {
+  .course-audience h2 {
+    margin-top: 0;
+  }
 }
