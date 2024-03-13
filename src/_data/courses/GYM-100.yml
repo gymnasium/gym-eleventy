@@ -10,9 +10,9 @@ live: false
 sitemapExclude: true
 retired_message:
   1: "<strong>This course is retiring on March 25, 2022.</strong> All coursework needs to be completed by that date."
-  2: "<strong>This course has been retired.</strong> We recommend taking the course <a href='https://thegymnasium.com/courses/GYM/107/0/about'>Modern Web Design</a> instead. It’s a bit more advanced, but we think you’d get a lot out of it."
+  2: "<strong>This course has been retired.</strong> We recommend taking the course <a href='/courses/GYM/107/0/about'>Modern Web Design</a> instead. It’s a bit more advanced, but we think you’d get a lot out of it."
 url: /courses/GYM/100/0/about
-img: /img/courses/gym-100.svg
+img: /img/courses/svg/gym-100.svg
 topic: "Development"
 description: "This course has been retired."
 description_orig: "Learn HTML and CSS and become the Web Designer that Developers love. Professional design experience is a prerequisite, but no prior web or coding experience is necessary."
@@ -30,6 +30,34 @@ lessons_duration: "5 hour"
 completion_duration: "Up to 25 hours"
 skill_level: "Beginner"
 # Begin Overview
-
-
+intro: >
+  <strong><cite>Coding for Designers</cite></strong> is a free, self-paced introductory course to HTML and CSS for designers with graphic design experience. <em>No prior web or coding experience is necessary</em>.
+preview_video_src:
+about: >
+  <p>Students will learn how to translate graphic design to the web; about common pitfalls many print designers face when moving to the web; the basics of how HTML, CSS, and JavaScript work together; how to prototype designs into working web pages; and how to troubleshoot layout and code problems when they come up.</p>
+outline:
+  - label: "Lesson 1: How Web Design Is Different From Print Design"
+    description: "An introduction to design principles on the web. We’ll explore examples and discuss context, but won’t begin coding yet."
+  - label: "Lesson 2: “Hello World,” Coding Pages, and Fixing Problems"
+    description: "An introduction to coding HTML5 and CSS. We’ll set up our tools and start building pages."
+  - label: "Lesson 3: Page Layout and Color with CSS"
+    description: "A deep-dive into CSS and how to merge visual design with website language. We’ll cover layout boxes, shapes, color, and the basics of page layout."
+  - label: "Lesson 4: Typography on the Web"
+    description: "A focused introduction to what can (and can’t) be done with type on web pages. We’ll cover typefaces and licensing, sizing type, leading and kerning, and drop shadows."
+  - label: "Lesson 5: Create A Mobile Website"
+    description: "The “mobile first” philosophy and why it’s useful for web designers. We’ll cover buttons, links, and scrolling layouts."
+  - label: "Lesson 6: Create A Complete Website with Twitter Bootstrap"
+    description: "It’s time to apply for the final project: building a desktop website from a comp with the help of the very popular Twitter Bootstrap framework."
+prerequisites:
+  - label: 5+ Years professional graphic/web design experience (page layout, color, typography, visual communication).
+  - label: Expertise with Adobe Photoshop, Illustrator, or InDesign, or equivalent graphic design software.
+  - label: No coding experience required (in fact, if you know how to code, you might be bored).
+# Note: this section's content is an exception to the typical list we use. As such, we are providing the raw html instead.
+requirements: |
+  <p>The software requirements for this class are somewhat flexible. It makes no difference whether your computer setup is old or more modern, or whether you have the Adobe suite of design software or not. Many of the assignments can use whatever design software you are most familiar with. That being said, here's what you'll need:</p>
+  <ul>
+    <li>Mac or Windows desktop or laptop</li>
+    <li>A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)</li>
+    <li>Google Chrome web browser</li>
+  </ul>
 # End Overview

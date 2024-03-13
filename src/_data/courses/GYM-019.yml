@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/course-v1:GYM+019+0/about
-img: /img/courses/gym-019.svg
+img: /img/courses/svg/gym-019.svg
 topic: "Development"
 subtopics:
   - label: "Design Systems"
@@ -27,6 +27,34 @@ lessons_duration: "1 hour"
 completion_duration: "Up to 1.5 hours"
 skill_level: "Intermediate"
 # Begin Overview
-
-
+intro: >
+  <strong><cite>Design Systems for Developers</cite></strong> will introduce you to the key concepts behind design systems and how they can benefit developers.
+preview_video_src:
+about: >
+  <p>Much of your time as a developer is spent making things work, but as the scope of what you are responsible for continues to increase, your day-to-day tasks can feel overwhelming. Design systems have become an increasingly popular way to help manage this workload, but have introduced new challenges of their own. In this course, you will learn how to use design tokens as well as an overview of various techniques for integrating patterns into a production environment.</p>
+outline:
+  - label: "Chapter 1: Introduction"
+    description: "Learn how modular design has reshaped developers’ work and how design systems have emerged as a way to manage the production of digital products."
+  - label: "Chapter 2: How Design Systems Get Made"
+    description: "Discover the difference between design patterns and design systems. Plus, review some examples of design systems in the wild. You’ll also examine how and why design systems get made."
+  - label: "Chapter 3: Planning to Build a Design Pattern"
+    description: "Explore the anatomy of a design pattern and walk through the different types of patterns you might need to inventory and build. Specifically, you’ll be learning the difference between structural and aesthetic patterns. You’ll also learn how to understand a pattern’s context — and why that matters."
+  - label: "Chapter 4: Building a Design Pattern"
+    description: "Examine the most common front-end approaches for building a design pattern, and some considerations to plan for when building your design system’s front-end architecture."
+  - label: "Chapter 5: Defining Design Tokens"
+    description: "Discover how design tokens are used to store variables such as typography, color, and spacing so that your design system can be shared across platforms. Specifically, you’ll explore how a number of organizations handle tokens and look at examples of tokens in Sass as well as the use of CSS custom properties."
+  - label: "Chapter 6: Choosing the Right Tools for Your Pattern Library"
+    description: "Explore the world of automation in this brief tour of pattern management software that includes a look at Storybook and Fractal, two popular solutions for managing the user interface components in your pattern library."
+  - label: "Chapter 7: Creating Patterns in Fractal"
+    description: "Learn the fundamental steps for creating a pattern library in Fractal. The skills you learn in this chapter will be transferable to other types of pattern management software such as Storybook or Knapsack."
+  - label: "Chapter 8: Integrating Patterns Into Your Products"
+    description: "Discover how to ensure that your pattern library stays synchronized with your production code. Specifically, you’ll learn how different organizations have implemented robust methods for developing, building, testing, and versioning reusable components across their digital product line."
+  - label: "Chapter 9: From Pattern Library to Design System"
+    description: "Explore how to use your pattern library as a foundation for a healthy design system for your team. In particular, you’ll learn best practices for communicating changes and for collaborating with designers and other members of your organization."
+  - label: "Chapter 10: Next Steps"
+    description: "Review the concepts covered in this course including strategies for naming and organizing patterns and defining the shape of your design system. You’ll also receive a number of online and offline resources that will help you take your design systems work to the next level."
+prerequisites:
+  - label: Mac or Windows desktop or laptop
+  - label: Familiarity with how to clone a GitHub repository
+  - label: Familiarity with HTML and CSS
 # End Overview

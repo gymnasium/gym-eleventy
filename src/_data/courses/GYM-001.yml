@@ -8,7 +8,7 @@ tags:
   - short
   - short-course
 url: /courses/GYM/001/0/about
-img: /img/courses/gym-001.svg
+img: /img/courses/svg/gym-001.svg
 live: true
 topic: "Career Skills"
 description: "Learn how to estimate, plan, track, and manage your time in order to complete projects. Being busy isn’t a bad thing, but not being in control of your own time is."
@@ -25,6 +25,28 @@ lessons_duration: "Under 1 hour"
 completion_duration: "Up to 1.5 hours"
 skill_level: "Beginner"
 # Begin Overview
-
-
+intro: >
+  <strong><cite>Defeating Busy</cite></strong> will teach you how to estimate, plan, track, and manage your time in order to complete projects.
+preview_video_src:
+about: >
+  <p>Being busy is not a bad thing. Not managing your own time is. During this course, you’ll learn how to estimate your time and perhaps more importantly, how to stick to those estimates. There is no silver bullet to make it happen. It’s mostly going to be up to you, but the practices described here should help you keep yourself—and your time—honest.</p>
+  <p>Although the techniques in this course can be used by anyone, we focus on creative roles, specifically in web design and development. Topics covered include how to accomplish discrete tasks for research, UX design, visual design, and web development. Additionally we conduct a survey of tools (both “analog” and digital) that will help you track your time and prioritize tasks (to-do lists).</p>
+outline:
+  - label: "Chapter 1: Why Is Estimating and Managing Your Time Important?"
+    description: "An introduction to what we will cover in the course and why it’s being covered. Will include examples of the outcomes of good and bad time management, and how it can affect projects and your personal time."
+  - label: "Chapter 2: Estimating Your Time on Projects"
+    description: "Knowing just how long something will take you might seem impossible. It’s not! With the use of simple work breakdown tactics, very basic project planning-and even the use of some historical data-you can come up with a pretty solid estimate. This section will present a process for dissecting how much time you will need to accomplish discrete tasks-for research, UX design, visual design, and development."
+  - label: "Chapter 3: A Sample Freelance Gig"
+    description: "Brett walks through a real-world scenario of a designer estimating how much time it will take to design and build a small business website."
+  - label: "Chapter 4: Tracking Your Time"
+    description: "This will be a quick lesson on best practices for setting up and tracking your time using the time tracking mechanism of your choice. We’ll cover selected apps and features and recommendations on usage."
+  - label: "Chapter 5: The To-Do List Is Your New BFF"
+    description: "You’ll learn why you should record and track all of your tasks, large and small. You’ll also discover tactics for meaningfully prioritizing your to-do list items. This section will also cover a review of a few to-do list applications that might help you manage your tasks and time."
+  - label: "Chapter 6: Solid Communication"
+    description: "The foundation to doing anything successfully in life is grounded in solid communications practices. This section will offer guidance on how you can best communicate with your team, and how those communications can improve how you plan and use your working time."
+  - label: "Chapter 7: Conclusion"
+    description: "Brett recaps the topics you have covered and sends you on your way to defeat busy!"
+prerequisites:
+  - label: Mac or Windows desktop or laptop
+  - label: There is no specific software required, though we will describe a variety of applications that you may choose to use after the course.
 # End Overview

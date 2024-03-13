@@ -1,0 +1,97 @@
+// | -------------------------------------------------------------
+// | This file is intended to only serve the Course About MFE
+// | -------------------------------------------------------------
+@use 'base/fonts' as *;
+@use 'base/functions' as *;
+
+@use 'shared';
+
+@use 'mfe/buttons';
+
+main {
+  margin-top: 0;
+}
+
+.course-metabar {
+  // Anything to add here?
+}
+
+.course-type {
+  font-size: rem-calc(22.4);
+}
+
+.course-header, .course-overview {
+  padding: 2rem 0;
+}
+
+// TODO: move to layouts partial
+.grid-sidebar {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    "header"
+    "content"
+    "sidebar";
+
+  @media (min-width: 52em) {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "header  header"
+      "content sidebar"
+  }
+
+  > header {
+    grid-area: header;
+  }
+
+  > div {
+    grid-area: content;
+
+    @media (min-width: 52em) {
+      border-right: 1px dashed #ccc;
+      padding-right: 1rem;
+    }
+  }
+
+  > aside {
+    grid-area: sidebar;
+  }
+}
+
+.course-intro {
+  font-family: $gym-font-stack;
+  font-size: rem-calc(25);
+  line-height: 1.5;
+  letter-spacing: rem-calc(0.256);
+  word-spacing: rem-calc(0.512);
+}
+
+article {
+  section:not(:first-child) {
+    border-top: 1px solid var(--mono-300);
+    margin-top: rem-calc(19);
+  }
+}
+
+article {
+  h2 {
+    letter-spacing: rem-calc(1.152);
+    text-transform: uppercase;
+  }
+  h3 {
+    letter-spacing: rem-calc(0.384);
+  }
+  h2, h3 {
+    font-size: rem-calc(19);
+    line-height: 1.5;
+    margin-top: rem-calc(19);
+    word-spacing: rem-calc(0.768);
+  }
+}
+
+// Line up top of sidebar
+@media (min-width: 52em) {
+  .course-audience h2 {
+    margin-top: 0;
+  }
+}

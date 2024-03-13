@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/course-v1:GYM+018+0/about
-img: /img/courses/gym-018.svg
+img: /img/courses/svg/gym-018.svg
 topic: "Design"
 subtopics:
   - label: "Design Systems"
@@ -27,6 +27,31 @@ lessons_duration: "1 hour"
 completion_duration: "Up to 1.5 hours"
 skill_level: "Beginner"
 # Begin Overview
-
-
+intro: >
+  <strong><cite>Design Systems for Designers</cite></strong> will teach you how to incorporate pattern libraries and design systems into your workflow and avoid many of the frustrations encountered when working with them.
+preview_video_src:
+about: >
+  <p>The increasing popularity of design systems in organizations both large and small is changing the way many designers work. Therefore, understanding your role in these systems is more critical than ever. In this course, you’ll learn the difference between pattern libraries and design systems. You’ll walk through the process of building a design system from scratch with helpful exercises along the way. By the end, you’ll know how to conduct a pattern inventory, work with design tokens, and discover how familiar design tools such as Figma and Sketch fit into the process.</p>
+outline:
+  - label: "Chapter 1: Introduction"
+    description: "Discover how the increasing size of design and development teams, as well as the increasing complexity of digital products, are driving the adoption of design systems industry-wide."
+  - label: "Chapter 2: How Design Systems Get Made"
+    description: "Explore some examples of design systems being used across the web and learn the difference between design patterns and design systems. You’ll also learn the three high-level steps for how pattern libraries are typically built."
+  - label: "Chapter 3: How a Pattern Gets Defined"
+    description: "Examine the process of conducting a design pattern inventory and then do an exercise to learn how to do it on your own. Specifically, you’ll learn why naming conventions for design patterns are so critical and a few best practices for doing it within your projects."
+  - label: "Chapter 4: Organizing Your Design Patterns Effectively"
+    description: "Learn how to organize your pattern libraries into meaningful categories in order to reflect the way they will eventually be used. In particular, you’ll discover how different organizations categorize familiar elements including typography, color palettes, user interface components, layout modules, and page types."
+  - label: "Chapter 5: Defining Design Tokens"
+    description: "Explore the world of design tokens: what they are, why they matter, and how they’re made. Specifically, you’ll learn how elements such as color values, typography elements, borders, grid layouts, and breakpoints are converted to a shared language for all members of a team to use."
+  - label: "Chapter 6: Systems-Friendly Design Tools"
+    description: "Learn a few tips for extending the use of familiar applications such as Figma, Sketch, and Adobe Creative Cloud in the world of design systems. You’ll be looking at four specific criteria to use when evaluating which application is best suited for your needs."
+  - label: "Chapter 7: Creating Design Systems Collaboratively"
+    description: "Discover how effective digital teams improve their process through collaboration. Specifically, you’ll walk through the collaborative design process — an extremely helpful exercise often used to get designers and developers on the same page."
+  - label: "Chapter 8: Best Practices for Systems-Minded Designers"
+    description: "Learn how to establish and promote a set of design principles, which is the key to making a design system work in the future. In particular, you’ll learn how to measure the effectiveness of your system, and how to assess whether new patterns are needed."
+  - label: "Chapter 9: Next Steps"
+    description: "Review the concepts covered in this course including strategies for naming and organizing patterns and defining the shape of your design system. You’ll also be given specific steps for taking your design systems work to the next level."
+prerequisites:
+  - label: Mac or Windows desktop or laptop
+  - label: A passion for learning about design systems
 # End Overview

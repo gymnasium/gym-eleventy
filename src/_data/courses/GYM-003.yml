@@ -10,9 +10,9 @@ tags:
 live: false
 sitemapExclude: true
 retired_message:
-  1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons. <span class='text-wrap'>We recommend watching the tutorial <a href='https://thegymnasium.com/courses/take5/prototyping-in-the-browser-with-css-grid-layout'>Prototyping in the Browser with CSS Grid Layout</a> instead.</span>"
+  1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons. <span class='text-wrap'>We recommend watching the tutorial <a href='/courses/take5/prototyping-in-the-browser-with-css-grid-layout'>Prototyping in the Browser with CSS Grid Layout</a> instead.</span>"
 url: /courses/GYM/003/0/about
-img: /img/courses/gym-003.svg
+img: /img/courses/svg/gym-003.svg
 topic: "Development"
 description: "This course has been retired."
 description_orig: "Get up to speed with the Twitter Bootstrap’s grid layout system and learn how to build a responsive layout that looks great on multiple screen sizes and devices."
@@ -29,6 +29,62 @@ lessons_duration: "1 hour"
 completion_duration: "Up to 2 hours"
 skill_level: "Intermediate"
 # Begin Overview
-
-
+intro: >
+  <strong><cite>Grid Layout in Bootstrap 3</cite></strong> will teach you how to get up to speed with Twitter Bootstrap's grid layout system and learn how to build a responsive layout that looks great on multiple screen sizes and devices.
+preview_video_src:
+about: >
+  <p>In this course you will learn how to get up and running with Bootstrap 3 in a matter of minutes and build a responsive layout that looks great on multiple screen sizes and devices. We will focus specifically on grid layout in Bootstrap with an emphasis on prototyping. By the end of the course you will be able to use Bootstrap for virtually any layout you can imagine and have a strategy for moving it quickly into production.</p>
+outline:
+  - label: "Chapter 1: Lesson Intro"
+    description: >
+      In this video, you will learn some of the pros and cons of working with
+      Bootstrap as well as the new features introduced in Boostrap 3-in
+      particular the responsive layout capabilities.
+  - label: "Chapter 2: Working With Lesson Files In Codepen"
+    description: >
+      You will recieve a brief introduction to Codepen and walk through the
+      simple steps to begin working with the lesson files used throughout this
+      course.
+  - label: "Chapter 3: Working with Rows and Columns in Bootstrap"
+    description: >
+      Learn the basics of Bootstrap's 12 grid system and how to create rows and
+      columns in particular.
+  - label: "Chapter 4: Using All Four Breakpoints for Layout"
+    description: >
+      You will begin to experiment and understand the 4 primary breakpoints that
+      are part of Bootstrap 3's responsive layout system.
+  - label: "Chapter 5: Starting Your Mobile Layout"
+    description: >
+      You will begin adding content and working within Bootstrap's
+      "mobile-first" single-column grid layout.
+  - label: "Chapter 6: A Two-Column Mobile Layout"
+    description: >
+      Just because a layout is "mobile" doesn't mean everything has to be a
+      single column. Learn how to divide the mobile layout you created in the
+      previous chapter into two columns.
+  - label: "Chapter 7: Using Offsets In A Desktop Layout"
+    description: >
+      In this chapter you'll begin to address how to adapt your layout for wider
+      screens; in particular, you will focus on layout for "desktop" screens. In
+      order to accomplish this, you will look at the powerful "offset" styles in
+      Bootstrap.
+  - label: "Chapter 8: Creating Advanced Layouts with Nested Rows"
+    description: >
+      Typically, the more room you have to work with on a screen, the more
+      complex your layout can be. In order to achieve advanced layouts with
+      multiple columns you'll need to learn how to use Bootstrap's nesting
+      capabilities.
+  - label: "Chapter 8: Icing On The Cake"
+    description: >
+      This lesson focuses on the grid layout features in Bootstrap, but there
+      are a number of other convincing reasons to use Bootstrap for quick and
+      easy layout design. In this chapter, you'll take a look at some of those
+      reasons, including the ability to add your custom CSS and button styling,
+      as well as an introduction to Helper Classes and Responsive Utilities.
+prerequisites:
+  - label: A basic knowledge of HTML and CSS is recommended
+  - label: Familiarity with responsive design principles, specifically the use of CSS media queries is recommended
+requirements:
+  - label: Mac or Windows desktop or laptop
+  - label: Google Chrome web browser recommended
 # End Overview

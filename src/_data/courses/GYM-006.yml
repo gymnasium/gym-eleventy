@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/GYM/006/0/about
-img: /img/courses/gym-006.svg
+img: /img/courses/svg/gym-006.svg
 topic: "Development"
 description: "Learn the basics of version control and get a high-level overview of both Git and GitHub. Perfect for someone with little to no first-hand experience with either."
 instructor: jausura
@@ -25,6 +25,33 @@ lessons_duration: "Under 1 hour"
 completion_duration: "Up to 2 hours"
 skill_level: "Intermediate"
 # Begin Overview
-
-
+intro: >
+  <strong><cite>Introduction to Git and GitHub</cite></strong> will teach you the basics of version control and present a high-level overview of both Git and GitHub.
+preview_video_src:
+about: >
+  <p>Git is a popular version control system primarily used for web and software development. Increasingly, designers and developers are expected to know and use Git as part of their collaborative workflow.</p> 
+  <p>This course offers a high level overview of Git and GitHub and is aimed at anyone who has heard of these technologies but has little or no first-hand experience with them. The videos explain the basic purpose of Git and GitHub respectively, and describe some typical uses of each. Additionally you will have the chance to walk through a sample project using Git and the Git client named SourceTree.</p>
+outline:
+  - label: "Chapter 1: Lesson Intro"
+    description: "In this chapter you will learn what to expect from the course and specifically some of the challenges that many people new to Git and GitHub are faced with and the instructor’s proposed solution to these challenges."
+  - label: "Chapter 2: What Is It?"
+    description: "In this chapter you will learn the rationale and benefits of version control in general as well as how the Git workflow reduces confusion when working collaboratively."
+  - label: "Chapter 3: The Major Concepts"
+    description: "In this chapter you will dive into the specifics of Git, namely the concepts and vocabulary you will need to know in order to begin working with it. Specific concepts covered include the role of the “repo” as well as defining commits and branches."
+  - label: "Chapter 4: Basic Git Actions"
+    description: "Begin working with Git with this hands-on tutorial that includes setting up a local repo and adding your first few commits. Along the way you will discover how Git interacts with your local file system."
+  - label: "Chapter 5: Branches"
+    description: "In this chapter you learn the basics of working with branches. Specifically you will create a new branch from the master, learn how to switch branches and merge branches."
+  - label: "Chapter 6: Undoing Changes"
+    description: "Take Git to the next level as you learn how to discard uncommitted changes from a project as well as how to roll back commits."
+  - label: "Chapter 7: Basic Remote Workflow"
+    description: "In this chapter you’ll learn the basics of the “local to remote” workflow. Specifically you’ll be setting up a remote repository with Bitbucket and learning some of the basic concepts such as push requests versus pull requests."
+  - label: "Chapter 8: GitHub"
+    description: "This final chapter walks through the differences between private and public repositories and the benefit of using GitHub for collaborating on public projects."
+prerequisites:
+  - label: This is an introductory course, however Git is typically used by professional coders and the tools and concept are geared toward that audience.
+requirements:
+  - label: Mac or Windows desktop or laptop
+  - label: <a href="https://www.sourcetreeapp.com" target="_blank" rel="noopener">SourceTree</a> is a free Git Client for Windows and Mac that provides a graphical interface for your Git repositories and is required if you would like to follow along with the instructor’s tutorial.
+  - label: <a href="https://bitbucket.org" target="_blank" rel="noopener">Bitbucket</a> is a version control system that allows you to collaborate with a team. Students wishing to follow along with the instructor’s tutorial can register for a free account.
 # End Overview

@@ -8,7 +8,7 @@ tags:
   - full-course
 live: true
 url: /courses/course-v1:GYM+108+0/about
-img: /img/courses/gym-108.svg
+img: /img/courses/svg/gym-108.svg
 topic: "Development"
 subtopics:
   - label: "JavaScript"
@@ -27,6 +27,34 @@ lessons_duration: "3 hours"
 completion_duration: "Up to 12 hours"
 skill_level: "Intermediate"
 # Begin Overview
-
-
+intro: >
+  <strong><cite>JavaScript and jQuery Survival Guide</cite></strong> will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples.
+preview_video_src: https://www.youtube.com/embed/4T1Ei46h41o
+about: >
+  <p>Learn basic yet critical skills for working with JavaScript &amp; jQuery in the browser. By the end of this tutorial, the student will understand how to debug problems using the JavaScript console, write simple event handlers, and perform common manipulation of Document Object Model (DOM) elements. These three lessons are designed to prepare the student for typical challenges that they will face when adding or modifying interactive elements on a web page.</p>
+outline:
+  - label: "Lesson 1: Getting Started"
+    description: "In this lesson you’ll begin with a tutorial on how to install Bower, a package manager, and Gulp, a toolkit for automating common tasks in front-end development. Next, you’ll review how browser development tools — specifically the JavaScript console — are critical components of a modern development workflow. Finally, you’ll walk through a brief and important review of JavaScript expressions as a preparation for the coding in Lessons 2 and 3."
+  - label: "Lesson 2: Managing Events"
+    description: "Handling events is one of the most common tasks in front-end web development. In this lesson, you’ll start with a look at the basics of events and event handlers and then move on to topics including anonymous functions and event binding methods. You’ll end the lesson with an in-depth look at how to add interactivity to a form in order to improve the user experience."
+  - label: "Lesson 3: DOM Manipulation with jQuery"
+    description: "In this lesson, you will learn how to modify various portions of a page using jQuery. Specifically, you will explore how to dynamically modify CSS styles and how to inject HTML content into a document as well as learn basic animation techniques to enhance the UI of your page."
+prerequisites:
+  - label: Basic to intermediate competency with HTML and CSS. Specifically, an understanding of how the DOM functions is helpful, as well as experience working with with complex CSS stylesheets.
+  - label: Experience with a text editor (such as <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>, <a href="https://atom.io" target="_blank" rel="noopener">Atom</a>, <a href="https://www.sublimetext.com" target="_blank" rel="noopener">Sublime Text</a>, etc.)
+  - label: Although not strictly required, a familiarity with our <a href="/courses/GYM/104/0/about" target="_blank" rel="noopener">JavaScript Foundations</a> course is highly recommended.
+# Note: this section's content is an exception to the typical list we use. As such, we are providing the raw html instead.
+requirements: |
+  <ul>
+    <li>Mac or Windows desktop or laptop</li>
+    <li>Web browser</li>
+    <li>A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)</li>
+  </ul>
+  <p>In addition to the requirements listed above, there are a few supporting technologies that need to be installed on your system in order to follow along with the lesson files. The instructor covers how to install these on your own system in Lesson 1, Chapter 2, but we are providing the links here for your convenience.</p>
+  <ul>
+    <li><a href="https://nodejs.org" target="_blank" rel="noopener">Node</a></li>
+    <li><a href="https://git-scm.com" target="_blank" rel="noopener">Git</a></li>
+    <li><a href="https://bower.io" target="_blank" rel="noopener">Bower</a></li>
+    <li><a href="https://gulpjs.com" target="_blank" rel="noopener">Gulp</a></li>
+  </ul>
 # End Overview

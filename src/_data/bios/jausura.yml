@@ -1,4 +1,7 @@
 name: Jeff Ausura
 subtitle: "of HubSpot"
-img: bio-placeholder.jpg
+img: /img/bios/jeff-ausura.png
 description: "Jeff is a web developer at the Boston-based firm The Outfit. When he is not designing, coding or teaching he can often be found with either a camera in his hand or some sort of electrically amplified instrument."
+extended_description: >
+  <p>Jeff is a web developer at the Boston-based firm <a href="https://www.theout.fit" target="_blank" rel="noopener">The Outfit</a>.</p>
+  <p>When he is not designing, coding or teaching he can often be found with either a camera in his hand or some sort of electrically amplified instrument.</p>
