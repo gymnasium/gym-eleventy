@@ -1,4 +1,6 @@
 name: Dave Porter
 subtitle: "of Apple"
-img: /img/bios/placeholder.jpg
+img: /img/bios/dave-porter.jpg
 description: "Dave Porter is a long-time web and web application developer. He is currently a software developer for Apple (https://www.apple.com/) and a core team member of SproutCore, an open-source JavaScript framework. Dave has taught at Boston University, has a degree from Trinity College, and lives in California."
+extended_description: |
+  <p>Dave Porter is a long-time web and web application developer. He is currently a software developer for Apple and a core team member of SproutCore, an open-source JavaScript framework which is built on top of jQuery. He has served as application architect and developer on multiple projects. He’s been working with jQuery since it was first introduced and his deep appreciation for the technology stems from his time spent building websites in a “jQueryless world.” Dave has taught at Boston University, has a degree from Trinity College, and lives in Boston.</p>
