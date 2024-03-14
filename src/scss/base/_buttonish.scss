@@ -3,6 +3,10 @@
 // | -------------------------------------------------------------
 @use 'base/functions' as *;
 
+[disabled], .disabled {
+  pointer-events: none;
+}
+
 .btn {
   background-color: var(--primary);
   border: 3px solid var(--primary);
@@ -18,7 +22,12 @@
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
-  // TODO: add disabled state
+  &.disabled,
+  &[disabled] {
+    background-color: var(--mono-200);
+    border-color: var(--mono-200);
+    color: var(--mono-900);
+  }
 
   &:hover,
   &:focus {
