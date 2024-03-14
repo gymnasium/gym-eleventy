@@ -8,7 +8,7 @@ tags:
   - full-course
 live: true
 url: /courses/GYM/104/0/about
-img: /img/courses/gym-104.svg
+img: /img/courses/svg/gym-104.svg
 topic: "Development"
 subtopics:
   - label: "JavaScript"
@@ -25,3 +25,31 @@ audience:
 lessons_duration: "5 hours"
 completion_duration: "Up to 21 hours"
 skill_level: "Intermediate"
+# Begin Overview
+intro: >
+  <strong><cite>JavaScript Foundations</cite></strong> will teach you the fundamentals of programming with JavaScript and get started on the road to its mastery. <em>Prior experience with HTML &amp; CSS is recommended.</em>
+preview_video_src: https://www.youtube.com/embed/ZUQG5_FU3Zw?list=PL0Y6L6nQtNzeH5uopFU6uH_2vOQ_R8206
+about: >
+  <p>In this course, you will learn how to create code that can make basic decisions; employ efficient debugging techniques with browser developer tools; access and modify HTML elements and CSS styles on a page; and use JavaScript to communicate with a server. This course will also introduce you to the rapidly growing world of JavaScript libraries, and you'll get a chance to create a simple application with Backbone.js.</p>
+outline:
+  - label: "Lesson 1: JavaScript Basics"
+    description: "This lesson focuses on the bare basics of what you need to know about JavaScript: working with variables, types of data in JavaScript, how to handle text and numbers, and even how to let your code make its own decisions. We’ll also talk about tools you need to get started, and how to begin debugging your code."
+  - label: "Lesson 2: More JavaScript Basics"
+    description: "In this lesson, you’ll learn about functions, a couple of new data types as well as arrays, and objects. We also get into events and advanced debugging. By the end, you’ll be able to create small programs with more complex behavior that can react to user input."
+  - label: "Lesson 3: The DOM (Document Object Model)"
+    description: "The Document Object Model, or DOM, is a model of an HTML document, where each HTML element is represented by a JavaScript object. In this lesson, we’re going to show you how to use JavaScript to manipulate the DOM."
+  - label: "Lesson 4: Creating Elements, Fragments, and Templates"
+    description: "In this lesson, we’ll take manipulation of the DOM a step further-creating brand new HTML elements, adding them to a page, removing existing elements from a page, and even moving elements around to rearrange a page. We’ll also look at building and deploying document fragments."
+  - label: "Lesson 5: Server Communication"
+    description: "So far, we’ve been developing all our projects in a sandbox. In this lesson, we’ll move beyond the sandbox and begin communicating with the outside world by sending data to and receiving data from servers on the Web."
+  - label: "Lesson 6: Advanced Concepts"
+    description: "In this lesson, we wrap up by covering the subject of scope, going into a few basic concepts of application design, and then finally, looking at some application frameworks and doing a bit of hands-on work with one of those frameworks, Backbone JS."
+prerequisites:
+  - label: The ability to code HTML/CSS by hand.
+  - label: "An understanding of device differences: You should at least be familiar with the differences between various systems, devices, and web browsers."
+  - label: Familiarity with jQuery, but this is not strictly required.
+requirements:
+  - label: Mac or Windows desktop or laptop
+  - label: A text editor (We suggest <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
+  - label: Google Chrome web browser is recommended, although any modern browser with Developer Tools will suffice.
+# End Overview

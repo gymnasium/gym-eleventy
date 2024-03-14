@@ -8,7 +8,7 @@ tags:
   - full-course
 live: true
 url: /courses/GYM/107/0/about
-img: /img/courses/gym-107.svg
+img: /img/courses/svg/gym-107.svg
 topic: "Development"
 description: "This course will prepare you to be a front-end developer by walking you through the process of building a simple, responsive website using HTML, CSS, and JavaScript."
 instructor: agustafson
@@ -23,3 +23,34 @@ audience:
 lessons_duration: "5 hours"
 completion_duration: "Up to 22 hours"
 skill_level: "Intermediate"
+# Begin Overview
+intro: >
+  <strong><cite>Modern Web Design</cite></strong> will prepare you to be a front-end developer by walking you through the basics of HTML, CSS, and JavaScript.
+preview_video_src: https://www.youtube.com/embed/v6TTlIou8UA
+about: >
+  <p>This course is an introduction to front-end development for the web. You will learn how to mark up content with HTML, use CSS as a design tool, and add interactivity to your web pages with JavaScript. You will also learn the basics of building a responsive website for mobile devices and tablets, as well as for the desktop.</p>
+outline:
+  - label: "Lesson 1: Getting Your Bearings"
+    description: "Learn the core skills of being a front-end developer and how they fit into the larger ecosystem of web design and workflow. Additionally, you’ll learn the principles and benefits of progressive enhancement, a philosophy and collection of techniques for building web pages used throughout this course."
+  - label: "Lesson 2: An Introduction to HTML"
+    description: "In this lesson you’ll learn the anatomy of HTML elements and attributes and take a look at the importance of nesting and the Document Object Model (or DOM). You’ll also explore how to create well-structured documents that will serve as the foundation for the styles you will add in later lessons with CSS."
+  - label: "Lesson 3: Structuring HTML Content"
+    description: "Learn how to logically divide and apply markup to your content using the building blocks of HTML such as lists, tables, and figures. Additionally, learn how to use the relatively new elements that were introduced in HTML5, such as the main, section, header, and footer elements."
+  - label: "Lesson 4: Getting Started with CSS"
+    description: "Build upon your new knowledge of HTML with a dive into the core concepts of Cascading Style Sheets (CSS). You’ll learn about the different categories of style rules, and more importantly, which type of rule to use in any given situation. Additionally, you’ll explore how to control the typographic style of your page, how to work with color, how to control layout through margins and padding, and much more."
+  - label: "Lesson 5: CSS as a Design Tool"
+    description: "In this lesson you’ll expand your CSS toolbox by exploring a number of stylistic techniques you can use to enhance the appearance of your pages, including CSS backgrounds, text and drop shadows, borders, and positioning of elements. You will also learn how to begin constructing pages designed to adapt to multiple screen sizes, including phones and tablets, through the use of CSS media queries."
+  - label: "Lesson 6: Getting Started with JavaScript"
+    description: "This lesson wraps up your tour of learning how to be a front-end developer with a look at JavaScript, the language used to add interactivity to your website. In addition to reviewing the basic concepts of this powerful scripting language, you will also walk through a real-world project and build a robust site navigation component which uses JavaScript to adapt to small screens (such as smartphones)."
+prerequisites:
+  - label: Familiarity with the web
+  - label: Experience with a text editor (such as <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>, <a href="https://atom.io" target="_blank" rel="noopener">Atom</a>, <a href="https://www.sublimetext.com" target="_blank" rel="noopener">Sublime Text</a>, etc.)
+# Note: this section's content is an exception to the typical list we use. As such, we are providing the raw html instead.
+requirements: |
+  <p>The requirements for this class are flexible and vary. Many of the assignments rely either on writing/sketching or using design software that you are familiar with. That being said, here’s what you’ll need:</p>
+  <ul>
+    <li>Mac or Windows desktop or laptop</li>
+    <li>A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)</li>
+    <li>Google Chrome web browser</li>
+  </ul>
+# End Overview

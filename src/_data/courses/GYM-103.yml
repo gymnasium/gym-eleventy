@@ -8,7 +8,7 @@ tags:
   - full-course
 live: true
 url: /courses/GYM/103/0/about
-img: /img/courses/gym-103.svg
+img: /img/courses/svg/gym-103.svg
 topic: "UX"
 description: "Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in design and development."
 instructor: jwebb
@@ -24,3 +24,34 @@ audience:
 lessons_duration: "3 hours"
 completion_duration: "Up to 12 hours"
 skill_level: "Beginner"
+# Begin Overview
+intro: >
+  <strong><cite>UX Fundamentals</cite></strong> will teach you how to apply user-centered design principles in order to improve your website and mobile app design. A must-take course for anyone working in web design and development.
+preview_video_src: https://www.youtube.com/embed/-H_6aO0-RLQ?list=PL0Y6L6nQtNzdSadhkPAAJv-wN3UVZQUai
+about: >
+  <p>You will learn how to conduct basic user research and create user personas; approaches to information design, wireframing, and prototyping; how to organize a site’s content in a way that meets user expectations; how to facilitate a positive user experience by relying on common design patterns; and finally, how to conduct user testing. By the end of the course, you should have a solid framework for assessing a site’s usability and a methodology for applying UX principles to site design and development.</p>
+outline:
+  - label: "Lesson 1: Welcome to UX Fundamentals"
+    description: "User Experience Design can help you make better decisions, win design arguments, and increase your knowledge (and value) in the field of web and mobile design. This brief overview demonstrates why that is true."
+  - label: "Lesson 2: Take “You” Out of the User"
+    description: "This lesson features an introduction to the importance of identifying users and their goals. You’ll learn the value of finding empathy for those users, as well as how to define the direction of your website or app using personas and scenarios."
+  - label: "Lesson 3: Wireframes and Prototypes"
+    description: "You’ll learn how wireframes act as sketches for web pages and mobile apps, as well as how to make them easier to create for you and your clients. Additionally, you’ll learn the difference between wireframes and prototypes, and why both work best when you build them fast."
+  - label: "Lesson 4: Make Your Content Make Sense"
+    description: "If you really want to know how to best organize your client’s website, let your users tell you how to do it. We’ll give you specific strategies for doing so in this lesson. You’ll also learn how writing can instill trust in your customers, and why that is good for business."
+  - label: "Lesson 5: Best Practices"
+    description: "Best practices are another name for helpful conventions, and in this lesson, you’ll look specifically at the convention of design patterns in UX. You’ll learn how design patterns can be used for good as well as for evil, and why you should beware the Dark Side!"
+  - label: "Lesson 6: Watching Users"
+    description: "Learn how analytics allow you to see what your users do, and more importantly, how you can use that information to make design decisions. You’ll also discover the importance of usability tests and the cycle of UX design."
+prerequisites:
+  - label: 3+ Years professional graphic/web design experience (page layout, color, typography, visual communication)
+  - label: Experience with Adobe Photoshop, Illustrator, or InDesign, or equivalent graphic design software
+  - label: No coding experience is required.
+  - label: Some assignments require sketching and focused brainstorming time; others require interviewing other people. It’s helpful to have time set aside for continuous attention on each assignment.
+requirements:
+  - label: Desktop or laptop (a laptop is especially helpful for certain assignments)
+  - label: "Software for making simple drawings or illustrations, including but not limited to: Adobe Illustrator, Adobe InDesign, Microsoft Word, Apple Pages, Microsoft PowerPoint, Apple Keynote, GIMP, etc."
+  - label: A scanner or digital camera (a smartphone camera is fine)
+  - label: A printer
+  - label: The ability to create a simple PDF (comes free with most Macs or Windows machines, such as Adobe Acrobat or PDFCreator)
+# End Overview

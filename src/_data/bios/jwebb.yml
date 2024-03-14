@@ -1,4 +1,6 @@
 name: Jim Webb
 subtitle: "Web Developer"
-img: bio-jim-webb.jpg
+img: /img/bios/jim-webb.jpg
 description: "Jim Webb is a web developer and teacher based in Washington, D.C., with more than 1,800 hours of classroom experience teaching HTML, CSS, JavaScript, jQuery, PHP/MySQL, and WordPress."
+extended_description: |
+  <p>Jim Webb is a web developer and teacher in Washington, D.C. with more than 1,800 hours of classroom experience teaching HTML, CSS, JavaScript, jQuery, PHP/MySQL, and WordPress. He’s taught web workshops for nonprofits, design firms, and media companies like HP, The Washington Post, The Newseum, and National Public Radio.</p>

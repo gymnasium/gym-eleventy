@@ -10,9 +10,9 @@ tags:
 live: false
 sitemapExclude: true
 retired_message:
-  1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons. <span class='text-wrap'>We recommend taking the updated course <a href='https://thegymnasium.com/courses/course-v1:GYM+012+0/about'>Introduction to Node.js</a> (and earning a badge) instead.</span>"
+  1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons. <span class='text-wrap'>We recommend taking the updated course <a href='/courses/course-v1:GYM+012+0/about'>Introduction to Node.js</a> (and earning a badge) instead.</span>"
 url: /courses/GYM/002/0/about
-img: /img/courses/gym-002.svg
+img: /img/courses/svg/gym-002.svg
 topic: "Development"
 description: "This course has been retired."
 description_orig: "Learn the basics of Node.js by building a “sample social” profile form."
@@ -28,3 +28,37 @@ audience:
 lessons_duration: "Under 1 hour"
 completion_duration: "Up to 2 hours"
 skill_level: "Intermediate"
+# Begin Overview
+intro: >
+  <strong><cite>Introducing Node.JS</cite></strong> will teach you the basics of Node.js through the example of building a sample "social profile" form.
+preview_video_src:
+about: >
+  <p>This course will describe the benefits of using Node.Js and walk through a sample project. Concepts covered include installing Node and Express, working with Jade, reading and writing data from a JSON file, as well as storing references in JSON data. By the end of the course you will have a solid overview of the benefits of using Node.js and a starting point for integrating Node into your workflow.</p>
+outline:
+  - label: "Chapter 1: Lesson Intro"
+    description: A brief introduction to what you'll be learning in the course including how to access and use lesson files.
+  - label: "Chapter 2: Installing Node.js"
+    description: Walk through the basic steps of installing node onto your system.
+  - label: "Chapter 3: Use Node and Express to Serve a Static Directory "
+    description: This chapter demonstrates how to use NPM to install the dependencies, and start the server. Additionally, you will learn how to use an HTML file to respond to a HTTP GET request.
+  - label: "Chapter 4: Using Express Routes for Handling HTTP GET Requests"
+    description: Learn how to set a GET express route, in order to take your first step for dynamic resource serving.
+  - label: "Chapter 5: First Look at Express’ View Engine, with EJS"
+    description: You will look at the use of Express' View Engine in two ways, the first is using EJS, a common HTML based renderer, using JavaScript in a method similar to PHP. EJS introduces dynamic rendering without focusing on the syntax learning that Jade requires.
+  - label: "Chapter 6: Second Look at Express’ View Engine, with Jade"
+    description: The companion piece to Chapter 5, in this chapter you will learn why Jade is one of the most common renderers and will rewrite the EJS example using Jade syntax.
+  - label: "Chapter 7: Profile Edit Form with Jade and HTTP Post "
+    description: In this chapter you will build an "Edit Profile" form. Along the way you will learn how to retrieve field variables and how to integrate Twitter Bootstrap as well as your custom CSS styles into your Node project.
+  - label: "Chapter 8: Read and Write Data from a JSON File"
+    description: This chapter demonstrates how you can work with data in Node without the need for a database. Learn how to provide storage for user data in the profile form you created in the previous chapter. Specifically, you will discover how to save and retrieve data in a simple and valid way, using a simple JSON file.
+  - label: "Chapter 9: Uploading Images and Storing Reference in JSON Data"
+    description: In this chapter, you will conclude the building of your profile form and learn how to retrieve file variables, and manipulate files on the server (in this case the image that a user would upload to a profile form).
+prerequisites:
+  - label: This course requires an intermediate to advanced understanding of HTML, CSS and JavaScript.
+  - label: Experience using the command-line to install applications on your system will be useful.
+  - label: Experience in working with remote server technology will also be helpful.
+requirements:
+  - label: Mac or Windows desktop or laptop
+  - label: You will need admin rights on your system in order to install Node.Js and its dependencies
+  - label: Google Chrome web browser recommended
+# End Overview

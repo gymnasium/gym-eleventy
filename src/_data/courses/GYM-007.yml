@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/GYM/007/0/about
-img: /img/courses/gym-007.svg
+img: /img/courses/svg/gym-007.svg
 topic: "Development"
 description: "Learn some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes."
 instructor: jkramer
@@ -24,3 +24,31 @@ audience:
 lessons_duration: "1 hour"
 completion_duration: "Up to 2 hours"
 skill_level: "Intermediate"
+# Begin Overview
+intro: >
+  <strong><cite>Structuring and Organizing HTML5 Forms</cite></strong> will teach you some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes. You'll learn how to make these forms mobile- and desktop-compatible as well.
+preview_video_src:
+about: >
+  <p>Coding a form correctly on your websites is extremely important because forms typically fulfill a call to action- we ask the users to sign up for a newsletter, email with questions, purchase a product, register for services, and so much more. Forms that are coded incorrectly or that use outdated standards often result in a loss of usability, which in turn can lead to fewer sales, contacts, or any of the other actions we ask our users to perform.</p>
+  <p>In this course you will begin with a form that’s not written in HTML5 or according to standards, and you'll rework it to bring it up to HTML5 standards, including some layout tips for making the form work on mobile devices.</p>  
+outline:
+  - label: "Chapter 1: Lesson Intro"
+    description: "In this chapter you will learn what to expect from the course and some of the reasons it’s important to build your forms right."
+  - label: "Chapter 2: Setting Up the Project Files"
+    description: "In this chapter you will walk through the process of using the lesson files on CodePen. Additionally you will review the HTML structure of the page you will be working with throughout the course."
+  - label: "Chapter 3: Coding for Standards"
+    description: "In this chapter you will begin to replace some of the existing tags of a form in order to make it more standards compliant. Specifically you will be working with label tags and the fieldset tag which have the additional benefit of improving the accessibility of your form."
+  - label: "Chapter 4: New Input Types"
+    description: "In this chapter you’ll take a tour of some of the new input types available for web forms including `email`, `tel`, `number`, and `range`. You’ll learn about the use of placeholder text and autofocus and see how all these features work on mobile as well as desktop."
+  - label: "Chapter 5: Working with the Datalist"
+    description: "In this chapter you will dive into the `datalist` element which will create an “autocomplete” feature for users interacting with your form."
+  - label: "Chapter 6: Form Layout"
+    description: "In this chapter you will work with CSS media queries in order to design a form that is optimized for smaller devices such as mobile phones as well as for the more “traditional” desktop layouts."
+  - label: "Chapter 7: Backwards Compatibility"
+    description: "In this chapter you will learn how to find the level of browser support for the various HTML5 form elements you have added to your page. Additionally you will learn strategies for ensuring that your forms will still work on older browsers."
+prerequisites:
+  - label: For best results you should have coded an HTML form before and be familiar with some of the basic constructs, such as input boxes, textareas, radio buttons, checkboxes, dropdown lists, validation of forms, and submitting forms to the server.
+requirements:
+  - label: Mac or Windows desktop or laptop
+  - label: This lesson uses <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a> for the lesson files. A (free) CodePen account is recommended although not required.
+# End Overview

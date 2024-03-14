@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/course-v1:GYM+011+0/about
-img: /img/courses/gym-011.svg
+img: /img/courses/svg/gym-011.svg
 topic: "Development"
 description: "In this course, you will get a familiarity with all aspects of the built-in developer tools within the Chrome browser. Understanding how to use these tools will speed up your development time and help you create bug-free, high-performing pages and web applications."
 instructor: kpeters
@@ -24,3 +24,43 @@ audience:
 lessons_duration: "1 hour"
 completion_duration: "Up to 3 hours"
 skill_level: "Intermediate"
+# Begin Overview
+intro: >
+  <strong><cite>Build Better Websites With Chrome Developer Tools</cite></strong> will familiarize you with all aspects of the built-in developer tools within the Chrome browser. Understanding how to use these tools will speed up your development time and help you create bug-free, high-performing pages and web applications.
+preview_video_src:
+about: >
+  <p>This course will teach you how to use the Chrome Developer Tools to inspect various aspects of a page, including the HTML structure, styles, JavaScript, storage, and more. You will also be able to evaluate several aspects of the page performance, including loading times, JavaScript execution, and content rendering. Additionally, you will learn how to debug a running script on the page using breakpoints and the debugging tools.</p>
+outline:
+  - label: "Chapter 1: Overview"
+    description: "A brief introduction to the Chrome Developer Tools including what they are, why you should care and how to configure and navigate through the various tools you’ll be exploring throughout the course."
+  - label: "Chapter 2: The Application and Audits Tabs"
+    description: "Explore the Application and Audits tabs and learn how examine aspects of a website including local storage, cookies, and site assets. Learn how to run an audit on a website and interpret the results and suggestions."
+  - label: "Chapter 3: The Elements Tab"
+    description: "Learn how to inspect a web page’s HTML elements and use the context menu to access more information and/or modify content. Also learn how to understand which CSS styles are being applied to the content on your page including layout, image and text. Discover how you can subsequently hide, show, modify, or delete these styles in order to troubleshoot or experiment with the look and feel of your page."
+  - label: "Chapter 4: Finding and Fixing a CSS Issue in a Project"
+    description: "Get experience working on a typical project that has a number of CSS problems such as incorrect sizing of images and missing font styles. You will learn how to identify a CSS issue, correct the issue in the CSS panel, and then apply those changes to your production file."
+  - label: "Chapter 5: The Device Toolbar"
+    description: "Testing your responsive web pages with devices is always best practice, but there’s still a lot you can do in the browser to analyze responsive page appearance and behavior. In this chapter, learn how to view a page with a variety of device and screen emulators and learn how to create a custom device as well."
+  - label: "Chapter 6: The Console, Part I"
+    description: "The JavaScript console is the most direct and efficient way to understand and troubleshoot your code in real-time. Learn how to view console logs, “reverse engineer” your source from log entries, run JavaScript through the console and locate and edit an element using code."
+  - label: "Chapter 7: The Console, Part II"
+    description: "Practice techniques for modifying your JavaScript code in order to generate custom messages within the console that will help you (and other developers) debug your websites and web applications."
+  - label: "Chapter 8: The Sources Tab"
+    description: "As websites become more complex, learning how to track down errors and debug code is more important than ever. Learn how to make this process easier by adding breakpoints and stepping through your code in order to track down and resolve pesky errors."
+  - label: "Chapter 9: Debugging a Program with the Sources Tab"
+    description: "Explore the usefulness of the tools in the Sources tab by debugging a web application that has ceased to function as expected. Specifically, you’ll be learning the difference between disabling, deactivating and removing breakpoints, and how to use these features to identify problems and test your fixes."
+  - label: "Chapter 10: The Network Tab"
+    description: "Understanding what network calls are taking place is a crucial part of developing high performance websites. Discover how to examine the timeline of network calls, filter different types of calls, and how to navigate to the source where the network call was made."
+  - label: "Chapter 11: The Performance Tab"
+    description: "Understanding how your users’ system performance is affected by JavaScript and related DOM nodes is an important part of the optimization process. Learn how to record and analyze all the activity in your application as it runs and examine properties such as frame rate, CPU use, and Network calls."
+  - label: "Chapter 12: The Memory Tab and Closing Thoughts"
+    description: "Take a deep dive into advanced techniques related to how your web application affects memory usage within Chrome and the operating system. You’ll also review what was covered in the course and get some advice on where to find additional tips and techniques on where to learn more about Chrome Developer Tools."
+prerequisites:
+  - label: Basic to intermediate competency with HTML and CSS
+  - label: Prior experience of the JavaScript console is useful
+  - label: General understanding of web technologies such as Web Fonts and JavaScript frameworks
+requirements:
+  - label: Mac or Windows desktop or laptop
+  - label: A text editor (We suggest <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
+  - label: Google Chrome web browser
+# End Overview

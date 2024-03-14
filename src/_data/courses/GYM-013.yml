@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/course-v1:GYM+013+0/about
-img: /img/courses/gym-013.svg
+img: /img/courses/svg/gym-013.svg
 topic: "Design"
 description: "Learn how to create 3D generated imagery in Maya for use in Virtual Reality production."
 instructor: groberts
@@ -24,3 +24,39 @@ audience:
 lessons_duration: "1.5 hours"
 completion_duration: "Up to 4 hours"
 skill_level: "Intermediate"
+# Begin Overview
+intro: >
+  <strong><cite>3D Modeling for Virtual Reality Creation</cite></strong> will teach you the basics of Autodesk Maya to create 3D-generated imagery for use in virtual reality production.
+preview_video_src:
+about: >
+  <p>This course will teach you how to navigate through Maya's complex interface and then use the core modeling, animation, and rendering tools in order to build a 3D-animated model. Additionally, you will learn how to install a special VR camera plugin into Maya in order to export your projects for virtual reality environments as well as 360˚ video formats.</p>
+outline:
+  - label: "Chapter 1: Introduction"
+    description: "Learn the structure of this course as well as how to get up and running with Autodesk Maya. This chapter also includes where to find the course material related specifically to the rendering and publishing of virtual reality content."
+  - label: "Chapter 2: Interface Overview"
+    description: "Begin working right away with Maya by exploring the interface. You’ll learn the role of modes within Maya and what effect they have on your project. You’ll also add a simple 3D shape and discover how to select objects and components within a scene, and finally, you’ll explore a number of other aspects of the interface that may come in handy later."
+  - label: "Chapter 3: Basic Modeling"
+    description: "Learn how to work with polygon shapes as well as the benefits of working within the Wireframe view. You’ll learn how to select and move objects, modify attributes such as width and height, and how to begin thinking abstractly in order to translate your ideas into concrete 3D modeling steps."
+  - label: "Chapter 4: Modeling a Thermos"
+    description: "Walk through the steps of how to translate a real-world object into a 3D model. Specifically, you’ll learn scaling and extrusion techniques, how to duplicate and rotate objects, and how to use Boolean commands such as Union and Intersection in order to quickly create complex 3D shapes."
+  - label: "Chapter 5: Basic Animation"
+    description: "Create simple animations using keyframes and the Maya timeline. You’ll learn how to modify the behavior of your animated objects using the powerful Graph Editor and dive into the Animation panel in order to have more control over animated behavior. Finally, you’ll learn the basics of 3D rigging for character animation as well as how to create and animate a virtual camera."
+  - label: "Chapter 6: Animating the Thermos"
+    description: "Expand your knowledge of animation with a practical exercise using the 3D model built in an earlier chapter. You’ll learn how to configure and use multiple camera views at once in order to optimize your time, and you’ll learn how to simultaneously control the animation of an object and a virtual camera in order to create dynamic animations."
+  - label: "Chapter 7: Rendering Overview"
+    description: "Explore the basic tasks you’ll need to know when it comes time to render 3D content, including how to set shaders and materials. You’ll learn how to control common material attributes such as color, transparency, and incandescence as well as more advanced properties such as specular shading. You’ll also learn how to add and control virtual lighting rigs and make efficient use of the Render View window in order to preview your output and make sure you’re on the right track."
+  - label: "Chapter 8: Rendering the Thermos"
+    description: "Expand your knowledge of rendering with a practical exercise using the 3D model built in Chapter 4. You’ll learn how to create and apply materials such as plastic and aluminum to an object and then apply the concepts learned in Chapter 7 in order to render a realistic and well-lit object. Additionally, you’ll take a look at options within Maya’s Render Settings panel, an important step in any 3D or virtual reality project."
+  - label: "Chapter 9: Rendering for Virtual Reality"
+    description: "Learn how the medium of virtual reality leverages the physiological principles of human vision in order to create illusions of depth and movement. On the technical side of things, you’ll be installing a Maya plug-in that allows you to create a special VR camera that allows you to render stereoscopic images suitable for VR platforms."
+  - label: "Chapter 10: Publishing for Virtual Reality"
+    description: "Conclude your tour of VR workflow with a look at a few options to consider when it’s time to share your work with the world. You’ll learn about the differences between monoscopic and stereoscopic images, the importance of understanding how image aspect ratios affect your final product, and how to use the Adobe Media Encoder in order to properly export VR video. You’ll wrap things up with a quick look at some common platforms to publish your content including YouTube, Facebook, and Vimeo."
+prerequisites:
+  - label: Some familiarity with virtual reality platforms
+  - label: Prior experience with design software such as Adobe Photoshop or Sketch
+  - label: Basic understanding of digital video formats and resolution considerations
+requirements:
+  - label: Mac or Windows desktop or laptop
+  - label: The full version of Autodesk Maya 2015-2017. A 30 day free trial version of the latest version of Maya <a href="https://www.autodesk.com/products/maya/free-trial" target="_blank" rel="noopener">can be found here</a>
+  - label: Adobe Creative Cloud recommended (but not required)
+# End Overview

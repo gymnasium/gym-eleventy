@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/GYM/004/0/about
-img: /img/courses/gym-004.svg
+img: /img/courses/svg/gym-004.svg
 topic: "Development"
 description: "Learn how to convert your HTML/CSS design into a WordPress website. Discover how to set up a local development environment, and add WordPress tags to your design."
 instructor: ghodgkinson
@@ -24,3 +24,36 @@ audience:
 lessons_duration: "1 hour"
 completion_duration: "Up to 3 hours"
 skill_level: "Intermediate"
+# Begin Overview
+intro: >
+  <strong><cite>Creating A WordPress Theme</cite></strong> will show you how to convert your HTML/CSS design into a WordPress website. You’ll also discover how to set up a local development environment,and add WordPress tags to your design.
+preview_video_src:
+about: >
+  <p>By the end of the course, you will understand which WordPress tags are needed to translate your HTML/CSS design into a website that takes advantage of WordPress content management features including posts, pages, and plugins.</p>
+  <p>This course will teach you how to install Wordpress locally and dive into the essential components of a WordPress theme. Specifically, you will learn the following: the role of the WordPress Loop, modifying a pre-existing stylesheet in order to enable WordPress features (such as a sidebar), using includes to speed up development time and adding WordPress-specific features such as navigation menus.</p>
+outline:
+  - label: "Chapter 1: Lesson Intro"
+    description: "In this chapter, you will learn why WordPress is the most popular content management system and explore its ecosystem of plugins and themes."
+  - label: "Chapter 2: Setting Up a Local Development Environment"
+    description: "In this chapter, you will learn how to install MAMP for Mac in order to create a local development environment. (Note that although this lesson uses a Mac for the examples, a guide to help Windows users install XAMPP is referenced.)"
+  - label: "Chapter 3: How a WordPress Theme Works"
+    description: "In this chapter, you will learn the elemental components of a WordPress theme. Specifically, you will take a look at the required files for a theme (`index.php` and `style.css`) as well as template tags and conditional tags and how to best use the WordPress Codex for additional help."
+  - label: "Chapter 4: The WordPress Loop"
+    description: "This chapter illustrates the role and importance of the WordPress Loop and walks through the steps of modifying it for tasks such as showing a single category on the home page, hiding a category, showing pages instead of posts, and more."
+  - label: "Chapter 5: Converting a Static HTML Page Into a Dynamic WordPress Template"
+    description: "In this chapter, you will begin diving into the core mission of modifying a pre-existing HTML page and related CSS styles in order to integrate them into WordPress. Specifically you will be building a main content section as well as a header and footer."
+  - label: "Chapter 6: The Hierarchical Structure of a Theme"
+    description: "Taking full advantage of WordPress' dynamic features means understanding the hierarchy of the available template files. Specifically, you will learn how to create a home page template as well as a page and post templates among others."
+  - label: "Chapter 7: Using Includes to Optimize Your Theme Development"
+    description: "Includes allow you to create a single file that can be used multiple times throughout a site. In this chapter, you will learn WordPress-specific functions that allow you to reuse template files such as a header, footer, and sidebar."
+  - label: "Chapter 8: Adding to Your Theme"
+    description: "This final chapter walks through a number of techniques to improve the functionality and practicality of your theme. Topics covered include how to include a menu, how to include comments and search results, as well as the process of using WordPress enqueue scripts in order to prevent conflicts with future implementations of your theme."
+prerequisites:
+  - label: Basic to Intermediate competency with HTML and CSS
+  - label: Knowledge of inspecting code with browser developer tools is highly recommended, although not mandatory.
+  - label: This course assumes introductory-level experience with WordPress. At a minimum, understanding the difference between pages and posts, as well as how to modify them is required.
+requirements:
+  - label: Mac or Windows desktop or laptop
+  - label: A text editor (We suggest <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
+  - label: Google Chrome web browser
+# End Overview

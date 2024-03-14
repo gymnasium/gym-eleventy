@@ -9,7 +9,7 @@ tags:
   - short-course
 live: true
 url: /courses/course-v1:GYM+014+0/about
-img: /img/courses/gym-014.svg
+img: /img/courses/svg/gym-014.svg
 topic: "Development"
 subtopics:
   - label: "Design Systems"
@@ -27,3 +27,38 @@ audience:
 lessons_duration: "2 hours"
 completion_duration: "Up to 4 hours"
 skill_level: "Intermediate"
+# Begin Overview
+intro: >
+  <strong><cite>Working with Atomic Design and Pattern Lab</cite></strong> will teach you how the Atomic Design methodology helps teams create successful user interface (UI) design systems and how to use Pattern Lab in order to create reusable UI components in HTML and CSS.
+preview_video_src:
+about: >
+  <p>This course will teach students the atomic design methodology, setting up Pattern Lab, building &amp; using UI components inside Pattern Lab, and manipulating data to create sophisticated page prototypes. Specifically you will learn the following: the 5-stage atomic design methodology, installing Pattern Lab, building frontend components in Pattern Lab, designing with dynamic data within Pattern Lab, and using advanced Pattern Lab features such as pseudo-patterns, pattern status, and more.</p>
+outline:
+  - label: "Chapter 1: Introduction"
+    description: "Learn what topics are covered in this course and take a quick look at the demo project you’ll be working on. You’ll also take a brief look at how Pattern Lab fits into the context of the web design and development workflow."
+  - label: "Chapter 2: The Atomic Design Methodology"
+    description: "Discover the benefits of design systems and how the Atomic Design model allows you to create them quickly and efficiently over the lifespan of a project. You’ll learn how the 5 stages of Atomic Design relate to the various components of a website or web application."
+  - label: "Chapter 3: Introduction to Pattern Lab"
+    description: "Learn what Pattern Lab is (and perhaps more importantly what it isn’t), what it does, and how your team can use it to create User Interface design systems. You’ll learn how the Atomic Design model and Pattern Lab are connected by taking a tour of a demo project."
+  - label: "Chapter 4: Setting Up Pattern Lab"
+    description: "Learn how to download and install the Node version of Pattern Lab. Pattern Lab is a static site generator; you’ll walk through what that means and how it works by exploring the folder structure of your demo project. In particular, you’ll spend some time understanding the structure of the “source” directory and the process by which Pattern Lab compiles files that can be viewed in your web browser."
+  - label: "Chapter 5: Working with Patterns"
+    description: "Learn how to use and create UI components inside of Pattern Lab. Specifically, explore where patterns live inside a Pattern Lab project and how to work with the Mustache templating language. By the end of this chapter, you'll understand the relationship between finished pages and their underlying components."
+  - label: "Chapter 6: Designing for Dynamic Data"
+    description: "Explore how Pattern Lab allows teams to design UIs that accommodate a number of dynamic content scenarios. for example: What does a dashboard with 10 years worth of data look like? What does that same dashboard look like for a new user? Pattern Lab helps teams answer these questions."
+  - label: "Chapter 7: Pattern Lab Advanced Features"
+    description: "Discover additional Pattern Lab tools and features to help make your UI design system more robust. Specifically, you’ll learn how to use Pattern Lab’s viewport resizing tool, how to label a component using the pattern status feature, how to hide patterns, and how to take advantage of the built-in pattern documentation tools."
+  - label: "Chapter 8: Summary"
+    description: "Review the concepts covered in this course including the value of design systems, the model of Atomic Design, the basics of building and updating UI components in Pattern Lab, the fundamentals of designing with data in Pattern Lab, and a brief tour of advanced features. In addition, you’ll receive a list of resources and next steps to help you level up with Pattern Lab."
+prerequisites:
+  - label: Basic to intermediate competency with HTML & CSS
+  - label: Familiarity with editing code in a text editor
+  - label: Experience with using command line is recommended, but not required
+  - label: Experience with templating languages such as Mustache is recommended, but not required
+  - label: Familiarity with the concepts of the JSON and Markdown languages will be helpful
+requirements:
+  - label: Mac or Windows desktop or laptop
+  - label: A text editor (We suggest <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
+  - label: This course uses the Node.js version of Pattern Lab. If you wish to follow along with the instructor you will need admin rights in order to install the package manager NPM, as well as Node, onto your machine. (Instructions for installing this toolkit are covered in Chapter 4)
+  - label: Gulp (Instructions for installing this toolkit are covered in Chapter 4)
+# End Overview
