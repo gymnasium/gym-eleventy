@@ -1,0 +1,93 @@
+// WIP, MFE-specific
+
+.nav-tabs {
+  display: grid;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 1rem;
+  grid-column-gap: 2rem;
+  grid-auto-flow: column;
+}
+
+.nav-link {
+  display: block;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  margin-bottom: -2px;
+
+  &:focus,
+  &:hover {
+    color: #454545;
+    text-decoration: none;
+  }
+}
+
+.nav-link {
+
+
+  &:hover {
+    background-color: #e9e6e4;
+  }
+
+  &:focus {
+    border-bottom: 2px solid transparent;
+    outline: 0;
+    position: relative;
+    z-index: 200;
+
+    &:before {
+      border: 2px solid #0a3055;
+      border-radius: 0;
+      bottom: -4px;
+      content: "";
+      left: -4px;
+      position: absolute;
+      right: -4px;
+      top: -4px;
+    }
+  }
+
+  &.active {
+    background-color: transparent;
+    border-bottom: 2px solid #0a3055;
+    color: #0a3055;
+
+    &:hover {
+      background-color: #e9e6e4;
+    }
+
+    &:focus {
+      outline: 0;
+      position: relative;
+      z-index: 200;
+
+      &:before {
+        border: 2px solid #0a3055;
+        border-radius: 0;
+        bottom: -4px;
+        content: "";
+        left: -4px;
+        position: absolute;
+        right: -4px;
+        top: -4px;
+      }
+    }
+  }
+}
+
+.nav-tabs .nav-link {
+  background: transparent;
+}
+
+.pgn__tabs > * {
+  position: relative;
+}
+
+.pgn__tab_more,
+.pgn__tab_invisible {
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}

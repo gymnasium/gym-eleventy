@@ -1,0 +1,22 @@
+// | -------------------------------------------------------------
+// | This file is intended to only serve the Course About MFE
+// | -------------------------------------------------------------
+@use 'base/fonts' as *;
+@use 'base/functions' as *;
+@use 'base/breakpoints' as *;
+
+@use 'shared';
+
+@use 'mfe/buttons';
+@use 'mfe/forms';
+@use 'mfe/tabs';
+
+.layout {
+  display: grid;
+  grid-template-rows: auto;
+  margin: auto;
+
+  @include breakpoint(medium) {
+    max-width: 50vw;
+  }
+}
