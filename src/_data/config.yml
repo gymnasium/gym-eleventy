@@ -300,3 +300,4 @@ paths:
     footer:
       icons: GYM_DATA_URL/img/social/icons
       logos: /img/footer/logos/
+markets: MARKETS_STATIC

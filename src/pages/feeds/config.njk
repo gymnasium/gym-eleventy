@@ -14,5 +14,7 @@ eleventyExcludeFromCollections: true
   | replace('GYM_DATA_URL', config.urls.data)
   | replace('"BIOS_DATA"', bios | stringify)
   | replace('"COURSES_DATA"', courses | stringify)
+  | replace('"MARKETS_STATIC"', markets.items | stringify)
+  | replace('"MARKETS_LIVE"', data.markets | stringify)
 -%}
 {{ config | safe }}
