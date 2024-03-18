@@ -79,7 +79,7 @@ intro:
     {%- include 'modules/panels/course.njk' -%}
   {% endfor %}
 
-    <!-- TODO: Update placeholder with include and custom logic -->
+    <!-- TODO: Update placeholder with include and logic -->
 
     <li class="course gym-001 career-skills elective">
       <p class="note">
@@ -88,7 +88,7 @@ intro:
       <article id="gym-001" class="course-card">
         <div class="main">
           <a href="">
-            <img class="artwork" alt="Defeating Busy course artwork." src="https://gym.soy/img/courses/svg/gym-001.svg" srcset="https://gym.soy/img/courses/svg/gym-001.svg" decoding="async" fetchpriority="high" width="574" height="488">
+            <img class="artwork" alt="Defeating Busy course artwork." src="{{ config.urls.root }}/img/courses/svg/gym-001.svg" srcset="{{ config.urls.root }}/img/courses/svg/gym-001.svg" decoding="async" fetchpriority="high" width="574" height="488">
           </a>
           <hgroup>
             <p class="topic"><b>Career Skills</b></p>
