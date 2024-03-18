@@ -17,6 +17,7 @@
   {%- endif -%}
 {%- endif -%}
 
+{%- set topic = obj.topic -%}
 {%- set description = obj.description -%}
 
 {%- if obj.slug -%}
@@ -28,43 +29,63 @@
 {%- set shortId = obj.id -%}
 {%- set type = obj.type -%}
 
-{%- set src = config.urls.data + img -%}
+{%- set src = config.urls.root + img -%}
 {%- set srcSet = src -%}
 
-<section id="{{ shortId | lower }}">
-  <header>
-    <h1>{{ title }}</h1>
-    <p>{{ subtitle }}</p>
-  </header>
-  <figure>
-    <img style="max-width: 5rem;" alt="{{ title }}" srcset="{{ srcSet }}" src="{{ src }}">
-  </figure>
-  <div>
-    {%- if description -%}
-      <p>{{ description }}</p>
-    {%- endif -%}
-    <div class="cta">
-      <a class="btn" href="{{ obj.id | course_endpoint('course_about') }}">View Course</a>
+<li class="course {{ shortId | lower }} {{ topic | slugify }} {%if (obj.topic_featured) %}featured{% endif %}">
+  <article id="{{ shortId | lower }}" class="course-card">
+    <div class="main">
+      <a href="{{ url }}">
+        <img class="artwork" alt="{{ title }} course artwork." src="{{ src }}" srcset="{{ srcSet }}" decoding="async" fetchpriority="high" width="574" height="488">
+      </a>
+      <hgroup>
+        <p class="topic"><b>{{ topic }}</b></p>
+        <h2><a href="{{ url }}">{{ title }}</a></h2>
+        <p class="byline">with <b>{{ bios[obj.instructor]['name'] }}</b>, {{  bios[obj.instructor]['subtitle'] }}</p>
+      </hgroup>
+      <p class="description">{{ description }}</p>
+      <div class="cta">
+        <a class="btn" href="{{ url }}">Explore Course</a>
+      </div>
+      <aside class="list-summary">
+        {%- if (obj.skills) -%}
+        <dl>
+          <dt>Skills Covered</dt>
+          {%- for i in range(0, obj.skills.length) -%}
+          <dd>{{ obj.skills[i].label }}</dd>
+          {%- endfor -%}
+        </dl>
+        {%- endif -%}
+        {%- if (obj.audience) -%}
+        <dl>
+          <dt>This Course is For</dt>
+          {%- for i in range(0, obj.audience.length) -%}
+          <dd>{{ obj.audience[i].label }}</dd>
+          {%- endfor -%}
+        </dl>
+        {%- endif -%}
+        <dl>
+          {%- if (obj.lessons_duration) -%}
+          <div>
+            <dt>Video Lessons</dt>
+            <dd>{{ obj.lessons_duration }}</dd>
+          </div>
+          {%- endif -%}
+          {%- if (obj.completion_duration) -%}
+          <div>
+            <dt>Course Duration</dt>
+            <dd>{{ obj.completion_duration }}</dd>
+          </div>
+          {%- endif -%}
+        </dl>
+      </aside>
+      <footer class="info">
+        <h3>{{ obj.type | replace('full', 'Full Course') | replace('short', 'Gym Short') }}</h3>
+        <p>{{ obj.skill_level }}</p>
+      </footer>
     </div>
-    {%- if (obj.skills) -%}
-      <div class="skills">
-        <h3>Skills Covered</h3>
-        <ul>
-        {%- for i in range(0, obj.skills.length) -%}
-          <li>{{ obj.skills[i].label }}</li>
-        {%- endfor -%}
-        </ul>
-      </div>
-    {%- endif -%}
-    {%- if (obj.audience) -%}
-      <div class="audience">
-        <h3>This Course is For</h3>
-        <ul>
-        {%- for i in range(0, obj.audience.length) -%}
-          <li>{{ obj.audience[i].label }}</li>
-        {%- endfor -%}
-        </ul>
-      </div>
-    {%- endif -%}
-  </div>
-</section>
+    <footer class="back-to">
+      <p><a href="#topics">Back to Menu</a></p>
+    </footer>
+  </article>
+</li>
