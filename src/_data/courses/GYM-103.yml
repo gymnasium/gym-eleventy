@@ -9,6 +9,7 @@ tags:
 live: true
 url: /courses/GYM/103/0/about
 img: /img/courses/svg/gym-103.svg
+topic_featured: true
 topic: "UX"
 description: "Learn how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in design and development."
 instructor: jwebb

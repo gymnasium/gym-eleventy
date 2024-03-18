@@ -11,16 +11,72 @@ nav:
   parent: "/courses/"
 intro:
   heading: Gym Shorts
-  subheading: Free online courses and tutorials.
-  content: Learn design, development, UX, accessibility, and career skills from industry experts.
+  subheading: Free short courses — taught by experts.
+  action: Learn new skills in a few hours or less.
+  content: Explore courses on design, development, accessibility, prototyping, UX, and career skills.
+  info:
+    - title: Benefits
+      items:
+        - label: "100% free self-paced online learning"
+        - label: "Earn a Badge to share on your résumé and social media"
+    - title: Length
+      items:
+        - label: "Video Lessons: 1–2 hours"
+        - label: "Course Duration: 1–5 hours"
+  promo:
+    pitch: Looking to earn a certificate?
+    action: Explore our Full Courses.
 ---
-<header>
-  <h1>{{ intro.heading }}</h1>
-  <p><strong>{{ intro.subheading }}</strong> {{ intro.content }}</p>
+<header class="intro bg-mono-300 full-bleed">
+  <hgroup>
+    <h1>{{ intro.heading }}</h1>
+    <p><b>{{ intro.subheading }}</b> {{ intro.action }}</p>
+    <!-- <p>{{ intro.content }}</p> -->
+  </hgroup>
+  <div class="list-summary">
+    {% for info in intro.info %}
+    <dl>
+      <dt>{{ info.title }}</dt>
+      {% for item in info.items %}
+      <dd>{{ item.label }}</dd>
+      {% endfor %}
+    </dl>
+    {% endfor %}
+  </div>
+  <!-- <p><b>{{ intro.promo.pitch }}</b> {{ intro.promo.action }}</p> -->
 </header>
 
-<h2>Short Courses (Gym Shorts)</h2>
-{% for course in collections.live_courses_short %}
-  {%- set module = course -%}
-  {%- include 'modules/panels/course.njk' -%}
-{% endfor %}
+<div id="all-topics" class="topic-select"></div>
+<div id="featured" class="topic-select"></div>
+<div id="design" class="topic-select"></div>
+<div id="development" class="topic-select"></div>
+<div id="ux" class="topic-select"></div>
+<div id="career-skills" class="topic-select"></div>
+
+<div id="topics" class="topics">
+
+<nav class="topic-menu">
+  <h2>Explore</h2>
+  <ul>
+    <li><a href="#all-topics">All Topics</a></li>
+    <li><a href="#featured">Featured</a></li>
+  </ul>
+  <ul>
+    <li><a href="#design">Design</a></li>
+    <li><a href="#development">Development</a></li>
+    <li><a href="#ux">UX</a></li>
+    <li><a href="#career-skills">Career Skills</a></li>
+  </ul>
+</nav>
+
+<article class="topic-listing">
+  <h2 class="topic-label" aria-hidden="true"><span>All Topics</span></h2>
+  <ul class="courses">
+  {% for course in collections.live_courses_short | reverse %}
+    {%- set module = course -%}
+    {%- include 'modules/panels/course.njk' -%}
+  {% endfor %}
+  </ul>
+</article>
+
+</div>

@@ -9,6 +9,7 @@ tags:
 live: true
 url: /courses/GYM/104/0/about
 img: /img/courses/svg/gym-104.svg
+topic_featured: true
 topic: "Development"
 subtopics:
   - label: "JavaScript"

@@ -11,7 +11,7 @@ live: true
 url: /courses/GYM/009/0/about
 img: /img/courses/svg/gym-009.svg
 topic: "Development"
-description: "This course will teach you how to create themes for Drupal 8. Specifically, you will learn how to install a local development environment for Drupal 8, and use the new TWIG templating engine to customize the structure and style of your theme."
+description: "Learn how to create Drupal 8 themes, set up a local development environment, and customize theme structure and style with the TWIG templating engine."
 instructor: ghodgkinson
 skills:
   - label: "Intermediate HTML/CSS"

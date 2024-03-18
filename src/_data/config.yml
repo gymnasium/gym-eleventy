@@ -28,14 +28,14 @@ header:
       - label: Log Out
         href: GYM_LMS_URL/logout
     courses:
-      - label: Full Courses
-        href: GYM_ROOT_URL/courses/full/
-      - label: Gym Shorts
-        href: GYM_ROOT_URL/courses/gym-shorts/
-      - label: Take 5 Tutorials
-        href: GYM_ROOT_URL/courses/take5/
-      - label: Collections
-        href: GYM_ROOT_URL/collections/
+    - label: Full Courses
+      href: GYM_ROOT_URL/courses/full/
+    - label: Gym Shorts
+      href: GYM_ROOT_URL/courses/gym-shorts/
+    - label: Take 5 Tutorials
+      href: GYM_ROOT_URL/courses/take5/
+    - label: Collections
+      href: GYM_ROOT_URL/collections/
 footer:
   nav:
     - title: What We Do

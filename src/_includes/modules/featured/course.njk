@@ -10,15 +10,18 @@
         <div class="featured-item" id="featured-course-{{ item }}">
           <img
             src="{{ collections.catalog[id]['img'] }}"
-            alt="Image for {{ collections.catalog[id]['title'] }}"
-          />
+            alt="Course artwork for {{ collections.catalog[id]['title'] }}"
+          >
+
+          <hgroup>
           {%- if collections.catalog[id]["topic"] -%}
-            <span>{{ collections.catalog[id]["topic"] }}</span>
+            <p class="topic">{{ collections.catalog[id]["topic"] }}</p>
           {%- endif -%}
 
           {%- if collections.catalog[id]["title"] -%}
             <h3>{{ collections.catalog[id]["title"] }}</h3>
           {%- endif -%}
+          </hgroup>
 
           {%- if collections.catalog[id]["description"] -%}
             <p>{{ collections.catalog[id]["description"] }}</p>
@@ -30,8 +33,9 @@
           {%- endif -%}
 
           {# TODO: pre-populate link to the course about MFE #}
-
-          <a class="btn" href="{{ id | course_endpoint('course_about') }}">Learn More</a>
+          <div class="cta">
+            <a class="btn" href="{{ id | course_endpoint('course_about') }}">Learn More</a>
+          </div>
         </div>
       </li>
     {%- endfor -%}
@@ -39,7 +43,7 @@
   {%- if module.description -%}
     <p>{{ module.description | safe }}</p>
   {%- endif -%}
-  
+
   {%- if module.cta -%}
     <a class="btn" href="{{ module.cta.href }}">{{ module.cta.label }}</a>
   {%- endif -%}

@@ -11,7 +11,7 @@ live: true
 url: /courses/course-v1:GYM+011+0/about
 img: /img/courses/svg/gym-011.svg
 topic: "Development"
-description: "In this course, you will get a familiarity with all aspects of the built-in developer tools within the Chrome browser. Understanding how to use these tools will speed up your development time and help you create bug-free, high-performing pages and web applications."
+description: "Learn how to leverage Chrome web developer tools to speed up your development time and help create bug-free, high-performing pages and apps."
 instructor: kpeters
 skills:
   - label: "HTML & CSS Modification"

@@ -1,0 +1,461 @@
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+
+// TODO: Move to a more "global" place
+
+// main (landmark)
+
+main {
+  background-color: var(--mono-200);
+  padding-bottom: 1rem;
+  margin: 0;
+
+  p:only-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.intro {
+  padding: 1.6rem 0;
+
+  @include breakpoint(large, min) {
+
+    & {
+      display: grid;
+      grid-template-columns: 1.4fr 2.6fr;
+      gap: 1.4rem;
+      align-items: start;
+    }
+
+  }
+
+  hgroup {
+
+    h1 {
+      font: 900 2.25rem/1.15 var(--font-family-custom);
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+
+    p b {
+      display: block;
+    }
+
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  .list-summary {
+    align-self: end;
+  }
+}
+
+.list-summary {
+
+  dl {
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+
+    & div:not(:first-child) {
+      margin-top: 0.75rem;
+    }
+
+    dt {
+      font: 900 1rem/1.15 var(--font-family-custom);
+      text-transform: uppercase;
+      letter-spacing: 0.05ex;
+      word-spacing: 0.25ex;
+      margin-bottom: 0.6rem;
+    }
+
+    dd {
+      font-size: 1rem;
+      line-height: 1.4;
+      letter-spacing: 0.025ex;
+
+      &:not(:only-of-type) {
+        display: list-item;
+        list-style-type: disc;
+        margin-top: 0.55rem;
+        margin-left: 0.8rem;
+      }
+    }
+
+    dd::marker {
+      color: var(--secondary);
+    }
+
+  }
+
+  @include breakpoint(large, min) {
+
+    & {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: auto;
+      justify-content: start;
+      gap: 0 2rem;
+    }
+
+  }
+
+}
+
+// topics (course listing)
+
+.topics {
+  padding-top: 1.6rem;
+
+  @include breakpoint(large, min) {
+
+    & {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      gap: 1.6rem;
+      align-items: start;
+    }
+
+  }
+}
+
+.topic-menu h2,
+.topic-label {
+  font-size: 1.55rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.05ex;
+  margin-bottom: 1.4rem;
+}
+
+.topic-menu {
+  margin-bottom: 1.6rem;
+
+  :first-child + ul {
+    border-top: 1px dashed var(--mono-400);
+  }
+
+  ul {
+
+    li {
+    border-bottom: 1px dashed var(--mono-400);
+
+      a {
+        display: block;
+        font-weight: bold;
+        padding: 0.8rem 1rem;
+      }
+    }
+  }
+
+  @include breakpoint(large, min) {
+
+    & {
+      position: sticky;
+      top: 1.6rem;
+    }
+
+  }
+
+}
+
+// topics (view by)
+
+#all-topics:target ~ * .elective,
+#featured:target ~ * .course:not(.featured),
+#design:target ~ * .course:not(.design),
+#development:target ~ * .course:not(.development),
+#ux:target ~ * .course:not(.ux),
+#career-skills:target ~ * .course:not(.career-skills),
+.topic-select:target:not(#all-topics:target) ~ * .topic-label span {
+  display: none;
+}
+
+.topic-select:target ~ * .topic-menu a {
+  background-color: transparent;
+}
+
+.topic-menu [href*="all-topics"] {
+  background-color: var(--mono-100);
+}
+
+#all-topics:target ~ * {
+
+  [href*="all-topics"] {
+    background-color: var(--mono-100);
+  }
+
+}
+
+#featured:target ~ * {
+
+  .topic-label::before {
+    content: "Featured";
+  }
+
+  [href*="featured"] {
+    background-color: var(--mono-100);
+  }
+
+}
+
+#design:target ~ * {
+
+  .topic-label::before {
+    content: "Design";
+  }
+
+  [href*="design"] {
+    background-color: var(--mono-100);
+  }
+
+}
+
+#development:target ~ * {
+
+  .topic-label::before {
+    content: "Development";
+  }
+
+  [href*="development"] {
+    background-color: var(--mono-100);
+  }
+
+}
+
+#ux:target ~ * {
+
+  .topic-label::before {
+    content: "UX";
+  }
+
+  [href*="ux"] {
+    background-color: var(--mono-100);
+  }
+
+}
+
+#career-skills:target ~ * {
+
+  .topic-label::before {
+    content: "Career Skills";
+  }
+
+  [href*="career-skills"] {
+    background-color: var(--mono-100);
+  }
+
+}
+
+.note {
+  background-color: #ffefe8;
+  padding: 1.4rem;
+  border: 1px dashed var(--mono-700);
+  border-radius: 3px;
+
+  + * {
+    margin-top: 1.4;
+  }
+}
+
+// course card
+
+.course-card {
+
+  &:not(first-child) {
+    margin-top: 1rem;
+  }
+
+// course card (main content)
+
+  .main {
+    background-color: var(--mono-100);
+    padding: 1.4rem;
+    border: 1px solid var(--mono-400);
+    border-radius: 3px;
+
+    > a {
+      grid-area: art;
+      display: inline-block;
+      margin-bottom: -1.725rem;
+
+      img {
+        //
+      }
+    }
+
+    p,
+    dd {
+      text-wrap: pretty;
+    }
+
+    hgroup {
+      grid-area: title;
+      max-width: 28rem;
+
+      h2,
+      .topic {
+        text-transform: uppercase;
+        letter-spacing: 0.025ex;
+        margin-bottom: 0.8rem;
+      }
+
+      .topic {
+        display: inline-block;
+        font: 900 1.25rem/1 var(--font-family-custom);
+        background-color: var(--mono-100);
+        padding-top: 0.8rem;
+        padding-right: 0.9rem;
+      }
+
+      h2 {
+        font: 900 1.8rem/1.2 var(--font-family-custom);
+        text-wrap: balance;
+      }
+
+      .byline {
+        font-size: 0.9375rem;
+        letter-spacing: 0.025ex;
+        margin-top: 1.125rem;
+      }
+    }
+
+    .description {
+      grid-area: summary;
+      align-self: start;
+      font-size: 1.09375rem;
+      letter-spacing: 0.01ex;
+    }
+
+    .description + .cta {
+      margin-top: 1.2rem;
+    }
+
+    .cta {
+      grid-area: cta;
+      align-self: end;
+
+      .btn {
+        display: inline-block;
+        width: 100%;
+        max-width: 16rem;
+      }
+    }
+
+    @include breakpoint(large, min) {
+
+      & {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto auto;
+        grid-template-columns: 1.5fr 2fr;
+        grid-template-areas:
+          "art  title"
+          "art  summary"
+          "art  cta"
+          "aside aside"
+          "info info";
+        gap: 0 1.4rem;
+        align-items: start;
+      }
+
+      > a {
+        margin-bottom: 0;
+      }
+
+      hgroup {
+
+        .topic {
+          display: inherit;
+          padding: 0;
+        }
+
+      }
+
+    }
+
+  }
+
+  aside {
+    grid-area: aside;
+    border-top: 1px dashed var(--mono-300);
+    margin-top: 1.4rem;
+
+    &.list-summary {
+      justify-content: start;
+
+      dl {
+        margin-bottom: 0;
+      }
+
+      dt,
+      dd {
+        font-size: 0.9375rem;
+      }
+
+    }
+
+  }
+
+  .info {
+    display: grid;
+    grid-area: info;
+    grid-auto-flow: column;
+    gap: 1.4rem;
+    justify-content: start;
+    padding-top: 1.4rem;
+    border-top: 1px dashed var(--mono-300);
+    margin-top: 1rem;
+    // margin-bottom: 1rem;
+
+    h3,
+    p {
+      font-size: 0.9375rem;
+      line-height: 1;
+      letter-spacing: 0.025ex;
+      margin-bottom: 0;
+
+      &:not(p) {
+        font-weight: 900;
+        font-family: var(--font-family-custom);
+        line-height: 1.15;
+        text-transform: uppercase;
+        word-spacing: 0.25ex;
+      }
+    }
+
+  }
+
+  // course card (footer)
+
+  .back-to {
+    margin-top: 0.8rem;
+
+    @include breakpoint(large, min) {
+
+      & {
+        display: none;
+      }
+
+    }
+
+    a::before {
+      display: inline-block;
+      content: "↑";
+      font-family: monospace;
+      vertical-align: top;
+      margin-right: 0.2rem;
+    }
+
+    p {
+      font-size: 0.9375rem;
+      line-height: 1.15;
+      letter-spacing: 0.025ex;
+    }
+
+  }
+
+}
