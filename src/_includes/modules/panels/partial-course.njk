@@ -32,6 +32,8 @@
 {%- set src = config.urls.root + img -%}
 {%- set srcSet = src -%}
 
+{%- set url = obj.id | course_endpoint('course_about') -%}
+
 <li class="course {{ shortId | lower }} {{ topic | slugify }} {%if (obj.topic_featured) %}featured{% endif %}">
   <article id="{{ shortId | lower }}" class="course-card">
     <div class="main">
