@@ -1,5 +1,5 @@
 // | -------------------------------------------------------------
-// | This file is intended to only serve the Course About MFE
+// | This file is intended to only serve the Authn MFE
 // | -------------------------------------------------------------
 @use "base/fonts" as *;
 @use "base/functions" as *;
@@ -7,12 +7,16 @@
 
 @use "shared";
 
+@use "mfe/flex";
+@use "mfe/animations";
 @use "mfe/buttons";
 @use "mfe/dropdowns";
 @use "mfe/icons";
 @use "mfe/tooltips";
 @use "mfe/forms";
 @use "mfe/tabs";
+@use "mfe/notifications";
+@use "mfe/headings";
 
 .layout {
   display: grid;

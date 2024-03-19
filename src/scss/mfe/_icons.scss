@@ -721,3 +721,39 @@
 .pgn__icon-button-toggle__container .btn-icon + .btn-icon {
   margin-inline-start: 0.25rem;
 }
+
+.pgn__icon {
+  display: block;
+  flex-shrink: 0;
+  height: 1.5rem;
+  position: relative;
+  width: 1.5rem;
+}
+.pgn__icon.pgn__icon__inline {
+  height: 0.8em;
+  width: 0.8em;
+}
+.pgn__icon.pgn__icon__xs {
+  height: 1rem;
+  width: 1rem;
+}
+.pgn__icon.pgn__icon__sm {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.pgn__icon.pgn__icon__md {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.pgn__icon.pgn__icon__lg {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+.pgn__icon svg {
+  display: block;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+}

@@ -2,15 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin-bottom: 0;
-}
-[dir="ltr"] .nav {
-  padding-left: 0;
-}
-[dir="rtl"] .nav {
-  padding-right: 0;
+  margin-bottom: 2rem;
+  padding: 0;
 }
 
+.nav-tabs .nav-link {
+  background: #0000;
+}
 
 .nav-link {
   color: #454545;
