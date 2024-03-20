@@ -1,9 +1,8 @@
-@use 'base/functions' as *;
+@use "base/functions" as *;
 
-@use 'base/buttonish';
+@use "base/buttonish";
 
 .btn {
-  
   /*
   - Learning: "Launch Tour" button/link
   */
@@ -34,32 +33,35 @@
   }
 }
 
-
 // Close button mess copied from authn
+$color_1: #000;
+$background-color_1: #0000;
+
 .close {
-  color: #000;
+  color: $color_1;
   font-size: 1.6875rem;
   font-weight: 700;
   line-height: 1;
   opacity: 0.5;
   text-shadow: 0 1px 0 #fff;
-}
-[dir="ltr"] .close {
   float: right;
-}
-[dir="rtl"] .close {
-  float: left;
-}
-.close:hover {
-  color: #000;
-  text-decoration: none;
-}
-.close:not(:disabled):not(.disabled):focus,
-.close:not(:disabled):not(.disabled):hover {
-  opacity: 0.75;
+  &:hover {
+    color: $color_1;
+    text-decoration: none;
+  }
+  &:not(:disabled) {
+    &:not(.disabled) {
+      &:focus {
+        opacity: 0.75;
+      }
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
 }
 button.close {
-  background-color: #0000;
+  background-color: $background-color_1;
   border: 0;
   padding: 0;
 }

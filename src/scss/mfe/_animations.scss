@@ -1,16 +1,13 @@
 .fade {
   transition: opacity 0.15s linear;
-}
-@media (prefers-reduced-motion: reduce) {
-  .fade {
-    transition: none;
+  &:not(.show) {
+    opacity: 0;
   }
 }
-.fade:not(.show) {
-  opacity: 0;
-}
-.collapse:not(.show) {
-  display: none;
+.collapse {
+  &:not(.show) {
+    display: none;
+  }
 }
 .collapsing {
   height: 0;
@@ -18,22 +15,11 @@
   position: relative;
   transition: height 0.35s ease;
 }
-@media (prefers-reduced-motion: reduce) {
-  .collapsing {
-    transition: none;
-  }
-}
 .collapsing.width {
   height: auto;
   transition: width 0.35s ease;
   width: 0;
 }
-@media (prefers-reduced-motion: reduce) {
-  .collapsing.width {
-    transition: none;
-  }
-}
-
 .pgn-transition-replace-group {
   text-align: start;
   transition: height 0.3s ease;
@@ -52,4 +38,15 @@
 .pgn__transition-replace-exit-active {
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    transition: none;
+  }
+  .collapsing {
+    transition: none;
+  }
+  .collapsing.width {
+    transition: none;
+  }
 }
