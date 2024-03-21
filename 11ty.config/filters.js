@@ -157,9 +157,10 @@ module.exports = eleventyConfig => {
     if (courseType === 'new' || !!dest_format) {
       if (!!dest_format) {
         let mfeUrl = process.env.MFE_URL;
-        if (process.env.ELEVENTY_ENV === ('local' || 'dev')) {
+        // console.log(process.env);
+        if (process.env.NODE_ENV === 'dev' || 'development' || 'tutor:dev') {
           const port = process.env[`MFE_PORT_${dest_format.toUpperCase()}`];
-          mfeUrl = `${mfeUrl}:${port}`
+          mfeUrl = `${mfeUrl}:${port}`;
         }
 
         if (dest_format === 'course_about') {

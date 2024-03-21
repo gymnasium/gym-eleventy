@@ -3,11 +3,11 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/655fce6b-0f21-4083-8b06-2d87de788b79/deploy-status)](https://app.netlify.com/sites/gym-11ty/deploys)
 
 
-### Prerequisites
+## Prerequisites
 - [NVM - Node Version Manager](https://github.com/nvm-sh/nvm)
 - [node.js](https://nodejs.org/)
 
-### Installation
+## Installation
 Check to see which version(s) of node you've got installed:
 ```
 nvm list
@@ -15,7 +15,7 @@ nvm list
 
 If the list doesn't include the version referenced in `.nvmrc`, be sure to install it:
 ```
-nvm install 18.17
+nvm install 20
 ```
 
 Switch to the referenced version:
@@ -29,25 +29,43 @@ Install dependencies:
 npm install
 ```
 
-### Getting Started
+## Getting Started
 Once installed, there are two ways to get this running, depending on your needs.
 
-#### 1. Default
+### 1. Default
 Just run:
 ```
 npm run dev
 ```
 The server will be available at [http://localhost:4040](http://localhost:4040).
 
-#### 2. Running in Parallel with Tutor
+### 2. Running in Parallel with Tutor
 
 This approach uses netlify-cli, which has the advantage of serving up relevant CORS headers, redirects, etc. This useful for running locally in parallel with other applications (such as the Tutor distribution of Open edX).
+
+There are two modes of running a parallel 11ty instance along with Tutor: `tutor:dev` and `tutor:local`.
+
+#### tutor:local
+
+An emulation of the production tutor. All MFEs run without ports set.
+
+`npm run tutor:local`
+
+### tutor:dev
+
+For local development only. The MFEs are set to run with their ports.
+
+`npm run tutor:dev`
+
+### Continued...
+In either case, the server will open a browser automatically to [http://localhost:8888](http://localhost:8888).
+
+
 ```
 npm run local
 ```
-This command changes sets `NODE_ENV=local` and runs `npx netlify dev`. The server will open a browser automatically to [http://localhost:8888](http://localhost:8888).
 
-Note: Depending on your system, prior to starting up Tutor, you may need to add `127.0.0.1 edly.io` to your `/etc/hosts` file. Once that's done, you should be able to access [http://edly.io:8888](http://edly.io:8888).
+**Note:** Depending on your system, prior to starting up Tutor, you may need to add `127.0.0.1 edly.io` to your `/etc/hosts` file. Once that's done, you should be able to access [http://edly.io:8888](http://edly.io:8888).
 
 This static site generates a JSON feed at `/feeds/config.json`, which is consumed by the various Open edX components - [the theme](https://github.com/gymnasium/gym-theme), the MFEs, and our [customized MFE frontend components](https://github.com/gymnasium/gym-frontend-components).
 
