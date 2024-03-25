@@ -27,7 +27,7 @@ ol:not([class]) {
 
 ul:not([class]) {
   > li::marker {
-    color: var(--secondary);
+    color: var(--secondary-100);
   }
 }
 
