@@ -14,7 +14,7 @@ topic: "Development"
 video_id: Xb3pBj4PKxg
 video_duration: "4:59"
 featured: false
-description: "Learn how to add CSS Media Queries in order to get started with responsive web design in this tutorial."
+description: "Learn how to add CSS Media Queries to get started with responsive web design in this tutorial."
 project_file_source: CodePen
 project_files:
 - label: "Starting Project"

@@ -94,7 +94,7 @@ outline:
       When you begin treating performance as another component of design such as
       layout or color, things fall into place. In this lesson, you will identify
       potential performance issues with your site using free online tools and
-      then explore ways to optimize your assets in order to improve performance.
+      then explore ways to optimize your assets to improve performance.
   - label: "Lesson 11: Grid Systems"
     description: >
       Now that you have learned how to build a responsive layout from scratch,
@@ -110,7 +110,7 @@ outline:
       will get a quick look at the benefits of using a CSS preprocessor such as
       Sass.
 prerequisites:
-  - label: "You will be asked to understand and write code in order to learn and practice responsive techniques with both HTML and CSS."
+  - label: "You will be asked to understand and write code to learn and practice responsive techniques with both HTML and CSS."
   - label: "Knowledge of graphic design software: Minimal use of Photoshop, Fireworks, or any graphic design tool may be required to complete lesson assignments."
   - label: "Experience designing for the web: Knowledge of designing for the web and its components, creating image assets, and styling HTML with CSS to create the full web experience."
   - label: "An understanding of device differences: You should be familiar with the differences among various systems, devices, and web browsers."
