@@ -38,14 +38,16 @@
   <article id="{{ shortId | lower }}" class="course-card">
     <div class="main">
       <a href="{{ url }}">
-        <img class="artwork" alt="{{ title }} course artwork." src="{{ src }}" srcset="{{ srcSet }}" decoding="async" fetchpriority="high" width="574" height="488">
+        <img class="artwork" alt="Course artwork for {{ title }}." src="{{ src }}" srcset="{{ srcSet }}" decoding="async" fetchpriority="high" width="574" height="488">
       </a>
-      <hgroup>
-        <p class="topic"><b>{{ topic }}</b></p>
-        <h2><a href="{{ url }}">{{ title }}</a></h2>
-        <p class="byline">with <b>{{ bios[obj.instructor]['name'] }}</b>, {{  bios[obj.instructor]['subtitle'] }}</p>
-      </hgroup>
-      <p class="description">{{ description }}</p>
+      <header>
+        <hgroup>
+          <p class="topic"><b>{{ topic }}</b></p>
+          <h2 class="title"><a href="{{ url }}">{{ title }}</a></h2>
+          <p class="instructor">with {{ bios[obj.instructor]['name'] }}, {{  bios[obj.instructor]['subtitle'] }}</p>
+        </hgroup>
+        <p class="description">{{ description }}</p>
+      </header>
       <div class="cta">
         <a class="btn" href="{{ url }}">Explore Course</a>
       </div>

@@ -42,7 +42,7 @@ outline:
   - label: "Chapter 3: Use Node and Express to Serve a Static Directory "
     description: This chapter demonstrates how to use NPM to install the dependencies, and start the server. Additionally, you will learn how to use an HTML file to respond to a HTTP GET request.
   - label: "Chapter 4: Using Express Routes for Handling HTTP GET Requests"
-    description: Learn how to set a GET express route, in order to take your first step for dynamic resource serving.
+    description: Learn how to set a GET express route, to take your first step for dynamic resource serving.
   - label: "Chapter 5: First Look at Express’ View Engine, with EJS"
     description: You will look at the use of Express' View Engine in two ways, the first is using EJS, a common HTML based renderer, using JavaScript in a method similar to PHP. EJS introduces dynamic rendering without focusing on the syntax learning that Jade requires.
   - label: "Chapter 6: Second Look at Express’ View Engine, with Jade"
@@ -59,6 +59,6 @@ prerequisites:
   - label: Experience in working with remote server technology will also be helpful.
 requirements:
   - label: Mac or Windows desktop or laptop
-  - label: You will need admin rights on your system in order to install Node.Js and its dependencies
+  - label: You will need admin rights on your system to install Node.Js and its dependencies
   - label: Google Chrome web browser recommended
 # End Overview

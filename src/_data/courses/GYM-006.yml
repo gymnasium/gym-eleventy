@@ -37,7 +37,7 @@ outline:
   - label: "Chapter 2: What Is It?"
     description: "In this chapter you will learn the rationale and benefits of version control in general as well as how the Git workflow reduces confusion when working collaboratively."
   - label: "Chapter 3: The Major Concepts"
-    description: "In this chapter you will dive into the specifics of Git, namely the concepts and vocabulary you will need to know in order to begin working with it. Specific concepts covered include the role of the “repo” as well as defining commits and branches."
+    description: "In this chapter you will dive into the specifics of Git, namely the concepts and vocabulary you will need to know to begin working with it. Specific concepts covered include the role of the “repo” as well as defining commits and branches."
   - label: "Chapter 4: Basic Git Actions"
     description: "Begin working with Git with this hands-on tutorial that includes setting up a local repo and adding your first few commits. Along the way you will discover how Git interacts with your local file system."
   - label: "Chapter 5: Branches"
