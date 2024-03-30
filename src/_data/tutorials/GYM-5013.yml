@@ -7,7 +7,8 @@ tags:
   - take5
 url: /courses/take5/GYM-5013/
 img: /img/tutorials/poster/gym-5013.jpg
-live: true
+live: false
+sitemapExclude: true
 instructor: josborn
 instructor_bio: "Director of Learning at Aquent Gymnasium"
 topic_featured: false
