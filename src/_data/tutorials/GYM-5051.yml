@@ -6,10 +6,11 @@ tags:
   - tutorial
   - take5
 url: /courses/take5/GYM-5051/
-img: /img/tutorials/gym-5051.jpg
+img: /img/tutorials/poster/gym-5051.jpg
 live: true
 instructor: josborn
 instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic_featured: true
 topic: "UX"
 subtopics:
   - label: "Prototyping"

@@ -6,10 +6,11 @@ tags:
   - tutorial
   - take5
 url: /courses/take5/GYM-5007/
-img: /img/tutorials/gym-5007.jpg
+img: /img/tutorials/poster/gym-5007.jpg
 live: true
 instructor: honeill
 instructor_bio: "CEO of Pixels for Humans"
+topic_featured: false
 topic: "UX"
 video_id: UDekSJsMOC8
 video_duration: "4:05"

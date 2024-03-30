@@ -6,10 +6,11 @@ tags:
   - tutorial
   - take5
 url: /courses/take5/GYM-5026/
-img: /img/tutorials/gym-5026.jpg
+img: /img/tutorials/poster/gym-5026.jpg
 live: true
 instructor: "Mike Bifulco"
 instructor_bio: "Developer Advocate at Stripe"
+topic_featured: false
 topic: "Development"
 video_id: ukPI1zlxKqg
 video_duration: "4:58"
