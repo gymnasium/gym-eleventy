@@ -6,10 +6,11 @@ tags:
   - tutorial
   - take5
 url: /courses/take5/GYM-5045/
-img: /img/tutorials/gym-5045.jpg
+img: /img/tutorials/poster/gym-5045.jpg
 live: true
 instructor: "Clarissa Peterson"
 instructor_bio: "Strategy Director at Forum One"
+topic_featured: false
 topic: "Development"
 subtopics:
   - label: "Accessibility"

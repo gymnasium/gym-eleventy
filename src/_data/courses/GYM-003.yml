@@ -71,7 +71,7 @@ outline:
   - label: "Chapter 8: Creating Advanced Layouts with Nested Rows"
     description: >
       Typically, the more room you have to work with on a screen, the more
-      complex your layout can be. In order to achieve advanced layouts with
+      complex your layout can be. to achieve advanced layouts with
       multiple columns you'll need to learn how to use Bootstrap's nesting
       capabilities.
   - label: "Chapter 8: Icing On The Cake"

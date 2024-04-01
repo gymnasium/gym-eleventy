@@ -11,7 +11,7 @@ Please use the following strings instead of directly coding domain names:
   <div class="container">
     <div class="main">
       <div class="header">
-        <a href="{{ config.urls.root }}" aria-label="{{ config.meta.title }} homepage">
+        <a href="{{ config.urls.root }}/" aria-label="{{ config.meta.title }} homepage">
           <img alt="{{ config.meta.author }}" src="{{ config.urls.data }}{{ config.logos.white.main.src }}" srcset="{{ config.urls.data }}{{ config.logos.main.white.srcset }}" decoding="async" fetchpriority="low" width="208" height="24">
         </a>
         <p>{{ config.meta.short_description }}</p>
@@ -55,7 +55,7 @@ Please use the following strings instead of directly coding domain names:
       {%- endfor -%}
     </aside>
     <p class="copyright">
-      <small>© {% year %} <a href="{{ config.urls.root }}" aria-label="{{ config.meta.title }} homepage">{{ config.meta.author }}</a></small>
+      <small>© {% year %} <a href="{{ config.urls.root }}/" aria-label="{{ config.meta.title }} homepage">{{ config.meta.author }}</a></small>
     </p>
   </div><!-- .container -->
 </footer>

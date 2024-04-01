@@ -32,9 +32,6 @@
   },
 }
 ---
-{# TODO: remove later - this is just here for reference #}
-<span>{{ item.id }}</span>
-
 {# Set fallbacks for missing bio YAML #}
 {#- TODO: seems a bit redundant to have an additional bio fields inside the tutorial data file. Ideally, all of that info would just be pulled from the instructor bios data files. Let's discuss. -#}
 {%- set instructor = item.instructor -%}
@@ -48,10 +45,16 @@
   {%- endset -%}
 {%- endif -%}
 
-<p class="topic">{{ item.topic }}</p>
-<h1 class="title">{{ item.title }}</h1>
-<p class="instructor">{{ instructor_blurb | safe }}</p>
-<p class="description">{{ item.description }}</p>
+<article id="{{ item.id | slugify }}" class="tutorial-detail bg-mono-100 full-bleed">
+
+<header>
+  <hgroup>
+    <p class="topic"><b>{{ item.topic }}</b></p>
+    <h2 class="title">{{ item.title }}</h2>
+    <p class="instructor">{{ instructor_blurb | safe }}</p>
+  </hgroup>
+  <p class="description">{{ item.description }}</p>
+</header>
 
 {# Note: this a custom shortcode that wraps the video in a div. Find it in
 ./11ty.config/shortcodes.js #}
@@ -59,70 +62,75 @@
   {%- youtube item.video_id, item.title -%}
 {%- endif -%}
 
-{%- if item.project_files or item.related_content -%}
-<details class="resources" id="tutorial-resources" open="open">
-  <summary aria-expanded="true/false" tabindex="0" role="button">Resources</summary>
-  {%- if item.project_files -%}
-    <div class="project-files">
-      <header>
-        <h3>Project Files</h3>
-        {%- if item.project_file_source -%}<p>on {{ item.project_file_source }}</p>{%- endif -%}
-      </header>
-      <ul>
-        {%- for file in item.project_files -%}
-          <li>
-            <a href="{{ file.url }}" target="_blank" rel="noopener">{{ file.label }}</a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </div>
-  {%- endif -%}
-
-  {%- if item.related_content -%}
-    <div class="related">
-      <header>
-        <h3>Related Content</h3>
-      </header>
-      <ul>
-        {%- for link in item.related_content -%}
-          {%- set attr -%} target="_blank" rel="noopener"{% endset -%}
-          {%- if not 'http' in link.url -%}
-            {%- set attr = "" -%}
-          {%- endif -%}
-          <li>
-            <a href="{{ link.url }}"{{ attr }}>{{ link.label }}</a>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </div>
-  {%- endif -%}
-</details>
-{%- endif -%}
-
 {# TODO: current markdown plugin doesn't support kramdown style features, like link attributes. #}
 {% set transcript = "./src/_includes/md/transcripts/" + item.id + ".md" %}
 {%- if transcript | file_exists -%}
 <details class="resources" id="tutorial-transcript">
-  <summary class="gym-summary-link" aria-expanded="true/false" tabindex="0" role="button">Transcript</summary>
+  <summary class="gym-summary-link" aria-expanded="true/false" tabindex="0" role="button"><span>Video Transcript</span></summary>
   <article class="transcript" id="{{ item.id }}-transcript">
     <header class="visuallyhidden">
-      <h1>{{ item.title }}</h1>
+      <h2>{{ item.title }}</h2>
       <p>{{ instructor_blurb }}</p>
     </header>
 
   {% renderFile transcript, "njk" %}
 
+    <footer class="back-to">
+      <p><a href="#main">Back to Tutorial</a></p>
+    </footer>
   </article>
 </details>
 {%- endif -%}
 
+{%- if item.project_files or item.related_content -%}
+<section class="resources" id="tutorial-resources">
+  <h3>Resources</h3>
+  {%- if item.project_files -%}
+  <div class="project-files">
+    <header>
+      <h4>Project Files</h4>
+      {%- if item.project_file_source -%}<p>on {{ item.project_file_source }}</p>{%- endif -%}
+    </header>
+    <ul>
+      {%- for file in item.project_files -%}
+        <li>
+          <a href="{{ file.url }}" target="_blank" rel="noopener">{{ file.label }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- endif -%}
+
+  {%- if item.related_content -%}
+  <div class="related">
+    <header>
+      <h4>Related Content</h4>
+    </header>
+    <ul>
+      {%- for link in item.related_content -%}
+        {%- set attr -%} target="_blank" rel="noopener"{% endset -%}
+        {%- if not 'http' in link.url -%}
+          {%- set attr = "" -%}
+        {%- endif -%}
+        <li>
+          <a href="{{ link.url }}"{{ attr }}>{{ link.label }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {%- endif -%}
+</section>
+{%- endif -%}
+
 {# TODO: probably don't need this here, but I put it here as a reference of how
 to accomplish this. #}
+
+<!--
 {%- if bios[item.instructor] -%}
 <aside>
-  <h2>Meet the Instructor</h2>
+  <h3>Meet the Instructor</h3>
 
-  <img src="{{ config.urls.data }}/img/webinar-bio-headshots/{{ bios[item.instructor].img }}" alt="Image of {{ bios[item.instructor].name }}" />
+  <img src="{{ config.urls.root }}/img/webinar-bio-headshots/{{ bios[item.instructor].img }}" alt="Headshot of {{ bios[item.instructor].name }}" decoding="async" fetchpriority="low" width="" height="">
 
   <p>{{ bios[item.instructor].description | safe }}</p>
 
@@ -131,4 +139,9 @@ to accomplish this. #}
   {%- endif -%}
 </aside>
 {%- endif -%}
+ -->
 
+  <footer class="back-to">
+    <p><a href="#main">Back to Tutorial</a></p>
+  </footer>
+</article>

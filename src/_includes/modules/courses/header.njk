@@ -1,0 +1,18 @@
+<header class="intro bg-mono-350 full-bleed">
+  <hgroup>
+    <h1>{{ intro.heading }}</h1>
+    <p><b>{{ intro.subheading }}</b> {{ intro.benefit }}</p>
+    <p><b><a href="#topics">{{ intro.lede }}</a></b> {{ intro.topics }}</p>
+  </hgroup>
+  <div class="list-summary">
+    {% for info in intro.info %}
+    <dl>
+      <dt>{{ info.title }}</dt>
+      {% for item in info.items %}
+      <dd>{{ item.label }}</dd>
+      {% endfor %}
+    </dl>
+    {% endfor %}
+  </div>
+  <!-- <p><b>{{ intro.promo.pitch }}</b> {{ intro.promo.action }}</p> -->
+</header>

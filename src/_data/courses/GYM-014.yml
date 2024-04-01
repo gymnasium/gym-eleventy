@@ -14,7 +14,7 @@ topic: "Development"
 subtopics:
   - label: "Design Systems"
   - label: "Pattern Library"
-description: "Learn how to use Atomic Design methodology within Pattern Lab in order to create reusable user interface components."
+description: "Learn how to use Atomic Design methodology within Pattern Lab to create reusable user interface components."
 instructor: bfrost
 skills:
   - label: "Website prototyping"
@@ -29,7 +29,7 @@ completion_duration: "Up to 4 hours"
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
-  <strong><cite>Working with Atomic Design and Pattern Lab</cite></strong> will teach you how the Atomic Design methodology helps teams create successful user interface (UI) design systems and how to use Pattern Lab in order to create reusable UI components in HTML and CSS.
+  <strong><cite>Working with Atomic Design and Pattern Lab</cite></strong> will teach you how the Atomic Design methodology helps teams create successful user interface (UI) design systems and how to use Pattern Lab to create reusable UI components in HTML and CSS.
 preview_video_src:
 about: >
   <p>This course will teach students the atomic design methodology, setting up Pattern Lab, building &amp; using UI components inside Pattern Lab, and manipulating data to create sophisticated page prototypes. Specifically you will learn the following: the 5-stage atomic design methodology, installing Pattern Lab, building frontend components in Pattern Lab, designing with dynamic data within Pattern Lab, and using advanced Pattern Lab features such as pseudo-patterns, pattern status, and more.</p>
@@ -59,6 +59,6 @@ prerequisites:
 requirements:
   - label: Mac or Windows desktop or laptop
   - label: A text editor (We suggest <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)
-  - label: This course uses the Node.js version of Pattern Lab. If you wish to follow along with the instructor you will need admin rights in order to install the package manager NPM, as well as Node, onto your machine. (Instructions for installing this toolkit are covered in Chapter 4)
+  - label: This course uses the Node.js version of Pattern Lab. If you wish to follow along with the instructor you will need admin rights to install the package manager NPM, as well as Node, onto your machine. (Instructions for installing this toolkit are covered in Chapter 4)
   - label: Gulp (Instructions for installing this toolkit are covered in Chapter 4)
 # End Overview
