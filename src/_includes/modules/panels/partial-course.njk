@@ -18,6 +18,8 @@
 {%- endif -%}
 
 {%- set topic = obj.topic -%}
+{%- set topic_featured = obj.topic_featured-%}
+{%- set subtopics = obj.subtopics -%}
 {%- set description = obj.description -%}
 
 {%- if obj.slug -%}
@@ -34,11 +36,13 @@
 
 {%- set url = obj.id | course_endpoint('course_about') -%}
 
-<li class="course {{ shortId | lower }} {{ topic | slugify }} {%if (obj.topic_featured) %}featured{% endif %}">
+<li class="course {{ type }} {{ shortId | lower }} {{ topic | slugify }}{% if subtopics %}{% for subtopic in subtopics %} {{ subtopic.label | slugify }}{% endfor %}{% endif %}{% if topic_featured %} featured{% endif %}">
   <article id="{{ shortId | lower }}" class="course-card">
     <div class="main">
       <a href="{{ url }}">
-        <img class="artwork" alt="Course artwork for {{ title }}." src="{{ src }}" srcset="{{ srcSet }}" decoding="async" fetchpriority="high" width="574" height="488">
+        <div class="artwork">
+          <img alt="Course artwork for {{ title }}." src="{{ src }}" srcset="{{ srcSet }}" decoding="async" fetchpriority="high" width="574" height="488">
+        </div>
       </a>
       <header>
         <hgroup>
