@@ -6,8 +6,11 @@
 // 1. description list (component)
 // TODO: Rename?
 .list-summary {
+  display: grid;
+  gap: 1.4rem 2rem;
+
   dl {
-    margin-top: 1.2rem;
+    margin-top: 0;
     margin-bottom: 0;
 
     & div:not(:first-child) {
@@ -19,20 +22,17 @@
       text-transform: uppercase;
       letter-spacing: 0.05ex;
       word-spacing: 0.25ex;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.55rem;
     }
 
     dd {
+      display: list-item;
+      list-style-type: disc;
       font-size: 1rem;
       line-height: 1.4;
       letter-spacing: 0.025ex;
-
-      &:not(:only-of-type) {
-        display: list-item;
-        list-style-type: disc;
-        margin-top: 0.55rem;
-        margin-left: 0.8rem;
-      }
+      margin-top: 0.55rem;
+      margin-left: 0.8rem;
     }
 
     dd::marker {
@@ -45,8 +45,8 @@
       display: grid;
       grid-auto-flow: column;
       grid-template-columns: auto;
-      gap: 0 2rem;
       justify-content: start;
+      align-items: start;
     }
   }
 }
@@ -55,6 +55,7 @@
 
 .courses-full,
 .courses-gym-shorts,
+.courses-take5,
 [class*="courses-take5"] {
   main {
     p:only-of-type {
@@ -68,10 +69,33 @@
     @include breakpoint(large, min) {
       & {
         display: grid;
-        grid-template-columns: 1.4fr 2.6fr;
-        gap: 1.4rem;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 1.2rem;
         align-items: start;
       }
+    }
+
+    // TODO: Redo hacky layout
+    @include breakpoint(medium, min) {
+
+      .list-summary {
+        grid-auto-flow: none;
+        grid-template-columns: none;
+
+        dl {
+          margin-top: 0.25rem;
+        }
+
+        dl:not(:first-child) {
+          grid-column: 2 / 4;
+          grid-row: 1 / 2;
+        }
+
+        dl:last-child:not(:first-child + :last-child) {
+          margin-top: 4.2rem;
+        }
+      }
+
     }
 
     hgroup {
@@ -84,7 +108,7 @@
         font-size: 1.25rem;
       }
 
-      p b {
+      h1 + p b {
         display: block;
       }
     }
@@ -93,8 +117,12 @@
       margin-bottom: 0;
     }
 
-    .list-summary {
-      align-self: end;
+    @include breakpoint(large, max) {
+
+      * + .list-summary {
+        margin-top: 1.4rem;
+      }
+
     }
   }
 
@@ -153,26 +181,42 @@
 
   // topics (view by)
 
+  .elective,
   #all-topics:target ~ * .elective,
   #featured:target ~ * .course:not(.featured),
   #design:target ~ * .course:not(.design),
   #development:target ~ * .course:not(.development),
+  #accessibility:target ~ * .course:not(.accessibility),
+  #prototyping:target ~ * .course:not(.prototyping),
   #ux:target ~ * .course:not(.ux),
   #career-skills:target ~ * .course:not(.career-skills),
   .topic-select:target:not(#all-topics:target) ~ * .topic-label span {
     display: none;
   }
 
+  :target ~ * .elective {
+    display: inherit;
+  }
+
+//   @include breakpoint(large, min) {
+//
+//     .topic-select {
+//       position: absolute;
+//       top: 0;
+//     }
+//
+//   }
+
   .topic-select:target ~ * .topic-menu a {
     background-color: transparent;
   }
 
-  .topic-menu [href*="all-topics"] {
+  .topic-menu [href="#all-topics"] {
     background-color: var(--mono-100);
   }
 
   #all-topics:target ~ * {
-    [href*="all-topics"] {
+    [href="#all-topics"] {
       background-color: var(--mono-100);
     }
   }
@@ -182,7 +226,7 @@
       content: "Featured";
     }
 
-    [href*="featured"] {
+    [href="#featured"] {
       background-color: var(--mono-100);
     }
   }
@@ -192,7 +236,7 @@
       content: "Design";
     }
 
-    [href*="design"] {
+    [href="#design"] {
       background-color: var(--mono-100);
     }
   }
@@ -202,7 +246,27 @@
       content: "Development";
     }
 
-    [href*="development"] {
+    [href="#development"] {
+      background-color: var(--mono-100);
+    }
+  }
+
+  #accessibility:target ~ * {
+    .topic-label::before {
+      content: "Accessibility";
+    }
+
+    [href="#accessibility"] {
+      background-color: var(--mono-100);
+    }
+  }
+
+  #prototyping:target ~ * {
+    .topic-label::before {
+      content: "Prototyping";
+    }
+
+    [href="#prototyping"] {
       background-color: var(--mono-100);
     }
   }
@@ -212,7 +276,7 @@
       content: "UX";
     }
 
-    [href*="ux"] {
+    [href="#ux"] {
       background-color: var(--mono-100);
     }
   }
@@ -222,7 +286,7 @@
       content: "Career Skills";
     }
 
-    [href*="career-skills"] {
+    [href="#career-skills"] {
       background-color: var(--mono-100);
     }
   }
@@ -232,10 +296,7 @@
     padding: 1.4rem;
     border: 1px dashed var(--mono-700);
     border-radius: 3px;
-
-    + * {
-      margin-top: 1.4;
-    }
+    margin-top: 1.4rem;
   }
 
   header {
@@ -293,10 +354,9 @@
       > a {
         grid-area: art;
         display: inline-block;
-        margin-bottom: -1.875rem;
 
-        img {
-          //
+        &[href*="about"] {
+          margin-bottom: -1.875rem;
         }
       }
 
@@ -350,7 +410,7 @@
           align-items: start;
         }
 
-        > a {
+        > a[href*="about"] {
           margin-bottom: 0;
         }
 
@@ -365,6 +425,7 @@
 
     aside {
       grid-area: aside;
+      padding-top: 1.2rem;
       border-top: 1px dashed var(--mono-300);
       margin-top: 1.4rem;
 
@@ -440,6 +501,46 @@
     }
   }
 
+  // Take 5 (tutorials)
+
+  .tutorials {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    gap: 1.4rem;
+
+    .course-card {
+      display: grid;
+      height: 100%;
+      margin-top: 0;
+
+      .main {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: none;
+        grid-template-areas: none;
+
+        > * {
+          grid-area: inherit;
+        }
+
+        .artwork {
+          background-color: var(--mono-200);
+          border-bottom: 1px solid var(--mono-300);
+          margin: -1.4rem -1.4rem 1.2rem;
+          overflow: hidden;
+
+          img {
+            margin: -1.7rem 0 -3.4rem;
+          }
+        }
+
+       .info {
+          margin-top: 1.4rem;
+        }
+      }
+    }
+  }
+
   .tutorial-detail {
     display: grid;
     gap: 1.4rem 2.2rem;
@@ -468,7 +569,7 @@
       #tutorial-transcript {
         grid-area: transcript;
 
-        [href*="#tutorial-resources"] {
+        [href="##tutorial-resources"] {
           text-decoration: none;
           pointer-events: none;
         }
