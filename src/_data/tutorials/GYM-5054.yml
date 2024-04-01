@@ -6,10 +6,11 @@ tags:
   - tutorial
   - take5
 url: /courses/take5/GYM-5054/
-poster_art: /img/take5/posters/gym-5054.jpg
+img: /img/tutorials/poster/gym-5054.jpg
 live: true
 instructor: "Meagan Fisher"
 instructor_bio: "Web Designer and Developer at Owltastic"
+topic_featured: true
 topic: "Design"
 subtopics:
   - label: "Accessibility"

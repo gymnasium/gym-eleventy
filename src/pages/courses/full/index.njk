@@ -12,115 +12,71 @@ nav:
 intro:
   heading: Full Courses
   subheading: Free full courses — taught by experts.
-  action: Learn new skills in a day or less.
-  content: Explore courses on design, development, accessibility, prototyping, UX, and career skills.
+  benefit: Learn new skills in a day or less.
+  lede: Explore courses
+  topics: on design, development, accessibility, prototyping, UX, and career skills.
   info:
     - title: Benefits
       items:
-        - label: "100% free self-paced online learning"
-        - label: "Earn a Certificate to share on your résumé and social media"
-        - label: "Discuss, share, and get feedback in the course forum"
-        - label: "Optional homework and quizzes to sharpen your skills"
-    - title: Length
+        - label: 100% free self-paced online learning
+        - label: Earn a Certificate to share on your résumé and social media
+        - label: High-quality and in-depth content by industry experts
+        - label: Discuss, share, and get feedback in the course forum
+        - label: Optional homework and quizzes to sharpen your skills
+    - title: Video Lessons
       items:
-        - label: "Video Lessons: 3–5 hours"
-        - label: "Course Duration: 12–22 hours"
+        - label: 3–5 hours
+    - title: Course Duration
+      items:
+        - label: 12–22 hours
   promo:
     pitch: Don’t have the time?
     action: Explore our Gym Shorts.
 ---
-<header class="intro bg-mono-300 full-bleed">
-  <hgroup>
-    <h1>{{ intro.heading }}</h1>
-    <p><b>{{ intro.subheading }}</b> {{ intro.action }}</p>
-    <!-- <p>{{ intro.content }}</p> -->
-  </hgroup>
-  <div class="list-summary">
-    {% for info in intro.info %}
-    <dl>
-      <dt>{{ info.title }}</dt>
-      {% for item in info.items %}
-      <dd>{{ item.label }}</dd>
-      {% endfor %}
-    </dl>
-    {% endfor %}
-  </div>
-  <!-- <p><b>{{ intro.promo.pitch }}</b> {{ intro.promo.action }}</p> -->
-</header>
+{%- include 'modules/courses/header.njk' -%}
 
-<div id="all-topics" class="topic-select"></div>
-<div id="featured" class="topic-select"></div>
-<div id="design" class="topic-select"></div>
-<div id="development" class="topic-select"></div>
-<div id="ux" class="topic-select"></div>
-<div id="career-skills" class="topic-select"></div>
+{%- include 'modules/courses/topic-select-fragments.njk' -%}
 
 <div id="topics" class="topics">
 
-<nav class="topic-menu">
-  <h2>Explore</h2>
-  <ul>
-    <li><a href="#all-topics">All Topics</a></li>
-    <li><a href="#featured">Featured</a></li>
-  </ul>
-  <ul>
-    <li><a href="#design">Design</a></li>
-    <li><a href="#development">Development</a></li>
-    <li><a href="#ux">UX</a></li>
-    <li><a href="#career-skills">Career Skills</a></li>
-  </ul>
-</nav>
+{%- include 'modules/courses/topic-menu.njk' -%}
 
 <article class="topic-listing">
   <h2 class="topic-label" aria-hidden="true"><span>All Topics</span></h2>
   <ul class="courses">
-  {% for course in collections.live_courses_full | reverse %}
-    {%- set module = course -%}
+    {% for course in collections.live_courses_full | reverse %}
+      {%- set module = course -%}
+      {%- include 'modules/panels/course.njk' -%}
+    {% endfor %}
+
+    {# TODO: Refactor as necessary #}
+
+    {# Add custom recommendation for accessibility #}
+    {%- set module = collections.live_courses_short | pluck('id', 'GYM-016') -%}
+    {%- set module = module[0] -%}
+    {%- set topicClass = 'accessibility' -%}
+    {%- set subtopicClass = ' ' -%}
+    {%- set extraClass = 'elective' -%}
+    {%- set enableNote = true -%}
     {%- include 'modules/panels/course.njk' -%}
-  {% endfor %}
-
-    <!-- TODO: Update placeholder with include and logic -->
-
-    <li class="course gym-001 career-skills elective">
-      <p class="note">
-        <b>Suggested Course:</b> While we don’t have a Full Course, we recommend this Gym Short instead.
-      </p>
-      <article id="gym-001" class="course-card">
-        <div class="main">
-          <a href="">
-            <img class="artwork" alt="Course artwork for Defeating Busy." src="{{ config.urls.root }}/img/courses/svg/gym-001.svg" srcset="{{ config.urls.root }}/img/courses/svg/gym-001.svg" decoding="async" fetchpriority="high" width="574" height="488">
-          </a>
-          <header>
-            <hgroup>
-              <p class="topic"><b>Career Skills</b></p>
-              <h2 class="title"><a href="">Defeating Busy</a></h2>
-              <p class="instructor">with Brett Harned, of TeamGantt</p>
-            </hgroup>
-            <p class="description">Learn how to estimate, plan, track, and manage your time to complete projects. Being busy isn’t a bad thing, but not being in control of your own time is.</p>
-          </header>
-          <div class="cta">
-            <a class="btn" href="">Explore Course</a>
-          </div>
-          <aside class="list-summary"><dl>
-              <dt>Skills Covered</dt><dd>Project estimation</dd><dd>Time tracking</dd><dd>Team/client communication skills</dd></dl><dl>
-              <dt>This Course is For</dt><dd>Designers</dd><dd>Developers</dd><dd>Anyone with a deadline</dd></dl><dl><div>
-                <dt>Video Lessons</dt>
-                <dd>Under 1 hour</dd>
-              </div><div>
-                <dt>Course Duration</dt>
-                <dd>Up to 1.5 hours</dd>
-              </div></dl>
-          </aside>
-          <footer class="info">
-            <h3>Gym Short</h3>
-            <p>Beginner</p>
-          </footer>
-        </div>
-        <footer class="back-to">
-          <p><a href="#topics">Back to Menu</a></p>
-        </footer>
-      </article>
-   </li>
+    
+    {# Add custom recommendation for prototyping #}
+    {%- set module = collections.live_courses_short | pluck('id', 'GYM-015') -%}
+    {%- set module = module[0] -%}
+    {%- set topicClass = 'prototyping' -%}
+    {%- set subtopicClass = ' ' -%}
+    {%- set extraClass = 'elective' -%}
+    {%- set enableNote = true -%}
+    {%- include 'modules/panels/course.njk' -%}
+    
+    {# Set custom recommendation for career skills #}
+    {%- set module = collections.live_courses_short | pluck('id', 'GYM-001') -%}
+    {%- set module = module[0] -%}
+    {%- set topicClass = 'career-skills' -%}
+    {%- set subtopicClass = ' ' -%}
+    {%- set extraClass = 'elective' -%}
+    {%- set enableNote = true -%}
+    {%- include 'modules/panels/course.njk' -%}
   </ul>
 </article>
 
