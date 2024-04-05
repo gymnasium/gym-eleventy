@@ -17,14 +17,14 @@ meta:
     </header>
     {%- set sections = pages['faq'] | omit(['intro']) -%}
     {%- for id, section in sections -%}
-    {%- if loop.first -%}<ul>{%- else -%}
     <section id="{{ id }}" class="main-section {{ id }}">
       <h2>{{ section.heading | safe }}</h2>
       <p>{{ section.description | safe }}</p>
     </section>
-    {%- endif -%}
     {%- endfor -%}
-
+    <footer class="back-to">
+      <p><a href="#">Back to top</a></p>
+    </footer>
   </article>
 
   <aside>
