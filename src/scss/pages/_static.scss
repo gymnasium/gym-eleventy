@@ -75,14 +75,16 @@
       text-transform: uppercase;
     }
 
-    p {
-      font: normal 1.6875rem/1.5 var(--font-family-custom);
-    }
-
     & :only-child {
       margin-bottom: 1.4rem;
     }
 
+  }
+
+  article > .main-header {
+    p:only-of-type {
+      font: normal 1.6875rem/1.5 var(--font-family-custom);
+    }
   }
 
   .main-header + p:not([class]) {
