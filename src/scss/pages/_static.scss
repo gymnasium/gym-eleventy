@@ -33,29 +33,13 @@
     }
 
     > article {
+      grid-area: article;
       padding: 2rem;
     }
-  }
 
-  > article {
-    grid-area: article;
-  }
-
-  > aside {
-    grid-area: aside;
-    border-top: 1px dashed var(--mono-300);
-
-    @include breakpoint(large, min) {
-      & {
-        border-top: none;
-        border-left: 1px dashed var(--mono-300);
-      }
+    > aside {
+      grid-area: aside;
     }
-
-}
-
-  > aside:empty {
-    visibility: hidden;
   }
 
   .main-header {
@@ -85,12 +69,25 @@
       word-spacing: 0.05ex;
       text-transform: uppercase;
 
-      + *:not(p) {
+      + * {
         margin-top: 1.4rem;
       }
     }
 
-    p {
+    ul {
+      padding-left: 1rem;
+
+      li {
+        padding-left: 0.4rem;
+
+        &:not(:first-child) {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    p,
+    li {
       font-size: 1.125rem;
       line-height: 1.5;
     }
@@ -107,6 +104,22 @@
     margin-top: 1.2rem;
   }
 
+  > aside {
+    border-top: 1px dashed var(--mono-300);
+
+    &:not(:has(*)) {
+      display: none;
+    }
+
+    @include breakpoint(large, min) {
+      & {
+        border-top: none;
+        border-left: 1px dashed var(--mono-300);
+      }
+    }
+
+  }
+
   .back-to {
     padding-top: 1rem;
   }
@@ -117,6 +130,12 @@
 
 .back-to {
   margin-top: 1.4rem;
+
+  @include breakpoint(medium, min) {
+    & {
+      display: none;
+    }
+  }
 
   a::before {
     display: inline-block;
@@ -132,4 +151,5 @@
     line-height: 1.15;
     letter-spacing: 0.025ex;
   }
+
 }
