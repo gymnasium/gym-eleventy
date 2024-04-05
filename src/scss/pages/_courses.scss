@@ -484,24 +484,6 @@
     }
   }
 
-  .back-to {
-    margin-top: 1.4rem;
-
-    a::before {
-      display: inline-block;
-      content: "↑";
-      font-family: monospace;
-      vertical-align: top;
-      margin-right: 0.2rem;
-    }
-
-    p {
-      font-size: 0.9375rem;
-      line-height: 1.15;
-      letter-spacing: 0.025ex;
-    }
-  }
-
   // Take 5 (tutorials)
 
   .tutorials {
