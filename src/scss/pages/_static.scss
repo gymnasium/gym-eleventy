@@ -54,19 +54,19 @@
       font: normal 1.6875rem/1.5 var(--font-family-custom);
     }
 
-
     & :only-child {
       margin-bottom: 1.4rem;
     }
 
   }
 
+  .main-article,
   .main-section {
 
     h2 {
-      font: 900 1.25rem/1.15 var(--font-family-custom);
+      font: 900 1.375rem/1.15 var(--font-family-custom);
       letter-spacing: 0.05ex;
-      word-spacing: 0.05ex;
+      word-spacing: 0.25ex;
       text-transform: uppercase;
 
       + * {
@@ -74,17 +74,27 @@
       }
     }
 
-    ul {
-      padding-left: 1rem;
+    h3 {
+      font: 900 1.1rem/1.15 var(--font-family-custom);
+      letter-spacing: 0.05ex;
+      word-spacing: 0.25ex;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
 
-      li {
-        padding-left: 0.4rem;
-
-        &:not(:first-child) {
-          margin-top: 1rem;
-        }
+    > ul {
+      &:not(:first-child) {
+        margin-top: 1rem;
       }
     }
+
+    ul {
+    padding-left: 1rem;
+
+    li {
+      padding-left: 0.2rem;
+    }
+  }
 
     p,
     li {
@@ -104,12 +114,30 @@
     margin-top: 1.2rem;
   }
 
+  // Social Impact
+
+  .main-article {
+    columns: 20rem 2;
+    gap: 1.4rem;
+    margin-top: 2.4rem;
+
+    header {
+      column-span: all;
+      margin-bottom: 1.4rem;
+    }
+
+    section {
+      display: inline-block;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+
   > aside {
     border-top: 1px dashed var(--mono-300);
-
-    &:not(:has(*)) {
-      display: none;
-    }
 
     @include breakpoint(large, min) {
       & {
