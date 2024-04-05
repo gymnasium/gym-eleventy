@@ -160,7 +160,7 @@ module.exports = eleventyConfig => {
         // console.log(process.env);
         if (process.env.NODE_ENV === 'dev' || 'development' || 'tutor:dev') {
           const port = process.env[`MFE_PORT_${dest_format.toUpperCase()}`];
-          destUrl = `${destUrl}:${port}`;
+          destUrl = `${destUrl}:${port}`
         }
 
         if (dest_format === 'course_about') {

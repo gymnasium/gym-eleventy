@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "engines": {
-    "node": ">=18.17.0 <19"
+    "node": ">=18.17.0 <21"
   },
   "os": [
     "darwin",
@@ -11,10 +11,12 @@
   ],
   "main": "index.js",
   "scripts": {
-    "dev": "npm run start",
-    "local": "NODE_ENV=local ELEVENTY_ENV=local npx netlify dev",
-    "start": "npx @11ty/eleventy --serve --watch",
-    "build": "NODE_ENV=production ELEVENTY_ENV=production npx @11ty/eleventy",
+    "dotenvx": "dotenvx",
+    "dev": "dotenvx run --env-file=.env.development -- npm run start",
+    "tutor:dev": "dotenvx run --env-file=.env.tutor-dev -- npx netlify dev",
+    "tutor:local": "dotenvx run --env-file=.env.tutor-local -- npx netlify dev",
+    "start": "dotenvx run -- npx @11ty/eleventy --serve --watch",
+    "build": "NODE_ENV=production ELEVENTY_ENV=production dotenvx run --  npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -34,7 +36,7 @@
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-img": "^3.1.8",
     "@11ty/is-land": "^4.0.0",
-    "dotenv": "^16.3.1",
+    "@dotenvx/dotenvx": "^0.29.2",
     "eleventy-plugin-clean": "github:kentaroi/eleventy-plugin-clean#v1.2.6",
     "eleventy-plugin-rev": "^1.1.1",
     "eleventy-sass": "^2.2.1",
@@ -42,7 +44,7 @@
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",
     "markdown-it-eleventy-img": "^0.10.1",
-    "netlify-cli": "^17.15.3",
+    "netlify-cli": "^17.21.2",
     "netlify-plugin-cache": "^1.0.3",
     "rss-parser": "^3.13.0"
   },
