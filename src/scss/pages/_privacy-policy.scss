@@ -1,0 +1,134 @@
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+
+article.privacy-policy {
+
+  nav {
+    header + ul {
+      margin-top: 1.2em;
+      margin-bottom: 1.2em;
+    }
+
+    ul {
+      list-style: disc;
+      padding: 1.2em 0;
+      border-top: 1px dashed var(--mono-300);
+      border-bottom: 1px dashed var(--mono-300);
+      margin-bottom: 0;
+    }
+
+    li:first-child {
+      margin-top: 0;
+    }
+  }
+
+  li {
+    max-width: 40em;
+    margin-top: 0.625em;
+    margin-left: 1.2em;
+    margin-bottom: 0.625em;
+  }
+
+  .to-top-link {
+    margin-top: 1rem;
+  }
+
+  section {
+    padding-top: 1.2em;
+    margin-top: 1.2em;
+
+    h2 {
+      margin-top: 0;
+
+      + p {
+        margin-top: 1.2em;
+      }
+    }
+  }
+
+  .note {
+    padding: 1.2em 0;
+    border-top: 1px dashed var(--mono-300);
+    border-bottom: 1px dashed var(--mono-300);
+    margin-top: 1.2em;
+  }
+
+  table {
+    tbody {
+      tr {
+        vertical-align: top;
+      }
+      td:first-child {
+        margin-top: 0.625em;
+      }
+      ul:first-child {
+        li:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium, max) {
+    table {
+      th {
+        color: transparent;
+        line-height: 0;
+        user-select: none;
+      }
+      tr:first-child td:first-child {
+        margin-top: 0.4em;
+      }
+      td {
+        display: block;
+
+        p:only-of-type {
+          margin-bottom: 0.625em;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium, min) {
+    table {
+      margin-top: 1.2em;
+
+      thead {
+        border-top: 1px solid var(--mono-900);
+        border-bottom: 1px solid var(--mono-900);
+        margin-bottom: 1.2em;
+
+        th {
+          padding: 0.625em 0;
+        }
+        th + th {
+          padding-left: 1.2em;
+        }
+      }
+
+      tbody {
+        tr {
+          border-top: 1px dashed var(--mono-300);
+        }
+        td {
+          padding-top: 1.2em;
+        }
+        td + td {
+          padding-left: 1.2em;
+          padding-bottom: 0.625em;
+        }
+      }
+    }
+  }
+
+  address {
+    font-style: normal;
+    padding-top: 1.2em;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+     }
+  }
+
+}
