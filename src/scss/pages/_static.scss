@@ -20,8 +20,33 @@
     text-wrap: pretty;
   }
 
-  p:only-of-type {
+  p,
+  li {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  p:only-child,
+  * ~ p:last-child {
     margin-bottom: 0;
+  }
+
+  > ul {
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+
+  ul {
+    padding-left: 1rem;
+
+    & + * {
+      margin-top: 1.2rem;
+    }
+
+    li {
+      padding-left: 0.2rem;
+    }
   }
 
   @include breakpoint(large, min) {
@@ -60,6 +85,10 @@
 
   }
 
+  .main-header + p:not([class]) {
+    margin-top: 1.4rem;
+  }
+
   .main-article,
   .main-section {
 
@@ -80,26 +109,6 @@
       word-spacing: 0.25ex;
       text-transform: uppercase;
       margin-bottom: 0.8rem;
-    }
-
-    > ul {
-      &:not(:first-child) {
-        margin-top: 1rem;
-      }
-    }
-
-    ul {
-    padding-left: 1rem;
-
-    li {
-      padding-left: 0.2rem;
-    }
-  }
-
-    p,
-    li {
-      font-size: 1.125rem;
-      line-height: 1.5;
     }
 
     p,
