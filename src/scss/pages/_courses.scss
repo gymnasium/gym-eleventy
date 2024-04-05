@@ -474,13 +474,7 @@
     // course card (footer)
 
     .back-to {
-      margin-top: 0.8rem;
-
-      @include breakpoint(large, min) {
-        & {
-          display: none;
-        }
-      }
+      margin-top: 0.825rem;
     }
   }
 
@@ -552,15 +546,12 @@
       #tutorial-transcript {
         grid-area: transcript;
 
-        [href="##tutorial-resources"] {
+        [href="#tutorial-resources"] {
           text-decoration: none;
           pointer-events: none;
         }
       }
 
-      > .back-to {
-        display: none;
-      }
     }
 
     header {
