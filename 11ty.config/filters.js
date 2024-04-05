@@ -156,16 +156,24 @@ module.exports = eleventyConfig => {
 
     if (courseType === 'new' || !!dest_format) {
       if (!!dest_format) {
-        let mfeUrl = process.env.MFE_URL;
-        if (process.env.ELEVENTY_ENV === ('local' || 'dev')) {
+        let destUrl = process.env.MFE_URL;
+        // console.log(process.env);
+        if (process.env.NODE_ENV === 'dev' || 'development' || 'tutor:dev') {
           const port = process.env[`MFE_PORT_${dest_format.toUpperCase()}`];
-          mfeUrl = `${mfeUrl}:${port}`
+          destUrl = `${destUrl}:${port}`;
         }
 
         if (dest_format === 'course_about') {
-          path = `${mfeUrl}/courses/course-v1:GYM+${idString}+0/about`;
+          if (process.env.NODE_ENV !== 'dev' || 'development' || 'tutor:dev') {
+            destUrl = process.env.LMS_URL;
+          } else {
+            const port = process.env[`MFE_PORT_${dest_format.toUpperCase()}`];
+            destUrl = `${process.env.LMS_URL}:${port}`;
+          }
+          path = `${destUrl}/courses/course-v1:GYM+${idString}+0/about`;
+          
         } else if (dest_format === 'learning') {
-          path = `${mfeUrl}/learning/course/course-v1:GYM+${idString}+0/home`;
+          path = `${destUrl}/learning/course/course-v1:GYM+${idString}+0/home`;
         }
       } else {
         path = `/courses/course-v1:GYM+${idString}+0/`;
