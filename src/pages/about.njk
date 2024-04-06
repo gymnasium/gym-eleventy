@@ -20,7 +20,6 @@ This generally works best with a straightforward, top-down layout, but this appr
 <div class="main-panel">
 
   <article>
-
     <header id="{{ id }}" class="main-header {{ id }}">
       <h1>{{ intro.heading }}</h1>
       {%- if intro.description -%}
@@ -40,9 +39,7 @@ This generally works best with a straightforward, top-down layout, but this appr
     {%- endif -%}
     </section>
     {%- endfor -%}
-    <footer class="back-to">
-      <p><a href="#">Back to top</a></p>
-    </footer>
+    {%- back_to_top -%}
   </article>
 
   <aside>

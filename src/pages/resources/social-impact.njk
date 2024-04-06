@@ -8,7 +8,6 @@ meta:
 <div class="main-panel">
 
   <article>
-
     <header id="{{ id }}" class="main-header {{ id }}">
       <h1>{{ intro.heading }}</h1>
       {%- if intro.description -%}
@@ -42,10 +41,7 @@ meta:
       {%- endfor -%}
     </article>
     {%- endfor -%}
-
-    <footer class="back-to">
-      <p><a href="#">Back to top</a></p>
-    </footer>
+    {%- back_to_top -%}
   </article>
 
   <aside>
