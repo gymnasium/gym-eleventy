@@ -475,6 +475,12 @@
 
     .back-to {
       margin-top: 0.825rem;
+
+      @include breakpoint(medium, min) {
+        & {
+          display: none;
+        }
+      }
     }
   }
 
