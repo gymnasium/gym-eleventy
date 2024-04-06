@@ -112,10 +112,17 @@ h5 {
 }
 
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-custom);
   margin-bottom: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-custom);
+p:not(:first-child),
+p:not(:only-of-type) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+* ~ p:last-child {
+  margin-bottom: 0;
 }
