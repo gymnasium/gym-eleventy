@@ -16,7 +16,9 @@
 
   h1,
   h2,
-  p {
+  h3,
+  p,
+  li {
     text-wrap: pretty;
   }
 
@@ -47,7 +49,7 @@
 
   @include breakpoint(large, min) {
     & {
-      grid-template-columns: 3fr 1fr;
+      grid-template-columns: 4fr 2fr;
       grid-template-areas:
         "article aside";
       gap: 1.4rem;
@@ -91,7 +93,7 @@
   .main-section {
 
     h2 {
-      font: 900 1.375rem/1.25 var(--font-family-custom);
+      font: 900 1.3125rem/1.25 var(--font-family-custom);
       letter-spacing: 0.05ex;
       word-spacing: 0.25ex;
       text-transform: uppercase;
@@ -102,18 +104,17 @@
     }
 
     h3 {
-      font: 900 1.1rem/1.15 var(--font-family-custom);
+      font: 900 1.0625rem/1.15 var(--font-family-custom);
       letter-spacing: 0.05ex;
       word-spacing: 0.25ex;
       text-transform: uppercase;
       margin-bottom: 0.8rem;
     }
 
-    p,
-    .embed-responsive {
-      max-width: 48rem;
-    }
+  }
 
+  .main-section {
+    max-width: 43rem; // 80–85 char line length
   }
 
   * + .main-section {
