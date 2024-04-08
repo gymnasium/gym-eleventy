@@ -9,9 +9,9 @@ main:
   - label: Homepage
     url: /
   - label: Full Courses
-    url: /courses/full
+    url: /courses/full/
   - label: Gym Shorts
-    url: /courses/gym-shorts
+    url: /courses/gym-shorts/
   - label: Take 5 Tutorials
-    url: /courses/take5
+    url: /courses/take5/
   contact: Need to get in touch? You can email us at <b><a href="mailto:help@thegymnasium.com?subject=Get+In+Touch">help@thegymnasium.com</a></b>.
