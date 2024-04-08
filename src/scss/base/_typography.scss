@@ -117,12 +117,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-p:not(:first-child),
-p:not(:only-of-type) {
+p + * {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-* ~ p:last-child {
+* ~ p:last-of-type:not(:only-of-type) {
+  margin-top: 1rem;
   margin-bottom: 0;
 }
