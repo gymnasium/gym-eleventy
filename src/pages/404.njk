@@ -6,7 +6,6 @@ meta:
 eleventyExcludeFromCollections: true
 permalink: 404.html
 ---
-{# TODO: use YAML content to generate this page. See _data/pages/404.yml #}
 {%- set intro = pages['404'].intro -%}
 {%- set main = pages['404'].main -%}
 <div class="main-panel">
@@ -16,11 +15,11 @@ permalink: 404.html
       <h1>{{ intro.heading }}</h1>
       <p>{{ intro.description | safe }}</p>
     </header>
-    {%- set body_text = pages['404'].main.body_text -%}
+    {%- set body_text = main.body_text -%}
     {%- for text in body_text  -%}
     <p>{{ text }}</p>
     {%- endfor -%}
-    {%- set links = pages['404'].main.links -%}
+    {%- set links = main.links -%}
     <ul>
     {%- for link in links -%}
       <li><a href="{{ link.url }}">{{ link.label }}</li></a>

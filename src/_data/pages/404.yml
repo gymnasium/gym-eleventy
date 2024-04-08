@@ -1,7 +1,6 @@
-# TODO: finish using this yaml file to populate the 404 page content
 intro:
   heading: '404: Page Not Found'
-  description: <span aria-label="Waving hand emoji" role="img">👋</span>  You discovered a page that doesn’t exist.
+  description: <span aria-label="Waving hand emoji" role="img">👋</span> You discovered a page that doesn’t exist.
 main:
   body_text:
   - 'Some might call you lost. Others might call you a creative genius.'
