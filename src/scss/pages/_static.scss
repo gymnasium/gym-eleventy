@@ -178,4 +178,9 @@
     letter-spacing: 0.025ex;
   }
 
+  @include breakpoint(large, min) {
+    & {
+      display: none;
+    }
+  }
 }

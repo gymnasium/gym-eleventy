@@ -470,18 +470,12 @@
         }
       }
     }
+  }
 
-    // course card (footer)
+  // back to (footer)
 
-    .back-to {
-      margin-top: 0.825rem;
-
-      @include breakpoint(medium, min) {
-        & {
-          display: none;
-        }
-      }
-    }
+  .back-to {
+    margin-top: 0.825rem;
   }
 
   // Take 5 (tutorials)
