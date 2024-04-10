@@ -23,12 +23,12 @@ module.exports = eleventyConfig => {
   });
 
   // via @ https://dev.to/psypher1/lets-learn-11ty-part-3-collections-shortcodes-macros-p0a
-  eleventyConfig.addShortcode('headers', (title, subtitle) => 
+  eleventyConfig.addShortcode('headers', (title, subtitle) =>
     `<h1>${title}</h1>
     <p>${subtitle}</p>`);
 
   eleventyConfig.addShortcode('back_to_top', () => {
-    return `<div class="to-top-link"><a href="#main">Back to top</a></div>`
+    return `<footer class="back-to"><a href="#main">Back to top</a></footer>`
   });
 
   eleventyConfig.addShortcode('external_link', (href, title, className) => {

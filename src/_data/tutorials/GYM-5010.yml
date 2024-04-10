@@ -6,15 +6,16 @@ tags:
   - tutorial
   - take5
 url: /courses/take5/GYM-5010/
-img: /img/tutorials/gym-5010.jpg
+img: /img/tutorials/poster/gym-5010.jpg
 live: true
 instructor: josborn
 instructor_bio: "Director of Learning at Aquent Gymnasium"
+topic_featured: false
 topic: "UX"
 video_id: PwuPv7JwzCA
 video_duration: "4:50"
 featured: false
-description: "Learn how to silently collaborate with a team in order to get group consensus in this tutorial."
+description: "Learn how to silently collaborate with a team to get group consensus in this tutorial."
 related_content:
 - label: "18F Methods instructions on the KJ method"
   url: "https://methods.18f.gov/discover/kj-method/"

@@ -9,13 +9,40 @@ nav:
   secondary: courses
   parent: /courses/
   secondaryParent: /courses/take5/
+intro:
+  heading: Take 5
+  subheading: Free practical tutorials — for everyone.
+  benefit: Learn new skills in 5 minutes or less.
+  lede: Explore tutorials
+  topics: on design, development, accessibility, prototyping, UX, and career skills.
+  info:
+    - title: Benefits
+      items:
+        - label: Start learning with or without a Gymnasium account
+        - label: 100% free self-paced online learning
+        - label: Short, concise tutorials on a wide range of topics
+        - label: High-quality and up-to-date content by industry experts
+        - label: Tutorials include an easy-to-follow transcript
+    - title: Video Tutorials
+      items:
+        - label: 5 minutes or less
 ---
-<h1>Tutorials</h1>
-<p>This is the tutorials index, also pulling in from local YAML files.</p>
-<ul>
-{% for id, tutorial in tutorials %}
-  <li>
-    <a href="/courses/take5/{{ tutorial.title | slugify }}">{{ tutorial.id }} | {{ tutorial.title }}</a>
-  </li>
-{% endfor %}
-</ul>
+{%- include 'modules/courses/header.njk' -%}
+
+{%- include 'modules/courses/topic-select-fragments.njk' -%}
+
+<div id="topics" class="topics">
+
+{%- include 'modules/courses/topic-menu.njk' -%}
+
+<article class="topic-listing">
+  <h2 class="topic-label" aria-hidden="true"><span>All Topics</span></h2>
+  <ul class="courses tutorials">
+  {% for tutorial in collections.live_tutorials | reverse %}
+    {%- set module = tutorial-%}
+    {%- include 'modules/panels/tutorial.njk' -%}
+  {% endfor %}
+  </ul>
+</article>
+
+</div>

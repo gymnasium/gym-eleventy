@@ -7,14 +7,14 @@ article:
   aquent-social-impact:
     heading: Aquent Social Impact
     links:
-    - url: https://my.care.org/site/Donation2?31667.donation=form1&amp;df_id=31667&amp;mfc_pref=T&amp;s_src=382248000000&amp;s_subsrc=FY22UkraineCrisisFundMGAquent
+    - url: https://my.care.org/site/Donation2?df_id=37767&amp;mfc_pref=T&amp;37767.donation=form1&amp;s_src=172450000000
       label: CARE Ukraine Crisis Fund
     - url: https://designingforgood.com
       label: Designing for Good
     - url: https://aquenttalent.com/services/diversity-recruiting
       label: Diversity+ Recruiting Solution
-    - url: https://aquent.com/about-us/sustainability
-      label: Global Sustainability Efforts
+    - url: https://aquent.com/about-us/climate-action
+      label: Climate Action
   education-nonprofits:
     heading: Education Nonprofits
     links:
@@ -47,7 +47,7 @@ article:
     links:
     - url: https://girlswhocode.com
       label: Girls Who Code
-    - url: https://wearebgc.org
+    - url: https://www.wearebgc.org
       label: Black Girls Code
   lgbtq+-in-tech:
     heading: LGBTQ+ in Tech

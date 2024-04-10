@@ -38,8 +38,8 @@
   }
 
   &.secondary {
-    background-color: var(--secondary);
-    border-color: (var(--secondary));
+    background-color: var(--secondary-100);
+    border-color: (var(--secondary-100));
 
     // &:hover,
     // &:focus {
@@ -146,4 +146,8 @@
     align-items: center;
     gap: 0.5rem;
   }
+}
+
+summary {
+  cursor: pointer;
 }

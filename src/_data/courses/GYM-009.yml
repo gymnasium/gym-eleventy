@@ -11,7 +11,7 @@ live: true
 url: /courses/GYM/009/0/about
 img: /img/courses/svg/gym-009.svg
 topic: "Development"
-description: "This course will teach you how to create themes for Drupal 8. Specifically, you will learn how to install a local development environment for Drupal 8, and use the new TWIG templating engine to customize the structure and style of your theme."
+description: "Learn how to create Drupal 8 themes, set up a local development environment, and customize theme structure and style with the TWIG templating engine."
 instructor: ghodgkinson
 skills:
   - label: "Intermediate HTML/CSS"
@@ -32,17 +32,17 @@ about: >
   <p>This course will teach you how to install Drupal 8 locally and dive into the essential components of a Drupal 8 theme. Specifically, you will learn the following: How to register a theme with Drupal 8, how to integrate Bootstrap into a theme, how to use the TWIG templating engine to define and customize Drupal components and how to import pre-existing assets including images and CSS styles.</p>
 outline:
   - label: "Chapter 1: Introduction to Drupal 8 Themes"
-    description: "The first step in creating a custom theme is to set up a local development environment for Drupal on your system. In order to do this you will learn how to install Aquia’s Dev Desktop and be up and running in approximately 5 minutes."
+    description: "The first step in creating a custom theme is to set up a local development environment for Drupal on your system. to do this you will learn how to install Aquia’s Dev Desktop and be up and running in approximately 5 minutes."
   - label: "Chapter 2: How to Import an Existing Site and Create a New One"
     description: "Dive deeper into Aquia’s Dev Desktop and learn how to import an existing Drupal site as needed. Additionally, learn how to start a Drupal 8 site from scratch if you do not have pre-existing content."
   - label: "Chapter 3: Drupal 8 and the Theming Layer"
     description: "Review how Drupal 8 works and how a page is structured. You will survey some of the components you will be configuring for your theme including pages, regions, blocks, nodes, and fields."
   - label: "Chapter 4: Starting Your Theme"
-    description: "Learn how to create the file and folder structure required to register a theme with Drupal 8. Additionally you will learn how to integrate Bootstrap in order to give yourself basic responsive layout and simple styles for your text."
+    description: "Learn how to create the file and folder structure required to register a theme with Drupal 8. Additionally you will learn how to integrate Bootstrap to give yourself basic responsive layout and simple styles for your text."
   - label: "Chapter 5: Hello TWIG"
     description: "Learn the fundamentals of using TWIG, the templating engine for Drupal 8. You will discover how to print variables, how to loop through items, and how to comment your code."
   - label: "Chapter 6: Tweaking TWIG"
-    description: "In this chapter you will learn how to optimize your default TWIG files for local development purposes. Specifically, you will discover how to work with the cache settings in order to make your life easier!"
+    description: "In this chapter you will learn how to optimize your default TWIG files for local development purposes. Specifically, you will discover how to work with the cache settings to make your life easier!"
   - label: "Chapter 7: Creating Custom Templates"
     description: "In this chapter you will examine some of the default content types created with a clean Drupal install and then learn how to customize the block layout. Specifically you will learn how to remove a sidebar and customize the header of your theme using TWIG."
   - label: "Chapter 8: Adding Assets and Style"

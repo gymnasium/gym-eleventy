@@ -11,7 +11,7 @@ url: /courses/GYM/001/0/about
 img: /img/courses/svg/gym-001.svg
 live: true
 topic: "Career Skills"
-description: "Learn how to estimate, plan, track, and manage your time in order to complete projects. Being busy isn’t a bad thing, but not being in control of your own time is."
+description: "Learn how to estimate, plan, track, and manage your time to complete projects. Being busy isn’t a bad thing, but not being in control of your own time is."
 instructor: bharned
 skills:
   - label: "Project estimation"
@@ -26,7 +26,7 @@ completion_duration: "Up to 1.5 hours"
 skill_level: "Beginner"
 # Begin Overview
 intro: >
-  <strong><cite>Defeating Busy</cite></strong> will teach you how to estimate, plan, track, and manage your time in order to complete projects.
+  <strong><cite>Defeating Busy</cite></strong> will teach you how to estimate, plan, track, and manage your time to complete projects.
 preview_video_src:
 about: >
   <p>Being busy is not a bad thing. Not managing your own time is. During this course, you’ll learn how to estimate your time and perhaps more importantly, how to stick to those estimates. There is no silver bullet to make it happen. It’s mostly going to be up to you, but the practices described here should help you keep yourself—and your time—honest.</p>

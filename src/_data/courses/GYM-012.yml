@@ -13,7 +13,7 @@ img: /img/courses/svg/gym-012.svg
 topic: "Development"
 subtopics:
   - label: "JavaScript"
-description: "In this course, you will learn how to build a simple web app using Node.js."
+description: "Learn how to build a simple web app using Node.js from start to finish."
 instructor: tsellon
 skills:
   - label: "Installing Node.js"

@@ -1,7 +1,7 @@
 {
-  "title": "Dummy Market Feed",
+  "title": "Static Market Feed",
   "feed_url": "https://assets.aquent.com/apps/gym/markets.json",
-  "date_modified": "2024-01-30T12:06:36-0500",
+  "date_modified": "2024-03-15T09:13:58-0400",
   "items": [
     {
       "id": "36",

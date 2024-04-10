@@ -12,4 +12,5 @@ module.exports = eleventyConfig => {
   eleventyConfig.addCollection('courses', function (collectionApi) {
     return collectionApi.getFilteredByTags('course', 'full', 'short');
   });
+
 }

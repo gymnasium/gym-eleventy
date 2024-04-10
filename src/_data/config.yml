@@ -28,14 +28,14 @@ header:
       - label: Log Out
         href: GYM_LMS_URL/logout
     courses:
-      - label: Full Courses
-        href: GYM_ROOT_URL/courses/full/
-      - label: Gym Shorts
-        href: GYM_ROOT_URL/courses/gym-shorts/
-      - label: Take 5 Tutorials
-        href: GYM_ROOT_URL/courses/take5/
-      - label: Collections
-        href: GYM_ROOT_URL/collections/
+    - label: Full Courses
+      href: GYM_ROOT_URL/courses/full/
+    - label: Gym Shorts
+      href: GYM_ROOT_URL/courses/gym-shorts/
+    - label: Take 5 Tutorials
+      href: GYM_ROOT_URL/courses/take5/
+    - label: Collections
+      href: GYM_ROOT_URL/collections/
 footer:
   nav:
     - title: What We Do
@@ -91,7 +91,6 @@ footer:
           rel: noopener
     - title: Social
       img:
-        base_path: GYM_DATA_URL/img/social/icons
         attr:
           decoding: async
           fetchpriority: low
@@ -103,50 +102,50 @@ footer:
           target: _blank
           rel: noopener
           alt: LinkedIn “in” icon.
-          src: /png/icon-linkedin-4x.png
-          srcset: /svg/icon-linkedin.svg
+          src: png/icon-linkedin-4x.png
+          srcset: svg/icon-linkedin.svg
         - label: YouTube
           href: https://www.youtube.com/AquentGymnasium
           target: _blank
           rel: noopener
           alt: YouTube play button icon.
-          src: /png/icon-youtube-4x.png
-          srcset: /svg/icon-youtube.svg
+          src: png/icon-youtube-4x.png
+          srcset: svg/icon-youtube.svg
         - label: Medium
           href: https://medium.com/gymnasium
           target: _blank
           rel: noopener
           alt: Medium ellipsis (dot, oval, thin oval) icon.
-          src: /png/icon-medium-4x.png
-          srcset: /svg/icon-medium.svg
+          src: png/icon-medium-4x.png
+          srcset: svg/icon-medium.svg
         - label: Threads
           href: https://www.threads.net/@aquent_gymnasium
           target: _blank
           rel: noopener
           alt: Threads ampersand-esque icon.
-          src: /png/icon-threads-4x.png
-          srcset: /svg/icon-threads.svg
+          src: png/icon-threads-4x.png
+          srcset: svg/icon-threads.svg
         - label: Instagram
           href: https://www.instagram.com/aquent_gymnasium/
           target: _blank
           rel: noopener
           alt: Instagram camera icon.
-          src: /png/icon-instagram-4x.png
-          srcset: /svg/icon-instagram.svg
+          src: png/icon-instagram-4x.png
+          srcset: svg/icon-instagram.svg
         - label: Facebook
           href: https://www.facebook.com/aquentgymnasium/
           target: _blank
           rel: noopener
           alt: Facebook “f” icon.
-          src: /png/icon-facebook-4x.png
-          srcset: /svg/icon-facebook.svg
+          src: png/icon-facebook-4x.png
+          srcset: svg/icon-facebook.svg
         - label: GitHub
           href: https://github.com/gymnasium
           target: _blank
           rel: noopener
           alt: GitHub Octocat silhouette icon.
-          src: /png/icon-github-4x.png
-          srcset: /svg/icon-github.svg
+          src: png/icon-github-4x.png
+          srcset: svg/icon-github.svg
     - title: Affiliated Sites
       links:
         - label: Aquent
@@ -171,8 +170,6 @@ footer:
           rel: noopener
   aside:
     - title: Platforms
-      img:
-        base_path: /img/footer/logos/
       links:
         - href: https://openedx.org
           alt: Powered by Open edX.
@@ -187,8 +184,6 @@ footer:
           width: 400
           height: 400
     - title: Awards
-      img:
-        base_path: /img/footer/logos/
       links:
         - href: https://americanstaffing.net/posts/2020/10/01/asa-honors-best-work-based-learning-programs/
           alt: American Staffing Association Elevete Awards.
@@ -197,8 +192,6 @@ footer:
           width: 254
           height: 170
     - title: Press
-      img:
-        base_path: /img/footer/logos/
       links:
         - href: https://www.fastcompany.com/3024661/hacking-hack-schools-to-make-them-work
           alt: Fast Company logo.
@@ -298,5 +291,6 @@ paths:
     bios: /img/bios/
     og: /img/og/
     footer:
-      icons: GYM_DATA_URL/img/social/icons
+      icons: /img/footer/icons/
       logos: /img/footer/logos/
+markets: MARKETS_STATIC

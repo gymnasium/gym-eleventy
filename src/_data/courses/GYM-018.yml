@@ -10,6 +10,7 @@ tags:
 live: true
 url: /courses/course-v1:GYM+018+0/about
 img: /img/courses/svg/gym-018.svg
+topic_featured: true
 topic: "Design"
 subtopics:
   - label: "Design Systems"
@@ -40,7 +41,7 @@ outline:
   - label: "Chapter 3: How a Pattern Gets Defined"
     description: "Examine the process of conducting a design pattern inventory and then do an exercise to learn how to do it on your own. Specifically, you’ll learn why naming conventions for design patterns are so critical and a few best practices for doing it within your projects."
   - label: "Chapter 4: Organizing Your Design Patterns Effectively"
-    description: "Learn how to organize your pattern libraries into meaningful categories in order to reflect the way they will eventually be used. In particular, you’ll discover how different organizations categorize familiar elements including typography, color palettes, user interface components, layout modules, and page types."
+    description: "Learn how to organize your pattern libraries into meaningful categories to reflect the way they will eventually be used. In particular, you’ll discover how different organizations categorize familiar elements including typography, color palettes, user interface components, layout modules, and page types."
   - label: "Chapter 5: Defining Design Tokens"
     description: "Explore the world of design tokens: what they are, why they matter, and how they’re made. Specifically, you’ll learn how elements such as color values, typography elements, borders, grid layouts, and breakpoints are converted to a shared language for all members of a team to use."
   - label: "Chapter 6: Systems-Friendly Design Tools"

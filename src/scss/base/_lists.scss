@@ -4,34 +4,30 @@
 
 @use 'breakpoints' as *;
 
-nav ul {
+nav ul,
+ul[class] {
   list-style: none linear-gradient(transparent, transparent);  // Fallback
   list-style: ""; // Re-add list semantics
   padding-left: 0;
 }
 
-nav ul:not([class]) {
-  margin-left: 0;
-}
-
 ul:not([class]),
 ol:not([class]) {
-  margin-left: 1rem;
+  margin-left: 0;
 
   ul,
   ol {
     padding: 0.5rem 1rem 0;
   }
 
-  li {
-    margin-bottom: 0.5rem;
+  li:not(nav[class] li) {
+    margin-top: 0.5rem;
   }
 }
 
 ul:not([class]) {
   > li::marker {
-    display: block;
-    color: var(--primary-800);
+    color: var(--secondary-100);
   }
 }
 

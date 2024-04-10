@@ -29,9 +29,13 @@ popular:
   - gym-104
   - gym-103
   short:
-  - gym-018
-  - gym-016
-  - gym-015
+    heading: Featured
+    description:
+    wrapper_class: courses
+    items:
+    - gym-018
+    - gym-016
+    - gym-015
 
 collection:
   design-systems:

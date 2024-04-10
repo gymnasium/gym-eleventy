@@ -17,7 +17,7 @@ topic: "UX"
 subtopics:
   - label: "Prototyping"
 description: "This course has been retired."
-description_orig: "Learn how to use the conditional logic features in Axure in order to quickly create an interactive prototype."
+description_orig: "Learn how to use the conditional logic features in Axure to quickly create an interactive prototype."
 instructor: tslate
 skills:
   - label: "Interactive prototyping"
@@ -32,26 +32,26 @@ completion_duration: "Up to 2 hours"
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
-  <strong><cite>Advanced Rapid Prototyping with Axure</cite></strong> will teach you how to use Axure’s variable and conditional logic in order to create rapid prototypes that are richer and more representative of the final product.
+  <strong><cite>Advanced Rapid Prototyping with Axure</cite></strong> will teach you how to use Axure’s variable and conditional logic to create rapid prototypes that are richer and more representative of the final product.
 preview_video_src:
 about: >
   <p>Rapid prototyping is used to quickly simulate an interactive experience long before a developer even cracks his or her knuckles. It can help save time and money by refining interactions early on and is a great way to ensure that your end-users and stakeholders can visualize your UI plans well enough to give you feedback. Prototyping tools such as Axure allow us to create simulations of web applications, websites, mobile applications, and mobile sites in a fraction of the time it’d take for actual development.</p>
   <p>In this course, you'll learn how to create an interactive prototype in Axure that can pass data from one page to another and do different things based on the conditions that you set. Specifically, you will learn how to set variable values to pass data across pages, set the text on widgets to include variable values, add conditions in Axure's Case Editor and use the Condition Builder to apply the conditions to a prototype’s interaction. At the end of the course, you will have built a simple four-page prototype capable of demonstrating multiple userflows.</p>
 outline:
   - label: "Chapter 1: Overview & Getting Started"
-    description: "Learn what to expect from the course and how to access the lesson files. Additionally, learn how to use Axure’s Hot Spot widget and Case Editor in order to create links from one screen to another in your prototype. Finally, you will learn how to add Text Field widgets in order to begin building an interactive form."
+    description: "Learn what to expect from the course and how to access the lesson files. Additionally, learn how to use Axure’s Hot Spot widget and Case Editor to create links from one screen to another in your prototype. Finally, you will learn how to add Text Field widgets to begin building an interactive form."
   - label: "Chapter 2: Basic Conditions & Variables"
-    description: "Learn how to use Axure’s Case Editor and Condition Builder in order to add actions to elements on your page. Specifically, you will discover how to use simple logic to configure a “mandatory” password field on your prototype form."
+    description: "Learn how to use Axure’s Case Editor and Condition Builder to add actions to elements on your page. Specifically, you will discover how to use simple logic to configure a “mandatory” password field on your prototype form."
   - label: "Chapter 3: Using Else Cases"
-    description: "Learn the role of “Else Cases” in order to create a more complex prototype that directs the user to certain screens based on their interactions with a form."
+    description: "Learn the role of “Else Cases” to create a more complex prototype that directs the user to certain screens based on their interactions with a form."
   - label: "Chapter 4: Creating New Variables"
     description: "In this chapter, you will extend the logic of your form by creating variables which store data that persists from page to page within your prototype."
   - label: "Chapter 5: Text Input Matching"
-    description: "You will learn how to use Axure’s Condition Builder in order to create a scenario in which the input within two separate text fields must match, or else the user will receive an error screen."
+    description: "You will learn how to use Axure’s Condition Builder to create a scenario in which the input within two separate text fields must match, or else the user will receive an error screen."
   - label: "Chapter 6: Linking Error Screens"
     description: "Dive deeper into Axure’s Condition Builder and Case Editor and create two user flows that demonstrate the potential error screens a user might see while interacting with your prototype."
   - label: "Chapter 7: Tying It All Together & Finishing It Up"
-    description: "This final chapter walks through the process of adding additional variables and conditional logic in order to create a finished prototype that represents multiple user flows."
+    description: "This final chapter walks through the process of adding additional variables and conditional logic to create a finished prototype that represents multiple user flows."
 prerequisites:
   - label: Familiarity with the Axure application.
   - label: Understanding of User Experience basics and the role of wireframing and prototypes within the context of web and mobile development.

@@ -6,6 +6,9 @@ const fs = require('node:fs');
 const ENV = process.env.ELEVENTY_ENV;
 const DATA_URL = process.env.DATA_URL || 'https://data.gym.soy';
 
+const MARKET_FEED = 'https://assets.aquent.com/apps/gym/markets.json';
+const JOB_FEED = 'https://assets.aquent.com/apps/gym/jobs.json';
+
 module.exports = async function() {
 
   try {
@@ -13,22 +16,22 @@ module.exports = async function() {
     // let feed1 = await parser.parseURL(`https://medium.com/feed/gymnasium`);
     // let feed2 = await parser.parseURL(`https://medium.com/feed/@aquentgymnasium`);
 
-    // let jobs = await EleventyFetch(`https://assets.aquent.com/apps/gym/jobs.json?limit=1500`, {
-    //   duration: ENV === 'local' ? 0 : '30m',
-    //   type: "json"
-    // });
+    let jobs = await EleventyFetch(`${JOB_FEED}?limit=1500`, {
+      duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '30m',
+      type: "json"
+    });
 
-    // let markets = await EleventyFetch(`https://assets.aquent.com/apps/gym/markets.json`, {
-    //   duration: ENV === 'local' ? 0 : '30m',
-    //   type: "json"
-    // });
+    let markets = await EleventyFetch(MARKET_FEED, {
+      duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '24h',
+      type: "json"
+    });
 
     // const feed = feed1.items.concat(feed2.items);
 
     return {
       // live values
-      // jobs: jobs.items,
-      // markets: markets.items,
+      jobs: jobs.items,
+      markets: markets.items,
       // blog: feed,
     };
   } catch(e) {

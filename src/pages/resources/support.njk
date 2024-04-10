@@ -5,20 +5,31 @@ meta:
   title: "Support"
 ---
 {%- set intro = pages['support'].intro -%}
-<header id="{{ id }}" class="page-header {{ id }}">
-  <h1>{{ intro.heading }}</h1>
-  {%- if intro.description -%}
-    <p>{{ intro.description | safe }}</p>
-  {%- endif -%}
-</header>
-{%- set sections = pages['support'] | omit(['intro']) -%}
-{%- for id, section in sections -%}
-  <section id="{{ id }}" class="page-section {{ id }}">
-    <h2>{{ section.heading | safe }}</h2>
-    <ul>
-      {%- for idx in range(0, section.list.length) -%}
-        <li>{{ section.list[idx] | safe }}</li>
-      {%- endfor -%}
-    </ul>
-  </section>
-{%- endfor -%}
+<div class="main-panel">
+
+  <article>
+    <header id="{{ id }}" class="main-header {{ id }}">
+      <h1>{{ intro.heading }}</h1>
+      {%- if intro.description -%}
+      <p>{{ intro.description | safe }}</p>
+      {%- endif -%}
+    </header>
+    {%- set sections = pages['support'] | omit(['intro']) -%}
+    {%- for id, section in sections -%}
+    <section id="{{ id }}" class="main-section {{ id }}">
+      <h2>{{ section.heading | safe }}</h2>
+      <ul>
+        {%- for idx in range(0, section.list.length) -%}
+          <li>{{ section.list[idx] | safe }}</li>
+        {%- endfor -%}
+      </ul>
+    </section>
+    {%- endfor -%}
+    {%- back_to_top -%}
+  </article>
+
+  <aside>
+  <!-- TODO: Add content include -->
+  </aside>
+
+</div>

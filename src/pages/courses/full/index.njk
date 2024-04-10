@@ -11,16 +11,74 @@ nav:
   parent: "/courses/"
 intro:
   heading: Full Courses
-  subheading: Free online courses and tutorials.
-  content: Learn design, development, UX, accessibility, and career skills from industry experts.
+  subheading: Free full courses — taught by experts.
+  benefit: Learn new skills in a day or less.
+  lede: Explore courses
+  topics: on design, development, accessibility, prototyping, UX, and career skills.
+  info:
+    - title: Benefits
+      items:
+        - label: 100% free self-paced online learning
+        - label: Earn a Certificate to share on your résumé and social media
+        - label: High-quality and in-depth content by industry experts
+        - label: Discuss, share, and get feedback in the course forum
+        - label: Optional homework and quizzes to sharpen your skills
+    - title: Video Lessons
+      items:
+        - label: 3–5 hours
+    - title: Course Duration
+      items:
+        - label: 12–22 hours
+  promo:
+    pitch: Don’t have the time?
+    action: Explore our Gym Shorts.
 ---
-<header>
-  <h1>{{ intro.heading }}</h1>
-  <p><strong>{{ intro.subheading }}</strong> {{ intro.content }}</p>
-</header>
+{%- include 'modules/courses/header.njk' -%}
 
-<h2>Full Courses</h2>
-{% for course in collections.live_courses_full %}
-  {%- set module = course -%}
-  {%- include 'modules/panels/course.njk' -%}
-{% endfor %}
+{%- include 'modules/courses/topic-select-fragments.njk' -%}
+
+<div id="topics" class="topics">
+
+{%- include 'modules/courses/topic-menu.njk' -%}
+
+<article class="topic-listing">
+  <h2 class="topic-label" aria-hidden="true"><span>All Topics</span></h2>
+  <ul class="courses">
+    {% for course in collections.live_courses_full | reverse %}
+      {%- set module = course -%}
+      {%- include 'modules/panels/course.njk' -%}
+    {% endfor %}
+
+    {# TODO: Refactor as necessary #}
+
+    {# Add custom recommendation for accessibility #}
+    {%- set module = collections.live_courses_short | pluck('id', 'GYM-016') -%}
+    {%- set module = module[0] -%}
+    {%- set topicClass = 'accessibility' -%}
+    {%- set subtopicClass = ' ' -%}
+    {%- set extraClass = 'elective' -%}
+    {%- set enableNote = true -%}
+    {%- include 'modules/panels/course.njk' -%}
+    
+    {# Add custom recommendation for prototyping #}
+    {%- set module = collections.live_courses_short | pluck('id', 'GYM-015') -%}
+    {%- set module = module[0] -%}
+    {%- set topicClass = 'prototyping' -%}
+    {%- set subtopicClass = ' ' -%}
+    {%- set extraClass = 'elective' -%}
+    {%- set enableNote = true -%}
+    {%- include 'modules/panels/course.njk' -%}
+    
+    {# Set custom recommendation for career skills #}
+    {%- set module = collections.live_courses_short | pluck('id', 'GYM-001') -%}
+    {%- set module = module[0] -%}
+    {%- set topicClass = 'career-skills' -%}
+    {%- set subtopicClass = ' ' -%}
+    {%- set extraClass = 'elective' -%}
+    {%- set enableNote = true -%}
+    {%- include 'modules/panels/course.njk' -%}
+  </ul>
+</article>
+
+</div>
+

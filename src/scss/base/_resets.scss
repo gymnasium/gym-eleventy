@@ -95,6 +95,10 @@ button:hover {
   cursor: pointer;
 }
 
+dd {
+  margin-left: 0;
+}
+
 embed,
 iframe,
 img,
@@ -109,8 +113,14 @@ video {
 }
 
 table {
-  width: 100%;
   table-layout: fixed;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+address {
+  font-style: normal;
 }
 
 [hidden] {

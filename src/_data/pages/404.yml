@@ -1,3 +1,17 @@
-# TODO: finish using this yaml file to populate the 404 page content
 intro:
   heading: '404: Page Not Found'
+  description: <span aria-label="Waving hand emoji" role="img">👋</span> You discovered a page that doesn’t exist.
+main:
+  body_text:
+  - 'Some might call you lost. Others might call you a creative genius.'
+  - 'Either way, we suggest that you check out our frequently visited pages below:'
+  links:
+  - label: Homepage
+    url: /
+  - label: Full Courses
+    url: /courses/full/
+  - label: Gym Shorts
+    url: /courses/gym-shorts/
+  - label: Take 5 Tutorials
+    url: /courses/take5/
+  contact: Need to get in touch? You can email us at <b><a href="mailto:help@thegymnasium.com?subject=Get+In+Touch">help@thegymnasium.com</a></b>.

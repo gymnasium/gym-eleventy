@@ -11,7 +11,7 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const markdownItAttrs = require("markdown-it-attrs");
 
-require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
+require('@dotenvx/dotenvx').config({ path: `.env.${process.env.NODE_ENV}` })
 
 function filter(arr, criteria) {
   return arr.filter(function (obj) {
