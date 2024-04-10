@@ -72,7 +72,7 @@ resources:
   heading: Accessibility Resources
   description: All the basics and tools to get started with accessibility.
 
-  basics: 
+  basics:
     heading: "Learning the Basics"
     links:
     - href: https://brand.aquent.com/Accessibility?utm_source=partner&amp;utm_medium=web&amp;utm_campaign=AQ_UK_gymnasium&amp;utm_content=2021
@@ -84,16 +84,16 @@ resources:
       label: The Beginner’s Guide to Web Accessibility
     - href: https://developer.mozilla.org/en-US/docs/Learn/Accessibility
       label: Accessibility for Web Developers
-  guides: 
+  guides:
     heading: "In-Depth Guides"
     links:
-    - href: https://universaldesign.ie/technology-ict/web-and-mobile-app-accessibility/web-accessibility-techniques/content-provider-s-introduction-and-index/
+    - href: https://universaldesign.ie/communications-digital/web-and-mobile-accessibility/web-accessibility-techniques/content-providers-introduction-and-index
       label: Guidelines for Content Providers and Editors
     - href: https://webaim.org/resources/designers/
       label: Accessibility for Designers
     - href: https://www.accessibility-developer-guide.com
       label: Accessibility Developer Guide
-    - href: https://accessibility.18f.gov
+    - href: https://guides.18f.gov/accessibility/
       label: 18F Accessibility Guide
     - href: https://www.a11yproject.com
       label: The A11Y Project
@@ -116,7 +116,7 @@ services:
     - href: https://aquenttalent.com/services/talent-recruiting
       label: Staffing
       description: Finding people with deep knowledge of accessibility can be like finding a needle in a haystack. Luckily, we know where to look. Our experienced recruiters and vast talent pool mean you can complete accessibility projects and bring in specialized skill sets when you need them.
-    - href: https://aquent.com/brands/aquent-studios
+    - href: https://aquent.com/solutions/aquent-studios
       label: Projects
       description: If you’re looking to outsource accessibility projects, Aquent Studios can assemble and lead a team of accessibility experts and specialists in design, development, experience, and content to achieve your goals.
     - href: /courses/
