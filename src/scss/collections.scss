@@ -184,7 +184,7 @@ $gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%); // #2b4d4b
   h2 {
     text-transform: uppercase;
     font-size: rem-calc(30);
-    margin-bottom: 0;
+    line-height: 1;
   }
 
   // --- collection--card ---
