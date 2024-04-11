@@ -57,6 +57,8 @@ articles:
   prototyping:
     heading: "Prototyping Articles"
     links:
+    - href: "https://medium.com/gymnasium/ai-mockup-magic-prototyping-landing-pages-with-llms-3765bef6a84c"
+      label: "AI Mockup Magic: Prototyping Landing Pages with LLMs"
     - href: "https://medium.com/gymnasium/from-filler-to-matter-wireframes-and-prototypes-in-ux-design-a73b0c0c27cd"
       label: "From Filler to Matter: Wireframes and Prototypes in UX Design"
     - href: "https://medium.com/gymnasium/brad-frost-on-how-and-why-to-use-pattern-lab-49607f89d7f0"

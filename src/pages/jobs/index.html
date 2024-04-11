@@ -10,38 +10,38 @@ meta:
   {%- if intro.description -%}
     <p>{{ intro.description | safe }}</p>
   {%- endif -%}
-    {%- if intro.cards -%}
-      <ul>
-      {%- for idx in range(0, intro.cards.length) -%}
-        {%- set card = intro.cards[idx] -%}
-        {%- set heading = card.heading -%}
-        {%- set subheading = card.subheading -%}
-        {%- set url = card.cta.href -%}
-        {%- set label = card.cta.label -%}
-        {%- set src = config.urls.data + card.img.src -%}
-        {%- if card.img.srcSet -%}
-          {%- set srcSet = config.urls.data + card.img.srcSet -%}
-        {%- else -%}
-          {%- set srcSet = src -%}
-        {%- endif -%}
-        <li>
-          <article class="card">
-            <header>
-              <h2>{{ heading }}</h2>
-              {%- if subheading -%}
-                <h3>{{ subheading }}</h3>
-              {%- endif -%}
-            </header>
-            <figure class="artwork">
-              <img style="max-width: 5rem;" alt="{{ heading }}" srcset="{{ srcSet }}" src="{{ src }}">
-            </figure>
-            {%- if card.cta -%}
-              <div class="cta"><a href="{{ url }}">{{label }}</a></div>
+  {%- if intro.cards -%}
+    <ul>
+    {%- for idx in range(0, intro.cards.length) -%}
+      {%- set card = intro.cards[idx] -%}
+      {%- set heading = card.heading -%}
+      {%- set subheading = card.subheading -%}
+      {%- set url = card.cta.href -%}
+      {%- set label = card.cta.label -%}
+      {%- set src = card.img.src -%}
+      {%- if card.img.srcSet -%}
+        {%- set srcSet = card.img.srcSet -%}
+      {%- else -%}
+        {%- set srcSet = src -%}
+      {%- endif -%}
+      <li>
+        <article class="card">
+          <header>
+            <h2>{{ heading }}</h2>
+            {%- if subheading -%}
+              <h3>{{ subheading }}</h3>
             {%- endif -%}
-          </article>
-        </li>
-      {%- endfor -%}
-      </ul>
+          </header>
+          <figure class="artwork">
+            <img alt="{{ heading }}" srcset="{{ srcSet }}" src="{{ src }}">
+          </figure>
+          {%- if card.cta -%}
+            <div class="cta"><a href="{{ url }}">{{label }}</a></div>
+          {%- endif -%}
+        </article>
+      </li>
+    {%- endfor -%}
+    </ul>
   {%- endif -%}
 </header>
 

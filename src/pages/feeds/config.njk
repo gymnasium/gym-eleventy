@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 {%- set footer -%}{%- include 'layouts/components/footer.njk' -%}{%- endset -%}
 {%- set footer = footer | stringify -%}
 {# Important: note the inclusion of double quotes when replacing '"FOOTER_HTML"' #}
-{%- set config = config
+{%- set configJSON = config
   | stringify
   | replace('"FOOTER_HTML"', footer)
   | replace('GYM_ROOT_URL', config.urls.root)
@@ -17,4 +17,4 @@ eleventyExcludeFromCollections: true
   | replace('"MARKETS_STATIC"', markets.items | stringify)
   | replace('"MARKETS_LIVE"', data.markets | stringify)
 -%}
-{{ config | safe }}
+{{ configJSON | safe }}

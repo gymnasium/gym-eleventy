@@ -30,9 +30,9 @@
 {%- set type = obj.type -%}
 
 {# TODO: standardize image locations for ease of development #}
-{%- set src = config.urls.data + img -%}
+{%- set src = img -%}
 {%- if type === 'webinar' -%}
-  {%- set src = config.urls.data + '/img/webinars/' +  slug + '.jpg' -%}
+  {%- set src = '/img/webinars/posters/' +  slug + '.jpg' -%}
 {%- endif -%}
 
 {%- set srcSet = src -%}
