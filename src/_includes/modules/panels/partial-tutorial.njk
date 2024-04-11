@@ -33,6 +33,7 @@
 
 {%- set src = config.urls.root + img -%}
 {%- set srcSet = src -%}
+{%- set video_duration = obj.video_duration -%}
 
 {%- set url = '/courses/take5/' + obj.title | slugify -%}
 
@@ -40,7 +41,7 @@
   <article id="{{ shortId | lower }}" class="course-card">
     <div class="main">
       <a href="{{ url }}">
-        <div class="artwork">
+        <div class="artwork" data-duration="{{ video_duration }}">
           <img alt="Course artwork for {{ title }}." src="{{ src }}" srcset="{{ srcSet }}" decoding="async" fetchpriority="high" width="1280" height="720">
         </div>
       </a>
