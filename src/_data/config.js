@@ -6,6 +6,8 @@ module.exports = {
     cms: process.env.CMS_URL || 'https://studio.learn.gym.soy',
     lms: process.env.LMS_URL || 'https://learn.gym.soy',
     mfe: process.env.MFE_URL || 'https://apps.learn.gym.soy',
+    production_domain: 'thegymnasium.com',
+    production: 'https://thegymnasium.com',
   },
   ports: {
     account: process.env.MFE_PORT_ACCOUNT || 1997,
