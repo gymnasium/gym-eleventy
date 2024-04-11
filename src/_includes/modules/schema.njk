@@ -13,13 +13,13 @@
         "@type": "Course",
         "name": "{{ title }}",
         "description": "{{ description }}",
-        "image": "{{ config.urls.data }}/img/courses/og/{{ id }}-og.png",
-        "url": "https://thegymnasium.com{{ path}}{{ slug }}/",
+        "image": "{{ config.urls.production }}{{ config.paths.img.og }}courses/{{ id | lowercase }}.png",
+        "url": "{{ config.urls.production }}{{ path }}{{ slug }}/",
         "position": 1,
         "provider": {
           "@type": "School",
           "name": "Gymnasium",
-          "sameAs": "https://thegymnasium.com"
+          "sameAs": "{{ config.urls.production }}"
         }
       }{%- if not loop.last -%},{%- endif -%}
     {%- endfor -%}
