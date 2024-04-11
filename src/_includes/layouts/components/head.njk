@@ -10,8 +10,11 @@
 {# TODO: add OG meta #}
 <meta content="ie=edge" http-equiv=X-UA-Compatible>
 <link href="/favicon.svg" rel="icon" type="image/svg+xml">
-{% block css %}
+
 <link rel="stylesheet" href="{{ '/css/global.css' | cachebust }}" />
-{% endblock %}
+{# Allows piping in page-specific CSS files - probably not a "recommended" practice. However, we have implemented this to support the collections index page #}
+{%- if meta.css -%}
+<link rel="stylesheet" href="{{ meta.css | cachebust }}" />
+{% endif %}
 
 {% block head %}{% endblock %}
