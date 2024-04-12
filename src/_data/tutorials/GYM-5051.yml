@@ -26,7 +26,7 @@ project_files:
   url: "https://bit.ly/3zXzT2O"
 related_content:
 - label: "Best practices for nested frames by Thomas Lowry"
-  url: "https://www.figma.com/best-practices/component-architecture/nested-components/"
+  url: "https://www.figma.com/best-practices/component-architecture/#nested-components"
 - label: "Mastering frame nesting in Figma by Chuck Rice"
   url: "https://uxdesign.cc/mastering-frame-nesting-in-figma-df0ddecdeb92"
 - label: "Figma tutorial: Auto Layout navigation menu"

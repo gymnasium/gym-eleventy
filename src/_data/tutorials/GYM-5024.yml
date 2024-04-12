@@ -24,11 +24,11 @@ project_files:
   url: "https://codepen.io/josborn/pen/RwNwLmy"
 related_content:
 - label: "Using the Responsive Viewport Mode in Google Chrome"
-  url: "https://developers.google.com/web/tools/chrome-devtools/device-mode#responsive"
+  url: "https://developer.chrome.com/docs/devtools/device-mode"
 - label: "How to Activate and Use Responsive Design Mode in Safari"
   url: "https://www.lifewire.com/using-responsive-design-mode-in-safari-446569"
 - label: "Using Media Queries by Mozilla"
-  url: "https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"
+  url: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries"
 - label: "Using Media Queries for Responsive Design in 2018 by Rachel Andrew"
   url: "https://www.smashingmagazine.com/2018/02/media-queries-responsive-design-2018/"
 - label: "Media Queries for Common Device Breakpoints by Justin Avery"

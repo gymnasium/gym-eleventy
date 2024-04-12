@@ -25,7 +25,7 @@ related_content:
 - label: "The Anatomy of Accessible Forms: Required Form Fields by Raghavendra Satish Peri"
   url: "https://www.deque.com/blog/anatomy-of-accessible-forms-required-form-fields/"
 - label: "How to make inline error messages accessible by Hidde de Vries"
-  url: "https://hiddedevries.nl/en/blog/2017-04-04-how-to-make-inline-error-messages-accessible"
+  url: "https://hidde.blog/how-to-make-inline-error-messages-accessible/"
 - label: "User Notifications"
   url: "https://www.w3.org/WAI/tutorials/forms/notifications/"
 - label: "Usable and Accessible Form Validation and Error Recovery"
