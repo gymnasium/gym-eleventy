@@ -1,0 +1,10 @@
+// | -------------------------------------------------------------
+// | This file is intended to only serve our static site
+// | -------------------------------------------------------------
+
+@use 'shared';
+
+// Static-site only (eleventy-specific) components below
+
+// Specific pages
+@use 'pages/maintenance';

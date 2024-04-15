@@ -1,0 +1,30 @@
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+
+// applied to body class
+.home {
+  background-color: var(--mono-200);
+
+  main {
+    margin-top: 0;
+  }
+
+  // hero styling (full compiled class name is`.home-hero`)
+  &-hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2.6em;
+  }
+
+  // top/bottom padding for each component of the home page
+  article,
+  section {
+    padding: 2rem 0;
+  }
+
+  section {
+    h1 {
+      text-align: center;
+    }
+  }
+}

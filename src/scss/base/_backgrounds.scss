@@ -1,0 +1,33 @@
+// | -------------------------------------------------------------
+// | Background Utility Classes
+// | -------------------------------------------------------------
+
+@use "colors" as *;
+
+@each $color, $shades in $colors {
+  @if (length($shades) > 1) {
+    @each $shade, $value in $shades {
+      .bg-#{$color}-#{$shade} {
+        background-color: var(--#{$color}-#{$shade});
+
+        // Automatically set the color based on the HSL lightness value
+        @if lightness($value) > 50% {
+          color: var(--mono-900);
+        } @else {
+          color: var(--mono-100);
+        }
+
+        // TODO: determine if this is the best way to handle a 'full bleed' approach
+        &.full-bleed {
+          box-shadow: -30rem 0 var(--#{$color}-#{$shade}), 30rem 0 var(--#{$color}-#{$shade}), -70rem 0 var(--#{$color}-#{$shade}), 70rem 0 var(--#{$color}-#{$shade}), -140rem 0 var(--#{$color}-#{$shade}), 140rem 0 var(--#{$color}-#{$shade});
+        }
+      }
+    }
+  } @else {
+    @each $shade, $value in $shades {
+      .bg-#{$color} {
+        background-color: var(--#{$color});
+      }
+    }
+  }
+}

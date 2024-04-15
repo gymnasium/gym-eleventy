@@ -1,0 +1,24 @@
+// | -------------------------------------------------------------
+// | Root
+// | -------------------------------------------------------------
+
+@use "colors" as *;
+@import "fonts";
+
+:root {
+  --font-family-default: #{$gym-text-font-stack};
+  --font-family-custom: #{$gym-font-stack};
+  
+  @each $color, $shades in $colors {
+    @if (length($shades) > 1) {
+      @each $shade, $value in $shades {
+        --#{$color}-#{$shade}: #{$value};
+      }
+    } @else {
+      @each $shade, $value in $shades {
+        --#{$color}: #{$value};
+      }
+    }
+  }
+
+}

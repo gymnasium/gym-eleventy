@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ config.meta.title }}</title>
+<meta name="description" content="{% if meta.description %}{{ meta.description }}{% else %}{{ config.meta.description }}{% endif %}"/>
+<meta name="author" content="{{config.meta.author}}"/>
+<meta name="generator" content="{{ eleventy.generator }}">
+{%- if meta.canonicalUrl -%}
+<link rel="canonical" href="{{ meta.canonicalUrl }}">
+{% endif %}
+{# TODO: add OG meta #}
+<meta content="ie=edge" http-equiv=X-UA-Compatible>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml">
+
+<link rel="stylesheet" href="{{ '/css/global.css' | cachebust }}" />
+{# Allows piping in page-specific CSS files - probably not a "recommended" practice. However, we have implemented this to support the collections index page #}
+{%- if meta.css -%}
+<link rel="stylesheet" href="{{ meta.css | cachebust }}" />
+{% endif %}
+
+{% block head %}{% endblock %}
