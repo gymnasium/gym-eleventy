@@ -24,9 +24,9 @@ project_files:
   url: "https://codepen.io/josborn/pen/YMVdVe"
 related_content:
 - label: "heropatterns.com"
-  url: "https://www.heropatterns.com"
+  url: "https://heropatterns.com"
 - label: "svgbackgrounds.com"
-  url: "https://svgbackgrounds.com"
+  url: "https://www.svgbackgrounds.com"
 - label: "Gymnasium: Working with CSS Feature Queries"
   url: "/courses/take5/working-with-css-feature-queries"
 - label: "Using Feature Queries in CSS by Jen Simmons"

@@ -30,5 +30,5 @@ related_content:
 - label: "Auto-Animate Tips & Tricks"
   url: "https://www.youtube.com/watch?v=RNXpEQqbWRM"
 - label: "The Basics of Easing by Paul Lewis"
-  url: "https://developers.google.com/web/fundamentals/design-and-ux/animations/the-basics-of-easing"
+  url: "https://web.dev/articles/the-basics-of-easing"
 skill_level: "Beginner"

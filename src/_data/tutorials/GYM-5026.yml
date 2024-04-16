@@ -24,7 +24,7 @@ related_content:
 - label: "GitHub Pages"
   url: "https://pages.github.com"
 - label: "GitHub Pages Official Help Guide"
-  url: "https://help.github.com/en/github/working-with-github-pages"
+  url: "https://docs.github.com/en/pages"
 - label: "Examples of Projects Using GitHub Pages"
   url: "https://github.com/collections/github-pages-examples"
 - label: "Gymnasium: Introduction to Git and GitHub"
