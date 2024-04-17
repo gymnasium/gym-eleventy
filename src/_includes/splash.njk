@@ -1,0 +1,20 @@
+{%- set intro = pages['splash'].intro -%}
+{%- set main = pages['splash'].main -%}
+<div class="main-panel">
+  <article>
+    <header id="maintenance" class="main-header maintenance">
+      <h1>{{ intro.heading }}</h1>
+      <p>{{ intro.description | safe }}</p>
+    </header>
+    {%- for text in main.body_text  -%}
+    <p>{{ text }}</p>
+    {%- endfor -%}
+    <ul>
+    {%- for link in main.links -%}
+      <li><a href="{{ link.url }}" rel="noopener" target="_blank">{{ link.label }}</li></a>
+    {%- endfor -%}
+    </ul>
+    <p>{{ main.contact | safe }}</p>
+  </article>
+
+</div>

@@ -1,10 +1,9 @@
 ---
 layout: layouts/main.njk
-permalink: /
 meta:
   title: "503: Site Maintenance"
-  sitemapPriority: 1.0
-  sitemapChangeFreq: weekly
-  bodyClass: home
+  sitemapExclude: true
+eleventyExcludeFromCollections: true
+permalink: 404.html
 ---
 {% include 'splash.njk' %}
