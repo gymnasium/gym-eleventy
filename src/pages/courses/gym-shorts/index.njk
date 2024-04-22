@@ -9,31 +9,9 @@ meta:
 nav:
   secondary: courses
   parent: "/courses/"
-intro:
-  heading: Gym Shorts
-  subheading: Free short courses — taught by experts.
-  benefit: Learn new skills in a few hours or less.
-  lede: Explore courses
-  topics: on design, development, accessibility, prototyping, UX, and career skills.
-  info:
-    - title: Benefits
-      items:
-        - label: 100% free self-paced online learning
-        - label: Earn a Badge to share on your résumé and social media
-        - label: Short, concise courses on a wide range of topics
-        - label: High-quality and in-depth content by industry experts
-    - title: Video Lessons
-      items:
-        - label: 1–2 hours
-    - title: Course Duration
-      items:
-        - label: 1–5 hours
-  promo:
-    pitch: Looking to earn a certificate?
-    action: Explore our Full Courses.
 ---
+{%- set intro = gym_shorts.intro -%}
 {%- include 'modules/courses/header.njk' -%}
-
 {%- include 'modules/courses/topic-select-fragments.njk' -%}
 
 <div id="topics" class="topics">
