@@ -3,6 +3,7 @@ meta:
   title: "Design Systems"
   topic: "Design Systems"
   description: "Teamwork (and creating effective pattern libraries) makes the dream work."
+  url: /design-systems/
   slug: design-systems
   order: 1
   unique: true
@@ -18,7 +19,7 @@ courses:
     pre: with
     data: bios
     key: instructor
-    post: 
+    post:
   cta:
     label: View Course
     class: btn
