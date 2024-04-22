@@ -3,8 +3,9 @@
 
 // TODO: Move to a more "global" place
 
-// 1. description list (component)
+// description list (component)
 // TODO: Rename?
+
 .list-summary {
   display: grid;
   gap: 1.4rem 2rem;
@@ -30,7 +31,8 @@
       list-style-type: disc;
       font-size: 1rem;
       line-height: 1.4;
-      letter-spacing: 0.025ex;
+      letter-spacing: 0.0125ex;
+      text-wrap: pretty;
       margin-top: 0.55rem;
       margin-left: 0.8rem;
     }
@@ -52,11 +54,14 @@
 }
 
 // courses (full, gym shorts, take 5)
+// TODO: Cleanup selectors
 
+.courses,
 .courses-full,
 .courses-gym-shorts,
 .courses-take5,
 [class*="courses-take5"] {
+
   main {
     p:only-of-type {
       margin-bottom: 0;
@@ -109,8 +114,10 @@
         font-size: 1.25rem;
       }
 
-      h1 + p b {
-        display: block;
+      p:first-of-type {
+        strong {
+          display: block;
+        }
       }
     }
 
@@ -305,12 +312,11 @@
       h2,
       .topic {
         text-transform: uppercase;
-        letter-spacing: 0.025ex;
+        letter-spacing: 0.0125ex;
       }
 
       .topic {
         font: 900 1.25rem/1 var(--font-family-custom);
-        margin-bottom: 0.8rem;
 
         b {
           font: inherit;
@@ -326,7 +332,7 @@
       .instructor {
         font-weight: bold;
         font-size: 1rem;
-        letter-spacing: 0.025ex;
+        letter-spacing: 0.0125ex;
         margin-top: 1.125rem;
         margin-bottom: 1.2rem;
       }
@@ -342,6 +348,14 @@
   // course card
 
   .course-card {
+    background-color: var(--mono-100);
+    padding: 1.4rem;
+    border: 1px solid var(--mono-400);
+    border-radius: 3px;
+  }
+
+  .course-card {
+
     &:not(first-child) {
       margin-top: 1rem;
     }
@@ -349,10 +363,6 @@
     // course card (main content)
 
     .main {
-      background-color: var(--mono-100);
-      padding: 1.4rem;
-      border: 1px solid var(--mono-400);
-      border-radius: 3px;
 
       > a {
         grid-area: art;
@@ -426,10 +436,10 @@
       }
     }
 
-    aside {
+    .cta + aside {
       grid-area: aside;
       padding-top: 1.2rem;
-      border-top: 1px dashed var(--mono-300);
+      border-top: 1px dashed var(--mono-400);
       margin-top: 1.4rem;
 
       &.list-summary {
@@ -453,14 +463,14 @@
       gap: 1.4rem;
       justify-content: start;
       padding-top: 1.4rem;
-      border-top: 1px dashed var(--mono-300);
-      margin-top: 1rem;
+      border-top: 1px dashed var(--mono-400);
+      margin-top: 1.4rem;
 
       h3,
       p {
         font-size: 0.9375rem;
         line-height: 1;
-        letter-spacing: 0.025ex;
+        letter-spacing: 0.0125ex;
         margin-bottom: 0;
 
         &:not(p) {
@@ -471,6 +481,10 @@
           word-spacing: 0.25ex;
         }
       }
+    }
+
+    aside + .info {
+      margin-top: 1.2rem;
     }
   }
 
@@ -512,6 +526,10 @@
           img {
             margin: -1.7rem 0 -3.4rem;
           }
+        }
+
+        .topic {
+          padding-top: 0;
         }
 
         [data-duration]::after {
@@ -602,7 +620,7 @@
 
       > div {
         padding-top: 1rem;
-        border-top: 1px dashed var(--mono-300);
+        border-top: 1px dashed var(--mono-400);
 
         + div {
           margin-top: 1.4rem;
@@ -622,7 +640,7 @@
       @include breakpoint(large, max) {
         & {
           padding-bottom: 1.4rem;
-          border-bottom: 1px dashed var(--mono-300);
+          border-bottom: 1px dashed var(--mono-400);
         }
       }
 
@@ -665,6 +683,99 @@
       }
 
     }
+  }
+
+}
+
+// /courses/
+// Courses page-specific style rules
+
+.courses {
+
+  .intro {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card {
+
+    > header,
+    section {
+
+      h2,
+      > h3 {
+        font-weight: 900;
+        line-height: 1.15;
+        text-transform: uppercase;
+      }
+    }
+
+    > header {
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        font-family: var(--font-family-custom);
+      }
+    }
+
+    > div:not([class]) {
+      padding-top: 1.8rem;
+
+      section {
+
+        > h3 {
+          font-size: 1.25rem;
+        }
+
+      }
+
+    }
+
+    & {
+      border-color: var(--mono-300);
+    }
+
+    .list-summary {
+      padding-top: 1.4rem;
+    }
+
+    @include breakpoint(large, min) {
+
+      > div {
+        display: grid;
+        grid-template-columns: 3.5fr 1fr;
+        gap: 2rem;
+        align-items: start;
+
+        .course-card {
+
+          .main {
+            grid-template-columns: 2fr 1.5fr;
+          }
+
+        }
+
+        section + .list-summary {
+          grid-auto-flow: inherit;
+          grid-template-columns: none;
+          padding-top: 0.1rem;
+        }
+
+      }
+
+    }
+
+    .tutorial {
+
+      .artwork {
+        border: 1px solid var(--mono-300);
+      }
+
+    }
+
   }
 
 }
