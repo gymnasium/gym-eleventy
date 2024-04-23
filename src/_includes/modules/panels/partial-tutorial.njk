@@ -37,7 +37,22 @@
 
 {%- set url = '/courses/take5/' + obj.title | slugify -%}
 
-<li class="course {{ type }} {{ shortId | lower }} {{ topic | slugify }}{% if subtopics %}{% for subtopic in subtopics %} {{ subtopic.label | slugify }}{% endfor %}{% endif %}{% if topic_featured %} featured{% endif %}">
+{%- set baseClass = "course " + type + ' ' + shortId | lower -%}
+
+{%- if not topicClass -%}
+  {%- set topicClass = topic | slugify -%}
+{%- endif -%}
+
+{%- if not subtopicClass -%}
+  {%- set subtopicClass -%}
+  {% if subtopics %}{% for subtopic in subtopics %} {{ subtopic.label | slugify }}{% endfor %}{% endif %}
+  {%- endset -%}
+{%- endif -%}
+
+{%- set itemClass %}{{ baseClass }} {{ topicClass }} {{ subtopicClass }} {% if topic_featured %} featured{% endif %} {% if extraClass %} {{ extraClass }}{% endif %}
+{%- endset -%}
+
+<li class="{{ itemClass }}">
   <article id="{{ shortId | lower }}" class="course-card">
     <div class="main">
       <a href="{{ url }}">
