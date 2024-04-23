@@ -73,7 +73,7 @@
       data-utm="utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=job-module&amp;utm_content=textlink"
       data-script="https://assets.aquent.com/apps/gym/jobs.json?limit=1500&amp;callback=processJobs"
       {# TODO: this file doesn\'t actually exist yet #}
-      data-script-fallback="{{ config.urls.root }}/feeds/jobs.jsonp"
+      data-script-fallback="/feeds/jobs.jsonp"
     >
       <ul>
         {%- for job in jobs.items.slice(0, 10) -%}
