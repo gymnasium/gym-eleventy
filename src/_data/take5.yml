@@ -1,0 +1,17 @@
+intro:
+  heading: Take 5
+  subheading: Free practical tutorials — for everyone.
+  benefit: Learn new skills in 5 minutes or less.
+  lede: Explore tutorials
+  topics: on design, development, accessibility, prototyping, UX, and career skills.
+  info:
+    - title: Benefits
+      items:
+        - label: 100% free self-paced online learning
+        - label: Start learning with or without a Gymnasium account
+        - label: Short, concise tutorials on a wide range of topics
+        - label: High-quality and up-to-date content by industry experts
+        - label: Tutorials include an easy-to-follow transcript
+    - title: Video Tutorial
+      items:
+        - label: 5 minutes or less
