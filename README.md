@@ -51,7 +51,7 @@ An emulation of the production tutor. All MFEs run without ports set.
 
 `npm run tutor:local`
 
-### tutor:dev
+#### tutor:dev
 
 For local development only. The MFEs are set to run with their ports.
 
@@ -61,11 +61,7 @@ For local development only. The MFEs are set to run with their ports.
 In either case, the server will open a browser automatically to [http://localhost:8888](http://localhost:8888).
 
 
-```
-npm run local
-```
-
-**Note:** Depending on your system, prior to starting up Tutor, you may need to add `127.0.0.1 edly.io` to your `/etc/hosts` file. Once that's done, you should be able to access [http://edly.io:8888](http://edly.io:8888).
+**Note:** Prior to starting up Tutor, you may need to add `127.0.0.1 edly.io` to your `/etc/hosts` file. Once that's done, you should be able to access [http://edly.io:8888](http://edly.io:8888).
 
 This static site generates a JSON feed at `/feeds/config.json`, which is consumed by the various Open edX components - [the theme](https://github.com/gymnasium/gym-theme), the MFEs, and our [customized MFE frontend components](https://github.com/gymnasium/gym-frontend-components).
 

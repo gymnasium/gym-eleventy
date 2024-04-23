@@ -17,9 +17,7 @@ export default async (request, context) => {
     });
 
     edge.config((eleventyConfig) => {
-      // Add some custom Edge-specific configuration
-      // e.g. Fancier json output
-      // eleventyConfig.addFilter("json", obj => JSON.stringify(obj, null, 2));
+      onError: "bypass"
     });
 
     return await edge.handleResponse();

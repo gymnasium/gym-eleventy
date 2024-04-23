@@ -8,6 +8,8 @@ module.exports = {
     mfe: process.env.MFE_URL || 'https://apps.learn.gym.soy',
     production_domain: 'thegymnasium.com',
     production: 'https://thegymnasium.com',
+    mfe_course_about_base_url: process.env.MFE_COURSE_ABOUT_BASE_URL || 'https://learn.gym.soy/courses/',
+    mfe_learning_base_url: process.env.MFE_LEARNING_BASE_URL || 'https://apps.learn.gym.soy/learning/course/',
   },
   ports: {
     account: process.env.MFE_PORT_ACCOUNT || 1997,

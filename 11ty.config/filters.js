@@ -156,24 +156,14 @@ module.exports = eleventyConfig => {
 
     if (courseType === 'new' || !!dest_format) {
       if (!!dest_format) {
-        let destUrl = process.env.MFE_URL;
+        let destUrl = process.env[`MFE_${dest_format.toUpperCase()}_BASE_URL`];
         // console.log(process.env);
-        if (process.env.NODE_ENV === 'dev' || 'development' || 'tutor:dev') {
-          const port = process.env[`MFE_PORT_${dest_format.toUpperCase()}`];
-          destUrl = `${destUrl}:${port}`
-        }
 
         if (dest_format === 'course_about') {
-          if (process.env.NODE_ENV !== 'dev' || 'development' || 'tutor:dev') {
-            destUrl = process.env.LMS_URL;
-          } else {
-            const port = process.env[`MFE_PORT_${dest_format.toUpperCase()}`];
-            destUrl = `${process.env.LMS_URL}:${port}`;
-          }
-          path = `${destUrl}/courses/course-v1:GYM+${idString}+0/about`;
+          path = `${destUrl}course-v1:GYM+${idString}+0/about`;
           
         } else if (dest_format === 'learning') {
-          path = `${destUrl}/learning/course/course-v1:GYM+${idString}+0/home`;
+          path = `${destUrl}course-v1:GYM+${idString}+0/home`;
         }
       } else {
         path = `/courses/course-v1:GYM+${idString}+0/`;
