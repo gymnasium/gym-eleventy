@@ -260,7 +260,7 @@ colors:
 css:
   lms: /css/theme.css
   mfe: /css/mfe.css
-messages:
+msg:
   mfe:
     authn:
       welcome: "<p>This is an example of a welcome message on the registration page.</p>"
@@ -273,8 +273,6 @@ messages:
         requirements: Requirements
         audience: This Course is For
         instructor: Meet the Instructor
-
-
   theme:
     custom: "<p>This is an example of a custom message for anywhere in the theme.</p>"
 html:
