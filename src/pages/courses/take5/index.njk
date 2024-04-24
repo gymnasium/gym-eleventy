@@ -10,7 +10,7 @@ nav:
   parent: /courses/
   secondaryParent: /courses/take5/
 ---
-{%- set intro = take5.intro -%}
+{%- set intro = pages['take5'].intro -%}
 {%- include 'modules/courses/header.njk' -%}
 {%- include 'modules/courses/topic-select-fragments.njk' -%}
 
