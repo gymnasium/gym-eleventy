@@ -1,15 +1,17 @@
 module.exports = {
   urls: {
     root_domain: process.env.ROOT_DOMAIN || 'gym.soy',
+    base_domain: process.env.BASE_DOMAIN || 'gym.soy',
     root: process.env.ROOT_URL || 'https://gym.soy',
+    base_url: process.env.BASE_URL || 'https://gym.soy',
     data: process.env.DATA_URL || 'https://data.gym.soy',
     cms: process.env.CMS_URL || 'https://studio.learn.gym.soy',
     lms: process.env.LMS_URL || 'https://learn.gym.soy',
     mfe: process.env.MFE_URL || 'https://apps.learn.gym.soy',
     production_domain: 'thegymnasium.com',
     production: 'https://thegymnasium.com',
-    mfe_course_about_base_url: process.env.MFE_COURSE_ABOUT_BASE_URL || 'https://learn.gym.soy/courses/',
-    mfe_learning_base_url: process.env.MFE_LEARNING_BASE_URL || 'https://apps.learn.gym.soy/learning/course/',
+    mfe_course_about_base_url: process.env.MFE_COURSE_ABOUT_BASE_URL || 'https://learn.gym.soy',
+    mfe_learning_base_url: process.env.MFE_LEARNING_BASE_URL || 'https://apps.learn.gym.soy',
   },
   ports: {
     account: process.env.MFE_PORT_ACCOUNT || 1997,
