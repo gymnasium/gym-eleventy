@@ -3,18 +3,30 @@ permalink: /feeds/config.json
 eleventyExcludeFromCollections: true
 ---
 {%- set footer -%}{%- include 'layouts/components/footer.njk' -%}{%- endset -%}
-{%- set footer = footer | stringify -%}
+{%- set footer = footer | minify_html | stringify -%}
 {# Important: note the inclusion of double quotes when replacing '"FOOTER_HTML"' #}
-{%- set configJSON = config
-  | stringify
-  | replace('"FOOTER_HTML"', footer)
-  | replace('GYM_ROOT_URL', config.urls.root)
-  | replace('GYM_LMS_URL', config.urls.lms)
-  | replace('GYM_MFE_URL', config.urls.mfe)
-  | replace('GYM_DATA_URL', config.urls.data)
-  | replace('"BIOS_DATA"', bios | stringify)
-  | replace('"COURSES_DATA"', courses | stringify)
-  | replace('"MARKETS_STATIC"', markets.items | stringify)
-  | replace('"MARKETS_LIVE"', data.markets | stringify)
--%}
-{{ configJSON | safe }}
+{
+  "meta": {{ config.meta | stringify | safe }},
+  "urls": {{ config.urls | stringify | safe }},
+  "header": {{ config.header | stringify | safe }},
+  "logos": {{ config.logos | stringify | safe }},
+  "msg": {{ config.msg | stringify | safe }},
+  "html": {{ config.html | stringify | replace('"FOOTER_HTML"', footer) | safe }},
+  "bios": {{ bios | stringify | safe }},
+  "courses": {{ courses | stringify | safe }},
+  "markets": {
+  {%- for market in markets.items -%}
+    "{{ market.id }}": {
+      "id": "{{ market.id }}",
+      "title": "{{ market.title }}",
+      "city": "{{ market.city }}",
+      "postalCode": "{{ market.postalCode }}",
+      "stateProvince": "{{ market.stateProvince }}",
+      "countryCode": "{{ market.countryCode }}",
+      "countryName": "{{ market.countryName }}",
+      "coords": "{{ market.coords }}"
+    }{%- if not loop.last -%},{%- endif -%}
+  {%- endfor -%}
+  },
+  "paths": {{ config.paths | stringify | safe }}
+}
