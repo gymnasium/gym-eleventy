@@ -793,4 +793,40 @@ html > {
 
 }
 
+// Courses page-specific style rules
+
+.collection {
+
+  section {
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    p,
+    li {
+      font-size: 1.3125rem;
+    }
+
+  }
+
+  #articles {
+
+    ul {
+
+      li {
+        margin-top: 1rem;
+
+        cite {
+          font-style: normal;
+          font-weight: bold;
+        }
+      }
+
+    }
+
+  }
+
+}
+
 }
