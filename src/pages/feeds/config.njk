@@ -28,5 +28,6 @@ eleventyExcludeFromCollections: true
     }{%- if not loop.last -%},{%- endif -%}
   {%- endfor -%}
   },
-  "paths": {{ config.paths | stringify | safe }}
+  "paths": {{ config.paths | stringify | safe }},
+  "colors": {{ config.colors | stringify | safe }}
 }
