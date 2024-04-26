@@ -20,6 +20,7 @@
   },
   eleventyComputed: {
     meta: {
+      bodyClass: "collection",
       title: "{{ item.meta.title }} | Collections",
       description: "{{ item.meta.description | strip_html }}",
       sitemapExclude: function(data) {
@@ -33,8 +34,8 @@
   },
 }
 ---
-{# 
-Note: several of the 6 collections have similar layouts. 
+{#
+Note: several of the 6 collections have similar layouts.
 TODO:
 - write some logic to support a collection layout/type
 - add support for different modules, like dynamically fetched courses, tutorials, webinars
@@ -42,7 +43,6 @@ TODO:
 #}
 <header>
   <h1>{{ item.meta.title }}</h1>
-  <h4>{{ item.meta.id }}</h4>
   <p>{{ item.meta.description }}</p>
 </header>
 
