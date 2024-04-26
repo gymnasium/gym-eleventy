@@ -190,6 +190,19 @@ module.exports = eleventyConfig => {
     return output;
   });
 
+  eleventyConfig.addFilter('minify_html', (input) => {
+    let output;
+    console.log(typeof input);
+    if (typeof input === 'object') {
+      output = JSON.stringify(input);
+    }
+
+    output = input.replace(/>\s+|\s+</g, function(m) {
+      return m.trim();
+    });
+    return output;
+  });
+
   eleventyConfig.addFilter('replace_after', (input, find, replace) => {
     const regex = new RegExp('[' + find + '].+', 'g');
     const repl = input.replaceAll(regex, replace);
