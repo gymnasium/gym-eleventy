@@ -7,13 +7,13 @@
   {%- endif -%}
   {%- set filtered = module | omit(['module', 'heading', 'description', 'schema', 'cta']) -%}
   {%- for id, item in filtered -%}
-    <div class="{{id}}">
+    <div class="{{ id }}">
       {%- if module.heading -%}
         <h3>{{ item.heading }}</h3>
       {%- else -%}
         <h2>{{ item.heading }}</h2>
       {%- endif -%}
-    
+
       {%- if item.description -%}
         <p>{{ item.description | safe }}</p>
       {%- endif -%}
@@ -27,7 +27,7 @@
 
       {# If we pass in data IDs, use those to fetch data directly #}
       {%- if item.ids -%}
-        <ul>
+        <ul class=""list-unstyled">
           {%- for idx in range(0, item.ids.length) -%}
             {%- set filteredId = collections.catalog | get_key(item.ids[idx].id) -%}
             {%- set obj = collections.catalog[filteredId] -%}
@@ -35,7 +35,7 @@
             {%- set img = obj.img -%}
             {%- set title = obj.title | strip_html -%}
             {%- set description = obj.description -%}
-      
+
             {%- if obj.slug -%}
               {%- set slug = obj.slug -%}
             {%- else -%}
@@ -55,12 +55,12 @@
             {%- set srcSet = src -%}
 
             {% block id_list_item %}
-              <li><a href="{{ path }}{{ slug }}">{{ title }}</a></li>
+              <li><cite><a href="{{ path }}{{ slug }}">{{ title }}</a></cite></li>
             {% endblock %}
           {%- endfor -%}
         </ul>
       {%- elif item.links -%}
-        <ul>
+        <ul class=""list-unstyled">
         {%- for idx in range(0, item.links.length) -%}
           {%- set title = item.links[idx].label -%}
           {%- set href = item.links[idx].href -%}
@@ -68,17 +68,19 @@
           {% block item %}
           <li>
             {# Figure out if we are using an internal or external URL #}
+            <cite>
             {% if (item.links[idx].href | is_external_link) -%}
               {%- external_link item.links[idx].href,item.links[idx].label -%}
             {%- else -%}
               <a href="{{ item.links[idx].href }}">{{ item.links[idx].label }}</a>
             {%- endif -%}
+            </cite>
             {%- if item.links[idx].description -%}
               <p>{{ item.links[idx].description | safe }}</p>
             {%- endif -%}
           </li>
           {% endblock %}
-          
+
         {%- endfor -%}
         </ul>
       {%- endif -%}
@@ -96,3 +98,4 @@
   <em>{ List Module Placeholder }</em>
   <p>Pass in the `module` variable to make this work</p>
 {%- endif -%}
+
