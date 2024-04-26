@@ -3,7 +3,7 @@ permalink: /feeds/config.json
 eleventyExcludeFromCollections: true
 ---
 {%- set footer -%}{%- include 'layouts/components/footer.njk' -%}{%- endset -%}
-{%- set footer = footer | minify_html | stringify -%}
+{%- set footer = footer | minify_html | stringify | replace("GYM_ROOT_URL", config.urls.base_url) -%}
 {# Important: note the inclusion of double quotes when replacing '"FOOTER_HTML"' #}
 {
   "meta": {{ config.meta | stringify | safe }},
