@@ -54,7 +54,7 @@ h6 {
 
 h1 {
   font-size: 2.25rem;
-  line-height: 3.375rem;
+  line-height: 1.15;
   text-transform: uppercase;
 
   @include breakpoint(medium) {
@@ -65,7 +65,7 @@ h1 {
 
 h2 {
   font-size: 1.875rem;
-  line-height: 2.8125rem;
+  line-height: 1.15;
 
   @include breakpoint(medium) {
     font-size: 2.25rem;
@@ -75,7 +75,7 @@ h2 {
 
 h3 {
   font-size: 1.5rem;
-  line-height: 2.25rem;
+  line-height: 1.15;
 
   @include breakpoint(medium) {
     font-size: 1.875rem;
@@ -85,7 +85,7 @@ h3 {
 
 h4 {
   font-size: 1.25rem;
-  line-height: 1.875rem;
+  line-height: 1.15;
 
   @include breakpoint(medium) {
     font-size: 1.5rem;
@@ -95,7 +95,7 @@ h4 {
 
 h5 {
   font-size: 1.125rem;
-  line-height: 1.6875rem;
+  line-height: 1.15;
 
   @include breakpoint(medium) {
     font-size: 1.25rem;
@@ -107,7 +107,7 @@ h5 {
 
   @include breakpoint(medium) {
     font-size: 1.125rem;
-    line-height: 1.6875rem;
+    line-height: 1.15;
   }
 }
 
