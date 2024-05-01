@@ -572,11 +572,13 @@
 
 // override existing style mess
 .view-instructordash {
-  main,
-  .container {
-    background-color: initial;
-    max-width: initial;
-    padding: initial;
-    margin: initial;
+  .main-container {
+    main,
+    .container {
+      background-color: initial;
+      max-width: initial;
+      padding: initial;
+      margin: initial;
+    }
   }
 }
