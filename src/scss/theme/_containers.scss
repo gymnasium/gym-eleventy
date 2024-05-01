@@ -1,0 +1,5 @@
+@use 'base/containers';
+
+.main-container {
+ @extend .container;
+}
