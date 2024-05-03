@@ -4,8 +4,10 @@
 
 @use 'shared';
 
-// Courseware tab navigation
-@use 'theme/course-tabs';
+@use 'theme/containers';
+
+// Courseware
+@use 'theme/courseware';
 
 // Instructor stuff
 @use 'theme/instructor';

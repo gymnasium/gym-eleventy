@@ -1,0 +1,4 @@
+// Shows the MFE only once our external stylesheet has loaded (prevents FOUT)
+#root {
+  display: block;
+}

@@ -160,10 +160,10 @@ module.exports = eleventyConfig => {
         // console.log(process.env);
 
         if (dest_format === 'course_about') {
-          path = `${destUrl}course-v1:GYM+${idString}+0/about`;
+          path = `${destUrl}/courses/course-v1:GYM+${idString}+0/about`;
           
         } else if (dest_format === 'learning') {
-          path = `${destUrl}course-v1:GYM+${idString}+0/home`;
+          path = `${destUrl}/learning/course/course-v1:GYM+${idString}+0/home`;
         }
       } else {
         path = `/courses/course-v1:GYM+${idString}+0/`;
@@ -187,6 +187,19 @@ module.exports = eleventyConfig => {
       console.warn(`[replace filter]: input must be a string or object!`);
     }
 
+    return output;
+  });
+
+  eleventyConfig.addFilter('minify_html', (input) => {
+    let output;
+    console.log(typeof input);
+    if (typeof input === 'object') {
+      output = JSON.stringify(input);
+    }
+
+    output = input.replace(/>\s+|\s+</g, function(m) {
+      return m.trim();
+    });
     return output;
   });
 

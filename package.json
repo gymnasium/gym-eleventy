@@ -13,8 +13,8 @@
   "scripts": {
     "dotenvx": "dotenvx",
     "dev": "dotenvx run --env-file=.env.development -- npm run start",
-    "tutor:dev": "dotenvx run --env-file=.env.tutor-dev -- npx netlify dev",
-    "tutor:local": "dotenvx run --env-file=.env.tutor-local -- npx netlify dev",
+    "dev:tutor": "dotenvx run --env-file=.env.dev-tutor -- npx netlify dev",
+    "local:tutor": "dotenvx run --env-file=.env.local-tutor -- npx netlify dev",
     "start": "dotenvx run -- npx @11ty/eleventy --serve --watch",
     "build": "NODE_ENV=production ELEVENTY_ENV=production dotenvx run --  npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,7 +24,7 @@
   "license": "ISC",
   "overrides": {
     "@11ty/eleventy-img": {
-      "sharp": "^0.33.2"
+      "sharp": "^0.33.3"
     },
     "netlify-cli": {
       "follow-redirects": "^1.15.5",
@@ -49,6 +49,6 @@
     "rss-parser": "^3.13.0"
   },
   "optionalDependencies": {
-    "sharp": "^0.33.2"
+    "sharp": "^0.33.3"
   }
 }
