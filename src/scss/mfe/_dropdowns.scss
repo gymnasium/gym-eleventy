@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "base/functions" as *;
+@use "base/breakpoints" as *;
+
 $color_1: #454545;
 $color_2: #212529;
 $color_3: #16181b;
@@ -320,7 +324,7 @@ $border-color_1: #c9cfcb;
     }
   }
 }
-@media (min-width: 576px) {
+@include breakpoint(576) {
   .dropdown-menu-sm-left {
     left: 0;
     right: auto;
@@ -334,7 +338,7 @@ $border-color_1: #c9cfcb;
     right: auto;
   }
 }
-@media (min-width: 768px) {
+@include breakpoint(medium) {
   .dropdown-menu-md-left {
     left: 0;
     right: auto;
@@ -348,7 +352,7 @@ $border-color_1: #c9cfcb;
     right: auto;
   }
 }
-@media (min-width: 992px) {
+@include breakpoint(992) {
   .dropdown-menu-lg-left {
     left: 0;
     right: auto;
@@ -362,7 +366,9 @@ $border-color_1: #c9cfcb;
     right: auto;
   }
 }
-@media (min-width: 1200px) {
+
+
+@include breakpoint(large) {
   .dropdown-menu-xl-left {
     left: 0;
     right: auto;
@@ -376,7 +382,7 @@ $border-color_1: #c9cfcb;
     right: auto;
   }
 }
-@media (min-width: 1400px) {
+@include breakpoint(1400) {
   .dropdown-menu-xxl-left {
     left: 0;
     right: auto;

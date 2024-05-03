@@ -43,19 +43,19 @@ The server will be available at [http://localhost:4040](http://localhost:4040).
 
 This approach uses netlify-cli, which has the advantage of serving up relevant CORS headers, redirects, etc. This useful for running locally in parallel with other applications (such as the Tutor distribution of Open edX).
 
-There are two modes of running a parallel 11ty instance along with Tutor: `tutor:dev` and `tutor:local`.
+There are two modes of running a parallel 11ty instance along with Tutor: `dev:tutor` and `local:tutor`.
 
 #### tutor:local
 
 An emulation of the production tutor. All MFEs run without ports set.
 
-`npm run tutor:local`
+`npm run local:tutor`
 
 #### tutor:dev
 
 For local development only. The MFEs are set to run with their ports.
 
-`npm run tutor:dev`
+`npm run dev:tutor`
 
 ### Continued...
 In either case, the server will open a browser automatically to [http://localhost:8888](http://localhost:8888).

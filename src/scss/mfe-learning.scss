@@ -5,4 +5,8 @@
 @use 'base/functions' as *;
 @use 'base/breakpoints' as *;
 
+@use 'mfe/root';
+
 @use 'shared';
+
+@use 'mfe/course-header';

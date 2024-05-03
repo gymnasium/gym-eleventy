@@ -1,0 +1,9 @@
+@use 'base/containers';
+
+body {
+  background-color: var(--mono-200);
+}
+
+.main-container {
+ @extend .container;
+}

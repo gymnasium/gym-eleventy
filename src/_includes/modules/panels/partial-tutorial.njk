@@ -64,7 +64,7 @@
         <hgroup>
           <p class="topic"><b>{{ topic }}</b></p>
           <h2 class="title"><a href="{{ url }}">{{ title }}</a></h2>
-          <p class="instructor" hidden>with {{ bios[obj.instructor]['name'] }}, {{  bios[obj.instructor]['subtitle'] }}</p>
+          <p class="instructor">with {{ bios[obj.instructor]['name'] }}{%- if not bios[obj.instructor]['name'] -%}{{ obj.instructor }}{%- endif -%}, {{  bios[obj.instructor]['subtitle'] }}{%- if not bios[obj.instructor]['subtitle'] -%}{{ obj.instructor_bio }}{%- endif -%}</p>
         </hgroup>
         <p class="description">{{ description }}</p>
       </header>
