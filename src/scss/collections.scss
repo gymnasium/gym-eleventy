@@ -6,7 +6,7 @@
 // Adds grid support with fallbacks
 @mixin grid-support {
   .cols {
-    margin-top: 1rem;
+    margin-top: 1.4rem;
   }
   // --- legacy columns (inline-block) w/ breakpoints
   .cols > ul {
@@ -140,7 +140,6 @@
 
   }
 }
-
 
 
 // Fancy colors
