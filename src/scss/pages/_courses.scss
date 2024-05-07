@@ -806,6 +806,7 @@ html > {
       margin-top: 1rem;
 
       h2 {
+        line-height: 1.15;
         text-transform: uppercase;
       }
 
@@ -829,6 +830,40 @@ html > {
           }
         }
 
+      }
+
+    }
+
+
+    #jobs {
+
+      form {
+        display: inline-block;
+        padding-right: 1rem;
+        border: 1px solid var(--secondary-100);
+        border-radius: 3px;
+
+        select {
+          all: revert;
+          font-size: 1.05rem;
+          font-weight: bold;
+          line-height: 1.15;
+          background-color: transparent;
+          padding: 1.2rem;
+          border: 0;
+
+          option {
+            line-height: 1.15;
+          }
+        }
+
+      }
+
+      .jobs-list li {
+        font-weight: bold;
+        padding-top: 1.2rem;
+        border-top: 1px dashed var(--mono-300);
+        margin-top: 1.2rem;
       }
 
     }
