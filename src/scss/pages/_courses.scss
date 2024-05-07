@@ -797,30 +797,38 @@ html > {
 
 .collection {
 
-  section {
+  main {
 
-    h2 {
-      text-transform: uppercase;
-    }
+    section {
+      background-color: var(--mono-100);
+      padding: 1.4rem;
+      border: 1px solid var(--mono-400);
+      margin-top: 1rem;
 
-    p,
-    li {
-      font-size: 1.3125rem;
-    }
+      h2 {
+        text-transform: uppercase;
+      }
 
-  }
-
-  #articles {
-
-    ul {
-
+      p,
       li {
-        margin-top: 1rem;
+        font-size: 1.3125rem;
+      }
 
-        cite {
-          font-style: normal;
-          font-weight: bold;
+    }
+
+    #articles {
+
+      ul {
+
+        li {
+          margin-top: 1rem;
+
+          cite {
+            font-style: normal;
+            font-weight: bold;
+          }
         }
+
       }
 
     }
