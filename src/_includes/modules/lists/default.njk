@@ -1,8 +1,10 @@
 {%- if module -%}
   {%- if module.heading -%}
-    <h2>{{ module.heading }}</h2>
-    {%- if module.description -%}
+    <header>
+      <h2>{{ module.heading }}</h2>
+      {%- if module.description -%}
       <p>{{ module.description | safe }}</p>
+    </header>
     {%- endif -%}
   {%- endif -%}
   {%- set filtered = module | omit(['module', 'heading', 'description', 'schema', 'cta']) -%}
