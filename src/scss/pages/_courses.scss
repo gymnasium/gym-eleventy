@@ -787,6 +787,34 @@ html > {
       }
     }
 
+    #courses,
+    #tutorials,
+    #webinars {
+
+      ul {
+        display: grid;
+        gap: 1.2rem;
+      }
+
+    }
+
+    #courses {
+
+      ul {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      }
+
+    }
+
+    #tutorials,
+    #webinars {
+
+      ul {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      }
+
+    }
+
     #articles {
       ul {
         li {
