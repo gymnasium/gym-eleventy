@@ -67,4 +67,16 @@ $bg-colors: (
     800: map-deep-get($colors, 'mono', 800),
     900: map-deep-get($colors, 'mono', 900),
   ),
+  'green': (
+    500: map-deep-get($colors, 'green', 500),
+  ),
+  'magenta': (
+    500: map-deep-get($colors, 'magenta', 500),
+  ),
+  'purple': (
+    500: map-deep-get($colors, 'purple', 500),
+  ),
+  'teal': (
+    500: map-deep-get($colors, 'teal', 500),
+  ),
 );

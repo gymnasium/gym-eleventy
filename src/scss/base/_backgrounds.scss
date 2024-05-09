@@ -23,13 +23,16 @@
   } @else {
     @each $shade, $value in $shades {
       .bg-#{$color} {
-        background-color: var(--#{$color});
+        background-color: var(--#{$color}-#{$shade});
       }
     }
   }
 }
 
 // Use CSS variables defined above to add box shadow color!
-.full-bleed {
+%full-bleed {
   box-shadow: -30rem 0 var(--box-shadow-color), 30rem 0 var(--box-shadow-color), -70rem 0 var(--box-shadow-color), 70rem 0 var(--box-shadow-color), -140rem 0 var(--box-shadow-color), 140rem 0 var(--box-shadow-color);
+}
+.full-bleed {
+  @extend %full-bleed;
 }
