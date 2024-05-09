@@ -1,9 +1,9 @@
 module.exports = {
   urls: {
-    root_domain: process.env.ROOT_DOMAIN || 'gym.soy',
     base_domain: process.env.BASE_DOMAIN || 'gym.soy',
-    root: process.env.ROOT_URL || 'https://gym.soy',
     base_url: process.env.BASE_URL || 'https://gym.soy',
+    root_domain: process.env.ROOT_DOMAIN || 'gym.soy',
+    root: process.env.ROOT_URL || 'https://gym.soy',
     data: process.env.DATA_URL || 'https://data.gym.soy',
     cms: process.env.CMS_URL || 'https://studio.learn.gym.soy',
     lms: process.env.LMS_URL || 'https://learn.gym.soy',

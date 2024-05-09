@@ -20,7 +20,7 @@
   },
   eleventyComputed: {
     meta: {
-      bodyClass: "collection",
+      bodyClass: "collection {{ item.meta.slug }}",
       title: "{{ item.meta.title }} | Collections",
       description: "{{ item.meta.description | strip_html }}",
       sitemapExclude: function(data) {
@@ -29,6 +29,9 @@
       },
       redirectFrom: function(data) {
         return data.item.meta.redirectFrom;
+      },
+      css: function(data) {
+        return data.item.meta.css;
       }
     }
   },
@@ -41,10 +44,12 @@ TODO:
 - add support for different modules, like dynamically fetched courses, tutorials, webinars
 - add jobs module
 #}
+{%- if not item.header -%}
 <header>
   <h1>{{ item.meta.title }}</h1>
   <p>{{ item.meta.description }}</p>
 </header>
+{%- endif -%}
 
 {# Here we're omitting some object keys to be able to loop through the content fields #}
 {%- set content = item | omit(['id', 'meta']) -%}
@@ -55,6 +60,7 @@ TODO:
       {# Load modules! #}
       {# Let's rename sections to modules, so we can keep track of what we're dealing with #}
       {%- set module = section -%}
+      {%- set module_type = section.module_type -%}
       {%- include 'modules/' + section.module + '.njk' -%}
     </section>
   {%- endfor -%}

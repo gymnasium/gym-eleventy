@@ -1,0 +1,34 @@
+{%- if module -%}
+<header>
+  <h1>Design Systems</h1>
+  <p>
+    Explore our collection of free design systems courses for
+    <a href="#designers"><b>designers</b></a
+    >, <a href="#developers"><b>developers</b></a
+    >, and <a href="#product-managers"><b>product managers</b></a
+    >.
+  </p>
+  <p>
+    Not sure where to start? There’s even a course for
+    <a href="#everyone"><b>everyone</b></a
+    >.
+  </p>
+  <ul class="sticky-notes">
+    <li class="bg-ux-design">
+      <a href="#designers"><b>Designers</b></a>
+    </li>
+    <li class="bg-development">
+      <a href="#developers"><b>Developers</b></a>
+    </li>
+    <li class="bg-ux-design">
+      <a href="#product-managers"><b>Product Managers</b></a>
+    </li>
+    <li class="bg-career-skills">
+      <a href="#everyone"><b>Everyone</b></a>
+    </li>
+  </ul>
+</header>
+{%- else -%}
+  <em>{ Panel Module Placeholder }</em>
+  <p>Pass in the `module` variable to make this work</p>
+{%- endif -%}

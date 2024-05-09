@@ -1,0 +1,10 @@
+@use "sass:map";
+
+@use 'base/fonts' as *;
+@use 'base/functions' as *;
+@use 'base/breakpoints' as *;
+
+main {
+  margin: 0 auto;
+  max-width: convert-to-rem(map.get($breakpoints, 'large'));
+}
