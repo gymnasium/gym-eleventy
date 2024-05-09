@@ -1,31 +1,49 @@
----
-layout: layouts/main.njk
-permalink: /courses/
-collection: course
-meta:
-  title: Courses
-  sitemapPriority: 0.7
-  sitemapChangeFreq: weekly
-nav:
-  secondary: courses
-intro:
-  heading: Courses
-  subheading: Free online courses and tutorials.
-  content: Learn design, development, accessibility, prototyping, UX, and career skills from industry experts.
-cta: View All
-full:
-  heading: Full Courses
-  subheading: Learn new skills in a day or less and earn a certificate.
-shorts:
-  heading: Gym Shorts
-  subheading:  Learn new skills in a few hours or less and earn a badge.
-tutorials:
-  heading: Take 5 Tutorials
-  subheading: Learn new skills in 5 minutes or less.
-content_collections:
-  heading: Collections
-  subheading: Explore specific topics with free courses, tutorials, resources, and jobs.
-  description: Learn how to effectively integrate pattern libraries and design systems into your organization’s workflow.
+---js
+{
+  layout: "layouts/main.njk",
+  permalink: "/courses/",
+  meta: {
+    title: "Courses",
+    sitemapPriority: 0.7,
+    sitemapChangeFreq: "weekly",
+  },
+  collection: "course",
+  nav: {
+    secondary: "courses",
+  },
+  intro: {
+    heading: "Courses",
+    subheading: "Free online courses and tutorials.",
+    content: "Learn design, development, accessibility, prototyping, UX, and career skills from industry experts.",
+  },
+  cta: "View All",
+  full: {
+    heading: "Full Courses",
+    subheading: "Learn new skills in a day or less and earn a certificate.",
+  },
+  shorts: {
+    heading: "Gym Shorts",
+    subheading:  "Learn new skills in a few hours or less and earn a badge.",
+  },
+  tutorials: {
+    heading: "Take 5 Tutorials",
+    subheading: "Learn new skills in 5 minutes or less.",
+  },
+  content_collections: {
+    heading: "Collections",
+    subheading: "Explore specific topics with free courses, tutorials, resources, and jobs.",
+    description: "Learn how to effectively integrate pattern libraries and design systems into your organization’s workflow.",
+  },
+  eleventyComputed: {
+    collects: (data) => {
+      const filtered = data.collections.collection.filter(item => !item.meta.exclude);
+      const sorted = filtered.sort((a, b) => {
+        return Math.sign(a.meta.order - b.meta.order);
+      });
+      return sorted;
+    },
+  }
+}
 ---
 {%- include 'modules/courses/header.njk' -%}
 
@@ -127,12 +145,9 @@ content_collections:
     <div class="list-summary">
       <dl>
         <dt>Content Collections</dt>
-        <dd><a href="/design-systems/">Design Systems</a></dd>
-        <dd><a href="/web-development/">Web Development</a></dd>
-        <dd><a href="/ux-design/">UX Design</a></dd>
-        <dd><a href="/prototyping/">Prototyping</a></dd>
-        <dd><a href="/accessibility/">Accessibility</a></dd>
-        <dd><a href="/career-skills/">Career Skills</a></dd>
+        {%- for collect in collects -%}
+          <dd><a href="/{{ collect.meta.slug }}/">{{ collect.meta.title }}</a></dd>
+        {%- endfor -%}
       </dl>
     </div>
   </div>
