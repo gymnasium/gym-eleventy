@@ -54,7 +54,7 @@
 <section class="section" id="{{ section_id }}">
   <div class="section-content">
     <header>
-      <h1 class="all-caps">{{ title }}</h1>
+      <h1 class="caps">{{ title }}</h1>
       <p class="instructor">with {{ bios[obj.instructor]['name'] }}, {{  bios[obj.instructor]['subtitle'] }}</p>
     </header>
     <div class="row">
@@ -69,7 +69,7 @@
     <div class="row row-info">
       <div class="col-sm-5 col-md-3">
         {%- if (obj.skills) -%}
-        <h3 class="all-caps">Skills Covered</h3>
+        <h3 class="caps">Skills Covered</h3>
         <ul>
           {%- for i in range(0, obj.skills.length) -%}
           <li>{{ obj.skills[i].label }}</li>
@@ -80,7 +80,7 @@
       <div class="col-sm-6 col-md-5">
 
         {%- if (obj.audience) -%}
-          <h3 class="all-caps">This Course is For</h3>
+          <h3 class="caps">This Course is For</h3>
           <ul>
             {%- for i in range(0, obj.audience.length) -%}
             <li>{{ obj.audience[i].label }}</li>
@@ -90,7 +90,7 @@
       </div>
     </div>
   </div>
-  <footer class="back-to">
-    <p><a href="#main">Back to Top</a></p>
-  </footer>
 </section>
+<footer class="back-to">
+  <p><a href="#main">Back to Top</a></p>
+</footer>
