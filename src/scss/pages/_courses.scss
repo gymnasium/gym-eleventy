@@ -776,6 +776,12 @@ html > {
       border: 1px solid var(--mono-400);
       margin-top: 1rem;
 
+      > header {
+        padding-bottom: 1.4rem;
+        border-bottom: 1px solid var(--mono-300);
+        margin-bottom: 1.4rem;
+      }
+
       h2 {
         line-height: 1.15;
         text-transform: uppercase;
@@ -822,11 +828,12 @@ html > {
 
       ul {
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        padding-bottom: 1.4rem;
 
         li {
           display: inherit;
           grid-template-columns: 1fr 3fr;
-          gap: 1.4rem;
+          gap: inherit;
           align-items: center;
         }
       }
