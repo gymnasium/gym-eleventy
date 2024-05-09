@@ -849,6 +849,20 @@ html > {
 
     }
 
+    #webinars {
+
+      .artwork {
+        height: 0;
+        padding-bottom: 62.5%;
+        overflow: hidden;
+
+        img {
+          margin-top: -6%;
+        }
+      }
+
+    }
+
     #articles {
       ul {
         li {
