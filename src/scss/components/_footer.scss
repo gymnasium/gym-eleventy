@@ -149,7 +149,8 @@
 
     [src*="11ty"] {
       max-width: 4.75rem;
-      filter: grayscale(1) brightness(0.606); // Faux #999
+      filter: grayscale(1) brightness(0.605); // Faux #999
+      mix-blend-mode: lighten;
       margin: -1rem;
     }
 
