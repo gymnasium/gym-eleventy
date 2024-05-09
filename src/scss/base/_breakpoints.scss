@@ -1,3 +1,5 @@
+@use "sass:string";
+@use 'base/functions' as *;
 // | -------------------------------------------------------------
 // | Breakpoint
 // | -------------------------------------------------------------
@@ -29,16 +31,29 @@ $breakpoints: (
   // If the breakpoint doesn't exist in the map.
   } @else {
     @if ($direction == min or $direction == max) {
-      // if we have a unitless value, convert it to px
-      @if (type_of($breakpoint) == number) {
-        @media (min-width: "#{$breakpoint}px") {
-          @content;
-        }
+      // Convert breakpoint value to string
+      $breakpoint-string: #{$breakpoint};
+      @if (string.index($breakpoint-string, 'em')) {
+        @if $direction == max {
+          @media (max-width: ($breakpoint - 1)) {
+            @content;
+          }
+        } @else if $direction == min {
+          @media (min-width: $breakpoint) {
+            @content;
+          }
+        } 
       } @else {
-        // spit out the direction
-        @media (#{$direction}-width: $breakpoint) {
-          @content;
-        }
+        $breakpoint-em: convert-to-em($breakpoint);
+        @if $direction == max {
+          @media (max-width: ($breakpoint-em - 1)) {
+            @content;
+          }
+        } @else if $direction == min {
+          @media (min-width: $breakpoint-em) {
+            @content;
+          }
+        } 
       }
     } @else {
       @error "The direction has to be min or max.";
