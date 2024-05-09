@@ -192,7 +192,7 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addFilter('minify_html', (input) => {
     let output;
-    console.log(typeof input);
+
     if (typeof input === 'object') {
       output = JSON.stringify(input);
     }
