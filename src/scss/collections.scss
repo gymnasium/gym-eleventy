@@ -22,7 +22,7 @@
     overflow: hidden;
   }
 
-  @media (min-width: 40em) {
+  @include breakpoint(40em, min) {
     .cols {
       padding-bottom: 0;
       overflow: hidden;
@@ -45,13 +45,13 @@
     }
   }
 
-  @media (min-width: 58em) {
+  @include breakpoint(58em, min) {
     .cols > ul li {
       width: 50%;
     }
   }
 
-  @media (min-width: 64em) {
+  @include breakpoint(64em, min) {
     .cols > ul li {
       width: 33.333333333333333%;
     }
@@ -62,7 +62,7 @@
     }
   }
 
-  @media (min-width: 78em) {
+  @include breakpoint(78em, min) {
     .cols ul li {
       width: 25%;
     }
@@ -81,7 +81,7 @@
       grid-gap: 1.2rem;
     }
 
-    @media (min-width: 36em) {
+    @include breakpoint(36em, min) {
       .cols > ul {
         grid-template-columns: repeat(auto-fit, minmax(19.25em, 1fr));
       }
@@ -96,13 +96,13 @@
     }
 
    // Hide 4th panel if it exists; see featured-courses.html
-    @media (min-width: 62em) {
+    @include breakpoint(62em, min) {
       .list-featured-courses li:last-child {
         display: none;
       }
     }
 
-    @media (min-width: 78em) {
+    @include breakpoint(78em, min) {
       .cols ul li:last-child {
         display: inherit;
       }

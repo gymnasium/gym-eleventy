@@ -19,7 +19,7 @@ $breakpoints: (
     $breakpoint-value: map-get($breakpoints, $breakpoint);
     
     @if $direction == max {
-      @media (max-width: ($breakpoint-value - 1)) {
+      @media (max-width: ($breakpoint-value - convert-to-em(1))) {
         @content;
       }
     } @else if $direction == min {
@@ -35,7 +35,7 @@ $breakpoints: (
       $breakpoint-string: #{$breakpoint};
       @if (string.index($breakpoint-string, 'em')) {
         @if $direction == max {
-          @media (max-width: ($breakpoint - 1)) {
+          @media (max-width: ($breakpoint - convert-to-em(1))) {
             @content;
           }
         } @else if $direction == min {
@@ -46,7 +46,7 @@ $breakpoints: (
       } @else {
         $breakpoint-em: convert-to-em($breakpoint);
         @if $direction == max {
-          @media (max-width: ($breakpoint-em - 1)) {
+          @media (max-width: ($breakpoint-em - convert-to-em(1))) {
             @content;
           }
         } @else if $direction == min {
