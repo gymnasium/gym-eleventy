@@ -812,6 +812,11 @@ html > {
 
       ul {
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+        li {
+          display: inherit;
+          grid-template-columns: 1fr 3fr;
+        }
       }
 
     }
