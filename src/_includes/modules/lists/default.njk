@@ -27,7 +27,7 @@
 
       {# If we pass in data IDs, use those to fetch data directly #}
       {%- if item.ids -%}
-        <ul class=""list-unstyled">
+        <ul class="list-unstyled">
           {%- for idx in range(0, item.ids.length) -%}
             {%- set filteredId = collections.catalog | get_key(item.ids[idx].id) -%}
             {%- set obj = collections.catalog[filteredId] -%}
@@ -60,7 +60,7 @@
           {%- endfor -%}
         </ul>
       {%- elif item.links -%}
-        <ul class=""list-unstyled">
+        <ul class="list-unstyled">
         {%- for idx in range(0, item.links.length) -%}
           {%- set title = item.links[idx].label -%}
           {%- set href = item.links[idx].href -%}
