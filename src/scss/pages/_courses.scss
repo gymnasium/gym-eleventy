@@ -764,71 +764,71 @@ html > {
       }
     }
   }
+}
 
-  // Courses page-specific style rules
+// Collections page-specific style rules
 
-  .collection {
-    main {
-      section {
-        background-color: var(--mono-100);
-        padding: 1.4rem;
-        border: 1px solid var(--mono-400);
-        margin-top: 1rem;
+.collection {
+  main {
+    section {
+      background-color: var(--mono-100);
+      padding: 1.4rem;
+      border: 1px solid var(--mono-400);
+      margin-top: 1rem;
 
-        h2 {
-          line-height: 1.15;
-          text-transform: uppercase;
-        }
+      h2 {
+        line-height: 1.15;
+        text-transform: uppercase;
+      }
 
-        p,
+      p,
+      li {
+        font-size: 1.3125rem;
+      }
+    }
+
+    #articles {
+      ul {
         li {
-          font-size: 1.3125rem;
-        }
-      }
-
-      #articles {
-        ul {
-          li {
-            padding-top: 1.2rem;
-            border-top: 1px dashed var(--mono-300);
-            margin-top: 1.2rem;
-
-            cite {
-              font-style: normal;
-              font-weight: bold;
-            }
-          }
-        }
-      }
-
-      #jobs {
-        form {
-          display: inline-block;
-          padding-right: 1rem;
-          border: 1px solid var(--secondary-500);
-          border-radius: 3px;
-
-          select {
-            all: revert;
-            font-size: 1.05rem;
-            font-weight: bold;
-            line-height: 1.15;
-            background-color: transparent;
-            padding: 1.2rem;
-            border: 0;
-
-            option {
-              line-height: 1.15;
-            }
-          }
-        }
-
-        .jobs-list li {
-          font-weight: bold;
           padding-top: 1.2rem;
           border-top: 1px dashed var(--mono-300);
           margin-top: 1.2rem;
+
+          cite {
+            font-style: normal;
+            font-weight: bold;
+          }
         }
+      }
+    }
+
+    #jobs {
+      form {
+        display: inline-block;
+        padding-right: 1rem;
+        border: 1px solid var(--secondary-500);
+        border-radius: 3px;
+
+        select {
+          all: revert;
+          font-size: 1.05rem;
+          font-weight: bold;
+          line-height: 1.15;
+          background-color: transparent;
+          padding: 1.2rem;
+          border: 0;
+
+          option {
+            line-height: 1.15;
+          }
+        }
+      }
+
+      .jobs-list li {
+        font-weight: bold;
+        padding-top: 1.2rem;
+        border-top: 1px dashed var(--mono-300);
+        margin-top: 1.2rem;
       }
     }
   }
