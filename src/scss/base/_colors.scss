@@ -1,16 +1,46 @@
+@use "sass:map";
+@use 'base/functions' as *;
 // | -------------------------------------------------------------
 // | Color
 // | -------------------------------------------------------------
-// @debug hsl(#0077c8);
+
+// Better color conversions here: https://colordesigner.io/convert/hextohsl
 
 $colors: (
   primary: (
-    100: hsl(204, 100%, 39%), // #0077c8
+    100: hsl(204.3, 100%, 39.22%), // #0077c8
   ),
   secondary: (
-    100: hsl(19, 100%, 54%), // #ff5f14
+    100: hsl(19.15, 100%, 53.92%), // #ff5f14
     900: hsl(18.26, 100%, 95.49%), // #ffefe8 (message: attention)
   ),
+  'green': (
+    100: hsl(120, 100%, 35.69%), // #00b600 (holiday green)
+    200: hsl(144.77, 55.33%, 38.63%), //#2c9959,
+    300: hsl(144.55, 55.7%, 30.98%), // #237b47
+    400: hsl(145.09, 55.56%, 19.41%), // #164d2d
+  ),
+  'magenta': (
+    100: hsl(345.9, 67.48%, 51.76%), // #d73158
+    200: hsl(345.76, 67.8%, 40.2%), // #ac2142
+    300: hsl(346.06, 67.35%, 28.82%), // #7b182f
+  ),
+  'purple': (
+    100: hsl(270.36, 35.32%, 46.08%), // #764c9f
+    200: hsl(270.36, 35.32%, 34.58%),
+    300: hsl(270.36, 35.32%, 23.08%),
+  ),
+  'teal': (
+    100: hsl(175.89, 28.85%, 50.39%), // #5ca5a0;
+    200: hsl(175.86, 29.29%, 38.82%), // #46807c
+    300: hsl(176.47, 28.33%, 23.53%), // #2b4d4b
+  ),
+  'red': (
+    100: #f30d21, // #f30d21 holiday red
+  ),
+  /*
+  
+*/
   mono: (
     100: hsl(0 0% 100%), // white
     200: hsl(0 0% 92%), // #ebebeb
@@ -23,5 +53,16 @@ $colors: (
     700: hsl(0, 0%, 20%), // #333
     800: hsl(0, 0%, 16%), // #292929
     900: hsl(0, 0%, 9%), // #181818
+  ),
+);
+
+// This color map automatically generates the `.bg-{color}` class names (see the _backgrounds partial)
+$bg-colors: (
+  mono: (
+    100: map-deep-get($colors, 'mono', 100),
+    350: map-deep-get($colors, 'mono', 350),
+    700: map-deep-get($colors, 'mono', 700),
+    800: map-deep-get($colors, 'mono', 800),
+    900: map-deep-get($colors, 'mono', 900),
   ),
 );

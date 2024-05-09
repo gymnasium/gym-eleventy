@@ -4,7 +4,8 @@
 
 @use "colors" as *;
 
-@each $color, $shades in $colors {
+// we now use a separate color map for background colors to avoid CSS bloat.
+@each $color, $shades in $bg-colors {
   @if (length($shades) > 1) {
     @each $shade, $value in $shades {
       .bg-#{$color}-#{$shade} {
