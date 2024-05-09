@@ -6,17 +6,9 @@
     {%- endif -%}
   {%- endif -%}
 
-  <form id="location-select" class="location-select">
-    <script>var JOB_URLS = {{ data.JOBDATA.urls | stringify | safe }}</script>
-    <select name="location" id="location" class="form-control">
+  <form id="location" class="location">
+    <select name="m" id="m" class="form-control">
       <option value="">Select a location nearest you</option>
-      {# New Location API
-      <option value="remote">Remote, all locations</option>
-      {%- for location in data.JOBDATA.locations -%}
-        <option value="{{ location.id }}">{{ location.name }}</option>
-      {%- endfor -%}
-      #}
-
       <option value="remote">Remote, all locations</option>
 
       <optgroup label="Australia">
@@ -74,23 +66,28 @@
         >.
       </p>
     </div>
-  </div>
-  <div id="jobs-container" class="jobs-container list-hr"
+    <div
+      id="jobs-container"
+      class="jobs-container list-hr"
       data-options="heading:h3;category:false;limit:10;"
       data-utm="utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=job-module&amp;utm_content=textlink"
-      data-feed="{{ data.JOB_FEED }}">
-    {# <ul>
-      {%- for job in jobs.items.slice(0, 10) -%}
-      <li>
-        <a
-          href="{{ job.url }}?utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=job-module&amp;utm_content=textlink"
-          title="{{ job.title | safe }}"
-          ><span class="job-title">{{ job.title | safe }} </span
-          ><span class="job-location"> {{ job.city }}</span></a
-        >
-      </li>
-      {%- endfor -%}
-    </ul> #}
+      data-script="https://assets.aquent.com/apps/gym/jobs.json?limit=1500&amp;callback=processJobs"
+      {# TODO: this file doesn\'t actually exist yet #}
+      data-script-fallback="/feeds/jobs.jsonp"
+    >
+      <ul class="jobs-list">
+        {%- for job in jobs.items.slice(0, 10) -%}
+        <li>
+          <a
+            href="{{ job.url }}?utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=job-module&amp;utm_content=textlink"
+            title="{{ job.title | safe }}"
+            ><span class="job-title">{{ job.title | safe }} </span
+            ><span class="job-location"> {{ job.city }}</span></a
+          >
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
   </div>
 
 {%- else -%}
