@@ -93,13 +93,13 @@
   text-align: right;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: var(--mono-100);
   color: #c2387d;
   text-transform: uppercase;
 }
 .wrap-instructor-info .instructor-info-action:hover {
   background-color: #c2387d;
-  color: #fff;
+  color: var(--mono-100);
 }
 .instructor-dashboard-wrapper-2 {
   position: relative;
@@ -270,7 +270,7 @@
   .member-lists-management
   .wrapper-member-select {
   padding: 10px;
-  background-color: #ddd;
+  background-color: var(--mono-300);
 }
 .instructor-dashboard-wrapper-2
   section.idash-section#membership
@@ -305,7 +305,7 @@
   position: relative;
   padding: 10px;
   background-color: #efefef;
-  border: 1px solid #ddd;
+  border: 1px solid var(--mono-300);
   display: none;
 }
 .instructor-dashboard-wrapper-2
@@ -332,7 +332,7 @@
   .info {
   box-sizing: border-box;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--mono-300);
   color: #646464;
   line-height: 1.3em;
   font-size: 0.85em;
@@ -361,7 +361,7 @@
   .member-list-widget
   .member-list
   thead {
-  background-color: #ddd;
+  background-color: var(--mono-300);
 }
 .instructor-dashboard-wrapper-2
   section.idash-section#membership
@@ -370,7 +370,7 @@
   .member-list-widget
   .member-list
   tr {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--mono-300);
 }
 .instructor-dashboard-wrapper-2
   section.idash-section#membership
@@ -388,8 +388,8 @@
   td {
   vertical-align: middle;
   padding: 10px 5px;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
+  border-left: 1px solid var(--mono-300);
+  border-right: 1px solid var(--mono-300);
   word-wrap: break-word;
 }
 .instructor-dashboard-wrapper-2
@@ -404,9 +404,9 @@
   position: relative;
   padding: 10px;
   margin-top: -1px;
-  border: 1px solid #ddd;
-  background-color: #efefef;
-  box-shadow: inset #bbb 0 1px 1px 0;
+  border: 1px solid var(--mono-300);
+  background-color: var(--mono-200);
+  box-shadow: inset var(--mono-400) 0 1px 1px 0;
 }
 .instructor-dashboard-wrapper-2
   section.idash-section#membership

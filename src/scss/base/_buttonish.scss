@@ -38,8 +38,8 @@
   }
 
   &.secondary {
-    background-color: var(--secondary-100);
-    border-color: (var(--secondary-100));
+    background-color: var(--secondary-500);
+    border-color: (var(--secondary-500));
 
     // &:hover,
     // &:focus {
@@ -51,12 +51,6 @@
   &.mono {
     background-color: var(--mono-500);
     border-color: (var(--mono-500));
-
-    // &:hover,
-    // &:focus {
-    //   background-color: var(--mono-400);
-    //   border-color: var(--mono-400);
-    // }
   }
 
   &.color-info {

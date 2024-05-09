@@ -1,5 +1,5 @@
-@use 'base/breakpoints' as *;
-@use 'base/functions' as *;
+@use "base/breakpoints" as *;
+@use "base/functions" as *;
 
 // TODO: Move to a more "global" place
 
@@ -38,7 +38,7 @@
     }
 
     dd::marker {
-      color: var(--secondary-100);
+      color: var(--secondary-500);
     }
   }
 
@@ -57,740 +57,779 @@
 // TODO: Cleanup selectors
 
 html > {
-
-.courses,
-.courses-full,
-.courses-gym-shorts,
-.courses-take5,
-[class*="courses-take5"] {
-
-  main {
-    p:only-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  .intro {
-    padding: 1.6rem 0;
-
-    @include breakpoint(large, min) {
-      & {
-        display: grid;
-        grid-template-columns: 2fr 3fr;
-        gap: 1.2rem;
-        align-items: start;
+  .courses,
+  .courses-full,
+  .courses-gym-shorts,
+  .courses-take5,
+  [class*="courses-take5"] {
+    main {
+      p:only-of-type {
+        margin-bottom: 0;
       }
     }
 
-    // TODO: Redo hacky layout
-    @include breakpoint(medium, min) {
+    .intro {
+      padding: 1.6rem 0;
 
-      .list-summary {
-        grid-auto-flow: none;
-        grid-template-columns: none;
-
-        dl {
-          margin-top: 0.25rem;
-        }
-
-        dl:not(:first-child) {
-          grid-column: 2 / 4;
-          grid-row: 1 / 2;
-        }
-
-        dl:last-child:not(:first-child + :last-child) {
-          margin-top: 4.2rem;
+      @include breakpoint(large, min) {
+        & {
+          display: grid;
+          grid-template-columns: 2fr 3fr;
+          gap: 1.2rem;
+          align-items: start;
         }
       }
 
-    }
+      // TODO: Redo hacky layout
+      @include breakpoint(medium, min) {
+        .list-summary {
+          grid-auto-flow: none;
+          grid-template-columns: none;
 
-    hgroup {
-      h1 {
-        font: 900 2.25rem/1.15 var(--font-family-custom);
-        letter-spacing: 0.05ex;
-        text-transform: uppercase;
-      }
+          dl {
+            margin-top: 0.25rem;
+          }
 
-      p {
-        font-size: 1.25rem;
-      }
+          dl:not(:first-child) {
+            grid-column: 2 / 4;
+            grid-row: 1 / 2;
+          }
 
-      p:first-of-type {
-        strong {
-          display: block;
+          dl:last-child:not(:first-child + :last-child) {
+            margin-top: 4.2rem;
+          }
         }
-      }
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    @include breakpoint(large, max) {
-
-      * + .list-summary {
-        margin-top: 1.4rem;
-      }
-
-    }
-  }
-
-  // topics (course listing)
-
-  .topics {
-    padding-top: 1.6rem;
-
-    @include breakpoint(large, min) {
-      & {
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        gap: 1.6rem;
-        align-items: start;
-      }
-    }
-  }
-
-  .topic-menu h2,
-  .topic-label,
-  #tutorial-resources h3 {
-    font-weight: 900;
-    font-size: 1.55rem;
-    line-height: 1.15;
-    text-transform: uppercase;
-    letter-spacing: 0.05ex;
-    margin-bottom: 1.4rem;
-  }
-
-  .topic-menu {
-    margin-bottom: 1.6rem;
-
-    :first-child + ul {
-      border-top: 1px dashed var(--mono-400);
-    }
-
-    ul {
-      li {
-        border-bottom: 1px dashed var(--mono-400);
-
-        a {
-          display: block;
-          font-weight: bold;
-          padding: 0.8rem 1rem;
-        }
-      }
-    }
-
-    @include breakpoint(large, min) {
-      & {
-        position: sticky;
-        top: 1.6rem;
-      }
-    }
-  }
-
-  // topics (view by)
-
-  .elective,
-  #all-topics:target ~ * .elective,
-  #featured:target ~ * .course:not(.featured),
-  #design:target ~ * .course:not(.design),
-  #development:target ~ * .course:not(.development),
-  #accessibility:target ~ * .course:not(.accessibility),
-  #prototyping:target ~ * .course:not(.prototyping),
-  #ux:target ~ * .course:not(.ux),
-  #career-skills:target ~ * .course:not(.career-skills),
-  .topic-select:target:not(#all-topics:target) ~ * .topic-label span {
-    display: none;
-  }
-
-  :target ~ * .elective {
-    display: inherit;
-  }
-
-//   @include breakpoint(large, min) {
-//
-//     .topic-select {
-//       position: absolute;
-//       top: 0;
-//     }
-//
-//   }
-
-  .topic-select:target ~ * .topic-menu a {
-    background-color: transparent;
-  }
-
-  .topic-menu [href="#all-topics"] {
-    background-color: var(--mono-100);
-  }
-
-  #all-topics:target ~ * {
-    [href="#all-topics"] {
-      background-color: var(--mono-100);
-    }
-  }
-
-  #featured:target ~ * {
-    .topic-label::before {
-      content: "Featured";
-    }
-
-    [href="#featured"] {
-      background-color: var(--mono-100);
-    }
-  }
-
-  #design:target ~ * {
-    .topic-label::before {
-      content: "Design";
-    }
-
-    [href="#design"] {
-      background-color: var(--mono-100);
-    }
-  }
-
-  #development:target ~ * {
-    .topic-label::before {
-      content: "Development";
-    }
-
-    [href="#development"] {
-      background-color: var(--mono-100);
-    }
-  }
-
-  #accessibility:target ~ * {
-    .topic-label::before {
-      content: "Accessibility";
-    }
-
-    [href="#accessibility"] {
-      background-color: var(--mono-100);
-    }
-  }
-
-  #prototyping:target ~ * {
-    .topic-label::before {
-      content: "Prototyping";
-    }
-
-    [href="#prototyping"] {
-      background-color: var(--mono-100);
-    }
-  }
-
-  #ux:target ~ * {
-    .topic-label::before {
-      content: "UX";
-    }
-
-    [href="#ux"] {
-      background-color: var(--mono-100);
-    }
-  }
-
-  #career-skills:target ~ * {
-    .topic-label::before {
-      content: "Career Skills";
-    }
-
-    [href="#career-skills"] {
-      background-color: var(--mono-100);
-    }
-  }
-
-  .note {
-    background-color: var(--secondary-900);
-    padding: 1.4rem;
-    border: 1px dashed var(--mono-700);
-    border-radius: 3px;
-    margin-top: 1.4rem;
-  }
-
-  header {
-    hgroup {
-      h2,
-      .topic {
-        text-transform: uppercase;
-        letter-spacing: 0.0125ex;
-      }
-
-      .topic {
-        font: 900 1.25rem/1 var(--font-family-custom);
-
-        b {
-          font: inherit;
-        }
-      }
-
-      h2 {
-        font: 900 1.8rem/1.2 var(--font-family-custom);
-        text-wrap: balance;
-        margin-bottom: 1rem;
-      }
-
-      .instructor {
-        font-weight: bold;
-        font-size: 1rem;
-        letter-spacing: 0.0125ex;
-        margin-top: 1.125rem;
-        margin-bottom: 1.2rem;
-      }
-    }
-
-    .description {
-      max-width: 40rem;
-      font-size: 1.09375rem;
-      letter-spacing: 0.01ex;
-    }
-  }
-
-  // course card
-
-  .course-card {
-    background-color: var(--mono-100);
-    padding: 1.4rem;
-    border: 1px solid var(--mono-400);
-    border-radius: 3px;
-  }
-
-  .course-card {
-
-    &:not(first-child) {
-      margin-top: 1rem;
-    }
-
-    // course card (main content)
-
-    .main {
-
-      > a {
-        grid-area: art;
-        display: inline-block;
-
-        &[href*="about"] {
-          margin-bottom: -1.875rem;
-        }
-      }
-
-      p,
-      dd {
-        text-wrap: pretty;
       }
 
       hgroup {
-        grid-area: header;
-        max-width: 28.5rem;
+        h1 {
+          font: 900 2.25rem/1.15 var(--font-family-custom);
+          letter-spacing: 0.05ex;
+          text-transform: uppercase;
+        }
 
-        .topic {
-          display: inline-block;
-          background-color: var(--mono-100);
-          padding-top: 0.8rem;
-          padding-right: 0.9rem;
+        p {
+          font-size: 1.25rem;
+        }
+
+        p:first-of-type {
+          strong {
+            display: block;
+          }
         }
       }
 
-      .description {
-        align-self: start;
+      p:last-child {
+        margin-bottom: 0;
       }
 
-      header + .cta {
-        margin-top: 1.4rem;
+      @include breakpoint(large, max) {
+        * + .list-summary {
+          margin-top: 1.4rem;
+        }
+      }
+    }
+
+    // topics (course listing)
+
+    .topics {
+      padding-top: 1.6rem;
+
+      @include breakpoint(large, min) {
+        & {
+          display: grid;
+          grid-template-columns: 1fr 5fr;
+          gap: 1.6rem;
+          align-items: start;
+        }
+      }
+    }
+
+    .topic-menu h2,
+    .topic-label,
+    #tutorial-resources h3 {
+      font-weight: 900;
+      font-size: 1.55rem;
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: 0.05ex;
+      margin-bottom: 1.4rem;
+    }
+
+    .topic-menu {
+      margin-bottom: 1.6rem;
+
+      :first-child + ul {
+        border-top: 1px dashed var(--mono-400);
       }
 
-      .cta {
-        grid-area: cta;
-        align-self: end;
+      ul {
+        li {
+          border-bottom: 1px dashed var(--mono-400);
 
-        .btn {
-          display: inline-block;
-          width: 100%;
-          max-width: 16rem;
+          a {
+            display: block;
+            font-weight: bold;
+            padding: 0.8rem 1rem;
+          }
         }
       }
 
       @include breakpoint(large, min) {
         & {
-          display: grid;
-          grid-template-rows: auto;
-          grid-template-columns: 2.5fr 3fr;
-          grid-template-areas:
-            "art  header"
-            "art  cta"
-            "aside aside"
-            "info info";
-          gap: 0 1.4rem;
-          align-items: start;
-        }
-
-        > a[href*="about"] {
-          margin-bottom: 0;
-        }
-
-        hgroup {
-          .topic {
-            display: inherit;
-            padding: 0;
-          }
+          position: sticky;
+          top: 1.6rem;
         }
       }
     }
 
-    .cta + aside {
-      grid-area: aside;
-      padding-top: 1.2rem;
-      border-top: 1px dashed var(--mono-400);
+    // topics (view by)
+
+    .elective,
+    #all-topics:target ~ * .elective,
+    #featured:target ~ * .course:not(.featured),
+    #design:target ~ * .course:not(.design),
+    #development:target ~ * .course:not(.development),
+    #accessibility:target ~ * .course:not(.accessibility),
+    #prototyping:target ~ * .course:not(.prototyping),
+    #ux:target ~ * .course:not(.ux),
+    #career-skills:target ~ * .course:not(.career-skills),
+    .topic-select:target:not(#all-topics:target) ~ * .topic-label span {
+      display: none;
+    }
+
+    :target ~ * .elective {
+      display: inherit;
+    }
+
+    //   @include breakpoint(large, min) {
+    //
+    //     .topic-select {
+    //       position: absolute;
+    //       top: 0;
+    //     }
+    //
+    //   }
+
+    .topic-select:target ~ * .topic-menu a {
+      background-color: transparent;
+    }
+
+    .topic-menu [href="#all-topics"] {
+      background-color: var(--mono-100);
+    }
+
+    #all-topics:target ~ * {
+      [href="#all-topics"] {
+        background-color: var(--mono-100);
+      }
+    }
+
+    #featured:target ~ * {
+      .topic-label::before {
+        content: "Featured";
+      }
+
+      [href="#featured"] {
+        background-color: var(--mono-100);
+      }
+    }
+
+    #design:target ~ * {
+      .topic-label::before {
+        content: "Design";
+      }
+
+      [href="#design"] {
+        background-color: var(--mono-100);
+      }
+    }
+
+    #development:target ~ * {
+      .topic-label::before {
+        content: "Development";
+      }
+
+      [href="#development"] {
+        background-color: var(--mono-100);
+      }
+    }
+
+    #accessibility:target ~ * {
+      .topic-label::before {
+        content: "Accessibility";
+      }
+
+      [href="#accessibility"] {
+        background-color: var(--mono-100);
+      }
+    }
+
+    #prototyping:target ~ * {
+      .topic-label::before {
+        content: "Prototyping";
+      }
+
+      [href="#prototyping"] {
+        background-color: var(--mono-100);
+      }
+    }
+
+    #ux:target ~ * {
+      .topic-label::before {
+        content: "UX";
+      }
+
+      [href="#ux"] {
+        background-color: var(--mono-100);
+      }
+    }
+
+    #career-skills:target ~ * {
+      .topic-label::before {
+        content: "Career Skills";
+      }
+
+      [href="#career-skills"] {
+        background-color: var(--mono-100);
+      }
+    }
+
+    .note {
+      background-color: var(--secondary-100); // ultralight orange
+      padding: 1.4rem;
+      border: 1px dashed var(--mono-700);
+      border-radius: 3px;
       margin-top: 1.4rem;
-
-      &.list-summary {
-        justify-content: start;
-
-        dl {
-          margin-bottom: 0;
-        }
-
-        dt,
-        dd {
-          font-size: 0.9375rem;
-        }
-      }
-    }
-
-    .info {
-      display: grid;
-      grid-area: info;
-      grid-auto-flow: column;
-      gap: 1.4rem;
-      justify-content: start;
-      padding-top: 1.4rem;
-      border-top: 1px dashed var(--mono-400);
-      margin-top: 1.4rem;
-
-      h3,
-      p {
-        font-size: 0.9375rem;
-        line-height: 1;
-        letter-spacing: 0.0125ex;
-        margin-bottom: 0;
-
-        &:not(p) {
-          font-weight: 900;
-          font-family: var(--font-family-custom);
-          line-height: 1.15;
-          text-transform: uppercase;
-          word-spacing: 0.25ex;
-        }
-      }
-    }
-
-    aside + .info {
-      margin-top: 1.2rem;
-    }
-  }
-
-  // back to (footer)
-
-  .back-to {
-    margin-top: 0.825rem;
-  }
-
-  // Take 5 (tutorials)
-
-  .tutorials {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-    gap: 1.4rem;
-
-    .course-card {
-      display: grid;
-      height: 100%;
-      margin-top: 0;
-
-      .main {
-        display: grid;
-        grid-template-rows: auto auto 1fr auto;
-        grid-template-columns: none;
-        grid-template-areas: none;
-
-        > * {
-          grid-area: inherit;
-        }
-
-        .artwork {
-          position: relative;
-          background-color: var(--mono-200);
-          border-bottom: 1px solid var(--mono-300);
-          margin: -1.4rem -1.4rem 1.2rem;
-          overflow: hidden;
-
-          img {
-            margin: -1.7rem 0 -3.4rem;
-          }
-        }
-
-        .topic {
-          padding-top: 0;
-        }
-
-        [data-duration]::after {
-          position: absolute;
-          bottom: 0.6rem;
-          right: 0.6rem;
-          content: attr(data-duration);
-          font: normal 0.875rem/1 var(--font-family-default);
-          letter-spacing: 0.1ex;
-          text-indent: 0.15ex;
-          color: var(--mono-100);
-          background-color: var(--mono-900);
-          padding: 0.46875rem 0.53125rem 0.53125rem;
-          border: 1px solid var(--mono-100);
-          border-radius: 2px;
-        }
-
-        .info {
-          margin-top: 1.4rem;
-        }
-      }
-    }
-  }
-
-  .tutorial-detail {
-    display: grid;
-    gap: 1.4rem 2.2rem;
-
-    @include breakpoint(large, min) {
-      & {
-        grid-template-rows: auto auto auto;
-        grid-template-columns: 2fr 1fr;
-        grid-template-areas:
-          "header resources"
-          "video  resources"
-          "transcript transcript";
-        align-items: start;
-      }
-
-      .embed-responsive {
-        grid-area: video;
-      }
-
-      #tutorial-resources {
-        grid-area: resources;
-        position: sticky;
-        top: 1.4em;
-      }
-
-      #tutorial-transcript {
-        grid-area: transcript;
-
-        [href="#tutorial-resources"] {
-          text-decoration: none;
-          pointer-events: none;
-        }
-      }
-
     }
 
     header {
       hgroup {
+        h2,
         .topic {
-          margin-top: 0.155rem;
-          margin-bottom: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 0.0125ex;
+        }
+
+        .topic {
+          font: 900 1.25rem/1 var(--font-family-custom);
+
+          b {
+            font: inherit;
+          }
         }
 
         h2 {
-          font-size: 2.25rem;
-          line-height: 1.15;
-          margin-bottom: 0.8rem;
+          font: 900 1.8rem/1.2 var(--font-family-custom);
+          text-wrap: balance;
+          margin-bottom: 1rem;
         }
 
         .instructor {
-          margin-top: 0;
+          font-weight: bold;
+          font-size: 1rem;
+          letter-spacing: 0.0125ex;
+          margin-top: 1.125rem;
+          margin-bottom: 1.2rem;
         }
       }
-    }
 
-    .resources {
-      ul {
-        padding-left: 0.8rem;
+      .description {
+        max-width: 40rem;
+        font-size: 1.09375rem;
+        letter-spacing: 0.01ex;
       }
     }
 
-    #tutorial-resources {
-      scroll-margin-top: 1.4rem;
+    // course card
 
-      > div {
-        padding-top: 1rem;
-        border-top: 1px dashed var(--mono-400);
+    .course-card {
+      background-color: var(--mono-100);
+      padding: 1.4rem;
+      border: 1px solid var(--mono-400);
+      border-radius: 3px;
+    }
 
-        + div {
+    .course-card {
+      &:not(first-child) {
+        margin-top: 1rem;
+      }
+
+      // course card (main content)
+
+      .main {
+        > a {
+          grid-area: art;
+          display: inline-block;
+
+          &[href*="about"] {
+            margin-bottom: -1.875rem;
+          }
+        }
+
+        p,
+        dd {
+          text-wrap: pretty;
+        }
+
+        hgroup {
+          grid-area: header;
+          max-width: 28.5rem;
+
+          .topic {
+            display: inline-block;
+            background-color: var(--mono-100);
+            padding-top: 0.8rem;
+            padding-right: 0.9rem;
+          }
+        }
+
+        .description {
+          align-self: start;
+        }
+
+        header + .cta {
           margin-top: 1.4rem;
         }
+
+        .cta {
+          grid-area: cta;
+          align-self: end;
+
+          .btn {
+            display: inline-block;
+            width: 100%;
+            max-width: 16rem;
+          }
+        }
+
+        @include breakpoint(large, min) {
+          & {
+            display: grid;
+            grid-template-rows: auto;
+            grid-template-columns: 2.5fr 3fr;
+            grid-template-areas:
+              "art  header"
+              "art  cta"
+              "aside aside"
+              "info info";
+            gap: 0 1.4rem;
+            align-items: start;
+          }
+
+          > a[href*="about"] {
+            margin-bottom: 0;
+          }
+
+          hgroup {
+            .topic {
+              display: inherit;
+              padding: 0;
+            }
+          }
+        }
       }
 
-      h4 {
-        margin-bottom: 0;
+      .cta + aside {
+        grid-area: aside;
+        padding-top: 1.2rem;
+        border-top: 1px dashed var(--mono-400);
+        margin-top: 1.4rem;
+
+        &.list-summary {
+          justify-content: start;
+
+          dl {
+            margin-bottom: 0;
+          }
+
+          dt,
+          dd {
+            font-size: 0.9375rem;
+          }
+        }
       }
 
-      ul {
-        margin-top: 0.8rem;
+      .info {
+        display: grid;
+        grid-area: info;
+        grid-auto-flow: column;
+        gap: 1.4rem;
+        justify-content: start;
+        padding-top: 1.4rem;
+        border-top: 1px dashed var(--mono-400);
+        margin-top: 1.4rem;
+
+        h3,
+        p {
+          font-size: 0.9375rem;
+          line-height: 1;
+          letter-spacing: 0.0125ex;
+          margin-bottom: 0;
+
+          &:not(p) {
+            font-weight: 900;
+            font-family: var(--font-family-custom);
+            line-height: 1.15;
+            text-transform: uppercase;
+            word-spacing: 0.25ex;
+          }
+        }
+      }
+
+      aside + .info {
+        margin-top: 1.2rem;
       }
     }
 
-    #tutorial-transcript {
-      @include breakpoint(large, max) {
+    // back to (footer)
+
+    .back-to {
+      margin-top: 0.825rem;
+    }
+
+    // Take 5 (tutorials)
+
+    .tutorials {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+      gap: 1.4rem;
+
+      .course-card {
+        display: grid;
+        height: 100%;
+        margin-top: 0;
+
+        .main {
+          display: grid;
+          grid-template-rows: auto auto 1fr auto;
+          grid-template-columns: none;
+          grid-template-areas: none;
+
+          > * {
+            grid-area: inherit;
+          }
+
+          .artwork {
+            position: relative;
+            background-color: var(--mono-200);
+            border-bottom: 1px solid var(--mono-300);
+            margin: -1.4rem -1.4rem 1.2rem;
+            overflow: hidden;
+
+            img {
+              margin: -1.7rem 0 -3.4rem;
+            }
+          }
+
+          .topic {
+            padding-top: 0;
+          }
+
+          [data-duration]::after {
+            position: absolute;
+            bottom: 0.6rem;
+            right: 0.6rem;
+            content: attr(data-duration);
+            font: normal 0.875rem/1 var(--font-family-default);
+            letter-spacing: 0.1ex;
+            text-indent: 0.15ex;
+            color: var(--mono-100);
+            background-color: var(--mono-900);
+            padding: 0.46875rem 0.53125rem 0.53125rem;
+            border: 1px solid var(--mono-100);
+            border-radius: 2px;
+          }
+
+          .info {
+            margin-top: 1.4rem;
+          }
+        }
+      }
+    }
+
+    .tutorial-detail {
+      display: grid;
+      gap: 1.4rem 2.2rem;
+
+      @include breakpoint(large, min) {
         & {
-          padding-bottom: 1.4rem;
-          border-bottom: 1px dashed var(--mono-400);
+          grid-template-rows: auto auto auto;
+          grid-template-columns: 2fr 1fr;
+          grid-template-areas:
+            "header resources"
+            "video  resources"
+            "transcript transcript";
+          align-items: start;
+        }
+
+        .embed-responsive {
+          grid-area: video;
+        }
+
+        #tutorial-resources {
+          grid-area: resources;
+          position: sticky;
+          top: 1.4em;
+        }
+
+        #tutorial-transcript {
+          grid-area: transcript;
+
+          [href="#tutorial-resources"] {
+            text-decoration: none;
+            pointer-events: none;
+          }
         }
       }
 
-      summary span {
-        text-decoration: underline;
-        margin-left: 0.5ex;
+      header {
+        hgroup {
+          .topic {
+            margin-top: 0.155rem;
+            margin-bottom: 1rem;
+          }
 
-        &:hover,
-        &:focus {
-          text-decoration: none;
+          h2 {
+            font-size: 2.25rem;
+            line-height: 1.15;
+            margin-bottom: 0.8rem;
+          }
+
+          .instructor {
+            margin-top: 0;
+          }
         }
       }
 
-      .transcript {
-        max-width: 40rem;
-        padding-top: 1.2rem;
-        padding-bottom: 0.4rem;
+      .resources {
+        ul {
+          padding-left: 0.8rem;
+        }
+      }
 
-        ol {
-          padding-left: 1.25rem;
+      #tutorial-resources {
+        scroll-margin-top: 1.4rem;
+
+        > div {
+          padding-top: 1rem;
+          border-top: 1px dashed var(--mono-400);
+
+          + div {
+            margin-top: 1.4rem;
+          }
+        }
+
+        h4 {
+          margin-bottom: 0;
         }
 
         ul {
-          padding-left: 1rem;
+          margin-top: 0.8rem;
         }
+      }
 
-        p:not(footer p),
-        li {
-          font-size: 1.15rem;
-
-          code {
-            font-size: 94%;
+      #tutorial-transcript {
+        @include breakpoint(large, max) {
+          & {
+            padding-bottom: 1.4rem;
+            border-bottom: 1px dashed var(--mono-400);
           }
         }
 
-        .back-to {
-          margin-top: 1.4rem;
-          margin-bottom: 0;
-        }
-      }
+        summary span {
+          text-decoration: underline;
+          margin-left: 0.5ex;
 
-    }
-  }
-
-}
-
-// /courses/
-// Courses page-specific style rules
-
-.courses {
-
-  .intro {
-    grid-template-columns: 1fr;
-  }
-
-  .course-card {
-
-    .main > a,
-    .artwork {
-      height: 100%;
-
-      img:not(.collection img) {
-        object-fit: cover;
-        height: 100%;
-      }
-
-    }
-
-    > header,
-    section {
-
-      h2,
-      > h3 {
-        font-weight: 900;
-        line-height: 1.15;
-        text-transform: uppercase;
-      }
-    }
-
-    > header {
-
-      h2 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1.5rem;
-        font-family: var(--font-family-custom);
-      }
-    }
-
-    > div:not([class]) {
-      padding-top: 1.8rem;
-
-      section {
-
-        > h3 {
-          font-size: 1.25rem;
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          }
         }
 
-      }
+        .transcript {
+          max-width: 40rem;
+          padding-top: 1.2rem;
+          padding-bottom: 0.4rem;
 
-    }
-
-    & {
-      border-color: var(--mono-300);
-    }
-
-    .list-summary {
-      padding-top: 1.4rem;
-    }
-
-    @include breakpoint(large, min) {
-
-      > div {
-        display: grid;
-        grid-template-columns: 3.5fr 1fr;
-        gap: 2rem;
-        align-items: start;
-
-        .course-card {
-
-          .main {
-            grid-template-columns: 1fr 1fr;
+          ol {
+            padding-left: 1.25rem;
           }
 
-        }
+          ul {
+            padding-left: 1rem;
+          }
 
-        section + .list-summary {
-          grid-auto-flow: inherit;
-          grid-template-columns: none;
-          padding-top: 0.1rem;
-        }
+          p:not(footer p),
+          li {
+            font-size: 1.15rem;
 
+            code {
+              font-size: 94%;
+            }
+          }
+
+          .back-to {
+            margin-top: 1.4rem;
+            margin-bottom: 0;
+          }
+        }
       }
+    }
+  }
 
+  // /courses/
+  // Courses page-specific style rules
+
+  .courses {
+    .intro {
+      grid-template-columns: 1fr;
     }
 
-    .tutorial {
-
+    .course-card {
+      .main > a,
       .artwork {
-        border: 1px solid var(--mono-300);
+        height: 100%;
+
+        img:not(.collection img) {
+          object-fit: cover;
+          height: 100%;
+        }
       }
 
-    }
+      > header,
+      section {
+        h2,
+        > h3 {
+          font-weight: 900;
+          line-height: 1.15;
+          text-transform: uppercase;
+        }
+      }
 
+      > header {
+        h2 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1.5rem;
+          font-family: var(--font-family-custom);
+        }
+      }
+
+      > div:not([class]) {
+        padding-top: 1.8rem;
+
+        section {
+          > h3 {
+            font-size: 1.25rem;
+          }
+        }
+      }
+
+      & {
+        border-color: var(--mono-300);
+      }
+
+      .list-summary {
+        padding-top: 1.4rem;
+      }
+
+      @include breakpoint(large, min) {
+        > div {
+          display: grid;
+          grid-template-columns: 3.5fr 1fr;
+          gap: 2rem;
+          align-items: start;
+
+          .course-card {
+            .main {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+
+          section + .list-summary {
+            grid-auto-flow: inherit;
+            grid-template-columns: none;
+            padding-top: 0.1rem;
+          }
+        }
+      }
+
+      .tutorial {
+        .artwork {
+          border: 1px solid var(--mono-300);
+        }
+      }
+    }
   }
 
-}
+  // Courses page-specific style rules
 
+  .collection {
+    main {
+      section {
+        background-color: var(--mono-100);
+        padding: 1.4rem;
+        border: 1px solid var(--mono-400);
+        margin-top: 1rem;
+
+        h2 {
+          line-height: 1.15;
+          text-transform: uppercase;
+        }
+
+        p,
+        li {
+          font-size: 1.3125rem;
+        }
+      }
+
+      #articles {
+        ul {
+          li {
+            padding-top: 1.2rem;
+            border-top: 1px dashed var(--mono-300);
+            margin-top: 1.2rem;
+
+            cite {
+              font-style: normal;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      #jobs {
+        form {
+          display: inline-block;
+          padding-right: 1rem;
+          border: 1px solid var(--secondary-500);
+          border-radius: 3px;
+
+          select {
+            all: revert;
+            font-size: 1.05rem;
+            font-weight: bold;
+            line-height: 1.15;
+            background-color: transparent;
+            padding: 1.2rem;
+            border: 0;
+
+            option {
+              line-height: 1.15;
+            }
+          }
+        }
+
+        .jobs-list li {
+          font-weight: bold;
+          padding-top: 1.2rem;
+          border-top: 1px dashed var(--mono-300);
+          margin-top: 1.2rem;
+        }
+      }
+    }
+  }
 }
