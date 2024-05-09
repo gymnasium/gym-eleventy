@@ -141,25 +141,6 @@
   }
 }
 
-
-// Fancy colors
-$gym-green: #2c9959;
-$gym-green-dark: adjust-color($gym-green, $lightness: -7.7%); // #237b47
-$gym-green-darker: adjust-color($gym-green, $lightness: -19.1%); // #164d2d
-
-$gym-magenta: #d73158;
-$gym-magenta-dark: adjust-color($gym-magenta, $lightness: -11.5%); // outputs #ac2142
-$gym-magenta-darker: adjust-color($gym-magenta, $lightness: -23%); // outputs #7b182f
-
-$gym-purple: #764c9f;
-$gym-purple-dark: adjust-color($gym-purple, $lightness: -11.5%);
-$gym-purple-darker: adjust-color($gym-purple, $lightness: -23%);
-
-$gym-teal: #5ca5a0;
-$gym-teal-dark: adjust-color($gym-teal, $lightness: -11.58%); // outputs #46807c
-$gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%); // #2b4d4b
-
-
 // --- collection ---
 
 .collection {
@@ -191,7 +172,7 @@ $gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%); // #2b4d4b
     display: grid;
     grid-template-rows: 1fr auto;
     background-color: var(--mono-900);
-    border-top: 1rem solid var(--mono-550);;
+    border-top: 1rem solid var(--mono-500);
   }
 
   &--main {
@@ -208,7 +189,7 @@ $gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%); // #2b4d4b
       .topic {
         font-size: 1rem;
         line-height: 1;
-        color: var(--mono-550);
+        color: var(--mono-500);
         letter-spacing: 0.15rem;
         margin-top: rem-calc(-1);
         margin-bottom: 1.2rem;
@@ -221,24 +202,24 @@ $gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%); // #2b4d4b
   .accessibility,
   .design,
   .development {
-    border-top-color: $gym-magenta;
+    border-top-color: var(--magenta-500);
   }
 
 //   .development {
-//     border-top-color: $gym-purple;
+//     border-top-color: var(--purple-500);
 //   }
 
   .prototyping,
   .ux-design {
-    border-top-color: $gym-teal;
+    border-top-color: var(--teal-500);
   }
 
   .career-skills {
-    border-top-color: $gym-green;
+    border-top-color: var(--green-500);
   }
 
   .design-systems {
-    border-top-color: var(--secondary-100);
+    border-top-color: var(--secondary-500);
   }
 
   // Main
@@ -255,7 +236,7 @@ $gym-teal-darker: adjust-color($gym-teal, $lightness: -26.9%); // #2b4d4b
 
     p {
       font-size: 1rem;
-      color: var(--mono-300);;
+      color: var(--mono-300);
     }
   }
 

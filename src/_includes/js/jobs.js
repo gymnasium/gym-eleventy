@@ -304,7 +304,7 @@ window.addEventListener("load", () => {
           }
 
           // close our list
-          jobsContainer.innerHTML += `<ul>${list}</ul>`;
+          jobsContainer.innerHTML += `<ul class="jobs-list">${list}</ul>`;
         } else {
           // No jobs in market! Show the appropriate message.
           showMsg("error-results");
