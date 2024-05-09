@@ -806,6 +806,16 @@ html > {
         gap: 1.4rem;
       }
 
+      h3 {
+        font-family: var(--font-family-default);
+        font-size: 1.3125rem;
+        line-height: 1.35;
+      }
+
+      .artwork + h3 {
+        margin-top: 0.6rem;
+      }
+
     }
 
     #courses {
@@ -816,6 +826,8 @@ html > {
         li {
           display: inherit;
           grid-template-columns: 1fr 3fr;
+          gap: 1.4rem;
+          align-items: center;
         }
       }
 
