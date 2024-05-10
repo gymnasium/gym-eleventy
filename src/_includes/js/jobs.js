@@ -286,7 +286,7 @@ window.addEventListener("load", () => {
             var el = items[i];
             var postDate = el.posted_date;
             var modDate = el.modDate;
-            const jobUrl = window.JOB_URLS[el.country];
+            const jobUrl = `${window.JOB_URLS[el.country]}${el.job_id}`;
 
             outputDebug(
               `[job module] job id: ${el.id}\n   remote type: ${
