@@ -12,18 +12,12 @@
     padding-bottom: 0;
   }
 
-  // hero styling (full compiled class name is`.home-hero`)
-  &-hero {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 2.6em;
-  }
-
   // top/bottom padding for each component of the home page
   article,
   section {
     margin-top: 0 !important; // TODO: refactor the main class to not add padding/margins by default.
-    padding: 2rem 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   section {
@@ -32,6 +26,54 @@
     }
     h1 {
       font-size: rem-calc(24.5);
+    }
+  }
+}
+
+// hero styling (full compiled class name is`.home-hero`)
+article.home-hero {
+  padding-top: rem-calc(44);
+  padding-bottom: rem-calc(68);
+
+  @include breakpoint(large, min) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
+  }
+
+  .subhead {
+    font-size: rem-calc(18);
+    color: var(--secondary-500);
+  }
+  h1 {
+    font-size: rem-calc(40);
+    word-spacing: rem-calc(2);
+  }
+
+  p {
+    font-size: rem-calc(16);
+    font-weight: 700;
+  }
+
+  .cta {
+    .btn {
+      border: rem-calc(2) white solid;
+      font-size: rem-calc(23);
+    }
+  }
+
+  @include breakpoint(large, min) {
+    header {
+      align-self: center;
+    }
+
+    .image {
+      min-height: 100%;
+      margin: 0;
+
+      & + .text {
+        margin-top: 0;
+      }
     }
   }
 }
