@@ -1,7 +1,7 @@
 {%- if module -%}
   {%- if module.heading -%}
     <header>
-      <h2>{{ module.heading }}</h2>
+      <h2 class="caps">{{ module.heading }}</h2>
       {%- if module.description -%}
       <p>{{ module.description | safe }}</p>
     </header>
@@ -11,9 +11,11 @@
   {%- for id, item in filtered -%}
     <div class="{{ id }}">
       {%- if module.heading -%}
-        <h3>{{ item.heading }}</h3>
+        <header>
+          <h3 class="caps">{{ item.heading }}</h3>
+        </header>
       {%- else -%}
-        <h2>{{ item.heading }}</h2>
+        <h2 class="caps">{{ item.heading }}</h2>
       {%- endif -%}
 
       {%- if item.description -%}
