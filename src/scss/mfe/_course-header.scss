@@ -1,3 +1,8 @@
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
+
 // Course Header below 2ndary nav in MFEs
 .course-header {
   span {

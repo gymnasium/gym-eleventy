@@ -3,7 +3,8 @@
 // | -------------------------------------------------------------
 
 @use "colors" as *;
-@import "fonts";
+@use "fonts" as *;
+@use "mixins" as *;
 
 :root {
   --font-family-default: #{$gym-text-font-stack};

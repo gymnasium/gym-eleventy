@@ -1,5 +1,7 @@
-@use "base/breakpoints" as *;
-@use "base/functions" as *;
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 // TODO: Move to a more "global" place
 

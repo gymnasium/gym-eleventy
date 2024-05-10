@@ -1,5 +1,7 @@
 @use 'base/breakpoints' as *;
 @use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 /* TODO: this was added brute-force to match what we have in gymcms. All of this should be refactored for cleaner code (and no custom css file include) */
 

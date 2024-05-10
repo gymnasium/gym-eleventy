@@ -1,6 +1,8 @@
 @use "sass:map";
-@use "base/functions" as *;
-@use "base/breakpoints" as *;
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 $color_1: #454545;
 $color_2: #212529;

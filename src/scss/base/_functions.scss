@@ -1,6 +1,7 @@
 // Shamelessly borrowed & modified via @ https://github.com/foundation/foundation-sites / https://github.com/foundation/foundation-sites/blob/develop/scss/util/_unit.scss
 @use "sass:math";
 @use "sass:string";
+@use "sass:map";
 
 // This is the default html and body font-size for the base rem value.
 $rem-base: 16px !default;

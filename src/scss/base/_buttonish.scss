@@ -1,7 +1,8 @@
 // | -------------------------------------------------------------
 // | Button
 // | -------------------------------------------------------------
-@use 'base/functions' as *;
+@use 'functions' as *;
+@use 'mixins' as *;
 
 [disabled], .disabled {
   pointer-events: none;
