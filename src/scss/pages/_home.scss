@@ -8,7 +8,8 @@
   background-color: var(--mono-200);
 
   main {
-    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   // hero styling (full compiled class name is`.home-hero`)
@@ -21,6 +22,7 @@
   // top/bottom padding for each component of the home page
   article,
   section {
+    margin-top: 0 !important; // TODO: refactor the main class to not add padding/margins by default.
     padding: 2rem 0;
   }
 
@@ -28,12 +30,31 @@
     h1 {
       text-align: center;
     }
+    h1 {
+      font-size: rem-calc(24.5);
+    }
   }
 }
 
-
-
 .how-gymnasium-works {
+  h1, h2 {
+    font-weight: 700;
+    letter-spacing: rem-calc(1.4);
+    color: var(--mono-600);
+  }
+  
+
+  h2 {
+    font-size: rem-calc(24);
+    font-style: normal;
+    line-height: 1;
+  }
+
+  p {
+    font-size: rem-calc(18);
+    font-family: var(--font-family-default);
+    color: var(--mono-500);
+  }
 
   ul {
     list-style: none;
@@ -56,14 +77,4 @@
 
 .home-find-work {
 
-}
-
-.as-seen-in {
-  ul {
-    list-style: none;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 2.6em;
-  }
 }
