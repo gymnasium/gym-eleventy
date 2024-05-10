@@ -802,6 +802,7 @@ html > {
         text-align: center;
         padding-top: 1.4rem;
         border-top: 1px solid var(--mono-300);
+        margin-top: 1.4rem;
       }
     }
 
@@ -818,6 +819,7 @@ html > {
         font-family: var(--font-family-default);
         font-size: 1.3125rem;
         line-height: 1.35;
+        margin-bottom: 0;
       }
 
       .artwork + h3 {
@@ -830,7 +832,6 @@ html > {
 
       ul {
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        padding-bottom: 1.4rem;
 
         li {
           display: inherit;
@@ -866,10 +867,22 @@ html > {
     }
 
     #articles {
+      header {
+        border-bottom: 1px solid var(--mono-300);
+
+        &:not(#articles > header) {
+          margin-top: 1.6rem;
+        }
+
+        h3 {
+          font-size: 1.3125rem;
+          font-weight: 900;
+        }
+      }
       ul {
         li {
-          padding-top: 1.2rem;
-          border-top: 1px dashed var(--mono-300);
+          padding-bottom: 1.2rem;
+          border-bottom: 1px dashed var(--mono-300);
           margin-top: 1.2rem;
 
           cite {
