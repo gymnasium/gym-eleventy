@@ -1,6 +1,7 @@
-@use "base/functions" as *;
-
-@use "base/buttonish";
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 .btn {
   /*

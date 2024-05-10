@@ -3,18 +3,26 @@ meta:
   title: "Design Systems"
   topic: "Design Systems"
   description: "Teamwork (and creating effective pattern libraries) makes the dream work."
-  url: /design-systems/
   slug: design-systems
   order: 1
   unique: true
+  css: "/css/design-systems.css"
+
+header: 
+  module: custom/design-systems/header
 
 courses:
-  module: panels/course
+  module: custom/design-systems/panel
+  module_type: course
   ids:
   - id: GYM-018
+    section_id: designers
   - id: GYM-019
+    section_id: developers
   - id: GYM-020
+    section_id: product-managers
   - id: GYM-017
+    section_id: everyone
   subtitle:
     pre: with
     data: bios
@@ -23,3 +31,7 @@ courses:
   cta:
     label: View Course
     class: btn
+instructor:
+  module: custom/design-systems/panel
+  module_type: instructor
+  id: emarcotte

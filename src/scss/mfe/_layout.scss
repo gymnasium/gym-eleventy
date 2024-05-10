@@ -1,8 +1,8 @@
 @use "sass:map";
-
-@use 'base/fonts' as *;
-@use 'base/functions' as *;
 @use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 main {
   margin: 0 auto;

@@ -1,17 +1,22 @@
 // | -------------------------------------------------------------
 // | These are shared among the static site, the theme, & MFEs
 // | -------------------------------------------------------------
+// Non-rendered (mixins, placeholders, variables, functions)
+@use 'base/mixins';
+@use 'base/functions';
+@use 'base/breakpoints';
+@use 'base/colors';
+@use 'base/fonts';
 
+// Start rendered CSS
 @use 'base/resets';
 @use 'base/root';
 @use 'base/visibility';
 @use 'base/typography';
 @use 'base/lists';
 @use 'base/containers';
-@use 'base/breakpoints';
 @use 'base/buttonish';
 @use 'base/forms';
-@use 'base/colors';
 @use 'base/outline';
 @use 'base/layouts';
 @use 'base/flex';

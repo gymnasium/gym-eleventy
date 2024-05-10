@@ -1,5 +1,7 @@
 @use 'base/breakpoints' as *;
 @use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 .site-header {
   color: var(--mono-100);
@@ -43,7 +45,7 @@
 
         &:hover,
         &:focus {
-          color: var(--secondary-100);
+          color: var(--secondary-500);
         }
 
         &.active {
@@ -114,7 +116,7 @@
 
             &:hover,
             &:focus {
-              border-bottom-color: var(--secondary-100);
+              border-bottom-color: var(--secondary-500);
               border-bottom-width: 2px;
               margin-bottom: -1px;
             }
