@@ -15,7 +15,9 @@
           <h3 class="caps">{{ item.heading }}</h3>
         </header>
       {%- else -%}
-        <h2 class="caps">{{ item.heading }}</h2>
+        <header>
+          <h2 class="caps">{{ item.heading }}</h2>
+        </header>
       {%- endif -%}
 
       {%- if item.description -%}
