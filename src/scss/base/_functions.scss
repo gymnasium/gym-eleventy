@@ -1,5 +1,7 @@
 // Shamelessly borrowed & modified via @ https://github.com/foundation/foundation-sites / https://github.com/foundation/foundation-sites/blob/develop/scss/util/_unit.scss
 @use "sass:math";
+@use "sass:string";
+@use "sass:map";
 
 // This is the default html and body font-size for the base rem value.
 $rem-base: 16px !default;
@@ -44,6 +46,19 @@ $global-font-size: 100% !default;
   }
 
   @return $value;
+}
+
+/// Map deep get
+/// @author Kitty Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
 }
 
 // 

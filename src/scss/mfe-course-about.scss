@@ -1,14 +1,14 @@
 // | -------------------------------------------------------------
 // | This file is intended to only serve the Course About MFE
 // | -------------------------------------------------------------
-@use 'base/fonts' as *;
-@use 'base/functions' as *;
 @use 'base/breakpoints' as *;
-
-@use 'mfe/root';
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 @use 'shared';
 
+@use 'mfe/root';
 @use 'mfe/buttons';
 
 main {
@@ -21,6 +21,12 @@ main {
 
 .course-type {
   font-size: rem-calc(22.4);
+}
+
+.course-header {
+  background-color: var(--mono-400);
+  --box-shadow-color: var(--mono-400);
+  @include full-bleed;
 }
 
 .course-header, .course-overview {

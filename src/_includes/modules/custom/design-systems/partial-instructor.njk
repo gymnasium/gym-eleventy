@@ -1,0 +1,29 @@
+{%- set obj = bios[filteredId] -%}
+<section class="section" id="{{ module_type }}">
+  <div class="section-content">
+    <header>
+      <h2 class="caps">Meet the Instructor</h2>
+    </header>
+    <div class="subsection">
+      <h3 class="caps">{{ obj.name }}</h3>
+      <div class="row">
+        <div class="col-md-3">
+          <img
+            class="headshot"
+            alt="Image of {{ obj.name }}"
+            src="{{ obj.img }}"
+            width="1280"
+            height="1024"
+            decoding="async"
+          />
+        </div>
+        <div class="col-md-7">
+          {{ obj.extended_description | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="back-to">
+  <p><a href="#main">Back to Top</a></p>
+</footer>

@@ -2,27 +2,14 @@
 // | Container
 // | -------------------------------------------------------------
 @use "sass:map";
-@use "functions" as *;
 @use "breakpoints" as *;
+@use "functions" as *;
+@use "mixins" as *;
 
 .container {
-  margin: 0 auto;
-  padding: 0 calc(2rem / 2);
-  max-width: 100%;
-
-  @include breakpoint(medium) {
-    padding: 0 2rem;
-  }
-
-  @include breakpoint(large) {
-    padding: 0 calc(2rem / 2);
-    max-width: convert-to-rem(map.get($breakpoints, 'large'));
-  }
-
-  &.stretch {
-    max-width: 100%;
-  }
+  @include container;
 }
+
 
 main {
   background-color: var(--mono-200);

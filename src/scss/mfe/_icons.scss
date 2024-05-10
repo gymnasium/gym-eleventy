@@ -1,3 +1,8 @@
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
+
 $color_1: #0a3055;
 $color_2: #fff;
 $color_3: #454545;

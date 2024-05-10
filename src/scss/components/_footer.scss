@@ -1,11 +1,13 @@
 @use 'base/breakpoints' as *;
 @use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 .site-footer {
   background-color: var(--mono-900);
   color: var(--mono-100);
   padding: 2.6rem 0;
-  border-top: 0.625rem solid var(--secondary-100);
+  border-top: 0.625rem solid var(--secondary-500);
 
   p {
     letter-spacing: 0.05ex;
@@ -82,7 +84,7 @@
 
       &:hover,
       &:focus {
-        color: var(--secondary-100);
+        color: var(--secondary-500);
       }
     }
   }
@@ -149,7 +151,8 @@
 
     [src*="11ty"] {
       max-width: 4.75rem;
-      filter: grayscale(1) brightness(0.606); // Faux #999
+      filter: grayscale(1) brightness(0.605); // Faux #999
+      mix-blend-mode: lighten;
       margin: -1rem;
     }
 
@@ -175,7 +178,7 @@
   .copyright {
 
     a {
-      color: var(--secondary-100);
+      color: var(--secondary-500);
 
       &:hover,
       &:focus {

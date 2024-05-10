@@ -1,3 +1,5 @@
+@use "sass:string";
+@use 'base/functions' as *;
 // | -------------------------------------------------------------
 // | Breakpoint
 // | -------------------------------------------------------------
@@ -10,6 +12,7 @@ $breakpoints: (
 ) !default;
 
 // Modified, via @ https://rimdev.io/making-media-query-mixins-with-sass
+// TODO: add a min/max combo
 @mixin breakpoint($breakpoint, $direction: min) {
   @if map-has-key($breakpoints, $breakpoint) {
 
@@ -17,7 +20,7 @@ $breakpoints: (
     $breakpoint-value: map-get($breakpoints, $breakpoint);
     
     @if $direction == max {
-      @media (max-width: ($breakpoint-value - 1)) {
+      @media (max-width: ($breakpoint-value - convert-to-em(1))) {
         @content;
       }
     } @else if $direction == min {
@@ -29,16 +32,29 @@ $breakpoints: (
   // If the breakpoint doesn't exist in the map.
   } @else {
     @if ($direction == min or $direction == max) {
-      // if we have a unitless value, convert it to px
-      @if (type_of($breakpoint) == number) {
-        @media (min-width: "#{$breakpoint}px") {
-          @content;
-        }
+      // Convert breakpoint value to string
+      $breakpoint-string: #{$breakpoint};
+      @if (string.index($breakpoint-string, 'em')) {
+        @if $direction == max {
+          @media (max-width: ($breakpoint - convert-to-em(1))) {
+            @content;
+          }
+        } @else if $direction == min {
+          @media (min-width: $breakpoint) {
+            @content;
+          }
+        } 
       } @else {
-        // spit out the direction
-        @media (#{$direction}-width: $breakpoint) {
-          @content;
-        }
+        $breakpoint-em: convert-to-em($breakpoint);
+        @if $direction == max {
+          @media (max-width: ($breakpoint-em - convert-to-em(1))) {
+            @content;
+          }
+        } @else if $direction == min {
+          @media (min-width: $breakpoint-em) {
+            @content;
+          }
+        } 
       }
     } @else {
       @error "The direction has to be min or max.";

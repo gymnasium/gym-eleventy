@@ -1,4 +1,7 @@
-@use 'base/containers';
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 // Staff action menu
 .wrapper-preview-menu {

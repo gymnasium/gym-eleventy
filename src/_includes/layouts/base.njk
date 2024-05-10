@@ -7,11 +7,11 @@
   {%- set bodyClass = page.url.slice(1, -1).split('/') | join('-') -%}
 {%- endif -%}
 <!doctype html>
-<html lang="en">
+<html lang="en-US" dir="ltr">
 <head>
 {% include './components/head.njk' %}
 </head>
-<body class="{{bodyClass}}">
+<body class="{{ bodyClass }}">
 {% include './components/header.njk' %}
 {{ content | safe }}
 {%- set footer -%}{%- include './components/footer.njk' -%}{%- endset -%}

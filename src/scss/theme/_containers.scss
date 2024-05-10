@@ -1,9 +1,12 @@
-@use 'base/containers';
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
 body {
   background-color: var(--mono-200);
 }
 
 .main-container {
- @extend .container;
+  @include container;
 }

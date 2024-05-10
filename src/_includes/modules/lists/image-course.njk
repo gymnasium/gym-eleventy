@@ -3,8 +3,8 @@
 {% block id_list_item %}
   <li>
     <figure class="artwork bg-{{type}}">
-      <a class="img-link" href="{{ path }}{{ slug }}" title="{{ title }}">
-        <img style="max-width: 5rem;" alt="{{ title }}" srcset="{{ srcSet }}" src="{{ src }}">
+      <a class="img-link" href="{{ path }}{{ slug }}">
+        <img alt="{{ title }}" srcset="{{ srcSet }}" src="{{ src }}">
       </a>
     </figure>
     <h3><a href="{{ path }}{{ slug }}">{{ title }}</a></h3>
