@@ -44,18 +44,26 @@ TODO:
 - add support for different modules, like dynamically fetched courses, tutorials, webinars
 - add jobs module
 #}
-{%- if not item.header -%}
-<header>
-  <h1>{{ item.meta.title }}</h1>
-  <p>{{ item.meta.description }}</p>
-</header>
-{%- else -%}
-  {%- set header = item.header -%}
-  {%- include 'modules/components/header.njk' -%}
-{%- endif -%}
 
 {# Here we're omitting some object keys to be able to loop through the content fields #}
 {%- set content = item | omit(['id', 'meta', 'header']) -%}
+{%- if item.meta.unique -%}
+  {# Here we're omitting some object keys to be able to loop through the content fields #}
+  {%- set content = item | omit(['id', 'meta']) -%}
+{%- else -%}
+  {%- if not item.header -%}
+  <header>
+    <h1>{{ item.meta.title }}</h1>
+    <p>{{ item.meta.description }}</p>
+  </header>
+  {%- else -%}
+    {%- set header = item.header -%}
+    {%- include 'modules/components/header.njk' -%}
+  {%- endif -%}
+
+  {%- set module = featured['collection'][item.meta.slug] -%}
+  {%- include 'modules/featured/course.njk' -%}
+{%- endif -%}
 
 {%- if content -%}
   {%- for key, section in content -%}
