@@ -7,10 +7,21 @@ meta:
   order: 6
   redirectFrom: '/remote-work/'
 
+header:
+  header_id: # default is null
+  header_class: # default is null
+  heading_type: h1 # h1-h6, default is h2
+  heading_class: # default is caps
+  heading_id: # default is null
+  heading: Career Skills
+  description: |
+    <p>Explore our free career skills collection of <a href="#courses"><b>courses</b></a>, <a href="#tutorials"><b>tutorials</b></a>, and <a href="#articles"><b>articles</b></a>. See <a href="/jobs"><b>jobs</b></a> for Aquent’s salary guides.</p>
+
 courses:
   module: lists/image-course
-  heading: Courses
-  description: Learn career skills from industry experts at your own pace.
+  header:
+    heading: Courses
+    description: Learn career skills from industry experts at your own pace.
   cta:
     href: /courses/
     label: View More Courses
@@ -23,8 +34,9 @@ courses:
 
 tutorials:
   module: lists/image-course
-  heading: Tutorials
-  description: Take 5 minutes to learn new career skills.
+  header:
+    heading: Tutorials
+    description: Take 5 minutes to learn new career skills.
   cta:
     href: /courses/take5/
     label: View More Tutorials
@@ -43,10 +55,14 @@ tutorials:
 
 articles:
   module: lists/default
-  heading: Articles
-  description: Read bookmark-worthy blog posts on career skills.
+  header:
+    heading: Articles
+    description: Read bookmark-worthy blog posts on career skills.
+
   portfolio:
-    heading: "Portfolio Development"
+    header:
+      heading: "Portfolio Development"
+      heading_type: h3
     links:
     - label: "Top 5 Free Portfolio Sites for Creatives"
       href: "https://aquenttalent.com/blog/top-5-free-portfolio-sites"
@@ -56,7 +72,9 @@ articles:
       href: "https://medium.com/gymnasium/btw-developers-need-portfolios-too-a7f00f70a307"
 
   networking:
-    heading: "Networking 101"
+    header:
+      heading: "Networking 101"
+      heading_type: h3
     links:
     - label: "8 Networking Techniques for Meeting People Face-to-Face"
       href: "https://aquenttalent.com/blog/8-networking-techniques-for-meeting-people-face-to-face"
@@ -74,7 +92,9 @@ articles:
       href: "https://aquenttalent.com/blog/how-to-apply-online-and-actually-get-a-job"
 
   interview:
-    heading: "Ace the Interview"
+    header:
+      heading: "Ace the Interview"
+      heading_type: h3
     links:
     - label: "How to Conduct an Interview Like a Boss"
       href: "https://medium.com/gymnasium/how-to-conduct-an-interview-like-a-boss-7de5c9810c4c"
@@ -90,7 +110,9 @@ articles:
       href: "https://aquenttalent.com/blog/top-10-must-ask-design-interview-questions"
 
   designers:
-    heading: "Tips for Designers"
+    header:
+      heading: "Tips for Designers"
+      heading_type: h3
     links:
     - label: "How to Create a UX Profile That Will Help You Land Your Dream Job"
       href: "https://aquenttalent.com/blog/how-to-create-a-ux-profile-that-will-help-you-land-your-dream-job"
@@ -114,7 +136,9 @@ articles:
       href: "https://aquent.com/blog/advice-on-landing-your-dream-design-leadership-job"
 
   managers:
-    heading: "Tips for Managers"
+    header:
+      heading: "Tips for Managers"
+      heading_type: h3
     links:
     - label: "UX Hiring Is Not Easy, Even for a Company Full of UX Recruiters"
       href: "https://medium.com/aquent-off-hours/ux-hiring-is-not-easy-even-for-a-company-full-of-ux-recruiters-4bd2ce1e6720"
@@ -130,7 +154,9 @@ articles:
       href: "https://medium.com/gymnasium/navigating-the-realities-of-remote-work-3b99baa5de76"
 
   diversity:
-    heading: "Diversity & Inclusion"
+    header:
+      heading: "Diversity & Inclusion"
+      heading_type: h3
     links:
     - label: "How to Fix Your Talent Pipeline to Be More Inclusive"
       href: "https://aquenttalent.com/blog/how-to-fix-your-talent-pipeline-to-be-more-inclusive"

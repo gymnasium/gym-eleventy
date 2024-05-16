@@ -49,19 +49,29 @@ TODO:
   <h1>{{ item.meta.title }}</h1>
   <p>{{ item.meta.description }}</p>
 </header>
+{%- else -%}
+  {%- set header = item.header -%}
+  {%- include 'modules/components/header.njk' -%}
 {%- endif -%}
 
 {# Here we're omitting some object keys to be able to loop through the content fields #}
-{%- set content = item | omit(['id', 'meta']) -%}
+{%- set content = item | omit(['id', 'meta', 'header']) -%}
 
 {%- if content -%}
   {%- for key, section in content -%}
-    <section id="{{ key }}">
+    {%- set section_id = key -%}
+    {%- if section.html_id -%}
+      {%- set section_id = section.html_id -%}
+    {%- endif -%}
+    <section id="{{ section_id }}" class="{{ key }}">
       {# Load modules! #}
       {# Let's rename sections to modules, so we can keep track of what we're dealing with #}
       {%- set module = section -%}
       {%- set module_type = section.module_type -%}
       {%- include 'modules/' + section.module + '.njk' -%}
     </section>
+    <div class="back-to">
+      <p><a href="#main">Back to top</a></p>
+    </div>
   {%- endfor -%}
 {%- endif -%}

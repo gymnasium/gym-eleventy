@@ -6,9 +6,9 @@ meta:
 ---
 {%- set intro = pages['jobs'].intro -%}
 <header id="{{ id }}" class="page-header {{ id }}">
-  <h1>{{ intro.heading }}</h1>
-  {%- if intro.description -%}
-    <p>{{ intro.description | safe }}</p>
+  {%- if intro.header -%}
+    {%- set header = intro.header -%}
+    {%- include 'modules/components/header.njk' -%}
   {%- endif -%}
   {%- if intro.cards -%}
     <ul>
@@ -50,7 +50,7 @@ meta:
 
 {%- if content -%}
   {%- for key, section in content -%}
-    <section id="{{ key }}">
+    <section id="{{ key }}" class="{{ key }}">
       {# Load modules! #}
       {# Let's rename sections to modules, so we can keep track of what we're dealing with #}
       {%- set module = section -%}

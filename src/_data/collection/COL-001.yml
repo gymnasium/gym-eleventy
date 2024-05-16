@@ -7,10 +7,21 @@ meta:
   order: 2
   redirectFrom: '/web-development/'
 
+header:
+  header_id: # default is null
+  header_class: # default is null
+  heading_type: h1 # h1-h6, default is h2
+  heading_class: # default is caps
+  heading_id: # default is null
+  heading: Development
+  description: |
+    <p>Gymnasium offers free online development <a href="#courses"><b>courses</b></a>, <a href="#tutorials"><b>tutorials</b></a>, <a href="#webinars"><b>webinars</b></a>, <a href="#articles"><b>articles</b></a>, and <a href="#jobs"><b><span class="visuallyhidden">development </span> jobs</b></a> through Aquent.</p>
+
 courses:
   module: lists/image-course
-  heading: "Web Development Courses"
-  description: Learn web development with industry experts.
+  header:
+    heading: "Web Development Courses"
+    description: Learn web development with industry experts.
   cta:
     href: /courses/
     label: View More Courses
@@ -34,8 +45,9 @@ courses:
 
 tutorials:
   module: lists/image-course
-  heading: "Development Tutorials"
-  description: Learn a development skill in 5 minutes.
+  header:
+    heading: "Development Tutorials"
+    description: Learn a development skill in 5 minutes.
   cta:
     href: /courses/take5/
     label: View More Tutorials
@@ -51,8 +63,9 @@ tutorials:
 
 webinars:
   module: lists/image-course
-  heading: Development Webinars
-  description: Insightful conversations with trailblazers in the web community.
+  header:
+    heading: Development Webinars
+    description: Insightful conversations with trailblazers in the web community.
   cta:
     href: /webinars/
     label: View More Webinars
@@ -71,8 +84,9 @@ webinars:
 
 articles:
   module: lists/default
+  header:
+    heading: "Development Articles"
   development:
-    heading: "Articles"
     links:
     - label: "Brad Frost on How (and Why) to Use Pattern Lab"
       href: "https://medium.com/gymnasium/brad-frost-on-how-and-why-to-use-pattern-lab-49607f89d7f0"
@@ -91,4 +105,5 @@ articles:
 
 jobs:
   module: jobs
-  heading: "Jobs"
+  header:
+    heading: "Development Jobs"

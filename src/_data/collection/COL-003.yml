@@ -6,10 +6,21 @@ meta:
   slug: prototyping
   order: 4
 
+header:
+  header_id: # default is null
+  header_class: # default is null
+  heading_type: h1 # h1-h6, default is h2
+  heading_class: # default is caps
+  heading_id: # default is null
+  heading: Prototyping
+  description: |
+    <p>Gymnasium offers free online prototyping <a href="#courses"><b>courses</b></a>, <a href="#tutorials"><b>tutorials</b></a>, <a href="#webinars"><b>webinars</b></a>, <a href="#articles"><b>articles</b></a>, and <a href="#jobs"><b><span class="visuallyhidden">prototyping </span> jobs</b></a> through Aquent.</p>
+
 courses:
   module: lists/image-course
-  heading: "Prototyping Courses"
-  description: Learn prototyping with industry experts.
+  header:
+    heading: "Prototyping Courses"
+    description: Learn prototyping with industry experts.
   cta:
     href: /courses/
     label: View More Courses
@@ -22,8 +33,9 @@ courses:
 
 tutorials:
   module: lists/image-course
-  heading: "Prototyping Tutorials"
-  description: Learn a new prototyping skill in 5 minutes.
+  header:
+    heading: "Prototyping Tutorials"
+    description: Learn a new prototyping skill in 5 minutes.
   cta:
     href: /courses/take5/
     label: View More Tutorials
@@ -38,8 +50,9 @@ tutorials:
 
 webinars:
   module: lists/image-course
-  heading: Prototyping Webinars
-  description: Insightful conversations with trailblazers in the web community.
+  header:
+    heading: Prototyping Webinars
+    description: Insightful conversations with trailblazers in the web community.
   cta:
     href: /webinars/
     label: View More Webinars
@@ -54,8 +67,9 @@ webinars:
 
 articles:
   module: lists/default
-  prototyping:
+  header:
     heading: "Prototyping Articles"
+  prototyping:
     links:
     - href: "https://medium.com/gymnasium/ai-mockup-magic-prototyping-landing-pages-with-llms-3765bef6a84c"
       label: "AI Mockup Magic: Prototyping Landing Pages with LLMs"
@@ -72,4 +86,5 @@ articles:
 
 jobs:
   module: jobs
-  heading: Remote Jobs
+  header:
+    heading: Remote Jobs

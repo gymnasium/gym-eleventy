@@ -1,7 +1,8 @@
 {%- if module -%}
 <section class="{{ module.wrapper_class }}-featured-courses">
-  {%- if module.heading -%}
-    <h2>{{ module.heading }}</h2>
+  {%- if module.header -%}
+    {%- set header = module.header -%}
+    {%- include 'modules/components/header.njk' -%}
   {%- endif -%}
   <ul>
     {%- for item in module.items -%}

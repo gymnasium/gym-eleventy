@@ -1,10 +1,6 @@
 {%- if jobs.items -%}
-  {%- if module.heading -%}
-    <h2>{{ module.heading }}</h2>
-    {%- if module.description -%}
-      <p>{{ module.description }}</p>
-    {%- endif -%}
-  {%- endif -%}
+  {%- set header = module.header -%}
+  {%- include 'modules/components/header.njk' -%}
 
   <form id="location-select" class="location-select">
     <script>var JOB_URLS = {{ data.JOBDATA.urls | stringify | safe }}</script>
