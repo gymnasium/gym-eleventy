@@ -7,8 +7,8 @@ description: "A conversation about navigating the complex world of web design ed
 permalink: /webinars/web-design-is-hard
 event_date: 2016-09-21
 event_time: "2PM EDT"
-event_ogimage: web-design-is-hard-event-og.png
-recording_ogimage: web-design-is-hard-recording-og.png
+event_ogimage: web-design-is-hard-event.png
+recording_ogimage: web-design-is-hard-recording.png
 host: josborn
 speaker:
   - jzeldman

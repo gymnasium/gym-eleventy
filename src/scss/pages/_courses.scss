@@ -772,7 +772,7 @@ html > {
 
 .collection {
   main {
-    section {
+    section:not(.featured) {
       background-color: var(--mono-100);
       padding: 1.4rem;
       border: 1px solid var(--mono-400);
@@ -920,6 +920,18 @@ html > {
         padding-top: 1.2rem;
         border-top: 1px dashed var(--mono-300);
         margin-top: 1.2rem;
+      }
+    }
+  }
+
+  // TODO: style the collections featured section
+  .featured {
+    ul {
+
+      @include breakpoint(large, min) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
       }
     }
   }

@@ -11,63 +11,93 @@ home:
       label: View all Courses
       class: btn
     items:
-    - gym-109
-    - gym-105
-    - gym-016
+    - id: GYM-109
+    - id: GYM-105
+    - id: GYM-016
 
 catalog:
   full:
-  - gym-107
+  - GYM-107
   short:
-  - gym-017
+  - GYM-017
   tutorial:
-  - gym-5054
+  - GYM-5054
   collection:
   - design-systems
 
 popular:
   full:
-  - gym-107
-  - gym-104
-  - gym-103
+  - GYM-107
+  - GYM-104
+  - GYM-103
   short:
     heading: Featured
     description:
     wrapper_class: courses
     items:
-    - gym-018
-    - gym-016
-    - gym-015
+    - GYM-018
+    - GYM-016
+    - GYM-015
 
 collection:
   design-systems:
     items:
-    - gym-018
-    - gym-019
-    - gym-020
-    - gym-017
+    - id: GYM-018
+      type: course
+    - id: GYM-019
+      type: course
+    - id: GYM-020
+      type: course
+    - id: GYM-017
+      type: course
   development:
     items:
-    - gym-016
-    - gym-5005
-    - web0013
-  ux:
+    - id: GYM-016
+      type: course
+    - id: GYM-5005
+      type: tutorial
+    - id: web0013
+      type: webinar
+  ux-design:
     items:
-    - gym-015
-    - gym-5008
-    - web0013
+    - id: GYM-015
+      type: course
+    - id: GYM-5008
+      type: tutorial
+    - id: web0013
+      type: webinar
   prototyping:
     items:
-    - gym-015
-    - gym-5012
-    - web0011
+    - id: GYM-015
+      type: course
+    - id: GYM-5012
+      type: tutorial
+    - id: web0011
+      type: webinar
   accessibility:
     items:
-    - gym-016
-    - (direct link to youtube video?)
-    - (direct link to medium article)
+    - id: GYM-016
+      type: course
+      cta_text: Enroll for Free
+    - link: https://youtu.be/B1y5aNsVVLQ
+      type: tutorial
+      title: Web Accessibility Testing Made Easy
+      # TODO: migrate image to a location that makes sense
+      img: https://thegymcms.com/img/hub-pages/accessibility/featured/acessibility-testing-pt1-poster.jpg
+      cta_text: Watch Now
+    - link: https://medium.com/gymnasium/advocating-for-accessibility-with-aaron-gustafson-54079c132152
+      type: article
+      title: Advocating for Accessibility with Aaron Gustafson
+      img: /img/hero/articles/advocating-for-accessibility/advocating-for-accessibility-1280w.png
+      cta_text: Learn More
   career-skills:
     items:
-    - gym-017
-    - gym-5052
-    - (direct link to medium article)
+    - id: GYM-017
+      type: course
+    - id: GYM-5052
+      type: tutorial
+    - link: https://medium.com/gymnasium/improving-your-portfolio-is-easier-than-you-think-b1430bbe1007
+      title: Improving Your Portfolio is Easier Than You Think
+      type: article
+      # TODO: migrate image to a location that makes sense
+      img: https://thegymcms.com/img/hub-pages/articles/featured/improving-your-portfolio.png

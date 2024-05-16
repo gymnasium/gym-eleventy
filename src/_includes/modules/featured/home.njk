@@ -1,0 +1,93 @@
+{%- if module -%}
+<section class="{{ module.wrapper_class }}-featured">
+  {%- if module.header -%}
+    {%- set header = module.header -%}
+    {%- include 'modules/components/header.njk' -%}
+  {%- endif -%}
+
+  <ul>
+    {%- for idx in range(0, module.ids.length) -%}
+      {%- if module.ids[idx].id -%}
+        {%- set id = module.ids[idx].id | upper -%}
+      {%- else -%}
+        {%- set id = module.ids[idx] | upper -%}
+      {%- endif -%}
+      
+      {%- set filteredId = collections.catalog | get_key(module.ids[idx].id) -%}
+
+      {%- set obj = collections.catalog[filteredId] -%}
+
+
+      {%- set path = obj.id | get_path -%}
+      {%- set title = obj.title | strip_html -%}
+      {%- set description = obj.description -%}
+
+      {%- if obj.slug -%}
+        {%- set slug = obj.slug -%}
+      {%- else -%}
+        {%- set slug = title | slugify -%}
+      {%- endif -%}
+
+      {%- set shortId = obj.id -%}
+      {%- set type = obj.type -%}
+
+      {%- set src = obj.img -%}
+
+      {%- set destUrl = "" -%}
+      {%- if type == 'webinar' -%}
+        {%- set destUrl = '/webinars/' + obj.slug -%}
+        {%- set src = '/img/og/webinars/' + obj.recording_ogimage -%}
+      {%- elif type == 'short' or type == 'full' -%}
+        {%- set destUrl = id | course_endpoint('course_about') -%}
+      {%- elif type == 'tutorial' -%}
+        {%- set destUrl = '/courses/take5/' + obj.title | slugify -%}
+      {%- else -%}
+        TYPE IS SOMETHING ELSE
+      {%- endif -%}
+      {%- set srcSet = src -%}
+      <li>
+        <div class="featured-item" id="featured-{{ type }}-{{ obj.id | lower }}">
+          <img
+            src="{{ src }}"
+            alt="Image for {{ title }}"
+          >
+
+          <hgroup>
+          {%- if obj["topic"] -%}
+            <p class="topic">{{ obj["topic"] }}</p>
+          {%- endif -%}
+
+          {%- if obj["title"] -%}
+            <h3>{{ obj["title"] | strip_html }}</h3>
+          {%- endif -%}
+          </hgroup>
+
+          {%- if obj["description"] -%}
+            <p>{{ obj["description"] }}</p>
+          {%- endif -%}
+
+          {%- if obj["instructor"] -%}
+            <p>with {{ bios[obj["instructor"]].name }}</p>
+            <p>{{ bios[obj["instructor"]].subtitle }}</p>
+          {%- endif -%}
+
+          <div class="cta">
+            <a class="btn" href="{{ destUrl }}">Learn More</a>
+          </div>
+        </div>
+      </li>
+    {%- endfor -%}
+  </ul>
+  {%- if module.description -%}
+    <p>{{ module.description | safe }}</p>
+  {%- endif -%}
+
+  {%- if module.cta -%}
+    <a class="btn" href="{{ module.cta.href }}">{{ module.cta.label }}</a>
+  {%- endif -%}
+</section>
+
+{%- else -%}
+  <em>{ Featured Course Module Placeholder }</em>
+  <p>Pass in the `module` variable to make this work</p>
+{%- endif -%}
