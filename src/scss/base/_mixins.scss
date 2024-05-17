@@ -42,6 +42,13 @@
         .bg-#{$color} {
           background-color: var(--#{$color}-#{$shade});
           --box-shadow-color: var(--#{$color}-#{$shade});
+
+          // Automatically set the color based on the HSL lightness value
+          @if lightness($value) > 50% {
+            color: var(--mono-900);
+          } @else {
+            color: var(--mono-100);
+          }
         }
       }
     }
