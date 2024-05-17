@@ -11,10 +11,10 @@ home:
       label: View all Courses
       class: btn
     items:
-    - id: GYM-109
-    - id: GYM-105
-    - id: GYM-016
-
+    - id: GYM-017
+    - id: GYM-018
+    - id: GYM-019
+    - id: GYM-020
 catalog:
   full:
   - GYM-107

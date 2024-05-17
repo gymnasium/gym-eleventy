@@ -30,10 +30,10 @@
           --box-shadow-color: var(--#{$color}-#{$shade});
   
           // Automatically set the color based on the HSL lightness value
-          @if lightness($value) > 50% {
+          @if lightness($value) > 60% {
             color: var(--mono-900);
           } @else {
-            color: var(--mono-100);
+            color: white;
           }
         }
       }
@@ -44,10 +44,10 @@
           --box-shadow-color: var(--#{$color}-#{$shade});
 
           // Automatically set the color based on the HSL lightness value
-          @if lightness($value) > 50% {
+          @if lightness($value) > 60% {
             color: var(--mono-900);
           } @else {
-            color: var(--mono-100);
+            color: white;
           }
         }
       }
