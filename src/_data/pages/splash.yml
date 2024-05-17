@@ -1,9 +1,9 @@
 intro:
-  heading: '503: Site Maintenance'
+  heading: 'Site Maintenance'
   description: '<span aria-label="Waving hand emoji" role="img">👋</span> We are down for site maintenance. Please check back later.'
 main:
   body_text:
-  - 'While you wait, be sure to check out our off-site content:'
+  - 'While you wait, be sure to check out our other content:'
   links:
   - label: AI Livestreams on YouTube
     url: https://www.youtube.com/playlist?list=PL0Y6L6nQtNzdtaaxYTEDIzZOFOOr8HZyz
