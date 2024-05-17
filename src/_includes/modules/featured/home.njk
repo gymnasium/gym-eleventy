@@ -6,14 +6,14 @@
   {%- endif -%}
 
   <ul>
-    {%- for idx in range(0, module.ids.length) -%}
-      {%- if module.ids[idx].id -%}
-        {%- set id = module.ids[idx].id | upper -%}
+    {%- for idx in range(0, module.items.length) -%}
+      {%- if module.items[idx].id -%}
+        {%- set id = module.items[idx].id | upper -%}
       {%- else -%}
-        {%- set id = module.ids[idx] | upper -%}
+        {%- set id = module.items[idx] | upper -%}
       {%- endif -%}
       
-      {%- set filteredId = collections.catalog | get_key(module.ids[idx].id) -%}
+      {%- set filteredId = collections.catalog | get_key(module.items[idx].id) -%}
 
       {%- set obj = collections.catalog[filteredId] -%}
 
