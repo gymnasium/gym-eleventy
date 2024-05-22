@@ -23,62 +23,70 @@
 }
 ---
 
-<article>
-  <header>
-    <h1>Webinar Recording</h1>
-    <h2>{{ item.title | safe }}</h2>
-    <h3>{{ item.event_guests | safe }}</h3>
-  </header>
+<article id="{{ item.id | slugify }}" class="webinar-detail">
 
-  <p>{{ item.description }}</p>
+  <div class="main">
 
-  {%- if item.video_id -%}
-    {%- youtube item.video_id -%}
-  {%- endif -%}
+    <header>
+      <h1>Webinar Recording</h1>
+      <hgroup>
+        <h2>{{ item.title | safe }}</h2>
+        <p>{{ item.event_guests | safe }}</p>
+      </hgroup>
+    </header>
 
-  {# TODO: Hidden for now, likely because this is more relevant to the "event" version of the page  #}
-  {# {%- if item.content -%}
-    <p>{{ item.content | safe }}</p>
-  {%- endif -%} #}
+    <p>{{ item.description }}</p>
 
-  {%- if item.resources -%}
-    <h2>Resources</h2>
-    <ul>
-      {%- for resource in item.resources -%}
-        <li><a href="{{ resource.label }}" target="_blank" rel="noopener">{{ resource.label }}</a></li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
+    {%- if item.video_id -%}
+      {%- youtube item.video_id -%}
+    {%- endif -%}
+
+    {# TODO: Hidden for now, likely because this is more relevant to the "event" version of the page  #}
+    {# {%- if item.content -%}
+      <p>{{ item.content | safe }}</p>
+    {%- endif -%} #}
+
+    {%- if item.resources -%}
+      <h2>Resources</h2>
+      <ul>
+        {%- for resource in item.resources -%}
+          <li><a href="{{ resource.label }}" target="_blank" rel="noopener">{{ resource.label }}</a></li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+  </div>
+
+  <aside>
+    <header>
+      <h1>Guest Speaker{%- if item.speaker[1] -%}s{%- endif -%}</h1>
+    </header>
+
+    {%- if item.speaker[0] -%}
+      <section>
+        <img src="{{ bios[item.speaker[0]]['img'] }}" alt="Headshot of {{ bios[item.speaker[0]]['name'] }}.">
+        <h2>{{ bios[item.speaker[0]]['name'] }}</h2>
+        <p>{{ bios[item.speaker[0]]['description'] | safe }}</p>
+      </section>
+    {%- endif -%}
+
+    {%- if item.speaker[1] -%}
+      <section>
+        <img src="{{ bios[item.speaker[1]]['img'] }}" alt="Headshot of {{ bios[item.speaker[1]]['name'] }}.">
+        <h2>{{ bios[item.speaker[1]]['name'] }}</h2>
+        <p>{{ bios[item.speaker[1]]['description'] | safe }}</p>
+      </section>
+    {%- endif -%}
+
+    <header>
+      <h1>Host</h1>
+    </header>
+
+    <section>
+      <img src="{{ bios[item.host]['img'] }}" alt="Headshot of {{ bios[item.host]['name'] }}.">
+      <h2>{{ bios[item.host]['name'] }}</h2>
+      <p>{{ bios[item.host]['description'] }}</p>
+    </section>
+  </aside>
+
 </article>
-
-<aside>
-  <header>
-    <h1>Guest Speaker{%- if item.speaker[1] -%}s{%- endif -%}</h1>
-  </header>
-
-  {%- if item.speaker[0] -%}
-    <section>
-      <img src="{{ bios[item.speaker[0]]['img'] }}" alt="Image of {{ bios[item.speaker[0]]['name'] }}">
-      <h2>{{ bios[item.speaker[0]]['name'] }}</h2>
-      <p>{{ bios[item.speaker[0]]['description'] | safe }}</p>
-    </section>
-  {%- endif -%}
-
-  {%- if item.speaker[1] -%}
-    <section>
-      <img src="{{ bios[item.speaker[1]]['img'] }}" alt="Image of {{ bios[item.speaker[1]]['name'] }}">
-      <h2>{{ bios[item.speaker[1]]['name'] }}</h2>
-      <p>{{ bios[item.speaker[1]]['description'] | safe }}</p>
-    </section>
-  {%- endif -%}
-
-  <header>
-    <h1>Host</h1>
-  </header>
-
-  <section>
-    <img src="{{ bios[item.host]['img'] }}" alt="Image of {{ bios[item.host]['name'] }}">
-    <h2>{{ bios[item.host]['name'] }}</h2>
-    <p>{{ bios[item.host]['description'] }}</p>
-  </section>
-</aside>
