@@ -103,7 +103,7 @@ function parseOptions(input, output) {
   });
 }
 
-window.addEventListener("load", () => {
+function gymJobs() {
   // add stuff here
   if (typeof jobsContainer !== "undefined" && jobsContainer !== null) {
     console.log("jobs.js active");
@@ -377,4 +377,8 @@ window.addEventListener("load", () => {
     form.addEventListener("change", selectChange, false);
 
   }
+}
+
+window.addEventListener("load", () => {
+  gymJobs();
 });
