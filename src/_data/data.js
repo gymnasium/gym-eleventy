@@ -7,7 +7,12 @@ const ENV = process.env.ELEVENTY_ENV;
 const DATA_URL = process.env.DATA_URL || 'https://data.gym.soy';
 
 const MARKET_FEED = 'https://assets.aquent.com/apps/gym/markets.json';
+
+const MARKET_FEED2 = 'https://devaquentllc.wpengine.com/feeds/gymnasium-markets.json';
+
 const JOB_FEED = 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/jobs/listing?pageSize=500';
+
+const JOB_FEED2 = 'https://devaquentllc.wpengine.com/feeds/gymnasium-jobs.json';
 
 const JOB_OPTIONS = 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/jobs/options';
 
@@ -46,10 +51,11 @@ module.exports = async function() {
         "roles": job_options.roles,
         "urls": {
           "AU": "https://aquent.com.au/find-work/",
+          "CA": "https://aquent.com/find-work/",
           "DE": "https://aquent.com/find-work/",
           "FR": "https://aquent.fr/nos-offres/",
           "GB": "https://aquent.co.uk/find-work/",
-          "JP": "https://aquent.co.jp/jobs/",
+          "JP": "https://aquent.co.jp/find-work/",
           "NL": "https://aquent.com/find-work/",
           "US": "https://aquent.com/find-work/",
         }
