@@ -1,5 +1,6 @@
-id: web0013
+id: web-0013
 slug: decade-of-responsive-web-design
+color: magenta
 type: webinar
 title: "A Decade of Responsive <span class=\"nowrap\">Web Design</span>"
 event_guests: "with Ethan Marcotte"

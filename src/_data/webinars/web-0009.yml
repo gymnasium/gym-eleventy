@@ -1,5 +1,6 @@
-id: web0009
+id: web-0009
 slug: future-of-web-layout
+color: magenta
 type: webinar
 title: "The Future of <span class=\"nowrap\">Web Layout</span>"
 event_guests: "with Rachel Andrew <span class=\"nowrap\">and Jason Pamental</span>"

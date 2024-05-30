@@ -95,3 +95,142 @@
     max-width: 100%;
   }
 }
+
+
+// Adds grid support with fallbacks
+@mixin card-grid {
+  .card-grid {
+    margin-top: 1.4rem;
+
+    // --- legacy columns (inline-block) w/ breakpoints
+    > ul {
+      list-style: none;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      > li {
+        overflow: hidden;
+      }
+    }
+  }
+
+  @include breakpoint(40em, min) {
+    .card-grid {
+      padding-bottom: 0;
+      overflow: hidden;
+
+      > ul {
+        margin-left: -0.6rem;
+        margin-right: -0.6rem;
+
+        li {
+          display: inline-block;
+          width: 50%;
+          vertical-align: top;
+          box-sizing: border-box;
+          padding-left: .6rem;
+          padding-right: .6rem;
+          margin-top: 1.2rem;
+          margin-right: -4px;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(58em, min) {
+    .card-grid > ul li {
+      width: 50%;
+    }
+  }
+
+  @include breakpoint(64em, min) {
+    .card-grid > ul li {
+      width: 33.333333333333333%;
+    }
+
+    // Hide 4th panel if it exists; see featured-courses.html
+    .list-featured-courses li:last-child {
+      display: none;
+    }
+  }
+
+  @include breakpoint(78em, min) {
+    .card-grid ul li {
+      width: 25%;
+    }
+
+    .card-grid ul li:last-child {
+      display: inline-block;
+    }
+  }
+
+  // --- modern columns (grid)
+  @supports (display: grid) {
+
+    .card-grid > ul {
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 1.2rem;
+    }
+
+    @include breakpoint(36em, min) {
+      .card-grid > ul {
+        grid-template-columns: repeat(auto-fit, minmax(19.25em, 1fr));
+      }
+
+      .card-grid-max-2 ul {
+        grid-template-columns: repeat(auto-fill, minmax(24em, 1fr));
+      }
+
+      .card-grid-max-3 ul {
+        grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+      }
+    }
+
+   // Hide 4th panel if it exists; see featured-courses.html
+    @include breakpoint(62em, min) {
+      .list-featured-courses li:last-child {
+        display: none;
+      }
+    }
+
+    @include breakpoint(78em, min) {
+      .card-grid ul li:last-child {
+        display: inherit;
+      }
+    }
+
+    // override -- legacy layout -- start
+
+    .card-grid > ul li {
+      overflow: visible;
+    }
+
+    .card-grid > ul,
+    .card-grid > ul li {
+      margin-top: 0;
+      margin-right: 0;
+    }
+
+    .card-grid > ul {
+      margin-left: 0;
+
+      li {
+        display: inherit;
+        width: auto;
+        box-sizing: content-box;
+        padding-left: 0;
+        padding-right: 0;
+
+        &::before {
+          content: normal;
+        }
+      }
+    }
+    // override -- legacy layout -- end
+
+  }
+}

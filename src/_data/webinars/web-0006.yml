@@ -1,5 +1,6 @@
-id: web0006
+id: web-0006
 slug: keeping-up-with-javascript
+color: purple
 type: webinar
 title: "Keeping Up with JavaScript is a <span class=\"nowrap\">Full-time Job</span>"
 event_guests: "with Kevin Chisholm and <span class=\"nowrap\">Keith Peters</span>"

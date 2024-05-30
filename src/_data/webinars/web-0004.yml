@@ -1,5 +1,6 @@
-id: web0004
+id: web-0004
 slug: web-design-is-hard
+color: magenta
 type: webinar
 title: "Web Design is Hard"
 event_guests: "with Jeffrey Zeldman and <span class=\"nowrap\">Aaron Gustafson</span>"

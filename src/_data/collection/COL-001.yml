@@ -4,6 +4,7 @@ meta:
   topic: "Development"
   description: "Develop the skills you need to build fast, responsive websites."
   slug: development
+  color: magenta
   order: 2
   redirectFrom: '/web-development/'
 
@@ -72,15 +73,15 @@ webinars:
     class: btn
   dev-webinars:
     ids:
-    - id: web0013
-    - id: web0011
-    - id: web0010
-    - id: web0009
-    - id: web0008
-    - id: web0007
-    - id: web0006
-    - id: web0005
-    - id: web0004
+    - id: web-0013
+    - id: web-0011
+    - id: web-0010
+    - id: web-0009
+    - id: web-0008
+    - id: web-0007
+    - id: web-0006
+    - id: web-0005
+    - id: web-0004
 
 articles:
   module: lists/default

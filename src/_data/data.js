@@ -52,7 +52,7 @@ module.exports = async function() {
 
     // const feed = feed1.items.concat(feed2.items);
 
-    console.log(markets2)
+    // console.log(markets2)
 
     return {
       // live values

@@ -1,5 +1,6 @@
-id: web0008
+id: web-0008
 slug: rethinking-full-stack
+color: purple
 type: webinar
 title: "Rethinking <span class=\"nowrap\">Full Stack: </span><br/>Cost and <span class=\"nowrap\">Compromise</span>"
 event_guests: "with Eric Meyer <span class=\"nowrap\">and Dan Mall</span>"
