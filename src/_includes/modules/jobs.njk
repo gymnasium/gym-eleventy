@@ -1,4 +1,4 @@
-{%- if jobs.items -%}
+{%- if data.JOBDATA.jobs2 -%}
   {%- set header = module.header -%}
   {%- include 'modules/components/header.njk' -%}
 
@@ -6,9 +6,10 @@
     <script>var JOB_URLS = {{ data.JOBDATA.urls | stringify | safe }}</script>
     <select name="location" id="location" class="form-control">
       <option value="">Select a location nearest you</option>
+
       {# New Location API
       <option value="remote">Remote, all locations</option>
-      {%- for location in data.JOBDATA.locations -%}
+      {%- for location in data.markets2 -%}
         <option value="{{ location.id }}">{{ location.name }}</option>
       {%- endfor -%}
       #}
@@ -16,35 +17,41 @@
       <option value="remote">Remote, all locations</option>
 
       <optgroup label="Australia">
-        {%- for market in markets.items -%} {%- if market.countryCode == 'AU' -%}
-        <option value="{{ market.id }}">{{ market.title }}</option>
-        {%- endif -%} {%- endfor -%}
+        {%- for market in data.markets2 -%}{%- if market['regions'][0] == 'Australia' -%}
+        <option value="{{ market.cloudwall_id }}">{{ market.name }}</option>
+        {%- endif -%}{%- endfor -%}
       </optgroup>
 
       <optgroup label="Canada">
-        {%- for market in markets.items -%} {%- if market.countryCode == 'CA' -%}
-        <option value="{{ market.id }}">{{ market.title }}</option>
+        {%- for market in data.markets2 -%}{%- if market.country_code == 'CA' -%}
+        <option value="{{ market.cloudwall_id }}">{{ market.name }}</option>
         {%- endif -%} {%- endfor -%}
       </optgroup>
+
       <optgroup label="Europe">
-        {%- for market in markets.items -%} {%- if market.countryCode == 'DE' or
-        market.countryCode == 'FR' or market.countryCode == 'NL' or
-        market.countryCode == 'UK' -%}
-        <option value="{{ market.id }}">{{ market.title }}</option>
-        {%- endif -%} {%- endfor -%}
+        {%- for market in data.markets2 -%}{%- if market['regions'][0] == 'Europe' -%}
+        <option value="{{ market.cloudwall_id }}">{{ market.name }}</option>
+        {%- endif -%}{%- endfor -%}
       </optgroup>
 
       <optgroup label="Japan">
-        {%- for market in markets.items -%} {%- if market.countryCode == 'JP' -%}
-        <option value="{{ market.id }}">{{ market.title }}</option>
-        {%- endif -%} {%- endfor -%}
+        {%- for market in data.markets2 -%}{%- if market['regions'][0] == 'Japan' -%}
+        <option value="{{ market.cloudwall_id }}">{{ market.name }}</option>
+        {%- endif -%}{%- endfor -%}
       </optgroup>
 
       <optgroup label="United States">
-        {%- for market in markets.items -%} {%- if market.countryCode == 'US' -%}
-        <option value="{{ market.id }}">{{ market.title }}</option>
-        {%- endif -%} {%- endfor -%}
+        {%- for market in data.markets2 -%}{%- if market.country_code == 'US' -%}
+        <option value="{{ market.cloudwall_id }}">{{ market.name }}</option>
+        {%- endif -%}{%- endfor -%}
       </optgroup>
+
+      {# Probably better to filter by US/CA individually rather than North America together #}
+      {# <optgroup label="North America">
+        {%- for market in data.markets2 -%}{%- if market['regions'][0] == 'North America' -%}
+        <option value="{{ market.cloudwall_id }}">{{ market.name }}</option>
+        {%- endif -%}{%- endfor -%}
+      </optgroup> #}
     </select>
   </form>
 
@@ -74,7 +81,7 @@
   <div id="jobs-container" class="jobs-container list-hr"
       data-options="heading:h3;category:false;limit:10;"
       data-utm="utm_source=gymnasium&amp;utm_medium=web&amp;utm_campaign=job-module&amp;utm_content=textlink"
-      data-feed="{{ data.JOB_FEED }}">
+      data-feed="https://devaquentllc.wpengine.com/feeds/gymnasium-jobs.json">
     {# <ul>
       {%- for job in jobs.items.slice(0, 10) -%}
       <li>

@@ -260,9 +260,9 @@ function gymJobs() {
         if (numResults > 0) {
           // Sort array by mod/post date properly, whichever is more recent
           items = items.sort((a, b) => {
-            const aModDate = new Date(a.modDate).getTime();
+            const aModDate = new Date(a.cw_modified_date).getTime();
             const aPostDate = new Date(a.posted_date).getTime();
-            const bModDate = new Date(b.modDate).getTime();
+            const bModDate = new Date(b.cw_modified_date).getTime();
             const bPostDate = new Date(b.posted_date).getTime();
 
             const compA = aModDate > aPostDate ? aModDate : aPostDate;
@@ -285,8 +285,8 @@ function gymJobs() {
           for (var i = 0; i < limit; i++) {
             var el = items[i];
             var postDate = el.posted_date;
-            var modDate = el.modDate;
-            const jobUrl = `${window.JOB_URLS[el.country]}${el.job_id}`;
+            var modDate = el.cw_modified_date;
+            const jobUrl = `${window.JOB_URLS[el.country_code]}${el.id}`;
 
             outputDebug(
               `[job module] job id: ${el.id}\n   remote type: ${
@@ -296,9 +296,9 @@ function gymJobs() {
 
             list += "<li>";
             list += `<a href="${decodeURI(jobUrl)}${utms}" title="${
-              el.job_title
+              el.title
             }"><span class="job-title">${
-              el.job_title
+              el.title
             } </span><span class="job-location"> ${el.city}</span></a>`;
             list += "</li>";
           }

@@ -28,7 +28,17 @@ module.exports = async function() {
       type: "json"
     });
 
+    let jobs2 = await EleventyFetch(`${JOB_FEED2}`, {
+      duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '30m',
+      type: "json"
+    });
+
     let markets = await EleventyFetch(MARKET_FEED, {
+      duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '24h',
+      type: "json"
+    });
+
+    let markets2 = await EleventyFetch(MARKET_FEED2, {
       duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '24h',
       type: "json"
     });
@@ -40,11 +50,14 @@ module.exports = async function() {
 
     // const feed = feed1.items.concat(feed2.items);
 
+    console.log(markets2)
+
     return {
       // live values
       JOB_FEED: JOB_FEED,
       JOBDATA: {
         "jobs": jobs.items,
+        "jobs2": jobs2.items,
         "locations": job_options.locations,
         "placement_options": job_options.placement_options,
         "preferences": job_options.preferences,
@@ -61,6 +74,7 @@ module.exports = async function() {
         }
       },
       markets: markets.items,
+      markets2: markets2,
 
       // blog: feed,
     };

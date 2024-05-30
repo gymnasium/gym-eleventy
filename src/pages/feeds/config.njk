@@ -14,20 +14,7 @@ eleventyExcludeFromCollections: true
   "html": {{ config.html | stringify | replace('"FOOTER_HTML"', footer) | safe }},
   "bios": {{ bios | stringify | safe }},
   "courses": {{ courses | stringify | safe }},
-  "markets": {
-  {%- for market in markets.items -%}
-    "{{ market.id }}": {
-      "id": "{{ market.id }}",
-      "title": "{{ market.title }}",
-      "city": "{{ market.city }}",
-      "postalCode": "{{ market.postalCode }}",
-      "stateProvince": "{{ market.stateProvince }}",
-      "countryCode": "{{ market.countryCode }}",
-      "countryName": "{{ market.countryName }}",
-      "coords": "{{ market.coords }}"
-    }{%- if not loop.last -%},{%- endif -%}
-  {%- endfor -%}
-  },
+  "markets": {{ data.markets2 | stringify | safe }},
   "paths": {{ config.paths | stringify | safe }},
   "colors": {{ config.colors | stringify | safe }},
   "css": {{ config.css | stringify | safe }}
