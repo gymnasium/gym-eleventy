@@ -21,9 +21,9 @@ meta:
       {# <div class="" id="{{ webinar.meta.id | lower }}"> #}
         <div class="main">
           <header>
-            <p class="topic caps">{{ webinar.content_category }}</p>
+            <p class="topic caps"><b>{{ webinar.content_category }}</b></p>
             <h2 class="title">{{ webinar.title | safe }}</h2>
-            <p>{{ webinar.event_guests | safe }}</p>
+            <p class="guests"><b>{{ webinar.event_guests | safe }}</b></p>
           </header>
         </div>
         <div class="cta">
