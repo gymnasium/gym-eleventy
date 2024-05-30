@@ -244,7 +244,7 @@ function gymJobs() {
           // 2 = Off-Site
           // 3 = Either
           // 4 = Partial on-site
-          items = items.filter((item) => parseInt(item.offsite_preference) >= 2);
+          items = items.filter((item) => parseInt(item.off_site_preference_id) >= 2);
           updateDropdown("remote");
 
           outputDebug("[job module] showing only remote & hybrid options…");
@@ -290,7 +290,7 @@ function gymJobs() {
 
             outputDebug(
               `[job module] job id: ${el.id}\n   remote type: ${
-                remoteLegend[el.remote]
+                remoteLegend[el.off_site_preference_id]
               }\n   posted: ${postDate}\n   mod date: ${modDate}`
             );
 
