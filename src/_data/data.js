@@ -14,7 +14,7 @@ const MARKET_FEED2 = 'https://devaquentllc.wpengine.com/feeds/gymnasium-markets.
 
 const JOB_FEED = 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/jobs/listing?pageSize=500';
 
-const JOB_FEED2 = 'https://devaquentllc.wpengine.com/feeds/gymnasium-jobs.json';
+const GYM_JOB_FEED = 'https://devaquentllc.wpengine.com/feeds/gymnasium-jobs.json';
 
 const JOB_OPTIONS = 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/jobs/options';
 
@@ -30,7 +30,7 @@ module.exports = async function() {
       type: "json"
     });
 
-    let jobs2 = await EleventyFetch(`${JOB_FEED2}`, {
+    let jobs2 = await EleventyFetch(`${GYM_JOB_FEED}`, {
       duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '30m',
       type: "json"
     });
@@ -57,6 +57,7 @@ module.exports = async function() {
     return {
       // live values
       JOB_FEED: JOB_FEED,
+      GYM_JOB_FEED: GYM_JOB_FEED,
       JOBDATA: {
         "jobs": jobs.items,
         "jobs2": jobs2.items,
