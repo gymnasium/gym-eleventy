@@ -14,7 +14,7 @@ const MARKET_FEED2 = 'https://devaquentllc.wpengine.com/feeds/gymnasium-markets.
 
 const JOB_FEED = 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/jobs/listing?pageSize=500';
 
-const GYM_JOB_FEED = 'https://devaquentllc.wpengine.com/feeds/gymnasium-jobs.json';
+const GYM_JOB_FEED = 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/gymnasium/listing';
 
 const JOB_OPTIONS = 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/jobs/options';
 

@@ -244,7 +244,7 @@ function gymJobs() {
           // 2 = Off-Site
           // 3 = Either
           // 4 = Partial on-site
-          items = items.filter((item) => parseInt(item.off_site_preference_id) >= 2);
+          items = items.filter((item) => parseInt(item.offsite_preference) >= 2);
           updateDropdown("remote");
 
           outputDebug("[job module] showing only remote & hybrid options…");
@@ -286,19 +286,19 @@ function gymJobs() {
             var el = items[i];
             var postDate = el.posted_date;
             var modDate = el.cw_modified_date;
-            const jobUrl = `${window.JOB_URLS[el.country_code]}${el.id}`;
+            const jobUrl = `${window.JOB_URLS[el.country]}${el.job_id}`;
 
             outputDebug(
               `[job module] job id: ${el.id}\n   remote type: ${
-                remoteLegend[el.off_site_preference_id]
+                remoteLegend[el.offsite_preference]
               }\n   posted: ${postDate}\n   mod date: ${modDate}`
             );
 
             list += "<li>";
             list += `<a href="${decodeURI(jobUrl)}${utms}" title="${
-              el.title
+              el.job_title
             }"><span class="job-title">${
-              el.title
+              el.job_title
             } </span><span class="job-location"> ${el.city}</span></a>`;
             list += "</li>";
           }
