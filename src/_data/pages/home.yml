@@ -1,0 +1,19 @@
+
+how-gymnasium-works:
+  header:
+    heading: How Gymnasium Works
+    heading_type: h1
+  items:
+    - heading: Free Online Courses
+      description: Our courses are taught by industry experts. You can enroll anytime, anywhere.
+    - heading: New Skills
+      description: You can share your achievement with your network when you pass a final exam.
+    - heading: Career Opportunities
+      description: We get you jobs through Aquent, one of the largest staffing agencies in the world.
+    - heading: Lifelong Learning
+      description: We produce articles, tutorials, and webinars with trailblazers in the web community.
+
+find-work:
+  header:
+    heading: Find Work
+    heading_type: h1

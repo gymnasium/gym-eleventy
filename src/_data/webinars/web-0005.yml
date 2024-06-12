@@ -1,5 +1,6 @@
-id: web0005
+id: web-0005
 slug: state-of-responsive-web-design
+color: magenta
 type: webinar
 title: "The State of Responsive Web Design"
 event_guests: "with Ethan Marcotte and <span class=\"nowrap\">Karen McGrane</span>"
@@ -7,8 +8,8 @@ description: "A conversation about the past, present, and future state of respon
 permalink: /webinars/state-of-responsive-web-design
 event_date: 2016-12-08
 event_time: "2PM EDT"
-event_ogimage: state-of-responsive-web-design-event-og.png
-recording_ogimage: state-of-responsive-web-design-recording-og.png
+event_ogimage: state-of-responsive-web-design-event.png
+recording_ogimage: state-of-responsive-web-design-recording.png
 host: josborn
 speaker:
   - emarcotte

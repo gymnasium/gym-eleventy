@@ -1,10 +1,12 @@
 intro:
-  heading: Jobs
-  description: |
-    Explore our free resources for creative pros — from in-depth
-    <a href="#resume-tips">articles</a> and 5-minute
-    <a href="#take5-tutorials">tutorials</a> to contract and full-time
-    <a href="#jobs">jobs</a>.
+  header:
+    heading: Jobs
+    heading_type: h1
+    description: |
+      Explore our free resources for creative pros — from in-depth
+      <a href="#resume-tips">articles</a> and 5-minute
+      <a href="#take5-tutorials">tutorials</a> to contract and full-time
+      <a href="#jobs">jobs</a>.
   cards:
   - heading: Salary Guides
     subheading: See How Your Salary & Benefits Stack Up
@@ -33,11 +35,13 @@ intro:
 
 jobs:
   module: jobs
-  heading: "Jobs"
+  header:
+    heading: "Jobs"
 
 salary-guides:
   module: lists/default
-  heading: Salary Guides
+  header:
+    heading: Salary Guides
   articles:
     links:
     - url: https://aquenttalent.com/check-salary
@@ -49,7 +53,8 @@ salary-guides:
 
 resume-tips:
   module: lists/default
-  heading: Résumé Tips
+  header:
+    heading: Résumé Tips
   articles:
     links:
     - url: https://aquenttalent.com/blog/how-to-apply-online-and-actually-get-a-job
@@ -59,7 +64,8 @@ resume-tips:
 
 portfolio-tips:
   module: lists/default
-  heading: Portfolio Tips
+  header:
+    heading: Portfolio Tips
   articles:
     links:
     - url: https://aquenttalent.com/blog/top-5-free-portfolio-sites
@@ -67,7 +73,8 @@ portfolio-tips:
 
 networking-tips:
   module: lists/default
-  heading: Networking Tips
+  header:
+    heading: Networking Tips
   articles:
     links:
     - url: https://aquenttalent.com/blog/8-networking-techniques-for-meeting-people-face-to-face
@@ -83,7 +90,8 @@ networking-tips:
 
 interview-tips:
   module: lists/default
-  heading: Interview Tips
+  header:
+    heading: Interview Tips
   articles:
     links:
     - url: https://medium.com/gymnasium/how-to-conduct-an-interview-like-a-boss-7de5c9810c4c
@@ -101,7 +109,8 @@ interview-tips:
 
 take-5-tutorials:
   module: lists/default
-  heading: Take 5 Tutorials
+  header:
+    heading: Take 5 Tutorials
   tutorials:
     ids:
     - id: GYM-5020
@@ -113,7 +122,8 @@ take-5-tutorials:
 
 tips-for-designers:
   module: lists/default
-  heading: Tips for Designers
+  header:
+    heading: Tips for Designers
   articles:
     links:
     - url: https://aquenttalent.com/blog/how-to-create-a-ux-profile-that-will-help-you-land-your-dream-job
@@ -135,7 +145,8 @@ tips-for-designers:
 
 tips-for-managers:
   module: lists/default
-  heading: "Tips for Managers"
+  header:
+    heading: "Tips for Managers"
   articles:
     links:
     - url: https://medium.com/aquent-off-hours/ux-hiring-is-not-easy-even-for-a-company-full-of-ux-recruiters-4bd2ce1e6720
@@ -149,7 +160,8 @@ tips-for-managers:
 
 diversity-and-inclusion:
   module: lists/default
-  heading: "Diversity & Inclusion"
+  header:
+    heading: "Diversity & Inclusion"
   articles:
     links:
     - url: https://aquenttalent.com/blog/how-to-fix-your-talent-pipeline-to-be-more-inclusive

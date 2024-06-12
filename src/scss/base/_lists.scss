@@ -11,8 +11,8 @@ ul[class] {
   padding-left: 0;
 }
 
-ul:not([class]),
-ol:not([class]) {
+ul,
+ol {
   margin-left: 0;
 
   ul,
@@ -20,12 +20,12 @@ ol:not([class]) {
     padding: 0.5rem 1rem 0;
   }
 
-  li:not(nav[class] li) {
+  li {
     margin-top: 0.5rem;
   }
 }
 
-ul:not([class]) {
+ul {
   > li::marker {
     color: var(--secondary-500);
   }

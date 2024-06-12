@@ -41,6 +41,14 @@ module.exports = eleventyConfig => {
     return fs.existsSync(filename);
   });
 
+
+  // check if something has HTML tags
+  eleventyConfig.addFilter('has_html', (data) => {
+    let regexForHTML = /<([A-Za-z][A-Za-z0-9]*)\b[^>]*>(.*?)<\/\1>/;
+    let hasHTML = regexForHTML.test(data);
+    return hasHTML;
+  });
+
   // helps get a full id (object.key) when provided with a short id (good for webinars)
   eleventyConfig.addFilter('get_key', (obj, id) => {
     const key = Object.keys(obj).filter(k => k.startsWith(id));

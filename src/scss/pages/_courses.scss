@@ -772,7 +772,7 @@ html > {
 
 .collection {
   main {
-    section {
+    section:not(.featured) {
       background-color: var(--mono-100);
       padding: 1.4rem;
       border: 1px solid var(--mono-400);
@@ -802,12 +802,13 @@ html > {
         text-align: center;
         padding-top: 1.4rem;
         border-top: 1px solid var(--mono-300);
+        margin-top: 1.4rem;
       }
     }
 
-    #courses,
-    #tutorials,
-    #webinars {
+    .courses,
+    .tutorials,
+    .webinars {
 
       ul {
         display: grid;
@@ -816,8 +817,9 @@ html > {
 
       h3 {
         font-family: var(--font-family-default);
-        font-size: 1.3125rem;
+        font-size: 1.375rem;
         line-height: 1.35;
+        margin-bottom: 0;
       }
 
       .artwork + h3 {
@@ -826,11 +828,10 @@ html > {
 
     }
 
-    #courses {
+    .courses {
 
       ul {
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        padding-bottom: 1.4rem;
 
         li {
           display: inherit;
@@ -842,8 +843,8 @@ html > {
 
     }
 
-    #tutorials,
-    #webinars {
+    .tutorials,
+    .webinars {
 
       ul {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -851,7 +852,7 @@ html > {
 
     }
 
-    #webinars {
+    .webinars {
 
       .artwork {
         height: 0;
@@ -865,11 +866,23 @@ html > {
 
     }
 
-    #articles {
+    .articles {
+      header {
+        border-bottom: 1px solid var(--mono-300);
+
+        &:not(#articles > header:first-child):not(#articles > [class]:first-child header) {
+          margin-top: 1.6rem;
+        }
+
+        h3 {
+          font-size: 1.375rem;
+          font-weight: 900;
+        }
+      }
       ul {
         li {
-          padding-top: 1.2rem;
-          border-top: 1px dashed var(--mono-300);
+          padding-bottom: 1.2rem;
+          border-bottom: 1px dashed var(--mono-300);
           margin-top: 1.2rem;
 
           cite {
@@ -880,7 +893,7 @@ html > {
       }
     }
 
-    #jobs {
+    .jobs {
       form {
         display: inline-block;
         padding-right: 1rem;
@@ -910,4 +923,33 @@ html > {
       }
     }
   }
+
+  // TODO: style the collections featured section
+  .featured {
+    ul {
+
+      @include breakpoint(large, min) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 2rem;
+      }
+    }
+  }
 }
+
+
+// Webinars page-specific style rules
+// Layout pattern .tutorial-detail
+
+.webinar-detail {
+  display: grid;
+  gap: 1.4rem 2.2rem;
+
+  @include breakpoint(large, min) {
+    & {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+}
+

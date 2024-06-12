@@ -27,38 +27,25 @@
 {%- include 'modules/hero.njk' -%}
 
 <section class="how-gymnasium-works">
-  <h1>How Gymnasium Works</h1>
+  {%- set module = pages['home']['how-gymnasium-works'] -%}
+  {%- set header = module['header'] -%}
+  {%- include 'modules/components/header.njk' -%}
+  {% set items = module['items'] -%}
   <ul>
-    <li>
-      <h2>Free Online Courses</h2>
-      <p>Our courses are taught by industry experts. You can enroll anytime,
-        anywhere.</p>
-    </li>
-    <li>
-      <h2>New Skills</h2>
-      <p>You can share your achievement with your network when you pass a final
-        exam.</p>
-    </li>
-    <li>
-      <h2>Career Opportunities</h2>
-      <p>We get you jobs through Aquent, one of the largest staffing agencies in
-        the world.</p>
-    </li>
-    <li>
-      <h2>Lifelong Learning</h2>
-      <p>We produce articles, tutorials, and webinars with trailblazers in the
-        web community.</p>
-    </li>
+    {%- for item in items %}
+      <li>
+        <h2>{{ item.heading }}</h2>
+        <p>{{ item.description }}</p>
+      </li>
+    {%- endfor -%}
   </ul>
+
 </section>
 
 {%- set module = featured['home']['featured'] -%}
-{%- include 'modules/featured/course.njk' -%}
-
+{%- include 'modules/featured/home.njk' -%}
 
 <section class="home-find-work bg-mono-700 full-bleed">
-  <header>
-    <h1>Find Work</h1>
-  </header>
+  {%- set header = pages['home']['find-work']['header'] -%}
   {%- include 'modules/jobs.njk' -%}
 </section>

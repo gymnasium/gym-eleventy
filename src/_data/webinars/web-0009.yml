@@ -1,5 +1,6 @@
-id: web0009
+id: web-0009
 slug: future-of-web-layout
+color: magenta
 type: webinar
 title: "The Future of <span class=\"nowrap\">Web Layout</span>"
 event_guests: "with Rachel Andrew <span class=\"nowrap\">and Jason Pamental</span>"
@@ -8,8 +9,8 @@ permalink: /webinars/future-of-web-layout
 date: 2018-02-05
 event_date: 2018-03-13
 event_time: "10AM EDT"
-event_ogimage: future-of-web-layout-event-og.png
-recording_ogimage: future-of-web-layout-recording-og.png
+event_ogimage: future-of-web-layout-event.png
+recording_ogimage: future-of-web-layout-recording.png
 host: josborn
 speaker:
   - randrew

@@ -1,5 +1,6 @@
-id: web0004
+id: web-0004
 slug: web-design-is-hard
+color: magenta
 type: webinar
 title: "Web Design is Hard"
 event_guests: "with Jeffrey Zeldman and <span class=\"nowrap\">Aaron Gustafson</span>"
@@ -7,8 +8,8 @@ description: "A conversation about navigating the complex world of web design ed
 permalink: /webinars/web-design-is-hard
 event_date: 2016-09-21
 event_time: "2PM EDT"
-event_ogimage: web-design-is-hard-event-og.png
-recording_ogimage: web-design-is-hard-recording-og.png
+event_ogimage: web-design-is-hard-event.png
+recording_ogimage: web-design-is-hard-recording.png
 host: josborn
 speaker:
   - jzeldman

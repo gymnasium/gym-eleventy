@@ -1,5 +1,6 @@
-id: web0013
+id: web-0013
 slug: decade-of-responsive-web-design
+color: magenta
 type: webinar
 title: "A Decade of Responsive <span class=\"nowrap\">Web Design</span>"
 event_guests: "with Ethan Marcotte"
@@ -7,8 +8,8 @@ description: "Join us for a webinar with Ethan Marcotte as we celebrate the past
 permalink: /webinars/decade-of-responsive-web-design
 event_date: 2020-05-26
 event_time: "2:00 PM EDT"
-event_ogimage: decade-of-responsive-web-design-event-og.png
-recording_ogimage: decade-of-responsive-web-design-recording-og.png
+event_ogimage: decade-of-responsive-web-design-event.png
+recording_ogimage: decade-of-responsive-web-design-recording.png
 host: josborn
 speaker:
   - emarcotte

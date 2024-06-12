@@ -3,30 +3,37 @@ layout: layouts/main.njk
 permalink: /webinars/
 meta:
   title: Webinars
+  description: "Insightful conversations with trailblazers in the web community."
   sitemapPriority: 0.5
   sitemapChangeFreq: monthly
 ---
 
-<h1>Webinars</h1>
-<p>Insightful conversations with trailblazers in the web community.</p>
-
 {%- if webinars -%}
-<ul>
+<header class="intro-about bg-mono-400 full-bleed">
+  <h1>Webinars</h1>
+  <p>Insightful conversations with trailblazers in the web community.</p>
+</header>
+
+<div class="card-grid">
+  <ul>
   {%- for webinar in webinars | sortDataByDate('event_date') | reverse -%}
-  <li>
-    <header>
-      <span>{{ webinar.id }}</span>
-      {# DEBUG<br>
-        Event Date: <time datetime="{{ webinar.event_date }}">{{ webinar.event_date }}</time><br>
-        Date: <time datetime="{{ webinar.date }}">{{ webinar.date }}</time> #}
-      <p>{{ webinar.content_category }}</p>
-      <h2>{{ webinar.title | safe }}</h2>
-    </header>
-    <p>{{ webinar.event_guests | safe }}</p>
-    <a href="/webinars/{{ webinar.slug }}">Watch Recording</a>
-  </li>
+    <li class="color-card card {{ webinar.color | slugify }}" id="{{ webinar.id | lower }}">
+      {# <div class="" id="{{ webinar.meta.id | lower }}"> #}
+        <div class="main">
+          <header>
+            <p class="topic caps"><b>{{ webinar.content_category }}</b></p>
+            <h2 class="title">{{ webinar.title | safe }}</h2>
+            <p class="guests"><b>{{ webinar.event_guests | safe }}</b></p>
+          </header>
+        </div>
+        <div class="cta">
+          <a class="btn" href="/webinars/{{ webinar.slug }}">Watch Recording</a>
+        </div>
+      {# </div> #}
+    </li>
   {%- endfor -%}
-</ul>
+  </ul>
+</div>
 {%- else -%}
   <p>No webinars found!!</p>
 {%- endif -%}

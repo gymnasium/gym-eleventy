@@ -1,5 +1,6 @@
-id: web0006
+id: web-0006
 slug: keeping-up-with-javascript
+color: purple
 type: webinar
 title: "Keeping Up with JavaScript is a <span class=\"nowrap\">Full-time Job</span>"
 event_guests: "with Kevin Chisholm and <span class=\"nowrap\">Keith Peters</span>"
@@ -7,8 +8,8 @@ description: "A conversation about the ever-changing JavaScript landscape with s
 permalink: /webinars/keeping-up-with-javascript
 event_date: 2017-03-22
 event_time: "2PM EDT"
-event_ogimage: keeping-up-with-javascript-event-og.png
-recording_ogimage: keeping-up-with-javascript-recording-og.png
+event_ogimage: keeping-up-with-javascript-event.png
+recording_ogimage: keeping-up-with-javascript-recording.png
 host: josborn
 speaker:
   - kchisholm

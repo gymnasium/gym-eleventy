@@ -1,5 +1,6 @@
-id: web0007
+id: web-0007
 slug: design-systems-and-creativity
+color: magenta
 type: webinar
 title: "<span class=\"nowrap\">Design Systems</span> <span class=\"nowrap\">and Creativity:</span> <span class=\"nowrap\">Unlikely Allies</span>"
 event_guests: "with Brad Frost and <span class=\"nowrap\">Sophie Shepherd</span>"
@@ -7,8 +8,8 @@ description: "A conversation about creativity and design systems with special gu
 permalink: /webinars/design-systems-and-creativity
 event_date: 2017-07-17
 event_time: "2PM EDT"
-event_ogimage: design-systems-and-creativity-event-og.png
-recording_ogimage: design-systems-and-creativity-recording-og.png
+event_ogimage: design-systems-and-creativity-event.png
+recording_ogimage: design-systems-and-creativity-recording.png
 host: josborn
 speaker:
   - bfrost
