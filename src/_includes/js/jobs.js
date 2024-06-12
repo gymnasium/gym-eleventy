@@ -177,36 +177,22 @@ function gymJobs() {
     }
 
     function initializeJobs(append) {
-      // If we have jobs stored locally already in the browser session...
-      if (window.sessionStorage && sessionStorage.getItem("jobs")) {
-        // try {
-        //   data = sessionStorage.getItem("jobs");
 
-        //   processData(data);
-        //   outputDebug("[job module] data from sessionStorage");
-        // } catch (err) {
-        //   console.warn(
-        //     "[job module] error retrieving sessionStorage data.",
-        //     err
-        //   );
-        // }
-      } else {
-        try {
-          if (append) {
-            let updated_endpoint = `${endpoint}&locations[]=${append}`;
-            outputDebug(`[job module] updating endpoint: ${updated_endpoint}`);
-            fetchData(updated_endpoint);
-          } else {
-            fetchData(endpoint);
-          }
-
-          outputDebug(`[job module] fetching JSONData.`);
-        } catch (err) {
-          console.warn(
-            "[job module] error storing/processing JSONData!",
-            err
-          );
+      try {
+        if (append) {
+          let updated_endpoint = `${endpoint}&locations[]=${append}`;
+          outputDebug(`[job module] updating endpoint: ${updated_endpoint}`);
+          fetchData(updated_endpoint);
+        } else {
+          fetchData(endpoint);
         }
+
+        outputDebug(`[job module] fetching JSONData.`);
+      } catch (err) {
+        console.warn(
+          "[job module] error processing JSONData!",
+          err
+        );
       }
     }
 
