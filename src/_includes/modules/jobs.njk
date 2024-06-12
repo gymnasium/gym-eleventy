@@ -15,7 +15,7 @@
       </optgroup>
 
       <optgroup label="Canada">
-        {%- for market in data.markets2 -%}{%- if market.country_code == 'CA' -%}
+        {%- for market in data.markets2 -%}{%- if market.country == 'Canada' -%}
         <option data-slug="{{ market.id }}" value="{{ market.cloudwall_id }}">{{ market.name }}</option>
         {%- endif -%} {%- endfor -%}
       </optgroup>
@@ -33,7 +33,7 @@
       </optgroup>
 
       <optgroup label="United States">
-        {%- for market in data.markets2 -%}{%- if market.country_code == 'US' -%}
+        {%- for market in data.markets2 -%}{%- if market['regions'][0] == 'North America' and market.country != 'Canada' -%}
         <option data-slug="{{ market.id }}" value="{{ market.cloudwall_id }}">{{ market.name }}</option>
         {%- endif -%}{%- endfor -%}
       </optgroup>
