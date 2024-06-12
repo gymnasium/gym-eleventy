@@ -10,7 +10,7 @@ const DATA_URL = process.env.DATA_URL || 'https://data.gym.soy';
 
 const MARKET_FEED = 'https://assets.aquent.com/apps/gym/markets.json';
 
-const MARKET_FEED2 = 'https://devaquentllc.wpengine.com/feeds/gymnasium-markets.json';
+const MARKET_FEED2 = 'https://aquentllc.wpengine.com/feeds/gymnasium-markets.json';
 
 const JOB_FEED = 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/jobs/listing?pageSize=500';
 
