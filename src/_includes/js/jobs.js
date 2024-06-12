@@ -260,9 +260,9 @@ function gymJobs() {
         if (numResults > 0) {
           // Sort array by mod/post date properly, whichever is more recent
           items = items.sort((a, b) => {
-            const aModDate = new Date(a.cw_modified_date).getTime();
+            const aModDate = new Date(a.cloudwall_mod_date).getTime();
             const aPostDate = new Date(a.posted_date).getTime();
-            const bModDate = new Date(b.cw_modified_date).getTime();
+            const bModDate = new Date(b.cloudwall_mod_date).getTime();
             const bPostDate = new Date(b.posted_date).getTime();
 
             const compA = aModDate > aPostDate ? aModDate : aPostDate;
@@ -285,11 +285,11 @@ function gymJobs() {
           for (var i = 0; i < limit; i++) {
             var el = items[i];
             var postDate = el.posted_date;
-            var modDate = el.cw_modified_date;
+            var modDate = el.cloudwall_mod_date;
             const jobUrl = `${window.JOB_URLS[el.country]}${el.job_id}`;
 
             outputDebug(
-              `[job module] job id: ${el.id}\n   remote type: ${
+              `[job module] job id: ${el.job_id}\n   remote type: ${
                 remoteLegend[el.offsite_preference]
               }\n   posted: ${postDate}\n   mod date: ${modDate}`
             );
