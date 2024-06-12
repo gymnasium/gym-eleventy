@@ -107,7 +107,7 @@ function gymJobs() {
   // add stuff here
   if (typeof jobsContainer !== "undefined" && jobsContainer !== null) {
     console.log("jobs.js active");
-    const endpoint = jobsContainer.getAttribute("data-feed");
+    let endpoint = jobsContainer.getAttribute("data-feed");
     var utms = jobsContainer.hasAttribute("data-utm")
       ? `?${jobsContainer.getAttribute("data-utm")}`
       : "";
@@ -127,6 +127,17 @@ function gymJobs() {
       3: "Either",
       4: "Partial on-site",
     };
+
+    // Roles
+    // content-copywriting : Content/Copywriting
+    // creative-art-direction : Creative/Art Direction
+    // digital-marketing : Digital Marketing
+    // graphic-design : Graphic Design
+    // other : Other
+    // project-product-management : Project/Product Management
+    // ui-web-design : UI/Web Design
+    // user-experience : User Experience
+    // web-development : Web Development
 
     if (jobsContainer.hasAttribute("data-options")) {
       parseOptions(jobsContainer.getAttribute("data-options"), opts);
@@ -151,7 +162,7 @@ function gymJobs() {
       .then((response) => response.json())
       .then((responseObj) => {
         let jobData = JSON.stringify(responseObj)
-        store('jobs', jobData);
+        // store('jobs', jobData);
         outputDebug(`[job module] fetching data from endpoint: ${endpoint}`);
         processData(jobData);
       })
@@ -165,23 +176,30 @@ function gymJobs() {
       });
     }
 
-    function initializeJobs() {
+    function initializeJobs(append) {
       // If we have jobs stored locally already in the browser session...
       if (window.sessionStorage && sessionStorage.getItem("jobs")) {
-        try {
-          data = sessionStorage.getItem("jobs");
+        // try {
+        //   data = sessionStorage.getItem("jobs");
 
-          processData(data);
-          outputDebug("[job module] data from sessionStorage");
-        } catch (err) {
-          console.warn(
-            "[job module] error retrieving sessionStorage data.",
-            err
-          );
-        }
+        //   processData(data);
+        //   outputDebug("[job module] data from sessionStorage");
+        // } catch (err) {
+        //   console.warn(
+        //     "[job module] error retrieving sessionStorage data.",
+        //     err
+        //   );
+        // }
       } else {
         try {
-          fetchData(endpoint);
+          if (append) {
+            let updated_endpoint = `${endpoint}&locations[]=${append}`;
+            outputDebug(`[job module] updating endpoint: ${updated_endpoint}`);
+            fetchData(updated_endpoint);
+          } else {
+            fetchData(endpoint);
+          }
+
           outputDebug(`[job module] fetching JSONData.`);
         } catch (err) {
           console.warn(
@@ -286,7 +304,8 @@ function gymJobs() {
             var el = items[i];
             var postDate = el.posted_date;
             var modDate = el.cloudwall_mod_date;
-            const jobUrl = `${window.JOB_URLS[el.country]}${el.job_id}`;
+            const jobUrls = JSON.parse(jobsContainer.dataset.urls);
+            const jobUrl = `${jobUrls[el.country]}${el.job_id}`;
 
             outputDebug(
               `[job module] job id: ${el.job_id}\n   remote type: ${
@@ -317,9 +336,11 @@ function gymJobs() {
 
     // What to do when the select updates
     function selectChange() {
-      var value = this.value;
+      let value = this.value;
+      let slug = this.options[this.selectedIndex].dataset.slug;
       if (value === "remote") {
         location = '';
+        slug = '';
       } else {
         location = value;
       }
@@ -337,12 +358,12 @@ function gymJobs() {
 
       window.history.pushState({}, "", `?${params}#location`);
 
-      outputDebug(`[job module] location selected: ${location}`);
+      outputDebug(`[job module] location selected: ${location}, slug: ${slug}`);
 
       hideMsg();
       clearResults();
 
-      initializeJobs();
+      initializeJobs(slug);
     }
 
 

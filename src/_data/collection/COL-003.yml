@@ -87,5 +87,8 @@ articles:
 
 jobs:
   module: jobs
+  roles:
+    - user-experience
+    
   header:
     heading: Remote Jobs

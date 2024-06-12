@@ -106,5 +106,7 @@ articles:
 
 jobs:
   module: jobs
+  roles:
+    - web-development
   header:
     heading: "Development Jobs"

@@ -91,4 +91,7 @@ articles:
 
 jobs:
   module: jobs
+  roles:
+    - ui-web-design
+    # - user-experience
   heading: UX Jobs
