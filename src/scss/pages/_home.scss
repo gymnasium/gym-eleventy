@@ -115,6 +115,42 @@ article.home-hero {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 2.6em;
   }
+
+  .featured-item {
+    border: rem-calc(1) solid var(--mono-400);
+    background-color: var(--mono-100);
+    line-height: 1.2;
+    letter-spacing: 0.075em;
+    word-spacing: 0.1em;
+
+    h3 {
+      font-size: rem-calc(24);
+      line-height: 1.1;
+    }
+
+    h5 {
+      font-size: rem-calc(14);
+    }
+
+    > div {
+      padding: 1rem;
+    }
+
+    .description {
+      font-family: var(--font-family-custom);
+      font-size: 1.1rem;
+    }
+
+    .info {
+      padding-top: 0;
+    }
+
+    .cta {
+      border-top: rem-calc(1) dashed var(--mono-700);
+      padding-top: 1rem;
+      text-align: center;
+    }
+  }
 }
 
 .home-find-work {

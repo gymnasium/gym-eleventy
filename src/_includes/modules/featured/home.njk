@@ -56,34 +56,37 @@
         <div class="featured-item" id="featured-{{ type }}-{{ obj.id | lower }}">
           <div class="{{ bg_color }}">
             <header>{%- if obj["topic"] -%}
-              <p class="topic">{{ obj["topic"] }}</p>
+              <h5 class="topic caps">{{ obj["topic"] }}</h5>
             {%- endif -%}</header>
             <figure>
               <img src="{{ src }}" alt="Image for {{ title }}">
             </figure>
             <hgroup>
-            
-
             {%- if obj["title"] -%}
-              <h3>{{ obj["title"] | strip_html }}</h3>
+              <h3 class="title caps">{{ obj["title"] | strip_html }}</h3>
+            {%- endif -%}
+            {%- if obj["description"] -%}
+              <p class="description">{{ obj["description"] }}</p>
             {%- endif -%}
             </hgroup>
-
-            {%- if obj["description"] -%}
-              <p>{{ obj["description"] }}</p>
-            {%- endif -%}
-
           </div>
           
 
-          {%- if obj["instructor"] -%}
-            <p>with {{ bios[obj["instructor"]].name }}</p>
-            <p>{{ bios[obj["instructor"]].subtitle }}</p>
-          {%- endif -%}
+          
+            <div class="info">
+              {%- if obj["instructor"] -%}
+                <dl class="instructor">
+                  <dt class="byline"><b>with {{ bios[obj["instructor"]].name }}</b></dt>
+                  <dd>{{ bios[obj["instructor"]].subtitle }}</dd>
+                </dl>
+              {%- endif -%}
 
-          <div class="cta">
-            <a class="btn" href="{{ destUrl }}">Learn More</a>
-          </div>
+              <div class="cta">
+                <a class="btn" href="{{ destUrl }}">Learn More</a>
+              </div>
+            </div>
+
+
         </div>
       </li>
     {%- endfor -%}
