@@ -24,6 +24,7 @@
   | replace('GYM_MFE_URL', config.urls.mfe)
   | safe
 }}
-<script type="module" src="{{ '/js/gym.js' | cachebust }}"></script>
+{%- include './components/scripts.njk' -%}
+{%- include './components/shared-scripts.njk' -%}
 </body>
 </html>
