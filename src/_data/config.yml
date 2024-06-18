@@ -277,7 +277,6 @@ msg:
     custom: "<p>This is an example of a custom message for anywhere in the theme.</p>"
 html:
   footer: FOOTER_HTML
-  scripts: SCRIPTS_HTML
 bios: BIOS_DATA
 courses: COURSES_DATA
 # TODO: consider refactoring to support global path definitions
