@@ -34,7 +34,7 @@
     "@11ty/eleventy-fetch": "^4.0.0",
     "@11ty/eleventy-img": "^4.0.0",
     "@11ty/is-land": "^4.0.0",
-    "@dotenvx/dotenvx": "^0.44.1",
+    "@dotenvx/dotenvx": "^1.0.0",
     "braces": ">=3.0.3",
     "eleventy-plugin-clean": "github:kentaroi/eleventy-plugin-clean#v1.2.6",
     "eleventy-plugin-rev": "^2.0.0",
@@ -43,11 +43,12 @@
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",
     "markdown-it-eleventy-img": "^0.10.1",
-    "netlify-cli": "^17.27.0",
+    "netlify-cli": "^17.29.0",
     "netlify-plugin-cache": "^1.0.3",
     "rss-parser": "^3.13.0"
   },
   "devDependencies": {
-    "braces": ">=3.0.3"
+    "braces": ">=3.0.3",
+    "chokidar": ">=3.6.0"
   }
 }
