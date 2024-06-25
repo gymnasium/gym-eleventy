@@ -50,5 +50,8 @@
   "devDependencies": {
     "braces": ">=3.0.3",
     "chokidar": ">=3.6.0"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.33.4"
   }
 }
