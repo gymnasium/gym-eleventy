@@ -656,25 +656,63 @@ $spacers: map-merge(
 }
 
 // card body
-.pgn__card .pgn__card-header {
+
+.pgn__card-body {
+  padding: 1.25rem;
+  width: 100%;
+}
+.pgn__card-header {
   display: flex;
   justify-content: space-between;
-  padding: 0 1.25rem;
 }
 
-.pgn__card .pgn__card-section {
-  flex-grow: 1;
-  padding: 0 1.25rem 1.25rem;
+.pgn__card-header-content {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
   text-align: start;
+  width: 100%;
 }
 
-.pgn__card .pgn__card-footer.horizontal {
+.pgn__card-section {
+  flex-grow: 1;
+  text-align: start;
+  margin: 1rem 0 1.25rem;
+}
+
+
+.pgn__card-footer {
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  width: 100%;
+
+  @include breakpoint(medium, min) {
+    justify-content: flex-end;
+  }
+}
+
+.pgn__card-header-actions {
+  flex-shrink: 0;
+  margin-inline-start: 1rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.pgn__action-row {
+  button[disabled] {
+    display: none;
+    margin-right: 1rem;
+  }
 }
 
 
 // Grade required to pass...
 .course-card-banners {
+
 }
 
 .alert-info {
