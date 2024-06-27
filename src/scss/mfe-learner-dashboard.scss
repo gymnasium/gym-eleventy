@@ -10,6 +10,7 @@
 
 @use "mfe/root";
 @use "mfe/flex";
+@use "mfe/buttons";
 
 // Dashboard Heading
 .course-list-heading-container {
@@ -35,6 +36,14 @@
 
   @include breakpoint(medium, min) {
     align-self: flex-start;
+  }
+
+  // #course-filter-controls
+  button {
+    .btn-icon-before {
+      margin-left: -0.25rem;
+      margin-inline-end: 0.5rem;
+    }
   }
 }
 
@@ -82,6 +91,18 @@
 .pgn__icon {
   height: 1.25rem;
   width: 1.25rem;
+  display: block;
+    flex-shrink: 0;
+    position: relative;
+
+    svg {
+      display: block;
+      height: 100%;
+      max-height: 100%;
+      max-width: 100%;
+      position: relative;
+      width: 100%;
+  }
 }
 
 .pgn__chip.pgn__chip-light * {
@@ -93,9 +114,9 @@
 .btn-outline-primary {
   border-color: var(--mono-900);
   color: var(--mono-900);
-  background-color: transparent;
   border: 1px solid var(--mono-900);
   padding: rem-calc(9 16);
+  display: inline-flex;
 }
 
 // Filter popup
@@ -166,7 +187,7 @@
     height: 288px;
     width: 512px;
     padding: 1rem;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .3) !important;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .3);
 
     .filter-form-col {
       display: inline-block;
@@ -177,6 +198,11 @@
       font-size: 18px;
       font-weight: 700;
       margin-bottom: .25rem;
+    }
+
+    hr {
+      width: 1px;
+      margin-right: 1rem;
     }
   }
 }
