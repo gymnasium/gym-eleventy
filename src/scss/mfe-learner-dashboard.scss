@@ -226,6 +226,50 @@
   z-index: 1032;
 }
 
+.pgn__sheet-content {
+  > :first-child {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  hr {
+    margin-bottom: 1rem;
+  }
+
+  .filter-form-heading {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.filter-form-row {
+
+}
+
+.pgn__modal-close-container {
+  inset-inline-end: 1rem;
+  position: absolute;
+  top: 1rem;
+  z-index: 10;
+}
+
+.pgn__modal-close-button {
+  border-color: transparent;
+  color: var(--mono-900);
+  padding: 0.5rem;
+  background-color: transparent;
+}
+
+
+
+.btn-tertiary, .btn-tertiary:hover {
+
+}
+
+.btn-tertiary {
+  
+}
+
 // Course "Cards"
 .course-card {
   margin-bottom: 2rem;
