@@ -245,45 +245,49 @@
 
 // card body
 
-.pgn__card-body {
-  padding: 1.25rem;
-  width: 100%;
-}
-.pgn__card-header {
-  display: flex;
-  justify-content: space-between;
-}
+.pgn__card {
+  &-body {
+    padding: 1.25rem;
+    width: 100%;
+  }
 
-.pgn__card-header-content {
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  text-align: start;
-  width: 100%;
-}
+  &-header {
+    display: flex;
+    justify-content: space-between;
 
-.pgn__card-section {
-  flex-grow: 1;
-  text-align: start;
-  margin: 1rem 0 1.25rem;
-}
+    &-content {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      text-align: start;
+      width: 100%;
+    }
 
-.pgn__card-footer {
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  display: flex;
-  width: 100%;
+    &-actions {
+      flex-shrink: 0;
+      margin-inline-start: 1rem;
+    }
+  }
 
-  @include breakpoint(medium, min) {
-    justify-content: flex-end;
+  &-section {
+    flex-grow: 1;
+    text-align: start;
+    margin: 1rem 0 1.25rem;
+  }
+
+  &-footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    width: 100%;
+  
+    @include breakpoint(medium, min) {
+      justify-content: flex-end;
+    }
   }
 }
 
-.pgn__card-header-actions {
-  flex-shrink: 0;
-  margin-inline-start: 1rem;
-}
 
 .dropdown {
   position: relative;
@@ -339,7 +343,9 @@
   }
 
   &__icon-container {
-    margin-top: 0.55rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
