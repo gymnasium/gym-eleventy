@@ -38,6 +38,57 @@
   }
 }
 
+// active filters
+#course-list-active-filters-container {
+
+}
+
+
+#course-list-active-filters {
+
+}
+
+
+.pgn__chip {
+  background: #e1dddb;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  display: inline-flex;
+  margin: .125rem;
+}
+
+.pgn__chip__label {
+  padding-right: 3px;
+  box-sizing: border-box;
+    cursor: default;
+    font-size: .875rem;
+    overflow: hidden;
+    padding: .125rem .5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pgn__chip__icon-after, .pgn__chip__icon-before {
+  border-radius: 0 .25rem .25rem 0;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: default;
+  display: flex;
+  padding-left: .25rem;
+  padding-right: .25rem;
+  line-height: 1;
+}
+
+.pgn__icon {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.pgn__chip.pgn__chip-light * {
+  fill: #000;
+  color: #000;
+}
+
 // Course Filter button
 .btn-outline-primary {
   border-color: var(--mono-900);
@@ -47,13 +98,76 @@
   padding: rem-calc(9 16);
 }
 
+// Filter popup
+.pgn__modal-popup__tooltip {
+
+
+}
+
 // Background of filter popup/overlay
 .bg-white {
   background-color: var(--mono-100);
 }
 
-@include breakpoint(large, min) {
+.pgn__form-group {
+  margin-bottom: 1rem;
+  text-align: start;
+}
+
+.pgn__form-control-set {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.pgn__form-checkbox, .pgn__form-radio, .pgn__form-switch {
+  display: inline-flex;
+  padding: 0.5rem 0;
+}
+
+.pgn__form-checkbox-input, .pgn__form-radio-input, .pgn__form-switch-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--mono-100);
+  background-position: 50%;
+  border: rem-calc(2) solid var(--mono-500);
+  // border-radius: 0;
+  height: rem-calc(20);
+  margin-inline-end: .5rem;
+  width: rem-calc(20);
+  padding: 0;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.pgn__form-checkbox-input:checked {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath fill='%230A3055' d='M21 3H3v18h18V3ZM10 17l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9Z'/%3E%3C/svg%3E");
+}
+
+.pgn__form-radio-input {
+  border-radius: 100%;
+}
+.pgn__form-radio-input:checked {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%230A3055'/%3E%3C/svg%3E");
+}
+
+.pgn__form-checkbox .pgn__form-label, .pgn__form-radio .pgn__form-label, .pgn__form-switch .pgn__form-label {
+  align-items: center;
+  display: flex;
+  line-height: 1.25rem;
+  margin-bottom: 0;
+}
+
+@include breakpoint(medium, min) {
   #course-filter-controls-card {
+    height: 288px;
+    width: 512px;
+    padding: 1rem;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .3) !important;
+
     .filter-form-col {
       display: inline-block;
       width: 256px;
@@ -62,13 +176,8 @@
     .filter-form-heading {
       font-size: 18px;
       font-weight: 700;
+      margin-bottom: .25rem;
     }
-  }
-
-  .pgn__form-control-set {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
   }
 }
 
