@@ -210,6 +210,21 @@
 }
 
 // TODO: add pgn sheet stuff for <= 575px
+.sheet-container {
+}
+
+.pgn__sheet-component {
+  box-shadow: rem-calc(8) 0 rem-calc(16) 0 rgba(0, 0, 0, 0.15);
+  left: 0;
+  height: 100%;
+  top: 0;
+  max-width: 75%;
+  width: 75%;
+  background-color: var(--mono-100);
+  padding: 1.25rem;
+  position: fixed;
+  z-index: 1032;
+}
 
 // Course "Cards"
 .course-card {
