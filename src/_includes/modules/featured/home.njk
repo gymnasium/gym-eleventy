@@ -94,8 +94,14 @@
   {%- endif -%}
 
   {%- if module.cta -%}
-    <a class="btn" href="{{ module.cta.href }}">{{ module.cta.label }}</a>
+    <div class="cta">
+      {%- if module["cta"]["description"] -%}
+        <p class="description">{{ module["cta"]["description"] | safe }}</p>
+      {%- endif -%}
+      <a class="btn" href="{{ module.cta.href }}">{{ module.cta.label }}</a>
+    </div>
   {%- endif -%}
+
 </section>
 
 {%- else -%}
