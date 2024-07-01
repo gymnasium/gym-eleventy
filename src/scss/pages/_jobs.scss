@@ -1,0 +1,49 @@
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
+
+.location-select {
+  display: inline-block;
+  padding-right: 1rem;
+  border: 1px solid var(--secondary-500);
+  border-radius: 3px;
+
+  select {
+    all: revert;
+    font-size: 1.05rem;
+    font-weight: bold;
+    background-color: transparent;
+    padding: 1.2rem;
+    border: 0;
+
+    &,
+    option {
+      line-height: 1.15;
+    }
+  }
+}
+
+
+.jobs-list li {
+  font-weight: bold;
+  padding-top: 1.2rem;
+  border-top: 1px dashed var(--mono-300);
+  margin-top: 1.2rem;
+}
+
+.home-find-work {
+  .location-select {
+    background-color: var(--mono-100);
+    margin-top: 1rem;
+  }
+
+  .jobs-list li {
+    padding-top: 1rem;
+    margin-top: 1rem;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+}
