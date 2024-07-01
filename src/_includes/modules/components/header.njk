@@ -42,16 +42,17 @@
       {%- endif -%}
     {%- endif -%}
   </header>
+  {# Reset variables to prevent looping duplicates #}
+  {%- set header = "" -%}
+  {%- set header_id = "" -%}
+  {%- set header_class = "" -%}
+  {%- set heading = "" -%}
+  {%- set heading_id = "" -%}
+  {%- set heading_type = "" -%}
+  {%- set heading_class = "" -%}
+  {%- set description = "" -%}
 {%- else -%}
   <em>{ Header Module Placeholder }</em>
   <p>Pass in the `header` variable to display the header.</p>
 {%- endif -%}
-{# Reset variables to prevent looping duplicates #}
-{%- set header = "" -%}
-{%- set header_id = "" -%}
-{%- set header_class = "" -%}
-{%- set heading = "" -%}
-{%- set heading_id = "" -%}
-{%- set heading_type = "" -%}
-{%- set heading_class = "" -%}
-{%- set description = "" -%}
+

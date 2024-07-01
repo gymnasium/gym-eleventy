@@ -3,20 +3,22 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
+.d-flex {
+  display: flex;
+}
+
 .d-inline-flex {
   display: inline-flex;
 }
+
 .align-items-center {
   align-items: center;
 }
+
 .flex-wrap {
   flex-wrap: wrap;
 }
 
 .flex-column {
   flex-direction: column;
-}
-
-.d-flex {
-  display: flex;
 }
