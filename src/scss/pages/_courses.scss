@@ -57,624 +57,613 @@
 
 // courses (full, gym shorts, take 5)
 // TODO: Cleanup selectors
+.courses {
+  main {
+    p:only-of-type {
+      margin-bottom: 0;
+    }
+  }
 
-html > {
-  .courses,
-  .courses-full,
-  .courses-gym-shorts,
-  .courses-take5,
-  [class*="courses-take5"] {
-    main {
-      p:only-of-type {
-        margin-bottom: 0;
+  .intro {
+    padding: 1.6rem 0;
+
+    @include breakpoint(large, min) {
+      & {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 1.2rem;
+        align-items: start;
       }
     }
 
-    .intro {
-      padding: 1.6rem 0;
+    // TODO: Redo hacky layout
+    @include breakpoint(medium, min) {
+      .list-summary {
+        grid-auto-flow: none;
+        grid-template-columns: none;
 
-      @include breakpoint(large, min) {
-        & {
-          display: grid;
-          grid-template-columns: 2fr 3fr;
-          gap: 1.2rem;
-          align-items: start;
-        }
-      }
-
-      // TODO: Redo hacky layout
-      @include breakpoint(medium, min) {
-        .list-summary {
-          grid-auto-flow: none;
-          grid-template-columns: none;
-
-          dl {
-            margin-top: 0.25rem;
-          }
-
-          dl:not(:first-child) {
-            grid-column: 2 / 4;
-            grid-row: 1 / 2;
-          }
-
-          dl:last-child:not(:first-child + :last-child) {
-            margin-top: 4.2rem;
-          }
-        }
-      }
-
-      hgroup {
-        h1 {
-          font: 900 2.25rem/1.15 var(--font-family-custom);
-          letter-spacing: 0.05ex;
-          text-transform: uppercase;
+        dl {
+          margin-top: 0.25rem;
         }
 
-        p {
-          font-size: 1.25rem;
+        dl:not(:first-child) {
+          grid-column: 2 / 4;
+          grid-row: 1 / 2;
         }
 
-        p:first-of-type {
-          strong {
-            display: block;
-          }
-        }
-      }
-
-      p:last-child {
-        margin-bottom: 0;
-      }
-
-      @include breakpoint(large, max) {
-        * + .list-summary {
-          margin-top: 1.4rem;
+        dl:last-child:not(:first-child + :last-child) {
+          margin-top: 4.2rem;
         }
       }
     }
 
-    // topics (course listing)
+    hgroup {
+      h1 {
+        font: 900 2.25rem/1.15 var(--font-family-custom);
+        letter-spacing: 0.05ex;
+        text-transform: uppercase;
+      }
 
-    .topics {
-      padding-top: 1.6rem;
+      p {
+        font-size: 1.25rem;
+      }
 
-      @include breakpoint(large, min) {
-        & {
-          display: grid;
-          grid-template-columns: 1fr 5fr;
-          gap: 1.6rem;
-          align-items: start;
+      p:first-of-type {
+        strong {
+          display: block;
         }
       }
     }
 
-    .topic-menu h2,
-    .topic-label,
-    #tutorial-resources h3 {
-      font-weight: 900;
-      font-size: 1.55rem;
-      line-height: 1.15;
-      text-transform: uppercase;
-      letter-spacing: 0.05ex;
-      margin-bottom: 1.4rem;
+    p:last-child {
+      margin-bottom: 0;
     }
 
-    .topic-menu {
-      margin-bottom: 1.6rem;
-
-      :first-child + ul {
-        border-top: 1px dashed var(--mono-400);
+    @include breakpoint(large, max) {
+      * + .list-summary {
+        margin-top: 1.4rem;
       }
+    }
+  }
 
-      ul {
-        li {
-          border-bottom: 1px dashed var(--mono-400);
+  // topics (course listing)
 
-          a {
-            display: block;
-            font-weight: bold;
-            padding: 0.8rem 1rem;
-          }
+  .topics {
+    padding-top: 1.6rem;
+
+    @include breakpoint(large, min) {
+      & {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        gap: 1.6rem;
+        align-items: start;
+      }
+    }
+  }
+
+  .topic-menu h2,
+  .topic-label,
+  #tutorial-resources h3 {
+    font-weight: 900;
+    font-size: 1.55rem;
+    line-height: 1.15;
+    text-transform: uppercase;
+    letter-spacing: 0.05ex;
+    margin-bottom: 1.4rem;
+  }
+
+  .topic-menu {
+    margin-bottom: 1.6rem;
+
+    :first-child + ul {
+      border-top: 1px dashed var(--mono-400);
+    }
+
+    ul {
+      li {
+        border-bottom: 1px dashed var(--mono-400);
+
+        a {
+          display: block;
+          font-weight: bold;
+          padding: 0.8rem 1rem;
         }
       }
+    }
 
-      @include breakpoint(large, min) {
-        & {
-          position: sticky;
-          top: 1.6rem;
-        }
+    @include breakpoint(large, min) {
+      & {
+        position: sticky;
+        top: 1.6rem;
       }
     }
+  }
 
-    // topics (view by)
+  // topics (view by)
 
-    .elective,
-    #all-topics:target ~ * .elective,
-    #featured:target ~ * .course:not(.featured),
-    #design:target ~ * .course:not(.design),
-    #development:target ~ * .course:not(.development),
-    #accessibility:target ~ * .course:not(.accessibility),
-    #prototyping:target ~ * .course:not(.prototyping),
-    #ux:target ~ * .course:not(.ux),
-    #career-skills:target ~ * .course:not(.career-skills),
-    .topic-select:target:not(#all-topics:target) ~ * .topic-label span {
-      display: none;
-    }
+  .elective,
+  #all-topics:target ~ * .elective,
+  #featured:target ~ * .course:not(.featured),
+  #design:target ~ * .course:not(.design),
+  #development:target ~ * .course:not(.development),
+  #accessibility:target ~ * .course:not(.accessibility),
+  #prototyping:target ~ * .course:not(.prototyping),
+  #ux:target ~ * .course:not(.ux),
+  #career-skills:target ~ * .course:not(.career-skills),
+  .topic-select:target:not(#all-topics:target) ~ * .topic-label span {
+    display: none;
+  }
 
-    :target ~ * .elective {
-      display: inherit;
-    }
+  :target ~ * .elective {
+    display: inherit;
+  }
 
-    //   @include breakpoint(large, min) {
-    //
-    //     .topic-select {
-    //       position: absolute;
-    //       top: 0;
-    //     }
-    //
-    //   }
+  //   @include breakpoint(large, min) {
+  //
+  //     .topic-select {
+  //       position: absolute;
+  //       top: 0;
+  //     }
+  //
+  //   }
 
-    .topic-select:target ~ * .topic-menu a {
-      background-color: transparent;
-    }
+  .topic-select:target ~ * .topic-menu a {
+    background-color: transparent;
+  }
 
-    .topic-menu [href="#all-topics"] {
+  .topic-menu [href="#all-topics"] {
+    background-color: var(--mono-100);
+  }
+
+  #all-topics:target ~ * {
+    [href="#all-topics"] {
       background-color: var(--mono-100);
     }
+  }
 
-    #all-topics:target ~ * {
-      [href="#all-topics"] {
-        background-color: var(--mono-100);
+  #featured:target ~ * {
+    .topic-label::before {
+      content: "Featured";
+    }
+
+    [href="#featured"] {
+      background-color: var(--mono-100);
+    }
+  }
+
+  #design:target ~ * {
+    .topic-label::before {
+      content: "Design";
+    }
+
+    [href="#design"] {
+      background-color: var(--mono-100);
+    }
+  }
+
+  #development:target ~ * {
+    .topic-label::before {
+      content: "Development";
+    }
+
+    [href="#development"] {
+      background-color: var(--mono-100);
+    }
+  }
+
+  #accessibility:target ~ * {
+    .topic-label::before {
+      content: "Accessibility";
+    }
+
+    [href="#accessibility"] {
+      background-color: var(--mono-100);
+    }
+  }
+
+  #prototyping:target ~ * {
+    .topic-label::before {
+      content: "Prototyping";
+    }
+
+    [href="#prototyping"] {
+      background-color: var(--mono-100);
+    }
+  }
+
+  #ux:target ~ * {
+    .topic-label::before {
+      content: "UX";
+    }
+
+    [href="#ux"] {
+      background-color: var(--mono-100);
+    }
+  }
+
+  #career-skills:target ~ * {
+    .topic-label::before {
+      content: "Career Skills";
+    }
+
+    [href="#career-skills"] {
+      background-color: var(--mono-100);
+    }
+  }
+
+  .note {
+    background-color: var(--secondary-100); // ultralight orange
+    padding: 1.4rem;
+    border: 1px dashed var(--mono-700);
+    border-radius: 3px;
+    margin-top: 1.4rem;
+  }
+
+  hgroup {
+    h2,
+    .topic {
+      text-transform: uppercase;
+      letter-spacing: 0.0125ex;
+    }
+
+    .topic {
+      font: 900 1.25rem/1 var(--font-family-custom);
+
+      b {
+        font: inherit;
       }
     }
 
-    #featured:target ~ * {
-      .topic-label::before {
-        content: "Featured";
-      }
-
-      [href="#featured"] {
-        background-color: var(--mono-100);
-      }
+    h2 {
+      font: 900 1.8rem/1.2 var(--font-family-custom);
+      text-wrap: balance;
+      margin-bottom: 1rem;
     }
 
-    #design:target ~ * {
-      .topic-label::before {
-        content: "Design";
-      }
+    .instructor {
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 0.0125ex;
+      margin-top: 1.125rem;
+      margin-bottom: 1.2rem;
+    }
+  }
 
-      [href="#design"] {
-        background-color: var(--mono-100);
-      }
+  .description {
+    max-width: 40rem;
+    font-size: 1.09375rem;
+    letter-spacing: 0.01ex;
+  }
+
+  // course card
+
+  .course-card {
+    background-color: var(--mono-100);
+    padding: 1.4rem;
+    border: 1px solid var(--mono-400);
+    border-radius: 3px;
+  }
+
+  .course-card {
+    &:not(first-child) {
+      margin-top: 1rem;
     }
 
-    #development:target ~ * {
-      .topic-label::before {
-        content: "Development";
+    // course card (main content)
+
+    .main {
+      > a {
+        grid-area: art;
+        display: inline-block;
+
+        &[href*="about"] {
+          margin-bottom: -1.875rem;
+        }
       }
 
-      [href="#development"] {
-        background-color: var(--mono-100);
-      }
-    }
-
-    #accessibility:target ~ * {
-      .topic-label::before {
-        content: "Accessibility";
+      p,
+      dd {
+        text-wrap: pretty;
       }
 
-      [href="#accessibility"] {
-        background-color: var(--mono-100);
-      }
-    }
-
-    #prototyping:target ~ * {
-      .topic-label::before {
-        content: "Prototyping";
-      }
-
-      [href="#prototyping"] {
-        background-color: var(--mono-100);
-      }
-    }
-
-    #ux:target ~ * {
-      .topic-label::before {
-        content: "UX";
-      }
-
-      [href="#ux"] {
-        background-color: var(--mono-100);
-      }
-    }
-
-    #career-skills:target ~ * {
-      .topic-label::before {
-        content: "Career Skills";
-      }
-
-      [href="#career-skills"] {
-        background-color: var(--mono-100);
-      }
-    }
-
-    .note {
-      background-color: var(--secondary-100); // ultralight orange
-      padding: 1.4rem;
-      border: 1px dashed var(--mono-700);
-      border-radius: 3px;
-      margin-top: 1.4rem;
-    }
-
-    header {
       hgroup {
-        h2,
-        .topic {
-          text-transform: uppercase;
-          letter-spacing: 0.0125ex;
-        }
+        grid-area: header;
+        max-width: 28.5rem;
 
         .topic {
-          font: 900 1.25rem/1 var(--font-family-custom);
-
-          b {
-            font: inherit;
-          }
-        }
-
-        h2 {
-          font: 900 1.8rem/1.2 var(--font-family-custom);
-          text-wrap: balance;
-          margin-bottom: 1rem;
-        }
-
-        .instructor {
-          font-weight: bold;
-          font-size: 1rem;
-          letter-spacing: 0.0125ex;
-          margin-top: 1.125rem;
-          margin-bottom: 1.2rem;
+          display: inline-block;
+          background-color: var(--mono-100);
+          padding-top: 0.8rem;
+          padding-right: 0.9rem;
         }
       }
 
       .description {
-        max-width: 40rem;
-        font-size: 1.09375rem;
-        letter-spacing: 0.01ex;
-      }
-    }
-
-    // course card
-
-    .course-card {
-      background-color: var(--mono-100);
-      padding: 1.4rem;
-      border: 1px solid var(--mono-400);
-      border-radius: 3px;
-    }
-
-    .course-card {
-      &:not(first-child) {
-        margin-top: 1rem;
+        align-self: start;
       }
 
-      // course card (main content)
+      header + .cta {
+        margin-top: 1.4rem;
+      }
 
-      .main {
-        > a {
-          grid-area: art;
+      .cta {
+        grid-area: cta;
+        align-self: end;
+
+        .btn {
           display: inline-block;
-
-          &[href*="about"] {
-            margin-bottom: -1.875rem;
-          }
-        }
-
-        p,
-        dd {
-          text-wrap: pretty;
-        }
-
-        hgroup {
-          grid-area: header;
-          max-width: 28.5rem;
-
-          .topic {
-            display: inline-block;
-            background-color: var(--mono-100);
-            padding-top: 0.8rem;
-            padding-right: 0.9rem;
-          }
-        }
-
-        .description {
-          align-self: start;
-        }
-
-        header + .cta {
-          margin-top: 1.4rem;
-        }
-
-        .cta {
-          grid-area: cta;
-          align-self: end;
-
-          .btn {
-            display: inline-block;
-            width: 100%;
-            max-width: 16rem;
-          }
-        }
-
-        @include breakpoint(large, min) {
-          & {
-            display: grid;
-            grid-template-rows: auto;
-            grid-template-columns: 2.5fr 3fr;
-            grid-template-areas:
-              "art  header"
-              "art  cta"
-              "aside aside"
-              "info info";
-            gap: 0 1.4rem;
-            align-items: start;
-          }
-
-          > a[href*="about"] {
-            margin-bottom: 0;
-          }
-
-          hgroup {
-            .topic {
-              display: inherit;
-              padding: 0;
-            }
-          }
+          width: 100%;
+          max-width: 16rem;
         }
       }
-
-      .cta + aside {
-        grid-area: aside;
-        padding-top: 1.2rem;
-        border-top: 1px dashed var(--mono-400);
-        margin-top: 1.4rem;
-
-        &.list-summary {
-          justify-content: start;
-
-          dl {
-            margin-bottom: 0;
-          }
-
-          dt,
-          dd {
-            font-size: 0.9375rem;
-          }
-        }
-      }
-
-      .info {
-        display: grid;
-        grid-area: info;
-        grid-auto-flow: column;
-        gap: 1.4rem;
-        justify-content: start;
-        padding-top: 1.4rem;
-        border-top: 1px dashed var(--mono-400);
-        margin-top: 1.4rem;
-
-        h3,
-        p {
-          font-size: 0.9375rem;
-          line-height: 1;
-          letter-spacing: 0.0125ex;
-          margin-bottom: 0;
-
-          &:not(p) {
-            font-weight: 900;
-            font-family: var(--font-family-custom);
-            line-height: 1.15;
-            text-transform: uppercase;
-            word-spacing: 0.25ex;
-          }
-        }
-      }
-
-      aside + .info {
-        margin-top: 1.2rem;
-      }
-    }
-
-    // back to (footer)
-
-    .back-to {
-      margin-top: 0.825rem;
-    }
-
-    // Take 5 (tutorials)
-
-    .tutorials {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-      gap: 1.4rem;
-
-      .course-card {
-        display: grid;
-        height: 100%;
-        margin-top: 0;
-
-        .main {
-          display: grid;
-          grid-template-rows: auto auto 1fr auto;
-          grid-template-columns: none;
-          grid-template-areas: none;
-
-          > * {
-            grid-area: inherit;
-          }
-
-          .artwork {
-            position: relative;
-            background-color: var(--mono-200);
-            border-bottom: 1px solid var(--mono-300);
-            margin: -1.4rem -1.4rem 1.2rem;
-            overflow: hidden;
-
-            img {
-              margin: -1.7rem 0 -3.4rem;
-            }
-          }
-
-          .topic {
-            padding-top: 0;
-          }
-
-          [data-duration]::after {
-            position: absolute;
-            bottom: 0.6rem;
-            right: 0.6rem;
-            content: attr(data-duration);
-            font: normal 0.875rem/1 var(--font-family-default);
-            letter-spacing: 0.1ex;
-            text-indent: 0.15ex;
-            color: var(--mono-100);
-            background-color: var(--mono-900);
-            padding: 0.46875rem 0.53125rem 0.53125rem;
-            border: 1px solid var(--mono-100);
-            border-radius: 2px;
-          }
-
-          .info {
-            margin-top: 1.4rem;
-          }
-        }
-      }
-    }
-
-    .tutorial-detail {
-      display: grid;
-      gap: 1.4rem 2.2rem;
 
       @include breakpoint(large, min) {
         & {
-          grid-template-rows: auto auto auto;
-          grid-template-columns: 2fr 1fr;
+          display: grid;
+          grid-template-rows: auto;
+          grid-template-columns: 2.5fr 3fr;
           grid-template-areas:
-            "header resources"
-            "video  resources"
-            "transcript transcript";
+            "art  header"
+            "art  cta"
+            "aside aside"
+            "info info";
+          gap: 0 1.4rem;
           align-items: start;
         }
 
-        .embed-responsive {
-          grid-area: video;
-        }
-
-        #tutorial-resources {
-          grid-area: resources;
-          position: sticky;
-          top: 1.4em;
-        }
-
-        #tutorial-transcript {
-          grid-area: transcript;
-
-          [href="#tutorial-resources"] {
-            text-decoration: none;
-            pointer-events: none;
-          }
-        }
-      }
-
-      header {
-        hgroup {
-          .topic {
-            margin-top: 0.155rem;
-            margin-bottom: 1rem;
-          }
-
-          h2 {
-            font-size: 2.25rem;
-            line-height: 1.15;
-            margin-bottom: 0.8rem;
-          }
-
-          .instructor {
-            margin-top: 0;
-          }
-        }
-      }
-
-      .resources {
-        ul {
-          padding-left: 0.8rem;
-        }
-      }
-
-      #tutorial-resources {
-        scroll-margin-top: 1.4rem;
-
-        > div {
-          padding-top: 1rem;
-          border-top: 1px dashed var(--mono-400);
-
-          + div {
-            margin-top: 1.4rem;
-          }
-        }
-
-        h4 {
+        > a[href*="about"] {
           margin-bottom: 0;
         }
 
-        ul {
-          margin-top: 0.8rem;
+        hgroup {
+          .topic {
+            display: inherit;
+            padding: 0;
+          }
         }
+      }
+    }
+
+    .cta + aside {
+      grid-area: aside;
+      padding-top: 1.2rem;
+      border-top: 1px dashed var(--mono-400);
+      margin-top: 1.4rem;
+
+      &.list-summary {
+        justify-content: start;
+
+        dl {
+          margin-bottom: 0;
+        }
+
+        dt,
+        dd {
+          font-size: 0.9375rem;
+        }
+      }
+    }
+
+    .info {
+      display: grid;
+      grid-area: info;
+      grid-auto-flow: column;
+      gap: 1.4rem;
+      justify-content: start;
+      padding-top: 1.4rem;
+      border-top: 1px dashed var(--mono-400);
+      margin-top: 1.4rem;
+
+      h3,
+      p {
+        font-size: 0.9375rem;
+        line-height: 1;
+        letter-spacing: 0.0125ex;
+        margin-bottom: 0;
+
+        &:not(p) {
+          font-weight: 900;
+          font-family: var(--font-family-custom);
+          line-height: 1.15;
+          text-transform: uppercase;
+          word-spacing: 0.25ex;
+        }
+      }
+    }
+
+    aside + .info {
+      margin-top: 1.2rem;
+    }
+  }
+
+  // back to (footer)
+
+  .back-to {
+    margin-top: 0.825rem;
+  }
+
+  // Take 5 (tutorials)
+
+  .tutorials {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    gap: 1.4rem;
+
+    .course-card {
+      display: grid;
+      height: 100%;
+      margin-top: 0;
+
+      .main {
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: none;
+        grid-template-areas: none;
+
+        > * {
+          grid-area: inherit;
+        }
+
+        .artwork {
+          position: relative;
+          background-color: var(--mono-200);
+          border-bottom: 1px solid var(--mono-300);
+          margin: -1.4rem -1.4rem 1.2rem;
+          overflow: hidden;
+
+          img {
+            margin: -1.7rem 0 -3.4rem;
+          }
+        }
+
+        .topic {
+          padding-top: 0;
+        }
+
+        [data-duration]::after {
+          position: absolute;
+          bottom: 0.6rem;
+          right: 0.6rem;
+          content: attr(data-duration);
+          font: normal 0.875rem/1 var(--font-family-default);
+          letter-spacing: 0.1ex;
+          text-indent: 0.15ex;
+          color: var(--mono-100);
+          background-color: var(--mono-900);
+          padding: 0.46875rem 0.53125rem 0.53125rem;
+          border: 1px solid var(--mono-100);
+          border-radius: 2px;
+        }
+
+        .info {
+          margin-top: 1.4rem;
+        }
+      }
+    }
+  }
+
+  .tutorial-detail {
+    display: grid;
+    gap: 1.4rem 2.2rem;
+
+    @include breakpoint(large, min) {
+      & {
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+          "header resources"
+          "video  resources"
+          "transcript transcript";
+        align-items: start;
+      }
+
+      .embed-responsive {
+        grid-area: video;
+      }
+
+      #tutorial-resources {
+        grid-area: resources;
+        position: sticky;
+        top: 1.4em;
       }
 
       #tutorial-transcript {
-        @include breakpoint(large, max) {
-          & {
-            padding-bottom: 1.4rem;
-            border-bottom: 1px dashed var(--mono-400);
+        grid-area: transcript;
+
+        [href="#tutorial-resources"] {
+          text-decoration: none;
+          pointer-events: none;
+        }
+      }
+    }
+
+    hgroup {
+      .topic {
+        margin-top: 0.155rem;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 2.25rem;
+        line-height: 1.15;
+        margin-bottom: 0.8rem;
+      }
+
+      .instructor {
+        margin-top: 0;
+      }
+    }
+
+    .resources {
+      ul {
+        padding-left: 0.8rem;
+      }
+    }
+
+    #tutorial-resources {
+      scroll-margin-top: 1.4rem;
+
+      > div {
+        padding-top: 1rem;
+        border-top: 1px dashed var(--mono-400);
+
+        + div {
+          margin-top: 1.4rem;
+        }
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      ul {
+        margin-top: 0.8rem;
+      }
+    }
+
+    #tutorial-transcript {
+      @include breakpoint(large, max) {
+        & {
+          padding-bottom: 1.4rem;
+          border-bottom: 1px dashed var(--mono-400);
+        }
+      }
+
+      summary span {
+        text-decoration: underline;
+        margin-left: 0.5ex;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+      }
+
+      .transcript {
+        max-width: 40rem;
+        padding-top: 1.2rem;
+        padding-bottom: 0.4rem;
+
+        ol {
+          padding-left: 1.25rem;
+        }
+
+        ul {
+          padding-left: 1rem;
+        }
+
+        p:not(footer p),
+        li {
+          font-size: 1.15rem;
+
+          code {
+            font-size: 94%;
           }
         }
 
-        summary span {
-          text-decoration: underline;
-          margin-left: 0.5ex;
-
-          &:hover,
-          &:focus {
-            text-decoration: none;
-          }
-        }
-
-        .transcript {
-          max-width: 40rem;
-          padding-top: 1.2rem;
-          padding-bottom: 0.4rem;
-
-          ol {
-            padding-left: 1.25rem;
-          }
-
-          ul {
-            padding-left: 1rem;
-          }
-
-          p:not(footer p),
-          li {
-            font-size: 1.15rem;
-
-            code {
-              font-size: 94%;
-            }
-          }
-
-          .back-to {
-            margin-top: 1.4rem;
-            margin-bottom: 0;
-          }
+        .back-to {
+          margin-top: 1.4rem;
+          margin-bottom: 0;
         }
       }
     }
@@ -683,259 +672,89 @@ html > {
   // /courses/
   // Courses page-specific style rules
 
-  .courses {
-    .intro {
-      grid-template-columns: 1fr;
-    }
-
-    .course-card {
-      .main > a,
-      .artwork {
-        height: 100%;
-
-        img:not(.collection img) {
-          object-fit: cover;
-          height: 100%;
-        }
-      }
-
-      > header,
-      section {
-        h2,
-        > h3 {
-          font-weight: 900;
-          line-height: 1.15;
-          text-transform: uppercase;
-        }
-      }
-
-      > header {
-        h2 {
-          font-size: 2rem;
-        }
-
-        p {
-          font-size: 1.5rem;
-          font-family: var(--font-family-custom);
-        }
-      }
-
-      > div:not([class]) {
-        padding-top: 1.8rem;
-
-        section {
-          > h3 {
-            font-size: 1.25rem;
-          }
-        }
-      }
-
-      & {
-        border-color: var(--mono-300);
-      }
-
-      .list-summary {
-        padding-top: 1.4rem;
-      }
-
-      @include breakpoint(large, min) {
-        > div {
-          display: grid;
-          grid-template-columns: 3.5fr 1fr;
-          gap: 2rem;
-          align-items: start;
-
-          .course-card {
-            .main {
-              grid-template-columns: 1fr 1fr;
-            }
-          }
-
-          section + .list-summary {
-            grid-auto-flow: inherit;
-            grid-template-columns: none;
-            padding-top: 0.1rem;
-          }
-        }
-      }
-
-      .tutorial {
-        .artwork {
-          border: 1px solid var(--mono-300);
-        }
-      }
-    }
+  .intro {
+    grid-template-columns: 1fr;
   }
-}
 
-// Collections page-specific style rules
+  .course-card {
+    .main > a,
+    .artwork {
+      height: 100%;
 
-.collection {
-  main {
-    section:not(.featured) {
-      background-color: var(--mono-100);
-      padding: 1.4rem;
-      border: 1px solid var(--mono-400);
-      margin-top: 1rem;
-
-      > header {
-        padding-bottom: 1.4rem;
-        border-bottom: 1px solid var(--mono-300);
-        margin-bottom: 1.4rem;
+      img:not(.collection img) {
+        object-fit: cover;
+        height: 100%;
       }
+    }
 
-      h2 {
+    > header,
+    section {
+      h2,
+      > h3 {
+        font-weight: 900;
         line-height: 1.15;
         text-transform: uppercase;
       }
+    }
 
-      p,
-      li {
-        font-size: 1.3125rem;
+    > header {
+      h2 {
+        font-size: 2rem;
       }
 
+      p {
+        font-size: 1.5rem;
+        font-family: var(--font-family-custom);
+      }
+    }
+
+    > div:not([class]) {
+      padding-top: 1.8rem;
+
+      section {
+        > h3 {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    & {
+      border-color: var(--mono-300);
+    }
+
+    .list-summary {
+      padding-top: 1.4rem;
+    }
+
+    @include breakpoint(large, min) {
+      > div {
+        display: grid;
+        grid-template-columns: 3.5fr 1fr;
+        gap: 2rem;
+        align-items: start;
+
+        .course-card {
+          .main {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        section + .list-summary {
+          grid-auto-flow: inherit;
+          grid-template-columns: none;
+          padding-top: 0.1rem;
+        }
+      }
+    }
+
+    .tutorial {
       .artwork {
         border: 1px solid var(--mono-300);
-      }
-
-      .cta {
-        text-align: center;
-        padding-top: 1.4rem;
-        border-top: 1px solid var(--mono-300);
-        margin-top: 1.4rem;
-      }
-    }
-
-    .courses,
-    .tutorials,
-    .webinars {
-
-      ul {
-        display: grid;
-        gap: 1.4rem;
-      }
-
-      h3 {
-        font-family: var(--font-family-default);
-        font-size: 1.375rem;
-        line-height: 1.35;
-        margin-bottom: 0;
-      }
-
-      .artwork + h3 {
-        margin-top: 0.6rem;
-      }
-
-    }
-
-    .courses {
-
-      ul {
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-
-        li {
-          display: inherit;
-          grid-template-columns: 1fr 3fr;
-          gap: inherit;
-          align-items: center;
-        }
-      }
-
-    }
-
-    .tutorials,
-    .webinars {
-
-      ul {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      }
-
-    }
-
-    .webinars {
-
-      .artwork {
-        height: 0;
-        padding-bottom: 62.5%;
-        overflow: hidden;
-
-        img {
-          margin-top: -6%;
-        }
-      }
-
-    }
-
-    .articles {
-      header {
-        border-bottom: 1px solid var(--mono-300);
-
-        &:not(#articles > header:first-child):not(#articles > [class]:first-child header) {
-          margin-top: 1.6rem;
-        }
-
-        h3 {
-          font-size: 1.375rem;
-          font-weight: 900;
-        }
-      }
-      ul {
-        li {
-          padding-bottom: 1.2rem;
-          border-bottom: 1px dashed var(--mono-300);
-          margin-top: 1.2rem;
-
-          cite {
-            font-style: normal;
-            font-weight: bold;
-          }
-        }
-      }
-    }
-
-    .jobs {
-      form {
-        display: inline-block;
-        padding-right: 1rem;
-        border: 1px solid var(--secondary-500);
-        border-radius: 3px;
-
-        select {
-          all: revert;
-          font-size: 1.05rem;
-          font-weight: bold;
-          background-color: transparent;
-          padding: 1.2rem;
-          border: 0;
-
-          &,
-          option {
-            line-height: 1.15;
-          }
-        }
-      }
-
-      .jobs-list li {
-        font-weight: bold;
-        padding-top: 1.2rem;
-        border-top: 1px dashed var(--mono-300);
-        margin-top: 1.2rem;
-      }
-    }
-  }
-
-  // TODO: style the collections featured section
-  .featured {
-    ul {
-
-      @include breakpoint(large, min) {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
       }
     }
   }
 }
+
 
 
 // Webinars page-specific style rules
@@ -950,6 +769,4 @@ html > {
       grid-template-columns: 2fr 1fr;
     }
   }
-
 }
-
