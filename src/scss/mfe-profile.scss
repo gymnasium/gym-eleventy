@@ -10,6 +10,10 @@
 
 @use 'mfe/root';
 
+h1 {
+  font-size: 2rem;
+}
+
 
 .profile-page-bg-banner {
   display: none;
@@ -21,6 +25,22 @@
     height: 8.75rem;
     display: block;
   }
+}
+
+.profile-avatar-wrap {
+
+  @include breakpoint(medium, min) {
+    margin-bottom: 2rem;
+    margin-top: -7.75rem;
+    max-width: 12rem;
+    margin-left: 1rem;
+  }
+
+  form {
+    display: none;
+  }
+
+  
 }
 
 .profile-avatar {
@@ -44,15 +64,15 @@
 
 .username-description {
   left: 1.5rem;
-    margin-left: .9rem;
-    color: var(--mono-500);
-    font-size: .8rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: .9rem;
-    position: absolute;
-    top: 5.25rem;
-    width: auto;
+  margin-left: .9rem;
+  color: var(--mono-500);
+  font-size: .8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: .9rem;
+  // position: absolute;
+  top: 5.25rem;
+  width: auto;
 }
 
 .pgn__icon {
@@ -81,4 +101,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.text-muted {
+  color: var(--mono-500);
+}
+
+.alert-info {
+  display: none;
+}
+
+.container-fluid {
+  .col {
+    display: none;
+  }
 }
