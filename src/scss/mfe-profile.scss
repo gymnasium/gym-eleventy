@@ -139,3 +139,10 @@ h1 {
   }
 }
 
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem;
+  border: 1px solid var(--mono-500);
+}
+
