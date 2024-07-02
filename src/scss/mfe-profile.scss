@@ -124,3 +124,18 @@ h1 {
 .d-flex {
   display: flex;
 }
+
+// certificate grid
+.row.align-items-stretch {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(medium, min) {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .col {
+    max-width: 100%;
+  }
+}
+
