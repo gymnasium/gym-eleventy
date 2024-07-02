@@ -41,3 +41,50 @@
     }
   }
 }
+
+// Certificate area
+.pgn-transition-replace-group {
+  text-align: start;
+  transition: height .3s ease;
+}
+
+// H2
+.edit-section-header {
+  display: block;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+
+// Utility classes
+.mb-4, .my-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-2, .my-2 {
+  margin-bottom: .5rem !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+// .align-items-stretch {
+//   align-items: stretch !important;
+// }
+
+// certificate grid
+.row.align-items-stretch {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(medium, min) {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .col {
+    max-width: 100%;
+  }
+}
