@@ -15,8 +15,10 @@
   display: none;
 
   @include breakpoint(medium, min) {
-    background: var(--primary);
-    height: 12rem;
+    background-image: unset;
+    background-color: unset;
+    background: var(--mono-400);
+    height: 8.75rem;
     display: block;
   }
 }
@@ -73,4 +75,10 @@
 .icon-visibility-off {
   color: var(--mono-500);
   height: 1rem;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
