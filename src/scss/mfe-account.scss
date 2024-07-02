@@ -9,3 +9,24 @@
 @use 'shared';
 
 @use 'mfe/root';
+
+.page__account-settings .h6, .page__account-settings h6 {
+  margin-bottom: .25rem;
+  font-size: 0.75rem;
+}
+
+.page__account-settings .btn-link {
+  border: none;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0;
+  background-color: transparent;
+  color: var(--mono-900);
+  font-family: var(--font-family-default);
+  border-radius: 0;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--mono-700);
+  }
+}
