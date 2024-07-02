@@ -8,6 +8,7 @@
 
 @use 'shared';
 
+@use 'mfe/flex';
 @use 'mfe/root';
 
 h1 {
@@ -64,13 +65,13 @@ h1 {
 
 .username-description {
   left: 1.5rem;
-  margin-left: .9rem;
+  margin-left: 1rem;
   color: var(--mono-500);
   font-size: .8rem;
   font-style: normal;
   font-weight: 400;
   position: relative;
-  top: 5.25rem;
+  top: 0;
   width: auto;
 }
 
@@ -115,4 +116,12 @@ h1 {
   .col {
     display: none;
   }
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.d-flex {
+  display: flex;
 }
