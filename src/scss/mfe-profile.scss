@@ -142,12 +142,22 @@ h1 {
 
 .card {
   width: 100%;
-  border: 1px solid var(--mono-500);
+  border: rem-calc(1) solid var(--mono-400);
+  border-radius: rem-calc(3);
+  background-color: var(--mono-100);
 }
 
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1rem;
+
+  // hide...
+  > {
+    p.h6,
+    p.small {
+      display: none;
+    }
+  }
 }
 
