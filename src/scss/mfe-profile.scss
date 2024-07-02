@@ -154,8 +154,8 @@ h1 {
 
   // hide...
   > {
-    p.h6,
-    p.small {
+    p.h6.mb-4,
+    p.small.mb-0 {
       display: none;
     }
   }
