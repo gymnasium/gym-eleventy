@@ -111,12 +111,6 @@ h1 {
   display: none;
 }
 
-// .container-fluid {
-//   .col {
-//     display: none;
-//   }
-// }
-
 .align-items-center {
   align-items: center;
 }
@@ -164,4 +158,9 @@ h1 {
 // icon in "view certificate" button
 .pgn__hyperlink__external-icon {
   margin-left: 1rem;
+}
+
+// hide one "version" of the name/member since
+.profile-page .container-fluid > .row > .col {
+  display: none;
 }
