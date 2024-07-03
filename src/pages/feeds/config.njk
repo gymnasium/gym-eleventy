@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
   "urls": {{ config.urls | stringify | safe }},
   "header": {{ config.header | stringify | replace("GYM_ROOT_URL", config.urls.root) | replace("GYM_LMS_URL", config.urls.lms) | safe }},
   "logos": {{ config.logos | stringify | safe }},
-  "msg": {{ config.msg | stringify | safe }},
+  "msg": {{ config.msg | stringify | replace("GYM_ROOT_URL", config.urls.root) | replace("GYM_LMS_URL", config.urls.lms) | safe }},
   "html": {{ config.html | stringify | replace('"FOOTER_HTML"', footer) | safe }},
   "bios": {{ bios | stringify | safe }},
   "courses": {{ courses | stringify | safe }},
