@@ -90,6 +90,9 @@
   {%- endif -%}
 
   {%- if module.cta -%}
+    {%- if module.cta.description -%}
+      <p>{{ module.cta.description | safe }}</p>
+    {%- endif -%}
     <a class="btn" href="{{ module.cta.href }}">{{ module.cta.label }}</a>
   {%- endif -%}
 </section>

@@ -2,7 +2,7 @@
 permalink: /feeds/config.json
 eleventyExcludeFromCollections: true
 ---
-{%- set footer -%}{%- include 'layouts/components/footer.njk' -%}{%- endset -%}
+{%- set footer -%}{%- include 'layouts/components/footer.njk' -%}{%- include 'layouts/components/shared-scripts.njk' -%}{%- endset -%}
 {%- set footer = footer | minify_html | stringify | replace("GYM_ROOT_URL", config.urls.root) -%}
 {# Important: note the inclusion of double quotes when replacing '"FOOTER_HTML"' #}
 {
@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
   "urls": {{ config.urls | stringify | safe }},
   "header": {{ config.header | stringify | replace("GYM_ROOT_URL", config.urls.root) | replace("GYM_LMS_URL", config.urls.lms) | safe }},
   "logos": {{ config.logos | stringify | safe }},
-  "msg": {{ config.msg | stringify | safe }},
+  "msg": {{ config.msg | stringify | replace("GYM_ROOT_URL", config.urls.root) | replace("GYM_LMS_URL", config.urls.lms) | safe }},
   "html": {{ config.html | stringify | replace('"FOOTER_HTML"', footer) | safe }},
   "bios": {{ bios | stringify | safe }},
   "courses": {{ courses | stringify | safe }},

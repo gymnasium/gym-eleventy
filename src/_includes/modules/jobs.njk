@@ -1,5 +1,7 @@
 {%- if data.JOBDATA.jobs2 -%}
-  {%- set header = module.header -%}
+  {%- if not header  -%}
+    {%- set header = module.header -%}
+  {%- endif -%}
   {%- include 'modules/components/header.njk' -%}
 
   <form id="location-select" class="location-select">

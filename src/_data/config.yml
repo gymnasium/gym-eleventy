@@ -262,6 +262,10 @@ css:
   mfe: /css/mfe.css
 msg:
   mfe:
+    account:
+      deletion: |
+        <p>To delete your data, please fill out <a href="https://privacyportal.onetrust.com/webform/05f24bb5-a0c4-43d4-966e-05606d5be9ca/93b6b82e-baf8-4adc-8998-0df20831be6d" rel="noopener" target="_blank">our data deletion request form</a>.</p>
+        <p>Heads up! Deleting your account data will remove any certificates/badges that you’ve earned on Aquent Gymnasium. We advise that you save them now. See our <a href="GYM_ROOT_URL/faq#account-deletion">FAQ page</a> for more information.</p>
     authn:
       welcome: "<p>This is an example of a welcome message on the registration page.</p>"
     course_about:

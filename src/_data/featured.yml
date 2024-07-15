@@ -4,9 +4,10 @@ home:
   featured:
     header:
       heading: Featured Courses
-      description: "Design a career you love with free online courses on design, development, UX, accessibility, and career skills."
+      description: 
     wrapper_class: home
     cta:
+      description: "Design a career you love with free online courses on design, development, UX, accessibility, and career skills."
       href: /courses/
       label: View all Courses
       class: btn

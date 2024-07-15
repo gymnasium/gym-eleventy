@@ -8,6 +8,10 @@
   pointer-events: none;
 }
 
+[role="button"] {
+  cursor: pointer;
+}
+
 .btn {
   background-color: var(--primary);
   border: 3px solid var(--primary);

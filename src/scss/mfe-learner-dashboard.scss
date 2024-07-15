@@ -9,18 +9,15 @@
 @use "shared";
 
 @use "mfe/root";
+@use "mfe/flex";
+@use "mfe/buttons";
 
+// Dashboard Heading
 .course-list-heading-container {
   align-items: flex-start;
-  flex-direction: column-reverse;
-
-
-  
+  // flex-direction: column-reverse;
   display: flex;
-  
   justify-content: space-between;
-
-
   align-self: center;
 
   @include breakpoint(large, min) {
@@ -29,578 +26,429 @@
   }
 }
 
+.course-list-title {
+  text-transform: uppercase;
+}
+
 // Course filter controls
 .course-filter-controls-container {
   align-self: flex-start;
 
-  @include breakpoint(large, min) {
-    align-self: flex-end;
+  @include breakpoint(medium, min) {
+    align-self: flex-start;
+  }
+
+  // #course-filter-controls
+  button {
+    .btn-icon-before {
+      margin-left: -0.25rem;
+      margin-inline-end: 0.5rem;
+    }
   }
 }
 
+// active filters
+#course-list-active-filters-container {
+}
 
+#course-list-active-filters {
+}
+
+.pgn__chip {
+  background: #e1dddb;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  display: inline-flex;
+  margin: 0.125rem;
+
+  &__label {
+    padding-right: rem-calc(3);
+    box-sizing: border-box;
+    cursor: default;
+    font-size: 0.875rem;
+    overflow: hidden;
+    padding: 0.125rem 0.5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__icon-after,
+  &__icon-before {
+    border-radius: 0 0.25rem 0.25rem 0;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: default;
+    display: flex;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    line-height: 1;
+  }
+
+  * {
+    fill: var(--mono-900);
+    color: var(--mono-900);
+  }
+}
+
+.pgn__icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  display: block;
+  flex-shrink: 0;
+  position: relative;
+
+  svg {
+    display: block;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
+}
+
+// Course Filter button
 .btn-outline-primary {
-  border-color: #0a3055;
-  color: #0a3055;
-  background-color: transparent;
-  border: 1px solid #0a3055;
+  border-color: var(--mono-900);
+  color: var(--mono-900);
+  border: rem-calc(1) solid var(--mono-900);
   padding: rem-calc(9 16);
+  display: inline-flex;
 }
 
+// Filter popup (wide screens
+.pgn__modal-popup__tooltip {
+}
+
+// Background of filter popup/overlay
 .bg-white {
-  background-color: #fff;
+  background-color: var(--mono-100);
 }
 
-@include breakpoint(large, min) {
+.pgn__form-group {
+  margin-bottom: 1rem;
+  text-align: start;
+}
+
+.pgn__form-control-set {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.pgn__form-checkbox,
+.pgn__form-radio,
+.pgn__form-switch {
+  display: inline-flex;
+  padding: 0.5rem 0;
+}
+
+.pgn__form-checkbox-input,
+.pgn__form-radio-input,
+.pgn__form-switch-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--mono-100);
+  background-position: 50%;
+  border: rem-calc(2) solid var(--mono-500);
+  // border-radius: 0;
+  height: rem-calc(20);
+  margin-inline-end: 0.5rem;
+  width: rem-calc(20);
+  padding: 0;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.pgn__form-checkbox-input:checked {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath fill='%230A3055' d='M21 3H3v18h18V3ZM10 17l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9Z'/%3E%3C/svg%3E");
+}
+
+.pgn__form-radio-input {
+  border-radius: 100%;
+}
+.pgn__form-radio-input:checked {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%230A3055'/%3E%3C/svg%3E");
+}
+
+.pgn__form-checkbox .pgn__form-label,
+.pgn__form-radio .pgn__form-label,
+.pgn__form-switch .pgn__form-label {
+  align-items: center;
+  display: flex;
+  line-height: 1.25rem;
+  margin-bottom: 0;
+}
+
+// breakpoint should match that set for the pgn sheet component
+@include breakpoint(576, min) {
   #course-filter-controls-card {
+    height: rem-calc(288);
+    width: rem-calc(512);
+    padding: 1rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+
     .filter-form-col {
       display: inline-block;
-      width: 256px;
+      width: rem-calc(256);
     }
-  
+
     .filter-form-heading {
-      font-size: 18px;
+      font-size: rem-calc(18);
       font-weight: 700;
+      margin-bottom: 0.25rem;
     }
-  
-  
-  
+
+    hr {
+      width: rem-calc(1);
+      margin-right: 1rem;
+    }
   }
-  
-  
-  .pgn__form-control-set {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-  }
-  
-
 }
 
-
-
-
-
-.pgn__sheet-skrim {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(196, 196, 196, .5);
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  &.hidden {
-    display: none;
-  }
-
-  z-index: 10;
-}
-
-%component-left {
-  left: 0;
-  box-shadow: 8px 0 16px 0 rgba(0, 0, 0, .15);
-}
-
-%component-right {
-  right: 0;
-  box-shadow: -8px 0 16px 0 rgba(0, 0, 0, .15);
-}
-
-.pgn__sheet-component-left {
-  @extend %component-left;
-}
-
-.pgn__sheet-component-right {
-  @extend %component-right;
+// TODO: add pgn sheet stuff for <= 575px
+.sheet-container {
 }
 
 .pgn__sheet-component {
-  position: fixed;
-  padding: 1.25rem;
-  background-color: white;
-  z-index: 10;
-
-  &.pgn__sheet__dark {
-    background-color: black;
-    color: white;
-  }
-
-  &.bottom {
-    bottom: 0;
-    box-shadow: 0 -8px 16px 0 rgba(0, 0, 0, .15);
-  }
-
-  &.top {
-    top: 0;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .15);
-  }
-
-  &.left {
-    @extend %component-left;
-
-    [dir="rtl"] & {
-      @extend %component-right;
-
-      left: auto;
-    }
-  }
-
-  &.right {
-    @extend %component-right;
-
-    [dir="rtl"] & {
-      @extend %component-left;
-
-      right: auto;
-    }
-  }
-
-  &.bottom,
-  &.top {
-    width: 100%;
-    left: 0;
-    max-height: 50%;
-  }
-
-  &.left,
-  &.right {
-    max-width: 272px;
-    height: 100%;
-    top: 0;
-  }
-}
-
-
-// PGN Modal
-// Modals
-
-// Padding applied to the modal body
-$modal-inner-padding:               1.5rem !default;
-$modal-inner-padding-bottom:        .7rem !default;
-
-// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
-$modal-footer-margin-between:       .5rem !default;
-
-$modal-dialog-margin:               1.5rem !default;
-$modal-dialog-margin-y-sm-up:       1.75rem !default;
-
-$modal-title-line-height:           1 !default;
-
-$modal-content-color:               null !default;
-$modal-content-bg:                  var(--mono-100) !default;
-$modal-content-border-color:        rgba(var(--mono-900), .2) !default;
-$modal-content-border-width:        0 !default;
-$modal-content-border-radius:       3 !default;
-$modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width) !default;
-$modal-content-box-shadow-xs:       0 .25rem .5rem rgba(var(--mono-900), .5) !default;
-$modal-content-box-shadow-sm-up:    0 10px 20px rgba(var(--mono-900), .15), 0 8px 20px rgba(var(--mono-900), .15) !default;
-
-$modal-backdrop-bg:                 var(--mono-900) !default;
-$modal-backdrop-opacity:            .5 !default;
-$modal-header-border-color:         var(--mono-700) !default;
-$modal-footer-border-color:         $modal-header-border-color !default;
-$modal-header-border-width:         3 !default;
-$modal-footer-border-width:         3 !default;
-$modal-header-padding-y:            1rem !default;
-$modal-header-padding-x:            1.5rem !default;
-$modal-close-container-top:         .625rem !default;
-
-// Keep this for backwards compatibility
-$modal-header-padding:              1rem !default;
-$modal-footer-padding-y:            1rem !default;
-$modal-footer-padding-x:            1.5rem !default;
-
-// Keep this for backwards compatibility
-$modal-footer-padding:              1rem 1rem !default;
-
-$modal-xl:                          1140px !default;
-$modal-lg:                          800px !default;
-$modal-md:                          500px !default;
-$modal-sm:                          400px !default;
-
-$modal-fade-transform:              translate(0, -50px) !default;
-$modal-show-transform:              none !default;
-$modal-transition:                  transform .3s ease-out !default;
-$modal-scale-transform:             scale(1.02) !default;
-
-$success: green !default;
-$info: teal !default;
-$danger: red !default;
-$warning: yellow !default;
-
-$success-100: mix(white, $success, 94%) !default;
-$success-200: mix(white, $success, 75%) !default;
-$success-300: mix(white, $success, 50%) !default;
-$success-400: mix(white, $success, 25%) !default;
-$success-500: $success !default;
-$success-600: mix(black, $success, 10%) !default;
-$success-700: mix(black, $success, 20%) !default;
-$success-800: mix(black, $success, 25%) !default;
-$success-900: mix(black, $success, 30%) !default;
-
-$info-100: mix(white, $info, 94%) !default;
-$info-200: mix(white, $info, 75%) !default;
-$info-300: mix(white, $info, 50%) !default;
-$info-400: mix(white, $info, 25%) !default;
-$info-500: $info !default;
-$info-600: mix(black, $info, 10%) !default;
-$info-700: mix(black, $info, 20%) !default;
-$info-800: mix(black, $info, 25%) !default;
-$info-900: mix(black, $info, 30%) !default;
-
-$warning-100: mix(white, $warning, 94%) !default;
-$warning-200: mix(white, $warning, 75%) !default;
-$warning-300: mix(white, $warning, 50%) !default;
-$warning-400: mix(white, $warning, 25%) !default;
-$warning-500: $warning !default;
-$warning-600: mix(black, $warning, 10%) !default;
-$warning-700: mix(black, $warning, 20%) !default;
-$warning-800: mix(black, $warning, 25%) !default;
-$warning-900: mix(black, $warning, 30%) !default;
-
-$danger-100: mix(white, $danger, 94%) !default;
-$danger-200: mix(white, $danger, 75%) !default;
-$danger-300: mix(white, $danger, 50%) !default;
-$danger-400: mix(white, $danger, 25%) !default;
-$danger-500: $danger !default;
-$danger-600: mix(black, $danger, 10%) !default;
-$danger-700: mix(black, $danger, 20%) !default;
-$danger-800: mix(black, $danger, 25%) !default;
-$danger-900: mix(black, $danger, 30%) !default;
-
-$spacer: 1rem !default;
-$spacers: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$spacers: map-merge(
-  (
-    0: 0,
-    1: ($spacer * .25),
-    1\.5: ($spacer * .375),
-    2: ($spacer * .5),
-    2\.5: ($spacer * .75),
-    3: $spacer,
-    3\.5: ($spacer * 1.25),
-    4: ($spacer * 1.5),
-    4\.5: ($spacer * 2),
-    5: ($spacer * 3),
-    5\.5: ($spacer * 4),
-    6: ($spacer * 5),
-  ),
-  $spacers
-);
-
-.pgn__modal {
-  background: $modal-content-bg;
-  border-radius: $modal-content-inner-border-radius;
-  display: flex;
-  flex-direction: column;
-  margin: 0 $modal-dialog-margin;
-  max-height: 80vh;
-  max-width: $modal-md;
-  overflow: auto;
-  width: 100vw;
-  box-shadow: $modal-content-box-shadow-sm-up;
-  border: solid $modal-content-border-width $modal-content-border-color;
-  position: relative;
-
-  &:not(.pgn__modal-fullscreen) > *:first-child {
-    border-top-left-radius: $modal-content-border-radius;
-    border-top-right-radius: $modal-content-border-radius;
-  }
-
-  &:not(.pgn__modal-fullscreen) > *:last-child {
-    border-bottom-left-radius: $modal-content-border-radius;
-    border-bottom-right-radius: $modal-content-border-radius;
-  }
-
-  &.pgn__modal-scroll-fullscreen {
-    max-height: none;
-    margin: $modal-dialog-margin;
-  }
-}
-
-// Sizes
-
-.pgn__modal-sm {
-  max-width: $modal-sm;
-}
-
-.pgn__modal-lg {
-  max-width: $modal-lg;
-}
-
-.pgn__modal-md {
-  max-width: $modal-md;
-}
-
-.pgn__modal-xl {
-  max-width: $modal-xl;
-}
-
-.pgn__modal-fullscreen {
-  border-radius: 0;
-  margin: 0;
-  max-height: none;
-  max-width: none;
-
-  .pgn__modal-footer {
-    border-top: solid 1px var(--mono-400);
-    padding-top: $modal-footer-padding-y;
-  }
-}
-
-// Made specific due to a selector in Modal.scss
-.pgn__modal-content-container > *.pgn__modal.pgn__modal-fullscreen {
-  position: fixed;
-  top: 0;
+  box-shadow: rem-calc(8) 0 rem-calc(16) 0 rgba(0, 0, 0, 0.15);
   left: 0;
-  right: 0;
   height: 100%;
+  top: 0;
+  max-width: 75%;
+  width: 75%;
+  background-color: var(--mono-100);
+  padding: 1.25rem;
+  position: fixed;
+  z-index: 1032;
 }
 
-// Subcomponents
+.pgn__sheet-content {
+  > :first-child {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  hr {
+    margin-bottom: 1rem;
+  }
+
+  .filter-form-heading {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.filter-form-row {
+
+}
 
 .pgn__modal-close-container {
+  inset-inline-end: 1rem;
   position: absolute;
+  top: 1rem;
   z-index: 10;
-  top: $modal-close-container-top;
-  inset-inline-end: $modal-header-padding-y;
 }
 
-.pgn__modal-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: sticky;
-  top: 0;
-  padding: $modal-header-padding;
-  background-color: $modal-content-bg;
-  transition: box-shadow 150ms ease;
-  min-height: 2rem; // height of the icon close button
-  box-sizing: content-box;
-  flex-shrink: 0;
-  box-shadow: none;
-
-  * {
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-
-  .pgn__modal-title {
-    font-size: rem-calc(20);
-    margin-inline-end: 3rem; // roughly accomodate the width of the close buttonn
-    text-align: start;
-  }
+.pgn__modal-close-button {
+  border-color: transparent;
+  color: var(--mono-900);
+  padding: 0.5rem;
+  background-color: transparent;
 }
 
-.pgn__modal-hero {
-  padding: $modal-header-padding;
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: 10rem;
 
-  .pgn__modal-hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.btn-tertiary, .btn-tertiary:hover {
+
+}
+
+.btn-tertiary {
+  
+}
+
+// Course "Cards"
+.course-card {
+  margin-bottom: 2rem;
+
+  > .card {
+    flex-direction: row;
+    border: 0;
     width: 100%;
-    height: 100%;
-    z-index: 0;
-    background-size: cover;
-  }
-
-  .pgn__modal-hero-content {
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: var(--mono-100);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
     position: relative;
-    z-index: 1;
-    margin-inline-end: 3rem;
-    text-align: start;
   }
 }
 
-.pgn__modal-body {
-  flex-grow: 1;
-  padding: $modal-inner-padding $modal-inner-padding calc(#{$modal-inner-padding} / 2);
-  overflow: auto;
+.pgn__card-wrapper-image-cap {
   position: relative;
 
-  &::before {
-    content: "";
-    background-color: transparent;
-    background-image: linear-gradient(#605C5C, #B8BEBE, transparent 50%);
+  @include breakpoint(medium, min) {
+    max-width: rem-calc(240);
+    min-width: rem-calc(240);
+  }
+
+  img {
+    height: 100%;
+    max-width: inherit;
+    object-fit: cover;
+    width: 100%;
     display: block;
-    height: 20px;
-    position: sticky;
-    top: -$modal-inner-padding;
-    margin-top: -$modal-inner-padding;
-    margin-left: -$modal-inner-padding;
-    margin-right: -$modal-inner-padding;
-    opacity: .5;
-    z-index: 2;
-  }
-
-  &::after {
-    content: "";
-    background-color: transparent;
-    background-image:
-      linear-gradient(
-        360deg,
-        #605C5C,
-        #B8BEBE,
-        transparent 50%
-      );
-    display: block;
-    height: 20px;
-    position: sticky;
-    bottom: calc(#{$modal-inner-padding} / 2 * -1);
-    margin-bottom: -$modal-inner-padding-bottom;
-    margin-left: -$modal-inner-padding;
-    margin-right: -$modal-inner-padding;
-    opacity: .5;
-  }
-
-  &.pgn__modal-body-scroll-bottom {
-    &::before {
-      opacity: .5;
-    }
-
-    &::after {
-      opacity: 0;
-    }
-  }
-
-  &.pgn__modal-body-scroll-top {
-    &::before {
-      opacity: 0;
-      z-index: -1;
-    }
-
-    &::after {
-      opacity: .5;
-    }
-  }
-
-  &.pgn__modal-body-scroll-top.pgn__modal-body-scroll-bottom {
-    &::before {
-      opacity: 0;
-    }
-
-    &::after {
-      opacity: 0;
-    }
-  }
-
-  .pgn__modal-body-content {
-    text-align: start;
-
-    > *:last-child {
-      margin-bottom: 0;
-    }
-
-    // Avoid doubling up on padding with containers
-    > .container-fluid {
-      padding: 0;
-    }
-  }
-
-  .pgn__modal.pgn__modal-scroll-fullscreen & {
-    box-shadow: none;
   }
 }
 
-.pgn__modal-footer {
-  position: sticky;
-  bottom: 0;
-  display: flex;
-  justify-content: flex-end;
-  background-color: $modal-content-bg;
-  transition: box-shadow 150ms ease;
-  padding: $modal-footer-padding;
-  padding-top: calc(#{$modal-inner-padding} / 2);
-}
-
-// Color Variants
-
-.pgn__modal-default {
-  // Default style modals don't have a background on the header which
-  // ends up looking spaced too far away from the body content.
-  .pgn__modal-header {
-    padding-bottom: calc(#{$modal-inner-padding} / 2);
+// card body
+.pgn__card {
+  &-body {
+    padding: 1.25rem;
+    width: 100%;
   }
 
-  .pgn__modal-body {
-    padding: calc(#{$modal-inner-padding} / 2) $modal-inner-padding;
-
-    &::before {
-      top: calc(#{$modal-inner-padding} / 2 * -1);
-    }
-  }
-}
-
-.pgn__modal-dark {
-  .pgn__modal-header,
-  .pgn__modal-hero {
-    background-color: var(--mono-700);
-    color: var(--mono-100);
-
-    * {
-      color: inherit;
-    }
-  }
-
-  .pgn__modal-header {
-    border-bottom: solid 1px var(--mono-400);
-  }
-}
-
-.pgn__modal-warning .pgn__modal-header {
-  background-color: var(--red-500);
-}
-
-.pgn__modal-danger .pgn__modal-header {
-  background-color: var(--red-500);
-}
-
-.pgn__modal-success .pgn__modal-header {
-  background-color: var(--green-500);
-}
-
-// Modal types
-
-.pgn__alert-modal {
-  &.pgn__modal-default {
-    .pgn__modal-header {
-      padding-bottom: 0;
-    }
-  }
-
-  &.pgn__modal-warning {
-    .pgn__alert-modal__title_icon {
-      color: var(--green-500);
-    }
-  }
-
-  &.pgn__modal-success {
-    .pgn__alert-modal__title_icon {
-      color: $success-500;
-    }
-  }
-
-  &.pgn__modal-danger {
-    .pgn__alert-modal__title_icon {
-      color: $danger-500;
-    }
-  }
-
-  .pgn__modal-title {
-    font-size: rem-calc(18);
+  &-header {
     display: flex;
-    flex-grow: 1;
-    align-items: center;
+    justify-content: space-between;
 
-    .pgn__alert-modal__title_icon {
+    &-content {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      text-align: start;
+      width: 100%;
+    }
+
+    &-actions {
       flex-shrink: 0;
-      margin-right: map-get($spacers, 2\.5);
+      margin-inline-start: 1rem;
     }
   }
+
+  &-section {
+    flex-grow: 1;
+    text-align: start;
+    margin: 1rem 0 1.25rem;
+  }
+
+  &-footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    width: 100%;
+
+    @include breakpoint(medium, min) {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.pgn__action-row {
+  button[disabled] {
+    display: none;
+    margin-right: 1rem;
+  }
+}
+
+// Grade required to pass...
+.course-card-banners {
+}
+
+.alert-info {
+  border-radius: 0;
+  box-shadow: none;
+  padding: 1rem 1.5rem;
+  background-color: var(--mono-300);
+  border-color: #bfdbea;
+  color: inherit;
+  display: flex;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  text-align: start;
+}
+
+.alert .alert-icon {
+  flex-shrink: 0;
+  height: 1.5rem;
+  margin-inline-end: 0.8rem;
+  width: 1.5rem;
+}
+
+// 3 dot icon
+.btn-icon {
+  border: rem-calc(1) solid var(--mono-400);
+  border-radius: 50%;
+  display: inline-flex;
+  height: 2.75rem;
+  justify-content: center;
+  padding: 0;
+  width: 2.75rem;
+  white-space: nowrap;
+
+  &.btn-icon-primary {
+    background-color: transparent;
+    color: var(--mono-900);
+    cursor: pointer;
+  }
+
+  &__icon-container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// dropdown
+.dropdown-menu {
+  background-clip: padding-box;
+  background-color: var(--mono-100);
+  border: rem-calc(1) solid rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  color: var(--mono-900);
+  display: none;
+  font-size: 1.125rem;
+  list-style: none;
+  margin: 0.125rem 0 0;
+  min-width: 9rem;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+
+  &.show {
+    display: block;
+    // float: right;
+    // right: 0;
+    // text-align: left;
+  }
+}
+
+.pgn__dropdown-item {
+  align-items: center;
+  display: flex;
+  background-color: transparent;
+  border: 0;
+  clear: both;
+  color: var(--mono-900);
+  display: block;
+  font-weight: 400;
+  padding: 0.25rem 1rem;
+  text-align: inherit;
+  white-space: nowrap;
+  width: 100%;
+}
+
+// Hice sidebar (for now)
+.sidebar-column {
+  display: none;
 }
