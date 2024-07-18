@@ -11,7 +11,7 @@ live: false
 sitemapExclude: true
 retired_message:
   1: "<strong>This course is retiring on March 25, 2022.</strong> All coursework needs to be completed by that date."
-  2: "<strong>This course has been retired.</strong> We recommend taking the course <a href='/courses/GYM/107/0/about'>Modern Web Design</a> instead. It’s a bit more advanced, but we think you’d get a lot out of it."
+  2: "<strong>This course has been retired.</strong> We recommend taking the course <a href='/courses/course-v1:GYM+107+0/about'>Modern Web Design</a> instead. It’s a bit more advanced, but we think you’d get a lot out of it."
 url: /courses/course-v1:GYM+100+0/about
 img: /img/courses/svg/gym-100.svg
 topic: "Development"
