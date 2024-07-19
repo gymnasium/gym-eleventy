@@ -11,7 +11,7 @@ live: false
 sitemapExclude: true
 retired_message:
   1: "<strong>This course has been retired.</strong>"
-url: /courses/GYM/105/0/about
+url: /courses/course-v1:GYM+105+0/about
 img: /img/courses/svg/gym-105.svg
 topic: "Career Skills"
 description: "This course has been retired."

@@ -24,7 +24,7 @@ related_content:
 - label: "Google Charts Quick Start Guide"
   url: "https://developers.google.com/chart/interactive/docs/quick_start"
 - label: "Aquent Gymnasium’s free course: Information Design and Visualization Fundamentals"
-  url: "https://thegymnasium.com/courses/GYM/106/0/about"
+  url: "https://thegymnasium.com/courses/course-v1:GYM+106+0/about"
 - label: "Google Chart Gallery"
   url: "https://developers.google.com/chart/interactive/docs/gallery"
 - label: "DataTables and DataViews (Different ways to create and populate a DataTable)"
