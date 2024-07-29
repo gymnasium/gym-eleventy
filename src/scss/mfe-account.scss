@@ -28,23 +28,38 @@
     margin-bottom: 1rem;
   }
 
-  .btn-link {
-    border: none;
-    display: inline-block;
-    line-height: inherit;
-    padding: 0;
-    background-color: transparent;
-    color: var(--mono-900);
-    font-family: var(--font-family-default);
-    font-size: 0.875rem;
-    font-weight: normal;
-    border-radius: 0;
-    text-decoration: underline;
-  
-    &:hover {
+  .btn {
+    font-size: 1rem;
+    padding: 1rem;
+
+    &-link {
+      border: none;
+      display: inline-block;
+      line-height: inherit;
+      padding: 0;
       background-color: transparent;
-      color: var(--mono-700);
+      color: var(--mono-900);
+      font-family: var(--font-family-default);
+      font-size: 0.875rem;
+      font-weight: normal;
+      border-radius: 0;
+      text-decoration: underline;
+    
+      &:hover {
+        background-color: transparent;
+        color: var(--mono-700);
+      }
     }
+
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .account-section {
+    padding-top: 1rem;
+    margin-bottom: 3rem;
   }
 }
 
