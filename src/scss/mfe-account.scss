@@ -31,21 +31,19 @@
   .btn-link {
     border: none;
     display: inline-block;
-    line-height: 1.2;
+    line-height: inherit;
     padding: 0;
     background-color: transparent;
     color: var(--mono-900);
     font-family: var(--font-family-default);
-    font-size: 1rem;
+    font-size: 0.875rem;
+    font-weight: nornal;
     border-radius: 0;
+    text-decoration: underline;
   
     &:hover {
       background-color: transparent;
       color: var(--mono-700);
-    }
-
-    a {
-      text-decoration: underline;
     }
   }
 }
@@ -87,4 +85,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+// Hide unused sections
+#profile-information, #social-media, #site-preferences, #linked-accounts {
+  display: none;
 }
