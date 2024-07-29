@@ -53,7 +53,6 @@
     header {
       max-width: 18.25rem;
 
-      .topic,
       .title {
         color: var(--mono-100);
       }
@@ -61,7 +60,7 @@
       .topic {
         font-size: 1rem;
         line-height: 1;
-        color: var(--mono-500);
+        color: var(--mono-400);
         letter-spacing: 0.15rem;
         margin-top: rem-calc(-1);
         margin-bottom: 1.2rem;
