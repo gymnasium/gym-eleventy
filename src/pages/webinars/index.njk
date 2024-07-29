@@ -22,8 +22,8 @@ meta:
         <div class="main">
           <header>
             <p class="topic caps"><b>{{ webinar.content_category }}</b></p>
-            <h2 class="title">{{ webinar.title | safe }}</h2>
-            <p class="guests"><b>{{ webinar.event_guests | safe }}</b></p>
+            <h2 class="title">{{ webinar.title }}{% if webinar.subtitle %}<span class="subhead"><span class="visuallyhidden">:</span> {{ webinar.subtitle }}</span>{%- endif -%}</h2>
+            <p class="guests"><b>{{ webinar.event_guests }}</b></p>
           </header>
         </div>
         <div class="cta">
