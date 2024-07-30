@@ -28,7 +28,7 @@
         .bg-#{$color}-#{$shade} {
           background-color: var(--#{$color}-#{$shade});
           --box-shadow-color: var(--#{$color}-#{$shade});
-  
+
           // Automatically set the color based on the HSL lightness value
           @if lightness($value) > 60% {
             color: var(--mono-900);
@@ -58,6 +58,10 @@
 // Use CSS variables defined above to add box shadow color!
 @mixin full-bleed {
   box-shadow: -30rem 0 var(--box-shadow-color), 30rem 0 var(--box-shadow-color), -70rem 0 var(--box-shadow-color), 70rem 0 var(--box-shadow-color), -140rem 0 var(--box-shadow-color), 140rem 0 var(--box-shadow-color);
+  padding-left: 1rem; // Override .container padding-left/right
+  padding-right: 1rem; // "
+  margin-left: -1rem; // "
+  margin-right: -1rem; // "
 }
 
 @mixin dotted-bottom($border-color: var(--mono-500)) {

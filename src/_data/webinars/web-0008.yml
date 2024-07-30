@@ -2,8 +2,8 @@ id: web-0008
 slug: rethinking-full-stack
 color: purple
 type: webinar
-title: "Rethinking <span class=\"nowrap\">Full Stack: </span><br/>Cost and <span class=\"nowrap\">Compromise</span>"
-event_guests: "with Eric Meyer <span class=\"nowrap\">and Dan Mall</span>"
+title: "Rethinking Full Stack: Cost and Compromise"
+event_guests: "with Eric Meyer and Dan Mall"
 description: "A conversation about the difference between front end and full stack developers with special guests Eric Meyer and Dan Mall."
 permalink: /webinars/rethinking-full-stack
 event_date: 2017-11-09

@@ -53,15 +53,18 @@
     header {
       max-width: 18.25rem;
 
-      .topic,
       .title {
         color: var(--mono-100);
+        line-height: 1.15;
+        letter-spacing: 0.05ex;
+        word-spacing: 0.05ex;
+        text-wrap: balance;
       }
 
       .topic {
         font-size: 1rem;
         line-height: 1;
-        color: var(--mono-500);
+        color: var(--mono-400);
         letter-spacing: 0.15rem;
         margin-top: rem-calc(-1);
         margin-bottom: 1.2rem;
@@ -71,11 +74,13 @@
     .subhead {
       display: block;
       max-width: 24rem;
-      font-size: .55rem;
-      line-height: 1.35;
+      font-weight: 700;
+      font-size: 1.0625rem;
+      line-height: 1.25;
       color: var(--mono-100);
-      letter-spacing: .05rem;
-      margin-top: .75rem;
+      letter-spacing: 0.1ex;
+      word-spacing: 0.1ex;
+      margin-top: 0.6rem;
     }
 
     p {

@@ -23,19 +23,22 @@
 }
 ---
 
-<article id="{{ item.id | slugify }}" class="webinar-detail">
+<article id="{{ item.id | slugify }}" class="courses webinar-detail bg-mono-100 full-bleed">
 
   <div class="main">
 
     <header>
-      <h1>Webinar Recording</h1>
       <hgroup>
-        <h2>{{ item.title | safe }}</h2>
-        <p>{{ item.event_guests | safe }}</p>
+        <p class="topic"><b>{{ item.type }}</b></p>
+        <h2 class="title">{{ item.title }}</h2>
+        <p class="instructor">{{ item.event_guests }}</p>
+         {# TODO: Add date formatting filter  #}
+        <!-- <p class="datetime">{{ item.event_date }}</p> -->
       </hgroup>
+      <p class="description">{{ item.description | safe }}</p>
     </header>
 
-    <p>{{ item.description }}</p>
+    <p><strong>This webinar recording is now available.</strong></p>
 
     {%- if item.video_id -%}
       {%- youtube item.video_id -%}
@@ -47,25 +50,27 @@
     {%- endif -%} #}
 
     {%- if item.resources -%}
-      <h2>Resources</h2>
-      <ul>
-        {%- for resource in item.resources -%}
-          <li><a href="{{ resource.label }}" target="_blank" rel="noopener">{{ resource.label }}</a></li>
-        {%- endfor -%}
-      </ul>
+      <section>
+        <h2>Resources</h2>
+        <ul>
+          {%- for resource in item.resources -%}
+            <li><a href="{{ resource.label }}" target="_blank" rel="noopener">{{ resource.label }}</a></li>
+          {%- endfor -%}
+        </ul>
+      </section>
     {%- endif -%}
 
   </div>
 
   <aside>
     <header>
-      <h1>Guest Speaker{%- if item.speaker[1] -%}s{%- endif -%}</h1>
+      <h2>Guest Speaker{%- if item.speaker[1] -%}s{%- endif -%}</h2>
     </header>
 
     {%- if item.speaker[0] -%}
       <section>
         <img src="{{ bios[item.speaker[0]]['img'] }}" alt="Headshot of {{ bios[item.speaker[0]]['name'] }}.">
-        <h2>{{ bios[item.speaker[0]]['name'] }}</h2>
+        <h3>{{ bios[item.speaker[0]]['name'] }}</h3>
         <p>{{ bios[item.speaker[0]]['description'] | safe }}</p>
       </section>
     {%- endif -%}
@@ -73,20 +78,23 @@
     {%- if item.speaker[1] -%}
       <section>
         <img src="{{ bios[item.speaker[1]]['img'] }}" alt="Headshot of {{ bios[item.speaker[1]]['name'] }}.">
-        <h2>{{ bios[item.speaker[1]]['name'] }}</h2>
+        <h3>{{ bios[item.speaker[1]]['name'] }}</h3>
         <p>{{ bios[item.speaker[1]]['description'] | safe }}</p>
       </section>
     {%- endif -%}
 
     <header>
-      <h1>Host</h1>
+      <h2>Host</h2>
     </header>
 
     <section>
       <img src="{{ bios[item.host]['img'] }}" alt="Headshot of {{ bios[item.host]['name'] }}.">
-      <h2>{{ bios[item.host]['name'] }}</h2>
+      <h3>{{ bios[item.host]['name'] }}</h3>
       <p>{{ bios[item.host]['description'] }}</p>
     </section>
   </aside>
 
+  <footer class="back-to">
+    <p><a href="#main">Back to Webinars</a></p>
+  </footer>
 </article>

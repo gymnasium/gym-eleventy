@@ -12,6 +12,7 @@
       background-color: var(--mono-100);
       padding: 1.4rem;
       border: 1px solid var(--mono-400);
+      border-radius: 3px;
       margin-top: 1rem;
 
       > header {
@@ -42,6 +43,7 @@
       }
     }
 
+    .featured,
     .courses,
     .tutorials,
     .webinars {
@@ -58,7 +60,12 @@
         margin-bottom: 0;
       }
 
-      .artwork + h3 {
+    }
+
+    .tutorials,
+    .webinars {
+
+      figure + h3 {
         margin-top: 0.6rem;
       }
 
@@ -67,7 +74,10 @@
     .courses {
 
       ul {
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+        @include breakpoint(medium, min) {
+          grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        }
 
         li {
           display: inherit;
@@ -94,10 +104,6 @@
         height: 0;
         padding-bottom: 62.5%;
         overflow: hidden;
-
-        img {
-          margin-top: -6%;
-        }
       }
 
     }
@@ -132,13 +138,68 @@
 
   // TODO: style the collections featured section
   .featured {
+    margin: 1.4rem 0;
+
     ul {
 
-      @include breakpoint(large, min) {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
+      @include breakpoint(medium, min) {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       }
+
+    }
+
+    article {
+        display: grid;
+
+      > div {
+        display: inherit;
+        grid-template-rows: auto auto 1fr 1fr;
+        background-color: var(--mono-100);
+        padding: 1.4rem;
+        border: 1px solid var(--mono-400);
+        border-radius: 3px;
+      }
+
+      .topic {
+        font: 900 1.25rem/1 var(--font-family-custom);
+        text-transform: uppercase;
+        letter-spacing: 0.0125ex;
+        word-spacing: 0.25ex;
+
+        b {
+          font: inherit;
+        }
+      }
+
+      figure {
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+        margin: 1.4rem -1.4rem;
+        overflow: hidden;
+
+        &[style*="courses"] {
+          background: var(--mono-400) no-repeat left center;
+          background-size: cover;
+          border-image: 1 / 0 100% stretch;
+        }
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .cta {
+        margin-top: 1.4rem;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 1rem;
+      }
+
     }
   }
 }
