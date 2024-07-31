@@ -3,10 +3,10 @@ intro:
     heading: Jobs
     heading_type: h1
     description: |
-      Explore our free resources for creative pros — from in-depth
-      <a href="#resume-tips">articles</a> and 5-minute
-      <a href="#take5-tutorials">tutorials</a> to contract and full-time
-      <a href="#jobs">jobs</a>.
+      <p>Explore our free resources for creative pros — from in-depth
+      <a href="#resume-tips"><b>articles</b></a> and 5-minute
+      <a href="#take5-tutorials"><b>tutorials</b></a> to contract and full-time
+      <a href="#jobs"><b>jobs</b></a>.</p>
   cards:
   - heading: Salary Guides
     subheading: See How Your Salary & Benefits Stack Up
@@ -107,7 +107,7 @@ interview-tips:
     - url: https://aquenttalent.com/blog/top-10-must-ask-interview-questions-for-designers
       label: "Top 10 Must-Ask Interview Questions for Designers"
 
-take-5-tutorials:
+take5-tutorials:
   module: lists/default
   header:
     heading: Take 5 Tutorials
