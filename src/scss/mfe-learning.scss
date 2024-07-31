@@ -1,11 +1,119 @@
 // | -------------------------------------------------------------
 // | This file is intended to only serve the Learning MFE
 // | -------------------------------------------------------------
-@use 'base/breakpoints' as *;
-@use 'base/functions' as *;
-@use 'base/mixins' as *;
-@use 'base/fonts' as *;
+@use "base/breakpoints" as *;
+@use "base/functions" as *;
+@use "base/mixins" as *;
+@use "base/fonts" as *;
 
-@use 'shared';
+@use "shared";
 
-@use 'mfe/root';
+@use "mfe/root";
+@use "mfe/flex";
+// @use "mfe/buttons";
+// @use "mfe/course-header";
+// @use "mfe/tabs";
+
+@use "mfe/learning-instructor-toolbar";
+@use "mfe/learning-course-tab-nav";
+@use "mfe/learning-course-outline";
+
+.container-xl {
+  @include container;
+  width: 100%;
+}
+
+// instructor-toolbar
+/*! CSS Used from: https://apps.learn.gymnasium.day/learning/app.a49f912aea5a90c1f158.css */
+.instructor-toolbar {
+  .col-form-label {
+    font-size: inherit;
+    line-height: 1.3333;
+    margin-bottom: 0;
+    padding-bottom: calc(0.5625rem + 1px);
+    padding-top: calc(0.5625rem + 1px);
+  }
+
+  .col-auto {
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .dropdown,
+  .dropleft,
+  .dropright,
+  .dropup {
+    position: relative;
+  }
+
+  .dropdown-toggle {
+    white-space: nowrap;
+  }
+
+  .border-light {
+    border-color: #e1dddb !important;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid #0000001a;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn-inverse-outline-primary {
+  border-color: #fff;
+  color: #fff;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+  color: var(--mono-100);
+}
+
+.course-tabs-navigation {
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+  margin-bottom: 1rem !important;
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 0;
+    flex-wrap: nowrap;
+  }
+
+  .nav-underline-tabs {
+    margin: 0 0 -1px;
+
+    .nav-link {
+      border-bottom: 4px solid #0000;
+      border-left: 0;
+      border-radius: 0;
+      border-right: 0;
+      border-top: 4px solid #0000;
+      color: #454545;
+      display: block;
+      flex-shrink: 0;
+    }
+  }
+}
+
+
+// Iframe
+/*! CSS Used from: https://apps.learn.gymnasium.day/learning/app.a49f912aea5a90c1f158.css */
+.border-0 {
+  border: 0 !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+
