@@ -14,8 +14,8 @@
 .nav-underline-tabs .nav-link.active,
 .nav-underline-tabs .nav-link:focus,
 .nav-underline-tabs .nav-link:hover {
-  border-bottom-color: #0a3055;
-  color: #0a3055;
+  border-bottom-color: var(--primary);
+  color: var(--primary);
   font-weight: 400;
 }
 
@@ -24,18 +24,9 @@ nav {
 }
 
 
-button {
-  border-radius: 0;
-}
-button:focus:not(:focus-visible) {
-  outline: 0;
-}
-button {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0;
-}
+
+
+
 button {
   overflow: visible;
 }
@@ -74,23 +65,7 @@ button:not(:disabled) {
     text-decoration: underline;
   }
 }
-.btn {
-  align-items: center;
-  background-color: #0000;
-  border: 1px solid #0000;
-  border-radius: 0.375rem;
-  color: #454545;
-  display: inline-flex;
-  font-size: 1.125rem;
-  font-weight: 400;
-  justify-content: center;
-  line-height: 1.3333;
-  padding: 0.5625rem 1rem;
-  text-align: center;
-  -webkit-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-}
+
 .btn:hover {
   color: #454545;
   text-decoration: none;
@@ -98,23 +73,7 @@ button:not(:disabled) {
 .btn:disabled {
   opacity: 0.65;
 }
-.btn-link {
-  color: #126f9a;
-  font-weight: 400;
-  text-decoration: none;
-}
-.btn-link:hover {
-  color: #0a3e56;
-  text-decoration: underline;
-}
-.btn-link:focus {
-  box-shadow: none;
-  text-decoration: underline;
-}
-.btn-link:disabled {
-  color: #707070;
-  pointer-events: none;
-}
+
 .dropdown {
   position: relative;
 }
@@ -195,18 +154,9 @@ nav {
 }
 
 
-button {
-  border-radius: 0;
-}
-button:focus:not(:focus-visible) {
-  outline: 0;
-}
-button {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0;
-}
+
+
+
 button {
   overflow: visible;
 }
@@ -245,23 +195,7 @@ button:not(:disabled) {
     text-decoration: underline;
   }
 }
-.btn {
-  align-items: center;
-  background-color: #0000;
-  border: 1px solid #0000;
-  border-radius: 0.375rem;
-  color: #454545;
-  display: inline-flex;
-  font-size: 1.125rem;
-  font-weight: 400;
-  justify-content: center;
-  line-height: 1.3333;
-  padding: 0.5625rem 1rem;
-  text-align: center;
-  -webkit-user-select: none;
-  user-select: none;
-  vertical-align: middle;
-}
+
 .btn:hover {
   color: #454545;
   text-decoration: none;
@@ -269,23 +203,7 @@ button:not(:disabled) {
 .btn:disabled {
   opacity: 0.65;
 }
-.btn-link {
-  color: #126f9a;
-  font-weight: 400;
-  text-decoration: none;
-}
-.btn-link:hover {
-  color: #0a3e56;
-  text-decoration: underline;
-}
-.btn-link:focus {
-  box-shadow: none;
-  text-decoration: underline;
-}
-.btn-link:disabled {
-  color: #707070;
-  pointer-events: none;
-}
+
 .dropdown {
   position: relative;
 }

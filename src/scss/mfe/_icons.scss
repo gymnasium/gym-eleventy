@@ -3,7 +3,7 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
-$color_1: #0a3055;
+$color_1: var(--primary);
 $color_2: #fff;
 $color_3: #454545;
 $color_4: #9d0054;
@@ -14,7 +14,7 @@ $color_8: #e1dddb;
 $color_9: #273f2f;
 $color_10: #000;
 $background-color_1: #0000;
-$background-color_2: #0a3055;
+$background-color_2: var(--primary);
 $background-color_3: #fff;
 $background-color_4: #454545;
 $background-color_5: #9d0054;
@@ -112,7 +112,7 @@ $background-color_11: #000;
   }
   &:focus {
     background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #0a3055;
+    box-shadow: inset 0 0 0 2px var(--primary);
     color: $color_1;
     outline: 2px #0000;
   }
@@ -127,7 +127,7 @@ $background-color_11: #000;
 }
 .btn-icon.btn-icon-primary.focus {
   background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #0a3055;
+  box-shadow: inset 0 0 0 2px var(--primary);
   color: $color_1;
   outline: 2px #0000;
 }
