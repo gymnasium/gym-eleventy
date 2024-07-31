@@ -21,7 +21,7 @@ header:
 courses:
   module: lists/image-course
   header:
-    heading: "Web Development Courses"
+    heading: "Development Courses"
     description: Learn web development with industry experts.
   cta:
     href: /courses/
