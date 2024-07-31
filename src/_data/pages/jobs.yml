@@ -14,8 +14,8 @@ intro:
       href: /jobs/#salary-guides
       label: Check Salary
     img:
-      src: /img/jobs/featured/salary-guide-2023.jpg
-      alt: 2023 Salary Guide
+      src: /img/jobs/featured/salary-guide-2024.jpg
+      alt: 2024 Salary Guide
   - heading: Job Search
     subheading: Find Contract and Full-Time Work
     cta:
@@ -46,9 +46,9 @@ salary-guides:
     links:
     - url: https://aquenttalent.com/check-salary
       label: Check Salary
-    - url: https://brand.aquent.com/salary-guide?utm_source=gymnasium&utm_medium=web&utm_campaign=AQ_NA_slg23&utm_content=jobs-salary-guides
+    - url: https://aquent.com/lp/salary-guide
       label: US Salary Guide
-    - url: https://brand.aquent.com/UK-salary-guide?utm_source=gymnasium&utm_medium=web&utm_campaign=AQ_UK_slg23&utm_content=slg23
+    - url: https://aquent.co.uk/lp/salary-guide/
       label: UK Salary Guide
 
 resume-tips:
