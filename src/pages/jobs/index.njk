@@ -6,13 +6,16 @@ meta:
   bodyClass: "jobs collection"
 ---
 {%- set intro = pages['jobs'].intro -%}
-<header id="{{ id }}" class="page-header {{ id }}">
-  {%- if intro.header -%}
-    {%- set header = intro.header -%}
-    {%- include 'modules/components/header.njk' -%}
-  {%- endif -%}
+{%- set articles = pages['jobs'].articles -%}
+
+{%- if intro.header -%}
+  {%- set header = intro.header -%}
+  {%- include 'modules/components/header.njk' -%}
+{%- endif -%}
+
+<section class="featured">
   {%- if intro.cards -%}
-    <ul>
+    <ul class="list-unstyled">
     {%- for idx in range(0, intro.cards.length) -%}
       {%- set card = intro.cards[idx] -%}
       {%- set heading = card.heading -%}
@@ -26,25 +29,31 @@ meta:
         {%- set srcSet = src -%}
       {%- endif -%}
       <li>
-        <article class="card">
-          <header>
-            <h2>{{ heading }}</h2>
-            {%- if subheading -%}
-              <h3>{{ subheading }}</h3>
-            {%- endif -%}
-          </header>
-          <figure class="artwork">
-            <img alt="{{ heading }}" srcset="{{ srcSet }}" src="{{ src }}">
-          </figure>
+        <article class="featured-card">
+          <div>
+            <p class="topic"><b>{{ heading }}</b></p>
+            <figure class="artwork">
+              <a href="{{ url }}">
+                <img alt="{{ heading }}" srcset="{{ srcSet }}" src="{{ src }}" decoding="asyc" fetchpriority="important" width="" height="">
+              </a>
+            </figure>
+            <header>
+              <a href="{{ url }}">
+                <h3>{{ subheading }}</h3>
+              </a>
+            </header>
           {%- if card.cta -%}
-            <div class="cta"><a href="{{ url }}">{{label }}</a></div>
+            <div class="cta">
+              <a class="btn" href="{{ url }}">{{label }}</a>
+            </div>
           {%- endif -%}
+          </div>
         </article>
       </li>
     {%- endfor -%}
     </ul>
   {%- endif -%}
-</header>
+  </section>
 
 {# Here we're omitting some object keys to be able to loop through the content fields #}
 {%- set content = pages['jobs'] | omit(['intro']) -%}

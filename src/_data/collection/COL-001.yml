@@ -16,12 +16,12 @@ header:
   heading_id: # default is null
   heading: Development
   description: |
-    <p>Gymnasium offers free online development <a href="#courses"><b>courses</b></a>, <a href="#tutorials"><b>tutorials</b></a>, <a href="#webinars"><b>webinars</b></a>, <a href="#articles"><b>articles</b></a>, and <a href="#jobs"><b><span class="visuallyhidden">development </span> jobs</b></a> through Aquent.</p>
+    <p>Gymnasium offers free online development <a href="#courses"><b>courses</b></a>, <a href="#tutorials"><b>tutorials</b></a>, <a href="#webinars"><b>webinars</b></a>, <a href="#articles"><b>articles</b></a>, and <a href="#jobs"><b><span class="visually-hidden">development </span> jobs</b></a> through Aquent.</p>
 
 courses:
   module: lists/image-course
   header:
-    heading: "Web Development Courses"
+    heading: "Development Courses"
     description: Learn web development with industry experts.
   cta:
     href: /courses/
