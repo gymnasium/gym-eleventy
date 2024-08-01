@@ -14,7 +14,7 @@ $colors: (
   secondary: (
     100: hsl(18.26, 100%, 95.49%), // #ffefe8 (message: attention)
     500: hsl(19.15, 100%, 53.92%), // #ff5f14 Aquent Orange
-    900: #cd4d10, // Darker Aquent Orange
+    900: hsl(19.37, 85.52%, 43.33%) // #cd4d10 Darker Aquent Orange
   ),
   'green': (
     400: hsl(120, 100%, 35.69%), // #00b600 (holiday green)
@@ -38,8 +38,8 @@ $colors: (
     700: hsl(176.47, 28.33%, 23.53%), // #2b4d4b
   ),
   'red': (
-    400: #f30d21, // #f30d21 holiday red
-    500: #d43f3a, // #d43f3a error color
+    400: hsl(354.78, 90.55%, 50.2%), // #f30d21 holiday red
+    500: hsl(1.95, 64.17%, 52.94%), // #d43f3a error color
   ),
   /*
   
@@ -54,6 +54,7 @@ $colors: (
     700: hsl(0, 0%, 20%), // #333
     800: hsl(0, 0%, 16%), // #292929
     900: hsl(0, 0%, 9%), // #181818
+    1000: rgba(0,0,0,0), // #00000000 aka #0000
   ),
 );
 
