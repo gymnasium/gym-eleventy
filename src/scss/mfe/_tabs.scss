@@ -5,16 +5,16 @@
 
 $color_1: #454545;
 $color_2: #adadad;
-$color_3: #fff;
+$color_3: var(--mono-100);
 $color_4: var(--primary);
 $background-color_1: #e9e6e4;
 $background-color_2: var(--primary);
 $background-color_3: #939f97;
-$background-color_4: #fff;
+$background-color_4: var(--mono-100);
 $background-color_5: #0000;
 $background-color_6: #8598aa;
 $border-color_1: #0000 #0000 #e9e6e4;
-$border-color_2: #fff;
+$border-color_2: var(--mono-100);
 $border-color_3: #939f97;
 $border-color_4: var(--primary);
 $border-color_5: #0000;
@@ -254,7 +254,7 @@ $border-color_5: #0000;
       position: relative;
       z-index: 200;
       &:before {
-        border: 2px solid #fff;
+        border: 2px solid var(--mono-100);
         border-radius: 0;
         bottom: -4px;
         content: "";
@@ -331,7 +331,7 @@ $border-color_5: #0000;
           position: relative;
           z-index: 200;
           &:before {
-            border: 2px solid #fff;
+            border: 2px solid var(--mono-100);
             border-radius: 0;
             bottom: -5px;
             content: "";
@@ -370,7 +370,7 @@ $border-color_5: #0000;
       position: relative;
       z-index: 200;
       &:before {
-        border: 2px solid #fff;
+        border: 2px solid var(--mono-100);
         border-radius: 0;
         bottom: -4px;
         content: "";
@@ -387,7 +387,7 @@ $border-color_5: #0000;
   .nav-item.show {
     .nav-link {
       background-color: $background-color_3;
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid var(--mono-100);
       &:hover {
         background-color: $background-color_5;
       }
@@ -395,7 +395,7 @@ $border-color_5: #0000;
   }
   .nav-link.active {
     background-color: $background-color_3;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid var(--mono-100);
     &:hover {
       background-color: $background-color_5;
     }

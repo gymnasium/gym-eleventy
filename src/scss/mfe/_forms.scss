@@ -7,7 +7,7 @@ $color_1: #454545;
 $color_2: #707070;
 $color_3: #0000;
 $color_4: #178253;
-$color_5: #fff;
+$color_5: var(--mono-100);
 $color_6: #c32d3a;
 $color_7: var(--primary);
 $color_8: #212529;
@@ -15,7 +15,7 @@ $color_9: #005788;
 $color_10: #006daa;
 $color_11: #082644;
 $color_12: #666;
-$background-color_1: #fff;
+$background-color_1: var(--mono-100);
 $background-color_2: #0000;
 $background-color_3: #ebebeb;
 $background-color_4: #178253e6;
@@ -37,10 +37,10 @@ $border-color_4: #c32d3a;
 $border-color_5: #d64d59;
 $border-color_6: #0000;
 $border-color_7: #707070;
-$border-color_8: #000;
-$border-top-color_1: #fff;
+$border-color_8: var(--mono-900);
+$border-top-color_1: var(--mono-100);
 $border-right-color_1: #0000;
-$border-left-color_1: #fff;
+$border-left-color_1: var(--mono-100);
 
 .form-control {
   background-clip: padding-box;
@@ -2223,7 +2223,7 @@ textarea.form-control {
   .pgn__form-control-decorator {
     .btn-icon {
       &:hover {
-        fill: #fff;
+        fill: var(--mono-100);
       }
       &:focus {
         fill: #707070;
@@ -2262,7 +2262,7 @@ textarea.form-control {
       padding: 6.25rem 0;
       text-align: center;
       .spinner-border {
-        border: 0.125rem solid #000;
+        border: 0.125rem solid var(--mono-900);
         height: 1.25rem;
         width: 1.25rem;
         border-right-color: $border-right-color_1;
@@ -2278,7 +2278,7 @@ textarea.form-control {
   opacity: 1;
   right: 0.2rem !important;
   .tooltip-inner {
-    background: #fff;
+    background: var(--mono-100);
     color: $color_2;
     display: block;
   }
@@ -2296,7 +2296,7 @@ textarea.form-control {
   opacity: 1;
   width: 90%;
   .tooltip-inner {
-    background: #fff;
+    background: var(--mono-100);
     color: $color_2;
     display: block;
     min-width: 464px !important;
@@ -2454,7 +2454,7 @@ textarea.form-control {
       position: relative;
       transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       &::after {
-        border: 0.3125rem double #000;
+        border: 0.3125rem double var(--mono-900);
         content: "";
         height: 100%;
         position: absolute;
@@ -2537,14 +2537,14 @@ textarea.form-control {
   &:not(.pgn__searchfield--external) {
     position: relative;
     &::after {
-      border: 0.3125rem double #000;
+      border: 0.3125rem double var(--mono-900);
       content: "";
       height: 100%;
       position: absolute;
       width: 100%;
     }
     .pgn__searchfield_wrapper {
-      box-shadow: 0 0 0 0.0625rem #000;
+      box-shadow: 0 0 0 0.0625rem var(--mono-900);
     }
   }
 }
@@ -2562,7 +2562,7 @@ textarea.form-control {
   .pgn__searchfield_wrapper {
     position: relative;
     &::after {
-      border: 0.3125rem double #000;
+      border: 0.3125rem double var(--mono-900);
       content: "";
       height: 100%;
       position: absolute;

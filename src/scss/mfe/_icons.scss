@@ -4,7 +4,7 @@
 @use 'base/fonts' as *;
 
 $color_1: var(--primary);
-$color_2: #fff;
+$color_2: var(--mono-100);
 $color_3: #454545;
 $color_4: #9d0054;
 $color_5: #178253;
@@ -12,10 +12,10 @@ $color_6: #ffd900;
 $color_7: #c32d3a;
 $color_8: #e1dddb;
 $color_9: #273f2f;
-$color_10: #000;
+$color_10: var(--mono-900);
 $background-color_1: #0000;
 $background-color_2: var(--primary);
-$background-color_3: #fff;
+$background-color_3: var(--mono-100);
 $background-color_4: #454545;
 $background-color_5: #9d0054;
 $background-color_6: #178253;
@@ -23,7 +23,7 @@ $background-color_7: #ffd900;
 $background-color_8: #c32d3a;
 $background-color_9: #e1dddb;
 $background-color_10: #273f2f;
-$background-color_11: #000;
+$background-color_11: var(--mono-900);
 
 .fa-icon-spacing {
   padding: 0 5px 0 0;
@@ -144,7 +144,7 @@ $background-color_11: #000;
   }
   &:focus {
     background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
     outline: 2px #0000;
   }
@@ -159,7 +159,7 @@ $background-color_11: #000;
 }
 .btn-icon.btn-icon-inverse-primary.focus {
   background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
   outline: 2px #0000;
 }
@@ -268,7 +268,7 @@ $background-color_11: #000;
   }
   &:focus {
     background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
     outline: 2px #0000;
   }
@@ -283,7 +283,7 @@ $background-color_11: #000;
 }
 .btn-icon.btn-icon-inverse-secondary.focus {
   background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
   outline: 2px #0000;
 }
@@ -392,7 +392,7 @@ $background-color_11: #000;
   }
   &:focus {
     background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
     outline: 2px #0000;
   }
@@ -407,7 +407,7 @@ $background-color_11: #000;
 }
 .btn-icon.btn-icon-inverse-brand.focus {
   background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
   outline: 2px #0000;
 }
@@ -516,7 +516,7 @@ $background-color_11: #000;
   }
   &:focus {
     background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
     outline: 2px #0000;
   }
@@ -531,7 +531,7 @@ $background-color_11: #000;
 }
 .btn-icon.btn-icon-inverse-success.focus {
   background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
   outline: 2px #0000;
 }
@@ -640,7 +640,7 @@ $background-color_11: #000;
   }
   &:focus {
     background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
     outline: 2px #0000;
   }
@@ -655,7 +655,7 @@ $background-color_11: #000;
 }
 .btn-icon.btn-icon-inverse-warning.focus {
   background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
   outline: 2px #0000;
 }
@@ -764,7 +764,7 @@ $background-color_11: #000;
   }
   &:focus {
     background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
     outline: 2px #0000;
   }
@@ -779,7 +779,7 @@ $background-color_11: #000;
 }
 .btn-icon.btn-icon-inverse-danger.focus {
   background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
   outline: 2px #0000;
 }
@@ -888,7 +888,7 @@ $background-color_11: #000;
   }
   &:focus {
     background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
     outline: 2px #0000;
   }
@@ -903,7 +903,7 @@ $background-color_11: #000;
 }
 .btn-icon.btn-icon-inverse-light.focus {
   background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
   outline: 2px #0000;
 }
@@ -1012,7 +1012,7 @@ $background-color_11: #000;
   }
   &:focus {
     background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
     outline: 2px #0000;
   }
@@ -1027,7 +1027,7 @@ $background-color_11: #000;
 }
 .btn-icon.btn-icon-inverse-dark.focus {
   background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
   outline: 2px #0000;
 }
@@ -1104,7 +1104,7 @@ $background-color_11: #000;
   }
   &:focus {
     background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #000;
+    box-shadow: inset 0 0 0 2px var(--mono-900);
     color: $color_10;
     outline: 2px #0000;
   }
@@ -1119,7 +1119,7 @@ $background-color_11: #000;
 }
 .btn-icon.btn-icon-black.focus {
   background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #000;
+  box-shadow: inset 0 0 0 2px var(--mono-900);
   color: $color_10;
   outline: 2px #0000;
 }
@@ -1136,7 +1136,7 @@ $background-color_11: #000;
   }
   &:focus {
     background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #fff;
+    box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
     outline: 2px #0000;
   }
@@ -1151,7 +1151,7 @@ $background-color_11: #000;
 }
 .btn-icon.btn-icon-inverse-black.focus {
   background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #fff;
+  box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
   outline: 2px #0000;
 }

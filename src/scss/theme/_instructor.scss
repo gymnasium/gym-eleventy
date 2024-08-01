@@ -162,7 +162,7 @@
   .nav-item
   .btn-link.active-section {
   border-bottom: 3px solid #0075b4;
-  color: #000;
+  color: var(--mono-900);
 }
 .idash-section {
   display: none;
@@ -420,7 +420,7 @@
   border: 1px solid #00476d;
   border-radius: 3px;
   box-shadow: inset 0 1px 0 0 #0ca3f5;
-  color: #fff;
+  color: var(--mono-100);
   display: inline-block;
   font-size: inherit;
   font-weight: bold;

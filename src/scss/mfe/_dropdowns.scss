@@ -7,11 +7,11 @@
 $color_1: #454545;
 $color_2: #212529;
 $color_3: #16181b;
-$color_4: #fff;
+$color_4: var(--mono-100);
 $color_5: #707070;
 $color_6: #082644;
 $color_7: #b4b1af;
-$background-color_1: #fff;
+$background-color_1: var(--mono-100);
 $background-color_2: #0000;
 $background-color_3: #f0eeed;
 $background-color_4: var(--primary);
@@ -310,7 +310,7 @@ $border-color_1: #c9cfcb;
       }
       &:focus {
         background-color: $background-color_7;
-        border: 2px solid #fff;
+        border: 2px solid var(--mono-100);
       }
     }
     .pgn__dropdown-item.active {

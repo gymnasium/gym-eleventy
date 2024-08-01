@@ -11,7 +11,7 @@
 @use "mfe/root";
 @use "mfe/flex";
 // @use "mfe/buttons";
-// @use "mfe/course-header";
+@use "mfe/course-header";
 // @use "mfe/tabs";
 
 @use "mfe/learning-instructor-toolbar";
@@ -28,16 +28,43 @@
 .instructor-toolbar {
   .col-form-label {
     font-size: inherit;
-    line-height: 1.3333;
+    line-height: 2;
     margin-bottom: 0;
-    padding-bottom: calc(0.5625rem + 1px);
-    padding-top: calc(0.5625rem + 1px);
   }
 
-  .col-auto {
-    flex: 0 0 auto;
-    max-width: 100%;
-    width: auto;
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-toggle {
+    white-space: nowrap;
+  }
+  .dropdown-toggle:after {
+    border-bottom: 0;
+    border-left: 0.3em solid #0000;
+    border-right: 0.3em solid #0000;
+    border-top: 0.3em solid;
+    display: inline-block;
+    vertical-align: 0.255em;
+  }
+  .dropdown-toggle:after {
+    margin-left: 0.255em;
+  }
+  .dropdown-toggle:empty:after {
+    margin-left: 0;
+  }
+  .dropdown-toggle:after {
+    border: 0;
+    border-style: solid;
+    content: "";
+    height: 0.45rem;
+    margin-inline-start: 0.5em;
+    position: relative;
+    top: -0.05rem;
+    width: 0.45rem;
+  }
+  .dropdown-toggle:after {
+    border-width: 0.15rem 0.15rem 0 0;
+    transform: rotate(135deg);
   }
 
   .dropdown,
@@ -61,6 +88,12 @@
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-width: 1px;
+  }
 }
 
 .row {
@@ -69,8 +102,8 @@
 }
 
 .btn-inverse-outline-primary {
-  border-color: #fff;
-  color: #fff;
+  border-color: var(--mono-100);
+  color: var(--mono-100);
 }
 
 .bg-primary {
@@ -105,6 +138,12 @@
       flex-shrink: 0;
     }
   }
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  max-width: 100%;
+  width: auto;
 }
 
 

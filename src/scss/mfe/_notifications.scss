@@ -5,7 +5,7 @@
 
 $color_1: #80b6d5;
 $color_2: #006daa;
-$color_3: #000;
+$color_3: var(--mono-900);
 $color_4: #454545;
 $color_5: inherit;
 $color_6: var(--primary);
@@ -18,7 +18,7 @@ $color_12: #273f2f;
 $color_13: #707070;
 $color_14: #00bbf9;
 $color_15: #fe8;
-$color_16: #fff;
+$color_16: var(--mono-100);
 $background-color_1: #f0f3f5;
 $background-color_2: #f4f4f4;
 $background-color_3: #f9f0f5;
@@ -33,7 +33,7 @@ $background-color_11: #00bbf9;
 $background-color_12: #fe8;
 $background-color_13: #178253;
 $background-color_14: #c32d3a;
-$background-color_15: #fff;
+$background-color_15: var(--mono-100);
 $background-color_16: #273f2f;
 $border-color_1: #c2cbd5;
 $border-color_2: #d1d1d1;
@@ -50,17 +50,17 @@ $border-color_12: #fe8;
 $border-color_13: #0000 #0000 #178253;
 $border-color_14: #0000 #0000 #fe8;
 $border-color_15: #0000 #0000 #c32d3a;
-$border-color_16: #0000 #0000 #fff;
+$border-color_16: #0000 #0000 var(--mono-100);
 $border-color_17: #0000 #0000 #273f2f;
 $border-right-color_1: #178253;
 $border-right-color_2: #fe8;
 $border-right-color_3: #c32d3a;
-$border-right-color_4: #fff;
+$border-right-color_4: var(--mono-100);
 $border-right-color_5: #273f2f;
 $border-left-color_1: #178253;
 $border-left-color_2: #fe8;
 $border-left-color_3: #c32d3a;
-$border-left-color_4: #fff;
+$border-left-color_4: var(--mono-100);
 $border-left-color_5: #273f2f;
 
 .alert-link {
@@ -500,7 +500,7 @@ $border-left-color_5: #273f2f;
   margin-bottom: 0.75rem;
   &:after {
     border: solid #0000;
-    border-top: solid #fff;
+    border-top: solid var(--mono-100);
     border-width: 0.5rem 0.5rem 0;
     bottom: -0.5rem;
     content: "";

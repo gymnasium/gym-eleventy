@@ -3,8 +3,8 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
-$color_1: #fff;
-$background-color_1: #fff;
+$color_1: var(--mono-100);
+$background-color_1: var(--mono-100);
 
 .carousel {
   position: relative;
