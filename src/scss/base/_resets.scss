@@ -104,14 +104,15 @@ img,
 object,
 svg,
 video {
-  display: inline-block;
-  width: auto;
-  max-width: 100%;
   height: auto;
-  vertical-align: middle;
 }
 
-iframe {
+embed,
+iframe
+img,
+object,
+svg,
+video {
   display: inline-block;
   width: auto;
   max-width: 100%;
