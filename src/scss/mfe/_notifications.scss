@@ -78,7 +78,7 @@ $border-left-color_5: #273f2f;
       margin-bottom: 0;
     }
   }
-  border: 0 solid #0000;
+  border: 0 solid var(--mono-1000);
   border-radius: 0.375rem;
   box-shadow: 0 0.0625rem 0.125rem #00000026, 0 0.0625rem 0.25rem #00000026;
   margin-bottom: 1rem;
@@ -265,7 +265,7 @@ $border-left-color_5: #273f2f;
   color: $color_16;
   margin-right: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     bottom: 0;
     content: "";
     height: 0;
@@ -283,7 +283,7 @@ $border-left-color_5: #273f2f;
   color: $color_16;
   margin-bottom: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     border-top: solid #178253;
     border-width: 0.5rem 0.5rem 0;
     bottom: -0.5rem;
@@ -301,7 +301,7 @@ $border-left-color_5: #273f2f;
   color: $color_16;
   margin-left: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     bottom: 0;
     content: "";
     height: 0;
@@ -337,7 +337,7 @@ $border-left-color_5: #273f2f;
   color: $color_3;
   margin-right: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     bottom: 0;
     content: "";
     height: 0;
@@ -355,7 +355,7 @@ $border-left-color_5: #273f2f;
   color: $color_3;
   margin-bottom: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     border-top: solid #fe8;
     border-width: 0.5rem 0.5rem 0;
     bottom: -0.5rem;
@@ -373,7 +373,7 @@ $border-left-color_5: #273f2f;
   color: $color_3;
   margin-left: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     bottom: 0;
     content: "";
     height: 0;
@@ -409,7 +409,7 @@ $border-left-color_5: #273f2f;
   color: $color_16;
   margin-right: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     bottom: 0;
     content: "";
     height: 0;
@@ -427,7 +427,7 @@ $border-left-color_5: #273f2f;
   color: $color_16;
   margin-bottom: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     border-top: solid #c32d3a;
     border-width: 0.5rem 0.5rem 0;
     bottom: -0.5rem;
@@ -445,7 +445,7 @@ $border-left-color_5: #273f2f;
   color: $color_16;
   margin-left: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     bottom: 0;
     content: "";
     height: 0;
@@ -481,7 +481,7 @@ $border-left-color_5: #273f2f;
   color: $color_6;
   margin-right: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     bottom: 0;
     content: "";
     height: 0;
@@ -499,7 +499,7 @@ $border-left-color_5: #273f2f;
   color: $color_6;
   margin-bottom: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     border-top: solid var(--mono-100);
     border-width: 0.5rem 0.5rem 0;
     bottom: -0.5rem;
@@ -517,7 +517,7 @@ $border-left-color_5: #273f2f;
   color: $color_6;
   margin-left: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     bottom: 0;
     content: "";
     height: 0;
@@ -553,7 +553,7 @@ $border-left-color_5: #273f2f;
   color: $color_16;
   margin-right: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     bottom: 0;
     content: "";
     height: 0;
@@ -571,7 +571,7 @@ $border-left-color_5: #273f2f;
   color: $color_16;
   margin-bottom: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     border-top: solid #273f2f;
     border-width: 0.5rem 0.5rem 0;
     bottom: -0.5rem;
@@ -589,7 +589,7 @@ $border-left-color_5: #273f2f;
   color: $color_16;
   margin-left: 0.75rem;
   &:after {
-    border: solid #0000;
+    border: solid var(--mono-1000);
     bottom: 0;
     content: "";
     height: 0;

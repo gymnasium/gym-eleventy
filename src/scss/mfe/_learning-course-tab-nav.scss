@@ -4,11 +4,11 @@
   margin: 0 0 -1px;
 }
 .nav-underline-tabs .nav-link {
-  border-bottom: 4px solid #0000;
+  border-bottom: 4px solid var(--mono-1000);
   border-left: 0;
   border-radius: 0;
   border-right: 0;
-  border-top: 4px solid #0000;
+  border-top: 4px solid var(--mono-1000);
   color: #454545;
 }
 .nav-underline-tabs .nav-link.active,
@@ -82,8 +82,8 @@ button:not(:disabled) {
 }
 .dropdown-toggle:after {
   border-bottom: 0;
-  border-left: 0.3em solid #0000;
-  border-right: 0.3em solid #0000;
+  border-left: 0.3em solid var(--mono-1000);
+  border-right: 0.3em solid var(--mono-1000);
   border-top: 0.3em solid;
   display: inline-block;
   vertical-align: 0.255em;
@@ -212,8 +212,8 @@ button:not(:disabled) {
 }
 .dropdown-toggle:after {
   border-bottom: 0;
-  border-left: 0.3em solid #0000;
-  border-right: 0.3em solid #0000;
+  border-left: 0.3em solid var(--mono-1000);
+  border-right: 0.3em solid var(--mono-1000);
   border-top: 0.3em solid;
   display: inline-block;
   vertical-align: 0.255em;
