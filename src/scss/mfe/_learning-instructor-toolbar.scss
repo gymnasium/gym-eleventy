@@ -78,13 +78,6 @@ hr {
   }
 }
 
-.btn:hover {
-  color: #454545;
-  text-decoration: none;
-}
-.btn:disabled {
-  opacity: 0.65;
-}
 .btn-inverse-outline-primary {
   border-color: var(--mono-100);
   color: var(--mono-100);
@@ -134,21 +127,6 @@ hr {
 }
 
 
-
-button {
-  overflow: visible;
-}
-button {
-  text-transform: none;
-}
-[type="button"],
-button {
-  -webkit-appearance: button;
-}
-[type="button"]:not(:disabled),
-button:not(:disabled) {
-  cursor: pointer;
-}
 hr {
   border: 0;
   border-top: 1px solid #0000001a;
@@ -232,13 +210,6 @@ hr {
   }
 }
 
-.btn:hover {
-  color: #454545;
-  text-decoration: none;
-}
-.btn:disabled {
-  opacity: 0.65;
-}
 .btn-inverse-outline-primary {
   border-color: var(--mono-100);
   color: var(--mono-100);
