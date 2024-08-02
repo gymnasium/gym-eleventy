@@ -455,19 +455,29 @@
     padding-right: 40px;
   }
 }
+// .unit-iframe-wrapper {
+//   margin: 0 -12px 2rem;
+// }
+// @media (min-width: 830px) {
+//   .unit-iframe-wrapper {
+//     margin: 0 -40px 2rem;
+//   }
+// }
+// #unit-iframe {
+//   border: none;
+//   display: block;
+//   width: 100%;
+// }
+
 .unit-iframe-wrapper {
-  margin: 0 -12px 2rem;
-}
-@media (min-width: 830px) {
-  .unit-iframe-wrapper {
-    margin: 0 -40px 2rem;
+
+  iframe {
+    // height: unset;
+    width: 100%;
   }
 }
-#unit-iframe {
-  border: none;
-  display: block;
-  width: 100%;
-}
+
+
 .unit-navigation {
   display: flex;
   justify-content: center;

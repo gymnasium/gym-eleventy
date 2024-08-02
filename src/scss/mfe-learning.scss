@@ -6,22 +6,25 @@
 @use "base/mixins" as *;
 @use "base/fonts" as *;
 
+@use "mfe/learning-original";
+
 @use "shared";
 
 @use "mfe/root";
 @use "mfe/flex";
+@use "mfe/layout";
 // @use "mfe/buttons";
 @use "mfe/course-header";
 // @use "mfe/tabs";
 
-@use "mfe/learning-instructor-toolbar";
-@use "mfe/learning-course-tab-nav";
-@use "mfe/learning-course-outline";
+// @use "mfe/learning-instructor-toolbar";
+// @use "mfe/learning-course-tab-nav";
+// @use "mfe/learning-course-outline";
 
-.container-xl {
-  @include container;
-  width: 100%;
-}
+// .container-xl {
+//   @include container;
+//   width: 100%;
+// }
 
 // instructor-toolbar
 /*! CSS Used from: https://apps.learn.gymnasium.day/learning/app.a49f912aea5a90c1f158.css */

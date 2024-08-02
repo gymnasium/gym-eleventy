@@ -3,8 +3,18 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
+html {
+  height: 100%;
+  max-height: 100%;
+}
+
 body {
   background-color: var(--mono-200);
+  min-height: 100%;
+
+  &.view-in-course {
+    background-color: var(--mono-100);
+  }
 }
 
 .main-container {
