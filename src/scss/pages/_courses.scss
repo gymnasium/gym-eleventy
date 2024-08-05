@@ -60,7 +60,7 @@
 
 // list-item
 
-.course {
+.tutorial {
   margin-top: 0;
 }
 
@@ -325,7 +325,6 @@
 
     h2 {
       font: 900 1.8rem/1.2 var(--font-family-custom);
-      text-wrap: balance;
       margin-bottom: 1rem;
     }
 
@@ -351,10 +350,7 @@
     padding: 1.4rem;
     border: 1px solid var(--mono-400);
     border-radius: 3px;
-
-    &:not(:first-child) {
-      margin-top: 1rem;
-    }
+    margin-top: 1rem;
 
     // course card (main content)
 
