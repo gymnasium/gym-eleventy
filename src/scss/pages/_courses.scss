@@ -58,6 +58,12 @@
 // courses (full, gym shorts, take 5)
 // TODO: Cleanup selectors
 
+// list-item
+
+.tutorial {
+  margin-top: 0;
+}
+
 .courses {
   main {
     p:only-of-type {
@@ -319,13 +325,12 @@
 
     h2 {
       font: 900 1.8rem/1.2 var(--font-family-custom);
-      text-wrap: balance;
       margin-bottom: 1rem;
     }
 
     .instructor {
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 1.09375rem;
       letter-spacing: 0.0125ex;
       margin-top: 1.125rem;
       margin-bottom: 1.2rem;
@@ -345,10 +350,7 @@
     padding: 1.4rem;
     border: 1px solid var(--mono-400);
     border-radius: 3px;
-
-    &:not(first-child) {
-      margin-top: 1rem;
-    }
+    margin-top: 1rem;
 
     // course card (main content)
 
@@ -379,10 +381,6 @@
         }
       }
 
-      .description {
-        align-self: start;
-      }
-
       header + .cta {
         margin-top: 1.4rem;
       }
@@ -401,8 +399,8 @@
       @include breakpoint(large, min) {
         & {
           display: grid;
-          grid-template-rows: auto;
-          grid-template-columns: 2.5fr 3fr;
+          grid-template-columns: 3fr 5fr;
+          grid-template-rows: auto 1fr auto auto;
           grid-template-areas:
             "art  header"
             "art  cta"
@@ -419,6 +417,7 @@
         hgroup {
           .topic {
             display: inherit;
+            background-color: transparent;
             padding: 0;
           }
         }
@@ -574,10 +573,6 @@
           font-size: 1.25rem;
         }
       }
-    }
-
-    & {
-      border-color: var(--mono-300);
     }
 
     .list-summary {

@@ -9,7 +9,8 @@
 .collection {
   main {
     .container {
-      > header {
+      > header,
+      section:first-child > header {
         h1 {
           font-size: rem-calc(36);
           text-rendering: auto;
@@ -28,7 +29,7 @@
       border-radius: 3px;
       margin-top: 1rem;
 
-      header {
+      header:not(.course-card header) {
         border-bottom: 1px solid var(--mono-300);
 
         & ~ div:not(:only-of-type) {
@@ -60,14 +61,17 @@
 
       p {
         font-size: 1.09375rem;
-        margin-top: 0.6rem;
+
+        &:not(p + p):not(p[class]:first-child):not(footer p) {
+          margin-top: 0.6rem;
+        }
       }
 
       ul {
         li {
           font-size: 1.3125rem;
 
-          &:not(main .jobs li):not(.courses li):not(.tutorials li):not(.webinars li)  {
+          &:not(main .jobs li):not(.courses li):not(.tutorials li):not(.webinars li):not(.design-systems li)  {
             padding-bottom: 1.2rem;
             border-bottom: 1px dashed var(--mono-300);
             margin-top: 1.2rem;
@@ -84,7 +88,7 @@
         border: 1px solid var(--mono-300);
       }
 
-      .cta {
+      .cta:not(.course-card .cta) {
         text-align: center;
         padding-top: 1.4rem;
         border-top: 1px solid var(--mono-300);
@@ -182,10 +186,6 @@
           font-weight: 900;
           font-size: 1.55;
           text-transform: uppercase;
-
-//            & + p {
-//             margin-top: 0.6rem;
-//           }
         }
 
       }
