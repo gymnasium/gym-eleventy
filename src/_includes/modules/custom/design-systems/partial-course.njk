@@ -51,7 +51,7 @@
 {%- set itemClass %}{{ baseClass }} {{ topicClass }} {{ subtopicClass }} {% if topic_featured %} featured{% endif %} {% if extraClass %} {{ extraClass }}{% endif %}
 {%- endset -%}
 
-<article id="{{ shortId | lower }}" class="course-card">
+<article id="{{ shortId | lower | replace('gym-017', 'everyone') | replace('gym-018', 'designers') | replace('gym-019', 'developers') | replace('gym-020', 'product-managers') }}" class="course-card">
   <div class="main">
     <a href="{{ url }}">
       <div class="artwork">
@@ -106,43 +106,4 @@
       <p>{{ obj.skill_level }}</p>
     </footer>
   </div>
-  <footer class="back-to">
-    <p><a href="#topics">Back to Menu</a></p>
-  </footer>
 </article>
-
-<!--
-<section class="section" id="{{ section_id }}">
-    <header>
-      <h2 class="caps">{{ title }}</h2>
-      <p class="instructor">with {{ bios[obj.instructor]['name'] }}, {{  bios[obj.instructor]['subtitle'] }}</p>
-    </header>
-    <img alt="Course artwork for {{ title }}." src="{{ src }}" srcset="{{ srcSet }}" decoding="async" fetchpriority="high" width="574" height="488">
-    <p class="description">{{ description }}</p>
-    <a class="btn" href="{{ url }}">View Course</a>
-    <div class="list-summary">
-      {%- if (obj.skills) -%}
-      <dl>
-        <dt class="caps">Skills Covered</dt>
-        {%- for i in range(0, obj.skills.length) -%}
-        <dd>{{ obj.skills[i].label }}</dd>
-        {%- endfor -%}
-      </dl>
-      {%- endif -%}
-
-      {%- if (obj.audience) -%}
-      <dl>
-        <dt class="caps">This Course is For</dt>
-        {%- for i in range(0, obj.audience.length) -%}
-        <dd>{{ obj.audience[i].label }}</dd>
-        {%- endfor -%}
-      </dl>
-      {%- endif -%}
-    </div>
-</section>
- -->
-<!--
-<footer class="back-to">
-  <p><a href="#main">Back to Top</a></p>
-</footer>
- -->
