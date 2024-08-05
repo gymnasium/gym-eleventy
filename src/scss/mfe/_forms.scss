@@ -5,7 +5,7 @@
 
 $color_1: #454545;
 $color_2: #707070;
-$color_3: #0000;
+$color_3: var(--mono-1000);
 $color_4: #178253;
 $color_5: var(--mono-100);
 $color_6: #c32d3a;
@@ -16,7 +16,7 @@ $color_10: #006daa;
 $color_11: #082644;
 $color_12: #666;
 $background-color_1: var(--mono-100);
-$background-color_2: #0000;
+$background-color_2: var(--mono-1000);
 $background-color_3: #ebebeb;
 $background-color_4: #178253e6;
 $background-color_5: #1fad6f;
@@ -35,11 +35,11 @@ $border-color_2: #178253;
 $border-color_3: #1fad6f;
 $border-color_4: #c32d3a;
 $border-color_5: #d64d59;
-$border-color_6: #0000;
+$border-color_6: var(--mono-1000);
 $border-color_7: #707070;
 $border-color_8: var(--mono-900);
 $border-top-color_1: var(--mono-100);
-$border-right-color_1: #0000;
+$border-right-color_1: var(--mono-1000);
 $border-left-color_1: var(--mono-100);
 
 .form-control {
@@ -162,7 +162,7 @@ select.form-control {
 }
 .form-control-plaintext {
   background-color: $background-color_2;
-  border: solid #0000;
+  border: solid var(--mono-1000);
   border-width: 1px 0;
   color: $color_1;
   display: block;
@@ -1853,7 +1853,7 @@ textarea.form-control {
   position: absolute;
   width: 100%;
   .pgn__form-control-floating-label-content {
-    border-top: 2px solid #0000;
+    border-top: 2px solid var(--mono-1000);
     inset-inline-start: -0.5em;
     max-width: 100%;
     position: relative;
@@ -2554,7 +2554,7 @@ textarea.form-control {
     background: var(--primary);
   }
   .btn-brand {
-    background: #9d0054;
+    background: var(--primary);
   }
 }
 .pgn__searchfield.pgn__searchfield--external.has-focus {
@@ -2573,7 +2573,7 @@ textarea.form-control {
     background: var(--primary);
   }
   .btn-brand {
-    background: #9d0054;
+    background: var(--primary);
   }
 }
 .pgn__searchfield__button.btn[type="submit"] {

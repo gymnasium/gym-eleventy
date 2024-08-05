@@ -6,22 +6,25 @@
 @use "base/mixins" as *;
 @use "base/fonts" as *;
 
+@use "mfe/learning-original";
+
 @use "shared";
 
 @use "mfe/root";
 @use "mfe/flex";
+@use "mfe/layout";
 // @use "mfe/buttons";
 @use "mfe/course-header";
 // @use "mfe/tabs";
 
-@use "mfe/learning-instructor-toolbar";
-@use "mfe/learning-course-tab-nav";
-@use "mfe/learning-course-outline";
+// @use "mfe/learning-instructor-toolbar";
+// @use "mfe/learning-course-tab-nav";
+// @use "mfe/learning-course-outline";
 
-.container-xl {
-  @include container;
-  width: 100%;
-}
+// .container-xl {
+//   @include container;
+//   width: 100%;
+// }
 
 // instructor-toolbar
 /*! CSS Used from: https://apps.learn.gymnasium.day/learning/app.a49f912aea5a90c1f158.css */
@@ -40,8 +43,8 @@
   }
   .dropdown-toggle:after {
     border-bottom: 0;
-    border-left: 0.3em solid #0000;
-    border-right: 0.3em solid #0000;
+    border-left: 0.3em solid var(--mono-1000);
+    border-right: 0.3em solid var(--mono-1000);
     border-top: 0.3em solid;
     display: inline-block;
     vertical-align: 0.255em;
@@ -128,11 +131,11 @@
     margin: 0 0 -1px;
 
     .nav-link {
-      border-bottom: 4px solid #0000;
+      border-bottom: 4px solid var(--mono-1000);
       border-left: 0;
       border-radius: 0;
       border-right: 0;
-      border-top: 4px solid #0000;
+      border-top: 4px solid var(--mono-1000);
       color: #454545;
       display: block;
       flex-shrink: 0;

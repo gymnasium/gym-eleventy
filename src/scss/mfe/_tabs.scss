@@ -11,13 +11,13 @@ $background-color_1: #e9e6e4;
 $background-color_2: var(--primary);
 $background-color_3: #939f97;
 $background-color_4: var(--mono-100);
-$background-color_5: #0000;
+$background-color_5: var(--mono-1000);
 $background-color_6: #8598aa;
 $border-color_1: #0000 #0000 #e9e6e4;
 $border-color_2: var(--mono-100);
 $border-color_3: #939f97;
 $border-color_4: var(--primary);
-$border-color_5: #0000;
+$border-color_5: var(--mono-1000);
 
 .nav {
   display: flex;
@@ -28,7 +28,7 @@ $border-color_5: #0000;
 }
 .nav-tabs {
   .nav-link {
-    background: #0000;
+    background: var(--mono-1000);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     margin-bottom: -2px;
@@ -39,7 +39,7 @@ $border-color_5: #0000;
       padding-bottom: 0.125rem;
     }
     &:focus {
-      border-bottom: 2px solid #0000;
+      border-bottom: 2px solid var(--mono-1000);
       outline: 0;
       position: relative;
       z-index: 200;
@@ -58,7 +58,7 @@ $border-color_5: #0000;
   border-bottom: 2px solid #e9e6e4;
   button.nav-link {
     border: none;
-    border-bottom: 2px solid #0000;
+    border-bottom: 2px solid var(--mono-1000);
   }
   button.nav-link.disabled {
     border-color: $border-color_5;
@@ -356,7 +356,7 @@ $border-color_5: #0000;
     color: $color_3;
     .dropdown {
       .dropdown-toggle {
-        border-bottom: 2px solid #0000;
+        border-bottom: 2px solid var(--mono-1000);
         &:hover {
           border-bottom: none;
         }

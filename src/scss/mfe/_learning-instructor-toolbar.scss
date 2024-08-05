@@ -78,30 +78,23 @@ hr {
   }
 }
 
-.btn:hover {
-  color: #454545;
-  text-decoration: none;
-}
-.btn:disabled {
-  opacity: 0.65;
-}
 .btn-inverse-outline-primary {
   border-color: var(--mono-100);
   color: var(--mono-100);
 }
 .btn-inverse-outline-primary:hover {
   background-color: #f0f3f5;
-  border-color: #0000;
+  border-color: var(--mono-1000);
   color: #082644;
 }
 .btn-inverse-outline-primary:disabled {
-  background-color: #0000;
+  background-color: var(--mono-1000);
   border-color: var(--mono-100);
   color: var(--mono-100);
 }
 .btn-inverse-outline-primary:not(:disabled):not(.disabled):active {
   background-color: #f0f3f5;
-  border-color: #0000;
+  border-color: var(--mono-1000);
   color: #454545;
 }
 .btn-inverse-outline-primary:focus {
@@ -134,21 +127,6 @@ hr {
 }
 
 
-
-button {
-  overflow: visible;
-}
-button {
-  text-transform: none;
-}
-[type="button"],
-button {
-  -webkit-appearance: button;
-}
-[type="button"]:not(:disabled),
-button:not(:disabled) {
-  cursor: pointer;
-}
 hr {
   border: 0;
   border-top: 1px solid #0000001a;
@@ -232,30 +210,23 @@ hr {
   }
 }
 
-.btn:hover {
-  color: #454545;
-  text-decoration: none;
-}
-.btn:disabled {
-  opacity: 0.65;
-}
 .btn-inverse-outline-primary {
   border-color: var(--mono-100);
   color: var(--mono-100);
 }
 .btn-inverse-outline-primary:hover {
   background-color: #f0f3f5;
-  border-color: #0000;
+  border-color: var(--mono-1000);
   color: #082644;
 }
 .btn-inverse-outline-primary:disabled {
-  background-color: #0000;
+  background-color: var(--mono-1000);
   border-color: var(--mono-100);
   color: var(--mono-100);
 }
 .btn-inverse-outline-primary:not(:disabled):not(.disabled):active {
   background-color: #f0f3f5;
-  border-color: #0000;
+  border-color: var(--mono-1000);
   color: #454545;
 }
 .btn-inverse-outline-primary:focus {
@@ -315,7 +286,7 @@ hr {
   right: auto;
 }
 .dropdown-item {
-  background-color: #0000;
+  background-color: var(--mono-1000);
   border: 0;
   clear: both;
   color: #212529;
@@ -339,7 +310,7 @@ hr {
   text-decoration: none;
 }
 .dropdown-item:disabled {
-  background-color: #0000;
+  background-color: var(--mono-1000);
   color: #707070;
   pointer-events: none;
 }

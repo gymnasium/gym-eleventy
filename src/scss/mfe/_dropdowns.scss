@@ -12,7 +12,7 @@ $color_5: #707070;
 $color_6: #082644;
 $color_7: #b4b1af;
 $background-color_1: var(--mono-100);
-$background-color_2: #0000;
+$background-color_2: var(--mono-1000);
 $background-color_3: #f0eeed;
 $background-color_4: var(--primary);
 $background-color_5: #939f97;
@@ -45,8 +45,8 @@ $border-color_1: #c9cfcb;
       display: none;
     }
     &::before {
-      border-bottom: 0.3em solid #0000;
-      border-top: 0.3em solid #0000;
+      border-bottom: 0.3em solid var(--mono-1000);
+      border-top: 0.3em solid var(--mono-1000);
       content: "";
       display: inline-block;
       vertical-align: 0.255em;
@@ -78,8 +78,8 @@ $border-color_1: #c9cfcb;
   }
   .dropdown-toggle {
     &::after {
-      border-bottom: 0.3em solid #0000;
-      border-top: 0.3em solid #0000;
+      border-bottom: 0.3em solid var(--mono-1000);
+      border-top: 0.3em solid var(--mono-1000);
       content: "";
       display: inline-block;
       vertical-align: 0.255em;
@@ -110,8 +110,8 @@ $border-color_1: #c9cfcb;
   .dropdown-toggle {
     &::after {
       border-bottom: 0.3em solid;
-      border-left: 0.3em solid #0000;
-      border-right: 0.3em solid #0000;
+      border-left: 0.3em solid var(--mono-1000);
+      border-right: 0.3em solid var(--mono-1000);
       border-top: 0;
       content: "";
       display: inline-block;
@@ -131,8 +131,8 @@ $border-color_1: #c9cfcb;
   white-space: nowrap;
   &::after {
     border-bottom: 0;
-    border-left: 0.3em solid #0000;
-    border-right: 0.3em solid #0000;
+    border-left: 0.3em solid var(--mono-1000);
+    border-right: 0.3em solid var(--mono-1000);
     border-top: 0.3em solid;
     display: inline-block;
     vertical-align: 0.255em;

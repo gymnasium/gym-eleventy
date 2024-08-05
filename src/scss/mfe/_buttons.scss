@@ -36,7 +36,7 @@
 
 // Close button mess copied from authn
 $color_1: var(--mono-900);
-$background-color_1: #0000;
+$background-color_1: var(--mono-1000);
 
 .close {
   color: $color_1;
