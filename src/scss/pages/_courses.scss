@@ -72,7 +72,6 @@
   }
 
   .intro {
-    padding: 1.6rem 0;
 
     @include breakpoint(large, min) {
       & {
@@ -350,7 +349,7 @@
     padding: 1.4rem;
     border: 1px solid var(--mono-400);
     border-radius: 3px;
-    margin-top: 1rem;
+    margin-top: 1.2rem;
 
     // course card (main content)
 
@@ -487,7 +486,7 @@
   .tutorials {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-    gap: 1.4rem;
+    gap: 1.2rem;
 
     .course-card {
       display: grid;
@@ -496,8 +495,8 @@
 
       .main {
         display: grid;
-        grid-template-rows: auto auto 1fr auto;
         grid-template-columns: none;
+        grid-template-rows: auto auto 1fr auto;
         grid-template-areas: none;
 
         > * {
@@ -622,8 +621,9 @@
       height: 100%;
 
       img:not(.collection img) {
-        object-fit: cover;
+        width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
   }
@@ -639,8 +639,8 @@
 
   @include breakpoint(large, min) {
     & {
-      grid-template-rows: auto auto auto;
       grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto auto;
       grid-template-areas:
         "header resources"
         "video  resources"
