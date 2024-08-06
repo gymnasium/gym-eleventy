@@ -1,6 +1,6 @@
 ---js
 {
-  layout: "layouts/main.njk",
+  layout: "layouts/full-width.njk",
   permalink: "/",
   meta: {
     sitemapPriority: 1.0,
@@ -23,29 +23,32 @@
 {% set hero_cat = hero_data[0] -%}
 {% set hero_slug = hero_data[1] -%}
 {%- set hero = heros[hero_cat][hero_slug] -%}
-{%- set heroClass = "home-hero bg-mono-800 full-bleed" -%}
+{%- set heroClass = "home-hero bg-mono-800" -%}
 {%- include 'modules/hero.njk' -%}
 
 <section class="how-gymnasium-works">
-  {%- set module = pages['home']['how-gymnasium-works'] -%}
-  {%- set header = module['header'] -%}
-  {%- include 'modules/components/header.njk' -%}
-  {% set items = module['items'] -%}
-  <ul>
-    {%- for item in items %}
-      <li>
-        <h2>{{ item.heading }}</h2>
-        <p>{{ item.description }}</p>
-      </li>
-    {%- endfor -%}
-  </ul>
-
+  <div class="container">
+    {%- set module = pages['home']['how-gymnasium-works'] -%}
+    {%- set header = module['header'] -%}
+    {%- include 'modules/components/header.njk' -%}
+    {% set items = module['items'] -%}
+    <ul>
+      {%- for item in items %}
+        <li>
+          <h2>{{ item.heading }}</h2>
+          <p>{{ item.description }}</p>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
 </section>
 
 {%- set module = featured['home']['featured'] -%}
 {%- include 'modules/featured/home.njk' -%}
 
-<section class="home-find-work bg-mono-700 full-bleed">
-  {%- set header = pages['home']['find-work']['header'] -%}
-  {%- include 'modules/jobs.njk' -%}
+<section class="home-find-work bg-mono-700">
+  <div class="container">
+    {%- set header = pages['home']['find-work']['header'] -%}
+    {%- include 'modules/jobs.njk' -%}
+  </div>
 </section>
