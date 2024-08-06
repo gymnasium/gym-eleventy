@@ -71,7 +71,7 @@
         li {
           font-size: 1.3125rem;
 
-          &:not(main .jobs li):not(.courses li):not(.tutorials li):not(.webinars li):not(.design-systems li)  {
+          &:not(main .jobs li):not(.courses li):not(.tutorials li):not(.webinars li):not(.design-systems li) {
             padding-bottom: 1.2rem;
             border-bottom: 1px dashed var(--mono-300);
             margin-top: 1.2rem;
