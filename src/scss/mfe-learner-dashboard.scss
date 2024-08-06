@@ -12,6 +12,10 @@
 @use "mfe/flex";
 @use "mfe/buttons";
 
+.container-fluid {
+  @include container;
+}
+
 // Dashboard Heading
 .course-list-heading-container {
   align-items: flex-start;
@@ -55,7 +59,7 @@
 }
 
 .pgn__chip {
-  background: #e1dddb;
+  background: var(--mono-600);
   border-radius: 0.25rem;
   box-sizing: border-box;
   display: inline-flex;
