@@ -27,17 +27,21 @@ module.exports = eleventyConfig => {
     `<h1>${title}</h1>
     <p>${subtitle}</p>`);
 
-  // back to top, accepts 2 arguments to customize markup and scroll target
-  eleventyConfig.addShortcode('back_to_top', (element_type, target_id) => {
+  // back to top, accepts 3 arguments to customize wrapper markup, target id, and message
+  eleventyConfig.addShortcode('back_to_top', (element_type, target_id, msg) => {
     let elem = 'div';
-    let target = '#main'
+    let target = '#main';
+    let text = 'Back to top';
     if (element_type) {
       elem = element_type;
     }
     if (target_id) {
       target = target_id;
     }
-    return `<${elem} class="back-to"><a href="${target}">Back to top</a></${elem}>`
+    if (msg) {
+      text = msg;
+    }
+    return `<${elem} class="back-to"><a href="${target}">${text}</a></${elem}>`
   });
 
   eleventyConfig.addShortcode('external_link', (href, title, className) => {
