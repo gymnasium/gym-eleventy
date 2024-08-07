@@ -47,7 +47,9 @@ footer:
         - label: Jobs
           href: GYM_ROOT_URL/jobs/
         - label: Articles
-          href: GYM_ROOT_URL/blog/
+          href: https://medium.com/gymnasium
+          target: _blank
+          rel: noopener
         - label: Livestreams
           href: https://www.youtube.com/@AquentGymnasium/streams
           target: _blank
