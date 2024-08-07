@@ -106,12 +106,11 @@
         </dl>
       </aside>
       <footer class="info">
-        <h3>{{ obj.type | replace('full', 'Full Course') | replace('short', 'Gym Short') }}</h3>
+        <h3>{{ course_type[obj.type].name }}</h3>
         <p>{{ obj.skill_level }}</p>
       </footer>
     </div>
-    <footer class="back-to">
-      <p><a href="#topics">Back to Menu</a></p>
-    </footer>
+
+    {%- back_to_top 'footer', 'topics', 'Back to menu' -%}
   </article>
 </li>

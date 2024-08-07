@@ -73,11 +73,9 @@
       <p>{{ instructor_blurb }}</p>
     </header>
 
-  {% renderFile transcript, "njk" %}
+    {% renderFile transcript, "njk" %}
 
-    <footer class="back-to">
-      <p><a href="#main">Back to Tutorial</a></p>
-    </footer>
+    {%- back_to_top 'footer', 'main', 'Back to Tutorial' -%}
   </article>
 </details>
 {%- endif -%}
