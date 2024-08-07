@@ -41,6 +41,7 @@ jobs:
 
 salary-guides:
   module: lists/default
+  section_class: articles # optional class name gets added to the section class
   header:
     heading: "Salary Guides"
   guides:

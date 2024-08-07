@@ -58,14 +58,4 @@ meta:
 {# Here we're omitting some object keys to be able to loop through the content fields #}
 {%- set content = pages['jobs'] | omit(['intro']) -%}
 
-{%- if content -%}
-  {%- for key, section in content -%}
-    <section id="{{ key }}" class="{{ key }}">
-      {# Load modules! #}
-      {# Let's rename sections to modules, so we can keep track of what we're dealing with #}
-      {%- set module = section -%}
-      {%- include 'modules/' + section.module + '.njk' -%}
-      {%- back_to_top -%}
-    </section>
-  {%- endfor -%}
-{%- endif -%}
+{%- include 'modules/loader.njk' -%}

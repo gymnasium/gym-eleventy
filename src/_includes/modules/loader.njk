@@ -1,8 +1,8 @@
 {%- if content -%}
   {%- for key, section in content -%}
     {%- set section_id = key -%}
-    {%- if section.html_id -%}
-      {%- set section_id = section.html_id -%}
+    {%- if section.section_id -%}
+      {%- set section_id = section.section_id -%}
     {%- endif -%}
     {%- set section_class = "" -%}
     {%- if section.section_class -%}
