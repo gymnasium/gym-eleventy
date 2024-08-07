@@ -51,7 +51,7 @@
 {%- set itemClass %}{{ baseClass }} {{ topicClass }} {{ subtopicClass }} {% if topic_featured %} featured{% endif %} {% if extraClass %} {{ extraClass }}{% endif %}
 {%- endset -%}
 
-<article id="{{ shortId | lower | replace('gym-017', 'everyone') | replace('gym-018', 'designers') | replace('gym-019', 'developers') | replace('gym-020', 'product-managers') }}" class="course-card">
+<article id="{{ section_id }}" class="{{ section_id }} course-card">
   <div class="main">
     <a href="{{ url }}">
       <div class="artwork">
@@ -102,8 +102,11 @@
       </dl>
     </aside>
     <footer class="info">
-      <h3>{{ obj.type | replace('full', 'Full Course') | replace('short', 'Gym Short') }}</h3>
+      <h3>{{ course_type[obj.type].name }}</h3>
       <p>{{ obj.skill_level }}</p>
     </footer>
   </div>
 </article>
+{%- if not loop.last -%}
+  {%- back_to_top 'footer' -%}
+{%- endif -%}
