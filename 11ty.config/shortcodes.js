@@ -28,7 +28,7 @@ module.exports = eleventyConfig => {
     <p>${subtitle}</p>`);
 
   // back to top, accepts 3 arguments to customize wrapper markup, target id, and message
-  eleventyConfig.addShortcode('back_to_top', (element_type, target_id, msg) => {
+  eleventyConfig.addShortcode('back_to', (element_type, target_id, msg) => {
     let elem = 'div';
     let target = 'main';
     let text = 'Back to top';
