@@ -13,7 +13,7 @@
 @use 'mfe/buttons';
 
 main {
-  margin-top: 0;
+  padding-top: 0;
 }
 
 .course-metabar {
@@ -26,46 +26,10 @@ main {
 
 .course-header {
   background-color: var(--mono-400);
-  --box-shadow-color: var(--mono-400);
-  @include full-bleed;
 }
 
 .course-header, .course-overview {
   padding: 2rem 0;
-}
-
-// TODO: move to layouts partial
-.grid-sidebar {
-  display: grid;
-  gap: 2rem;
-  grid-template-areas:
-    "header"
-    "content"
-    "sidebar";
-
-  @media (min-width: 52em) {
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-      "header  header"
-      "content sidebar"
-  }
-
-  > header {
-    grid-area: header;
-  }
-
-  > div {
-    grid-area: content;
-
-    @media (min-width: 52em) {
-      border-right: 1px dashed #ccc;
-      padding-right: 1rem;
-    }
-  }
-
-  > aside {
-    grid-area: sidebar;
-  }
 }
 
 .course-intro {

@@ -7,13 +7,42 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
-// TODO: consider better/different naming conventions
-.layout-1fr-2fr {
+// good for headers
+.grid-col-1-2 {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-gap: 2.6em;
+  grid-gap: 2rem;
 }
 
+// 
+.grid-sidebar {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    "content"
+    "sidebar";
+
+  @media (min-width: 52em) {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "content sidebar"
+  }
+
+  .content {
+    grid-area: content;
+    padding-top: 1rem;
+
+    @media (min-width: 52em) {
+      border-right: 1px dashed #ccc;
+      padding-right: 1rem;
+    }
+  }
+
+  aside {
+    grid-area: sidebar;
+    padding-top: 1rem;
+  }
+}
 
 .color-card {
   display: grid;
