@@ -7,13 +7,42 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
-// TODO: consider better/different naming conventions
-.layout-1fr-2fr {
+// good for headers
+.grid-col-1-2 {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-gap: 2.6em;
+  grid-gap: 2rem;
 }
 
+// 
+.grid-sidebar {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    "content"
+    "sidebar";
+
+  @media (min-width: 52em) {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "content sidebar"
+  }
+
+  .content {
+    grid-area: content;
+    padding-top: 1rem;
+
+    @media (min-width: 52em) {
+      border-right: 1px dashed #ccc;
+      padding-right: 1rem;
+    }
+  }
+
+  aside {
+    grid-area: sidebar;
+    padding-top: 1rem;
+  }
+}
 
 .color-card {
   display: grid;
@@ -53,15 +82,18 @@
     header {
       max-width: 18.25rem;
 
-      .topic,
       .title {
         color: var(--mono-100);
+        line-height: 1.15;
+        letter-spacing: 0.05ex;
+        word-spacing: 0.05ex;
+        text-wrap: balance;
       }
 
       .topic {
         font-size: 1rem;
         line-height: 1;
-        color: var(--mono-500);
+        color: var(--mono-400);
         letter-spacing: 0.15rem;
         margin-top: rem-calc(-1);
         margin-bottom: 1.2rem;
@@ -71,11 +103,13 @@
     .subhead {
       display: block;
       max-width: 24rem;
-      font-size: .55rem;
-      line-height: 1.35;
+      font-weight: 700;
+      font-size: 1.0625rem;
+      line-height: 1.25;
       color: var(--mono-100);
-      letter-spacing: .05rem;
-      margin-top: .75rem;
+      letter-spacing: 0.1ex;
+      word-spacing: 0.1ex;
+      margin-top: 0.6rem;
     }
 
     p {
@@ -102,6 +136,7 @@
 
 // intro section for collections/webinars
 // TODO: consider renaming?
+.intro,
 .intro-about {
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;

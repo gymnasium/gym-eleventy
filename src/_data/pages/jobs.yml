@@ -3,10 +3,11 @@ intro:
     heading: Jobs
     heading_type: h1
     description: |
-      Explore our free resources for creative pros — from in-depth
-      <a href="#resume-tips">articles</a> and 5-minute
-      <a href="#take5-tutorials">tutorials</a> to contract and full-time
-      <a href="#jobs">jobs</a>.
+      <p>Explore
+      <a href="#jobs"><b>job listings</b></a>,
+      <a href="#salary-guides"><b>salary guides</b></a>,
+      <a href="#take5-tutorials"><b>tutorials</b></a>,
+      and <a href="#articles"><b>articles</b></a>.</p>
   cards:
   - heading: Salary Guides
     subheading: See How Your Salary & Benefits Stack Up
@@ -14,9 +15,9 @@ intro:
       href: /jobs/#salary-guides
       label: Check Salary
     img:
-      src: /img/jobs/featured/salary-guide-2023.jpg
-      alt: 2023 Salary Guide
-  - heading: Job Search
+      src: /img/jobs/featured/salary-guide-2024.jpg
+      alt: 2024 Salary Guide
+  - heading: Job Listings
     subheading: Find Contract and Full-Time Work
     cta:
       href: /jobs/#jobs
@@ -40,42 +41,64 @@ jobs:
 
 salary-guides:
   module: lists/default
+  section_class: articles # optional class name gets added to the section class
   header:
-    heading: Salary Guides
-  articles:
+    heading: "Salary Guides"
+  guides:
     links:
     - url: https://aquenttalent.com/check-salary
       label: Check Salary
-    - url: https://brand.aquent.com/salary-guide?utm_source=gymnasium&utm_medium=web&utm_campaign=AQ_NA_slg23&utm_content=jobs-salary-guides
+    - url: https://aquent.com/lp/salary-guide
       label: US Salary Guide
-    - url: https://brand.aquent.com/UK-salary-guide?utm_source=gymnasium&utm_medium=web&utm_campaign=AQ_UK_slg23&utm_content=slg23
+    - url: https://aquent.co.uk/lp/salary-guide/
       label: UK Salary Guide
 
-resume-tips:
+take5-tutorials:
+  module: lists/image-course
+  header:
+    heading: "Take 5 Tutorials"
+  cta:
+    href: /courses/take5/
+    label: View More Tutorials
+    class: btn
+  tutorials:
+    ids:
+    - id: GYM-5020
+    - id: GYM-5019
+    - id: GYM-5018
+    - id: GYM-5017
+    - id: GYM-5016
+    - id: GYM-5027
+
+articles:
   module: lists/default
   header:
-    heading: Résumé Tips
-  articles:
+    heading: "Articles"
+    description: Read bookmark-worthy blog posts on job-related tips.
+
+  resume-tips:
+    header:
+      heading: "Résumé Tips"
+      heading_type: h3
     links:
     - url: https://aquenttalent.com/blog/how-to-apply-online-and-actually-get-a-job
       label: How to Apply Online (and Actually Get a Job)
     - url: https://medium.com/gymnasium/considering-contract-work-heres-why-you-should-go-for-it-7ec5eb246175
       label: Considering Contract Work? Here’s Why You Should Go for It
 
-portfolio-tips:
-  module: lists/default
-  header:
-    heading: Portfolio Tips
-  articles:
+  portfolio-tips:
+    module: lists/default
+    header:
+      heading: "Portfolio Tips"
+      heading_type: h3
     links:
     - url: https://aquenttalent.com/blog/top-5-free-portfolio-sites
       label: Top 5 Free Portfolio Sites for Creatives
 
-networking-tips:
-  module: lists/default
-  header:
-    heading: Networking Tips
-  articles:
+  networking-tips:
+    header:
+      heading: "Networking Tips"
+      heading_type: h3
     links:
     - url: https://aquenttalent.com/blog/8-networking-techniques-for-meeting-people-face-to-face
       label: "8 Networking Techniques for Meeting People Face-to-Face"
@@ -88,11 +111,10 @@ networking-tips:
     - url: https://aquenttalent.com/blog/the-5-rules-of-personal-branding-and-how-to-use-them
       label: "The 5 Rules of Personal Branding and How to Use Them"
 
-interview-tips:
-  module: lists/default
-  header:
-    heading: Interview Tips
-  articles:
+  interview-tips:
+    header:
+      heading: "Interview Tips"
+      heading_type: h3
     links:
     - url: https://medium.com/gymnasium/how-to-conduct-an-interview-like-a-boss-7de5c9810c4c
       label: "How to Conduct an Interview Like a Boss"
@@ -107,24 +129,10 @@ interview-tips:
     - url: https://aquenttalent.com/blog/top-10-must-ask-interview-questions-for-designers
       label: "Top 10 Must-Ask Interview Questions for Designers"
 
-take-5-tutorials:
-  module: lists/default
-  header:
-    heading: Take 5 Tutorials
-  tutorials:
-    ids:
-    - id: GYM-5020
-    - id: GYM-5019
-    - id: GYM-5018
-    - id: GYM-5017
-    - id: GYM-5016
-    - id: GYM-5027
-
-tips-for-designers:
-  module: lists/default
-  header:
-    heading: Tips for Designers
-  articles:
+  tips-for-designers:
+    header:
+      heading: "Tips for Designers"
+      heading_type: h3
     links:
     - url: https://aquenttalent.com/blog/how-to-create-a-ux-profile-that-will-help-you-land-your-dream-job
       label: "How to Create a UX Profile That Will Help You Land Your Dream Job"
@@ -143,11 +151,10 @@ tips-for-designers:
     - url: https://aquenttalent.com/blog/advice-for-planning-your-next-career-move-in-ux
       label: "Advice for Planning Your Next Career Move in UX"
 
-tips-for-managers:
-  module: lists/default
-  header:
-    heading: "Tips for Managers"
-  articles:
+  tips-for-managers:
+    header:
+      heading: "Tips for Managers"
+      heading_type: h3
     links:
     - url: https://medium.com/aquent-off-hours/ux-hiring-is-not-easy-even-for-a-company-full-of-ux-recruiters-4bd2ce1e6720
       label: "UX Hiring Is Not Easy, Even for a Company Full of UX Recruiters"
@@ -158,11 +165,10 @@ tips-for-managers:
     - url: https://medium.com/aquent-off-hours/if-your-team-isnt-learning-they-re-falling-behind-fix-it-52331858383d
       label: "If Your Team Isn’t Learning, They’re Falling Behind. Fix It."
 
-diversity-and-inclusion:
-  module: lists/default
-  header:
-    heading: "Diversity & Inclusion"
-  articles:
+  diversity-and-inclusion:
+    header:
+      heading: "Diversity & Inclusion"
+      heading_type: h3
     links:
     - url: https://aquenttalent.com/blog/how-to-fix-your-talent-pipeline-to-be-more-inclusive
       label: "How to Fix Your Talent Pipeline to Be More Inclusive"

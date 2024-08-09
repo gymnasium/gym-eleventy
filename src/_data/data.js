@@ -8,11 +8,11 @@ const DATA_URL = process.env.DATA_URL || 'https://data.gym.soy';
 
 // Individual job API: https://cloudwall.aquent.com/api/v1/jobpostings/189094
 
-const MARKET_FEED = 'https://assets.aquent.com/apps/gym/markets.json';
+// const MARKET_FEED = 'https://assets.aquent.com/apps/gym/markets.json';
 
 const MARKET_FEED2 = 'https://aquentllc.wpengine.com/feeds/gymnasium-markets.json';
 
-const JOB_FEED = 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/jobs/listing?pageSize=500';
+// const JOB_FEED = 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/jobs/listing?pageSize=500';
 
 const GYM_JOB_FEED = 'https://aquentllc.wpengine.com/wp-json/aq-central/v1/gymnasium/listing';
 
@@ -25,20 +25,20 @@ module.exports = async function() {
     // let feed1 = await parser.parseURL(`https://medium.com/feed/gymnasium`);
     // let feed2 = await parser.parseURL(`https://medium.com/feed/@aquentgymnasium`);
 
-    let jobs = await EleventyFetch(`${JOB_FEED}`, {
-      duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '30m',
-      type: "json"
-    });
+    // let jobs = await EleventyFetch(`${JOB_FEED}`, {
+    //   duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '30m',
+    //   type: "json"
+    // });
 
     let jobs2 = await EleventyFetch(`${GYM_JOB_FEED}`, {
       duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '30m',
       type: "json"
     });
 
-    let markets = await EleventyFetch(MARKET_FEED, {
-      duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '24h',
-      type: "json"
-    });
+    // let markets = await EleventyFetch(MARKET_FEED, {
+    //   duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '24h',
+    //   type: "json"
+    // });
 
     let markets2 = await EleventyFetch(MARKET_FEED2, {
       duration: ENV === ('dev' || 'development' || 'default' || 'local') ? 0 : '24h',
@@ -56,11 +56,11 @@ module.exports = async function() {
 
     return {
       // live values
-      JOB_FEED: JOB_FEED,
+      // JOB_FEED: JOB_FEED,
       GYM_JOB_FEED: GYM_JOB_FEED,
       JOBDATA: {
-        "jobs": jobs.items,
-        "jobs2": jobs2.items,
+        // "jobs": jobs.items,
+        // "jobs2": jobs2.items,
         "locations": job_options.locations,
         "placement_options": job_options.placement_options,
         "preferences": job_options.preferences,
@@ -76,7 +76,7 @@ module.exports = async function() {
           "US": "https://aquent.com/find-work/",
         }
       },
-      markets: markets.items,
+      // markets: markets.items,
       markets2: markets2,
 
       // blog: feed,

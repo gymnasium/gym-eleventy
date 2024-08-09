@@ -145,6 +145,28 @@
     align-items: center;
     gap: 0.5rem;
   }
+
+  &-link {
+    background-color: transparent;
+    font-weight: 400;
+    text-decoration: underline;
+    border: 0;
+    font-size: rem-calc(16);
+    font-family: inherit;
+    color: inherit;
+
+    &:focus,
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &-inline {
+    font-size: inherit;
+    line-height: calc(1.5556em - 2px);
+    padding: 0 .25em;
+    vertical-align: bottom;
+  }
 }
 
 summary {

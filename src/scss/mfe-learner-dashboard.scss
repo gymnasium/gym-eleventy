@@ -7,10 +7,15 @@
 @use "base/fonts" as *;
 
 @use "shared";
+@use 'components/webfonts_absolute';
 
 @use "mfe/root";
 @use "mfe/flex";
 @use "mfe/buttons";
+
+.container-fluid {
+  @include container;
+}
 
 // Dashboard Heading
 .course-list-heading-container {
@@ -54,8 +59,9 @@
 #course-list-active-filters {
 }
 
+// TODO: do we need this?
 .pgn__chip {
-  background: #e1dddb;
+  background: var(--mono-600);
   border-radius: 0.25rem;
   box-sizing: border-box;
   display: inline-flex;

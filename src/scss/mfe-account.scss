@@ -7,6 +7,7 @@
 @use 'base/fonts' as *;
 
 @use 'shared';
+@use 'components/webfonts_absolute';
 
 @use 'mfe/root';
 
@@ -21,24 +22,45 @@
 
   .h6, h6 {
     margin-bottom: .25rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
-  .btn-link {
-    border: none;
-    display: inline-block;
-    line-height: 1.2;
-    padding: 0;
-    background-color: transparent;
-    color: var(--mono-900);
-    font-family: var(--font-family-default);
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .btn {
     font-size: 1rem;
-    border-radius: 0;
-  
-    &:hover {
+    padding: 1rem;
+
+    &-link {
+      border: none;
+      display: inline-block;
+      line-height: inherit;
+      padding: 0;
       background-color: transparent;
-      color: var(--mono-700);
+      color: var(--mono-900);
+      font-family: var(--font-family-default);
+      font-size: 0.875rem;
+      font-weight: normal;
+      border-radius: 0;
+      text-decoration: underline;
+    
+      &:hover {
+        background-color: transparent;
+        color: var(--mono-700);
+      }
     }
+
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .account-section {
+    padding-top: 1rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -75,3 +97,18 @@
 //   align-items: stretch !important;
 // }
 
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Hide unused sections
+#profile-information, #social-media, #site-preferences, #linked-accounts {
+  display: none;
+}
+
+// Hide entire jump menu
+.col-md-2 {
+  display: none;
+}

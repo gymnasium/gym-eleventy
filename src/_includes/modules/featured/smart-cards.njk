@@ -66,20 +66,26 @@
 
       <li>
         <article class="featured-card" id="featured-{{ type }}-{{ obj.id | lower }}">
-          <header>{{ category }}</header>
-          <figure style="border-image-source: url({{ src }});">
-            <img src="{{ src }}" alt="Image for {{ title }}" />
-          </figure>
-          <hgroup>
-          {%- if title -%}
-            <h3>{{ title }}</h3>
-          {%- endif -%}
-          </hgroup>
-
-          <div class="cta">
-            <a class="btn" href="{{ destUrl }}">{{ cta_text }}</a>
+          <div>
+            <p class="topic"><b>{{ category }}</b></p>
+            <figure style="border-image-source: url({{ src }});">
+                <a href="{{ destUrl }}">
+                  <img alt="Cover artwork for {{ title }}" src="{{ src }}" width="" height="" decoding="asyc" fetchpriority="important">
+                </a>
+            </figure>
+            <header>
+            {%- if title -%}
+              <a href="{{ destUrl }}">
+                <h3>{{ title }}</h3>
+              </a>
+            {%- endif -%}
+            </header>
+            <div class="cta">
+              <a class="btn" href="{{ destUrl }}">{{ cta_text }}</a>
+            </div>
           </div>
-          <footer><a href="#{{ category | lower }}">{{ category_link_text | title }}</a>
+          <footer>
+            <b><a href="#{{ category | lower }}">{{ category_link_text | title }}</a></b>
           </footer>
         </article>
       </li>

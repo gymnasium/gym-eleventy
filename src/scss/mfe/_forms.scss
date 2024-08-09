@@ -5,42 +5,42 @@
 
 $color_1: #454545;
 $color_2: #707070;
-$color_3: #0000;
+$color_3: var(--mono-1000);
 $color_4: #178253;
-$color_5: #fff;
+$color_5: var(--mono-100);
 $color_6: #c32d3a;
-$color_7: #0a3055;
+$color_7: var(--primary);
 $color_8: #212529;
 $color_9: #005788;
 $color_10: #006daa;
 $color_11: #082644;
 $color_12: #666;
-$background-color_1: #fff;
-$background-color_2: #0000;
+$background-color_1: var(--mono-100);
+$background-color_2: var(--mono-1000);
 $background-color_3: #ebebeb;
 $background-color_4: #178253e6;
 $background-color_5: #1fad6f;
 $background-color_6: #c32d3ae6;
 $background-color_7: #d64d59;
-$background-color_8: #0a3055;
-$background-color_9: #0a305580;
+$background-color_8: var(--primary);
+$background-color_9: var(--primary)80;
 $background-color_10: #454545;
 $background-color_11: #2b8ae6;
 $background-color_12: #adadad;
 $background-color_13: #707070;
 $background-color_14: #ffffff03;
 $background-color_15: #178253;
-$border-color_1: #0a3055;
+$border-color_1: var(--primary);
 $border-color_2: #178253;
 $border-color_3: #1fad6f;
 $border-color_4: #c32d3a;
 $border-color_5: #d64d59;
-$border-color_6: #0000;
+$border-color_6: var(--mono-1000);
 $border-color_7: #707070;
-$border-color_8: #000;
-$border-top-color_1: #fff;
-$border-right-color_1: #0000;
-$border-left-color_1: #fff;
+$border-color_8: var(--mono-900);
+$border-top-color_1: var(--mono-100);
+$border-right-color_1: var(--mono-1000);
+$border-left-color_1: var(--mono-100);
 
 .form-control {
   background-clip: padding-box;
@@ -65,7 +65,7 @@ $border-left-color_1: #fff;
   &:focus {
     background-color: $background-color_1;
     border-color: $border-color_1;
-    box-shadow: 0 0 0 1px #0a3055;
+    box-shadow: 0 0 0 1px var(--primary);
     color: $color_1;
     outline: 0;
     ~ {
@@ -162,7 +162,7 @@ select.form-control {
 }
 .form-control-plaintext {
   background-color: $background-color_2;
-  border: solid #0000;
+  border: solid var(--mono-1000);
   border-width: 1px 0;
   color: $color_1;
   display: block;
@@ -1379,7 +1379,7 @@ textarea.form-control {
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   &:focus {
     border-color: $border-color_1;
-    box-shadow: 0 0 0 1px #0a3055;
+    box-shadow: 0 0 0 1px var(--primary);
     outline: 0;
     &::-ms-value {
       background-color: $background-color_1;
@@ -1443,7 +1443,7 @@ textarea.form-control {
     ~ {
       .custom-file-label {
         border-color: $border-color_1;
-        box-shadow: 0 0 0 1px #0a3055;
+        box-shadow: 0 0 0 1px var(--primary);
       }
     }
   }
@@ -1521,13 +1521,13 @@ textarea.form-control {
   &:focus {
     outline: 0;
     &::-webkit-slider-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 1px #0a3055;
+      box-shadow: 0 0 0 1px #fff, 0 0 0 1px var(--primary);
     }
     &::-moz-range-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 1px #0a3055;
+      box-shadow: 0 0 0 1px #fff, 0 0 0 1px var(--primary);
     }
     &::-ms-thumb {
-      box-shadow: 0 0 0 1px #fff, 0 0 0 1px #0a3055;
+      box-shadow: 0 0 0 1px #fff, 0 0 0 1px var(--primary);
     }
   }
   &::-moz-focus-outer {
@@ -1714,7 +1714,7 @@ textarea.form-control {
   &:focus {
     background-color: $background-color_1;
     border-color: $border-color_1;
-    box-shadow: 0 0 0 1px #0a3055;
+    box-shadow: 0 0 0 1px var(--primary);
     color: $color_1;
     outline: 0;
   }
@@ -1853,7 +1853,7 @@ textarea.form-control {
   position: absolute;
   width: 100%;
   .pgn__form-control-floating-label-content {
-    border-top: 2px solid #0000;
+    border-top: 2px solid var(--mono-1000);
     inset-inline-start: -0.5em;
     max-width: 100%;
     position: relative;
@@ -1997,7 +1997,7 @@ textarea.form-control {
     position: relative;
     text-decoration: none;
     &::before {
-      border: 0.125rem solid #0a3055;
+      border: 0.125rem solid var(--primary);
       border-radius: 0.0625rem;
       bottom: -0.375rem;
       content: "";
@@ -2041,7 +2041,7 @@ textarea.form-control {
     text-decoration: none;
     border-color: $border-color_8;
     &::before {
-      border: 0.125rem solid #0a3055;
+      border: 0.125rem solid var(--primary);
       border-radius: 0.0625rem;
       bottom: -0.375rem;
       content: "";
@@ -2223,7 +2223,7 @@ textarea.form-control {
   .pgn__form-control-decorator {
     .btn-icon {
       &:hover {
-        fill: #fff;
+        fill: var(--mono-100);
       }
       &:focus {
         fill: #707070;
@@ -2262,7 +2262,7 @@ textarea.form-control {
       padding: 6.25rem 0;
       text-align: center;
       .spinner-border {
-        border: 0.125rem solid #000;
+        border: 0.125rem solid var(--mono-900);
         height: 1.25rem;
         width: 1.25rem;
         border-right-color: $border-right-color_1;
@@ -2278,7 +2278,7 @@ textarea.form-control {
   opacity: 1;
   right: 0.2rem !important;
   .tooltip-inner {
-    background: #fff;
+    background: var(--mono-100);
     color: $color_2;
     display: block;
   }
@@ -2296,7 +2296,7 @@ textarea.form-control {
   opacity: 1;
   width: 90%;
   .tooltip-inner {
-    background: #fff;
+    background: var(--mono-100);
     color: $color_2;
     display: block;
     min-width: 464px !important;
@@ -2454,7 +2454,7 @@ textarea.form-control {
       position: relative;
       transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       &::after {
-        border: 0.3125rem double #000;
+        border: 0.3125rem double var(--mono-900);
         content: "";
         height: 100%;
         position: absolute;
@@ -2537,24 +2537,24 @@ textarea.form-control {
   &:not(.pgn__searchfield--external) {
     position: relative;
     &::after {
-      border: 0.3125rem double #000;
+      border: 0.3125rem double var(--mono-900);
       content: "";
       height: 100%;
       position: absolute;
       width: 100%;
     }
     .pgn__searchfield_wrapper {
-      box-shadow: 0 0 0 0.0625rem #000;
+      box-shadow: 0 0 0 0.0625rem var(--mono-900);
     }
   }
 }
 .pgn__searchfield.pgn__searchfield--external {
   border: none;
   .btn-primary {
-    background: #0a3055;
+    background: var(--primary);
   }
   .btn-brand {
-    background: #9d0054;
+    background: var(--primary);
   }
 }
 .pgn__searchfield.pgn__searchfield--external.has-focus {
@@ -2562,7 +2562,7 @@ textarea.form-control {
   .pgn__searchfield_wrapper {
     position: relative;
     &::after {
-      border: 0.3125rem double #000;
+      border: 0.3125rem double var(--mono-900);
       content: "";
       height: 100%;
       position: absolute;
@@ -2570,10 +2570,10 @@ textarea.form-control {
     }
   }
   .btn-primary {
-    background: #0a3055;
+    background: var(--primary);
   }
   .btn-brand {
-    background: #9d0054;
+    background: var(--primary);
   }
 }
 .pgn__searchfield__button.btn[type="submit"] {

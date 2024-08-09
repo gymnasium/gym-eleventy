@@ -70,7 +70,7 @@
       <a class="btn" href="{{ url }}">Explore Course</a>
     </div>
     <footer class="info">
-      <h3>{{ obj.type | replace('full', 'Full Course') | replace('short', 'Gym Short') }}</h3>
+      <h3>{{ course_type[obj.type].name }}</h3>
       <p>{{ obj.skill_level }}</p>
     </footer>
   </div>

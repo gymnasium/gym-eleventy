@@ -3,6 +3,7 @@
 // | -------------------------------------------------------------
 
 @use 'shared';
+@use 'components/webfonts_absolute';
 
 @use 'theme/containers';
 
@@ -11,3 +12,5 @@
 
 // Instructor stuff
 @use 'theme/instructor';
+
+@use 'theme/view-in-course';

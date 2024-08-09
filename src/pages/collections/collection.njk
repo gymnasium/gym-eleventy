@@ -65,21 +65,4 @@ TODO:
   {%- include 'modules/featured/smart-cards.njk' -%}
 {%- endif -%}
 
-{%- if content -%}
-  {%- for key, section in content -%}
-    {%- set section_id = key -%}
-    {%- if section.html_id -%}
-      {%- set section_id = section.html_id -%}
-    {%- endif -%}
-    <section id="{{ section_id }}" class="{{ key }}">
-      {# Load modules! #}
-      {# Let's rename sections to modules, so we can keep track of what we're dealing with #}
-      {%- set module = section -%}
-      {%- set module_type = section.module_type -%}
-      {%- include 'modules/' + section.module + '.njk' -%}
-    </section>
-    <div class="back-to">
-      <p><a href="#main">Back to top</a></p>
-    </div>
-  {%- endfor -%}
-{%- endif -%}
+{%- include 'modules/loader.njk' -%}

@@ -35,10 +35,12 @@ article.home-hero {
   padding-top: rem-calc(44);
   padding-bottom: rem-calc(68);
 
-  @include breakpoint(large, min) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 2rem;
+  .container {
+    @include breakpoint(large, min) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 2rem;
+    }
   }
 
   .subhead {

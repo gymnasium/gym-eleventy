@@ -8,11 +8,39 @@
 
 .collection {
   main {
+    .container {
+      > header,
+      section:first-child > header {
+        h1 {
+          font-size: rem-calc(36);
+          text-rendering: auto;
+        }
+
+        p {
+          font-size: rem-calc(20);
+        }
+      }
+    }
+
     section:not(.featured) {
       background-color: var(--mono-100);
       padding: 1.4rem;
       border: 1px solid var(--mono-400);
+      border-radius: 3px;
       margin-top: 1rem;
+
+      header:not(.course-card header) {
+        border-bottom: 1px solid var(--mono-300);
+
+        & ~ div:not(:only-of-type) {
+          margin-top: 1.4rem;
+        }
+
+        h3 {
+          font-size: 1.4rem;
+          font-weight: 900;
+        }
+      }
 
       > header {
         padding-bottom: 1.4rem;
@@ -20,21 +48,47 @@
         margin-bottom: 1.4rem;
       }
 
-      h2 {
+      h2,
+      &.jobs h1 {
+        font-size: 1.8rem;
         line-height: 1.15;
         text-transform: uppercase;
       }
 
-      p,
-      li {
-        font-size: 1.3125rem;
+      h2:only-child {
+        margin-bottom: 0;
+      }
+
+      p {
+        font-size: 1.09375rem;
+
+        &:not(p + p):not(p[class]:first-child):not(footer p) {
+          margin-top: 0.6rem;
+        }
+      }
+
+      ul {
+        li {
+          font-size: 1.3125rem;
+
+          &:not(main .jobs li):not(.courses li):not(.tutorials li):not(.webinars li):not(.design-systems li) {
+            padding-bottom: 1.2rem;
+            border-bottom: 1px dashed var(--mono-300);
+            margin-top: 1.2rem;
+          }
+
+          cite {
+            font-style: normal;
+            font-weight: bold;
+          }
+        }
       }
 
       .artwork {
         border: 1px solid var(--mono-300);
       }
 
-      .cta {
+      .cta:not(.course-card .cta) {
         text-align: center;
         padding-top: 1.4rem;
         border-top: 1px solid var(--mono-300);
@@ -42,6 +96,25 @@
       }
     }
 
+    // TODO: Update job module text?
+
+    .jobs h1:not(.jobs .jobs h1):after {
+      content: " Jobs";
+    }
+
+    .jobs:not(body.jobs) {
+
+      h1 {
+        margin-bottom: 0;
+      }
+
+      p {
+        display: none;
+      }
+
+    }
+
+    .featured,
     .courses,
     .tutorials,
     .webinars {
@@ -49,16 +122,25 @@
       ul {
         display: grid;
         gap: 1.4rem;
+
+        li {
+          margin-top: 0;
+        }
       }
 
       h3 {
         font-family: var(--font-family-default);
-        font-size: 1.375rem;
+        font-size: 1.4rem;
         line-height: 1.35;
         margin-bottom: 0;
       }
 
-      .artwork + h3 {
+    }
+
+    .tutorials,
+    .webinars {
+
+      figure + h3 {
         margin-top: 0.6rem;
       }
 
@@ -67,7 +149,10 @@
     .courses {
 
       ul {
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+        @include breakpoint(medium, min) {
+          grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        }
 
         li {
           display: inherit;
@@ -86,6 +171,25 @@
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       }
 
+      > div:not(header + div) {
+        border-top: 1px solid var(--mono-300);
+        padding-top: 1.2rem;
+      }
+
+      header {
+        padding-bottom: 1.2rem;
+        border-bottom: 1px dashed var(--mono-300);
+        margin-bottom: 1.2rem;
+
+        h3 {
+          font-family: var(--font-family-custom);
+          font-weight: 900;
+          font-size: 1.55;
+          text-transform: uppercase;
+        }
+
+      }
+
     }
 
     .webinars {
@@ -94,51 +198,98 @@
         height: 0;
         padding-bottom: 62.5%;
         overflow: hidden;
-
-        img {
-          margin-top: -6%;
-        }
       }
 
-    }
-
-    .articles {
-      header {
-        border-bottom: 1px solid var(--mono-300);
-
-        &:not(#articles > header:first-child):not(#articles > [class]:first-child header) {
-          margin-top: 1.6rem;
-        }
-
-        h3 {
-          font-size: 1.375rem;
-          font-weight: 900;
-        }
-      }
-      ul {
-        li {
-          padding-bottom: 1.2rem;
-          border-bottom: 1px dashed var(--mono-300);
-          margin-top: 1.2rem;
-
-          cite {
-            font-style: normal;
-            font-weight: bold;
-          }
-        }
-      }
     }
   }
 
-  // TODO: style the collections featured section
+  // Collections featured section
+
   .featured {
+    margin: 1.4rem 0 1.8rem;
+
     ul {
 
-      @include breakpoint(large, min) {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 2rem;
+      @include breakpoint(medium, min) {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       }
+
+    }
+
+    article {
+      display: grid;
+      grid-auto-rows: 1fr auto;
+      height: 100%;
+
+      > div {
+        display: inherit;
+        grid-template-rows: auto auto 1fr auto;
+        background-color: var(--mono-100);
+        padding: 1.4rem;
+        border: 1px solid var(--mono-400);
+        border-radius: 3px;
+      }
+
+      .topic {
+        font: 900 1.8rem/1 var(--font-family-custom);
+        text-transform: uppercase;
+        letter-spacing: 0.0125ex;
+        word-spacing: 0.25ex;
+
+        b {
+          font: inherit;
+        }
+      }
+
+      figure {
+        position: relative;
+        height: 0;
+        padding-bottom: 63.875%;
+        margin: 1.4rem -1.4rem 1.2rem;
+        overflow: hidden;
+
+        &[style*="courses"] {
+          background: var(--mono-400) no-repeat left center;
+          background-size: cover;
+          border-image: 1 / 0 100% stretch;
+        }
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-top: 1px solid var(--mono-300);
+          border-bottom: 1px solid var(--mono-300);
+        }
+      }
+
+      h3 {
+        font-family: var(--font-family-custom);
+        font-weight: 900;
+        font-size: 1.55;
+        text-transform: uppercase;
+        text-wrap: balance;
+      }
+
+      .cta {
+        margin-top: 1.4rem;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 1rem;
+      }
+
     }
   }
+}
+
+// TODO: Update/move style rules
+
+#jobs {
+
+  #error-results {
+    margin-top: 1.4rem;
+  }
+
 }
