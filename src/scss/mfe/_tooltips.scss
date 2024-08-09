@@ -3,22 +3,22 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
-$color_1: #fff;
-$color_2: #000;
+$color_1: var(--mono-100);
+$color_2: var(--mono-900);
 $font-family_1: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
   Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
   Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-$background-color_1: #000;
-$background-color_2: #fff;
-$border-color_1: #0000;
-$border-top-color_1: #000;
-$border-top-color_2: #fff;
-$border-right-color_1: #000;
-$border-right-color_2: #fff;
-$border-bottom-color_1: #000;
-$border-bottom-color_2: #fff;
-$border-left-color_1: #000;
-$border-left-color_2: #fff;
+$background-color_1: var(--mono-900);
+$background-color_2: var(--mono-100);
+$border-color_1: var(--mono-1000);
+$border-top-color_1: var(--mono-900);
+$border-top-color_2: var(--mono-100);
+$border-right-color_1: var(--mono-900);
+$border-right-color_2: var(--mono-100);
+$border-bottom-color_1: var(--mono-900);
+$border-bottom-color_2: var(--mono-100);
+$border-left-color_1: var(--mono-900);
+$border-left-color_2: var(--mono-100);
 
 .tooltip {
   word-wrap: break-word;

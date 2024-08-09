@@ -1,13 +1,14 @@
 id: GYM-102
 title: "jQuery Building Blocks"
 date: 2019-10-28T00:00:00-04:00
+color: purple
 type: full
 tags:
   - course
   - full
   - full-course
 live: true
-url: /courses/GYM/102/0/about
+url: /courses/course-v1:GYM+102+0/about
 img: /img/courses/svg/gym-102.svg
 topic: "Development"
 subtopics:

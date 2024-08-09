@@ -5,7 +5,15 @@
 
 // Course Header below 2ndary nav in MFEs
 .course-header {
+  background-color: var(--mono-600);
+  padding: 1rem 0;
+
   span {
     display: inline-block;
+    font-weight: bold;
+
+    &:first-of-type {
+      margin-right: 1rem !important;
+    }
   }
 }

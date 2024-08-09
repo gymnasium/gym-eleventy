@@ -4,12 +4,24 @@ meta:
   topic: "UX"
   description: "User experience can make or break a website. Let’s put yours to the test."
   slug: ux-design
+  color: teal
   order: 3
+
+header:
+  header_id: # default is null
+  header_class: # default is null
+  heading_type: h1 # h1-h6, default is h2
+  heading_class: # default is caps
+  heading_id: # default is null
+  heading: UX Design
+  description: |
+    <p>Gymnasium offers free online <span class="no-wrap">UX <a href="#courses"><b>courses</b></a></span>, <a href="#tutorials"><b>tutorials</b></a>, <a href="#webinars"><b>webinars</b></a>, <a href="#articles"><b>articles</b></a>, and <a href="#jobs"><b><span class="visually-hidden">UX</span> jobs</b></a> through Aquent.</p>
 
 courses:
   module: lists/image-course
-  heading: "UX Courses"
-  description: Learn UX design with industry experts from Capital One to <cite>The New York Times</cite>.
+  header:
+    heading: "UX Courses"
+    description: Learn UX design with industry experts from Capital One to <cite>The New York Times</cite>.
   cta:
     href: /courses/
     label: View More Courses
@@ -23,8 +35,9 @@ courses:
 
 tutorials:
   module: lists/image-course
-  heading: "UX Tutorials"
-  description: Learn a new UX skill in 5 minutes.
+  header:
+    heading: "UX Tutorials"
+    description: Learn a new UX skill in 5 minutes.
   cta:
     href: /courses/take5/
     label: View More Tutorials
@@ -39,25 +52,27 @@ tutorials:
 
 webinars:
   module: lists/image-course
-  heading: UX Webinars
-  description: Insightful conversations with trailblazers in the web community.
+  header:
+    heading: UX Webinars
+    description: Insightful conversations with trailblazers in the web community.
   cta:
     href: /webinars/
     label: View More Webinars
     class: btn
   ux-webinars:
     ids:
-    - id: web0013
-    - id: web0011
-    - id: web0010
-    - id: web0003
-    - id: web0002
-    - id: web0001
+    - id: web-0013
+    - id: web-0011
+    - id: web-0010
+    - id: web-0003
+    - id: web-0002
+    - id: web-0001
 
 articles:
   module: lists/default
-  ux:
+  header:
     heading: "UX Articles"
+  ux:
     links:
     - href: "https://medium.com/gymnasium/from-filler-to-matter-wireframes-and-prototypes-in-ux-design-a73b0c0c27cd"
       label: "From Filler to Matter: Wireframes and Prototypes in UX Design"
@@ -76,4 +91,7 @@ articles:
 
 jobs:
   module: jobs
+  roles:
+    - ui-web-design
+    # - user-experience
   heading: UX Jobs

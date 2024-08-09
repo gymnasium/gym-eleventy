@@ -1,6 +1,7 @@
 id: GYM-007
 title: "Structuring and Organizing HTML5 Forms"
 date: 2019-10-28T00:00:00-04:00
+color: magenta
 type: short
 tags:
   - course
@@ -8,7 +9,7 @@ tags:
   - short
   - short-course
 live: true
-url: /courses/GYM/007/0/about
+url: /courses/course-v1:GYM+007+0/about
 img: /img/courses/svg/gym-007.svg
 topic: "Development"
 description: "Learn some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes."

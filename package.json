@@ -12,9 +12,9 @@
   "main": "index.js",
   "scripts": {
     "dotenvx": "dotenvx",
-    "dev": "dotenvx run --env-file=.env.development -- npm run start",
-    "dev:tutor": "dotenvx run --env-file=.env.dev-tutor -- npx netlify dev",
-    "local:tutor": "dotenvx run --env-file=.env.local-tutor -- npx netlify dev",
+    "dev": "dotenvx run -f .env.development -- npm run start",
+    "dev:tutor": "dotenvx run -f .env.dev-tutor -- npx netlify dev",
+    "local:tutor": "dotenvx run -f .env.local-tutor -- npx netlify dev",
     "start": "dotenvx run -- npx @11ty/eleventy --serve --watch",
     "build": "NODE_ENV=production ELEVENTY_ENV=production dotenvx run --  npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,32 +23,35 @@
   "author": "",
   "license": "ISC",
   "overrides": {
-    "@11ty/eleventy-img": {
-      "sharp": "^0.33.3"
-    },
     "netlify-cli": {
       "follow-redirects": "^1.15.5",
-      "word-wrap": "^1.2.5"
+      "word-wrap": "^1.2.5",
+      "braces": ">=3.0.3"
     }
   },
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-fetch": "^4.0.0",
-    "@11ty/eleventy-img": "^3.1.8",
+    "@11ty/eleventy-img": "^4.0.0",
     "@11ty/is-land": "^4.0.0",
-    "@dotenvx/dotenvx": "^0.29.2",
+    "@dotenvx/dotenvx": "^1.0.0",
+    "braces": ">=3.0.3",
     "eleventy-plugin-clean": "github:kentaroi/eleventy-plugin-clean#v1.2.6",
-    "eleventy-plugin-rev": "^1.1.1",
-    "eleventy-sass": "^2.2.1",
+    "eleventy-plugin-rev": "^2.0.0",
+    "eleventy-sass": "^2.2.4",
     "js-yaml": "^4.1.0",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-attrs": "^4.1.6",
     "markdown-it-eleventy-img": "^0.10.1",
-    "netlify-cli": "^17.21.2",
+    "netlify-cli": "^17.29.0",
     "netlify-plugin-cache": "^1.0.3",
     "rss-parser": "^3.13.0"
   },
+  "devDependencies": {
+    "braces": ">=3.0.3",
+    "chokidar": ">=3.6.0"
+  },
   "optionalDependencies": {
-    "sharp": "^0.33.3"
+    "sharp": "^0.33.4"
   }
 }

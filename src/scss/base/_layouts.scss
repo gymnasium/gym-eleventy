@@ -2,11 +2,151 @@
 // | Layouts
 // | -------------------------------------------------------------
 
-@use 'breakpoints' as *;
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
 
-// TODO: consider better/different naming conventions
-.layout-1fr-2fr {
+// good for headers
+.grid-col-1-2 {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-gap: 2.6em;
+  grid-gap: 2rem;
+}
+
+// 
+.grid-sidebar {
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    "content"
+    "sidebar";
+
+  @media (min-width: 52em) {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "content sidebar"
+  }
+
+  .content {
+    grid-area: content;
+    padding-top: 1rem;
+
+    @media (min-width: 52em) {
+      border-right: 1px dashed #ccc;
+      padding-right: 1rem;
+    }
+  }
+
+  aside {
+    grid-area: sidebar;
+    padding-top: 1rem;
+  }
+}
+
+.color-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  background-color: var(--mono-900);
+  border-top: 1rem solid var(--mono-500);
+
+  &.magenta {
+    border-top-color: var(--magenta-500);
+  }
+
+  &.purple {
+    border-top-color: var(--purple-500);
+  }
+
+  &.teal {
+    border-top-color: var(--teal-500);
+  }
+
+  &.green {
+    border-top-color: var(--green-500);
+  }
+
+  &.orange {
+    border-top-color: var(--secondary-500);
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: rem-calc(30);
+    line-height: 1;
+  }
+
+  .main {
+    padding: 1.2rem 1.2rem 0;
+
+    header {
+      max-width: 18.25rem;
+
+      .title {
+        color: var(--mono-100);
+        line-height: 1.15;
+        letter-spacing: 0.05ex;
+        word-spacing: 0.05ex;
+        text-wrap: balance;
+      }
+
+      .topic {
+        font-size: 1rem;
+        line-height: 1;
+        color: var(--mono-400);
+        letter-spacing: 0.15rem;
+        margin-top: rem-calc(-1);
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    .subhead {
+      display: block;
+      max-width: 24rem;
+      font-weight: 700;
+      font-size: 1.0625rem;
+      line-height: 1.25;
+      color: var(--mono-100);
+      letter-spacing: 0.1ex;
+      word-spacing: 0.1ex;
+      margin-top: 0.6rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: var(--mono-300);
+    }
+  }
+
+  // --- cta ---
+
+  .cta {
+    color: var(--mono-100);
+    padding: 1.2em;
+
+    p {
+      font-size: 1rem;
+      margin-top: 0;
+    }
+  }
+}
+
+// defined in mixins (used in collections/webinars)
+@include card-grid();
+
+// intro section for collections/webinars
+// TODO: consider renaming?
+.intro,
+.intro-about {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+
+  h1 {
+    font-size: rem-calc(36);
+    text-rendering: auto;
+  }
+
+  p {
+    font-size: rem-calc(20);
+  }
 }

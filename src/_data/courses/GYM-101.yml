@@ -1,6 +1,7 @@
 id: GYM-101
 title: "Responsive Web Design"
 date: 2022-05-27T00:00:00-04:00
+color: grey
 type: full
 tags:
   - course
@@ -10,7 +11,7 @@ live: false
 sitemapExclude: true
 retired_message:
   1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a certificate for this course, but you can still view the lessons. <span class='text-wrap'>We recommend taking the course <a href='/courses/course-v1:GYM+109+0/about'>Responsive Web Design Fundamentals</a> (and earning a certificate) instead.</span>"
-url: /courses/GYM/101/0/about
+url: /courses/course-v1:GYM+101+0/about
 img: /img/courses/svg/gym-101.svg
 topic: "Development"
 description: "This course has been retired."

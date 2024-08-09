@@ -100,6 +100,14 @@ dd {
 }
 
 embed,
+img,
+object,
+svg,
+video {
+  height: auto;
+}
+
+embed,
 iframe,
 img,
 object,
@@ -108,7 +116,6 @@ video {
   display: inline-block;
   width: auto;
   max-width: 100%;
-  height: auto;
   vertical-align: middle;
 }
 

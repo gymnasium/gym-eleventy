@@ -1,6 +1,7 @@
 id: GYM-109
 title: "Responsive Web Design Fundamentals"
 date: 2019-10-28T00:00:00-04:00
+color: magenta
 type: full
 tags:
   - course
@@ -43,7 +44,7 @@ outline:
 - label: "Lesson 6: Performance"
   description: "Learn why website performance is one of the most important elements of the design process, especially for users in mobile and/or low-bandwidth scenarios. You’ll learn which tools are useful for testing your sites and walk through a number of exercises involving the optimization of our sample site. Specifically, you’ll learn when a Content Delivery Network (CDN) makes sense. You’ll also learn recent techniques involving inline CSS and JavaScript configurations that can cut page-load time dramatically for your users."
 prerequisites:
-  - label: Familiarity with the concepts covered in our <a href="/courses/GYM/107/0/about" target="_blank" rel="noopener">Modern Web Design</a> course (or the equivalent).
+  - label: Familiarity with the concepts covered in our <a href="/courses/course-v1:GYM+107+0/about" target="_blank" rel="noopener">Modern Web Design</a> course (or the equivalent).
   - label: Basic understanding of how to use browser developer tools.
 requirements:
   - label: Mac or Windows desktop or laptop

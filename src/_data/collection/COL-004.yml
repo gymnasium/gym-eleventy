@@ -4,32 +4,57 @@ meta:
   topic: "Accessibility"
   description: "No matter what your title is, creating an inclusive web is everyone’s job."
   slug: accessibility
+  color: magenta
   order: 5
 
+header:
+  header_id: # default is null
+  header_class: # default is null
+  heading_type: h1 # h1-h6, default is h2
+  heading_class: # default is caps
+  heading_id: # default is null
+  heading: Accessibility
+  description: |
+    <p>Explore our free collection of accessibility <a href="#courses"><b>courses</b></a>, <a href="#tutorials"><b>tutorials</b></a>, <a href="#webinars"><b>webinars</b></a>, <a href="#articles"><b>articles</b></a>, <a href="#resources"><b>resources</b></a>, and <a href="#services"><b>services</b></a>.</p>
+
 courses:
-  module: lists/default
-  heading: "Accessibility Courses"
+  module: lists/image-course
+  header:
+    heading: "Accessibility Courses"
+  cta:
+    href: /courses/
+    label: View More Courses
+    class: btn
   accessibility-courses:
     ids:
     - id: GYM-016
     - id: GYM-007
 
 tutorials:
-  module: lists/default
-  heading: "Accessibility Tutorials"
+  module: lists/image-course
+  header:
+    heading: "Accessibility Tutorials"
+  cta:
+    href: /courses/take5/
+    label: View More Tutorials
+    class: btn
   live-coding:
-    heading: "Live Coding"
-    description: Learn how to improve your website through accessibility testing in the time it takes to step away for lunch.
+    header:
+      heading: "Live Coding"
+      heading_type: h3
+      description: Learn how to improve your website through accessibility testing in the time it takes to step away for lunch.
     links:
-    - href: https://youtu.be/B1y5aNsVVLQ"
+    - href: https://www.youtube.com/watch?v=B1y5aNsVVLQ"
       label: How to Improve Your Website Through Accessibility Testing (Part 1)
       description: In this live coding tutorial, you’ll learn how you can use the free Web Accessibility Evaluation Tool (WAVE) to perform a series of automated tests to improve the accessibility of a website.
-    - href: https://youtu.be/NnsT90GVAVw"
+    - href: https://www.youtube.com/watch?v=NnsT90GVAVw"
       label: How to Improve Your Website Through Accessibility Testing (Part 2)
       description: In this live coding tutorial, you’ll learn four common techniques for manually checking (and then fixing) accessibility issues on your websites.
   take-5:
-    heading: "Take 5"
-    description: Learn how you can help make a more inclusive web in just 5 minutes.
+    header:
+      heading: "Take 5"
+      heading_type: h3
+      description: Learn how you can help make a more inclusive web in just 5 minutes.
     ids:
     - id: GYM-5032
     - id: GYM-5036
@@ -39,7 +64,12 @@ tutorials:
 
 webinars:
   module: lists/default
-  heading: "Accessibility Webinars"
+  header:
+    heading: "Accessibility Webinars"
+  cta:
+    href: /webinars/
+    label: View More Webinars
+    class: btn
   accessibility-webinars:
     links:
     - href: https://aquenttalent.com/events/why-digital-accessibility-and-inclusive-design-matters"
@@ -48,8 +78,9 @@ webinars:
 
 articles:
   module: lists/default
-  accessibility:
+  header:
     heading: "Accessibility Articles"
+  accessibility:
     links:
     - href: https://medium.com/gymnasium/advocating-for-accessibility-with-aaron-gustafson-54079c132152
       label: "Advocating for Accessibility with Aaron Gustafson"
@@ -69,11 +100,14 @@ articles:
 
 resources:
   module: lists/default
-  heading: Accessibility Resources
-  description: All the basics and tools to get started with accessibility.
+  header:
+    heading: Accessibility Resources
+    description: All the basics and tools to get started with accessibility.
 
   basics:
-    heading: "Learning the Basics"
+    header:
+      heading: "Learning the Basics"
+      heading_type: h3
     links:
     - href: https://brand.aquent.com/Accessibility?utm_source=partner&amp;utm_medium=web&amp;utm_campaign=AQ_UK_gymnasium&amp;utm_content=2021
       label: How to Get Started with Digital Accessibility
@@ -84,8 +118,11 @@ resources:
       label: The Beginner’s Guide to Web Accessibility
     - href: https://developer.mozilla.org/en-US/docs/Learn/Accessibility
       label: Accessibility for Web Developers
+
   guides:
-    heading: "In-Depth Guides"
+    header:
+      heading: "In-Depth Guides"
+      heading_type: h3
     links:
     - href: https://universaldesign.ie/communications-digital/web-and-mobile-accessibility/web-accessibility-techniques/content-providers-introduction-and-index
       label: Guidelines for Content Providers and Editors
@@ -97,10 +134,13 @@ resources:
       label: 18F Accessibility Guide
     - href: https://www.a11yproject.com
       label: The A11Y Project
+
   tools:
-    heading: Tools for Testing
+    header:
+      heading: Tools for Testing
+      heading_type: h3
     links:
-    - href: https://www.solidstart.info"
+    - href: https://www.solidstart.info
       label: Accessibility Tools for Everyone
     - href: https://a11y.me/#tools"
       label: Accessibility Tools for Designers and Developers
@@ -109,8 +149,9 @@ resources:
 
 services:
   module: lists/default
-  heading: Accessibility Services
-  description: Explore people, projects, and training that deliver truly inclusive experiences from <a href="https://aquent.com" target="_blank" rel="noopener">Aquent</a>.
+  header:
+    heading: Accessibility Services
+    description: Explore people, projects, and training that deliver truly inclusive experiences from <a href="https://aquent.com" target="_blank" rel="noopener">Aquent</a>.
   accessibility-services:
     links:
     - href: https://aquenttalent.com/services/talent-recruiting

@@ -1,6 +1,7 @@
 id: GYM-006
 title: "Introduction to Git and GitHub"
 date: 2019-10-28T00:00:00-04:00
+color: green
 type: short
 tags:
   - course
@@ -8,7 +9,7 @@ tags:
   - short
   - short-course
 live: true
-url: /courses/GYM/006/0/about
+url: /courses/course-v1:GYM+006+0/about
 img: /img/courses/svg/gym-006.svg
 topic: "Development"
 description: "Learn the basics of version control and get a high-level overview of both Git and GitHub. Perfect for someone with little to no first-hand experience with either."

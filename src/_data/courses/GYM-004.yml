@@ -1,6 +1,7 @@
 id: GYM-004
 title: "Creating A WordPress Theme"
 date: 2019-10-28T00:00:00-04:00
+color: magenta
 type: short
 tags:
   - course
@@ -8,7 +9,7 @@ tags:
   - short
   - short-course
 live: true
-url: /courses/GYM/004/0/about
+url: /courses/course-v1:GYM+004+0/about
 img: /img/courses/svg/gym-004.svg
 topic: "Development"
 description: "Learn how to convert your HTML/CSS design into a WordPress website. Discover how to set up a local development environment and add WordPress tags to your design."

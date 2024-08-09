@@ -1,13 +1,14 @@
 id: GYM-103
 title: "UX Fundamentals"
 date: 2019-10-28T00:00:00-04:00
+color: teal
 type: full
 tags:
   - course
   - full
   - full-course
 live: true
-url: /courses/GYM/103/0/about
+url: /courses/course-v1:GYM+103+0/about
 img: /img/courses/svg/gym-103.svg
 topic_featured: true
 topic: "UX"

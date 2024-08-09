@@ -1,6 +1,7 @@
 id: GYM-009
 title: "Creating A Drupal 8 Theme"
 date: 2019-10-28T00:00:00-04:00
+color: magenta
 type: short
 tags:
   - course
@@ -8,7 +9,7 @@ tags:
   - short
   - short-course
 live: true
-url: /courses/GYM/009/0/about
+url: /courses/course-v1:GYM+009+0/about
 img: /img/courses/svg/gym-009.svg
 topic: "Development"
 description: "Learn how to create Drupal 8 themes, set up a local development environment, and customize theme structure and style with the TWIG templating engine."

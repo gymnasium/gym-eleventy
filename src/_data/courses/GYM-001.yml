@@ -1,13 +1,14 @@
 id: GYM-001
 title: "Defeating Busy"
 date: 2019-10-28T00:00:00-04:00
+color: green
 type: short
 tags:
   - course
   - gym-short
   - short
   - short-course
-url: /courses/GYM/001/0/about
+url: /courses/course-v1:GYM+001+0/about
 img: /img/courses/svg/gym-001.svg
 live: true
 topic: "Career Skills"

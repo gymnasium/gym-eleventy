@@ -23,8 +23,8 @@ Please use the following strings instead of directly coding domain names:
           {%- for link in links -%}
           <li>
             <a href="{{ link.href }}"
-              {%- if link.target -%} target="{{ link.target }}"{%- endif -%}
-              {%- if link.rel -%} rel="{{ link.rel }}"{%- endif -%}>
+              {%- if link.target %} target="{{ link.target }}"{%- endif -%}
+              {%- if link.rel %} rel="{{ link.rel }}"{%- endif -%}>
               {%- if link.src -%}
                 {%- set img_base_path = config.urls.root + config.paths.img.footer.icons -%}
                 <img alt="{{ link.alt }}" src="{{ img_base_path }}{{ link.src }}" srcset="{{ img_base_path }}{{ link.srcset }}"{% for key, val in item.img.attr %} {{ key }}="{{ val }}"{% endfor -%}>

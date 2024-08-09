@@ -2,65 +2,103 @@ home:
   hero:
     livestreams: level-up-job-search
   featured:
-    heading: Featured Courses
-    description: "Design a career you love with free online courses on design, development, UX, accessibility, and career skills."
+    header:
+      heading: Featured Courses
+      description: 
     wrapper_class: home
     cta:
+      description: "Design a career you love with free online courses on design, development, UX, accessibility, and career skills."
       href: /courses/
       label: View all Courses
       class: btn
     items:
-    - gym-109
-    - gym-105
-    - gym-016
-
+    - id: GYM-017
+    - id: GYM-018
+    - id: GYM-019
+    - id: GYM-020
 catalog:
   full:
-  - gym-107
+  - GYM-107
   short:
-  - gym-017
+  - GYM-017
   tutorial:
-  - gym-5054
+  - GYM-5054
   collection:
   - design-systems
 
 popular:
   full:
-  - gym-107
-  - gym-104
-  - gym-103
+  - GYM-107
+  - GYM-104
+  - GYM-103
   short:
     heading: Featured
     description:
     wrapper_class: courses
     items:
-    - gym-018
-    - gym-016
-    - gym-015
+    - GYM-018
+    - GYM-016
+    - GYM-015
 
 collection:
   design-systems:
-  - gym-018
-  - gym-019
-  - gym-020
-  - gym-017
+    items:
+    - id: GYM-018
+      type: course
+    - id: GYM-019
+      type: course
+    - id: GYM-020
+      type: course
+    - id: GYM-017
+      type: course
   development:
-  - gym-016
-  - gym-5005
-  - web0013
-  ux:
-  - gym-015
-  - gym-5008
-  - web0013
+    items:
+    - id: GYM-016
+      type: course
+    - id: GYM-5005
+      type: tutorial
+    - id: web-0013
+      type: webinar
+  ux-design:
+    items:
+    - id: GYM-015
+      type: course
+    - id: GYM-5008
+      type: tutorial
+    - id: web-0013
+      type: webinar
   prototyping:
-  - gym-015
-  - gym-5012
-  - web0011
+    items:
+    - id: GYM-015
+      type: course
+    - id: GYM-5012
+      type: tutorial
+    - id: web-0011
+      type: webinar
   accessibility:
-  - gym-016
-  - (direct link to youtube video?)
-  - (direct link to medium article)
+    items:
+    - id: GYM-016
+      type: course
+      cta_text: Enroll for Free
+    - link: https://youtu.be/B1y5aNsVVLQ
+      type: tutorial
+      title: Web Accessibility Testing Made Easy
+      # TODO: migrate image to a location that makes sense
+      img: https://thegymcms.com/img/hub-pages/accessibility/featured/acessibility-testing-pt1-poster.jpg
+      cta_text: Watch Now
+    - link: https://medium.com/gymnasium/advocating-for-accessibility-with-aaron-gustafson-54079c132152
+      type: article
+      title: Advocating for Accessibility with Aaron Gustafson
+      img: /img/hero/articles/advocating-for-accessibility/advocating-for-accessibility-1280w.png
+      cta_text: Learn More
   career-skills:
-  - gym-017
-  - gym-5052
-  - (direct link to medium article)
+    items:
+    - id: GYM-017
+      type: course
+    - id: GYM-5052
+      type: tutorial
+    - link: https://medium.com/gymnasium/improving-your-portfolio-is-easier-than-you-think-b1430bbe1007
+      title: Improving Your Portfolio is Easier Than You Think
+      type: article
+      # TODO: migrate image to a location that makes sense
+      img: https://thegymcms.com/img/hub-pages/articles/featured/improving-your-portfolio.png

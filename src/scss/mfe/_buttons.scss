@@ -35,8 +35,8 @@
 }
 
 // Close button mess copied from authn
-$color_1: #000;
-$background-color_1: #0000;
+$color_1: var(--mono-900);
+$background-color_1: var(--mono-1000);
 
 .close {
   color: $color_1;
@@ -44,7 +44,7 @@ $background-color_1: #0000;
   font-weight: 700;
   line-height: 1;
   opacity: 0.5;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 0 var(--mono-100);
   float: right;
   &:hover {
     color: $color_1;

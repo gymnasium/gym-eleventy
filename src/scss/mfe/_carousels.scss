@@ -3,8 +3,8 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
-$color_1: #fff;
-$background-color_1: #fff;
+$color_1: var(--mono-100);
+$background-color_1: var(--mono-100);
 
 .carousel {
   position: relative;
@@ -185,8 +185,8 @@ $background-color_1: #fff;
   li {
     background-clip: padding-box;
     background-color: $background-color_1;
-    border-bottom: 10px solid #0000;
-    border-top: 10px solid #0000;
+    border-bottom: 10px solid var(--mono-1000);
+    border-top: 10px solid var(--mono-1000);
     box-sizing: initial;
     cursor: pointer;
     flex: 0 1 auto;

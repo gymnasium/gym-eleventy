@@ -45,12 +45,12 @@
   {%- endset -%}
 {%- endif -%}
 
-<article id="{{ item.id | slugify }}" class="tutorial-detail bg-mono-100 full-bleed">
+<article id="{{ item.id | slugify }}" class="courses tutorial-detail bg-mono-100 full-bleed">
 
 <header>
   <hgroup>
     <p class="topic"><b>{{ item.topic }}</b></p>
-    <h2 class="title">{{ item.title }}</h2>
+    <h1 class="title">{{ item.title }}</h1>
     <p class="instructor">{{ instructor_blurb | safe }}</p>
   </hgroup>
   <p class="description">{{ item.description }}</p>
@@ -68,22 +68,20 @@
 <details class="resources" id="tutorial-transcript">
   <summary class="gym-summary-link" aria-expanded="true/false" tabindex="0" role="button"><span>Video Transcript</span></summary>
   <article class="transcript" id="{{ item.id }}-transcript">
-    <header class="visuallyhidden">
+    <header class="visually-hidden">
       <h2>{{ item.title }}</h2>
       <p>{{ instructor_blurb }}</p>
     </header>
 
-  {% renderFile transcript, "njk" %}
+    {% renderFile transcript, "njk" %}
 
-    <footer class="back-to">
-      <p><a href="#main">Back to Tutorial</a></p>
-    </footer>
+    {%- back_to 'footer', 'main', 'Back to Tutorial' -%}
   </article>
 </details>
 {%- endif -%}
 
 {%- if item.project_files or item.related_content -%}
-<section class="resources" id="tutorial-resources">
+<aside class="resources" id="tutorial-resources">
   <h3>Resources</h3>
   {%- if item.project_files -%}
   <div class="project-files">
@@ -119,7 +117,7 @@
     </ul>
   </div>
   {%- endif -%}
-</section>
+</aside>
 {%- endif -%}
 
 {# TODO: probably don't need this here, but I put it here as a reference of how
@@ -141,7 +139,5 @@ to accomplish this. #}
 {%- endif -%}
  -->
 
-  <footer class="back-to">
-    <p><a href="#main">Back to Tutorial</a></p>
-  </footer>
+  {%- back_to 'footer', 'main', 'Back to Tutorial' -%}
 </article>

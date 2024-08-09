@@ -1,27 +1,16 @@
 {%- if module -%}
-  {%- if module.heading -%}
-    <header>
-      <h2 class="caps">{{ module.heading }}</h2>
-      {%- if module.description -%}
-      <p>{{ module.description | safe }}</p>
-    </header>
-    {%- endif -%}
+  {%- if module.header -%}
+    {%- set header = module.header -%}
+    {%- include 'modules/components/header.njk' -%}
   {%- endif -%}
-  {%- set filtered = module | omit(['module', 'heading', 'description', 'schema', 'cta']) -%}
-  {%- for id, item in filtered -%}
-    <div class="{{ id }}">
-      {%- if module.heading -%}
-        <header>
-          <h3 class="caps">{{ item.heading }}</h3>
-        </header>
-      {%- else -%}
-        <h2 class="caps">{{ item.heading }}</h2>
+  {%- set filtered = module | omit(['section_id', 'section_class', 'module', 'header', 'description', 'schema', 'cta']) -%}
+  {%- for key, item in filtered -%}
+    <div id="{{ key }}" class="{{ key }}">
+      {%- if item.header -%}
+        {%- set header = item.header -%}
+        {%- include 'modules/components/header.njk' -%}
       {%- endif -%}
-
-      {%- if item.description -%}
-        <p>{{ item.description | safe }}</p>
-      {%- endif -%}
-
+      
       {# Include a schema block #}
       {%- if (item.schema and item.ids) -%}
         {% block schema %}

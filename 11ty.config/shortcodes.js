@@ -27,8 +27,23 @@ module.exports = eleventyConfig => {
     `<h1>${title}</h1>
     <p>${subtitle}</p>`);
 
-  eleventyConfig.addShortcode('back_to_top', () => {
-    return `<footer class="back-to"><a href="#main">Back to top</a></footer>`
+  // back to top, accepts 3 arguments to customize wrapper markup, target id, and message
+  eleventyConfig.addShortcode('back_to', (element_type, target_id, msg) => {
+    let elem = 'div';
+    let target = 'main';
+    let text = 'Back to top';
+    if (element_type) {
+      elem = element_type;
+    }
+    if (target_id) {
+      // just in case a hash gets accidentally passed in, strip it
+      target = target_id.replace('#','');
+      target = target_id;
+    }
+    if (msg) {
+      text = msg;
+    }
+    return `<${elem} class="back-to"><p><a href="#${target}">${text}</a></p></${elem}>`;
   });
 
   eleventyConfig.addShortcode('external_link', (href, title, className) => {

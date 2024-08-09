@@ -1,8 +1,25 @@
+{%- set metaDescription = config.meta.description -%}
+{%- if meta.description -%}
+  {%- set metaDescription = meta.description -%}
+{%- endif -%}
+{%- set metaAuthor = config.meta.author -%}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ config.meta.title }}</title>
-<meta name="description" content="{% if meta.description %}{{ meta.description }}{% else %}{{ config.meta.description }}{% endif %}"/>
-<meta name="author" content="{{config.meta.author}}"/>
+<meta name="description" content="{{ metaDescription }}"/>
+<meta name="author" content="{{ metaAuthor }}"/>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="{{ metaAuthor }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@AquentGymnasium">
+<meta name="twitter:creator" content="@AquentGymnasium">
+<meta name="twitter:url" property="og:url" content="{{ config.urls.production }}">
+<meta name="twitter:title" property="og:title" content="{{ metaAuthor }}">
+<meta name="twitter:description" property="og:description" content="{{ metaDescription }}">
+<meta name="twitter:image" property="og:image" content="{{ config.urls.base_url }}/img/og/gym-brand.png">
+<meta name="twitter:image:alt" property="og:image:alt" content="{{ metaAuthor }}">
+<meta name="author" content="{{ metaAuthor }}">
 <meta name="generator" content="{{ eleventy.generator }}">
 {%- if meta.canonicalUrl -%}
 <link rel="canonical" href="{{ meta.canonicalUrl }}">

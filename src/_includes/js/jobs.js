@@ -103,11 +103,11 @@ function parseOptions(input, output) {
   });
 }
 
-window.addEventListener("load", () => {
+function gymJobs() {
   // add stuff here
   if (typeof jobsContainer !== "undefined" && jobsContainer !== null) {
     console.log("jobs.js active");
-    const endpoint = jobsContainer.getAttribute("data-feed");
+    let endpoint = jobsContainer.getAttribute("data-feed");
     var utms = jobsContainer.hasAttribute("data-utm")
       ? `?${jobsContainer.getAttribute("data-utm")}`
       : "";
@@ -127,6 +127,17 @@ window.addEventListener("load", () => {
       3: "Either",
       4: "Partial on-site",
     };
+
+    // Roles
+    // content-copywriting : Content/Copywriting
+    // creative-art-direction : Creative/Art Direction
+    // digital-marketing : Digital Marketing
+    // graphic-design : Graphic Design
+    // other : Other
+    // project-product-management : Project/Product Management
+    // ui-web-design : UI/Web Design
+    // user-experience : User Experience
+    // web-development : Web Development
 
     if (jobsContainer.hasAttribute("data-options")) {
       parseOptions(jobsContainer.getAttribute("data-options"), opts);
@@ -151,7 +162,7 @@ window.addEventListener("load", () => {
       .then((response) => response.json())
       .then((responseObj) => {
         let jobData = JSON.stringify(responseObj)
-        store('jobs', jobData);
+        // store('jobs', jobData);
         outputDebug(`[job module] fetching data from endpoint: ${endpoint}`);
         processData(jobData);
       })
@@ -165,30 +176,23 @@ window.addEventListener("load", () => {
       });
     }
 
-    function initializeJobs() {
-      // If we have jobs stored locally already in the browser session...
-      if (window.sessionStorage && sessionStorage.getItem("jobs")) {
-        try {
-          data = sessionStorage.getItem("jobs");
+    function initializeJobs(append) {
 
-          processData(data);
-          outputDebug("[job module] data from sessionStorage");
-        } catch (err) {
-          console.warn(
-            "[job module] error retrieving sessionStorage data.",
-            err
-          );
-        }
-      } else {
-        try {
+      try {
+        if (append) {
+          let updated_endpoint = `${endpoint}&locations[]=${append}`;
+          outputDebug(`[job module] updating endpoint: ${updated_endpoint}`);
+          fetchData(updated_endpoint);
+        } else {
           fetchData(endpoint);
-          outputDebug(`[job module] fetching JSONData.`);
-        } catch (err) {
-          console.warn(
-            "[job module] error storing/processing JSONData!",
-            err
-          );
         }
+
+        outputDebug(`[job module] fetching JSONData.`);
+      } catch (err) {
+        console.warn(
+          "[job module] error processing JSONData!",
+          err
+        );
       }
     }
 
@@ -260,9 +264,9 @@ window.addEventListener("load", () => {
         if (numResults > 0) {
           // Sort array by mod/post date properly, whichever is more recent
           items = items.sort((a, b) => {
-            const aModDate = new Date(a.modDate).getTime();
+            const aModDate = new Date(a.cloudwall_mod_date).getTime();
             const aPostDate = new Date(a.posted_date).getTime();
-            const bModDate = new Date(b.modDate).getTime();
+            const bModDate = new Date(b.cloudwall_mod_date).getTime();
             const bPostDate = new Date(b.posted_date).getTime();
 
             const compA = aModDate > aPostDate ? aModDate : aPostDate;
@@ -285,12 +289,13 @@ window.addEventListener("load", () => {
           for (var i = 0; i < limit; i++) {
             var el = items[i];
             var postDate = el.posted_date;
-            var modDate = el.modDate;
-            const jobUrl = `${window.JOB_URLS[el.country]}${el.job_id}`;
+            var modDate = el.cloudwall_mod_date;
+            const jobUrls = JSON.parse(jobsContainer.dataset.urls);
+            const jobUrl = `${jobUrls[el.country]}${el.job_id}`;
 
             outputDebug(
-              `[job module] job id: ${el.id}\n   remote type: ${
-                remoteLegend[el.remote]
+              `[job module] job id: ${el.job_id}\n   remote type: ${
+                remoteLegend[el.offsite_preference]
               }\n   posted: ${postDate}\n   mod date: ${modDate}`
             );
 
@@ -317,9 +322,11 @@ window.addEventListener("load", () => {
 
     // What to do when the select updates
     function selectChange() {
-      var value = this.value;
+      let value = this.value;
+      let slug = this.options[this.selectedIndex].dataset.slug;
       if (value === "remote") {
         location = '';
+        slug = '';
       } else {
         location = value;
       }
@@ -337,12 +344,12 @@ window.addEventListener("load", () => {
 
       window.history.pushState({}, "", `?${params}#location`);
 
-      outputDebug(`[job module] location selected: ${location}`);
+      outputDebug(`[job module] location selected: ${location}, slug: ${slug}`);
 
       hideMsg();
       clearResults();
 
-      initializeJobs();
+      initializeJobs(slug);
     }
 
 
@@ -377,4 +384,8 @@ window.addEventListener("load", () => {
     form.addEventListener("change", selectChange, false);
 
   }
+}
+
+window.addEventListener("load", () => {
+  gymJobs();
 });

@@ -1,14 +1,15 @@
-id: web0002
+id: web-0002
 slug: designing-for-real-people
+color: teal
 type: webinar
-title: "Designing for <span class=\"nowrap\">Real People:</span> <span class=\"nowrap\">Making the Case</span> for Meaningful UX"
-event_guests: "with Eric Meyer and <span class=\"nowrap\">Jim Webb</span>"
+title: "Designing for Real People: Making the Case for Meaningful UX"
+event_guests: "with Eric Meyer and Jim Webb"
 description: "A conversation about the benefits of user research and making the case to stakeholders on how to get it done right with special guests Eric Meyer and Jim Webb."
 permalink: /webinars/designing-for-real-people
 event_date: 2016-06-01
 event_time: "2PM EDT"
-event_ogimage: designing-for-real-people-event-og.png
-recording_ogimage: designing-for-real-people-recording-og.png
+event_ogimage: designing-for-real-people-event.png
+recording_ogimage: designing-for-real-people-recording.png
 host: josborn
 speaker:
   - emeyer

@@ -1,13 +1,14 @@
 id: GYM-106
 title: "Information Design & Visualization Fundamentals"
 date: 2019-10-28T00:00:00-04:00
+color: green
 type: full
 tags:
   - course
   - full
   - full-course
 live: true
-url: /courses/GYM/106/0/about
+url: /courses/course-v1:GYM+106+0/about
 img: /img/courses/svg/gym-106.svg
 topic: "Design"
 description: "Learn the design and visual principles needed to create effective information graphics and data visualizations."

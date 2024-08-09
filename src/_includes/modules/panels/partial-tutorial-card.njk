@@ -71,11 +71,10 @@
       <a class="btn" href="{{ url }}">Watch Video</a>
     </div>
     <footer class="info">
-      <h3>{{ obj.type | title | replace('full', 'full course') | replace('short', 'gym short') }}</h3>
+      <h3>{{ course_type[obj.type].name }}</h3>
       <p>{{ obj.skill_level }}</p>
     </footer>
   </div>
-  <footer class="back-to">
-    <p><a href="#topics">Back to Menu</a></p>
-  </footer>
+
+  {%- back_to 'footer', 'topics', 'Back to menu' -%}
 </article>
