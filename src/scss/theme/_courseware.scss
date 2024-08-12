@@ -53,6 +53,10 @@
   font-family: var(--font-family-custom);
   text-transform: uppercase;
   font-weight: bold;
+
+  .pretty-course-id {
+    display: none;
+  }
 }
 
 
