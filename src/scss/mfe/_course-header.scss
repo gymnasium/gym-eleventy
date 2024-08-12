@@ -15,9 +15,11 @@
     &:first-of-type {
       margin-right: 1rem !important;
     }
+
+    &.course-id {
+      display: none;
+    }
   }
 
-  .pretty-course-id {
-    display: none;
-  }
+  
 }

@@ -115,35 +115,6 @@
   color: var(--mono-100);
 }
 
-.course-tabs-navigation {
-  border-bottom: 1px solid #eaeaea;
-  position: relative;
-  margin-bottom: 1rem !important;
-
-  .nav {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin-bottom: 0;
-    flex-wrap: nowrap;
-  }
-
-  .nav-underline-tabs {
-    margin: 0 0 -1px;
-
-    .nav-link {
-      border-bottom: 4px solid var(--mono-1000);
-      border-left: 0;
-      border-radius: 0;
-      border-right: 0;
-      border-top: 4px solid var(--mono-1000);
-      color: #454545;
-      display: block;
-      flex-shrink: 0;
-    }
-  }
-}
-
 .col-auto {
   flex: 0 0 auto;
   max-width: 100%;
