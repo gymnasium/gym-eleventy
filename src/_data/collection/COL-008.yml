@@ -99,7 +99,7 @@ resources:
 
   tools:
     header:
-      heading: "Gen AI Tools"
+      heading: "Generative AI Tools"
       heading_type: h3
     links:
     - href: https://openai.com
