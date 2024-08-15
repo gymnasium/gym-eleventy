@@ -64,7 +64,7 @@ module.exports = eleventyConfig => {
     if (id.startsWith('web')) {
       type = 'webinar';
       path = '/webinars/';
-      imgPath = `/img/hub-pages/webinars/posters/`;
+      imgPath = `/img/hub-pages/webinars/poster/`;
     } else {
       idString = id.split('-')[1];
       let idNum = Number(idString);
