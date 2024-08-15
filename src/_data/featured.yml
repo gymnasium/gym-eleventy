@@ -4,7 +4,7 @@ home:
   featured:
     header:
       heading: Featured Courses
-      description: 
+      description:
     wrapper_class: home
     cta:
       description: "Design a career you love with free online courses on design, development, UX, accessibility, and career skills."
@@ -41,6 +41,20 @@ popular:
     - GYM-015
 
 collection:
+  gen-ai:
+    items:
+    - id: live-0008
+      type: livestream
+    - link: https://medium.com/gymnasium/crafting-r%C3%A9sum%C3%A9s-in-the-age-of-ai-2662f0728594
+      title: Crafting Résumés in the Age of AI
+      type: article
+      img: https://thegymcms.com/home/img/heros/articles/crafting-resumes-ai/crafting-resumes-ai-1280w.png
+      cta_text: Read Now
+    - link: https://brand.aquent.com/ai-whitepaper
+      title: "Using Generative AI for Design: Legal Considerations and Best Practices"
+      type: resource
+      # TODO: migrate image to a location that makes sense
+      img: https://image.mktg.aquent.com/lib/fe2b117171640474731275/m/1/92c33dbf-b6a9-4816-b178-499fa7432d39.png
   design-systems:
     items:
     - id: GYM-018

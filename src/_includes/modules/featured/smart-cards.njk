@@ -35,7 +35,11 @@
         {%- set src = obj.img -%}
 
         {%- set destUrl = "" -%}
-        {%- if type == 'webinar' -%}
+        {%- if type == 'livestream' -%}
+          {%- set cta_text = "Watch Now" -%}
+          {%- set destUrl = obj.url -%}
+          {%- set src = obj.img  -%}
+        {%- elif type == 'webinar' -%}
           {%- set cta_text = "Watch Now" -%}
           {%- set destUrl = '/webinars/' + slug -%}
           {%- set src = '/img/og/webinars/' + obj.recording_ogimage -%}
