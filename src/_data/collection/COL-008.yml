@@ -90,6 +90,9 @@ resources:
     - href: https://brand.aquent.com/ai-whitepaper
       label: "Using Generative AI for Design: Legal Considerations and Best Practices"
       description: Learn how generative AI comes with the potential for big opportunities, but also intellectual property and privacy concerns with Aquent Studios’ Whitepaper.
+    - href: https://brand.aquent.com/ai-recruiting-worksheet
+      label: "AI Tools for Diversity Recruiting"
+      description: Evaluate the effectiveness and potential biases of AI recruitment tools to mitigate risks and maximize advantages for a more diverse and inclusive hiring process, with the help of Jenn Tardy’s worksheet.
     - href: https://ai.google.dev/responsible
       label: "Google: Responsible Generative AI Toolkit"
       description: Tools and guidance to design, build and evaluate open AI models responsibly.
