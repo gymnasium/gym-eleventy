@@ -37,7 +37,7 @@
         {%- set destUrl = "" -%}
         {%- if type == 'livestream' -%}
           {%- set cta_text = "Watch Now" -%}
-          {%- set destUrl = obj.url -%}
+          {%- set destUrl = 'https://www.youtube.com/watch?v=' + obj.video_id -%}
           {%- set src = obj.img  -%}
         {%- elif type == 'webinar' -%}
           {%- set cta_text = "Watch Now" -%}
