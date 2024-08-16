@@ -59,12 +59,12 @@ module.exports = eleventyConfig => {
   eleventyConfig.addFilter('get_path', (id, img) => {
     let type;
     let path;
-    
+
 
     if (id.startsWith('web')) {
       type = 'webinar';
       path = '/webinars/';
-      imgPath = `/img/hub-pages/webinars/posters/`;
+      imgPath = `/img/webinars/poster/`;
     } else {
       idString = id.split('-')[1];
       let idNum = Number(idString);
@@ -169,7 +169,7 @@ module.exports = eleventyConfig => {
 
         if (dest_format === 'course_about') {
           path = `${destUrl}/courses/course-v1:GYM+${idString}+0/about`;
-          
+
         } else if (dest_format === 'learning') {
           path = `${destUrl}/learning/course/course-v1:GYM+${idString}+0/home`;
         }

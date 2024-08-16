@@ -5,11 +5,11 @@ meta:
   description: "Teamwork (and creating effective pattern libraries) makes the dream work."
   slug: design-systems
   color: orange
-  order: 1
+  order: 2
   unique: true
   css: "/css/design-systems.css"
 
-header: 
+header:
   module: custom/design-systems/header
 
 courses:

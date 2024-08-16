@@ -5,7 +5,7 @@ meta:
   description: "User experience can make or break a website. Let’s put yours to the test."
   slug: ux-design
   color: teal
-  order: 3
+  order: 4
 
 header:
   header_id: # default is null

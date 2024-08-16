@@ -1,0 +1,114 @@
+meta:
+  id: COL-008
+  title: "Generative AI"
+  topic: "Generative AI"
+  description: "From prompting to prototyping, leverage LLMs and GPT tools in your workflow."
+  slug: gen-ai
+  color: teal
+  order: 1
+
+header:
+  header_id: # default is null
+  header_class: # default is null
+  heading_type: h1 # h1-h6, default is h2
+  heading_class: # default is caps
+  heading_id: # default is null
+  heading: Generative AI
+  description: |
+    <p>Explore our free collection of generative artifical intelligence <a href="#livestreams"><b>livestreams</b></a>, <a href="#articles"><b>articles</b></a>, and <a href="#resources"><b>resources</b></a>.</p>
+
+livestreams:
+  module: lists/image-course
+  header:
+    heading: "Livestreams"
+    description: "Develop your generative AI superpowers with industry experts."
+  cta:
+    href: https://www.youtube.com/@AquentGymnasium/streams
+    label: View More Livestreams
+    class: btn
+  gen-ai-livestreams:
+    ids:
+    - id: live-0008
+    - id: live-0007
+    - id: live-0006
+    - id: live-0005
+    - id: live-0004
+    - id: live-0003
+    - id: live-0002
+    - id: live-0001
+
+articles:
+  module: lists/default
+  header:
+    heading: "Articles"
+    description: "Read bookmark-worthy blog posts on generative AI."
+  gen-ai-articles:
+    links:
+    - href: https://medium.com/gymnasium/crafting-r%C3%A9sum%C3%A9s-in-the-age-of-ai-2662f0728594
+      label: "Crafting Résumés in the Age of AI"
+      description: "Learn how to use AI-suggested content to showcase your value without compromising your personal brand or getting your résumé flagged."
+    - href: https://medium.com/gymnasium/ai-mockup-magic-prototyping-landing-pages-with-llms-3765bef6a84c
+      label: "AI Mockup Magic: Prototyping Landing Pages with LLMs"
+      description: "Learn how to turn a prompt into productivity to magically prototype faster and better without gray boxes or lorem ipsum."
+    - href: https://ia.net/topics/turning-the-tables-on-ai
+      label: "Turning the Tables on AI"
+      description: "Artificial Intelligence has assimilated Microsoft, Facebook, Google, and now Apple. There is no escape: As soon as you open your computer you’re invited to skip thinking and let the machine fill the void. But what if we used AI not to think less but <em>more</em>?"
+    - href: https://aquentstudios.com/blog/ai-writing-tools-are-the-next-big-thing/
+      label: "AI writing tools are the new thesaurus and so much more."
+      description: "Enhance your marketing strategies through automated writing."
+    - href: https://aquenttalent.com/blog/a-growth-mindset-is-key-to-generative-ai-expertise
+      label: "A growth mindset is key to generative AI expertise."
+      description: "Adopting and harnessing the power of AI for growth and innovation requires a dynamic, adaptable mindset that embraces experimentation, learning, and change."
+    - href: https://aquent.com/blog/in-an-ai-driven-world-humans-are-still-irreplaceable
+      label: "In an AI-driven world, humans are still irreplaceable."
+      description: "AI offers opportunities and risks, including the possibility that it will replace humans if we do not prioritize integration and application into our workflows."
+    - href: https://aquentstudios.com/blog/top-three-ai-tools-design-teams-need-to-use-in-the-new-year/
+      label: "Top three AI tools design teams need to use in the New Year."
+      description: "Discover how you can use generative AI tools."
+    - href: https://aquentstudios.com/blog/our-designers-used-ai-plugins-to-power-up-production/
+      label: "Our Designers used AI plugins to power up production."
+      description: "Their findings may surprise you."
+
+resources:
+  module: lists/default
+  header:
+    heading: "Resources"
+    description: "All the basics and tools to get started with generative AI."
+
+  basics:
+    header:
+      heading: "Learning the Basics"
+      heading_type: h3
+    links:
+    - href: https://www.ibm.com/topics/generative-ai
+      label: What is generative AI?
+      description: Generative AI, sometimes called gen AI, is artificial intelligence (AI) that can create original content—such as text, images, video, audio or software code—in response to a user’s prompt or request.
+
+  guides:
+    header:
+      heading: "In-Depth Guides"
+      heading_type: h3
+    links:
+    - href: https://brand.aquent.com/ai-whitepaper
+      label: "Using Generative AI for Design: Legal Considerations and Best Practices"
+      description: Learn how generative AI comes with the potential for big opportunities, but also intellectual property and privacy concerns with Aquent Studios’ Whitepaper.
+    - href: https://brand.aquent.com/ai-recruiting-worksheet
+      label: "AI Tools for Diversity Recruiting"
+      description: Evaluate the effectiveness and potential biases of AI recruitment tools to mitigate risks and maximize advantages for a more diverse and inclusive hiring process, with the help of Jenn Tardy’s worksheet.
+    - href: https://ai.google.dev/responsible
+      label: "Google: Responsible Generative AI Toolkit"
+      description: Tools and guidance to design, build and evaluate open AI models responsibly.
+
+  tools:
+    header:
+      heading: "Generative AI Tools"
+      heading_type: h3
+    links:
+    - href: https://openai.com
+      label: "OpenAI: ChatGPT"
+    - href: https://chatgpt.com/g/g-YMTYaHUGy-merlin-the-job-application-wizard-1-2-5
+      label: Merlin GPT
+    - href: https://www.midjourney.com
+      label: Midjourney
+    - href: https://www.bing.com/images/create
+      label: Image Creator from Microsoft Designer - Bing
