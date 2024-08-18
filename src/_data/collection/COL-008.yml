@@ -1,10 +1,10 @@
 meta:
   id: COL-008
   title: "Generative AI"
-  topic: "Generative AI"
+  topic: "Career Skills"
   description: "From prompting to prototyping, leverage LLMs and GPT tools in your workflow."
-  slug: gen-ai
-  color: teal
+  slug: generative-ai
+  color: green
   order: 1
 
 header:
@@ -106,9 +106,13 @@ resources:
     links:
     - href: https://openai.com
       label: "OpenAI: ChatGPT"
-    - href: https://chatgpt.com/g/g-YMTYaHUGy-merlin-the-job-application-wizard-1-2-5
+      description: ChatGPT helps you get answers, find inspiration and be more productive.
+    - href: https://chatgpt.com/g/g-YMTYaHUGy-merlin-the-job-application-wizard
       label: Merlin GPT
+      description: Merlin, the Job Application Wizard, by Feridoon Malekzadeh.
     - href: https://www.midjourney.com
       label: Midjourney
+      description: An AI-powered platform that generates high-quality, unique images based on user-provided text prompts.
     - href: https://www.bing.com/images/create
-      label: Image Creator from Microsoft Designer - Bing
+      label: Image Creator from Microsoft Designer
+      description: Create images from words using Image Creator in Bing.

@@ -41,7 +41,7 @@ popular:
     - GYM-015
 
 collection:
-  gen-ai:
+  generative-ai:
     items:
     - id: live-0008
       type: livestream
