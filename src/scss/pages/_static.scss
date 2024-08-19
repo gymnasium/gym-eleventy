@@ -50,16 +50,18 @@
   }
 
   @include breakpoint(large, min) {
-    & {
-      grid-template-columns: 4fr 2fr;
-      grid-template-areas:
-        "article aside";
-      gap: 1.4rem;
+    grid-template-columns: 4fr 2fr;
+    grid-template-areas:
+      "article aside";
+    gap: 1.4rem;
+
+    > article,
+    > aside {
+      padding: 2rem;
     }
 
     > article {
       grid-area: article;
-      padding: 2rem;
     }
 
     > aside {
@@ -146,14 +148,23 @@
     }
   }
 
+  // Sidebar
+
   > aside {
     border-top: 1px dashed var(--mono-300);
 
+    h2 {
+      font: 700 1.25rem/1.15 var(--font-family-custom);
+      letter-spacing: 0.05ex;
+      word-spacing: 0.25ex;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+      margin-bottom: 0.8rem;
+    }
+
     @include breakpoint(large, min) {
-      & {
-        border-top: none;
-        border-left: 1px dashed var(--mono-300);
-      }
+      border-top: none;
+      border-left: 1px dashed var(--mono-300);
     }
 
   }
@@ -181,8 +192,6 @@
   }
 
   @include breakpoint(large, min) {
-    & {
-      display: none;
-    }
+    display: none;
   }
 }
