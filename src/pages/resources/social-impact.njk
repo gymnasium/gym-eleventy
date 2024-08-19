@@ -4,17 +4,17 @@ permalink: /social-impact/
 meta:
   title: "Social Impact"
 ---
-{%- set intro = pages['social-impact'].intro -%}
+{%- set header = pages['social-impact'].header -%}
 <div class="main-panel">
 
   <article>
     <header id="{{ id }}" class="main-header {{ id }}">
-      <h1>{{ intro.heading }}</h1>
-      {%- if intro.description -%}
-        <p>{{ intro.description | safe }}</p>
+      <h1>{{ header.heading }}</h1>
+      {%- if header.description -%}
+        <p>{{ header.description | safe }}</p>
       {%- endif -%}
     </header>
-    {%- set sections = pages['social-impact'] | omit(['intro']) -%}
+    {%- set sections = pages['social-impact'] | omit(['header']) -%}
     {%- for id, section in sections -%}
     <article id="{{ id }}" class="main-article {{ id }}">
       <header id="{{ id }}" class="main-header {{ id }}">

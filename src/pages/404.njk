@@ -6,14 +6,14 @@ meta:
 eleventyExcludeFromCollections: true
 permalink: 404.html
 ---
-{%- set intro = pages['404'].intro -%}
+{%- set header = pages['404'].header -%}
 {%- set main = pages['404'].main -%}
 <div class="main-panel">
 
   <article>
     <header id="{{ id }}" class="main-header {{ id }}">
-      <h1>{{ intro.heading }}</h1>
-      <p>{{ intro.description | safe }}</p>
+      <h1>{{ header.heading }}</h1>
+      <p>{{ header.description | safe }}</p>
     </header>
     {%- set body_text = main.body_text -%}
     {%- for text in body_text  -%}

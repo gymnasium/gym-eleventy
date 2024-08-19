@@ -11,7 +11,7 @@
   nav: {
     secondary: "courses",
   },
-  intro: {
+  header: {
     heading: "Courses",
     subheading: "Free online courses and tutorials.",
     content: "Learn design, development, accessibility, prototyping, UX, and career skills from industry experts.",
@@ -59,10 +59,10 @@
       {%- set module = module[0] -%}
       {%- include 'modules/panels/course-card.njk' -%}
     </section>
-    {%- set intro = pages['full'].intro -%}
-    {%- if intro.info -%}
+    {%- set info = pages['full'].info -%}
+    {%- if info -%}
     <div class="list-summary">
-      {% for info in intro.info %}
+      {% for info in info %}
       <dl>
         <dt>{{ info.title }}</dt>
         {% for item in info.items %}
@@ -87,10 +87,10 @@
       {%- set module = module[0] -%}
       {%- include 'modules/panels/course-card.njk' -%}
     </section>
-    {%- set intro = pages['gym_shorts'].intro -%}
-    {%- if intro.info -%}
+    {%- set info = pages['gym_shorts'].info -%}
+    {%- if info -%}
     <div class="list-summary">
-      {% for info in intro.info %}
+      {% for info in info %}
       <dl>
         <dt>{{ info.title }}</dt>
         {% for item in info.items %}
@@ -115,10 +115,10 @@
       {%- set module = module[0] -%}
       {%- include 'modules/panels/tutorial-card.njk' -%}
     </section>
-    {%- set intro = pages['take5'].intro -%}
-    {%- if intro.info -%}
+    {%- set info = pages['take5'].info -%}
+    {%- if info -%}
     <div class="list-summary">
-      {% for info in intro.info %}
+      {% for info in info %}
       <dl>
         <dt>{{ info.title }}</dt>
         {% for item in info.items %}

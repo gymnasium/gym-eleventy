@@ -16,17 +16,17 @@ module.exports = {
 Here is an example of using a YAML file to generate tags and content(!)
 This generally works best with a straightforward, top-down layout, but this approach could be leveraged for more complex layouts.
 #}
-{%- set intro = pages['about'].intro -%}
+{%- set header = pages['about'].header -%}
 <div class="main-panel">
 
   <article>
     <header id="{{ id }}" class="main-header {{ id }}">
-      <h1>{{ intro.heading }}</h1>
-      {%- if intro.description -%}
-      <p>{{ intro.description | safe }}</p>
+      <h1>{{ header.heading }}</h1>
+      {%- if header.description -%}
+      <p>{{ header.description | safe }}</p>
       {%- endif -%}
     </header>
-    {%- set sections = pages['about'] | omit(['intro']) -%}
+    {%- set sections = pages['about'] | omit(['header']) -%}
     {%- for id, section in sections -%}
     <section id="{{ id }}" class="main-section {{ id }}">
       <h2>{{ section.heading | safe }}</h2>

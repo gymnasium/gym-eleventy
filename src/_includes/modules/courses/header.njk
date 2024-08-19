@@ -1,12 +1,12 @@
 <header class="intro bg-mono-400 full-bleed">
   <hgroup>
-    <h1>{{ intro.heading }}</h1>
-    <p><strong>{{ intro.subheading }}</strong> {% if intro.benefit %}{{ intro.benefit }}{% endif %}{% if intro.content %}{{ intro.content }}{% endif %}</p>
-    {%- if intro.lede -%}<p><strong><a href="#topics">{{ intro.lede }}</a></strong> {{ intro.topics }}</p>{%- endif -%}
+    <h1>{{ header.heading }}</h1>
+    <p><strong>{{ header.subheading }}</strong> {% if header.benefit %}{{ header.benefit }}{% endif %}{% if header.content %}{{ header.content }}{% endif %}</p>
+    {%- if header.lede -%}<p><strong><a href="#topics">{{ header.lede }}</a></strong> {{ header.topics }}</p>{%- endif -%}
   </hgroup>
-  {%- if intro.info -%}
+  {%- if info -%}
   <div class="list-summary">
-    {% for info in intro.info %}
+    {% for info in info %}
     <dl>
       <dt>{{ info.title }}</dt>
       {% for item in info.items %}
@@ -16,5 +16,5 @@
     {% endfor %}
   </div>
   {%- endif -%}
-  <!-- <p><b>{{ intro.promo.pitch }}</b> {{ intro.promo.action }}</p> -->
+  <!-- <p><b>{{ header.promo.pitch }}</b> {{ header.promo.action }}</p> -->
 </header>
