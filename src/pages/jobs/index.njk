@@ -14,6 +14,7 @@ meta:
 {%- endif -%}
 
 {%- if cards -%}
+  {# TODO: can this be combined with/refactored to use an existing featured module? #}
   <section class="featured">
     <ul class="list-unstyled">
     {%- for idx in range(0, cards.length) -%}
