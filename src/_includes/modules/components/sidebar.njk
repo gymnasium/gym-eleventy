@@ -1,7 +1,9 @@
 {%- set item = sidebar -%}
 <aside>
-  <header>
-    <h2>{{ item.header.heading }}</h2>
-  </header>
+  {%- set header = item.header -%}
+  {%- include 'modules/components/header.njk' -%}
+
+  {%- set module = featured['sidebar'] -%}
+  {%- include 'modules/featured/smart-cards.njk' -%}
   {%- back_to 'footer' -%}
 </aside>

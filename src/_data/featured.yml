@@ -116,3 +116,14 @@ collection:
       type: article
       # TODO: migrate image to a location that makes sense
       img: https://thegymcms.com/img/hub-pages/articles/featured/improving-your-portfolio.png
+sidebar:
+  items:
+    - id: GYM-017
+      type: course
+    - id: GYM-5052
+      type: tutorial
+    - link: https://medium.com/gymnasium/improving-your-portfolio-is-easier-than-you-think-b1430bbe1007
+      title: Improving Your Portfolio is Easier Than You Think
+      type: article
+      # TODO: migrate image to a location that makes sense
+      img: https://thegymcms.com/img/hub-pages/articles/featured/improving-your-portfolio.png
