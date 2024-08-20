@@ -4,6 +4,10 @@
 @use 'functions' as *;
 @use 'mixins' as *;
 
+a {
+  cursor: pointer;
+}
+
 [disabled], .disabled {
   pointer-events: none;
 }
