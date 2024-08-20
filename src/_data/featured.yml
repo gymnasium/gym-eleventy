@@ -120,9 +120,21 @@ sidebar:
   items:
     - id: GYM-017
       type: course
+      footer:
+        cta:
+          href: /courses/
+          label: View All Courses
     - id: GYM-5052
       type: tutorial
+      footer:
+        cta:
+          href: /courses/take5/
+          label: View All Tutorials
     - link: https://medium.com/gymnasium/improving-your-portfolio-is-easier-than-you-think-b1430bbe1007
       title: Improving Your Portfolio is Easier Than You Think
       type: article
       img: /img/articles/poster/improving-your-portfolio.png
+      footer:
+        cta:
+          href: https://medium.com/gymnasium/
+          label: View All Articles
