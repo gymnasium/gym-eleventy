@@ -98,7 +98,7 @@ collection:
       type: tutorial
       title: Web Accessibility Testing Made Easy
       # TODO: migrate image to a location that makes sense
-      img: https://thegymcms.com/img/hub-pages/accessibility/featured/acessibility-testing-pt1-poster.jpg
+      img: /img/livestreams/poster/acessibility-testing-pt1-poster.jpg
       cta_text: Watch Now
     - link: https://medium.com/gymnasium/advocating-for-accessibility-with-aaron-gustafson-54079c132152
       type: article
@@ -114,8 +114,8 @@ collection:
     - link: https://medium.com/gymnasium/improving-your-portfolio-is-easier-than-you-think-b1430bbe1007
       title: Improving Your Portfolio is Easier Than You Think
       type: article
-      # TODO: migrate image to a location that makes sense
-      img: https://thegymcms.com/img/hub-pages/articles/featured/improving-your-portfolio.png
+      img: /img/articles/poster/improving-your-portfolio.png
+
 sidebar:
   items:
     - id: GYM-017
@@ -125,5 +125,4 @@ sidebar:
     - link: https://medium.com/gymnasium/improving-your-portfolio-is-easier-than-you-think-b1430bbe1007
       title: Improving Your Portfolio is Easier Than You Think
       type: article
-      # TODO: migrate image to a location that makes sense
-      img: https://thegymcms.com/img/hub-pages/articles/featured/improving-your-portfolio.png
+      img: /img/articles/poster/improving-your-portfolio.png
