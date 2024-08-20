@@ -37,7 +37,7 @@
     }
   }
 
-  ul {
+  ul:not([class]) {
     padding-left: 1rem;
 
     & + * {
