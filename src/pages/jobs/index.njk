@@ -13,8 +13,8 @@ meta:
   {%- include 'modules/components/header.njk' -%}
 {%- endif -%}
 
-<section class="featured">
-  {%- if cards -%}
+{%- if cards -%}
+  <section class="featured">
     <ul class="list-unstyled">
     {%- for idx in range(0, cards.length) -%}
       {%- set card = cards[idx] -%}
@@ -52,8 +52,8 @@ meta:
       </li>
     {%- endfor -%}
     </ul>
-  {%- endif -%}
   </section>
+{%- endif -%}
 
 {# Here we're omitting some object keys to be able to loop through the content fields #}
 {%- set content = pages['jobs'] | omit(['header','cards']) -%}
