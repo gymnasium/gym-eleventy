@@ -129,7 +129,7 @@
         }
       }
 
-      h3 {
+      h3:not(.featured h3) {
         font-family: var(--font-family-default);
         font-size: 1.4rem;
         line-height: 1.35;
