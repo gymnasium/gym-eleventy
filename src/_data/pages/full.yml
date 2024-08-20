@@ -10,14 +10,14 @@ header:
 info:
   - title: Benefits
     items:
-      - label: 100% free self-paced online learning
-      - label: Earn a Certificate to share on your résumé and social media
-      - label: High-quality and in-depth content by industry experts
-      - label: Discuss, share, and get feedback in the course forum
-      - label: Optional homework and quizzes to sharpen your skills
+    - label: 100% free self-paced online learning
+    - label: Earn a Certificate to share on your résumé and social media
+    - label: High-quality and in-depth content by industry experts
+    - label: Discuss, share, and get feedback in the course forum
+    - label: Optional homework and quizzes to sharpen your skills
   - title: Video Lessons
     items:
-      - label: 3–5 hours
+    - label: 3–5 hours
   - title: Course Duration
     items:
-      - label: 12–22 hours
+    - label: 12–22 hours

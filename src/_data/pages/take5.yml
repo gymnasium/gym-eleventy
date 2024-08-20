@@ -10,11 +10,11 @@ header:
 info:
   - title: Benefits
     items:
-      - label: 100% free self-paced online learning
-      - label: Start learning with or without a Gymnasium account
-      - label: Short, concise tutorials on a wide range of topics
-      - label: High-quality and up-to-date content by industry experts
-      - label: Tutorials include an easy-to-follow transcript
+    - label: 100% free self-paced online learning
+    - label: Start learning with or without a Gymnasium account
+    - label: Short, concise tutorials on a wide range of topics
+    - label: High-quality and up-to-date content by industry experts
+    - label: Tutorials include an easy-to-follow transcript
   - title: Video Tutorial
     items:
-      - label: 5 minutes or less
+    - label: 5 minutes or less

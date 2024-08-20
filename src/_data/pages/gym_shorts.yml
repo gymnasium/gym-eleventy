@@ -10,13 +10,13 @@ header:
 info:
   - title: Benefits
     items:
-      - label: 100% free self-paced online learning
-      - label: Earn a Badge to share on your résumé and social media
-      - label: Short, concise courses on a wide range of topics
-      - label: High-quality and in-depth content by industry experts
+    - label: 100% free self-paced online learning
+    - label: Earn a Badge to share on your résumé and social media
+    - label: Short, concise courses on a wide range of topics
+    - label: High-quality and in-depth content by industry experts
   - title: Video Lessons
     items:
-      - label: 1–2 hours
+    - label: 1–2 hours
   - title: Course Duration
     items:
-      - label: 1–5 hours
+    - label: 1–5 hours

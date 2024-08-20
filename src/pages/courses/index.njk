@@ -62,11 +62,11 @@
     {%- set info = pages['full'].info -%}
     {%- if info -%}
     <div class="list-summary">
-      {% for info in info %}
+      {% for item in info %}
       <dl>
-        <dt>{{ info.title }}</dt>
-        {% for item in info.items %}
-        <dd>{{ item.label }}</dd>
+        <dt>{{ item.title }}</dt>
+        {% for subitem in item.items %}
+        <dd>{{ subitem.label }}</dd>
         {% endfor %}
       </dl>
       {% endfor %}
@@ -90,11 +90,11 @@
     {%- set info = pages['gym_shorts'].info -%}
     {%- if info -%}
     <div class="list-summary">
-      {% for info in info %}
+      {% for item in info %}
       <dl>
-        <dt>{{ info.title }}</dt>
-        {% for item in info.items %}
-        <dd>{{ item.label }}</dd>
+        <dt>{{ item.title }}</dt>
+        {% for subitem in item.items %}
+        <dd>{{ subitem.label }}</dd>
         {% endfor %}
       </dl>
       {% endfor %}
@@ -118,11 +118,11 @@
     {%- set info = pages['take5'].info -%}
     {%- if info -%}
     <div class="list-summary">
-      {% for info in info %}
+      {% for item in info %}
       <dl>
-        <dt>{{ info.title }}</dt>
-        {% for item in info.items %}
-        <dd>{{ item.label }}</dd>
+        <dt>{{ item.title }}</dt>
+        {% for subitem in item.items %}
+        <dd>{{ subitem.label }}</dd>
         {% endfor %}
       </dl>
       {% endfor %}
