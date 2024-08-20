@@ -161,7 +161,9 @@
   .featured {
     margin: 1.4rem 0 1.8rem;
 
-    ul {
+    > ul {
+      display: grid;
+      gap: 1.4rem;
 
       @include breakpoint(medium, min) {
         grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
@@ -226,7 +228,7 @@
       }
 
       .cta {
-        margin-top: 1.4rem;
+        margin-top: 0.4rem;
       }
 
       footer {
