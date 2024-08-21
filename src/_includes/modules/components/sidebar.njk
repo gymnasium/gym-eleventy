@@ -1,0 +1,10 @@
+{%- set item = sidebar -%}
+<aside>
+  {%- set header = item.header -%}
+  {%- include 'modules/components/header.njk' -%}
+
+  {%- set module = featured['sidebar'] -%}
+  {%- include 'modules/featured/smart-cards.njk' -%}
+
+  {%- back_to 'footer' -%}
+</aside>

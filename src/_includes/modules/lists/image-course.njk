@@ -2,11 +2,11 @@
 
 {% block id_list_item %}
   <li>
-    <figure class="artwork bg-{{type}}">
-      <a href="{{ path }}{{ slug }}">
+    <figure class="artwork bg-{{ type }}">
+      <a href="{%- if type == 'livestream' -%}{{ 'https://www.youtube.com/watch?v=' + obj.video_id }}{%- else -%}{{ path }}{{ slug }}{%- endif -%}">
         <img alt="{{ title }}" srcset="{{ srcSet }}" src="{{ src }}">
       </a>
     </figure>
-    <h3><a href="{{ path }}{{ slug }}">{{ title }}</a></h3>
+    <h3><a href="{%- if type == 'livestream' -%}{{ 'https://www.youtube.com/watch?v=' + obj.video_id }}{%- else -%}{{ path }}{{ slug }}{%- endif -%}">{{ title }}</a></h3>
   </li>
 {% endblock %}

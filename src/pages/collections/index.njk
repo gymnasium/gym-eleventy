@@ -1,6 +1,6 @@
 ---js
 {
-  layout: "layouts/main.njk",
+  layout: "layouts/full-width.njk",
   permalink: "/collections/",
   meta: {
     title: "Collections",
@@ -27,12 +27,14 @@
   }
 }
 ---
-<header class="intro-about bg-mono-400 full-bleed">
-  <h1>{{ intro.heading }}</h1>
-  <p>{{ intro.content }}</p>
+<header class="intro-about bg-mono-400">
+  <div class="container">
+    <h1>{{ intro.heading }}</h1>
+    <p>{{ intro.content }}</p>
+  </div>
 </header>
 
-<div class="card-grid">
+<div class="container card-grid">
   <ul>
   {%- for col in items -%}
     <li class="color-card card {{ col.meta.color | slugify }}" id="{{ col.meta.id | lower }}">

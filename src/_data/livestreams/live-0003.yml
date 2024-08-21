@@ -1,0 +1,24 @@
+id: live-0003
+slug: picture-perfect-using-ai-to-enhance-images
+color: ""
+type: livestream
+title: "Picture Perfect: Using AI to Enhance Images"
+event_guests: "with Jeremy Osborn and Andrew Miller"
+description: "TK"
+permalink: /livestreams/picture-perfect-using-ai-to-enhance-images
+event_date: 2023-11-15
+event_time: "1PM EST"
+img: /img/hero/livestreams/picture-perfect/picture-perfect-1280w.jpg
+host:
+  - josborn
+  - amiller
+speaker:
+  - ""
+content_category: gen-ai
+tags:
+  - livestream
+landing: false
+register: false
+video: true
+webinar_id:
+video_id: Ii_4MC5KuiQ

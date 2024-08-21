@@ -1,0 +1,24 @@
+id: live-0008
+slug: become-a-better-writer-with-chatgpt
+color: ""
+type: livestream
+title: "Become a Better Writer with ChatGPT"
+event_guests: "with Jeremy Osborn and Andrew Miller"
+description: "TK"
+permalink: /livestreams/become-a-better-writer-with-chatgpt
+event_date: 2024-07-22
+event_time: "10AM EDT"
+img: /img/hero/livestreams/become-a-better-writer/become-a-better-writer-1280w.jpg
+host:
+  - josborn
+  - amiller
+speaker:
+  - ""
+content_category: gen-ai
+tags:
+  - livestream
+landing: false
+register: false
+video: true
+webinar_id:
+video_id: JXSpx385gbo

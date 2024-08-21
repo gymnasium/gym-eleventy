@@ -1,0 +1,24 @@
+id: live-0005
+slug: fill-in-the-blanks-demonstrating-how-to-build-a-custom-gpt
+color: ""
+type: livestream
+title: "Fill in the Blanks: Demonstrating How to Build a Custom GPT"
+event_guests: "with Jeremy Osborn and Andrew Miller"
+description: "TK"
+permalink: /livestreams/fill-in-the-blanks-demonstrating-how-to-build-a-custom-gpt
+event_date: 2024-01-30
+event_time: "10AM EST"
+img: /img/hero/livestreams/fill-in-the-blanks/fill-in-the-blanks-1280w.jpg
+host:
+  - josborn
+  - amiller
+speaker:
+  - ""
+content_category: gen-ai
+tags:
+  - livestream
+landing: false
+register: false
+video: true
+webinar_id:
+video_id: 9bMjt4fJR-M

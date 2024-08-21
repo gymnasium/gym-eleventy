@@ -10,7 +10,7 @@
         {%- set header = item.header -%}
         {%- include 'modules/components/header.njk' -%}
       {%- endif -%}
-      
+
       {# Include a schema block #}
       {%- if (item.schema and item.ids) -%}
         {% block schema %}
@@ -42,7 +42,7 @@
             {%- set src = img -%}
 
             {%- if type === 'webinar' -%}
-              {%- set src = '/img/webinars/posters/' +  slug + '.jpg' -%}
+              {%- set src = '/img/webinars/poster/' +  slug + '.jpg' -%}
             {%- endif -%}
 
             {%- set srcSet = src -%}
