@@ -4,8 +4,13 @@
 @use 'functions' as *;
 @use 'mixins' as *;
 
+a, summary {
+  cursor: pointer;
+}
+
 [disabled], .disabled {
   pointer-events: none;
+  cursor: not-allowed;
 }
 
 [role="button"] {
@@ -167,8 +172,4 @@
     padding: 0 .25em;
     vertical-align: bottom;
   }
-}
-
-summary {
-  cursor: pointer;
 }

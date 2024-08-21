@@ -53,9 +53,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('catalog', (collection) => {
     const courses = collection.getAll()[0].data.courses;
     const tutorials = collection.getAll()[0].data.tutorials;
+    const livestreams = collection.getAll()[0].data.livestreams;
     const webinars = collection.getAll()[0].data.webinars;
 
-    const catalog = {...courses, ...tutorials, ...webinars}
+    const catalog = {...courses, ...tutorials, ...livestreams, ...webinars}
 
     return catalog;
   });
@@ -66,8 +67,8 @@ module.exports = function (eleventyConfig) {
 
     return col.filter(item => {
       if (
-        !item.page.filePathStem.startsWith('/pages/courses/') && 
-        !item.page.filePathStem.startsWith('/pages/tutorials/') && 
+        !item.page.filePathStem.startsWith('/pages/courses/') &&
+        !item.page.filePathStem.startsWith('/pages/tutorials/') &&
         !item.page.filePathStem.startsWith('/pages/webinars/') &&
         !item.page.filePathStem.startsWith('/pages/privacy-policy/')
         ) {

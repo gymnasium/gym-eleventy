@@ -57,11 +57,11 @@
 
 // Use CSS variables defined above to add box shadow color!
 @mixin full-bleed {
-  box-shadow: -30rem 0 var(--box-shadow-color), 30rem 0 var(--box-shadow-color), -70rem 0 var(--box-shadow-color), 70rem 0 var(--box-shadow-color), -140rem 0 var(--box-shadow-color), 140rem 0 var(--box-shadow-color);
-  padding-left: 1rem; // Override .container padding-left/right
-  padding-right: 1rem; // "
-  margin-left: -1rem; // "
-  margin-right: -1rem; // "
+  // box-shadow: -30rem 0 var(--box-shadow-color), 30rem 0 var(--box-shadow-color), -70rem 0 var(--box-shadow-color), 70rem 0 var(--box-shadow-color), -140rem 0 var(--box-shadow-color), 140rem 0 var(--box-shadow-color);
+  // padding-left: 1rem; // Override .container padding-left/right
+  // padding-right: 1rem; // "
+  // margin-left: -1rem; // "
+  // margin-right: -1rem; // "
 }
 
 @mixin dotted-bottom($border-color: var(--mono-500)) {

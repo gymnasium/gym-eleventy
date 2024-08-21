@@ -60,6 +60,8 @@ footer:
           href: GYM_ROOT_URL/about/
     - title: Content Collections
       links:
+        - label: Generative AI
+          href: GYM_ROOT_URL/generative-ai/
         - label: Design Systems
           href: GYM_ROOT_URL/design-systems/
         - label: Development

@@ -1,78 +1,82 @@
 body.view-in-course {
-  background-color: #fff;
+
+  main {
+    .wrapper-course-material,
+    .wrapper-preview-menu {
+      padding: 0;
+    }
+    .wrapper-course-material .course-material,
+    .wrapper-preview-menu .preview-menu {
+      width: auto;
+    }
+    .wrapper-preview-menu .preview-menu {
+      padding: 15px 2%;
+    }
+    .wrapper-course-material .course-material {
+      padding: 0;
+    }
+    .wrapper-course-material .course-material .course-tabs {
+      padding: 0;
+    }
+    .container {
+      max-width: none;
+      min-width: initial;
+      width: auto;
+    }
+    .info-wrapper {
+      max-width: 1920px;
+      margin: 0 auto;
+    }
+    .course-wrapper,
+    .profile-wrapper,
+    .instructor-dashboard-wrapper-2,
+    .wiki-wrapper,
+    .teams-wrapper,
+    .static_tab_wrapper {
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    // .static_tab_wrapper {
+    //   padding: 2em 2.5em;
+    // }
+  }
+  // .header-global,
+  // .header-global.slim {
+  //   width: auto;
+  // }
+  // .header-global .wrapper-header,
+  // .header-global.slim .wrapper-header {
+  //   min-width: auto;
+  // }
+  // .header-global .wrapper-header .user-dropdown,
+  // .header-global .wrapper-header .dropdown,
+  // .header-global.slim .wrapper-header .user-dropdown,
+  // .header-global.slim .wrapper-header .dropdown {
+  //   padding: 10px;
+  // }
+  
+  // .container-footer {
+  //   max-width: none;
+  //   min-width: 0;
+  //   width: auto;
+  // }
+  // .course-license {
+  //   max-width: 1920px;
+  //   margin: 0 auto;
+  //   padding-right: 2%;
+  //   padding-left: 2%;
+  // }
+  // .wrapper-footer {
+  //   margin-top: 40px;
+  //   padding-right: 2%;
+  //   padding-left: 2%;
+  // }
+  // .wrapper-footer footer#footer-openedx {
+  //   min-width: auto;
+  // }
+  // footer#footer-edx-v3 {
+  //   margin-top: 40px;
+  // }
 }
-body.view-in-course .header-global,
-body.view-in-course .header-global.slim {
-  width: auto;
-}
-body.view-in-course .header-global .wrapper-header,
-body.view-in-course .header-global.slim .wrapper-header {
-  min-width: auto;
-}
-body.view-in-course .header-global .wrapper-header .user-dropdown,
-body.view-in-course .header-global .wrapper-header .dropdown,
-body.view-in-course .header-global.slim .wrapper-header .user-dropdown,
-body.view-in-course .header-global.slim .wrapper-header .dropdown {
-  padding: 10px;
-}
-body.view-in-course .wrapper-course-material,
-body.view-in-course .wrapper-preview-menu {
-  padding: 0;
-}
-body.view-in-course .wrapper-course-material .course-material,
-body.view-in-course .wrapper-preview-menu .preview-menu {
-  width: auto;
-}
-body.view-in-course .wrapper-preview-menu .preview-menu {
-  padding: 15px 2%;
-}
-body.view-in-course .wrapper-course-material .course-material {
-  padding: 0;
-}
-body.view-in-course .wrapper-course-material .course-material .course-tabs {
-  padding: 0;
-}
-body.view-in-course .container {
-  max-width: none;
-  min-width: initial;
-  width: auto;
-}
-body.view-in-course .info-wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-}
-body.view-in-course .course-wrapper,
-body.view-in-course .profile-wrapper,
-body.view-in-course .instructor-dashboard-wrapper-2,
-body.view-in-course .wiki-wrapper,
-body.view-in-course .teams-wrapper,
-body.view-in-course .static_tab_wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0;
-}
-body.view-in-course .static_tab_wrapper {
-  padding: 2em 2.5em;
-}
-body.view-in-course .container-footer {
-  max-width: none;
-  min-width: 0;
-  width: auto;
-}
-body.view-in-course .course-license {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding-right: 2%;
-  padding-left: 2%;
-}
-body.view-in-course .wrapper-footer {
-  margin-top: 40px;
-  padding-right: 2%;
-  padding-left: 2%;
-}
-body.view-in-course .wrapper-footer footer#footer-openedx {
-  min-width: auto;
-}
-body.view-in-course footer#footer-edx-v3 {
-  margin-top: 40px;
-}
+

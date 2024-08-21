@@ -35,7 +35,11 @@
         {%- set src = obj.img -%}
 
         {%- set destUrl = "" -%}
-        {%- if type == 'webinar' -%}
+        {%- if type == 'livestream' -%}
+          {%- set cta_text = "Watch Now" -%}
+          {%- set destUrl = 'https://www.youtube.com/watch?v=' + obj.video_id -%}
+          {%- set src = obj.img  -%}
+        {%- elif type == 'webinar' -%}
           {%- set cta_text = "Watch Now" -%}
           {%- set destUrl = '/webinars/' + slug -%}
           {%- set src = '/img/og/webinars/' + obj.recording_ogimage -%}
@@ -85,7 +89,13 @@
             </div>
           </div>
           <footer>
-            <b><a href="#{{ category | lower }}">{{ category_link_text | title }}</a></b>
+            <b>
+            {%- if item.footer.cta -%}
+              <a href="{{ item.footer.cta.href }}" {%- if 'https' in item.footer.cta.href -%}target="_blank" rel="nooperner"{%- endif -%}>{{ item.footer.cta.label }}</a>
+              {%- else -%}
+              <a href="#{{ category | lower }}">{{ category_link_text | title }}</a>
+            {%- endif -%}
+            </b>
           </footer>
         </article>
       </li>

@@ -1,23 +1,23 @@
-intro:
+header:
   heading: Full Courses
   subheading: Free full courses — taught by experts.
   benefit: Learn new skills in a day or less.
   lede: Explore courses
   topics: on design, development, accessibility, prototyping, UX, and career skills.
-  info:
-    - title: Benefits
-      items:
-        - label: 100% free self-paced online learning
-        - label: Earn a Certificate to share on your résumé and social media
-        - label: High-quality and in-depth content by industry experts
-        - label: Discuss, share, and get feedback in the course forum
-        - label: Optional homework and quizzes to sharpen your skills
-    - title: Video Lessons
-      items:
-        - label: 3–5 hours
-    - title: Course Duration
-      items:
-        - label: 12–22 hours
   promo:
     pitch: Don’t have the time?
     action: Explore our Gym Shorts.
+info:
+  - title: Benefits
+    items:
+    - label: 100% free self-paced online learning
+    - label: Earn a Certificate to share on your résumé and social media
+    - label: High-quality and in-depth content by industry experts
+    - label: Discuss, share, and get feedback in the course forum
+    - label: Optional homework and quizzes to sharpen your skills
+  - title: Video Lessons
+    items:
+    - label: 3–5 hours
+  - title: Course Duration
+    items:
+    - label: 12–22 hours

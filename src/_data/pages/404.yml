@@ -1,4 +1,4 @@
-intro:
+header:
   heading: '404: Page Not Found'
   description: <span aria-label="Waving hand emoji" role="img">👋</span> You discovered a page that doesn’t exist.
 main:
