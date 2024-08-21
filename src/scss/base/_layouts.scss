@@ -241,3 +241,17 @@
 
 }
 
+.main-panel {
+
+  article.featured-card {
+
+  > div {
+    background-color: #f8f8f8; // TODO: Add color swatch?
+
+      .topic {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+}
