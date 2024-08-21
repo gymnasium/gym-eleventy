@@ -5,19 +5,20 @@ meta:
   title: Jobs
   bodyClass: "jobs collection"
 ---
-{%- set intro = pages['jobs'].intro -%}
+{%- set header = pages['jobs'].header -%}
+{%- set cards = pages['jobs'].cards -%}
 {%- set articles = pages['jobs'].articles -%}
 
-{%- if intro.header -%}
-  {%- set header = intro.header -%}
+{%- if header -%}
   {%- include 'modules/components/header.njk' -%}
 {%- endif -%}
 
-<section class="featured">
-  {%- if intro.cards -%}
+{%- if cards -%}
+  {# TODO: can this be combined with/refactored to use an existing featured module? #}
+  <section class="featured">
     <ul class="list-unstyled">
-    {%- for idx in range(0, intro.cards.length) -%}
-      {%- set card = intro.cards[idx] -%}
+    {%- for idx in range(0, cards.length) -%}
+      {%- set card = cards[idx] -%}
       {%- set heading = card.heading -%}
       {%- set subheading = card.subheading -%}
       {%- set url = card.cta.href -%}
@@ -52,10 +53,10 @@ meta:
       </li>
     {%- endfor -%}
     </ul>
-  {%- endif -%}
   </section>
+{%- endif -%}
 
 {# Here we're omitting some object keys to be able to loop through the content fields #}
-{%- set content = pages['jobs'] | omit(['intro']) -%}
+{%- set content = pages['jobs'] | omit(['header','cards']) -%}
 
 {%- include 'modules/loader.njk' -%}

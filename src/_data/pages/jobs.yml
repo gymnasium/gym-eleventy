@@ -1,14 +1,13 @@
-intro:
-  header:
-    heading: Jobs
-    heading_type: h1
-    description: |
-      <p>Explore
-      <a href="#jobs"><b>job listings</b></a>,
-      <a href="#salary-guides"><b>salary guides</b></a>,
-      <a href="#take5-tutorials"><b>tutorials</b></a>,
-      and <a href="#articles"><b>articles</b></a>.</p>
-  cards:
+header:
+  heading: Jobs
+  heading_type: h1
+  description: |
+    <p>Explore
+    <a href="#jobs"><b>job listings</b></a>,
+    <a href="#salary-guides"><b>salary guides</b></a>,
+    <a href="#take5-tutorials"><b>tutorials</b></a>,
+    and <a href="#articles"><b>articles</b></a>.</p>
+cards:
   - heading: Salary Guides
     subheading: See How Your Salary & Benefits Stack Up
     cta:

@@ -44,10 +44,10 @@ tutorials:
       heading_type: h3
       description: Learn how to improve your website through accessibility testing in the time it takes to step away for lunch.
     links:
-    - href: https://www.youtube.com/watch?v=B1y5aNsVVLQ"
+    - href: https://www.youtube.com/watch?v=B1y5aNsVVLQ
       label: How to Improve Your Website Through Accessibility Testing (Part 1)
       description: In this live coding tutorial, you’ll learn how you can use the free Web Accessibility Evaluation Tool (WAVE) to perform a series of automated tests to improve the accessibility of a website.
-    - href: https://www.youtube.com/watch?v=NnsT90GVAVw"
+    - href: https://www.youtube.com/watch?v=NnsT90GVAVw
       label: How to Improve Your Website Through Accessibility Testing (Part 2)
       description: In this live coding tutorial, you’ll learn four common techniques for manually checking (and then fixing) accessibility issues on your websites.
   take-5:
