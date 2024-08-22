@@ -26,6 +26,7 @@ courses:
     label: View More Courses
     class: btn
   accessibility-courses:
+    schema: true
     ids:
     - id: GYM-016
     - id: GYM-007
