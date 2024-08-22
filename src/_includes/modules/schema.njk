@@ -13,9 +13,20 @@
         "@type": "Course",
         "name": "{{ title }}",
         "description": "{{ description }}",
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": [
+            "MOOC",
+            "online"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "offeredBy": "Gymnasium",
+            "price": "free"
+          }
+        },
         "image": "{{ config.urls.production }}{{ config.paths.img.og }}courses/{{ id | lowercase }}.png",
         "url": "{{ config.urls.production }}{{ path }}{{ slug }}/",
-        "position": 1,
         "provider": {
           "@type": "School",
           "name": "Gymnasium",
