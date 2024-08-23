@@ -10,27 +10,30 @@
       {%- set description = collections.catalog[item.ids[idx].id].description | strip_html -%}
       {%- set id = collections.catalog[item.ids[idx].id].id -%}
       {
-        "@type": "Course",
-        "name": "{{ title }}",
-        "description": "{{ description }}",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": [
-            "MOOC",
-            "online"
-          ],
-          "offers": {
-            "@type": "Offer",
-            "offeredBy": "Gymnasium",
-            "price": "free"
+        "@type": "ListItem",
+        "position": {{ loop.index }},
+        "item": {
+          "@type": "Course",
+          "name": "{{ title }}",
+          "description": "{{ description }}",
+          "image": "{{ config.urls.production }}{{ config.paths.img.og }}courses/{{ id | lowercase }}.png",
+          "url": "{{ config.urls.production }}{{ path }}{{ slug }}/",
+          "provider": {
+            "@type": "School",
+            "name": "Gymnasium",
+            "sameAs": "{{ config.urls.production }}"
+          },
+          "hasCourseInstance": {
+            "@type": "CourseInstance",
+            "courseMode": [
+              "MOOC",
+              "online"
+            ],
+            "offers": {
+              "@type": "Offer",
+              "price": "free"
+            }
           }
-        },
-        "image": "{{ config.urls.production }}{{ config.paths.img.og }}courses/{{ id | lowercase }}.png",
-        "url": "{{ config.urls.production }}{{ path }}{{ slug }}/",
-        "provider": {
-          "@type": "School",
-          "name": "Gymnasium",
-          "sameAs": "{{ config.urls.production }}"
         }
       }{%- if not loop.last -%},{%- endif -%}
     {%- endfor -%}
