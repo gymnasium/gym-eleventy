@@ -34,7 +34,8 @@
 {%- set src = img -%}
 {%- set srcSet = src -%}
 
-{%- set url = obj.id | course_endpoint('course_about') -%}
+{# {%- set url = obj.id | course_endpoint('course_about') -%} #}
+{%- set url = "/courses/" + slug + "/" -%}
 
 {%- set baseClass = "course " + type + ' ' + shortId | lower -%}
 

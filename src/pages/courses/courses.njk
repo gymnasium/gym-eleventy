@@ -1,0 +1,184 @@
+---js
+{
+  layout: "layouts/full-width.njk",
+  pagination: {
+    data: "courses",
+    size: 1,
+    alias: "item",
+    resolve: "values",
+    before: function(data) {
+      const items = data.filter(x => x.tags.includes('course'));
+      // console.log(items);
+      return items;
+    },
+    addAllPagesToCollections: true,
+  },
+  permalink: "courses/{{ item.title | slugify }}/",
+  eleventyComputed: {
+    nav: {
+      parent: "/courses/",
+      secondary: "courses",
+      // do a fancy work-around to construct the `gym-shorts` path if the course type is "short"
+      secondaryParent: function(data) {
+        const path = data.item.type === 'short' ? `gym-${data.item.type}s` : data.item.type;
+        return `/courses/${path}/`;
+      },
+    },
+    meta: {
+      title: "{{ item.title }} | Courses",
+      description: "{{ item.description | strip_html }}",
+      sitemapDate: "{{ item.date.toISOString() }}",
+      sitemapExclude: function(data) {
+        const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
+        return bool;
+      },
+    },
+  },
+}
+---
+
+<article class="course-about">
+  <header id="{{ item.id }}" class="course-header {{ item.id }} bg-mono-400">
+    <div class="container grid-col-1-2">
+      <figure
+        style='border-image-source: url("/img/courses/svg/{{ item.id | lowercase }}.svg");'
+      >
+        <img
+          src="{{config.cms_url}}{{item.img}}"
+          alt="Course image for {{item.title}}"
+        />
+      </figure>
+      <div class="course-metabar">
+        <div class="course-title"><h1>{{ item.title }}</h1></div>
+        <div class="course-type"><p>{{ course_type[item.type].name }}</p></div>
+        <h4 class="course-id" hidden>{{ item.id }}</h4>
+        <div class="course-cta"><button class="btn">Go to Course</button></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container grid-sidebar">
+    <div class="content">
+      <section class="course-intro"><p>{{ item.intro | safe }}</p></section>
+      <section class="course-preview">
+        <h2>Course Preview</h2>
+
+        {%- if item.preview_video_src -%}
+          {%- youtube item.preview_video_src -%}
+        {%- endif -%}
+        {# <div class="embed-responsive embed-responsive-16by9 iframe-video-holder ratio-16-9"><iframe width="100%" height="425" frameborder="0" src="https://www.youtube.com/embed/v6TTlIou8UA" allow="encrypted-media" allowfullscreen="" title="Modern Web Design Preview"></iframe>
+        </div> #}
+      </section>
+      <section class="course-about">
+
+      </section>
+      <section class="course-outline">
+
+      </section>
+      <section class="course-prerequisites">
+
+      </section>
+      <section class="course-requirements">
+
+      </section>
+      {# TODO: sort out the retired message business #} {%- if (not item.live)
+      and (item.retired_message) -%}
+      <p>{{ item.description | safe }}</p>
+
+      {%- if item.retired_message[1] -%}
+      <p>{{ item.retired_message[1] | safe }}</p>
+      {%- endif -%} {%- if item.retired_message[2] -%}
+      <p>{{ item.retired_message[2] | safe }}</p>
+      {%- endif -%} {%- else -%}
+      <p>{{ item.description | safe }}</p>
+      {%- endif -%} {# Attempt to replicate the existing course about page
+      content #} {%- if item.intro -%}
+      <p>{{ item.intro | safe }}</p>
+      {%- endif -%} {%- if item.preview -%}
+      <h2>
+        {% if item.preview.heading %}{{ item.preview.heading }}{% else
+        %}Preview{% endif %}
+      </h2>
+
+      {%- if item.preview.video_id -%} {%- youtube item.preview.video_id -%} {%-
+      endif -%} {%- endif -%} {%- if item.about -%}
+      <h2>
+        {% if item.about.heading %}{{ item.about.heading }}{% else %}About{%
+        endif %}
+      </h2>
+
+      {%- if item.about.description -%}
+      <p>{{ item.about.description }}</p>
+      {%- endif -%} {%- endif -%} {%- if item.outline -%}
+      <h2>
+        {% if item.outline.heading %}{{ item.outline.heading }}{% else
+        %}Outline{% endif %}
+      </h2>
+
+      {%- if item.outline.description -%}
+      <p>{{ item.outline.description }}</p>
+      {%- endif -%} {%- if item.outline.list -%}
+      <ul>
+        {%- for idx in range(0, item.outline.list.length) -%}
+        <li>
+          <h3>{{ item.outline.list[idx].heading }}</h3>
+          <p>{{ item.outline.list[idx].description }}</p>
+        </li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%} {%- endif -%} {%- if item.audience -%}
+      <h2>
+        {% if item.audience.heading %}{{ item.audience.heading }}{% else
+        %}Audience{% endif %}
+      </h2>
+      <ul>
+        {%- for idx in range(0, item.audience.length) -%}
+        <li>{{ item.audience[idx].label }}</li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%} {%- if item.skills -%}
+      <h2>
+        {% if item.skills.heading %}{{ item.skills.heading }}{% else %}Skills{%
+        endif %}
+      </h2>
+      <ul>
+        {%- for idx in range(0, item.skills.length) -%}
+        <li>{{ item.skills[idx].label }}</li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%} {%- if item.prerequisites -%}
+      <h2>
+        {% if item.prerequisites.heading %}{{ item.prerequisites.heading }}{%
+        else %}Prerequisites{% endif %}
+      </h2>
+      <ul>
+        {%- for idx in range(0, item.prerequisites.length) -%}
+        <li>{{ item.prerequisites[idx].label | safe }}</li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%} {%- if item.requirements -%}
+      <h2>
+        {% if item.requirements.heading %}{{ item.requirements.heading }}{% else
+        %}Requirements{% endif %}
+      </h2>
+      <ul>
+        {%- for idx in range(0, item.requirements.list.length) -%}
+        <li>{{ item.requirements.list[idx].label | safe }}</li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </div>
+    <aside>
+      <h2>Meet the Instructor</h2>
+      <img
+        src="{{ bios[item.instructor].img }}"
+        alt="Image of {{ bios[item.instructor].name }}"
+      />
+      <h3>{{ bios[item.instructor].name }}</h3>
+      <p>{{ bios[item.instructor].description | safe }}</p>
+
+      {%- if bios[item.instructor].extended_description -%} {{
+      bios[item.instructor].extended_description | safe }} {%- endif -%}
+    </aside>
+  </div>
+</article>

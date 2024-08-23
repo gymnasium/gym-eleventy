@@ -28,7 +28,7 @@ skill_level: "Intermediate"
 # Begin Overview
 intro: >
   <strong><cite>Modern Web Design</cite></strong> will prepare you to be a front-end developer by walking you through the basics of HTML, CSS, and JavaScript.
-preview_video_src: https://www.youtube.com/embed/v6TTlIou8UA
+preview_video_src: v6TTlIou8UA
 about: >
   <p>This course is an introduction to front-end development for the web. You will learn how to mark up content with HTML, use CSS as a design tool, and add interactivity to your web pages with JavaScript. You will also learn the basics of building a responsive website for mobile devices and tablets, as well as for the desktop.</p>
 outline:
