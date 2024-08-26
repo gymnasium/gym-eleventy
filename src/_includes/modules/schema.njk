@@ -4,14 +4,16 @@
   "@type": "ItemList",
   "itemListElement": [
     {%- for idx in range(0, item.ids.length) -%}
-      {%- set path = collections.catalog[item.ids[idx].id].id | get_path -%}
-      {%- set slug = collections.catalog[item.ids[idx].id].title | strip_html | slugify -%}
-      {%- set title = collections.catalog[item.ids[idx].id].title | strip_html -%}
-      {%- set description = collections.catalog[item.ids[idx].id].description | strip_html -%}
-      {%- set id = collections.catalog[item.ids[idx].id].id -%}
+      {%- set course = collections.catalog[item.ids[idx].id] -%}
+      {%- set path = course.id | get_path -%}
+      {%- set slug = course.title | strip_html | slugify -%}
+      {%- set title = course.title | strip_html -%}
+      {%- set description = course.description | strip_html -%}
+      {%- set id = course.id -%}
       {
         "@type": "ListItem",
         "position": {{ loop.index }},
+        "url": "{{ config.urls.production }}{{ path }}{{ slug }}/",
         "item": {
           "@type": "Course",
           "name": "{{ title }}",
@@ -26,9 +28,10 @@
           "hasCourseInstance": {
             "@type": "CourseInstance",
             "courseMode": [
-              "MOOC",
-              "online"
+              "Online",
+              "MOOC"
             ],
+            "courseWorkload": "{{ course.duration_8601_format }}",
             "offers": {
               "@type": "Offer",
               "price": "free"

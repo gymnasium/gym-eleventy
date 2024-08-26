@@ -24,6 +24,7 @@ audience:
   - label: "Creatives"
 lessons_duration: "5 hours"
 completion_duration: "Up to 22 hours"
+duration_8601_format: PT22H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >

@@ -30,6 +30,7 @@ audience:
   - label: "Front-End Developers"
 lessons_duration: "2 hours"
 completion_duration: "Up to 5 hours"
+duration_8601_format: PT5H
 skill_level: "Beginner"
 # Begin Overview
 intro: >

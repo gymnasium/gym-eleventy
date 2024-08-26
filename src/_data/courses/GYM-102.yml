@@ -25,6 +25,7 @@ audience:
   - label: "JavaScript Developers"
 lessons_duration: "3.5 hours"
 completion_duration: "Up to 17 hours"
+duration_8601_format: PT17H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >

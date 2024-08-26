@@ -24,6 +24,7 @@ audience:
   - label: "WordPress beginners"
 lessons_duration: "1 hour"
 completion_duration: "Up to 3 hours"
+duration_8601_format: PT3H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
