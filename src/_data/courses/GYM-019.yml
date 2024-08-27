@@ -26,6 +26,7 @@ audience:
   - label: "Designers with coding skills"
 lessons_duration: "1 hour"
 completion_duration: "Up to 1.5 hours"
+duration_8601_format: PT1.5H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
