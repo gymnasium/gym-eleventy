@@ -59,49 +59,76 @@
 
   <div class="container grid-sidebar">
     <div class="content">
-      <section class="course-intro"><p>{{ item.intro | safe }}</p></section>
+      <section class="course-intro">
+        {%- if item.intro -%}
+          <p>{{ item.intro | safe }}</p>
+        {%- endif -%}
+      </section>
       <section class="course-preview">
-        <h2>Course Preview</h2>
+        <h2>{{ config.msg.mfe.course_about.headings.preview }}</h2>
 
+        {# TODO: fix shortcode to support all the embed variations #}
         {%- if item.preview_video_src -%}
           {%- youtube item.preview_video_src -%}
         {%- endif -%}
         {# <div class="embed-responsive embed-responsive-16by9 iframe-video-holder ratio-16-9"><iframe width="100%" height="425" frameborder="0" src="https://www.youtube.com/embed/v6TTlIou8UA" allow="encrypted-media" allowfullscreen="" title="Modern Web Design Preview"></iframe>
         </div> #}
+
       </section>
+
       <section class="course-about">
-
+        <h2>{{ item.title }}</h2>
+        {{ item.about | safe }}
       </section>
-      <section class="course-outline">
 
+      <section class="course-outline">
+        <h2>{{ config.msg.mfe.course_about.headings.outline }}</h2>
+        {%- if item.outline -%}
+        <ul>
+          {%- for idx in range(0, item.outline.length) -%}
+          <li>
+            <h3>{{ item.outline[idx].label }}</h3>
+            <p>{{ item.outline[idx].description }}</p>
+          </li>
+          {%- endfor -%}
+        </ul>
+        {%- endif -%}
       </section>
       <section class="course-prerequisites">
-
+        <h2>{{ config.msg.mfe.course_about.headings.prerequisites }}</h2>
       </section>
       <section class="course-requirements">
-
+        <h2>{{ config.msg.mfe.course_about.headings.requirements }}</h2>
       </section>
-      {# TODO: sort out the retired message business #} {%- if (not item.live)
-      and (item.retired_message) -%}
-      <p>{{ item.description | safe }}</p>
 
-      {%- if item.retired_message[1] -%}
-      <p>{{ item.retired_message[1] | safe }}</p>
-      {%- endif -%} {%- if item.retired_message[2] -%}
-      <p>{{ item.retired_message[2] | safe }}</p>
-      {%- endif -%} {%- else -%}
-      <p>{{ item.description | safe }}</p>
-      {%- endif -%} {# Attempt to replicate the existing course about page
-      content #} {%- if item.intro -%}
-      <p>{{ item.intro | safe }}</p>
-      {%- endif -%} {%- if item.preview -%}
+      {# TODO: sort out the retired message business #}
+      {%- if (not item.live) and (item.retired_message) -%}
+        <p>{{ item.description | safe }}</p>
+
+        {%- if item.retired_message[1] -%}
+          <p>{{ item.retired_message[1] | safe }}</p>
+        {%- endif -%}
+        {%- if item.retired_message[2] -%}
+          <p>{{ item.retired_message[2] | safe }}</p>
+        {%- endif -%} 
+
+      {%- else -%}
+        <p>{{ item.description | safe }}</p>
+      {%- endif -%}
+      
+      {# Attempt to replicate the existing course about page
+      content #}
+      
+      {%- if item.preview -%}
       <h2>
         {% if item.preview.heading %}{{ item.preview.heading }}{% else
         %}Preview{% endif %}
       </h2>
 
       {%- if item.preview.video_id -%} {%- youtube item.preview.video_id -%} {%-
-      endif -%} {%- endif -%} {%- if item.about -%}
+      endif -%} {%- endif -%}
+      
+      {%- if item.about -%}
       <h2>
         {% if item.about.heading %}{{ item.about.heading }}{% else %}About{%
         endif %}
@@ -117,26 +144,12 @@
 
       {%- if item.outline.description -%}
       <p>{{ item.outline.description }}</p>
-      {%- endif -%} {%- if item.outline.list -%}
-      <ul>
-        {%- for idx in range(0, item.outline.list.length) -%}
-        <li>
-          <h3>{{ item.outline.list[idx].heading }}</h3>
-          <p>{{ item.outline.list[idx].description }}</p>
-        </li>
-        {%- endfor -%}
-      </ul>
-      {%- endif -%} {%- endif -%} {%- if item.audience -%}
-      <h2>
-        {% if item.audience.heading %}{{ item.audience.heading }}{% else
-        %}Audience{% endif %}
-      </h2>
-      <ul>
-        {%- for idx in range(0, item.audience.length) -%}
-        <li>{{ item.audience[idx].label }}</li>
-        {%- endfor -%}
-      </ul>
-      {%- endif -%} {%- if item.skills -%}
+      {%- endif -%}
+      
+      {%- endif -%} 
+      
+      
+      {%- if item.skills -%}
       <h2>
         {% if item.skills.heading %}{{ item.skills.heading }}{% else %}Skills{%
         endif %}
@@ -169,6 +182,12 @@
       {%- endif -%}
     </div>
     <aside>
+      <ul>
+        {%- for idx in range(0, item.audience.length) -%}
+        <li>{{ item.audience[idx].label }}</li>
+        {%- endfor -%}
+      </ul>
+
       <h2>Meet the Instructor</h2>
       <img
         src="{{ bios[item.instructor].img }}"
