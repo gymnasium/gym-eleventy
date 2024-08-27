@@ -24,6 +24,7 @@ audience:
   - label: "Digital Creatives"
 lessons_duration: "1 hour"
 completion_duration: "Up to 2 hours"
+duration_8601_format: PT2H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >

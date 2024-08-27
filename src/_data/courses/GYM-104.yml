@@ -26,6 +26,7 @@ audience:
   - label: "jQuery Developers"
 lessons_duration: "5 hours"
 completion_duration: "Up to 21 hours"
+duration_8601_format: PT21H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >

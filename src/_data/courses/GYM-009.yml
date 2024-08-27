@@ -24,6 +24,7 @@ audience:
   - label: "Drupal 8 beginners"
 lessons_duration: "1 hour"
 completion_duration: "Up to 2.5 hours"
+duration_8601_format: PT2.5H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
