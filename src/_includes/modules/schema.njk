@@ -5,13 +5,16 @@
   "itemListElement": [
     {%- for idx in range(0, item.ids.length) -%}
       {%- set course = collections.catalog[item.ids[idx].id] -%}
-      {%- set path = course.id | get_path -%}
-      {%- set url = course.id | course_endpoint('course_about') -%}
-      {%- set slug = course.title | strip_html | slugify -%}
-      {%- set title = course.title | strip_html -%}
-      {%- set description = course.description | strip_html -%}
       {%- set id = course.id -%}
+      {%- set path = id | get_path -%}
+      {%- set url = id | course_endpoint('course_about') -%}
+      {%- set title = course.title | strip_html -%}
+      {%- set slug = title | slugify -%}
+      {%- set description = course.description | strip_html -%}
       {%- set bio = bios[course.instructor] -%}
+      {%- set bio_name = bio.name -%}
+      {%- set bio_description = bio.description | strip_html -%}
+      {%- set bio_img = config.urls.base_url + bio.img -%}
       {
         "@type": "ListItem",
         "position": {{ loop.index }},
@@ -19,7 +22,7 @@
           "@type": "Course",
           "name": "{{ title }}",
           "description": "{{ description }}",
-          "image": "{{ config.urls.production }}{{ config.paths.img.og }}courses/{{ id | lowercase }}.svg",
+          "image": "{{ config.urls.base_url }}{{ config.paths.img.og }}courses/{{ id | lowercase }}.png",
           "url": "{{ url }}",
           "provider": {
             "@type": "School",
@@ -33,9 +36,9 @@
             "educationalLevel": "",
             "instructor": [{
               "@type": "Person",
-              "name": "{{ bio.name }}",
-              "description": "{{ bio.description }}",
-              "image": "{{ config.urls.base_url }}{{ bio.img }}"
+              "name": "{{ bio_name }}",
+              "description": "{{ bio_description }}",
+              "image": "{{ bio_img }}"
             }]
           },
           "offers": {
