@@ -6,20 +6,21 @@
     {%- for idx in range(0, item.ids.length) -%}
       {%- set course = collections.catalog[item.ids[idx].id] -%}
       {%- set path = course.id | get_path -%}
+      {%- set url = course.id | course_endpoint('course_about') -%}
       {%- set slug = course.title | strip_html | slugify -%}
       {%- set title = course.title | strip_html -%}
       {%- set description = course.description | strip_html -%}
       {%- set id = course.id -%}
+      {%- set bio = bios[course.instructor] -%}
       {
         "@type": "ListItem",
         "position": {{ loop.index }},
-        "url": "{{ config.urls.production }}{{ path }}{{ slug }}/",
         "item": {
           "@type": "Course",
           "name": "{{ title }}",
           "description": "{{ description }}",
-          "image": "{{ config.urls.production }}{{ config.paths.img.og }}courses/{{ id | lowercase }}.png",
-          "url": "{{ config.urls.production }}{{ path }}{{ slug }}/",
+          "image": "{{ config.urls.production }}{{ config.paths.img.og }}courses/{{ id | lowercase }}.svg",
+          "url": "{{ url }}",
           "provider": {
             "@type": "School",
             "name": "Gymnasium",
@@ -27,15 +28,19 @@
           },
           "hasCourseInstance": {
             "@type": "CourseInstance",
-            "courseMode": [
-              "Online",
-              "MOOC"
-            ],
+            "courseMode": "Online",
             "courseWorkload": "{{ course.duration_8601_format }}",
-            "offers": {
-              "@type": "Offer",
-              "price": "free"
-            }
+            "educationalLevel": "",
+            "instructor": [{
+              "@type": "Person",
+              "name": "{{ bio.name }}",
+              "description": "{{ bio.description }}",
+              "image": "{{ config.urls.base_url }}{{ bio.img }}"
+            }]
+          },
+          "offers": {
+            "@type": "Offer",
+            "category": "free"
           }
         }
       }{%- if not loop.last -%},{%- endif -%}
