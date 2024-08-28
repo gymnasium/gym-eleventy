@@ -182,13 +182,14 @@
       {%- endif -%}
     </div>
     <aside>
+      <h2>{{ config.msg.mfe.course_about.headings.audience }}</h2>
       <ul>
         {%- for idx in range(0, item.audience.length) -%}
         <li>{{ item.audience[idx].label }}</li>
         {%- endfor -%}
       </ul>
 
-      <h2>Meet the Instructor</h2>
+      <h2>{{ config.msg.mfe.course_about.headings.instructor }}</h2>
       <img
         src="{{ bios[item.instructor].img }}"
         alt="Image of {{ bios[item.instructor].name }}"
