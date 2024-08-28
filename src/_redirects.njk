@@ -4,7 +4,7 @@ eleventyExcludeFromCollections: true
 ---
 {# modified, via @https://willvincent.com/2022/07/27/redirects-with-11ty-and-netlify/ #}
 {%- for id, course in courses -%}
-{{ course.id | course_endpoint }}about  {{ course.id | course_endpoint('course_about') }}  301
+{{ course.id | course_endpoint }}about  {{ config.urls.base_url }}/courses/{{ course.title | slugify }}/  301
 {{ course.id | course_endpoint }}info  {{ course.id | course_endpoint('learning') }}  301
 {{ course.id | course_endpoint }}courseware  {{ course.id | course_endpoint('learning') }}  301
 {%- if not loop.last -%}
