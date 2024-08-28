@@ -1,15 +1,26 @@
----
-layout: layouts/main.njk
-permalink: /courses/full/
-collection: course
-meta:
-  title: Full Courses
-  sitemapPriority: 0.7
-  sitemapChangeFreq: weekly
-  bodyClass: "courses courses-full"
-nav:
-  secondary: courses
-  parent: "/courses/"
+---js
+{
+  layout: "layouts/main.njk",
+  permalink: "/courses/full/",
+  meta: {
+    title: "Courses",
+    sitemapPriority: 0.7,
+    sitemapChangeFreq: "weekly",
+    bodyClass: "courses courses-full",
+  },
+  eleventyComputed: {
+    meta: {
+      img: (data) => {
+        return `${data.config.paths.img.og}courses/index.png`;
+      },
+    }
+  },
+  collection: "course",
+  nav: {
+    secondary: "courses",
+    parent: "/courses/",
+  }
+}
 ---
 {%- set header = pages['full'].header -%}
 {%- set info = pages['full'].info -%}
