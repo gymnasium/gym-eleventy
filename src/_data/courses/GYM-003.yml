@@ -34,7 +34,8 @@ skill_level: "Intermediate"
 # Begin Overview
 intro: >
   <strong><cite>Grid Layout in Bootstrap 3</cite></strong> will teach you how to get up to speed with Twitter Bootstrap's grid layout system and learn how to build a responsive layout that looks great on multiple screen sizes and devices.
-preview_video_src:
+preview_video_id: 
+preview_video_duration:
 about: >
   <p>In this course you will learn how to get up and running with Bootstrap 3 in a matter of minutes and build a responsive layout that looks great on multiple screen sizes and devices. We will focus specifically on grid layout in Bootstrap with an emphasis on prototyping. By the end of the course you will be able to use Bootstrap for virtually any layout you can imagine and have a strategy for moving it quickly into production.</p>
 outline:

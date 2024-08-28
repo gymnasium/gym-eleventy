@@ -76,8 +76,8 @@
         <h2>{{ config.msg.mfe.course_about.headings.preview }}</h2>
 
         {# TODO: fix shortcode to support all the embed variations #}
-        {%- if item.preview_video_src -%}
-          {%- youtube item.preview_video_src -%}
+        {%- if item.preview_video_id -%}
+          {%- youtube item.preview_video_id -%}
         {%- endif -%}
         {# <div class="embed-responsive embed-responsive-16by9 iframe-video-holder ratio-16-9"><iframe width="100%" height="425" frameborder="0" src="https://www.youtube.com/embed/v6TTlIou8UA" allow="encrypted-media" allowfullscreen="" title="Modern Web Design Preview"></iframe>
         </div> #}

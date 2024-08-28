@@ -36,7 +36,8 @@ skill_level: "Beginner"
 # Begin Overview
 intro: >
   <strong><cite>Introducing Sketch for UX and UI</cite></strong> will teach you how to use Sketch tools and features to build an interactive prototype for a mobile website.
-preview_video_src:
+preview_video_id: 
+preview_video_duration:
 about: >
   <p>In this course, you will learn the basics of creating artwork in Bohemian Sketch, with an emphasis on building wireframes, mockups, and prototypes. We will focus specifically on how to take advantage of Sketch’s Artboard, Symbols, and Styles features, to create a prototype for a mobile website. Along the way, you’ll discover useful tips and tricks using Nested Symbols, Group Resizing and the new Data feature.</p>
   <p>The course will also introduce you to the Sketch plugin ecosystem and show you how Sketch makes exporting assets fun. Finally, we’ll demonstrate how to make static wireframes and mockups within Sketch and export them to Sketch Cloud,a service which allows anyone to view, download, and comment on Sketch documents.</p>

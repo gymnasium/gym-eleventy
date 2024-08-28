@@ -35,7 +35,8 @@ skill_level: "Beginner"
 # Begin Overview
 intro: >
   <strong><cite>Coding for Designers</cite></strong> is a free, self-paced introductory course to HTML and CSS for designers with graphic design experience. <em>No prior web or coding experience is necessary</em>.
-preview_video_src:
+preview_video_id:
+preview_video_duration:
 about: >
   <p>Students will learn how to translate graphic design to the web; about common pitfalls many print designers face when moving to the web; the basics of how HTML, CSS, and JavaScript work together; how to prototype designs into working web pages; and how to troubleshoot layout and code problems when they come up.</p>
 outline:

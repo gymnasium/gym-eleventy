@@ -1,4 +1,4 @@
-{%- if item -%}
+{%- if item and item.live -%}
 {%- set bio_name = "" -%}
 {%- set bio_description = "" -%}
 {%- set bio_img = "" -%}
@@ -36,24 +36,30 @@
   "teaches": ["{{ item.description }}"],
   "inLanguage": "en",
   "availableLanguage": ["en"],
-  "educationalCredentialAwarded": [{
+  
+  {#- "educationalCredentialAwarded": [{
     "@type": "EducationalOccupationalCredential",
-    "name": "CourseProvider Certificate",
+    "name": "Gymnasium Certificate",
     "url": "www.example.com",
     "credentialCategory": "Certificate",
     "offers": [{
       "@type": "Offer",
       "category": "Free"
     }]
-  }],
-  {%- if item.preview_video_src -%}
+  }], -#}
+
+  {%- if item.preview_video_id -%}
   "video": {
     "@type": "VideoObject",
     "name": "Video Preview for {{ item.title }}",
     "description": "A video previewing Gymnasium's free {{ item.title }} course.",
-    "uploadDate": "2024-03-28T08:00:00+08:00",
-    "contentUrl": "https://www.youtube-nocookie.com/embed/{{ item.preview_video_src }}",
-    "thumbnailUrl": "www.example.com/thumbnailurl.jpg"
+    "uploadDate": "{{ item.date }}",
+    "duration": "{{ item.preview_video_duration }}",
+    "url": "https://www.youtube.com/watch?v={{ item.preview_video_id }}",
+    "contentUrl": "https://www.youtube.com/v/{{ item.preview_video_id }}",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/{{ item.preview_video_id }}",
+    "thumbnailUrl": "https://i.ytimg.com/vi/{{ item.preview_video_id }}/hqdefault.jpg",
+    "isFamilyFriendly": "TRUE"
   },{%- endif -%}
   "hasCourseInstance": {
     "@type": "CourseInstance",
