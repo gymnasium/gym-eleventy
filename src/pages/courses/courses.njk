@@ -96,9 +96,19 @@
       </section>
       <section class="course-prerequisites">
         <h2>{{ config.msg.mfe.course_about.headings.prerequisites }}</h2>
+        <ul>
+        {%- for idx in range(0, item.prerequisites.length) -%}
+          <li>{{ item.prerequisites[idx].label | safe }}</li>
+        {%- endfor -%}
+        </ul>
       </section>
       <section class="course-requirements">
         <h2>{{ config.msg.mfe.course_about.headings.requirements }}</h2>
+        <ul>
+        {%- for idx in range(0, item.requirements.list.length) -%}
+          <li>{{ item.requirements.list[idx].label | safe }}</li>
+        {%- endfor -%}
+        </ul>
       </section>
 
       {# TODO: sort out the retired message business #}
@@ -115,71 +125,7 @@
       {%- else -%}
         <p>{{ item.description | safe }}</p>
       {%- endif -%}
-      
-      {# Attempt to replicate the existing course about page
-      content #}
-      
-      {%- if item.preview -%}
-      <h2>
-        {% if item.preview.heading %}{{ item.preview.heading }}{% else
-        %}Preview{% endif %}
-      </h2>
 
-      {%- if item.preview.video_id -%} {%- youtube item.preview.video_id -%} {%-
-      endif -%} {%- endif -%}
-      
-      {%- if item.about -%}
-      <h2>
-        {% if item.about.heading %}{{ item.about.heading }}{% else %}About{%
-        endif %}
-      </h2>
-
-      {%- if item.about.description -%}
-      <p>{{ item.about.description }}</p>
-      {%- endif -%} {%- endif -%} {%- if item.outline -%}
-      <h2>
-        {% if item.outline.heading %}{{ item.outline.heading }}{% else
-        %}Outline{% endif %}
-      </h2>
-
-      {%- if item.outline.description -%}
-      <p>{{ item.outline.description }}</p>
-      {%- endif -%}
-      
-      {%- endif -%} 
-      
-      
-      {%- if item.skills -%}
-      <h2>
-        {% if item.skills.heading %}{{ item.skills.heading }}{% else %}Skills{%
-        endif %}
-      </h2>
-      <ul>
-        {%- for idx in range(0, item.skills.length) -%}
-        <li>{{ item.skills[idx].label }}</li>
-        {%- endfor -%}
-      </ul>
-      {%- endif -%} {%- if item.prerequisites -%}
-      <h2>
-        {% if item.prerequisites.heading %}{{ item.prerequisites.heading }}{%
-        else %}Prerequisites{% endif %}
-      </h2>
-      <ul>
-        {%- for idx in range(0, item.prerequisites.length) -%}
-        <li>{{ item.prerequisites[idx].label | safe }}</li>
-        {%- endfor -%}
-      </ul>
-      {%- endif -%} {%- if item.requirements -%}
-      <h2>
-        {% if item.requirements.heading %}{{ item.requirements.heading }}{% else
-        %}Requirements{% endif %}
-      </h2>
-      <ul>
-        {%- for idx in range(0, item.requirements.list.length) -%}
-        <li>{{ item.requirements.list[idx].label | safe }}</li>
-        {%- endfor -%}
-      </ul>
-      {%- endif -%}
     </div>
     <aside>
       <h2>{{ config.msg.mfe.course_about.headings.audience }}</h2>
