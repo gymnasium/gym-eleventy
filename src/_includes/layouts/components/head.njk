@@ -45,7 +45,7 @@
 
 {# TODO: figure out how to include schema in the head automatically #}
 
-{%- if meta.schema.include -%}
+{%- if meta.schema -%}
 <!-- start schema -->
 {%- include 'modules/schema/' + meta.schema.type + '.njk' ignore missing -%}
 <!-- end schema -->
