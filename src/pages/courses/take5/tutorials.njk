@@ -23,6 +23,9 @@
     meta: {
       title: "{{ item.title }} | Tutorials",
       description: "{{ item.description | strip_html }}",
+      img: (data) => {
+        return `${data.config.paths.img.og}tutorials/${data.item.id.toLowerCase()}.png`;
+      },
       sitemapDate: "{{ item.date.toISOString() }}",
       sitemapExclude: function(data) {
         const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
