@@ -36,18 +36,16 @@
   "teaches": ["{{ item.description }}"],
   "inLanguage": "en",
   "availableLanguage": ["en"],
-  
-  {#- "educationalCredentialAwarded": [{
+  "educationalCredentialAwarded": [{
     "@type": "EducationalOccupationalCredential",
-    "name": "Gymnasium Certificate",
-    "url": "www.example.com",
-    "credentialCategory": "Certificate",
+    "name": "{{ item.title }} {{ item.credential | title }}",
+    {# "url": "{{ config.urls.production }}", #}
+    "credentialCategory": "{{ item.credential }}",
     "offers": [{
       "@type": "Offer",
       "category": "Free"
     }]
-  }], -#}
-
+  }],
   {%- if item.preview_video_id -%}
   "video": {
     "@type": "VideoObject",

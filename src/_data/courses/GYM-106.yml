@@ -4,6 +4,7 @@ date: 2019-10-28T00:00:00-04:00
 color: green
 type: full
 path_slug: full
+credential: certificate
 tags:
   - course
   - full
