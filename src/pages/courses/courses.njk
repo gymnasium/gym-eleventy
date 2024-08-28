@@ -25,6 +25,10 @@
       },
     },
     meta: {
+      bodyClass: function(data) {
+        const slug = data.item.title.toLowerCase().replaceAll(' ','-');
+        return `course-about ${slug}`;
+      },
       title: "{{ item.title }} | Courses",
       description: "{{ item.description | strip_html }}",
       sitemapDate: "{{ item.date.toISOString() }}",
