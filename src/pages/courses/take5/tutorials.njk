@@ -21,7 +21,7 @@
   },
   eleventyComputed: {
     meta: {
-      title: "{{ item.title }} | Tutorials",
+      title: "{{ item.title }} | Take 5 Tutorials",
       description: "{{ item.description | strip_html }}",
       img: (data) => {
         return `${data.config.paths.img.og}tutorials/${data.item.id.toLowerCase()}.png`;
