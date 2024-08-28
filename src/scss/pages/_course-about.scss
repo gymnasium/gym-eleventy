@@ -11,6 +11,10 @@
 @use 'mfe/root';
 @use 'mfe/buttons';
 
+// TODO: remove after refactoring the main element padding thing, etc
+.course-about main {
+  padding-top: 0;
+}
 
 .course-metabar {
   // Anything to add here?
