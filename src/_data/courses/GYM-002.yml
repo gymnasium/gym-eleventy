@@ -37,7 +37,7 @@ skill_level: "Intermediate"
 # Begin Overview
 intro: >
   <strong><cite>Introducing Node.JS</cite></strong> will teach you the basics of Node.js through the example of building a sample "social profile" form.
-preview_video_id: 
+preview_video_id:
 preview_video_duration:
 about: >
   <p>This course will describe the benefits of using Node.Js and walk through a sample project. Concepts covered include installing Node and Express, working with Jade, reading and writing data from a JSON file, as well as storing references in JSON data. By the end of the course you will have a solid overview of the benefits of using Node.js and a starting point for integrating Node into your workflow.</p>

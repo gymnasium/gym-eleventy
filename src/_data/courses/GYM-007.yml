@@ -33,7 +33,7 @@ skill_level: "Intermediate"
 # Begin Overview
 intro: >
   <strong><cite>Structuring and Organizing HTML5 Forms</cite></strong> will teach you some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes. You'll learn how to make these forms mobile- and desktop-compatible as well.
-preview_video_id: 
+preview_video_id:
 preview_video_duration:
 about: >
   <p>Coding a form correctly on your websites is extremely important because forms typically fulfill a call to action- we ask the users to sign up for a newsletter, email with questions, purchase a product, register for services, and so much more. Forms that are coded incorrectly or that use outdated standards often result in a loss of usability, which in turn can lead to fewer sales, contacts, or any of the other actions we ask our users to perform.</p>
