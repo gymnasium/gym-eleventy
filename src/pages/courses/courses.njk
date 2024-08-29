@@ -61,30 +61,30 @@
         />
       </figure>
 
-      {# TODO: sort out the retired message business #}
-      {%- if (not item.live) and (item.retired_message) -%}
-        <p>{{ item.description | safe }}</p>
-
-        {%- if item.retired_message[1] -%}
-          <p>{{ item.retired_message[1] | safe }}</p>
-        {%- endif -%}
-        {%- if item.retired_message[2] -%}
-          <p>{{ item.retired_message[2] | safe }}</p>
-        {%- endif -%} 
-
-      {%- else -%}
-
-      {%- endif -%}
-
       <div class="course-metabar">
         <div class="course-title"><h1>{{ item.title }}</h1></div>
         <div class="course-type"><p>{{ course_type[item.type].name }}</p></div>
         <h4 class="course-id" hidden>{{ item.id }}</h4>
+
+        {# For live courses showing an advance course retirement notice #}
+        {%- if (item.live) and (item.retired_message.pre) -%}
+          {%- if item.retired_message.pre -%}
+            <p>{{ item.retired_message.pre | safe }}</p>
+          {%- endif -%}
+        {%- endif -%}
+
+        {# For non-live courses displaying a post retirement notice #}
+        {%- if (not item.live) and (item.retired_message.post) -%}
+          {%- if item.retired_message.post -%}
+            <p>{{ item.retired_message.post | safe }}</p>
+          {%- endif -%} 
+        {%- endif -%}
+
         <div class="course-cta">
           {%- if (item.live) -%}
           <a href="{{ item.id | course_endpoint('learning') }}" class="btn">Go to Course</a>
           {%- else -%}
-          <button disabled>Enrollment is Closed</button>
+          <button disabled class="disabled">Enrollment is Closed</button>
           {%- endif -%}
         </div>
       </div>
@@ -98,17 +98,16 @@
           <p>{{ item.intro | safe }}</p>
         {%- endif -%}
       </section>
+      
+      {%- if item.preview_video_id -%}
       <section class="course-preview">
         <h2>{{ config.msg.mfe.course_about.headings.preview }}</h2>
 
         {# TODO: fix shortcode to support all the embed variations #}
-        {%- if item.preview_video_id -%}
-          {%- youtube item.preview_video_id -%}
-        {%- endif -%}
-        {# <div class="embed-responsive embed-responsive-16by9 iframe-video-holder ratio-16-9"><iframe width="100%" height="425" frameborder="0" src="https://www.youtube.com/embed/v6TTlIou8UA" allow="encrypted-media" allowfullscreen="" title="Modern Web Design Preview"></iframe>
-        </div> #}
+        {%- youtube item.preview_video_id, item.title + ' Preview' -%}
 
       </section>
+      {%- endif -%}
 
       <section class="course-about">
         <h2>{{ item.title }}</h2>
