@@ -12,9 +12,15 @@
 {%- if meta.img -%}
   {%- set metaImg -%}{{ config.urls.base_url }}{{ meta.img }}{%- endset -%}
 {%- endif -%}
+{%- set metaRobots = "index, follow" -%}
+{%- if meta.robots -%}
+  {%- set metaRobots = meta.robots -%}
+{%- endif -%}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ config.meta.title }}</title>
+<meta name="robots" content="noai, noimageai">
+<meta name="robots" content="{{ metaRobots }}">
 <meta name="author" content="{{ metaAuthor }}">
 <meta property="og:site_name" content="{{ metaAuthor }}">
 <meta name="twitter:title" property="og:title" content="{{ metaAuthor }}">
@@ -32,7 +38,6 @@
 
 <meta name="generator" content="{{ eleventy.generator }}">
 
-{# TODO: add OG meta #}
 <meta content="ie=edge" http-equiv=X-UA-Compatible>
 <link href="/favicon.svg" rel="icon" type="image/svg+xml">
 <link rel="stylesheet" href="{{ '/css/global.css' | cachebust }}" />
