@@ -3,6 +3,8 @@ title: "JavaScript and jQuery Survival Guide"
 date: 2019-10-28T00:00:00-04:00
 color: purple
 type: full
+path_slug: full
+credential: certificate
 tags:
   - course
   - full
@@ -31,7 +33,8 @@ skill_level: "Intermediate"
 # Begin Overview
 intro: >
   <strong><cite>JavaScript and jQuery Survival Guide</cite></strong> will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples.
-preview_video_src: https://www.youtube.com/embed/4T1Ei46h41o
+preview_video_id: 4T1Ei46h41o
+preview_video_duration: PT06M06S
 about: >
   <p>Learn basic yet critical skills for working with JavaScript &amp; jQuery in the browser. By the end of this tutorial, the student will understand how to debug problems using the JavaScript console, write simple event handlers, and perform common manipulation of Document Object Model (DOM) elements. These three lessons are designed to prepare the student for typical challenges that they will face when adding or modifying interactive elements on a web page.</p>
 outline:

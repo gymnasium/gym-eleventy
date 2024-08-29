@@ -3,6 +3,8 @@ title: "Designing Accessible and Responsive Websites"
 date: 2019-10-28T00:00:00-04:00
 color: magenta
 type: short
+path_slug: gym-shorts
+credential: badge
 tags:
   - course
   - gym-short
@@ -32,7 +34,8 @@ skill_level: "Intermediate"
 # Begin Overview
 intro: >
   Intro text
-preview_video_src:
+preview_video_id:
+preview_video_duration:
 about: >
   <strong><cite>Designing Accessible and Responsive Websites</cite></strong> will teach you a series of front-end techniques to help you improve the accessibility and overall user experience of your websites.
 outline:

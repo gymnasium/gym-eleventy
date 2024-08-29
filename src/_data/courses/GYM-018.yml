@@ -3,6 +3,8 @@ title: "Design Systems for Designers"
 date: 2019-10-28T00:00:00-04:00
 color: teal
 type: short
+path_slug: gym-shorts
+credential: badge
 tags:
   - course
   - gym-short
@@ -32,7 +34,8 @@ skill_level: "Beginner"
 # Begin Overview
 intro: >
   <strong><cite>Design Systems for Designers</cite></strong> will teach you how to incorporate pattern libraries and design systems into your workflow and avoid many of the frustrations encountered when working with them.
-preview_video_src:
+preview_video_id:
+preview_video_duration:
 about: >
   <p>The increasing popularity of design systems in organizations both large and small is changing the way many designers work. Therefore, understanding your role in these systems is more critical than ever. In this course, you’ll learn the difference between pattern libraries and design systems. You’ll walk through the process of building a design system from scratch with helpful exercises along the way. By the end, you’ll know how to conduct a pattern inventory, work with design tokens, and discover how familiar design tools such as Figma and Sketch fit into the process.</p>
 outline:

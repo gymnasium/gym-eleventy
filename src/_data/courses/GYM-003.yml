@@ -1,8 +1,12 @@
 id: GYM-003
 title: "Grid Layout in Bootstrap 3"
 date: 2022-05-26T00:00:00-04:00
+redirectFrom:
+  - /courses/GYM/003/0/about
 color: grey
 type: short
+path_slug: gym-shorts
+credential: badge
 tags:
   - course
   - gym-short
@@ -11,7 +15,7 @@ tags:
 live: false
 sitemapExclude: true
 retired_message:
-  1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons. <span class='text-wrap'>We recommend watching the tutorial <a href='/courses/take5/prototyping-in-the-browser-with-css-grid-layout'>Prototyping in the Browser with CSS Grid Layout</a> instead.</span>"
+  post: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons. <span class='text-wrap'>We recommend watching the tutorial <a href='/courses/take5/prototyping-in-the-browser-with-css-grid-layout'>Prototyping in the Browser with CSS Grid Layout</a> instead.</span>"
 url: /courses/course-v1:GYM+003+0/about
 img: /img/courses/svg/gym-003.svg
 topic: "Development"
@@ -33,7 +37,8 @@ skill_level: "Intermediate"
 # Begin Overview
 intro: >
   <strong><cite>Grid Layout in Bootstrap 3</cite></strong> will teach you how to get up to speed with Twitter Bootstrap's grid layout system and learn how to build a responsive layout that looks great on multiple screen sizes and devices.
-preview_video_src:
+preview_video_id:
+preview_video_duration:
 about: >
   <p>In this course you will learn how to get up and running with Bootstrap 3 in a matter of minutes and build a responsive layout that looks great on multiple screen sizes and devices. We will focus specifically on grid layout in Bootstrap with an emphasis on prototyping. By the end of the course you will be able to use Bootstrap for virtually any layout you can imagine and have a strategy for moving it quickly into production.</p>
 outline:

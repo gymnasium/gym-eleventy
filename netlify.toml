@@ -57,3 +57,31 @@ ELEVENTY_ENV="tutor-local"
 [context.soy]
 NODE_ENV="soy"
 ELEVENTY_ENV="soy"
+
+[[headers]]
+  for = "gym.soy/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "*.gym.soy/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "gymnasium.day/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "*.gymnasium.day/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Robots-Tag = "noindex"
