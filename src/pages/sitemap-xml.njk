@@ -14,20 +14,4 @@ eleventyExcludeFromCollections: true
   </url>
   {%- endif -%}
 {%- endfor -%}
-{%- for id, course in courses -%}
-  {%- if (course.live) -%}
-  <url>
-    <loc>{{ config.urls.root }}/courses/{{ course.title.slugify }}/</loc>
-    <lastmod>{{ course.date.toISOString() }}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>{{ course.id | course_endpoint('learning') }}</loc>
-    <lastmod>{{ course.date.toISOString() }}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  {%- endif -%}
-{%- endfor -%}
 </urlset>
