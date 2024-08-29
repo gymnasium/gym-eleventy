@@ -1,6 +1,8 @@
 id: GYM-001
 title: "Defeating Busy"
 date: 2019-10-28T00:00:00-04:00
+redirectFrom:
+  - /courses/GYM/001/0/about
 color: green
 type: short
 path_slug: gym-shorts

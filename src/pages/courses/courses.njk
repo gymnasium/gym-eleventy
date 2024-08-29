@@ -25,7 +25,7 @@
     meta: {
       bodyClass: (data) => {
         const slug = data.item.title.toLowerCase().replaceAll(' ','-');
-        return `course-about ${data.item.path_slug} ${slug}`;
+        return `course-about ${data.item.path_slug} ${slug} ${data.item.id.toLowerCase()}`;
       },
       img: (data) => {
         return `${data.config.paths.img.og}courses/${data.item.id.toLowerCase()}.png`;
@@ -36,6 +36,10 @@
       sitemapExclude: (data) => {
         const bool = data.item.sitemapExclude ? data.item.sitemapExclude : false;
         return bool;
+      },
+      redirectFrom: (data) => {
+        const redirect = data.item.redirectFrom ? data.item.redirectFrom : false;
+        return redirect;
       },
       schema: {
         type: "course"
@@ -56,11 +60,33 @@
           alt="Course image for {{item.title}}"
         />
       </figure>
+
+      {# TODO: sort out the retired message business #}
+      {%- if (not item.live) and (item.retired_message) -%}
+        <p>{{ item.description | safe }}</p>
+
+        {%- if item.retired_message[1] -%}
+          <p>{{ item.retired_message[1] | safe }}</p>
+        {%- endif -%}
+        {%- if item.retired_message[2] -%}
+          <p>{{ item.retired_message[2] | safe }}</p>
+        {%- endif -%} 
+
+      {%- else -%}
+
+      {%- endif -%}
+
       <div class="course-metabar">
         <div class="course-title"><h1>{{ item.title }}</h1></div>
         <div class="course-type"><p>{{ course_type[item.type].name }}</p></div>
         <h4 class="course-id" hidden>{{ item.id }}</h4>
-        <div class="course-cta"><button class="btn">Go to Course</button></div>
+        <div class="course-cta">
+          {%- if (item.live) -%}
+          <a href="{{ item.id | course_endpoint('learning') }}" class="btn">Go to Course</a>
+          {%- else -%}
+          <button disabled>Enrollment is Closed</button>
+          {%- endif -%}
+        </div>
       </div>
     </div>
   </header>
@@ -118,22 +144,6 @@
         {%- endfor -%}
         </ul>
       </section>
-
-      {# TODO: sort out the retired message business #}
-      {%- if (not item.live) and (item.retired_message) -%}
-        <p>{{ item.description | safe }}</p>
-
-        {%- if item.retired_message[1] -%}
-          <p>{{ item.retired_message[1] | safe }}</p>
-        {%- endif -%}
-        {%- if item.retired_message[2] -%}
-          <p>{{ item.retired_message[2] | safe }}</p>
-        {%- endif -%} 
-
-      {%- else -%}
-        <p>{{ item.description | safe }}</p>
-      {%- endif -%}
-
     </div>
     <aside>
       <h2>{{ config.msg.mfe.course_about.headings.audience }}</h2>

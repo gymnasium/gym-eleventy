@@ -12,10 +12,17 @@
 {%- if meta.img -%}
   {%- set metaImg -%}{{ config.urls.base_url }}{{ meta.img }}{%- endset -%}
 {%- endif -%}
-{%- set metaRobots = "index, follow" -%}
+{# meta robots defaults #}
 {%- if meta.robots -%}
   {%- set metaRobots = meta.robots -%}
+{%- else -%}
+  {%- set metaRobots = "index, follow" -%}
 {%- endif -%}
+{# automatically exlude unindexed pages #}
+{%- if (eleventyExcludeFromCollections or meta.sitemapExclude) -%}
+  {%- set metaRobots = "noindex, nofollow" -%}
+{%- endif -%}
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ config.meta.title }}</title>

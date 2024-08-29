@@ -154,30 +154,19 @@ module.exports = eleventyConfig => {
     idString = id.split('-')[1];
     let idNum = Number(idString);
     let path;
-    let courseType;
 
-    if (idNum <= 9 || (idNum >= 100 && idNum < 108)) {
-      courseType = 'old';
-    } else {
-      courseType = 'new';
-    }
+    if (!!dest_format) {
+      let destUrl = process.env[`MFE_${dest_format.toUpperCase()}_BASE_URL`];
+      // console.log(process.env);
 
-    if (courseType === 'new' || !!dest_format) {
-      if (!!dest_format) {
-        let destUrl = process.env[`MFE_${dest_format.toUpperCase()}_BASE_URL`];
-        // console.log(process.env);
+      if (dest_format === 'course_about') {
+        path = `${destUrl}/courses/course-v1:GYM+${idString}+0/about`;
 
-        if (dest_format === 'course_about') {
-          path = `${destUrl}/courses/course-v1:GYM+${idString}+0/about`;
-
-        } else if (dest_format === 'learning') {
-          path = `${destUrl}/learning/course/course-v1:GYM+${idString}+0/home`;
-        }
-      } else {
-        path = `/courses/course-v1:GYM+${idString}+0/`;
+      } else if (dest_format === 'learning') {
+        path = `${destUrl}/learning/course/course-v1:GYM+${idString}+0/home`;
       }
-    } else if (courseType === 'old') {
-      path = `/courses/GYM/${idString}/0/`;
+    } else {
+      path = `/courses/course-v1:GYM+${idString}+0/`;
     }
 
     // console.log(idNum, idString, path)

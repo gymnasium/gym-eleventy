@@ -36,6 +36,7 @@
     "teaches": ["{{ item.description }}"],
     "inLanguage": "en",
     "availableLanguage": ["en"],
+    {%- if item.outline %}
     "syllabusSections": [
     {%- for syl in item.outline -%}
       {
@@ -45,6 +46,7 @@
       }{% if not loop.last %},{% endif %}
     {%- endfor -%}
     ],
+    {%- endif %}
     "educationalCredentialAwarded": [{
       "@type": "EducationalOccupationalCredential",
       "name": "{{ item.title }} {{ item.credential | title }}",
