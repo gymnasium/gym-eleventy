@@ -155,6 +155,7 @@
     line-height: 1.15;
     text-transform: uppercase;
     letter-spacing: 0.05ex;
+    margin-top: 0;
     margin-bottom: 1.4rem;
   }
 
@@ -316,6 +317,7 @@
 
     .topic {
       font: 900 1.25rem/1 var(--font-family-custom);
+      margin-bottom: -0.125rem;
 
       b {
         font: inherit;
