@@ -130,19 +130,28 @@
       </section>
       <section class="course-prerequisites">
         <h2>{{ config.msg.mfe.course_about.headings.prerequisites }}</h2>
-        <ul>
-        {%- for idx in range(0, item.prerequisites.length) -%}
-          <li>{{ item.prerequisites[idx].label | safe }}</li>
-        {%- endfor -%}
-        </ul>
+        {%- if item.prerequisites | is_object -%}
+          <ul>
+          {%- for idx in range(0, item.prerequisites.length) -%}
+            <li>{{ item.prerequisites[idx].label | safe }}</li>
+          {%- endfor -%}
+          </ul>
+        {%- else -%}
+          {{ item.prerequisites | safe }}
+        {%- endif -%}
       </section>
+
       <section class="course-requirements">
         <h2>{{ config.msg.mfe.course_about.headings.requirements }}</h2>
-        <ul>
-        {%- for idx in range(0, item.requirements.list.length) -%}
-          <li>{{ item.requirements.list[idx].label | safe }}</li>
-        {%- endfor -%}
-        </ul>
+        {%- if item.requirements | is_object -%}
+          <ul>
+          {%- for idx in range(0, item.requirements.length) -%}
+            <li>{{ item.requirements[idx].label | safe }}</li>
+          {%- endfor -%}
+          </ul>
+        {%- else -%}
+          {{ item.requirements | safe }}
+        {%- endif -%}
       </section>
     </div>
     <aside>
