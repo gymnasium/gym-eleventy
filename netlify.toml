@@ -58,10 +58,10 @@ ELEVENTY_ENV="tutor-local"
 NODE_ENV="soy"
 ELEVENTY_ENV="soy"
 
-[context.develop]
-  [[headers]]
-    for = "*"
-    [headers.values]
-      X-Frame-Options = "DENY"
-      X-XSS-Protection = "1; mode=block"
-      X-Robots-Tag = "noindex"
+# [context.develop]
+#   [[headers]]
+#     for = "*"
+#     [headers.values]
+#       X-Frame-Options = "DENY"
+#       X-XSS-Protection = "1; mode=block"
+#       X-Robots-Tag = "noindex"
