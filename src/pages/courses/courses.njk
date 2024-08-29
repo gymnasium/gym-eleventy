@@ -98,7 +98,7 @@
           <p>{{ item.intro | safe }}</p>
         {%- endif -%}
       </section>
-      
+
       {%- if item.preview_video_id -%}
       <section class="course-preview">
         <h2>{{ config.msg.mfe.course_about.headings.preview }}</h2>
@@ -127,6 +127,8 @@
         </ul>
         {%- endif -%}
       </section>
+
+      {%- if item.prerequisites -%}
       <section class="course-prerequisites">
         <h2>{{ config.msg.mfe.course_about.headings.prerequisites }}</h2>
         {%- if item.prerequisites | is_object -%}
@@ -139,7 +141,9 @@
           {{ item.prerequisites | safe }}
         {%- endif -%}
       </section>
+      {%- endif -%}
 
+      {%- if item.requirements -%}
       <section class="course-requirements">
         <h2>{{ config.msg.mfe.course_about.headings.requirements }}</h2>
         {%- if item.requirements | is_object -%}
@@ -152,25 +156,32 @@
           {{ item.requirements | safe }}
         {%- endif -%}
       </section>
+      {%- endif -%}
     </div>
     <aside>
-      <h2>{{ config.msg.mfe.course_about.headings.audience }}</h2>
-      <ul>
-        {%- for idx in range(0, item.audience.length) -%}
-        <li>{{ item.audience[idx].label }}</li>
-        {%- endfor -%}
-      </ul>
+      {%- if item.audience -%}
+      <section class="course-audience">
+        <h2>{{ config.msg.mfe.course_about.headings.audience }}</h2>
+        <ul>
+          {%- for idx in range(0, item.audience.length) -%}
+          <li>{{ item.audience[idx].label }}</li>
+          {%- endfor -%}
+        </ul>
+      </section>
+      {%- endif -%}
 
-      <h2>{{ config.msg.mfe.course_about.headings.instructor }}</h2>
-      <img
-        src="{{ bios[item.instructor].img }}"
-        alt="Image of {{ bios[item.instructor].name }}"
-      />
-      <h3>{{ bios[item.instructor].name }}</h3>
-      <p>{{ bios[item.instructor].description | safe }}</p>
+      {%- if item.instructor -%}
+      <section class="course-instructor">
+        <h2>{{ config.msg.mfe.course_about.headings.instructor }}</h2>
+        <img src="{{ bios[item.instructor].img }}" alt="Image of {{ bios[item.instructor].name }}">
+        <h3>{{ bios[item.instructor].name }}</h3>
+        <p>{{ bios[item.instructor].description | safe }}</p>
 
-      {%- if bios[item.instructor].extended_description -%} {{
-      bios[item.instructor].extended_description | safe }} {%- endif -%}
+        {%- if bios[item.instructor].extended_description -%}
+          {{ bios[item.instructor].extended_description | safe }}
+        {%- endif -%}
+      </section>
+      {%- endif -%}
     </aside>
   </div>
 </article>
