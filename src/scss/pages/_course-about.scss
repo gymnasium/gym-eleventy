@@ -55,7 +55,7 @@ article {
   h3 {
     letter-spacing: rem-calc(0.384);
   }
-  h2, h3 {
+  h2,  h3:not(.info h3) {
     font-size: rem-calc(19);
     line-height: 1.5;
     margin-top: rem-calc(19);
