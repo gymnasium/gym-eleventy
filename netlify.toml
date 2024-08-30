@@ -2,6 +2,34 @@
   command = "npm run build" # runs with ENV=production
   publish = "dist"
 
+# [[headers]]
+#   for = "/favicon/*"
+#     [headers.values]
+#     Access-Control-Allow-Origin = "*"
+# [[headers]]
+#   for = "/feeds/*"
+#     [headers.values]
+#     Access-Control-Allow-Origin = "*"
+# [[headers]]
+#   for = "/manifest.json"
+#     [headers.values]
+#     Access-Control-Allow-Origin = "*"
+# [[headers]]
+#   for = "*.js"
+#   [headers.values] # cache for 1 year
+#     Access-Control-Allow-Origin = "*"
+#     Cache-Control = "public, max-age=31536000"
+# [[headers]]
+#   for = "*.css"
+#   [headers.values] # cache for 1 year
+#     Access-Control-Allow-Origin = "*"
+#     Cache-Control = "public, max-age=31536000"
+# [[headers]]
+#   for = "/*.(svg|jpg|jpeg|png|gif|webp|ico|ttf|ttc|otf|eot|woff|woff2)"
+#   [headers.values] # cache for 1 year
+#     Access-Control-Allow-Origin = "*"
+#     Cache-Control = "public, max-age=31536000, immutable"
+
 [[plugins]]
 package = "netlify-plugin-cache"
 
@@ -36,11 +64,11 @@ ELEVENTY_ENV="development"
 
 # Per-branch settings (except production)
 [context.branch-deploy]
-command = "cat ./custom-headers/_global.toml ./custom-headers/_branch-deploy.toml > ./src/_headers && npm run build"
+command = "cat ./custom-headers/_global ./custom-headers/_branch-deploy > ./public/_headers && npm run build"
 
 # Deploy preview settings
 [context.deploy-preview]
-command = "cat ./custom-headers/_global.toml ./custom-headers/_deploy-preview.toml > ./src/_headers && npm run build"
+command = "cat ./custom-headers/_global ./custom-headers/_deploy-preview > ./public/_headers && npm run build"
 
 [context.develop]
 

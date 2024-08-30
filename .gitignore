@@ -29,3 +29,6 @@ netlify/edge-functions/_generated
 
 # Eleventy clean plugin
 .plugin-clean
+
+src/_headers
+public/_headers

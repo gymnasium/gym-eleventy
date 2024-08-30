@@ -1,5 +1,0 @@
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Gym-Custom = "true"
-    Gym-Context = "branch-deploy"
