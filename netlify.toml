@@ -8,40 +8,6 @@ package = "netlify-plugin-cache"
   [plugins.inputs]
   paths = [ ".cache" ]
 
-[[headers]]
-  for = "/favicon/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
-[[headers]]
-  for = "/feeds/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
-[[headers]]
-  for = "/manifest.json"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
-[[headers]]
-  for = "*.js"
-  [headers.values] # cache for 1 year
-    Access-Control-Allow-Origin = "*"
-    Cache-Control = "public, max-age=31536000"
-[[headers]]
-  for = "*.css"
-  [headers.values] # cache for 1 year
-    Access-Control-Allow-Origin = "*"
-    Cache-Control = "public, max-age=31536000"
-[[headers]]
-  for = "/*.(svg|jpg|jpeg|png|gif|webp|ico|ttf|ttc|otf|eot|woff|woff2)"
-  [headers.values] # cache for 1 year
-    Access-Control-Allow-Origin = "*"
-    Cache-Control = "public, max-age=31536000, immutable"
-
-
-[dev]
-  # framework = "#static"
-  port=8888
-  targetPort=4040
-
 [[edge_functions]]
 function = "eleventy-edge"
 path = "/*"
@@ -58,10 +24,28 @@ ELEVENTY_ENV="tutor-local"
 NODE_ENV="soy"
 ELEVENTY_ENV="soy"
 
-# [context.develop]
-#   [[headers]]
-#     for = "*"
-#     [headers.values]
-#       X-Frame-Options = "DENY"
-#       X-XSS-Protection = "1; mode=block"
-#       X-Robots-Tag = "noindex"
+[context.dev.environment]
+NODE_ENV="development"
+ELEVENTY_ENV="development"
+
+# Local dev settings
+[dev]
+  # framework = "#static"
+  port=8888
+  targetPort=4040
+
+# Per-branch settings (except production)
+[context.branch-deploy]
+command = "npm run build && cat ./custom-headers/_global.toml ./custom-headers/_branch-deploy.toml > ./dist/_headers"
+
+# Deploy preview settings
+# [context.deploy-preview]
+# command = "npm run build && cat ./custom-headers/_global ./custom-headers/_deploy-preview > ./custom-headers/_headers && cp ./custom-headers/_headers ./dist/_headers"
+
+[context.develop]
+
+[context.staging]
+
+# Production settings
+# [context.production]
+# command = "npm run build && cat ./custom-headers/_global ./custom-headers/_production > ./custom-headers/_headers && cp ./custom-headers/_headers ./dist/_headers"
