@@ -39,8 +39,8 @@ ELEVENTY_ENV="development"
 command = "npm run build && cat ./custom-headers/_global.toml ./custom-headers/_branch-deploy.toml > ./dist/_headers"
 
 # Deploy preview settings
-# [context.deploy-preview]
-# command = "npm run build && cat ./custom-headers/_global ./custom-headers/_deploy-preview > ./custom-headers/_headers && cp ./custom-headers/_headers ./dist/_headers"
+[context.deploy-preview]
+command = "npm run build && cat ./custom-headers/_global.toml ./custom-headers/_deploy-preview.toml > ./dist/_headers"
 
 [context.develop]
 
