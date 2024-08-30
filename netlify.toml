@@ -36,11 +36,11 @@ ELEVENTY_ENV="development"
 
 # Per-branch settings (except production)
 [context.branch-deploy]
-command = "npm run build && cat ./custom-headers/_global.toml ./custom-headers/_branch-deploy.toml > ./dist/_headers"
+command = "cat ./custom-headers/_global.toml ./custom-headers/_branch-deploy.toml > ./src/_headers && npm run build"
 
 # Deploy preview settings
 [context.deploy-preview]
-command = "npm run build && cat ./custom-headers/_global.toml ./custom-headers/_deploy-preview.toml > ./dist/_headers"
+command = "cat ./custom-headers/_global.toml ./custom-headers/_deploy-preview.toml > ./src/_headers && npm run build"
 
 [context.develop]
 
