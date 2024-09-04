@@ -2,10 +2,13 @@ meta:
   id: COL-002
   title: "UX Design"
   topic: "UX"
-  description: "User experience can make or break a website. Let’s put yours to the test."
+  description: "Explore our free collection of UX courses, tutorials, webinars, articles, and jobs."
   slug: ux-design
   color: teal
   order: 4
+
+card:
+  description: "User experience can make or break a website. Let’s put yours to the test."
 
 header:
   header_id: # default is null
