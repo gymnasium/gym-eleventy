@@ -2,7 +2,7 @@ meta:
   id: COL-008
   title: "Generative AI"
   topic: "Career Skills"
-  description: "From prompting to prototyping, leverage LLMs and GPT tools in your workflow."
+  description: "From prompting to prototyping, leverage artificial intelligence in your workflow."
   slug: generative-ai
   color: green
   order: 1
@@ -21,7 +21,7 @@ livestreams:
   module: lists/image-course
   header:
     heading: "Livestreams"
-    description: "Develop your generative AI superpowers with industry experts."
+    description: "Watch livestream recordings exploring topics from AI prompting to image generation."
   cta:
     href: https://www.youtube.com/@AquentGymnasium/streams
     label: View More Livestreams
@@ -41,7 +41,7 @@ articles:
   module: lists/default
   header:
     heading: "Articles"
-    description: "Read bookmark-worthy blog posts on generative AI."
+    description: "Read bookmark-worthy blog posts on leveraging AI without losing your own voice."
   gen-ai-articles:
     links:
     - href: https://medium.com/gymnasium/crafting-r%C3%A9sum%C3%A9s-in-the-age-of-ai-2662f0728594
