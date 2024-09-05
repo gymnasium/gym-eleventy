@@ -2,11 +2,14 @@ meta:
   id: COL-007
   title: "Career Skills"
   topic: "Career Skills"
-  description: "Whether you’re a newbie or a pro, we’ve got you covered."
+  description: "Explore our free career skills collection of courses, tutorials, and articles."
   slug: career-skills
   color: green
   order: 7
   redirectFrom: '/remote-work/'
+
+card:
+  description: "Whether you’re a newbie or a pro, we’ve got you covered."
 
 header:
   header_id: # default is null

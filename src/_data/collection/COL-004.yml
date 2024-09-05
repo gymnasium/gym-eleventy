@@ -2,10 +2,13 @@ meta:
   id: COL-004
   title: "Accessibility"
   topic: "Accessibility"
-  description: "No matter what your title is, creating an inclusive web is everyone’s job."
+  description: "Explore our free collection of accessibility courses, tutorials, resources, and services."
   slug: accessibility
   color: magenta
   order: 6
+
+card:
+  description: "No matter what your title is, creating an inclusive web is everyone’s job."
 
 header:
   header_id: # default is null

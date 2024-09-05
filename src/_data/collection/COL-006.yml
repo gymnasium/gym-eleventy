@@ -2,12 +2,15 @@ meta:
   id: COL-006
   title: "Design Systems"
   topic: "Design Systems"
-  description: "Teamwork (and creating effective pattern libraries) makes the dream work."
+  description: "Explore our free collection of design systems courses taught by Ethan Marcotte."
   slug: design-systems
   color: orange
   order: 2
   unique: true
   css: "/css/design-systems.css"
+
+card:
+  description: "Teamwork (and creating effective pattern libraries) makes the dream work."
 
 header:
   module: custom/design-systems/header

@@ -2,10 +2,13 @@ meta:
   id: COL-008
   title: "Generative AI"
   topic: "Career Skills"
-  description: "From prompting to prototyping, leverage artificial intelligence in your workflow."
+  description: "Explore our free collection of generative AI livestreams, articles, and resources."
   slug: generative-ai
   color: green
   order: 1
+
+card:
+  description: "From prompting to prototyping, leverage artificial intelligence in your workflow."
 
 header:
   header_id: # default is null
