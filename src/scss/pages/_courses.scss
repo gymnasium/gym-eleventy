@@ -155,7 +155,6 @@
     line-height: 1.15;
     text-transform: uppercase;
     letter-spacing: 0.05ex;
-    margin-top: 0;
     margin-bottom: 1.4rem;
   }
 
@@ -192,6 +191,7 @@
   .elective,
   #all-topics:target ~ * .elective,
   #featured:target ~ * .course:not(.featured),
+  #featured:target ~ * .course.elective,
   #design:target ~ * .course:not(.design),
   #development:target ~ * .course:not(.development),
   #accessibility:target ~ * .course:not(.accessibility),
@@ -393,7 +393,7 @@
         .btn {
           display: inline-block;
           width: 100%;
-          max-width: 16rem;
+          max-width: 12rem;
         }
       }
 
@@ -460,7 +460,6 @@
         font-size: 0.9375rem;
         line-height: 1.1;
         letter-spacing: 0.0125ex;
-        margin-top: 0;
         margin-bottom: 0;
 
         &:not(p) {
@@ -722,10 +721,8 @@
 
   #tutorial-transcript {
     @include breakpoint(large, max) {
-      & {
-        padding-bottom: 1.4rem;
-        border-bottom: 1px dashed var(--mono-400);
-      }
+      padding-bottom: 1.4rem;
+      border-bottom: 1px dashed var(--mono-400);
     }
 
     summary span {
