@@ -50,39 +50,45 @@
 ---
 
 <article class="course-about">
-  <header id="{{ item.id }}" class="course-header {{ item.id }} bg-mono-400">
+  <header id="{{ item.id | lower }}" class="course-header bg-{{ item.color }}">
     <div class="container grid-col-1-2">
-      <figure
-        style='border-image-source: url("/img/courses/svg/{{ item.id | lowercase }}.svg");'
-      >
+      <figure>
         <img
-          src="{{config.cms_url}}{{item.img}}"
-          alt="Course image for {{item.title}}"
-        />
+          alt="Course image for {{ item.title }}."
+          src="{{ item.img }}"
+          decoding="async"
+          fetchpriority="high"
+          width="574"
+          height="488"
+        >
       </figure>
-
       <div class="course-metabar">
-        <div class="course-title"><h1>{{ item.title }}</h1></div>
-        <div class="course-type"><p>{{ course_type[item.type].name }}</p></div>
-        <h4 class="course-id" hidden>{{ item.id }}</h4>
-
-        {# For live courses showing an advance course retirement notice #}
-        {%- if (item.live) and (item.retired_message.pre) -%}
-          {%- if item.retired_message.pre -%}
-            <p>{{ item.retired_message.pre | safe }}</p>
-          {%- endif -%}
+        <hgroup class="course-title">
+          <p class="topic caps">{{ item.topic }}</p>
+          <h1>{{ item.title }}</h1>
+          <p class="course-id" hidden><small>{{ item.id }}</small></p>
+        </hgroup>
+        <div>
+        <p class="course-type caps">{{ course_type[item.type].name }}</p>
+        <p class="course-skill-level">{{ item.skill_level }}</p>
+        </div>
+      {# For live courses showing an advance course retirement notice #}
+      {%- if (item.live) and (item.retired_message.pre) -%}
+        {%- if item.retired_message.pre -%}
+          <p>{{ item.retired_message.pre | safe }}</p>
         {%- endif -%}
+      {%- endif -%}
 
-        {# For non-live courses displaying a post retirement notice #}
-        {%- if (not item.live) and (item.retired_message.post) -%}
-          {%- if item.retired_message.post -%}
-            <p>{{ item.retired_message.post | safe }}</p>
-          {%- endif -%} 
+      {# For non-live courses displaying a post retirement notice #}
+      {%- if (not item.live) and (item.retired_message.post) -%}
+        {%- if item.retired_message.post -%}
+          <p>{{ item.retired_message.post | safe }}</p>
         {%- endif -%}
+      {%- endif -%}
 
         <div class="course-cta">
           {%- if (item.live) -%}
-          <a href="{{ item.id | course_endpoint('learning') }}" class="btn">Go to Course</a>
+          <a href="{{ item.id | course_endpoint('learning') }}" class="btn">Start Course</a>
           {%- else -%}
           <button disabled class="disabled">Enrollment is Closed</button>
           {%- endif -%}
