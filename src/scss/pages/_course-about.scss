@@ -17,72 +17,8 @@
   padding-bottom: 0;
 }
 
-.course-metabar {
-  // Anything to add here?
-}
-
-.course-title {
-  h1 {
-    font-size: 2.25rem;
-    line-height: 1.15;
-    letter-spacing: .05ex;
-    text-wrap: balance;
-
-    &:before {
-      display: block;
-      content: "{{ obj.topic }}";
-      font-size: 1.25rem;
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-  }
-}
-
-.course-type {
-  font-weight: 900;
-  font-family: var(--font-family-custom);
-  font-size: 0.9375rem;
-  line-height: 1.15;
-  text-transform: uppercase;
-  word-spacing: .25ex;
-
-  :after {
-    display: inline-block;
-    content: "{{ obj.skill_level }}";
-    font-weight: normal;
-    font-family: var(--font-family-default);
-    line-height: 1.1;
-    letter-spacing: 0.0125ex;
-    text-transform: none;
-    text-indent: 3ex;
-  }
-}
-
-.course-cta {
-  margin-top: 1.4rem;
-
-  .btn {
-    display: inline-block;
-    width: 100%;
-    max-width: 12rem;
-  }
-}
-
 .course-header {
-  background-color: var(--mono-400);
-  padding: 2rem 0;
-
-  figure {
-    display: grid;
-    text-align: center;
-    height: 100%;
-    border-image: 2 / 100% stretch;
-
-    img {
-      align-self: center;
-      justify-self: center;
-    }
-  }
+  // padding: 1rem 0;
 
   @include breakpoint(large, max) {
     .grid-col-1-2 {
@@ -90,20 +26,101 @@
     }
   }
 
+  figure {
+    display: grid;
+    overflow: hidden;
+
+    img {
+      align-self: center;
+      justify-self: end;
+      margin: 0 -1.2rem;
+    }
+  }
+
+
+
   @media (max-width: 52em) {
-    padding: 1.2rem 0;
 
     .grid-col-1-2 {
       grid-template-columns: none;
       gap: 1.2rem;
 
       figure {
+        margin-bottom: -2.2rem;
+
         img {
          max-width: 50%;
+         justify-self: start;
         }
       }
     }
 
+  }
+}
+
+.course-metabar {
+  display: grid;
+  grid-auto-rows: min-content auto;
+  padding: 1.4rem 0;
+
+  @media (min-width: 52em) {
+    margin: 2rem 0;
+  }
+}
+
+.bg-green,
+.bg-teal {
+  .course-metabar {
+    > * {
+      color: var(--mono-900);
+    }
+  }
+}
+
+.course-title {
+  .topic {
+    font-weight: 900;
+    font-family: var(--font-family-custom);
+    font-size: 1.25rem;
+    line-height: 1;
+    margin-top: -0.125rem;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.15;
+    letter-spacing: .05ex;
+    text-wrap: balance;
+  }
+}
+
+.course-type {
+  display: inline-block;
+  font-weight: 900;
+  font-family: var(--font-family-custom);
+  font-size: 0.9375rem;
+  line-height: 1.15;
+  word-spacing: 0.25ex;
+}
+
+.course-skill-level {
+  display: inline-block;
+  font-family: var(--font-family-default);
+  line-height: 1.1;
+  letter-spacing: 0.0125ex;
+  text-indent: 2ex;
+}
+
+.course-cta {
+  align-self: end;
+  margin-top: 1.6rem;
+  margin-bottom: 0;
+
+  .btn {
+    display: inline-block;
+    width: 100%;
+    max-width: 12rem;
+    border: 2px solid var(--mono-100);
   }
 }
 
@@ -124,10 +141,32 @@
 
     .content,
     aside {
-      padding-top: 1.6rem;
-      padding-bottom: 1.6rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
 
+  }
+
+  // Sidebar spacing and rule for small screens
+
+  @media (max-width: 52em) {
+    .grid-sidebar {
+      gap: 1.1875rem;
+
+      .content,
+      aside {
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
+      }
+
+      .content {
+        padding-bottom: 0;
+      }
+
+      aside {
+        border-top: 1px solid var(--mono-300);
+      }
+    }
   }
 
   article {
@@ -161,14 +200,3 @@
 
 }
 
-// Sidebar spacing and rule for small screens
-
-@media (max-width: 52em) {
-  .grid-sidebar {
-    gap: 1.1875rem;
-
-    aside {
-      border-top: 1px solid var(--mono-300);
-    }
-  }
-}
