@@ -16,7 +16,7 @@ live: true
 url: /courses/course-v1:GYM+007+0/about
 img: /img/courses/svg/gym-007.svg
 topic: "Development"
-description: "Learn some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes."
+description: "Learn some of the latest standards and thinking around coding HTML forms using HTML5 tags and attributes."
 instructor: jkramer
 skills:
   - label: "Web Forms"
@@ -32,12 +32,12 @@ duration_8601_format: PT2H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
-  <strong><cite>Structuring and Organizing HTML5 Forms</cite></strong> will teach you some of the latest standards and thinking around coding HTML forms using the new HTML5 tags and attributes. You'll learn how to make these forms mobile- and desktop-compatible as well.
+  <strong><cite>Structuring and Organizing HTML5 Forms</cite></strong> will teach you some of the latest standards and thinking around coding HTML forms using HTML5 tags and attributes, including making your forms mobile- and desktop-compatible.
 preview_video_id:
 preview_video_duration:
 about: >
   <p>Coding a form correctly on your websites is extremely important because forms typically fulfill a call to action- we ask the users to sign up for a newsletter, email with questions, purchase a product, register for services, and so much more. Forms that are coded incorrectly or that use outdated standards often result in a loss of usability, which in turn can lead to fewer sales, contacts, or any of the other actions we ask our users to perform.</p>
-  <p>In this course you will begin with a form that’s not written in HTML5 or according to standards, and you'll rework it to bring it up to HTML5 standards, including some layout tips for making the form work on mobile devices.</p>  
+  <p>In this course you will begin with a form that’s not written in HTML5 or according to standards, and you'll rework it to bring it up to HTML5 standards, including some layout tips for making the form work on mobile devices.</p>
 outline:
   - label: "Chapter 1: Lesson Intro"
     description: "In this chapter you will learn what to expect from the course and some of the reasons it’s important to build your forms right."
