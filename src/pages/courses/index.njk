@@ -1,6 +1,6 @@
 ---js
 {
-  layout: "layouts/main.njk",
+  layout: "layouts/full-width.njk",
   permalink: "/courses/",
   meta: {
     title: "Courses",
@@ -52,108 +52,111 @@
 ---
 {%- include 'modules/courses/header.njk' -%}
 
-<article class="course-card course">
-  <header>
-    <h2>{{ full.heading }}</h2>
-    <p>{{ full.subheading }} <strong><a href="/courses/full/">{{ cta }} {{ full.heading }}</a></strong></p>
-  </header>
-  <div>
-    <section>
-      <h3>Featured</h3>
-      {%- set module = collections.live_courses_full | pluck('id', 'GYM-107') -%}
-      {%- set module = module[0] -%}
-      {%- include 'modules/panels/course-card.njk' -%}
-    </section>
-    {%- set info = pages['full'].info -%}
-    {%- if info -%}
-    <div class="list-summary">
-      {% for item in info %}
-      <dl>
-        <dt>{{ item.title }}</dt>
-        {% for subitem in item.items %}
-        <dd>{{ subitem.label }}</dd>
+<div class="container">
+  <article class="course-card course">
+    <header>
+      <h2>{{ full.heading }}</h2>
+      <p>{{ full.subheading }} <strong><a href="/courses/full/">{{ cta }} {{ full.heading }}</a></strong></p>
+    </header>
+    <div>
+      <section>
+        <h3>Featured</h3>
+        {%- set module = collections.live_courses_full | pluck('id', 'GYM-107') -%}
+        {%- set module = module[0] -%}
+        {%- include 'modules/panels/course-card.njk' -%}
+      </section>
+      {%- set info = pages['full'].info -%}
+      {%- if info -%}
+      <div class="list-summary">
+        {% for item in info %}
+        <dl>
+          <dt>{{ item.title }}</dt>
+          {% for subitem in item.items %}
+          <dd>{{ subitem.label }}</dd>
+          {% endfor %}
+        </dl>
         {% endfor %}
-      </dl>
-      {% endfor %}
+      </div>
+      {%- endif -%}
     </div>
-    {%- endif -%}
-  </div>
-</article>
+    
+  </article>
 
-<article class="course-card course">
-  <header>
-    <h2>{{ shorts.heading }}</h2>
-    <p>{{ shorts.subheading }} <strong><a href="/courses/gym-shorts/">{{ cta }} {{ shorts.heading }}</a></strong></p>
-  </header>
-  <div>
-    <section>
-      <h3>Featured</h3>
-      {%- set module = collections.live_courses_short | pluck('id', 'GYM-017') -%}
-      {%- set module = module[0] -%}
-      {%- include 'modules/panels/course-card.njk' -%}
-    </section>
-    {%- set info = pages['gym_shorts'].info -%}
-    {%- if info -%}
-    <div class="list-summary">
-      {% for item in info %}
-      <dl>
-        <dt>{{ item.title }}</dt>
-        {% for subitem in item.items %}
-        <dd>{{ subitem.label }}</dd>
+  <article class="course-card course">
+    <header>
+      <h2>{{ shorts.heading }}</h2>
+      <p>{{ shorts.subheading }} <strong><a href="/courses/gym-shorts/">{{ cta }} {{ shorts.heading }}</a></strong></p>
+    </header>
+    <div>
+      <section>
+        <h3>Featured</h3>
+        {%- set module = collections.live_courses_short | pluck('id', 'GYM-017') -%}
+        {%- set module = module[0] -%}
+        {%- include 'modules/panels/course-card.njk' -%}
+      </section>
+      {%- set info = pages['gym_shorts'].info -%}
+      {%- if info -%}
+      <div class="list-summary">
+        {% for item in info %}
+        <dl>
+          <dt>{{ item.title }}</dt>
+          {% for subitem in item.items %}
+          <dd>{{ subitem.label }}</dd>
+          {% endfor %}
+        </dl>
         {% endfor %}
-      </dl>
-      {% endfor %}
+      </div>
+      {%- endif -%}
     </div>
-    {%- endif -%}
-  </div>
-</article>
+  </article>
 
-<article class="course-card tutorial">
-  <header>
-    <h2>{{ tutorials.heading }}</h2>
-    <p>{{ tutorials.subheading }} <strong><a href="/courses/take5/">{{ cta }} {{ tutorials.heading }}</a></strong></p>
-  </header>
-  <div>
-    <section>
-      <h3>Featured</h3>
-      {%- set module = collections.live_tutorials | pluck('id', 'GYM-5054') -%}
-      {%- set module = module[0] -%}
-      {%- include 'modules/panels/tutorial-card.njk' -%}
-    </section>
-    {%- set info = pages['take5'].info -%}
-    {%- if info -%}
-    <div class="list-summary">
-      {% for item in info %}
-      <dl>
-        <dt>{{ item.title }}</dt>
-        {% for subitem in item.items %}
-        <dd>{{ subitem.label }}</dd>
+  <article class="course-card tutorial">
+    <header>
+      <h2>{{ tutorials.heading }}</h2>
+      <p>{{ tutorials.subheading }} <strong><a href="/courses/take5/">{{ cta }} {{ tutorials.heading }}</a></strong></p>
+    </header>
+    <div>
+      <section>
+        <h3>Featured</h3>
+        {%- set module = collections.live_tutorials | pluck('id', 'GYM-5054') -%}
+        {%- set module = module[0] -%}
+        {%- include 'modules/panels/tutorial-card.njk' -%}
+      </section>
+      {%- set info = pages['take5'].info -%}
+      {%- if info -%}
+      <div class="list-summary">
+        {% for item in info %}
+        <dl>
+          <dt>{{ item.title }}</dt>
+          {% for subitem in item.items %}
+          <dd>{{ subitem.label }}</dd>
+          {% endfor %}
+        </dl>
         {% endfor %}
-      </dl>
-      {% endfor %}
+      </div>
+      {%- endif -%}
     </div>
-    {%- endif -%}
-  </div>
-</article>
+  </article>
 
-<article class="course-card collection">
-  <header>
-    <h2>{{ content_collections.heading }}</h2>
-    <p>{{ content_collections.subheading }} <strong><a href="/collections/"> {{ cta }} {{ content_collections.heading }}</a></strong></p>
-  </header>
-  <div>
-    <section>
-      <h3>Featured</h3>
-      {%- set collection = collection['COL-006'].meta -%}
-      {%- include 'modules/panels/partial-collection.njk' -%}
-    </section>
-    <div class="list-summary">
-      <dl>
-        <dt>Content Collections</dt>
-        {%- for collect in collects -%}
-          <dd><a href="/{{ collect.meta.slug }}/">{{ collect.meta.title }}</a></dd>
-        {%- endfor -%}
-      </dl>
+  <article class="course-card collection">
+    <header>
+      <h2>{{ content_collections.heading }}</h2>
+      <p>{{ content_collections.subheading }} <strong><a href="/collections/"> {{ cta }} {{ content_collections.heading }}</a></strong></p>
+    </header>
+    <div>
+      <section>
+        <h3>Featured</h3>
+        {%- set collection = collection['COL-006'].meta -%}
+        {%- include 'modules/panels/partial-collection.njk' -%}
+      </section>
+      <div class="list-summary">
+        <dl>
+          <dt>Content Collections</dt>
+          {%- for collect in collects -%}
+            <dd><a href="/{{ collect.meta.slug }}/">{{ collect.meta.title }}</a></dd>
+          {%- endfor -%}
+        </dl>
+      </div>
     </div>
-  </div>
-</article>
+  </article>
+</div>

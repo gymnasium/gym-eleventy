@@ -1,6 +1,6 @@
 ---js
 {
-  layout: "layouts/main.njk",
+  layout: "layouts/full-width.njk",
   permalink: "/courses/full/",
   meta: {
     title: "Courses",
@@ -25,50 +25,53 @@
 {%- set header = pages['full'].header -%}
 {%- set info = pages['full'].info -%}
 {%- include 'modules/courses/header.njk' -%}
-{%- include 'modules/courses/topic-select-fragments.njk' -%}
 
-<div id="topics" class="topics">
+<div class="container">
 
-{%- include 'modules/courses/topic-menu.njk' -%}
+  {%- include 'modules/courses/topic-select-fragments.njk' -%}
 
-<article class="topic-listing">
-  <h2 class="topic-label" aria-hidden="true"><span>All Topics</span></h2>
-  <ul class="courses">
-    {% for course in collections.live_courses_full | reverse %}
-      {%- set module = course -%}
-      {%- include 'modules/panels/course.njk' -%}
-    {% endfor %}
+  <div id="topics" class="topics">
 
-    {# TODO: Refactor as necessary #}
+    {%- include 'modules/courses/topic-menu.njk' -%}
 
-    {# Add custom recommendation for accessibility #}
-    {%- set module = collections.live_courses_short | pluck('id', 'GYM-016') -%}
-    {%- set module = module[0] -%}
-    {%- set topicClass = 'accessibility' -%}
-    {%- set subtopicClass = ' ' -%}
-    {%- set extraClass = 'elective' -%}
-    {%- set enableNote = true -%}
-    {%- include 'modules/panels/course.njk' -%}
+    <article class="topic-listing">
+      <h2 class="topic-label" aria-hidden="true"><span>All Topics</span></h2>
+      <ul class="courses">
+        {% for course in collections.live_courses_full | reverse %}
+          {%- set module = course -%}
+          {%- include 'modules/panels/course.njk' -%}
+        {% endfor %}
 
-    {# Add custom recommendation for prototyping #}
-    {%- set module = collections.live_courses_short | pluck('id', 'GYM-015') -%}
-    {%- set module = module[0] -%}
-    {%- set topicClass = 'prototyping' -%}
-    {%- set subtopicClass = ' ' -%}
-    {%- set extraClass = 'elective' -%}
-    {%- set enableNote = true -%}
-    {%- include 'modules/panels/course.njk' -%}
+        {# TODO: Refactor as necessary #}
 
-    {# Set custom recommendation for career skills #}
-    {%- set module = collections.live_courses_short | pluck('id', 'GYM-001') -%}
-    {%- set module = module[0] -%}
-    {%- set topicClass = 'career-skills' -%}
-    {%- set subtopicClass = ' ' -%}
-    {%- set extraClass = 'elective' -%}
-    {%- set enableNote = true -%}
-    {%- include 'modules/panels/course.njk' -%}
-  </ul>
-</article>
+        {# Add custom recommendation for accessibility #}
+        {%- set module = collections.live_courses_short | pluck('id', 'GYM-016') -%}
+        {%- set module = module[0] -%}
+        {%- set topicClass = 'accessibility' -%}
+        {%- set subtopicClass = ' ' -%}
+        {%- set extraClass = 'elective' -%}
+        {%- set enableNote = true -%}
+        {%- include 'modules/panels/course.njk' -%}
 
-</div>
+        {# Add custom recommendation for prototyping #}
+        {%- set module = collections.live_courses_short | pluck('id', 'GYM-015') -%}
+        {%- set module = module[0] -%}
+        {%- set topicClass = 'prototyping' -%}
+        {%- set subtopicClass = ' ' -%}
+        {%- set extraClass = 'elective' -%}
+        {%- set enableNote = true -%}
+        {%- include 'modules/panels/course.njk' -%}
 
+        {# Set custom recommendation for career skills #}
+        {%- set module = collections.live_courses_short | pluck('id', 'GYM-001') -%}
+        {%- set module = module[0] -%}
+        {%- set topicClass = 'career-skills' -%}
+        {%- set subtopicClass = ' ' -%}
+        {%- set extraClass = 'elective' -%}
+        {%- set enableNote = true -%}
+        {%- include 'modules/panels/course.njk' -%}
+      </ul>
+    </article>
+
+  </div><!--.topics-->
+</div><!--.container-->
