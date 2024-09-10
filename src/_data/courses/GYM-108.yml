@@ -53,7 +53,7 @@ requirements: |
   <ul>
     <li>Mac or Windows desktop or laptop</li>
     <li>Web browser</li>
-    <li>A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)</li>
+    <li>A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)</li>
   </ul>
   <p>In addition to the requirements listed above, there are a few supporting technologies that need to be installed on your system to follow along with the lesson files. The instructor covers how to install these on your own system in Lesson 1, Chapter 2, but we are providing the links here for your convenience.</p>
   <ul>
