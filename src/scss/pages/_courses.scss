@@ -3,6 +3,22 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
+// logged-in state of course CTA text
+
+.site-header:has(.logged-in) ~ main .course-metabar a.btn {
+  position: relative;
+  color: transparent;
+
+  &:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    content: attr(data-auth) / "";
+    color: var(--mono-100);
+    margin: auto;
+  }
+}
+
 // TODO: Move to a more "global" place
 
 // description list (component)
