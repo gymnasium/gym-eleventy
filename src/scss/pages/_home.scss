@@ -86,7 +86,7 @@ article.home-hero {
     letter-spacing: rem-calc(1.4);
     color: var(--mono-600);
   }
-  
+
 
   h2 {
     font-size: rem-calc(24);
@@ -133,7 +133,7 @@ article.home-hero {
     display: grid;
     grid-template-columns: auto;
     grid-gap: 2rem;
-    
+
   }
 
   li {
@@ -144,7 +144,7 @@ article.home-hero {
     ul {
       grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     }
-    
+
   }
 
   @include breakpoint(medium, min) {
@@ -225,6 +225,26 @@ article.home-hero {
   }
 }
 
+.how-gymnasium-works,
 .home-find-work {
 
+  header {
+    display: table; // shh (old school `width: fit-content;`)
+    margin: 0 auto;
+
+    &:before {
+      display: block;
+      content: "";
+      border-left: 1.4rem dashed transparent;
+      border-right: 1.4rem dashed transparent;
+      border-bottom: 2rem solid var(--mono-200);
+      margin: -3.4rem -3.6rem 0;
+    }
+  }
+}
+
+.home-find-work {
+  header:before  {
+    border-bottom-color: var(--mono-700);
+  }
 }
