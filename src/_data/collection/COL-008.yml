@@ -18,7 +18,7 @@ header:
   heading_id: # default is null
   heading: Generative AI
   description: |
-    <p>Explore our free collection of generative artifical intelligence <a href="#livestreams"><b>livestreams</b></a>, <a href="#articles"><b>articles</b></a>, and <a href="#resources"><b>resources</b></a>.</p>
+    <p>Explore our free collection of generative AI  <a href="#livestreams"><b>livestreams</b></a>, <a href="#articles"><b>articles</b></a>, and <a href="#resources"><b>resources</b></a>.</p>
 
 livestreams:
   module: lists/image-course
