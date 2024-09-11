@@ -3,7 +3,7 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
-// logged-in state of course CTA text
+// courses.njk CTA text logged-in state
 
 .site-header:has(.logged-in) ~ main .course-metabar a.btn {
   position: relative;
