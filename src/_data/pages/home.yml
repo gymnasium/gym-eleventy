@@ -2,7 +2,7 @@
 how-gymnasium-works:
   header:
     heading: How Gymnasium Works
-    heading_type: h1
+    heading_type: h2
   items:
     - heading: Free Online Courses
       description: Our courses are taught by industry experts. You can enroll anytime, anywhere.
@@ -16,4 +16,4 @@ how-gymnasium-works:
 find-work:
   header:
     heading: Find Work
-    heading_type: h1
+    heading_type: h2

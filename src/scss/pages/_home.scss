@@ -15,17 +15,18 @@
   // top/bottom padding for each component of the home page
   article,
   section {
-    margin-top: 0 !important; // TODO: refactor the main class to not add padding/margins by default.
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
   section {
-    h1 {
-      text-align: center;
-    }
-    h1, h2 {
+    h2 {
       font-size: rem-calc(24.5);
+    }
+    header {
+      h2:only-child {
+        text-align: center;
+      }
     }
   }
 }
