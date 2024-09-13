@@ -20,24 +20,17 @@
   }
 
   nav {
-
     font-family: var(--font-family-custom);
     padding: rem-calc(12 0);
     font-size: rem-calc(16.8);
 
-    ul {
-      list-style: none;
-      margin: 0;
-    }
-
     li {
-
-      display: block;
+      display: inline-flex;
       margin: 0;
 
       a:not(.btn) {
         display: block;
-        padding: 1rem;
+        padding: 0.8rem 1rem;
         margin: auto;
         text-decoration: none;
         // font-weight: normal;
@@ -50,7 +43,6 @@
 
         &.active {
           background-color: var(--mono-800);
-          box-shadow: 0 -0.75rem var(--mono-800), 0 0.75rem var(--mono-800);
         }
       }
 
@@ -59,17 +51,51 @@
       }
     }
 
-    @include breakpoint(medium, max) {
-      li {
+    @media (max-width: 52em) {
+
+      .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      a[href="/"] {
+        display: inline-block;
+        margin: 0.8rem 0;
+      }
+
+      .auth {
+        padding: 1rem 0;
+
+        &:not(.logged-in) {
+          padding-top: 0;
+
+          li {
+            display: block;
+
+            &:first-child {
+              display: none;
+            }
+
+            &:last-child {
+              position: absolute;
+              top: 0.75rem;
+              right: 1rem;
+            }
+          }
+        }
+      }
+
+      .logged-in {
         border-top: 1px solid var(--mono-700);
       }
 
-      ul:first-child {
-        margin-top: 1rem;
+      &.secondary {
+        padding: 0.25rem 0;
+        margin-top: -0.75rem;
       }
     }
 
-    @include breakpoint(medium) {
+    @media (min-width: 52em) {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -84,12 +110,18 @@
       }
 
       li {
-        display: inline-flex;
         letter-spacing: 0.1ex;
 
-        a {
+        &:last-child {
+          margin-left: 0.5rem;
+        }
+
+        a:not(.btn) {
           padding: 1rem;
-          margin: 0 0.5rem;
+
+          &.active {
+            box-shadow: 0 -0.75rem var(--mono-800), 0 0.75rem var(--mono-800);
+          }
         }
       }
 
