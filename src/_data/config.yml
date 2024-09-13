@@ -298,12 +298,21 @@ msg:
         <p>Want to let us know how we’re doing? Take a moment to share your thoughts with us. Your feedback will help shape our future courses!</p>
         <a class="gym-button gym-button-secondary" href="https://www.surveymonkey.com/s/JYJPMSS" target="_blank" rel="noopener">Take Survey</a>
       </div>
-    exam_failure_short_course: |
+    exam_first_attempt_short_course: |
       <h2>You’re Close!</h2>
       <p>You've scored <span class="exam-score-container"></span> on the exam. (To pass, you need to score greater than 80%.) The good news is that you still have one more chance to pass. This would be a great time to review the course material. Good luck!</p>
-    exam_failure_full_course: |
+    exam_first_attempt_full_course: |
       <h2>You’re close!</h2>
       <p>You've scored <span class="exam-score-container"></span> on the exam. (To pass, you need to score greater than 85%.) The good news is that you still have one more chance to pass. This would be a great time to review the course material. Good luck!</p>
+    exam_failure: |
+      <h2>Darn.</h2>
+      <p>The bad news is that you didn’t pass the exam. But the good news is that we have plenty of other free courses.</p>
+      <div class="survey">
+        <p>In the meantime, please take a moment to share your thoughts with us. Your feedback will help shape our future courses!</p>
+        <a class="gym-button gym-button-primary" href="https://www.surveymonkey.com/s/JYJPMSS" target="_blank" rel="noopener">
+          Take Survey
+        </a>
+      </div>
   theme:
     custom: "<p>This is an example of a custom message for anywhere in the theme.</p>"
 html:
