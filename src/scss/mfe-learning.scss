@@ -126,6 +126,11 @@
 
 // Iframe
 /*! CSS Used from: https://apps.learn.gymnasium.day/learning/app.a49f912aea5a90c1f158.css */
+.unit-iframe-wrapper {
+  iframe {
+    border: 0;
+  }
+}
 .border-0 {
   border: 0 !important;
 }
