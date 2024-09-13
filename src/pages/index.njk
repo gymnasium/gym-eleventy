@@ -32,12 +32,12 @@
     {%- set header = module['header'] -%}
     {%- include 'modules/components/header.njk' -%}
     {% set items = module['items'] -%}
-    <ul>
+    <ul class="list-unstyled">
       {%- for item in items %}
-        <li>
-          <h3>{{ item.heading }}</h3>
-          <p>{{ item.description }}</p>
-        </li>
+      <li>
+        <h3>{{ item.heading }}</h3>
+        <p>{{ item.description | safe }}</p>
+      </li>
       {%- endfor -%}
     </ul>
   </div>
