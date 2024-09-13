@@ -12,7 +12,8 @@ export default async (request, context) => {
 
       // default is [], add more keys to opt-in e.g. ["appearance", "username"]
       cookies: [
-        'edxloggedin'
+        'edxloggedin',
+        'edx-user-info'
       ],
     });
 
