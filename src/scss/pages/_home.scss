@@ -21,7 +21,7 @@
 
   section {
     h2 {
-      font-size: rem-calc(24.5);
+      font-size: 1.55rem;
     }
     header {
       h2:only-child {
@@ -82,31 +82,43 @@ article.home-hero {
 }
 
 .how-gymnasium-works {
-  h1, h2 {
-    font-weight: 700;
-    letter-spacing: rem-calc(1.4);
-    color: var(--mono-600);
+  h2,
+  h3 {
+    line-height: 1.15;
   }
 
-
   h2 {
-    font-size: rem-calc(24);
-    font-style: normal;
-    line-height: 1;
+    font-weight: 900;
+    letter-spacing: 0.15ex;
+    word-spacing: 0.25ex;
+  }
+
+  h3 {
+    font-size: 1.55rem;
+    letter-spacing: 0.05ex;
+    word-spacing: 0.125ex;
   }
 
   p {
     font-size: rem-calc(18);
     font-family: var(--font-family-default);
-    color: var(--mono-500);
+    letter-spacing: 0.0125ex;
+    color: var(--mono-600);
+  }
+
+  header + ul {
+    margin-top: 0.6rem;
   }
 
   ul {
-    list-style: none;
-    margin: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 2.6em;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+
+    @include breakpoint(large, min) {
+      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    }
+
+    grid-gap: 1.4rem 2.2rem;
   }
 }
 
@@ -239,7 +251,7 @@ article.home-hero {
       border-left: 1.4rem dashed transparent;
       border-right: 1.4rem dashed transparent;
       border-bottom: 2rem solid var(--mono-200);
-      margin: -3.4rem -3.6rem 0;
+      margin: -3.4rem -2.6rem 0;
     }
   }
 }
