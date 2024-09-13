@@ -123,11 +123,32 @@
   width: auto;
 }
 
+// Unit container
+.unit-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  padding: 0;
+}
+// @media (min-width: 576px) {
+//   .unit-container {
+//     padding-left: 24px;
+//     padding-right: 24px;
+//   }
+// }
+// @media (min-width: 830px) {
+//   .unit-container {
+//     padding-left: 40px;
+//     padding-right: 40px;
+//   }
+// }
+
 
 // Iframe
 /*! CSS Used from: https://apps.learn.gymnasium.day/learning/app.a49f912aea5a90c1f158.css */
 .unit-iframe-wrapper {
   iframe {
+    width: 100%;
     border: 0;
   }
 }
@@ -138,3 +159,51 @@
   width: 100% !important;
 }
 
+// Unit Navigation
+.unit-navigation {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 0;
+  max-width: 640px;
+}
+@media (max-width: 575px) {
+  .unit-navigation {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.unit-navigation .next-button,
+.unit-navigation .previous-button {
+  border-radius: 4px;
+}
+.unit-navigation .next-button:focus:before,
+.unit-navigation .previous-button:focus:before {
+  border-radius: 6px;
+}
+.unit-navigation .next-button {
+  flex-basis: 75%;
+}
+@media (max-width: 575px) {
+  .unit-navigation .next-button {
+    flex-basis: 100%;
+  }
+}
+.unit-navigation .previous-button {
+  flex-basis: 25%;
+}
+@media (max-width: 575px) {
+  .unit-navigation .previous-button {
+    flex-basis: 100%;
+  }
+}
+.top-unit-navigation {
+  justify-content: flex-end;
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .top-unit-navigation .next-button,
+  .top-unit-navigation .previous-button {
+    flex-basis: auto;
+    min-width: 8rem;
+  }
+}
