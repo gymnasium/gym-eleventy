@@ -3,28 +3,48 @@
   {%- set metaDescription = meta.description -%}
 {%- endif -%}
 {%- set metaAuthor = config.meta.author -%}
+{%- set metaUrl -%}{{ config.urls.production }}{{ page.url }}{%- endset -%}
+{# Allow overriding metaUrl via the page meta #}
+{%- if meta.canonicalUrl -%}
+  {%- set metaUrl = meta.canonicalUrl -%}
+{%- endif -%}
+{%- set metaImg -%}{{ config.urls.base_url }}{{ config.meta.og_img }}{%- endset -%}
+{%- if meta.img -%}
+  {%- set metaImg -%}{{ config.urls.base_url }}{{ meta.img }}{%- endset -%}
+{%- endif -%}
+{# meta robots defaults #}
+{%- if meta.robots -%}
+  {%- set metaRobots = meta.robots -%}
+{%- else -%}
+  {%- set metaRobots = "index, follow" -%}
+{%- endif -%}
+{# automatically exlude unindexed pages #}
+{%- if (eleventyExcludeFromCollections or meta.sitemapExclude) -%}
+  {%- set metaRobots = "noindex, nofollow" -%}
+{%- endif -%}
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ config.meta.title }}</title>
+<meta name="robots" content="noai, noimageai">
+<meta name="robots" content="{{ metaRobots }}">
+<meta name="author" content="{{ metaAuthor }}">
+<meta property="og:site_name" content="{{ metaAuthor }}">
+<meta name="twitter:title" property="og:title" content="{{ metaAuthor }}">
+<meta name="twitter:image:alt" property="og:image:alt" content="{{ metaAuthor }}">
 <meta name="description" content="{{ metaDescription }}"/>
-<meta name="author" content="{{ metaAuthor }}"/>
+<meta name="twitter:description" property="og:description" content="{{ metaDescription }}">
+<meta name="twitter:site" content="@{{ metaAuthor }}">
+<meta name="twitter:creator" content="@{{ metaAuthor }}">
+<meta name="twitter:image" property="og:image" content="{{ metaImg }}">
+<meta name="twitter:url" property="og:url" content="{{ metaUrl }}">
+<link rel="canonical" href="{{ metaUrl }}">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="{{ metaAuthor }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@AquentGymnasium">
-<meta name="twitter:creator" content="@AquentGymnasium">
-<meta name="twitter:url" property="og:url" content="{{ config.urls.production }}">
-<meta name="twitter:title" property="og:title" content="{{ metaAuthor }}">
-<meta name="twitter:description" property="og:description" content="{{ metaDescription }}">
-<meta name="twitter:image" property="og:image" content="{{ config.urls.base_url }}/img/og/gym-brand.png">
-<meta name="twitter:image:alt" property="og:image:alt" content="{{ metaAuthor }}">
-<meta name="author" content="{{ metaAuthor }}">
+
 <meta name="generator" content="{{ eleventy.generator }}">
-{%- if meta.canonicalUrl -%}
-<link rel="canonical" href="{{ meta.canonicalUrl }}">
-{% endif %}
-{# TODO: add OG meta #}
+
 <meta content="ie=edge" http-equiv=X-UA-Compatible>
 <link href="/favicon.svg" rel="icon" type="image/svg+xml">
 <link rel="stylesheet" href="{{ '/css/global.css' | cachebust }}" />
@@ -34,3 +54,11 @@
 {% endif %}
 
 {% block head %}{% endblock %}
+
+{# TODO: figure out how to include schema in the head automatically #}
+
+{%- if meta.schema -%}
+<!-- start schema -->
+{%- include 'modules/schema/' + meta.schema.type + '.njk' ignore missing -%}
+<!-- end schema -->
+{%- endif -%}

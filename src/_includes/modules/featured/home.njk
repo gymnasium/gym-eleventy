@@ -39,9 +39,9 @@
           {%- set destUrl = '/webinars/' + obj.slug -%}
           {%- set src = '/img/og/webinars/' + obj.recording_ogimage -%}
         {%- elif type == 'short' or type == 'full' -%}
-          {%- set destUrl = id | course_endpoint('course_about') -%}
+          {%- set destUrl = '/courses/' + obj.title | slugify + '/' -%}
         {%- elif type == 'tutorial' -%}
-          {%- set destUrl = '/courses/take5/' + obj.title | slugify -%}
+          {%- set destUrl = '/courses/take5/' + obj.title | slugify + '/' -%}
         {%- else -%}
           TYPE IS SOMETHING ELSE
         {%- endif -%}

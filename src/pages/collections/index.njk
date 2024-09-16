@@ -42,12 +42,12 @@
         <div class="main">
           <header>
             <h2 class="title">{{ col.meta.title }}</h2>
-            <p class="description">{{ col.meta.description }}</p>
+            <p class="description">{{ col.card.description }}</p>
             {# <span>order: {{ col.meta.order }}</span> #}
           </header>
         </div>
         <div class="cta">
-          <a class="btn" href="/{{ col.meta.title | slugify }}/">Learn More</a>
+          <a class="btn" href="/{{ col.meta.title | slugify }}/">Explore Collection</a>
         </div>
       {# </div> #}
     </li>

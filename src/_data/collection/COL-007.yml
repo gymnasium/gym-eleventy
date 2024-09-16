@@ -2,11 +2,14 @@ meta:
   id: COL-007
   title: "Career Skills"
   topic: "Career Skills"
-  description: "Whether you’re a newbie or a pro, we’ve got you covered."
+  description: "Explore our free career skills collection of courses, tutorials, and articles."
   slug: career-skills
   color: green
   order: 7
   redirectFrom: '/remote-work/'
+
+card:
+  description: "Whether you’re a newbie or a pro, we’ve got you covered."
 
 header:
   header_id: # default is null
@@ -118,7 +121,7 @@ articles:
     - label: "How to Create a UX Profile That Will Help You Land Your Dream Job"
       href: "https://aquenttalent.com/blog/how-to-create-a-ux-profile-that-will-help-you-land-your-dream-job"
     - label: "The Design Leader Job Search. It’s All about the Brand (Yours)"
-      href: "https://medium.com/aquent-off-hours/the-design-leader-job-search-its-all-about-the-brand-yours-3ca9e4d0c983"
+      href: "https://suzillazilla.medium.com/the-design-leader-job-search-its-all-about-the-brand-yours-3ca9e4d0c983"
     - label: "Considering Contract Work? Here’s Why You Should Go for It"
       href: "https://medium.com/gymnasium/considering-contract-work-heres-why-you-should-go-for-it-7ec5eb246175"
     - label: "4 Reasons Web Designers Should Learn to Code"
@@ -142,11 +145,11 @@ articles:
       heading_type: h3
     links:
     - label: "UX Hiring Is Not Easy, Even for a Company Full of UX Recruiters"
-      href: "https://medium.com/aquent-off-hours/ux-hiring-is-not-easy-even-for-a-company-full-of-ux-recruiters-4bd2ce1e6720"
+      href: "https://suzillazilla.medium.com/ux-hiring-is-not-easy-even-for-a-company-full-of-ux-recruiters-4bd2ce1e6720"
     - label: "7 Non-Technical Skills Your Creative Candidates Should Have"
       href: "https://aquenttalent.com/blog/7-non-technical-skills-your-creative-candidates-should-have"
     - label: "If Your Team Isn’t Learning, They’re Falling Behind. Fix It"
-      href: "https://medium.com/aquent-off-hours/if-your-team-isnt-learning-they-re-falling-behind-fix-it-52331858383d"
+      href: "https://suzillazilla.medium.com/if-your-team-isnt-learning-they-re-falling-behind-fix-it-52331858383d"
     - label: "Eight Steps to Launching a Successful Mentorship Program"
       href: "https://aquent.com/blog/eight-steps-to-launching-a-successful-mentorship-program"
     - label: "InsideOut Leadership Community"

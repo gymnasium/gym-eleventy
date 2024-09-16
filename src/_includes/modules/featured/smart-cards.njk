@@ -46,7 +46,8 @@
         {%- elif type == 'short' or type == 'full' -%}
           {%- set category = "Courses" -%}
           {%- set cta_text = "Get Started" -%}
-          {%- set destUrl = shortId | course_endpoint('course_about') -%}
+          {# {%- set destUrl = shortId | course_endpoint('course_about') -%} #}
+          {%- set destUrl = "/courses/" + slug + "/" -%}
         {%- elif type == 'tutorial' -%}
           {%- set cta_text = "Watch Now" -%}
           {%- set destUrl = '/courses/take5/' + slug -%}
@@ -74,7 +75,7 @@
             <p class="topic"><b>{{ category }}</b></p>
             <figure style="border-image-source: url({{ src }});">
                 <a href="{{ destUrl }}">
-                  <img alt="Cover artwork for {{ title }}" src="{{ src }}" width="" height="" decoding="asyc" fetchpriority="important">
+                  <img alt="Cover artwork for {{ title }}" src="{{ src }}" width="" height="" decoding="async" fetchpriority="high">
                 </a>
             </figure>
             <header>

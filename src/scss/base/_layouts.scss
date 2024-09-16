@@ -204,9 +204,7 @@
         overflow: hidden;
 
         &[style*="courses"] {
-          background: var(--mono-400) no-repeat left center;
-          background-size: cover;
-          border-image: 1 / 0 100% stretch;
+          border-image: 2 / 100% stretch;
         }
 
         img {

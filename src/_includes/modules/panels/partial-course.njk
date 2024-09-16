@@ -34,7 +34,8 @@
 {%- set src = img -%}
 {%- set srcSet = src -%}
 
-{%- set url = obj.id | course_endpoint('course_about') -%}
+{# {%- set url = obj.id | course_endpoint('course_about') -%} #}
+{%- set url = "/courses/" + slug + "/" -%}
 
 {%- set baseClass = "course " + type + ' ' + shortId | lower -%}
 
@@ -59,7 +60,7 @@
     <div class="main">
       <a href="{{ url }}">
         <div class="artwork">
-          <img alt="Course artwork for {{ title }}." src="{{ src }}" srcset="{{ srcSet }}" decoding="async" fetchpriority="high" width="574" height="488">
+          <img alt="Course image for {{ title }}." src="{{ src }}" srcset="{{ srcSet }}" decoding="async" fetchpriority="high" width="574" height="488">
         </div>
       </a>
       <header>
@@ -71,7 +72,7 @@
         <p class="description">{{ description }}</p>
       </header>
       <div class="cta">
-        <a class="btn" href="{{ url }}">Explore Course</a>
+        <a class="btn" href="{{ url }}">Learn More</a>
       </div>
       <aside class="list-summary">
         {%- if (obj.skills) -%}

@@ -1,6 +1,7 @@
 ---js
 {
   layout: "layouts/main.njk",
+  layoutClass: "bg-mono-100",
   pagination: {
     data: "webinars",
     size: 1,
@@ -23,7 +24,7 @@
 }
 ---
 
-<article id="{{ item.id | slugify }}" class="courses webinar-detail bg-mono-100 full-bleed">
+<article id="{{ item.id | slugify }}" class="courses webinar-detail bg-mono-100">
 
   <div class="main">
 

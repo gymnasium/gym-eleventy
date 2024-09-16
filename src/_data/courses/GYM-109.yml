@@ -3,6 +3,8 @@ title: "Responsive Web Design Fundamentals"
 date: 2019-10-28T00:00:00-04:00
 color: magenta
 type: full
+path_slug: full
+credential: certificate
 tags:
   - course
   - full
@@ -23,11 +25,13 @@ audience:
   - label: "JavaScript Developers"
 lessons_duration: "4 hours"
 completion_duration: "Up to 16 hours"
+duration_8601_format: PT16H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
   <strong><cite>Responsive Web Design Fundamentals</cite></strong> is a hands-on, code-intensive course on how to build high-performance, responsive websites that look great across multiple screen sizes and devices.
-preview_video_src: https://www.youtube.com/embed/XyEbM_e_fAw
+preview_video_id: XyEbM_e_fAw
+preview_video_duration: PT06M12S
 about: >
   <p>This course is an introduction to responsive web design strategies and how to implement those strategies through HTML, CSS and JavaScript. You’ll learn how responsive thinking affects content writing and structure as well as your design and development workflow. You’ll also explore best practices for responsive typography and images, creative tips to improve the visuals of your designs and how to identify and improve site performance across mobile and desktop.</p>
 outline:

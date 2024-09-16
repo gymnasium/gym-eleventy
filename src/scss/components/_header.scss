@@ -94,11 +94,18 @@
       }
 
       ul.auth {
+        position: relative;
+        margin-left: 1rem;
+
+        // vertical line
         &:before {
+          left: -0.5rem;
+          position: absolute;
           content: "";
-          padding: rem-calc(12 0);
-          margin: rem-calc(0 16 0 15);
-          border-left: 1px solid var(--mono-700);
+          border-left: rem-calc(1) solid var(--mono-700);
+          height: 85%;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
 

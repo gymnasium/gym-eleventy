@@ -3,6 +3,8 @@ title: "JavaScript and jQuery Survival Guide"
 date: 2019-10-28T00:00:00-04:00
 color: purple
 type: full
+path_slug: full
+credential: certificate
 tags:
   - course
   - full
@@ -26,11 +28,13 @@ audience:
   - label: "Full Stack Developers"
 lessons_duration: "3 hours"
 completion_duration: "Up to 12 hours"
+duration_8601_format: PT12H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
   <strong><cite>JavaScript and jQuery Survival Guide</cite></strong> will prepare you to tackle real-world projects that require the use of jQuery and JavaScript by walking you through a number of exercises and coding examples.
-preview_video_src: https://www.youtube.com/embed/4T1Ei46h41o
+preview_video_id: 4T1Ei46h41o
+preview_video_duration: PT06M06S
 about: >
   <p>Learn basic yet critical skills for working with JavaScript &amp; jQuery in the browser. By the end of this tutorial, the student will understand how to debug problems using the JavaScript console, write simple event handlers, and perform common manipulation of Document Object Model (DOM) elements. These three lessons are designed to prepare the student for typical challenges that they will face when adding or modifying interactive elements on a web page.</p>
 outline:
@@ -49,7 +53,7 @@ requirements: |
   <ul>
     <li>Mac or Windows desktop or laptop</li>
     <li>Web browser</li>
-    <li>A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Code Studio</a>, it’s free, and available for Mac, Windows, and Linux)</li>
+    <li>A text editor (We suggest <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>, it’s free, and available for Mac, Windows, and Linux)</li>
   </ul>
   <p>In addition to the requirements listed above, there are a few supporting technologies that need to be installed on your system to follow along with the lesson files. The instructor covers how to install these on your own system in Lesson 1, Chapter 2, but we are providing the links here for your convenience.</p>
   <ul>

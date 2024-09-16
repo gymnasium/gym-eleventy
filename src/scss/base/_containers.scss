@@ -13,23 +13,11 @@
 
 main {
   background-color: var(--mono-200);
+  padding-bottom: 1.4rem;
 
-  &,
-  .full-bleed:only-child {
+  // TODO: replace with :not(.full-width) instead?
+  &.default {
     padding-top: 1.4rem;
-    padding-bottom: 1.4rem;
-
-    .container {
-
-      .full-bleed:first-child {
-        margin-top: -1.4rem;
-      }
-
-      .full-bleed:only-child {
-        margin-top: -1.4rem;
-        margin-bottom: -1.4rem;
-      }
-    }
   }
 }
 

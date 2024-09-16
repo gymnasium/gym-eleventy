@@ -1,8 +1,12 @@
 id: GYM-002
 title: "Introducing Node.js"
 date: 2022-05-27T00:00:00-04:00
+redirectFrom:
+  - /courses/GYM/002/0/about
 color: grey
 type: short
+path_slug: gym-shorts
+credential: badge
 tags:
   - course
   - gym-short
@@ -11,7 +15,7 @@ tags:
 live: false
 sitemapExclude: true
 retired_message:
-  1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons. <span class='text-wrap'>We recommend taking the updated course <a href='/courses/course-v1:GYM+012+0/about'>Introduction to Node.js</a> (and earning a badge) instead.</span>"
+  post: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons. <span class='text-wrap'>We recommend taking the updated course <a href='/courses/course-v1:GYM+012+0/about'>Introduction to Node.js</a> (and earning a badge) instead.</span>"
 url: /courses/course-v1:GYM+002+0/about
 img: /img/courses/svg/gym-002.svg
 topic: "Development"
@@ -28,11 +32,13 @@ audience:
   - label: "JavaScript Developers and Programmers"
 lessons_duration: "Under 1 hour"
 completion_duration: "Up to 2 hours"
+duration_8601_format: PT2H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
   <strong><cite>Introducing Node.JS</cite></strong> will teach you the basics of Node.js through the example of building a sample "social profile" form.
-preview_video_src:
+preview_video_id:
+preview_video_duration:
 about: >
   <p>This course will describe the benefits of using Node.Js and walk through a sample project. Concepts covered include installing Node and Express, working with Jade, reading and writing data from a JSON file, as well as storing references in JSON data. By the end of the course you will have a solid overview of the benefits of using Node.js and a starting point for integrating Node into your workflow.</p>
 outline:
