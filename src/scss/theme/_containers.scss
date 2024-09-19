@@ -17,6 +17,7 @@ body {
   }
 }
 
+.content-wrapper,
 .main-container {
   @include container;
 }
