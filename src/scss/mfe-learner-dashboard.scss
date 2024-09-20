@@ -370,7 +370,7 @@
 .course-card-banners {
 }
 
-.alert-info {
+.alert {
   border-radius: 0;
   box-shadow: none;
   padding: 1rem 1.5rem;
@@ -381,13 +381,13 @@
   font-size: 0.875rem;
   line-height: 1.5rem;
   text-align: start;
-}
 
-.alert .alert-icon {
-  flex-shrink: 0;
-  height: 1.5rem;
-  margin-inline-end: 0.8rem;
-  width: 1.5rem;
+  .alert-icon {
+    flex-shrink: 0;
+    height: 1.5rem;
+    margin-inline-end: 0.8rem;
+    width: 1.5rem;
+  }
 }
 
 // 3 dot icon
