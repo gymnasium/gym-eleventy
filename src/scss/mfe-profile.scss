@@ -12,13 +12,16 @@
 @use 'mfe/flex';
 @use 'mfe/root';
 
-// constrain layout width
-.profile-page {
-  @include container;
 
-  // hide one "version" of the name/member since
-  .container-fluid > .row > .col {
-    display: none;
+.profile-page {
+  .container-fluid {
+    // constrain layout width
+    @include container;
+
+    // hide one "version" of the name/member since
+    > .row > .col {
+      display: none;
+    }
   }
 }
 
