@@ -161,21 +161,8 @@ div[data-learner-type] {
 .unit-container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1024px;
   padding: 0;
 }
-// @media (min-width: 576px) {
-//   .unit-container {
-//     padding-left: 24px;
-//     padding-right: 24px;
-//   }
-// }
-// @media (min-width: 830px) {
-//   .unit-container {
-//     padding-left: 40px;
-//     padding-right: 40px;
-//   }
-// }
 
 
 // Iframe
@@ -253,7 +240,7 @@ div[data-learner-type] {
   flex-shrink: 0;
   overflow: auto;
   position: relative;
-  max-width: 32.125rem;
+  max-width: 25rem;
   width: 100%;
 }
 @media (min-width: 1200px) {
@@ -279,21 +266,44 @@ div[data-learner-type] {
 }
 
 .course-sidebar-section {
-  background: #fff;
-  border: 1px solid #d7d3d1;
+  background: var(--mono-100);
+  border: 1px solid var(--primary);
 
-  button {
+  .btn {
     line-height: 1.75rem;
+    background: transparent;
+    border-radius: 0;
+    border-width: 1px;
 
     & {
-      .focus:before,
-      :focus:before {
+      :focus,
+      .focus {
         border-radius: 0;
+
+        &:before {
+          border-radius: 0;
+        }
       }
+
+      :hover {
+        background-color: transparent;
+      }
+    }
+
+    .pgn__icon {
+      color: var(--mono-900);
     }
   }
 }
 
+// Icons
+.pgn__icon {
+  display: block;
+  flex-shrink: 0;
+  height: 1.5rem;
+  position: relative;
+  width: 1.5rem;
+}
 
 .outline-sidebar-toggle-btn {
   font-size: 1.5rem;
@@ -307,6 +317,15 @@ div[data-learner-type] {
 
   @media (min-width: 1200px) {
     margin-bottom: 0;
+  }
+
+  a:not(.btn) {
+    padding: 1rem;
+    border: rem-calc(1) solid var(--primary);
+    font-family: var(--font-family-custom);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
   }
 
   li {
