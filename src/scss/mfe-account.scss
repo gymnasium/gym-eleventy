@@ -115,3 +115,10 @@
 .col-md-2 {
   display: none;
 }
+
+svg {
+  // pencil icon
+  &.svg-inline--fa {
+    margin-right: 0.33rem;
+  }
+}
