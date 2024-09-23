@@ -11,8 +11,6 @@
 
 @use 'mfe/flex';
 @use 'mfe/root';
-@use 'mfe/layout';
-
 
 .profile-page {
   .container-fluid {
@@ -44,12 +42,12 @@ h1 {
 }
 
 .profile-avatar-wrap {
+  margin-top: 1rem;
 
   @include breakpoint(medium, min) {
     margin-bottom: 2rem;
     margin-top: -7.75rem;
     max-width: 12rem;
-    margin-left: 1rem;
   }
 
   form {
