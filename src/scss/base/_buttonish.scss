@@ -163,6 +163,8 @@ a, summary {
     &:focus,
     &:hover {
       background-color: transparent;
+      color: var(--primary);
+      text-decoration: underline;
     }
   }
 

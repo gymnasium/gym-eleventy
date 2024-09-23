@@ -31,8 +31,6 @@
 //   width: 100%;
 // }
 
-// instructor-toolbar
-/*! CSS Used from: https://apps.learn.gymnasium.day/learning/app.a49f912aea5a90c1f158.css */
 
 // TODO: turn this into a mixin?
 main {
@@ -40,9 +38,10 @@ main {
   max-width: convert-to-rem(map.get($breakpoints, 'large'));
 }
 
-
 // course tab nav
 .course-tabs-navigation {
+  margin-bottom: 0 !important;
+  
   nav {
     padding: 1rem 0;
 
@@ -58,6 +57,11 @@ main {
       font-weight: bold;
     }
   }
+}
+
+// Course Header
+div[data-learner-type] {
+  margin: 0 !important;
 }
 
 // footer offset if there is an instructor toolbar visible
