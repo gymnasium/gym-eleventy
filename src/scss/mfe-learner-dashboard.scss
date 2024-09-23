@@ -12,6 +12,7 @@
 @use "mfe/root";
 @use "mfe/flex";
 @use "mfe/buttons";
+@use 'mfe/layout';
 
 .container-fluid {
   @include container;
