@@ -1,6 +1,7 @@
 // | -------------------------------------------------------------
 // | This file is intended to only serve the Learning MFE
 // | -------------------------------------------------------------
+@use "sass:map";
 @use "base/breakpoints" as *;
 @use "base/functions" as *;
 @use "base/mixins" as *;
@@ -13,7 +14,8 @@
 
 @use "mfe/root";
 @use "mfe/flex";
-@use "mfe/layout";
+// @use "mfe/layout";
+
 // @use "mfe/buttons";
 @use "mfe/course-header";
 @use "mfe/learning/date-summary";
@@ -31,46 +33,78 @@
 
 // instructor-toolbar
 /*! CSS Used from: https://apps.learn.gymnasium.day/learning/app.a49f912aea5a90c1f158.css */
+
+// TODO: turn this into a mixin?
+main {
+  margin: 0 auto;
+  max-width: convert-to-rem(map.get($breakpoints, 'large'));
+}
+
+
+// course tab nav
+.course-tabs-navigation {
+  nav {
+    padding: 1rem 0;
+
+    a {
+      text-transform: uppercase;
+      padding: 0;
+      margin-right: 1rem;
+      cursor: pointer;
+      display: block;
+      line-height: 1;
+      font-family: var(--font-family-custom);
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+}
+
+// footer offset if there is an instructor toolbar visible
+#root:has(.instructor-toolbar) div .site-footer {
+  margin-bottom: rem-calc(120);
+
+  @include breakpoint(medium) {
+    margin-bottom: rem-calc(70);
+  }
+}
+
 .instructor-toolbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+
   .col-form-label {
     font-size: inherit;
-    line-height: 2;
+    line-height: 1;
     margin-bottom: 0;
   }
 
   .dropdown {
     position: relative;
   }
+  
   .dropdown-toggle {
     white-space: nowrap;
-  }
-  .dropdown-toggle:after {
-    border-bottom: 0;
-    border-left: 0.3em solid var(--mono-1000);
-    border-right: 0.3em solid var(--mono-1000);
-    border-top: 0.3em solid;
-    display: inline-block;
-    vertical-align: 0.255em;
-  }
-  .dropdown-toggle:after {
-    margin-left: 0.255em;
-  }
-  .dropdown-toggle:empty:after {
-    margin-left: 0;
-  }
-  .dropdown-toggle:after {
-    border: 0;
-    border-style: solid;
-    content: "";
-    height: 0.45rem;
-    margin-inline-start: 0.5em;
-    position: relative;
-    top: -0.05rem;
-    width: 0.45rem;
-  }
-  .dropdown-toggle:after {
-    border-width: 0.15rem 0.15rem 0 0;
-    transform: rotate(135deg);
+
+    &:after {
+      border: 0;
+      border-style: solid;
+      content: "";
+      height: 0.45rem;
+      margin-left: 0.255em;
+      margin-inline-start: 0.5em;
+      position: relative;
+      top: -0.05rem;
+      width: 0.45rem;
+      border-width: 0.15rem 0.15rem 0 0;
+      transform: rotate(135deg);
+    }
+
+    &:empty:after {
+      margin-left: 0;
+    }
   }
 
   .dropdown,
@@ -78,10 +112,6 @@
   .dropright,
   .dropup {
     position: relative;
-  }
-
-  .dropdown-toggle {
-    white-space: nowrap;
   }
 
   .border-light {

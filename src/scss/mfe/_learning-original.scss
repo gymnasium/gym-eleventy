@@ -130,24 +130,7 @@
   flex-grow: 1;
 }
 
-.nav-underline-tabs {
-  margin: 0 0 -1px;
-}
-.nav-underline-tabs .nav-link {
-  border-bottom: 4px solid #0000;
-  border-left: 0;
-  border-radius: 0;
-  border-right: 0;
-  border-top: 4px solid #0000;
-  color: #454545;
-}
-.nav-underline-tabs .nav-link.active,
-.nav-underline-tabs .nav-link:focus,
-.nav-underline-tabs .nav-link:hover {
-  border-bottom-color: var(--primary);
-  color: var(--primary);
-  font-weight: 400;
-}
+
 .pgn__menu-select .pgn__menu-select-popup {
   position: static;
 }
