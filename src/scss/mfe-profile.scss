@@ -12,6 +12,16 @@
 @use 'mfe/flex';
 @use 'mfe/root';
 
+// constrain layout width
+.profile-page {
+  @include container;
+
+  // hide one "version" of the name/member since
+  .container-fluid > .row > .col {
+    display: none;
+  }
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -82,15 +92,15 @@ h1 {
   height: 1rem;
   position: relative;
   width: 1rem;
-}
 
-.pgn__icon svg {
-  display: block;
-  height: 100%;
-  max-height: 100%;
-  max-width: 100%;
-  position: relative;
-  width: 100%;
+  svg {
+    display: block;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
 }
 
 .icon-visibility-off {
@@ -159,9 +169,4 @@ h1 {
 // icon in "view certificate" button
 .pgn__hyperlink__external-icon {
   margin-left: 1rem;
-}
-
-// hide one "version" of the name/member since
-.profile-page .container-fluid > .row > .col {
-  display: none;
 }
