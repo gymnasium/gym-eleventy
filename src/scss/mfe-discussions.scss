@@ -11,9 +11,9 @@
 
 @use 'mfe/root';
 
-
 @use 'mfe/layout';
 @use 'mfe/course-header';
+@use "mfe/course-tabs-nav";
 
 // copied from MFE
 @import 'mfe/paragon-variables';

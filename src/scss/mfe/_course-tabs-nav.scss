@@ -1,0 +1,35 @@
+@use 'base/breakpoints' as *;
+@use 'base/functions' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts' as *;
+
+
+// course tab nav
+.course-tabs-navigation {
+  margin-bottom: 0 !important;
+  
+  nav {
+    padding: 1rem 0;
+
+    a {
+      text-transform: uppercase;
+      padding: 0;
+      margin-right: 1rem;
+      cursor: pointer;
+      display: block;
+      line-height: 1;
+      font-family: var(--font-family-custom);
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+
+      &:hover,
+      &:focus,
+      &.active {
+        border-bottom-width: 2px;
+        margin-bottom: -2px;
+      }
+    }
+  }
+}
