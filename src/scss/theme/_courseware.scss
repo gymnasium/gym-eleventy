@@ -81,6 +81,15 @@
     font-family: var(--font-family-custom);
     font-size: 1rem;
     font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+
+    &:hover,
+    &:focus,
+    &.active {
+      border-bottom-width: 2px;
+      margin-bottom: -2px;
+    }
   }
 }
 
