@@ -26,7 +26,7 @@ $grid-breakpoints: (
 // }
 
 // Color system
-$white:    #FFFFFF !default;
+$white:    var(--mono-100) !default;
 $gray-100: #EBEBEB !default;
 $gray-200: #CCCCCC !default;
 $gray-300: #ADADAD !default;
@@ -36,25 +36,25 @@ $gray-600: #5C5C5C !default;
 $gray-700: #454545 !default;
 $gray-800: #333333 !default;
 $gray-900: #212529 !default;
-$black:    #000000 !default;
+$black:    var(--mono-900) !default;
 
 $grays: () !default;
 $grays: map-merge(
   (
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
+    "100": var(--mono-100),
+    "200": var(--mono-200),
+    "300": var(--mono-300),
+    "400": var(--mono-400),
+    "500": var(--mono-500),
+    "600": var(--mono-600),
+    "700": var(--mono-700),
+    "800": var(--mono-800),
+    "900": var(--mono-900)
   ),
   $grays
 );
 
-$blue: #23419F !default;
+$blue: var(--primary) !default;
 $red: #C32D3A !default;
 $yellow: #FFD900 !default;
 $green: #178253 !default;
@@ -894,3 +894,22 @@ $list-group-action-hover-color:     $list-group-action-color !default;
 
 $list-group-action-active-color:    $body-color !default;
 $list-group-action-active-bg:       $gray-200 !default;
+
+// Tooltip
+$tooltip-font-size:                  $font-size-sm !default;
+$tooltip-max-width:                  200px !default;
+$tooltip-color:                      $white !default;
+$tooltip-bg:                         $black !default;
+$tooltip-border-radius:              $border-radius !default;
+$tooltip-opacity:                    1 !default;
+$tooltip-padding-y:                  .5rem !default;
+$tooltip-padding-x:                  .5rem !default;
+$tooltip-margin:                     0 !default;
+$tooltip-box-shadow:                 drop-shadow(0 2px 4px rgba(0, 0, 0, .15))
+  drop-shadow(0 2px 8px rgba(0, 0, 0, .15)) !default;
+$tooltip-arrow-width:                .8rem !default;
+$tooltip-arrow-height:               .4rem !default;
+$tooltip-arrow-color:                $tooltip-bg !default;
+$tooltip-color-light:                $black !default;
+$tooltip-bg-light:                   $white !default;
+$tooltip-arrow-color-light:          $white !default;

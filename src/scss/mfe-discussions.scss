@@ -9,11 +9,14 @@
 @use 'shared';
 @use 'components/webfonts_absolute';
 
+
+
 @use 'mfe/root';
 
 @use 'mfe/layout';
 @use 'mfe/course-header';
 @use "mfe/course-tabs-nav";
+@use "mfe/tooltips";
 
 // copied from MFE
 @import 'mfe/paragon-variables';
