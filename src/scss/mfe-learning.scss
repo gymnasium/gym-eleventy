@@ -285,10 +285,14 @@ div[data-learner-type] {
 }
 
 .instructor-toolbar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 100000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100000;
+
+  > div {
+    padding: 1rem;
+  }
 
   .col-form-label {
     font-size: inherit;
