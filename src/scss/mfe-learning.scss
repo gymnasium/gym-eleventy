@@ -156,6 +156,7 @@ div[data-learner-type] {
   position: relative;
   max-width: 25rem;
   width: 100%;
+  margin-right: 1rem;
 }
 // @media (min-width: 1200px) {
 //   .outline-sidebar {
@@ -165,7 +166,7 @@ div[data-learner-type] {
 //   }
 // }
 .outline-sidebar-heading-wrapper {
-  border: 1px solid #d7d3d1;
+  border: rem-calc(1) solid var(--mono-200);
 
   &.sticky {
     position: sticky;
@@ -181,13 +182,13 @@ div[data-learner-type] {
 
 .course-sidebar-section {
   background: var(--mono-100);
-  border: 1px solid var(--primary);
+  border: rem-calc(1) solid var(--primary);
 
   .btn {
     line-height: 1.75rem;
     background: transparent;
     border-radius: 0;
-    border-width: 1px;
+    border-width: rem-calc(1);
 
     & {
       :focus,
@@ -232,62 +233,64 @@ div[data-learner-type] {
   transform: scaleX(-1);
 }
 
-#outline-sidebar-outline {
-  margin-top: -1px;
+// Course Left Sidebar Navigation
+.outline-sidebar {
+  ol {
+    // margin-top: rem-calc(-1);
 
-  @media (min-width: 1200px) {
-    margin-bottom: 0;
-  }
-
-  a:not(.btn) {
-    padding: 1rem;
-    border: rem-calc(1) solid var(--primary);
-    font-family: var(--font-family-custom);
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  li {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    @media (min-width: 1200px) {
+      margin-bottom: 0;
+    }
   
-    .collapsible-trigger {
-      border-radius: 0;
-      padding: 1.25rem 1.5rem 1.25rem 3rem;
-
-      @media (max-width: 575px) {
-        padding-left: 1.5rem;
-      }
-
-      &:hover {
-        background-color: #e1dddb;
-      }
-
-      .collapsible-icon {
-        margin-inline-start: 0;
+    a:not(.btn) {
+      padding: 1rem;
+      border: rem-calc(1) solid var(--primary);
+      font-family: var(--font-family-custom);
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  
+    li {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    
+      .collapsible-trigger {
+        border-radius: 0;
+        padding: 1.25rem 1.5rem 1.25rem 3rem;
+  
+        @media (max-width: 575px) {
+          padding-left: 1.5rem;
+        }
+  
+        &:hover {
+          background-color: #e1dddb;
+        }
+  
+        .collapsible-icon {
+          margin-inline-start: 0;
+        }
       }
     }
-  }
-
-  .collapsible-body {
-    padding: 0;
-
-    ol li > a {
-      padding: 1.25rem 1.5rem 1.25rem 4rem;
-
-      @media (max-width: 575px) {
-        padding-left: 2rem;
-      }
-
-      &:hover {
-        background-color: #e1dddb;
-        text-decoration: none;
+  
+    .collapsible-body {
+      padding: 0;
+  
+      ol li > a {
+        padding: 1.25rem 1.5rem 1.25rem 4rem;
+  
+        @media (max-width: 575px) {
+          padding-left: 2rem;
+        }
+  
+        &:hover {
+          background-color: #e1dddb;
+          text-decoration: none;
+        }
       }
     }
   }
 }
-
 
 // Instructor Toolbar customizations
 #root:has(.instructor-toolbar) div .site-footer {
@@ -345,12 +348,12 @@ div[data-learner-type] {
   }
 
   .border-light {
-    border-color: #e1dddb !important;
+    border-color: var(--mono-200);
   }
 
   hr {
     border: 0;
-    border-top: 1px solid #0000001a;
+    border-top: rem-calc(1) solid #0000001a;
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
@@ -358,6 +361,6 @@ div[data-learner-type] {
   .btn {
     font-size: 1rem;
     padding: 0.5rem 1rem;
-    border-width: 1px;
+    border-width: rem-calc(1);
   }
 }
