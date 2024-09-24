@@ -105,6 +105,8 @@ div[data-learner-type] {
     gap: 1rem;
   }
 }
+
+
 .unit-navigation .next-button,
 .unit-navigation .previous-button {
   border-radius: 4px;
@@ -155,13 +157,13 @@ div[data-learner-type] {
   max-width: 25rem;
   width: 100%;
 }
-@media (min-width: 1200px) {
-  .outline-sidebar {
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-}
+// @media (min-width: 1200px) {
+//   .outline-sidebar {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//   }
+// }
 .outline-sidebar-heading-wrapper {
   border: 1px solid #d7d3d1;
 
@@ -215,6 +217,12 @@ div[data-learner-type] {
   height: 1.5rem;
   position: relative;
   width: 1.5rem;
+}
+
+// bookmark icon
+.pgn__stateful-btn-icon {
+  margin-left: 0;
+  margin-inline-end: .5em;
 }
 
 .outline-sidebar-toggle-btn {
