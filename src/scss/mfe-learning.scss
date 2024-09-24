@@ -7,7 +7,7 @@
 @use "base/mixins" as *;
 @use "base/fonts" as *;
 
-@use "mfe/learning-original";
+@use "mfe/learning/learning-original";
 
 @use "shared";
 @use 'components/webfonts_absolute';
@@ -22,9 +22,9 @@
 @use "mfe/learning/flag-button";
 // @use "mfe/tabs";
 
-// @use "mfe/learning-instructor-toolbar";
-// @use "mfe/learning-course-tab-nav";
-// @use "mfe/learning-course-outline";
+// @use "mfe/learning/learning-instructor-toolbar";
+// @use "mfe/learning/learning-course-tab-nav";
+// @use "mfe/learning/learning-course-outline";
 
 // .container-xl {
 //   @include container;
@@ -59,82 +59,12 @@ main {
   }
 }
 
-// Course Header
+// Course Header (non-nav version, only appears under "Course" tab)
 div[data-learner-type] {
   margin: 0 !important;
 }
 
-// footer offset if there is an instructor toolbar visible
-#root:has(.instructor-toolbar) div .site-footer {
-  margin-bottom: rem-calc(120);
 
-  @include breakpoint(medium) {
-    margin-bottom: rem-calc(70);
-  }
-}
-
-.instructor-toolbar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 100;
-
-  .col-form-label {
-    font-size: inherit;
-    line-height: 1;
-    margin-bottom: 0;
-  }
-
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-toggle {
-    white-space: nowrap;
-
-    &:after {
-      border: 0;
-      border-style: solid;
-      content: "";
-      height: 0.45rem;
-      margin-left: 0.255em;
-      margin-inline-start: 0.5em;
-      position: relative;
-      top: -0.05rem;
-      width: 0.45rem;
-      border-width: 0.15rem 0.15rem 0 0;
-      transform: rotate(135deg);
-    }
-
-    &:empty:after {
-      margin-left: 0;
-    }
-  }
-
-  .dropdown,
-  .dropleft,
-  .dropright,
-  .dropup {
-    position: relative;
-  }
-
-  .border-light {
-    border-color: #e1dddb !important;
-  }
-
-  hr {
-    border: 0;
-    border-top: 1px solid #0000001a;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-
-  .btn {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border-width: 1px;
-  }
-}
 
 .row {
   display: flex;
@@ -365,5 +295,79 @@ div[data-learner-type] {
         text-decoration: none;
       }
     }
+  }
+}
+
+
+// Instructor Toolbar customizations
+#root:has(.instructor-toolbar) div .site-footer {
+  // footer offset if there is an instructor toolbar visible
+  margin-bottom: rem-calc(120);
+
+  @include breakpoint(medium) {
+    margin-bottom: rem-calc(70);
+  }
+}
+
+.instructor-toolbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+
+  .col-form-label {
+    font-size: inherit;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    white-space: nowrap;
+
+    &:after {
+      border: 0;
+      border-style: solid;
+      content: "";
+      height: 0.45rem;
+      margin-left: 0.255em;
+      margin-inline-start: 0.5em;
+      position: relative;
+      top: -0.05rem;
+      width: 0.45rem;
+      border-width: 0.15rem 0.15rem 0 0;
+      transform: rotate(135deg);
+    }
+
+    &:empty:after {
+      margin-left: 0;
+    }
+  }
+
+  .dropdown,
+  .dropleft,
+  .dropright,
+  .dropup {
+    position: relative;
+  }
+
+  .border-light {
+    border-color: #e1dddb !important;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid #0000001a;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-width: 1px;
   }
 }
