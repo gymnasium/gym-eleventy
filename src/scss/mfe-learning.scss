@@ -27,10 +27,11 @@
 // @use "mfe/learning/learning-course-tab-nav";
 // @use "mfe/learning/learning-course-outline";
 
-// .container-xl {
-//   @include container;
-//   width: 100%;
-// }
+.container-xl {
+  @include container;
+  width: 100%;
+  overflow: hidden;
+}
 
 
 // TODO: turn this into a mixin?
@@ -39,14 +40,10 @@ main {
   max-width: convert-to-rem(map.get($breakpoints, 'large'));
 }
 
-
-
 // Course Header (non-nav version, only appears under "Course" tab)
 div[data-learner-type] {
   margin: 0 !important;
 }
-
-
 
 .row {
   display: flex;
@@ -96,8 +93,19 @@ div[data-learner-type] {
 .unit-navigation {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
   margin: 1rem auto 0;
-  max-width: 640px;
+  max-width: rem-calc(640);
+
+  @include breakpoint(small, min) {
+    flex-direction: row;
+  }
+
+  // hide top prev/next navigation (seems redundant to have both)
+  &.top-unit-navigation {
+    display: none;
+  }
 
   .next-button,
   .previous-button {
@@ -105,45 +113,25 @@ div[data-learner-type] {
     flex-basis: auto;
     min-width: 8rem;
   }
+
   .next-button:focus:before,
   .previous-button:focus:before {
     border-radius: 6px;
   }
 }
 
-@include breakpoint(small, max) {
-  .unit-navigation {
-    flex-direction: column;
-    gap: 1rem;
-
-    .previous-button,
-    .next-button {
-      flex-basis: auto;
-      min-width: 8rem;
-    }
-  }
-}
 
 
-.top-unit-navigation {
-  justify-content: flex-end;
-  max-width: 100%;
-}
-@include breakpoint(medium) {
-  .top-unit-navigation .next-button,
-  .top-unit-navigation .previous-button {
-    flex-basis: auto;
-    
-  }
-}
+
+
 
 // Course Sidebar Navigation
-@media (max-width: 991px) {
-  #course-sidebar {
-    overflow-y: scroll;
-    padding: 0 0.625rem !important;
-  }
-}
+// @media (max-width: 991px) {
+//   #course-sidebar {
+//     overflow-y: scroll;
+//     padding: 0 0.625rem !important;
+//   }
+// }
 .outline-sidebar-wrapper {
   flex-shrink: 0;
   overflow: auto;
@@ -300,7 +288,7 @@ div[data-learner-type] {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 100000;
 
   .col-form-label {
     font-size: inherit;
