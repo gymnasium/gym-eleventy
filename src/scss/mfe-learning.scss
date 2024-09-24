@@ -18,7 +18,7 @@
 @use "mfe/modal";
 // @use "mfe/layout";
 
-// @use "mfe/buttons";
+@use "mfe/buttons";
 @use "mfe/course-header";
 @use "mfe/course-tabs-nav";
 @use "mfe/learning/date-summary";
@@ -47,6 +47,13 @@ main {
 // Course Header (non-nav version, only appears under "Course" tab)
 div[data-learner-type] {
   margin: 0 !important;
+}
+
+// headings (course tab)
+h2, .h2 {
+  font-family: var(--font-family-custom);
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .row {
@@ -143,6 +150,7 @@ div[data-learner-type] {
   max-width: 25rem;
   width: 100%;
   margin-right: 1rem;
+  z-index: 999;
 }
 // @media (min-width: 1200px) {
 //   .outline-sidebar {
@@ -379,6 +387,10 @@ div[data-learner-type] {
   .col-md-4 {
     grid-area: c;
     max-width: 100%;
+
+    section {
+      margin-bottom: 1rem;
+    }
   }
 
   @include breakpoint(medium) {
