@@ -503,6 +503,22 @@
         border: 1px solid var(--primary);
       }
     }
+
+    &.disabled {
+      .btn-icon {
+        pointer-events: none;
+        cursor: not-allowed;
+        border-color: var(--mono-400);
+      }
+    }
+  }
+
+  .btn-icon {
+    border-color: var(--mono-700);
+
+    &:hover {
+      border-color: var(--mono-900);
+    }
   }
 
   .btn {
