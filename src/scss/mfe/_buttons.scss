@@ -13,6 +13,7 @@
     color: var(--mono, 100);
     border: transparent;
     border-radius: 0;
+    padding: 0;
 
     &:hover {
       background-color: transparent;
@@ -30,7 +31,7 @@
     color: var(--primary);
     border-color: (var(--primary));
     background-color: transparent;
-    display: initial;
+    // display: initial;
   }
 }
 
