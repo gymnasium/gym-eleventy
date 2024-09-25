@@ -489,3 +489,26 @@
     }
   }
 }
+
+// pagination when there are many courses
+.pagination {
+  display: inline-flex;
+  gap: 1rem;
+
+  .page-item {
+    margin: 0;
+
+    &.active {
+      .btn {
+        border: 1px solid var(--primary);
+      }
+    }
+  }
+
+  .btn {
+    padding: 0.66rem 1rem;
+    background-color: var(--mono-100);
+    border: 1px solid var(--mono-300);
+    color: var(--mono-900);
+  }
+}
