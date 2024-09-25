@@ -441,17 +441,15 @@
   }
 }
 
+// 3 dot icon dropdown
 .pgn__dropdown-item {
   align-items: center;
+  justify-content: center;
   display: flex;
   background-color: transparent;
   border: 0;
-  clear: both;
   color: var(--mono-900);
-  display: block;
-  font-weight: 400;
   padding: 0.25rem 1rem;
-  text-align: inherit;
   white-space: nowrap;
   width: 100%;
 }
