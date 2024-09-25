@@ -460,3 +460,34 @@
 .sidebar-column {
   display: none;
 }
+
+
+// Unenroll course modal
+.pgn__modal-content-container {
+
+}
+.pgn__modal-backdrop {
+  background: var(--mono-900);
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.pgn__modal {
+  padding: 1rem;
+
+  // button wrapper
+  .pgn__action-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+    }
+  }
+}
