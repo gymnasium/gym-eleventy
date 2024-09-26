@@ -38,10 +38,10 @@
 
 // TODO: turn this into a mixin?
 main {
-  margin: 0 auto;
-
   @include container;
   // max-width: convert-to-rem(map.get($breakpoints, 'large'));
+
+  margin: 0 auto 1rem;
 }
 
 // Course Header (non-nav version, only appears under "Course" tab)
@@ -406,6 +406,8 @@ h2, .h2 {
 
 // Progress Tab
 .progress-tab-content {
+  padding: 1rem;
+  background-color: var(--mono-100);
 
   .main-panel {
 
@@ -413,6 +415,116 @@ h2, .h2 {
 
   .side-panel {
 
+  }
+}
+
+// Progress Charts/Tooltips
+.donut rect {
+  fill: #0000;
+  height: 4px;
+  transform-origin: center;
+  width: 4px;
+}
+.donut-chart-label {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 0.2rem;
+  font-weight: 400;
+  text-anchor: middle;
+}
+.donut-chart-number {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
+    Courier New, monospace;
+  font-size: 0.5rem;
+  font-weight: 700;
+  line-height: 1rem;
+  text-anchor: middle;
+  transform: translateY(-0.6em);
+}
+.donut-chart-text {
+  fill: var(--primary);
+  transform: translateY(0.25em);
+}
+.donut-ring,
+.donut-segment {
+  stroke-width: 6px;
+  fill: #0000;
+}
+.donut-segment-group {
+  cursor: pointer;
+  pointer-events: visibleStroke;
+}
+.donut-segment-group:focus {
+  outline: none;
+}
+.donut-segment-group:focus circle {
+  stroke-width: 7px;
+}
+.donut-hole.complete-stroke,
+.donut-ring.complete-stroke,
+.donut-segment.complete-stroke {
+  stroke: #006daa;
+}
+.donut-hole.divider-stroke,
+.donut-ring.divider-stroke,
+.donut-segment.divider-stroke {
+  stroke-width: 7px;
+  stroke: var(--mono-100);
+}
+.donut-hole.incomplete-stroke,
+.donut-ring.incomplete-stroke,
+.donut-segment.incomplete-stroke {
+  stroke: #f0eeed;
+}
+.donut-hole.locked-stroke,
+.donut-ring.locked-stroke,
+.donut-segment.locked-stroke {
+  stroke: var(--primary);
+}
+.grade-bar rect {
+  height: 6px;
+}
+.grade-bar .grade-bar__base {
+  fill: #f0eeed;
+}
+.grade-bar .grade-bar__divider {
+  fill: var(--primary);
+  width: 1px;
+}
+.grade-bar .grade-bar--passing {
+  fill: var(--primary);
+}
+.grade-bar .grade-bar--current-passing {
+  fill: var(--green-600);
+}
+.grade-bar .grade-bar--current-non-passing {
+  fill: #fe8;
+}
+
+.arrow {
+  margin: 0 !important;
+}
+#minimum-grade-tooltip {
+  background: var(--primary);
+  .arrow:after {
+    border-bottom-color: var(--primary);
+  }
+}
+
+#passing-grade-tooltip {
+  background: var(--green-600);
+
+  .arrow:after {
+    border-top-color: var(--green-600);
+  }
+}
+
+#non-passing-grade-tooltip {
+  background: #fe8;
+
+  .arrow:after {
+    border-top-color: #fe8;
   }
 }
 
@@ -499,7 +611,7 @@ h2, .h2 {
 }
 .sequence-navigation .btn.complete {
   background-color: #eef7e5;
-  color: #178253;
+  color: var(--green-600);
 }
 .sequence-navigation .btn:first-child {
   border-left-width: 0;

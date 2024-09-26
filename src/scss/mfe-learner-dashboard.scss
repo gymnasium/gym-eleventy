@@ -222,7 +222,7 @@
 }
 
 .pgn__sheet-component {
-  box-shadow: rem-calc(8) 0 rem-calc(16) 0 rgba(0, 0, 0, 0.15);
+  box-shadow: rem-calc(8) 0 rem-calc(16) 0 rgba(0,0,0,0.15);
   left: 0;
   height: 100%;
   top: 0;
@@ -420,7 +420,7 @@
 .dropdown-menu {
   background-clip: padding-box;
   background-color: var(--mono-100);
-  border: rem-calc(1) solid rgba(0, 0, 0, 0.15);
+  border: rem-calc(1) solid rgba(0,0,0,0.15);
   border-radius: 0;
   color: var(--mono-900);
   display: none;

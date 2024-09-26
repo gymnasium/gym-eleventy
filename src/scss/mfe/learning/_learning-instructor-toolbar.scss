@@ -261,7 +261,7 @@ hr {
 .dropdown-menu {
   background-clip: padding-box;
   background-color: var(--mono-100);
-  border: 1px solid #00000026;
+  border: 1px solid rgba(0,0,0,0.15);
   border-radius: 0.375rem;
   color: #454545;
   display: none;

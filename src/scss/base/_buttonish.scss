@@ -161,7 +161,9 @@ a, summary {
     color: inherit;
 
     &:focus,
-    &:hover {
+    &:hover,
+    &:active,
+    &.active {
       background-color: transparent;
       color: var(--primary);
       text-decoration: underline;
