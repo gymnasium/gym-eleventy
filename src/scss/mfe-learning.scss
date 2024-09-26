@@ -78,6 +78,14 @@ h2, .h2 {
   width: auto;
 }
 
+
+// Hide the top discussions tray/notifications tray nav
+div.d-flex.ml-auto {
+  display: none;
+}
+
+
+
 // Unit container
 .unit-container {
   margin-left: auto;
@@ -557,7 +565,7 @@ h2, .h2 {
 @media (min-width: 576px) {
   .sequence {
     border: 1px solid #eaeaea;
-    border-radius: 4px;
+    // border-radius: 4px;
   }
 }
 .sequence-navigation-container {

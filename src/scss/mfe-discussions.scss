@@ -9,8 +9,6 @@
 @use 'shared';
 @use 'components/webfonts_absolute';
 
-
-
 @use 'mfe/root';
 
 @use 'mfe/layout';
@@ -338,7 +336,13 @@ header {
 }
 
 .min-content-height {
-  min-height: 80vh !important;
+  min-height: 80vh;
+  background-color: var(--mono-300);
+
+  // Hide ridiculous SVG
+  > div > svg {
+    display: none;
+  }
 }
 
 .header-action-bar {
