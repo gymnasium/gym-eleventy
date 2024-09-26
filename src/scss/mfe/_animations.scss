@@ -238,3 +238,39 @@
   animation: spinner-border 0.75s linear infinite;
   -webkit-animation: spinner-border 0.75s linear infinite;
 }
+
+.fade {
+  transition: opacity 0.15s linear;
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    transition: none;
+  }
+}
+.fade:not(.show) {
+  opacity: 0;
+}
+.collapse:not(.show) {
+  display: none;
+}
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  transition: height 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+.collapsing.width {
+  height: auto;
+  transition: width 0.35s ease;
+  width: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing.width {
+    transition: none;
+  }
+}
