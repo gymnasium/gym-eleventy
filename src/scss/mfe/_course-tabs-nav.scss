@@ -5,8 +5,11 @@
 
 
 // course tab nav
-.course-tabs-navigation {
-  margin-bottom: 0 !important;
+#courseTabsNavigation.course-tabs-navigation {
+  margin: 0 auto;
+  background: transparent;
+  padding: 0;
+  width: 100%;
   
   nav {
     padding: 1rem 0;

@@ -5,10 +5,15 @@
 @use "colors" as *;
 @use "fonts" as *;
 @use "mixins" as *;
+@use "functions" as *;
+
+// TODO: move to global variables?
+$global-button-radius: rem-calc(3);
 
 :root {
   --font-family-default: #{$gym-text-font-stack};
   --font-family-custom: #{$gym-font-stack};
+  --global-button-radius: #{$global-button-radius};
   
   @each $color, $shades in $colors {
     @if (length($shades) > 1) {
