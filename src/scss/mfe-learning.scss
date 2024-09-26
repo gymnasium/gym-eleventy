@@ -410,12 +410,25 @@ h2, .h2 {
   padding: 1rem;
   background-color: var(--mono-100);
 
+  section {
+    padding: 1rem;
+    background-color: var(--mono-200);
+    margin-bottom: 1rem;
+    border-radius: 0;
+
+    div {
+      border-radius: 0;
+    }
+  }
+
   .main-panel {
 
   }
 
   .side-panel {
-
+    section {
+      margin-left: 1rem;
+    }
   }
 }
 
@@ -476,7 +489,7 @@ h2, .h2 {
 .donut-hole.incomplete-stroke,
 .donut-ring.incomplete-stroke,
 .donut-segment.incomplete-stroke {
-  stroke: #f0eeed;
+  stroke: var(--mono-100);
 }
 .donut-hole.locked-stroke,
 .donut-ring.locked-stroke,
@@ -487,7 +500,7 @@ h2, .h2 {
   height: 6px;
 }
 .grade-bar .grade-bar__base {
-  fill: #f0eeed;
+  fill: var(--mono-100);
 }
 .grade-bar .grade-bar__divider {
   fill: var(--primary);
