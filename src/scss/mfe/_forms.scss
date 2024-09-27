@@ -6,7 +6,7 @@
 $color_1: #454545;
 $color_2: #707070;
 $color_3: var(--mono-1000);
-$color_4: #178253;
+$color_4: var(--green-600);
 $color_5: var(--mono-100);
 $color_6: #c32d3a;
 $color_7: var(--primary);
@@ -23,15 +23,15 @@ $background-color_5: #1fad6f;
 $background-color_6: #c32d3ae6;
 $background-color_7: #d64d59;
 $background-color_8: var(--primary);
-$background-color_9: var(--primary)80;
+$background-color_9: rgba(var(--primary), 0.8); // transparent-ish primary color?
 $background-color_10: #454545;
 $background-color_11: #2b8ae6;
 $background-color_12: #adadad;
 $background-color_13: #707070;
-$background-color_14: #ffffff03;
-$background-color_15: #178253;
+$background-color_14: rgba(255, 255, 255, 0.01);
+$background-color_15: var(--green-600);
 $border-color_1: var(--primary);
-$border-color_2: #178253;
+$border-color_2: var(--green-600);
 $border-color_3: #1fad6f;
 $border-color_4: #c32d3a;
 $border-color_5: #d64d59;
@@ -1162,7 +1162,7 @@ textarea.form-control {
     ~ {
       .custom-control-label {
         &::before {
-          box-shadow: 0 0 0 4px #0000001a;
+          box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
         }
       }
     }
@@ -1977,7 +1977,7 @@ textarea.form-control {
   &:not(:disabled) {
     cursor: pointer;
     &:hover {
-      box-shadow: 0 0 0 4px #0000001a;
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
     }
   }
   &:disabled {
@@ -2023,7 +2023,7 @@ textarea.form-control {
   &:not(:disabled) {
     cursor: pointer;
     &:hover {
-      box-shadow: 0 0 0 4px #0000001a;
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
     }
   }
   &:disabled {
@@ -2073,7 +2073,7 @@ textarea.form-control {
   &:not(:disabled) {
     cursor: pointer;
     &:hover {
-      box-shadow: 0 0 0 4px #0000001a;
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1);
     }
   }
   &:disabled {
@@ -2240,7 +2240,7 @@ textarea.form-control {
   .pgn__form-autosuggest__dropdown {
     background-color: $background-color_1;
     border-radius: 0.25rem;
-    box-shadow: 0 0 0.125rem #00000026, 0 0 0.25rem #00000026;
+    box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.15), 0 0 0.25rem rgba(0, 0, 0, 0.15);
     max-height: 15rem;
     overflow-y: scroll;
     position: absolute;
@@ -2315,6 +2315,7 @@ textarea.form-control {
   }
 }
 #forgot-password {
+
   &:hover {
     text-decoration: underline;
   }
@@ -2431,6 +2432,7 @@ textarea.form-control {
   margin-right: 1rem;
 }
 .login-button-width {
+  margin-right: 1rem;
   min-width: 6rem;
 }
 .paragon-fieldset {

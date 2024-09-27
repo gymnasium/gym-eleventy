@@ -3,6 +3,7 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
+// TODO: some of these are already duplicated in the base/buttonish partial - we should combine them or isolate them appropriately (are there ones we use only in the MFEs? They should go here. If there are ones used sitewide across the static site, the theme, and MFEs? Put it in buttonish.
 .btn {
   /*
   - Learning: "Launch Tour" button/link
@@ -13,8 +14,11 @@
     color: var(--mono, 100);
     border: transparent;
     border-radius: 0;
+    padding: 0;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &.active {
       background-color: transparent;
       color: var(--primary);
     }
@@ -30,7 +34,7 @@
     color: var(--primary);
     border-color: (var(--primary));
     background-color: transparent;
-    display: initial;
+    // display: initial;
   }
 }
 
@@ -46,10 +50,12 @@ $background-color_1: var(--mono-1000);
   opacity: 0.5;
   text-shadow: 0 1px 0 var(--mono-100);
   float: right;
+
   &:hover {
     color: $color_1;
     text-decoration: none;
   }
+
   &:not(:disabled) {
     &:not(.disabled) {
       &:focus {
@@ -61,6 +67,7 @@ $background-color_1: var(--mono-1000);
     }
   }
 }
+
 button.close {
   background-color: $background-color_1;
   border: 0;

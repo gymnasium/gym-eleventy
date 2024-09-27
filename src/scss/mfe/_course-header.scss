@@ -7,6 +7,10 @@
 .course-header {
   background-color: var(--mono-600);
   padding: 1rem 0;
+  font-size: 1.3rem;
+  font-family: var(--font-family-custom);
+  text-transform: uppercase;
+  font-weight: bold;
 
   span {
     display: inline-block;

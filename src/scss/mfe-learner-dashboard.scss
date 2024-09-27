@@ -12,6 +12,8 @@
 @use "mfe/root";
 @use "mfe/flex";
 @use "mfe/buttons";
+@use 'mfe/layout';
+@use 'mfe/modal';
 
 .container-fluid {
   @include container;
@@ -370,7 +372,7 @@
 .course-card-banners {
 }
 
-.alert-info {
+.alert {
   border-radius: 0;
   box-shadow: none;
   padding: 1rem 1.5rem;
@@ -381,13 +383,13 @@
   font-size: 0.875rem;
   line-height: 1.5rem;
   text-align: start;
-}
 
-.alert .alert-icon {
-  flex-shrink: 0;
-  height: 1.5rem;
-  margin-inline-end: 0.8rem;
-  width: 1.5rem;
+  .alert-icon {
+    flex-shrink: 0;
+    height: 1.5rem;
+    margin-inline-end: 0.8rem;
+    width: 1.5rem;
+  }
 }
 
 // 3 dot icon
@@ -439,17 +441,15 @@
   }
 }
 
+// 3 dot icon dropdown
 .pgn__dropdown-item {
   align-items: center;
+  justify-content: center;
   display: flex;
   background-color: transparent;
   border: 0;
-  clear: both;
   color: var(--mono-900);
-  display: block;
-  font-weight: 400;
   padding: 0.25rem 1rem;
-  text-align: inherit;
   white-space: nowrap;
   width: 100%;
 }
@@ -457,4 +457,74 @@
 // Hice sidebar (for now)
 .sidebar-column {
   display: none;
+}
+
+
+// Unenroll course modal
+.pgn__modal-content-container {
+
+}
+.pgn__modal-backdrop {
+  background: var(--mono-900);
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.pgn__modal {
+  padding: 1rem;
+
+  // button wrapper
+  .pgn__action-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+    }
+  }
+}
+
+// pagination when there are many courses
+.pagination {
+  display: inline-flex;
+  gap: 1rem;
+
+  .page-item {
+    margin: 0;
+
+    &.active {
+      .btn {
+        border: 1px solid var(--primary);
+      }
+    }
+
+    &.disabled {
+      .btn-icon {
+        pointer-events: none;
+        cursor: not-allowed;
+        border-color: var(--mono-400);
+      }
+    }
+  }
+
+  .btn-icon {
+    border-color: var(--mono-700);
+
+    &:hover {
+      border-color: var(--mono-900);
+    }
+  }
+
+  .btn {
+    padding: 0.66rem 1rem;
+    background-color: var(--mono-100);
+    border: 1px solid var(--mono-300);
+    color: var(--mono-900);
+  }
 }

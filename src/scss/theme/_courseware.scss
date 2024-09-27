@@ -81,6 +81,15 @@
     font-family: var(--font-family-custom);
     font-size: 1rem;
     font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+
+    &:hover,
+    &:focus,
+    &.active {
+      border-bottom-width: 2px;
+      margin-bottom: -2px;
+    }
   }
 }
 
@@ -114,73 +123,4 @@
   }
 }
 
-// .view-in-course
-.course-content {
 
-  display: table-cell;
-  box-sizing: border-box;
-  padding: 2em 2.5em;
-  vertical-align: top;
-  height: 100%;
-  min-height: 100%;
-
-  main {
-    padding: 0;
-    background-color: inherit;
-    height: 100%;
-    min-height: 100%;
-  }
-}
-
-
-.modal,.leanModal_box,.entitlement-unenrollment-modal {
-  display:none;
-  position: absolute;
-  left: 50%;
-  padding: 8px;
-  width: 480px;
-  border-radius: 3px;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
-  background: #313131;
-  color: #313131
-}
-
-.modal.video-modal,.video-modal.leanModal_box,.video-modal.entitlement-unenrollment-modal {
-  left: 50%;
-  padding: 10px;
-  width: 582px
-}
-
-.modal.video-modal .inner-wrapper,.video-modal.leanModal_box .inner-wrapper,.video-modal.entitlement-unenrollment-modal .inner-wrapper,.modal.video-modal .entitlement-unenrollment-modal .entitlement-unenrollment-modal-inner-wrapper,.entitlement-unenrollment-modal .modal.video-modal .entitlement-unenrollment-modal-inner-wrapper,.video-modal.leanModal_box .entitlement-unenrollment-modal .entitlement-unenrollment-modal-inner-wrapper,.entitlement-unenrollment-modal .video-modal.leanModal_box .entitlement-unenrollment-modal-inner-wrapper,.video-modal.entitlement-unenrollment-modal .entitlement-unenrollment-modal-inner-wrapper {
-  background: #000;
-  box-shadow: none;
-  height: 315px;
-  padding: 10px;
-  width: 560px
-}
-
-.course-wrapper .course-content .xqa-modal,.course-wrapper .course-content .staff-modal,.course-wrapper .course-content .history-modal,.course-wrapper .courseware-results-wrapper .xqa-modal,.course-wrapper .courseware-results-wrapper .staff-modal,.course-wrapper .courseware-results-wrapper .history-modal {
-  width: 80%;
-  height: 80%;
-  left: left(20%);
-  overflow: auto;
-  display: none
-}
-
-.course-wrapper .course-content div.staff_info,.course-wrapper .courseware-results-wrapper div.staff_info {
-  display: none;
-  white-space: pre-wrap;
-  border-top: 1px solid #c8c8c8;
-  padding-top: 1.41575em;
-  margin-top: 1.41575em;
-  line-height: 1.41575em;
-  font-family: Consolas, "Lucida Console", Monaco, "Courier New", Courier, monospace;
-  direction: ltr;
-  text-align: left
-}
-
-.course-wrapper .course-content div.staff_info:after,.course-wrapper .courseware-results-wrapper div.staff_info:after {
-  content: "";
-  display: table;
-  clear: both
-}
