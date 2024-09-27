@@ -8,7 +8,7 @@ $color_2: #707070;
 $color_3: var(--mono-1000);
 $color_4: var(--green-600);
 $color_5: var(--mono-100);
-$color_6: #c32d3a;
+$color_6: var(--red-600);
 $color_7: var(--primary);
 $color_8: #212529;
 $color_9: #005788;
@@ -33,7 +33,7 @@ $background-color_15: var(--green-600);
 $border-color_1: var(--primary);
 $border-color_2: var(--green-600);
 $border-color_3: #1fad6f;
-$border-color_4: #c32d3a;
+$border-color_4: var(--red-600);
 $border-color_5: #d64d59;
 $border-color_6: var(--mono-1000);
 $border-color_7: #707070;
@@ -127,7 +127,7 @@ select.form-control {
   }
   -webkit-appearance: none;
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath fill='%23454545' d='M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41Z'/%3E%3C/svg%3E");
+  // background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath fill='%23454545' d='M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41Z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 24px 24px;
   padding-inline-end: 2.5625rem;
@@ -2317,7 +2317,7 @@ textarea.form-control {
 #forgot-password {
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 .pgn__hyperlink {

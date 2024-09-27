@@ -234,7 +234,7 @@ button:not(:disabled) {
   word-wrap: break-word;
 }
 .text-dark-500 {
-  color: #273f2f;
+  color: var(--green-700);
 }
 .text-gray-400 {
   color: #8f8f8f;
@@ -695,7 +695,7 @@ button:not(:disabled) {
   word-wrap: break-word;
 }
 .text-dark-500 {
-  color: #273f2f;
+  color: var(--green-700);
 }
 .text-gray-400 {
   color: #8f8f8f;

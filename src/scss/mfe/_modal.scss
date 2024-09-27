@@ -202,7 +202,7 @@
 }
 .pgn__modal-dark .pgn__modal-header,
 .pgn__modal-dark .pgn__modal-hero {
-  background-color: #273f2f;
+  background-color: var(--green-700);
   color: var(--mono-100);
 }
 .pgn__modal-dark .pgn__modal-header *,
@@ -228,7 +228,7 @@
   color: var(--green-600);
 }
 .pgn__alert-modal.pgn__modal-danger .pgn__alert-modal__title_icon {
-  color: #c32d3a;
+  color: var(--red-600);
 }
 .pgn__alert-modal .pgn__modal-title {
   align-items: center;

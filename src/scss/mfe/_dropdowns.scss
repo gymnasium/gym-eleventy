@@ -7,14 +7,10 @@
 $color_1: #454545;
 $color_2: #212529;
 $color_3: #16181b;
-$color_4: var(--mono-100);
 $color_5: #707070;
 $color_6: #082644;
 $color_7: #b4b1af;
-$background-color_1: var(--mono-100);
-$background-color_2: var(--mono-1000);
 $background-color_3: #f0eeed;
-$background-color_4: var(--primary);
 $background-color_5: #939f97;
 $background-color_6: #c9cfcb;
 $background-color_7: inherit;
@@ -45,8 +41,8 @@ $border-color_1: #c9cfcb;
       display: none;
     }
     &::before {
-      border-bottom: 0.3em solid var(--mono-1000);
-      border-top: 0.3em solid var(--mono-1000);
+      border-bottom: 0.3em solid transparent;
+      border-top: 0.3em solid transparent;
       content: "";
       display: inline-block;
       vertical-align: 0.255em;
@@ -78,8 +74,8 @@ $border-color_1: #c9cfcb;
   }
   .dropdown-toggle {
     &::after {
-      border-bottom: 0.3em solid var(--mono-1000);
-      border-top: 0.3em solid var(--mono-1000);
+      border-bottom: 0.3em solid transparent;
+      border-top: 0.3em solid transparent;
       content: "";
       display: inline-block;
       vertical-align: 0.255em;
@@ -110,8 +106,8 @@ $border-color_1: #c9cfcb;
   .dropdown-toggle {
     &::after {
       border-bottom: 0.3em solid;
-      border-left: 0.3em solid var(--mono-1000);
-      border-right: 0.3em solid var(--mono-1000);
+      border-left: 0.3em solid transparent;
+      border-right: 0.3em solid transparent;
       border-top: 0;
       content: "";
       display: inline-block;
@@ -131,8 +127,8 @@ $border-color_1: #c9cfcb;
   white-space: nowrap;
   &::after {
     border-bottom: 0;
-    border-left: 0.3em solid var(--mono-1000);
-    border-right: 0.3em solid var(--mono-1000);
+    border-left: 0.3em solid transparent;
+    border-right: 0.3em solid transparent;
     border-top: 0.3em solid;
     display: inline-block;
     vertical-align: 0.255em;
@@ -160,7 +156,7 @@ $border-color_1: #c9cfcb;
 }
 .dropdown-menu {
   background-clip: padding-box;
-  background-color: $background-color_1;
+  background-color: var(--mono-100);
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.375rem;
   color: $color_1;
@@ -219,7 +215,7 @@ $border-color_1: #c9cfcb;
   overflow: hidden;
 }
 .dropdown-item {
-  background-color: $background-color_2;
+  background-color: transparent;
   border: 0;
   clear: both;
   color: $color_2;
@@ -241,23 +237,23 @@ $border-color_1: #c9cfcb;
     text-decoration: none;
   }
   &:active {
-    background-color: $background-color_4;
-    color: $color_4;
+    background-color: var(--primary);
+    color: var(--mono-100);
     text-decoration: none;
   }
   &:disabled {
-    background-color: $background-color_2;
+    background-color: transparent;
     color: $color_5;
     pointer-events: none;
   }
 }
 .dropdown-item.active {
-  background-color: $background-color_4;
-  color: $color_4;
+  background-color: var(--primary);
+  color: var(--mono-100);
   text-decoration: none;
 }
 .dropdown-item.disabled {
-  background-color: $background-color_2;
+  background-color: transparent;
   color: $color_5;
   pointer-events: none;
 }
@@ -301,9 +297,9 @@ $border-color_1: #c9cfcb;
 .pgn__dropdown-dark {
   .dropdown-menu {
     background-color: $background-color_5;
-    color: $color_4;
+    color: var(--mono-100);
     .pgn__dropdown-item {
-      color: $color_4;
+      color: var(--mono-100);
       font-weight: 400;
       &:hover {
         background-color: $background-color_6;
