@@ -5,9 +5,9 @@
 
 .pgn__modal {
   background: var(--mono-100);
-  border: 0 solid rgba(0,0,0,0.2);
+  border: 0 solid rgba(0, 0, 0, 0.2);
   border-radius: 0.425rem;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 8px 20px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   margin: 0 1.5rem;
@@ -141,7 +141,7 @@
 }
 .pgn__modal-body:after,
 .pgn__modal-body:before {
-  background-color: #0000;
+  background-color: rgba(0, 0, 0, 0);
   content: "";
   display: block;
   height: 20px;
@@ -289,7 +289,7 @@
   text-align: start;
 }
 .modal.show {
-  background-color: #0000;
+  background-color: rgba(0, 0, 0, 0);
   max-height: 100%;
   position: fixed;
   width: 100%;
@@ -347,13 +347,13 @@
 }
 .pgn__modal-popup__arrow:after,
 .pgn__modal-popup__arrow:before {
-  border: solid #0000;
+  border: solid rgba(0, 0, 0, 0);
   border-width: 0.5rem 0.5rem 0;
   content: "";
   position: absolute;
 }
 .pgn__modal-popup__arrow:before {
-  border-top-color: rgba(0,0,0,0.2);
+  border-top-color: rgba(0, 0, 0, 0.2);
 }
 .pgn__modal-popup__arrow-bottom-start,
 [data-popper-placement^="bottom-start"] .pgn__modal-popup__arrow-auto-end,

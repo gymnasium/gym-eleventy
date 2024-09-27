@@ -475,7 +475,7 @@ div.d-flex.ml-auto {
 
   hr {
     border: 0;
-    border-top: rem-calc(1) solid #0000001a;
+    border-top: rem-calc(1) solid rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
@@ -557,7 +557,7 @@ div.d-flex.ml-auto {
 
 // Progress Charts/Tooltips
 .donut rect {
-  fill: #0000;
+  fill: rgba(0, 0, 0, 0);
   height: 4px;
   transform-origin: center;
   width: 4px;
@@ -586,7 +586,7 @@ div.d-flex.ml-auto {
 .donut-ring,
 .donut-segment {
   stroke-width: 6px;
-  fill: #0000;
+  fill: rgba(0, 0, 0, 0);
 }
 .donut-segment-group {
   cursor: pointer;
@@ -844,7 +844,7 @@ div.d-flex.ml-auto {
 }
 
 .sequence-navigation .sequence-navigation-dropdown .dropdown-item.active {
-  background-color: #0000;
+  background-color: rgba(0, 0, 0, 0);
 }
 .sequence-navigation .next-btn,
 .sequence-navigation .previous-btn {
