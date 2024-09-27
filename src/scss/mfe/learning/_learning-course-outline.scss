@@ -41,8 +41,8 @@ svg:not(:host).svg-inline--fa {
 
 /*! CSS Used from: https://apps.learn.gymnasium.day/learning/app.a49f912aea5a90c1f158.css */
 .raised-card {
-  border: 0 !important;
-  box-shadow: 0 0.0625rem 0.125rem rgba(0,0,0,0.2) !important;
+  border: 0;
+  box-shadow: 0 0.0625rem 0.125rem rgba(0,0,0,0.2);
 }
 
 svg {
@@ -143,28 +143,28 @@ button:not(:disabled) {
   }
 }
 .align-middle {
-  vertical-align: middle !important;
+  vertical-align: middle;
 }
 .border-top {
-  border-top: 1px solid #ccc !important;
+  border-top: 1px solid #ccc;
 }
 .border-0 {
-  border: 0 !important;
+  border: 0;
 }
 .border-light {
-  border-color: #e1dddb !important;
+  border-color: #e1dddb;
 }
 .d-flex {
-  display: flex !important;
+  display: flex;
 }
 .justify-content-end {
-  justify-content: flex-end !important;
+  justify-content: flex-end;
 }
 .float-left {
-  float: left !important;
+  float: left;
 }
 .position-relative {
-  position: relative !important;
+  position: relative;
 }
 .sr-only {
   height: 1px;
@@ -178,76 +178,76 @@ button:not(:disabled) {
   white-space: nowrap;
 }
 .w-100 {
-  width: 100% !important;
+  width: 100%;
 }
 .m-0 {
-  margin: 0 !important;
+  margin: 0;
 }
 .mt-1 {
-  margin-top: 0.25rem !important;
+  margin-top: 0.25rem;
 }
 .mt-2 {
-  margin-top: 0.5rem !important;
+  margin-top: 0.5rem;
 }
 .mr-2 {
-  margin-right: 0.5rem !important;
+  margin-right: 0.5rem;
 }
 .mb-2 {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.5rem;
 }
 .mb-3 {
-  margin-bottom: 1rem !important;
+  margin-bottom: 1rem;
 }
 .ml-3 {
-  margin-left: 1rem !important;
+  margin-left: 1rem;
 }
 .mb-4 {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.5rem;
 }
 .p-0 {
-  padding: 0 !important;
+  padding: 0;
 }
 .pt-2 {
-  padding-top: 0.5rem !important;
+  padding-top: 0.5rem;
 }
 .pl-2 {
-  padding-left: 0.5rem !important;
+  padding-left: 0.5rem;
 }
 .pl-3 {
-  padding-left: 1rem !important;
+  padding-left: 1rem;
 }
 .text-monospace {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
-    Courier New, monospace !important;
+    Courier New, monospace;
 }
 .font-weight-bold {
-  font-weight: 700 !important;
+  font-weight: 700;
 }
 .text-success {
-  color: #178253 !important;
+  color: #178253;
 }
 .text-body {
-  color: #454545 !important;
+  color: #454545;
 }
 .text-break {
-  word-break: break-word !important;
-  word-wrap: break-word !important;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 .text-dark-500 {
-  color: #273f2f !important;
+  color: #273f2f;
 }
 .text-gray-400 {
-  color: #8f8f8f !important;
+  color: #8f8f8f;
 }
 .text-gray-500 {
-  color: #707070 !important;
+  color: #707070;
 }
 @media print {
   *,
   :after,
   :before {
-    box-shadow: none !important;
-    text-shadow: none !important;
+    box-shadow: none;
+    text-shadow: none;
   }
   a:not(.btn) {
     text-decoration: underline;
@@ -604,28 +604,28 @@ button:not(:disabled) {
   }
 }
 .align-middle {
-  vertical-align: middle !important;
+  vertical-align: middle;
 }
 .border-top {
-  border-top: 1px solid #ccc !important;
+  border-top: 1px solid #ccc;
 }
 .border-0 {
-  border: 0 !important;
+  border: 0;
 }
 .border-light {
-  border-color: #e1dddb !important;
+  border-color: #e1dddb;
 }
 .d-flex {
-  display: flex !important;
+  display: flex;
 }
 .justify-content-end {
-  justify-content: flex-end !important;
+  justify-content: flex-end;
 }
 .float-left {
-  float: left !important;
+  float: left;
 }
 .position-relative {
-  position: relative !important;
+  position: relative;
 }
 .sr-only {
   height: 1px;
@@ -639,76 +639,76 @@ button:not(:disabled) {
   white-space: nowrap;
 }
 .w-100 {
-  width: 100% !important;
+  width: 100%;
 }
 .m-0 {
-  margin: 0 !important;
+  margin: 0;
 }
 .mt-1 {
-  margin-top: 0.25rem !important;
+  margin-top: 0.25rem;
 }
 .mt-2 {
-  margin-top: 0.5rem !important;
+  margin-top: 0.5rem;
 }
 .mr-2 {
-  margin-right: 0.5rem !important;
+  margin-right: 0.5rem;
 }
 .mb-2 {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.5rem;
 }
 .mb-3 {
-  margin-bottom: 1rem !important;
+  margin-bottom: 1rem;
 }
 .ml-3 {
-  margin-left: 1rem !important;
+  margin-left: 1rem;
 }
 .mb-4 {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.5rem;
 }
 .p-0 {
-  padding: 0 !important;
+  padding: 0;
 }
 .pt-2 {
-  padding-top: 0.5rem !important;
+  padding-top: 0.5rem;
 }
 .pl-2 {
-  padding-left: 0.5rem !important;
+  padding-left: 0.5rem;
 }
 .pl-3 {
-  padding-left: 1rem !important;
+  padding-left: 1rem;
 }
 .text-monospace {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
-    Courier New, monospace !important;
+    Courier New, monospace;
 }
 .font-weight-bold {
-  font-weight: 700 !important;
+  font-weight: 700;
 }
 .text-success {
-  color: #178253 !important;
+  color: #178253;
 }
 .text-body {
-  color: #454545 !important;
+  color: #454545;
 }
 .text-break {
-  word-break: break-word !important;
-  word-wrap: break-word !important;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 .text-dark-500 {
-  color: #273f2f !important;
+  color: #273f2f;
 }
 .text-gray-400 {
-  color: #8f8f8f !important;
+  color: #8f8f8f;
 }
 .text-gray-500 {
-  color: #707070 !important;
+  color: #707070;
 }
 @media print {
   *,
   :after,
   :before {
-    box-shadow: none !important;
-    text-shadow: none !important;
+    box-shadow: none;
+    text-shadow: none;
   }
   a:not(.btn) {
     text-decoration: underline;
