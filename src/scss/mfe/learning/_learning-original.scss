@@ -138,7 +138,7 @@
   max-height: 852px;
   overflow: hidden;
 }
-@media screen and (min-width: 992px) {
+@include breakpoint(992, min) {
   .locked-overlay.grades {
     max-height: 920px;
   }
@@ -483,7 +483,7 @@ mark {
 .blockquote-footer:before {
   content: "— ";
 }
-@media (max-width: 576px) {
+@include breakpoint(576, max) {
   .display-1,
   .display-2,
   .display-3,
@@ -733,7 +733,7 @@ p > a.brand-link[href]:not(.btn):hover {
 .align-self-stretch {
   align-self: stretch;
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .flex-sm-row {
     flex-direction: row;
   }
@@ -837,7 +837,7 @@ p > a.brand-link[href]:not(.btn):hover {
     align-self: stretch;
   }
 }
-@media (min-width: 768px) {
+@include breakpoint(medium, min) {
   .flex-md-row {
     flex-direction: row;
   }
@@ -941,7 +941,7 @@ p > a.brand-link[href]:not(.btn):hover {
     align-self: stretch;
   }
 }
-@media (min-width: 992px) {
+@include breakpoint(992, min) {
   .flex-lg-row {
     flex-direction: row;
   }
@@ -1045,7 +1045,7 @@ p > a.brand-link[href]:not(.btn):hover {
     align-self: stretch;
   }
 }
-@media (min-width: 1200px) {
+@include breakpoint(large, min) {
   .flex-xl-row {
     flex-direction: row;
   }
@@ -1149,7 +1149,7 @@ p > a.brand-link[href]:not(.btn):hover {
     align-self: stretch;
   }
 }
-@media (min-width: 1400px) {
+@include breakpoint(1400, min) {
   .flex-xxl-row {
     flex-direction: row;
   }
@@ -1260,7 +1260,7 @@ p > a.brand-link[href]:not(.btn):hover {
 .float-none {
   float: none;
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .float-sm-left {
     float: left;
   }
@@ -1269,7 +1269,7 @@ p > a.brand-link[href]:not(.btn):hover {
     float: none;
   }
 }
-@media (min-width: 768px) {
+@include breakpoint(medium, min) {
   .float-md-left {
     float: left;
   }
@@ -1278,7 +1278,7 @@ p > a.brand-link[href]:not(.btn):hover {
     float: none;
   }
 }
-@media (min-width: 992px) {
+@include breakpoint(992, min) {
   .float-lg-left {
     float: left;
   }
@@ -1287,7 +1287,7 @@ p > a.brand-link[href]:not(.btn):hover {
     float: none;
   }
 }
-@media (min-width: 1200px) {
+@include breakpoint(large, min) {
   .float-xl-left {
     float: left;
   }
@@ -1296,7 +1296,7 @@ p > a.brand-link[href]:not(.btn):hover {
     float: none;
   }
 }
-@media (min-width: 1400px) {
+@include breakpoint(1400, min) {
   .float-xxl-left {
     float: left;
   }
@@ -1427,7 +1427,7 @@ p > a.brand-link[href]:not(.btn):hover {
 .text-center {
   text-align: center;
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .text-sm-left {
     text-align: left;
   }
@@ -1436,7 +1436,7 @@ p > a.brand-link[href]:not(.btn):hover {
     text-align: center;
   }
 }
-@media (min-width: 768px) {
+@include breakpoint(medium, min) {
   .text-md-left {
     text-align: left;
   }
@@ -1445,7 +1445,7 @@ p > a.brand-link[href]:not(.btn):hover {
     text-align: center;
   }
 }
-@media (min-width: 992px) {
+@include breakpoint(992, min) {
   .text-lg-left {
     text-align: left;
   }
@@ -1454,7 +1454,7 @@ p > a.brand-link[href]:not(.btn):hover {
     text-align: center;
   }
 }
-@media (min-width: 1200px) {
+@include breakpoint(large, min) {
   .text-xl-left {
     text-align: left;
   }
@@ -1463,7 +1463,7 @@ p > a.brand-link[href]:not(.btn):hover {
     text-align: center;
   }
 }
-@media (min-width: 1400px) {
+@include breakpoint(1400, min) {
   .text-xxl-left {
     text-align: left;
   }
@@ -3714,7 +3714,7 @@ a.text-accent-b-900:hover {
     width: auto;
   }
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .w-sm-25 {
     width: 25%;
   }
@@ -3731,7 +3731,7 @@ a.text-accent-b-900:hover {
     width: auto;
   }
 }
-@media (min-width: 768px) {
+@include breakpoint(medium, min) {
   .w-md-25 {
     width: 25%;
   }
@@ -3748,7 +3748,7 @@ a.text-accent-b-900:hover {
     width: auto;
   }
 }
-@media (min-width: 992px) {
+@include breakpoint(992, min) {
   .w-lg-25 {
     width: 25%;
   }
@@ -3765,7 +3765,7 @@ a.text-accent-b-900:hover {
     width: auto;
   }
 }
-@media (min-width: 1200px) {
+@include breakpoint(large, min) {
   .w-xl-25 {
     width: 25%;
   }
@@ -3782,7 +3782,7 @@ a.text-accent-b-900:hover {
     width: auto;
   }
 }
-@media (min-width: 1400px) {
+@include breakpoint(1400, min) {
   .w-xxl-25 {
     width: 25%;
   }
@@ -4078,7 +4078,7 @@ a.text-accent-b-900:hover {
   margin-left: -1px;
 }
 
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .list-group-horizontal-sm {
     flex-direction: row;
   }
@@ -4107,7 +4107,7 @@ a.text-accent-b-900:hover {
     margin-left: -1px;
   }
 }
-@media (min-width: 768px) {
+@include breakpoint(medium, min) {
   .list-group-horizontal-md {
     flex-direction: row;
   }
@@ -4136,7 +4136,7 @@ a.text-accent-b-900:hover {
     margin-left: -1px;
   }
 }
-@media (min-width: 992px) {
+@include breakpoint(992, min) {
   .list-group-horizontal-lg {
     flex-direction: row;
   }
@@ -4165,7 +4165,7 @@ a.text-accent-b-900:hover {
     margin-left: -1px;
   }
 }
-@media (min-width: 1200px) {
+@include breakpoint(large, min) {
   .list-group-horizontal-xl {
     flex-direction: row;
   }
@@ -4194,7 +4194,7 @@ a.text-accent-b-900:hover {
     margin-left: -1px;
   }
 }
-@media (min-width: 1400px) {
+@include breakpoint(1400, min) {
   .list-group-horizontal-xxl {
     flex-direction: row;
   }
@@ -5636,7 +5636,7 @@ a.badge-accent-b:focus {
 .card-deck .collapsible-card-lg {
   margin-bottom: 12px;
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .card-deck {
     display: flex;
     flex-flow: row wrap;
@@ -5657,7 +5657,7 @@ a.badge-accent-b:focus {
 .card-group > .collapsible-card-lg {
   margin-bottom: 12px;
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .card-group {
     display: flex;
     flex-flow: row wrap;
@@ -5736,7 +5736,7 @@ a.badge-accent-b:focus {
 .card-columns .collapsible-card-lg {
   margin-bottom: 0.75rem;
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .card-columns {
     column-count: 3;
     column-gap: 1.25rem;
@@ -6321,7 +6321,7 @@ a.pgn__card {
 .pgn__card.pgn__card-muted {
   background-color: #f8f7f6;
 }
-@media (max-width: 576px) {
+@include breakpoint(576, max) {
   .pgn__card-footer.horizontal > :not(:last-child) {
     margin-inline-end: 0;
   }
@@ -6935,31 +6935,31 @@ pre code {
   right: auto;
 }
 
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .dropdown-menu-sm-left {
     left: 0;
     right: auto;
   }
 }
-@media (min-width: 768px) {
+@include breakpoint(medium, min) {
   .dropdown-menu-md-left {
     left: 0;
     right: auto;
   }
 }
-@media (min-width: 992px) {
+@include breakpoint(992, min) {
   .dropdown-menu-lg-left {
     left: 0;
     right: auto;
   }
 }
-@media (min-width: 1200px) {
+@include breakpoint(large, min) {
   .dropdown-menu-xl-left {
     left: 0;
     right: auto;
   }
 }
-@media (min-width: 1400px) {
+@include breakpoint(1400, min) {
   .dropdown-menu-xxl-left {
     left: 0;
     right: auto;
@@ -7579,7 +7579,7 @@ textarea.form-control {
 .form-inline .form-check {
   width: 100%;
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .form-inline label {
     justify-content: center;
   }
@@ -8327,7 +8327,7 @@ textarea.form-control {
 .pgn__form-control-decorator-group textarea.form-control-sm {
   min-height: calc(1.4286em + 0.875rem + 2px);
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .pgn__form-control-decorator-group {
     margin-inline-end: 0.5rem;
   }
@@ -8736,7 +8736,7 @@ select.form-control {
   width: calc(100% - 0.5rem);
   z-index: 1000;
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .pgn__form-autosuggest__wrapper .pgn__form-autosuggest__dropdown {
     margin-inline-end: 0.5rem;
   }
@@ -8866,7 +8866,7 @@ select.form-control {
   vertical-align: middle;
   width: 19rem;
 }
-@media (max-width: 464px) {
+@include breakpoint(464, max) {
   .pgn__menu .pgn__menu-item {
     width: 13.438rem;
   }
@@ -9077,7 +9077,7 @@ select.form-control {
   top: -9999px;
   width: 50px;
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .modal-dialog {
     margin: 1.75rem auto;
     max-width: 500px;
@@ -9099,13 +9099,13 @@ select.form-control {
     max-width: 400px;
   }
 }
-@media (min-width: 992px) {
+@include breakpoint(992, min) {
   .modal-lg,
   .modal-xl {
     max-width: 800px;
   }
 }
-@media (min-width: 1200px) {
+@include breakpoint(large, min) {
   .modal-xl {
     max-width: 1140px;
   }
@@ -9326,7 +9326,7 @@ select.form-control {
   overflow-y: auto;
 }
 
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .navbar-expand-sm {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -9360,7 +9360,7 @@ select.form-control {
     display: none;
   }
 }
-@media (max-width: 767.98px) {
+@include breakpoint(medium, max) {
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid,
   .navbar-expand-md > .container-lg,
@@ -9371,7 +9371,7 @@ select.form-control {
     padding-right: 0;
   }
 }
-@media (min-width: 768px) {
+@include breakpoint(medium, min) {
   .navbar-expand-md {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -9406,7 +9406,7 @@ select.form-control {
   }
 }
 
-@media (max-width: 1399.98px) {
+@include breakpoint(1400, max) {
   .navbar-expand-xxl > .container,
   .navbar-expand-xxl > .container-fluid,
   .navbar-expand-xxl > .container-lg,
@@ -9417,7 +9417,7 @@ select.form-control {
     padding-right: 0;
   }
 }
-@media (min-width: 1400px) {
+@include breakpoint(1400, min) {
   .navbar-expand-xxl {
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -9506,7 +9506,7 @@ select.form-control {
   min-height: 36px;
   width: 100%;
 }
-@media (min-width: 768px) {
+@include breakpoint(medium, min) {
   .pgn__pageBanner-component {
     font-size: 87.5%;
   }
@@ -9546,7 +9546,7 @@ select.form-control {
   min-height: 32px;
   min-width: 32px;
 }
-@media (min-width: 768px) {
+@include breakpoint(medium, min) {
   .pgn__pageBanner-dismissButtonContainer {
     min-height: 36px;
     min-width: 36px;
@@ -10519,7 +10519,7 @@ select.form-control {
   align-items: flex-start;
   display: flex;
 }
-@media (max-width: 1440px) {
+@include breakpoint(1440, max) {
   .pgn__data-table-layout-wrapper {
     overflow-x: scroll;
   }
@@ -11428,12 +11428,12 @@ select.form-control {
 .toast .toast-header + .btn {
   margin-top: 1rem;
 }
-@media only screen and (max-width: 768px) {
+@include breakpoint(medium, max) {
   .toast {
     max-width: 100%;
   }
 }
-@media only screen and (min-width: 768px) {
+@include breakpoint(medium, min) {
   .toast {
     max-width: 400px;
     min-width: 400px;
@@ -11446,7 +11446,7 @@ select.form-control {
   left: 1.25rem;
 }
 
-@media only screen and (max-width: 768px) {
+@include breakpoint(medium, max) {
   .toast-container {
     bottom: 0.625rem;
   }
@@ -11537,7 +11537,7 @@ select.form-control {
   position: absolute;
   z-index: 1060;
 }
-@media (max-width: 768px) {
+@include breakpoint(medium, max) {
   .pgn__checkpoint {
     max-width: 90%;
     min-width: 90%;
@@ -12101,7 +12101,7 @@ select.form-control {
 .pgn__hex-form div {
   display: inline-flex;
 }
-@media (min-width: 576px) {
+@include breakpoint(576, min) {
   .pgn__hex-form .pgn__hex-field {
     margin-inline-end: 0;
   }
@@ -12362,7 +12362,7 @@ a:visited:not(.btn):hover {
 .courseware-search-results-tabs.nav-tabs .nav-link.active {
   border-bottom-width: 4px;
 }
-@media (min-width: 768px) {
+@include breakpoint(medium, min) {
   .courseware-search__content {
     padding-top: 8rem;
   }
@@ -12982,7 +12982,7 @@ button.bg-accent-b:hover {
   background-color: hsla(0, 0%, 100%, 0.075);
   color: var(--mono-100);
 }
-@media (max-width: 575.98px) {
+@include breakpoint(576, max) {
   .table-responsive-sm {
     display: block;
     overflow-x: auto;
@@ -12993,7 +12993,7 @@ button.bg-accent-b:hover {
     border: 0;
   }
 }
-@media (max-width: 767.98px) {
+@include breakpoint(medium, max) {
   .table-responsive-md {
     display: block;
     overflow-x: auto;
@@ -13004,7 +13004,7 @@ button.bg-accent-b:hover {
     border: 0;
   }
 }
-@media (max-width: 991.98px) {
+@include breakpoint(992, max) {
   .table-responsive-lg {
     display: block;
     overflow-x: auto;
@@ -13015,7 +13015,7 @@ button.bg-accent-b:hover {
     border: 0;
   }
 }
-@media (max-width: 1199.98px) {
+@include breakpoint(large, max) {
   .table-responsive-xl {
     display: block;
     overflow-x: auto;
@@ -13026,7 +13026,7 @@ button.bg-accent-b:hover {
     border: 0;
   }
 }
-@media (max-width: 1399.98px) {
+@include breakpoint(1400, max) {
   .table-responsive-xxl {
     display: block;
     overflow-x: auto;
