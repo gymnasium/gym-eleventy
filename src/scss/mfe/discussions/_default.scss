@@ -1,3 +1,9 @@
+@use "sass:map";
+@use "base/breakpoints" as *;
+@use "base/functions" as *;
+@use "base/mixins" as *;
+@use "base/fonts" as *;
+
 :root {
   --blue: #23419f;
   --green: #178253;

@@ -1,3 +1,9 @@
+@use "sass:map";
+@use "base/breakpoints" as *;
+@use "base/functions" as *;
+@use "base/mixins" as *;
+@use "base/fonts" as *;
+
 // Cleanup later
 /*! CSS Used from: Embedded */
 svg:not(:root).svg-inline--fa,
@@ -40,10 +46,10 @@ svg:not(:host).svg-inline--fa {
 }
 
 /*! CSS Used from: https://apps.learn.gymnasium.day/learning/app.a49f912aea5a90c1f158.css */
-.raised-card {
-  border: 0;
-  box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
-}
+// .raised-card {
+//   border: 0;
+//   box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+// }
 
 svg {
   vertical-align: middle;

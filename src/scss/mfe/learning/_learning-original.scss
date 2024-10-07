@@ -1,3 +1,9 @@
+@use "sass:map";
+@use "base/breakpoints" as *;
+@use "base/functions" as *;
+@use "base/mixins" as *;
+@use "base/fonts" as *;
+
 // TODO: we probably (definitely) don't need all these set, and should use our default css variables instead
 :root {
   --blue: #23419f;
@@ -138,9 +144,10 @@
   }
 }
 .raised-card {
-  border: 0;
-  box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+  border: rem-calc(1) solid var(--mono-300);
+  // box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
 }
+
 .icon-hover:hover {
   background-color: #f0eeed;
   color: var(--primary);
@@ -4496,12 +4503,13 @@ a.text-accent-b-900:hover {
   flex-grow: 1;
 }
 .alert {
-  border: 0 solid rgba(0, 0, 0, 0);
+  background-color: var(--mono-100);
+  border: rem-calc(1) solid var(--mono-300);
   border-radius: 0;
-  box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15),
-    0 0.0625rem 0.25rem rgba(0, 0, 0, 0.15);
+  // box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15),
+  //   0 0.0625rem 0.25rem rgba(0, 0, 0, 0.15);
   margin-bottom: 1rem;
-  padding: 1.5rem;
+  padding: 1rem;
   position: relative;
 }
 .alert .alert-message-content > :last-child {
@@ -4619,8 +4627,8 @@ a.text-accent-b-900:hover {
   color: var(--red-600);
 }
 .alert-light {
-  background-color: #fdfdfd;
-  border-color: #f8f7f6;
+  background-color: var(--mono-100);
+  border-color: var(--mono-300);
   color: inherit;
 }
 .alert-light .alert-icon {
