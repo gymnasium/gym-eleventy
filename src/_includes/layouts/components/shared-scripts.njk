@@ -1,4 +1,8 @@
 {#- Start OneTrust Cookies Consent Notice -#}
+{%- if env.ONETRUST_COOKIE_SCRIPT_ID -%}
 <script async src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-language="en" type="text/javascript" charset="UTF-8" data-domain-script="{{ env.ONETRUST_COOKIE_SCRIPT_ID }}"></script>
 <script type="text/javascript">function OptanonWrapper(){}</script>
+{%- else -%}
+<!-- ONETRUST_COOKIE_SCRIPT_ID missing found -->
+{%- endif -%}
 {#- End OneTrust Cookies Consent Notice -#}

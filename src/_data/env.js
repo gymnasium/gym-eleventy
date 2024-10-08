@@ -1,3 +1,4 @@
 module.exports = {
   ONETRUST_COOKIE_SCRIPT_ID: process.env.ONETRUST_COOKIE_SCRIPT_ID,
+  INTERCOM_APP_ID: process.env.INTERCOM_APP_ID,
 };
