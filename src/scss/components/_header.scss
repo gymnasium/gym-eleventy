@@ -106,7 +106,13 @@
       }
 
       .logged-in {
-        border-top: 1px solid var(--mono-700);
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        li {
+          margin-right: -1rem;
+        }
       }
 
       &.secondary {
