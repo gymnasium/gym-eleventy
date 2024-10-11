@@ -1,3 +1,9 @@
+@use "sass:map";
+@use "base/breakpoints" as *;
+@use "base/functions" as *;
+@use "base/mixins" as *;
+@use "base/fonts" as *;
+
 .flag-button {
   background-color: var(--mono-100);
   border: 1px solid var(--mono-400);

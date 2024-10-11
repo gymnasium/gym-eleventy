@@ -15,17 +15,18 @@
   // top/bottom padding for each component of the home page
   article,
   section {
-    margin-top: 0 !important; // TODO: refactor the main class to not add padding/margins by default.
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
   section {
-    h1 {
-      text-align: center;
+    h2 {
+      font-size: 1.55rem;
     }
-    h1, h2 {
-      font-size: rem-calc(24.5);
+    header {
+      h2 {
+        text-align: center;
+      }
     }
   }
 }
@@ -81,35 +82,55 @@ article.home-hero {
 }
 
 .how-gymnasium-works {
-  h1, h2 {
-    font-weight: 700;
-    letter-spacing: rem-calc(1.4);
-    color: var(--mono-600);
+  h2,
+  h3 {
+    line-height: 1.15;
   }
-  
 
   h2 {
-    font-size: rem-calc(24);
-    font-style: normal;
-    line-height: 1;
+    font-weight: 900;
+    letter-spacing: 0.15ex;
+    word-spacing: 0.25ex;
+  }
+
+  h3 {
+    font-size: 1.55rem;
+    letter-spacing: 0.05ex;
+    word-spacing: 0.125ex;
   }
 
   p {
     font-size: rem-calc(18);
     font-family: var(--font-family-default);
-    color: var(--mono-500);
+    letter-spacing: 0.0125ex;
+    color: var(--mono-600);
+    text-wrap: pretty;
+  }
+
+ .hero {
+    font-family: var(--font-family-custom);
+    font-size: 1.6875rem;
+    margin: 1.2rem 0;
+  }
+
+  header + ul {
+    margin-top: 0.6rem;
   }
 
   ul {
-    list-style: none;
-    margin: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 2.6em;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+
+    @include breakpoint(large, min) {
+      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    }
+
+    grid-gap: 1.4rem 2rem;
   }
 }
 
-.home-featured {
+section.home-featured {
+  padding-top: 0;
 
   > header {
     border-top: 2px solid var(--mono-400);
@@ -128,23 +149,20 @@ article.home-hero {
 
 
   ul {
-    list-style: none;
-    margin: 0;
     display: grid;
     grid-template-columns: auto;
-    grid-gap: 2rem;
-    
-  }
+    grid-gap: 1.4rem;
 
-  li {
-    display: inherit;
+    li {
+      display: inherit;
+    }
   }
 
   @include breakpoint(small, min) {
     ul {
       grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
     }
-    
+
   }
 
   @include breakpoint(medium, min) {
@@ -158,9 +176,6 @@ article.home-hero {
   }
 
   @include breakpoint(large, min) {
-    ul {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
 
     li:last-child {
       display: grid;
@@ -203,6 +218,9 @@ article.home-hero {
       padding-top: 1rem;
       text-align: center;
 
+      .btn {
+        display: block;
+      }
     }
   }
 
@@ -210,21 +228,46 @@ article.home-hero {
     text-align: center;
     margin-top: 2rem;
 
-    @include breakpoint(large, min) {
-      max-width: 75%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
     .description {
       text-align: left;
       font-family: var(--font-family-custom);
       font-size: rem-calc(25.6);
       font-weight: 700;
+
+      @include breakpoint(large, min) {
+        text-align: inherit;
+        text-wrap: balance;
+      }
+    }
+
+    .description + .btn {
+      display: inline-block;
+      width: 100%;
+      max-width: 16rem;
+    }
+  }
+}
+
+.how-gymnasium-works,
+.home-find-work {
+
+  header {
+    display: table; // shh (old school `width: fit-content;`)
+    margin: 0 auto;
+
+    &:before {
+      display: block;
+      content: "";
+      border-left: 1.4rem dashed transparent;
+      border-right: 1.4rem dashed transparent;
+      border-bottom: 2rem solid var(--mono-200);
+      margin: -3.4rem -2.6rem 0;
     }
   }
 }
 
 .home-find-work {
-
+  header:before  {
+    border-bottom-color: var(--mono-700);
+  }
 }

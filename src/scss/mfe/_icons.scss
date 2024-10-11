@@ -9,21 +9,19 @@ $color_3: #454545;
 $color_4: var(--primary);
 $color_5: var(--green-600);
 $color_6: #ffd900;
-$color_7: #c32d3a;
+$color_7: var(--red-600);
 $color_8: #e1dddb;
-$color_9: #273f2f;
+$color_9: var(--green-700);
 $color_10: var(--mono-900);
-$background-color_1: var(--mono-1000);
+$background-color_1: transparent;
 $background-color_2: var(--primary);
 $background-color_3: var(--mono-100);
 $background-color_4: #454545;
 $background-color_5: var(--primary);
 $background-color_6: var(--green-600);
 $background-color_7: #ffd900;
-$background-color_8: #c32d3a;
+$background-color_8: var(--red-600);
 $background-color_9: #e1dddb;
-$background-color_10: #273f2f;
-$background-color_11: var(--mono-900);
 
 .fa-icon-spacing {
   padding: 0 5px 0 0;
@@ -100,7 +98,7 @@ $background-color_11: var(--mono-900);
   pointer-events: none;
 }
 .btn-icon.btn-icon-primary {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_1;
   &:active {
     background-color: $background-color_2;
@@ -111,10 +109,10 @@ $background-color_11: var(--mono-900);
     color: $color_2;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--primary);
     color: $color_1;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-primary.active {
@@ -126,13 +124,13 @@ $background-color_11: var(--mono-900);
   color: $color_2;
 }
 .btn-icon.btn-icon-primary.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--primary);
   color: $color_1;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-primary {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_2;
   &:active {
     background-color: $background-color_3;
@@ -143,10 +141,10 @@ $background-color_11: var(--mono-900);
     color: $color_1;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-primary.active {
@@ -158,10 +156,10 @@ $background-color_11: var(--mono-900);
   color: $color_1;
 }
 .btn-icon.btn-icon-inverse-primary.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-primary-active {
   background-color: $background-color_2;
@@ -177,7 +175,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_2;
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-primary-active.active {
@@ -191,7 +189,7 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-primary-active.focus {
   background-color: $background-color_2;
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-primary-active {
   background-color: $background-color_3;
@@ -207,7 +205,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_3;
     color: $color_1;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-primary-active.active {
@@ -221,10 +219,10 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-inverse-primary-active.focus {
   background-color: $background-color_3;
   color: $color_1;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-secondary {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_3;
   &:active {
     background-color: $background-color_4;
@@ -235,10 +233,10 @@ $background-color_11: var(--mono-900);
     color: $color_2;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px #454545;
     color: $color_3;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-secondary.active {
@@ -250,13 +248,13 @@ $background-color_11: var(--mono-900);
   color: $color_2;
 }
 .btn-icon.btn-icon-secondary.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px #454545;
   color: $color_3;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-secondary {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_2;
   &:active {
     background-color: $background-color_3;
@@ -267,10 +265,10 @@ $background-color_11: var(--mono-900);
     color: $color_3;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-secondary.active {
@@ -282,10 +280,10 @@ $background-color_11: var(--mono-900);
   color: $color_3;
 }
 .btn-icon.btn-icon-inverse-secondary.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-secondary-active {
   background-color: $background-color_4;
@@ -301,7 +299,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_4;
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-secondary-active.active {
@@ -315,7 +313,7 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-secondary-active.focus {
   background-color: $background-color_4;
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-secondary-active {
   background-color: $background-color_3;
@@ -331,7 +329,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_3;
     color: $color_3;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-secondary-active.active {
@@ -345,10 +343,10 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-inverse-secondary-active.focus {
   background-color: $background-color_3;
   color: $color_3;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-brand {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_4;
   &:active {
     background-color: $background-color_5;
@@ -359,10 +357,10 @@ $background-color_11: var(--mono-900);
     color: $color_2;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--primary);
     color: $color_4;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-brand.active {
@@ -374,13 +372,13 @@ $background-color_11: var(--mono-900);
   color: $color_2;
 }
 .btn-icon.btn-icon-brand.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--primary);
   color: $color_4;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-brand {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_2;
   &:active {
     background-color: $background-color_3;
@@ -391,10 +389,10 @@ $background-color_11: var(--mono-900);
     color: $color_4;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-brand.active {
@@ -406,10 +404,10 @@ $background-color_11: var(--mono-900);
   color: $color_4;
 }
 .btn-icon.btn-icon-inverse-brand.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-brand-active {
   background-color: $background-color_5;
@@ -425,7 +423,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_5;
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-brand-active.active {
@@ -439,7 +437,7 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-brand-active.focus {
   background-color: $background-color_5;
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-brand-active {
   background-color: $background-color_3;
@@ -455,7 +453,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_3;
     color: $color_4;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-brand-active.active {
@@ -469,10 +467,10 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-inverse-brand-active.focus {
   background-color: $background-color_3;
   color: $color_4;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-success {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_5;
   &:active {
     background-color: $background-color_6;
@@ -483,10 +481,10 @@ $background-color_11: var(--mono-900);
     color: $color_2;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--green-600);
     color: $color_5;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-success.active {
@@ -498,13 +496,13 @@ $background-color_11: var(--mono-900);
   color: $color_2;
 }
 .btn-icon.btn-icon-success.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--green-600);
   color: $color_5;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-success {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_2;
   &:active {
     background-color: $background-color_3;
@@ -515,10 +513,10 @@ $background-color_11: var(--mono-900);
     color: $color_5;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-success.active {
@@ -530,10 +528,10 @@ $background-color_11: var(--mono-900);
   color: $color_5;
 }
 .btn-icon.btn-icon-inverse-success.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-success-active {
   background-color: $background-color_6;
@@ -549,7 +547,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_6;
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-success-active.active {
@@ -563,7 +561,7 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-success-active.focus {
   background-color: $background-color_6;
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-success-active {
   background-color: $background-color_3;
@@ -579,7 +577,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_3;
     color: $color_5;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-success-active.active {
@@ -593,10 +591,10 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-inverse-success-active.focus {
   background-color: $background-color_3;
   color: $color_5;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-warning {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_6;
   &:active {
     background-color: $background-color_7;
@@ -607,10 +605,10 @@ $background-color_11: var(--mono-900);
     color: $color_2;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px #ffd900;
     color: $color_6;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-warning.active {
@@ -622,13 +620,13 @@ $background-color_11: var(--mono-900);
   color: $color_2;
 }
 .btn-icon.btn-icon-warning.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px #ffd900;
   color: $color_6;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-warning {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_2;
   &:active {
     background-color: $background-color_3;
@@ -639,10 +637,10 @@ $background-color_11: var(--mono-900);
     color: $color_6;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-warning.active {
@@ -654,10 +652,10 @@ $background-color_11: var(--mono-900);
   color: $color_6;
 }
 .btn-icon.btn-icon-inverse-warning.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-warning-active {
   background-color: $background-color_7;
@@ -673,7 +671,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_7;
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-warning-active.active {
@@ -687,7 +685,7 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-warning-active.focus {
   background-color: $background-color_7;
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-warning-active {
   background-color: $background-color_3;
@@ -703,7 +701,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_3;
     color: $color_6;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-warning-active.active {
@@ -717,10 +715,10 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-inverse-warning-active.focus {
   background-color: $background-color_3;
   color: $color_6;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-danger {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_7;
   &:active {
     background-color: $background-color_8;
@@ -731,10 +729,10 @@ $background-color_11: var(--mono-900);
     color: $color_2;
   }
   &:focus {
-    background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #c32d3a;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px var(--red-600);
     color: $color_7;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-danger.active {
@@ -746,13 +744,13 @@ $background-color_11: var(--mono-900);
   color: $color_2;
 }
 .btn-icon.btn-icon-danger.focus {
-  background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #c32d3a;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px var(--red-600);
   color: $color_7;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-danger {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_2;
   &:active {
     background-color: $background-color_3;
@@ -763,10 +761,10 @@ $background-color_11: var(--mono-900);
     color: $color_7;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-danger.active {
@@ -778,10 +776,10 @@ $background-color_11: var(--mono-900);
   color: $color_7;
 }
 .btn-icon.btn-icon-inverse-danger.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-danger-active {
   background-color: $background-color_8;
@@ -797,7 +795,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_8;
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-danger-active.active {
@@ -811,7 +809,7 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-danger-active.focus {
   background-color: $background-color_8;
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-danger-active {
   background-color: $background-color_3;
@@ -827,7 +825,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_3;
     color: $color_7;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-danger-active.active {
@@ -841,10 +839,10 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-inverse-danger-active.focus {
   background-color: $background-color_3;
   color: $color_7;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-light {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_8;
   &:active {
     background-color: $background-color_9;
@@ -855,10 +853,10 @@ $background-color_11: var(--mono-900);
     color: $color_2;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px #e1dddb;
     color: $color_8;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-light.active {
@@ -870,13 +868,13 @@ $background-color_11: var(--mono-900);
   color: $color_2;
 }
 .btn-icon.btn-icon-light.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px #e1dddb;
   color: $color_8;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-light {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_2;
   &:active {
     background-color: $background-color_3;
@@ -887,10 +885,10 @@ $background-color_11: var(--mono-900);
     color: $color_8;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-light.active {
@@ -902,10 +900,10 @@ $background-color_11: var(--mono-900);
   color: $color_8;
 }
 .btn-icon.btn-icon-inverse-light.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-light-active {
   background-color: $background-color_9;
@@ -921,7 +919,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_9;
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-light-active.active {
@@ -935,7 +933,7 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-light-active.focus {
   background-color: $background-color_9;
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-light-active {
   background-color: $background-color_3;
@@ -951,7 +949,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_3;
     color: $color_8;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-light-active.active {
@@ -965,42 +963,42 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-inverse-light-active.focus {
   background-color: $background-color_3;
   color: $color_8;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-dark {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_9;
   &:active {
-    background-color: $background-color_10;
+    background-color: var(--green-700);
     color: $color_2;
   }
   &:hover {
-    background-color: $background-color_10;
+    background-color: var(--green-700);
     color: $color_2;
   }
   &:focus {
-    background-color: $background-color_1;
-    box-shadow: inset 0 0 0 2px #273f2f;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px var(--green-700);
     color: $color_9;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-dark.active {
-  background-color: $background-color_10;
+  background-color: var(--green-700);
   color: $color_2;
 }
 .btn-icon.btn-icon-dark.hover {
-  background-color: $background-color_10;
+  background-color: var(--green-700);
   color: $color_2;
 }
 .btn-icon.btn-icon-dark.focus {
-  background-color: $background-color_1;
-  box-shadow: inset 0 0 0 2px #273f2f;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px var(--green-700);
   color: $color_9;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-dark {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_2;
   &:active {
     background-color: $background-color_3;
@@ -1011,10 +1009,10 @@ $background-color_11: var(--mono-900);
     color: $color_9;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-dark.active {
@@ -1026,40 +1024,40 @@ $background-color_11: var(--mono-900);
   color: $color_9;
 }
 .btn-icon.btn-icon-inverse-dark.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-dark-active {
-  background-color: $background-color_10;
+  background-color: var(--green-700);
   color: $color_2;
   &:active {
-    background-color: $background-color_10;
+    background-color: var(--green-700);
     color: $color_2;
   }
   &:hover {
-    background-color: $background-color_10;
+    background-color: var(--green-700);
     color: $color_2;
   }
   &:focus {
-    background-color: $background-color_10;
+    background-color: var(--green-700);
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-dark-active.active {
-  background-color: $background-color_10;
+  background-color: var(--green-700);
   color: $color_2;
 }
 .btn-icon.btn-icon-dark-active.hover {
-  background-color: $background-color_10;
+  background-color: var(--green-700);
   color: $color_2;
 }
 .btn-icon.btn-icon-dark-active.focus {
-  background-color: $background-color_10;
+  background-color: var(--green-700);
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-dark-active {
   background-color: $background-color_3;
@@ -1075,7 +1073,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_3;
     color: $color_9;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-dark-active.active {
@@ -1089,42 +1087,42 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-inverse-dark-active.focus {
   background-color: $background-color_3;
   color: $color_9;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-black {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_10;
   &:active {
-    background-color: $background-color_11;
+    background-color: var(--mono-900);
     color: $color_2;
   }
   &:hover {
-    background-color: $background-color_11;
+    background-color: var(--mono-900);
     color: $color_2;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--mono-900);
     color: $color_10;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-black.active {
-  background-color: $background-color_11;
+  background-color: var(--mono-900);
   color: $color_2;
 }
 .btn-icon.btn-icon-black.hover {
-  background-color: $background-color_11;
+  background-color: var(--mono-900);
   color: $color_2;
 }
 .btn-icon.btn-icon-black.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--mono-900);
   color: $color_10;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-black {
-  background-color: $background-color_1;
+  background-color: transparent;
   color: $color_2;
   &:active {
     background-color: $background-color_3;
@@ -1135,10 +1133,10 @@ $background-color_11: var(--mono-900);
     color: $color_10;
   }
   &:focus {
-    background-color: $background-color_1;
+    background-color: transparent;
     box-shadow: inset 0 0 0 2px var(--mono-100);
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-black.active {
@@ -1150,40 +1148,40 @@ $background-color_11: var(--mono-900);
   color: $color_10;
 }
 .btn-icon.btn-icon-inverse-black.focus {
-  background-color: $background-color_1;
+  background-color: transparent;
   box-shadow: inset 0 0 0 2px var(--mono-100);
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-black-active {
-  background-color: $background-color_11;
+  background-color: var(--mono-900);
   color: $color_2;
   &:active {
-    background-color: $background-color_11;
+    background-color: var(--mono-900);
     color: $color_2;
   }
   &:hover {
-    background-color: $background-color_11;
+    background-color: var(--mono-900);
     color: $color_2;
   }
   &:focus {
-    background-color: $background-color_11;
+    background-color: var(--mono-900);
     color: $color_2;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-black-active.active {
-  background-color: $background-color_11;
+  background-color: var(--mono-900);
   color: $color_2;
 }
 .btn-icon.btn-icon-black-active.hover {
-  background-color: $background-color_11;
+  background-color: var(--mono-900);
   color: $color_2;
 }
 .btn-icon.btn-icon-black-active.focus {
-  background-color: $background-color_11;
+  background-color: var(--mono-900);
   color: $color_2;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .btn-icon.btn-icon-inverse-black-active {
   background-color: $background-color_3;
@@ -1199,7 +1197,7 @@ $background-color_11: var(--mono-900);
   &:focus {
     background-color: $background-color_3;
     color: $color_10;
-    outline: 2px var(--mono-1000);
+    outline: 2px transparent;
   }
 }
 .btn-icon.btn-icon-inverse-black-active.active {
@@ -1213,7 +1211,7 @@ $background-color_11: var(--mono-900);
 .btn-icon.btn-icon-inverse-black-active.focus {
   background-color: $background-color_3;
   color: $color_10;
-  outline: 2px var(--mono-1000);
+  outline: 2px transparent;
 }
 .pgn__icon-button-toggle__container {
   display: flex;

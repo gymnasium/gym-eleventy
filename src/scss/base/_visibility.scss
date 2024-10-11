@@ -1,7 +1,8 @@
 // Screen reader support {
 .sr,
 .sr-only,
-.visually-hidden {
+.visually-hidden,
+.nav-skip {
   position: absolute;
   white-space: nowrap;
   width: 1px;

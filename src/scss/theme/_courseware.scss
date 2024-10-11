@@ -124,3 +124,16 @@
 }
 
 
+// for LMS theme IFRAMEs shown in the learning MFE
+.view-in-mfe {
+
+  // Hide final exam header
+  h3.problem-header {
+    display: none;
+  }
+
+  // Hide final exam score
+  .xmodule_display.xmodule_ProblemBlock .problem-progress {
+    display: none;
+  }
+}

@@ -3,9 +3,6 @@
 @use 'base/mixins' as *;
 @use 'base/fonts' as *;
 
-$color_1: var(--mono-100);
-$background-color_1: var(--mono-100);
-
 .carousel {
   position: relative;
 }
@@ -104,7 +101,7 @@ $background-color_1: var(--mono-100);
   background: none;
   border: 0;
   bottom: 0;
-  color: $color_1;
+  color: var(--mono-100);
   display: flex;
   justify-content: center;
   opacity: 0.5;
@@ -116,13 +113,13 @@ $background-color_1: var(--mono-100);
   width: 15%;
   z-index: 1;
   &:focus {
-    color: $color_1;
+    color: var(--mono-100);
     opacity: 0.9;
     outline: 0;
     text-decoration: none;
   }
   &:hover {
-    color: $color_1;
+    color: var(--mono-100);
     opacity: 0.9;
     outline: 0;
     text-decoration: none;
@@ -133,7 +130,7 @@ $background-color_1: var(--mono-100);
   background: none;
   border: 0;
   bottom: 0;
-  color: $color_1;
+  color: var(--mono-100);
   display: flex;
   justify-content: center;
   opacity: 0.5;
@@ -145,13 +142,13 @@ $background-color_1: var(--mono-100);
   width: 15%;
   z-index: 1;
   &:focus {
-    color: $color_1;
+    color: var(--mono-100);
     opacity: 0.9;
     outline: 0;
     text-decoration: none;
   }
   &:hover {
-    color: $color_1;
+    color: var(--mono-100);
     opacity: 0.9;
     outline: 0;
     text-decoration: none;
@@ -184,9 +181,9 @@ $background-color_1: var(--mono-100);
   z-index: 15;
   li {
     background-clip: padding-box;
-    background-color: $background-color_1;
-    border-bottom: 10px solid var(--mono-1000);
-    border-top: 10px solid var(--mono-1000);
+    background-color: var(--mono-100);
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
     box-sizing: initial;
     cursor: pointer;
     flex: 0 1 auto;
@@ -204,7 +201,7 @@ $background-color_1: var(--mono-100);
 }
 .carousel-caption {
   bottom: 20px;
-  color: $color_1;
+  color: var(--mono-100);
   left: 15%;
   padding-bottom: 20px;
   padding-top: 20px;

@@ -682,7 +682,7 @@ $box-shadow:                  0 .125rem .25rem rgba($black, .3) !default;
 $box-shadow-lg:               0 .25rem .5rem rgba($black, .3) !default;
 
 $component-active-color:      $white !default;
-$component-active-bg:         theme-color("primary") !default;
+$component-active-bg:         var(--primary) !default;
 
 $caret-width:                 .3em !default;
 $caret-vertical-align:        $caret-width * .85 !default;
