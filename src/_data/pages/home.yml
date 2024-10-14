@@ -4,13 +4,13 @@ how-gymnasium-works:
     heading_type: h2
   description: Gymnasium offers free online <a href="/courses/">courses</a> and <a href="/courses/take5/">tutorials</a> on design, development, UX, prototyping, accessibility, and career skills. Whether you want to dive deep or quickly pick up a new skill, <a href="/courses/full/">explore our free courses</a> now.
   items:
-    - heading: Free Online Courses
+    - heading: Free Online Courses <span aria-label="Hundred Points emoji" role="img">💯</span>
       description: Learn anytime, anywhere with free <a href="/courses/">courses and tutorials</a> taught by industry experts.
-    - heading: New Skills
+    - heading: New Skills <span aria-label="Trophy emoji" role="img">🏆</span>
       description: Earn a <a href="/courses/">certificate or badge</a> by passing the final exam and share your achievement online.
-    - heading: Career Opportunities
+    - heading: Career Opportunities <span aria-label="Magnifying Glass Tilted Right emoji" role="img">🔎</span>
       description: Find <a href="/jobs/">jobs through Aquent</a>, our parent company, and one of the largest global staffing agencies.
-    - heading: Lifelong Learning
+    - heading: Lifelong Learning <span aria-label="Key emoji" role="img">🔑</span>
       description: Discover <a href="/collections/">articles, livestreams, and webinars</a> with experts in the web and design community.
 
 find-work:
