@@ -684,10 +684,16 @@ div.d-flex.ml-auto {
     flex-direction: row;
   }
 
-  // Hide course license
-  ~ .text-right.small {
-    display: none;
-  }
+  
+}
+
+// Hide course license?
+.text-right.small:has(.text-gray-500) {
+  display: none;
+}
+// Hide course license
+.course-license-wrapper {
+  display: none;
 }
 
 @include breakpoint(medium) {
