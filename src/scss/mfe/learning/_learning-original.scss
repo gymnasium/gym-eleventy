@@ -4512,9 +4512,18 @@ a.text-accent-b-900:hover {
   padding: 1rem;
   position: relative;
 }
+// Theoretically, the last div in the alert that pops up when a user isn't enrolled (could be any alert in that section TBH
 .alert .alert-message-content > :last-child {
   margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1;
+
+  // Theoretically, the "Enroll Now" button in the alert that pops up
+  button {
+    margin-right: 0.33rem;
+  }
 }
+
 .alert .alert-icon {
   flex-shrink: 0;
   height: 1.5rem;
