@@ -28,7 +28,8 @@ body {
 }
 
 .content-wrapper,
-.main-container {
+.main-container,
+.page-banner {
   @include container;
 }
 
@@ -52,5 +53,23 @@ body {
       font-size: 2rem;
       text-align: center;
     }
+  }
+}
+
+.alert {
+  color: inherit;
+  display: flex;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: start;
+  background-color: var(--mono-100);
+  border: rem-calc(1) solid var(--mono-300);
+  border-radius: 0;
+  margin: 1rem auto -0.5rem;
+  padding: 1rem;
+  position: relative;
+
+  .enroll-btn {
+    padding: 0;
   }
 }

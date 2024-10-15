@@ -136,4 +136,54 @@
   .xmodule_display.xmodule_ProblemBlock .problem-progress {
     display: none;
   }
+
+  // Exam component styling. TODO: populate with style fixes for exam
+  .problem {
+    h2 {
+
+    }
+
+    fieldset {
+
+    }
+
+    .field {
+      input {
+
+      }
+      label {
+
+      }
+    }
+
+    legend {
+
+    }
+  }
+
+  .action {
+
+  }
+
+  .problem-action-buttons-wrapper {
+
+    .problem-action-btn {
+
+    }
+
+    .show-label {
+
+    }
+  }
+
+  .submit-attempt-container {
+    [type=submit] {
+
+    }
+
+    .submission-feedback {
+      
+    }
+  }
+
 }
