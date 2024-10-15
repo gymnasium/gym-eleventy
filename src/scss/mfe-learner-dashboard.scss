@@ -11,7 +11,7 @@
 
 @use "mfe/root";
 @use "mfe/flex";
-@use "mfe/buttons";
+@use "mfe/learner-dashboard/buttons";
 @use 'mfe/layout';
 @use 'mfe/modal';
 
@@ -47,6 +47,8 @@
 
   // #course-filter-controls
   button {
+    padding: 0.5rem 1rem;
+
     .btn-icon-before {
       margin-left: -0.25rem;
       margin-inline-end: 0.5rem;

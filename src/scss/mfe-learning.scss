@@ -19,7 +19,7 @@
 @use "mfe/animations";
 // @use "mfe/layout";
 
-@use "mfe/buttons";
+@use "mfe/learning/buttons";
 @use "mfe/course-header";
 @use "mfe/course-tabs-nav";
 @use "mfe/learning/date-summary";
@@ -683,7 +683,13 @@ div.d-flex.ml-auto {
   @include breakpoint(medium) {
     flex-direction: row;
   }
+
+  // Hide course license
+  ~ .text-right.small {
+    display: none;
+  }
 }
+
 @include breakpoint(medium) {
   .sequence {
     border: 1px solid #eaeaea;
@@ -898,3 +904,5 @@ div.d-flex.ml-auto {
     border-top-right-radius: 4px;
   }
 }
+
+
