@@ -936,47 +936,48 @@ div.d-flex.ml-auto {
 
 .alert .alert-icon {
   flex-shrink: 0;
+  float: left;
   height: 1.5rem;
   margin-inline-end: 0.8rem;
   width: 1.5rem;
-}
-.alert .alert-icon {
-  float: left;
 }
 
 .alert-heading {
   color: #000;
   display: flex;
 }
+
 .alert-content {
   color: #454545;
   display: flex;
   font-size: 0.875rem;
   line-height: 1.5rem;
   text-align: start;
+
+  div {
+    flex-grow: 1;
+  }
 }
-.alert-content div {
-  flex-grow: 1;
-}
+
 .alert-link {
   font-weight: 400;
   text-decoration: underline;
-}
-.alert-link:hover {
-  text-decoration: none;
-}
-.alert-dismissible {
-  padding-right: 4.6875rem;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
-.alert-dismissible .close {
-  color: inherit;
-  padding: 1.5rem;
-  position: absolute;
-  top: 0;
-}
-.alert-dismissible .close {
-  right: 0;
+.alert-dismissible {
+  padding-right: 4.6875rem;
+
+  .close {
+    color: inherit;
+    padding: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .pgn__alert-message-wrapper {
@@ -989,104 +990,129 @@ div.d-flex.ml-auto {
 .pgn__alert-message-wrapper-stacked .pgn__alert-actions {
   margin-top: 1rem;
 }
+
 .alert-primary {
   background-color: #f0f3f5;
   border-color: #c2cbd5;
   color: inherit;
+
+  .alert-icon {
+    color: var(--primary);
+  }
 }
-.alert-primary .alert-icon {
-  color: var(--primary);
-}
+
 .alert-secondary {
   background-color: #f4f4f4;
   border-color: #d1d1d1;
   color: inherit;
+
+  .alert-icon {
+    color: #454545;
+  }
 }
-.alert-secondary .alert-icon {
-  color: #454545;
-}
+
 .alert-brand {
   background-color: #f9f0f5;
   border-color: #e7bfd4;
   color: inherit;
+
+  .alert-icon {
+    color: var(--primary);
+  }
 }
-.alert-brand .alert-icon {
-  color: var(--primary);
-}
+
 .alert-success {
   background-color: #f1f8f5;
   border-color: #c5e0d4;
   color: inherit;
+
+  .alert-icon {
+    color: var(--green-600);
+  }
 }
-.alert-success .alert-icon {
-  color: var(--green-600);
-}
+
 .alert-info {
   background-color: #f0f6fa;
   border-color: #bfdbea;
   color: inherit;
+
+  .alert-icon {
+    color: #006daa;
+  }
 }
-.alert-info .alert-icon {
-  color: #006daa;
-}
+
 .alert-warning {
   background-color: #fffdf0;
   border-color: #fff6bf;
   color: inherit;
+
+  .alert-icon {
+    color: #ffd900;
+  }
 }
-.alert-warning .alert-icon {
-  color: #ffd900;
-}
+
 .alert-danger {
   background-color: #fbf2f3;
   border-color: #f0cbce;
   color: inherit;
+
+  .alert-icon {
+    color: var(--red-600);
+  }
 }
-.alert-danger .alert-icon {
-  color: var(--red-600);
-}
+
 .alert-light {
   background-color: var(--mono-100);
   border-color: var(--mono-300);
   color: inherit;
+
+  .alert-icon {
+    color: #e1dddb;
+  }
 }
-.alert-light .alert-icon {
-  color: #e1dddb;
-}
+
 .alert-dark {
   background-color: #f2f3f3;
   border-color: #c9cfcb;
   color: inherit;
+
+  .alert-icon {
+    color: var(--green-700);
+  }
 }
-.alert-dark .alert-icon {
-  color: var(--green-700);
-}
+
 .alert-gray {
   background-color: #ebebeb;
   border-color: #ccc;
   color: inherit;
+
+  .alert-icon {
+    color: #707070;
+  }
 }
-.alert-gray .alert-icon {
-  color: #707070;
-}
+
 .alert-accent-a {
   background-color: #00bbf9;
   border-color: #00bbf9;
   color: inherit;
+
+  .alert-icon {
+    color: #00bbf9;
+  }
 }
-.alert-accent-a .alert-icon {
-  color: #00bbf9;
-}
+
 .alert-accent-b {
   background-color: #fe8;
   border-color: #fe8;
   color: inherit;
-}
-.alert-accent-b .alert-icon {
-  color: #fe8;
+
+  .alert-icon {
+    color: #fe8;
+  }
 }
 
 // Enroll Now Alert Box
+[data-testid="private-course-alert"],
 .private-course-alert {
   p {
     font-size: rem-calc(20);
