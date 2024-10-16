@@ -44,10 +44,15 @@
   @include breakpoint(medium, min) {
     align-self: flex-start;
   }
+}
+
+.course-filter-controls {
+  display: flex;
 
   // #course-filter-controls
   button {
     padding: 0.5rem 1rem;
+    align-items: center;
 
     .btn-icon-before {
       margin-left: -0.25rem;
