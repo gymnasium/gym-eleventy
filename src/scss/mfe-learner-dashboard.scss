@@ -19,6 +19,12 @@
   @include container;
 }
 
+// Course List Loading
+.course-list-loading {
+  // TODO: add back a spinner or something
+  min-height: 50vh;
+}
+
 // Dashboard Heading
 .course-list-heading-container {
   align-items: flex-start;
