@@ -1,6 +1,12 @@
 // | -------------------------------------------------------------
 // | This file is intended to only serve the theme
 // | -------------------------------------------------------------
+@use "sass:map";
+@use "base/breakpoints" as *;
+@use "base/functions" as *;
+@use "base/mixins" as *;
+@use "base/fonts" as *;
+
 
 @use 'shared';
 @use 'components/webfonts_absolute';
@@ -21,3 +27,4 @@
     padding: 0;
   }
 }
+

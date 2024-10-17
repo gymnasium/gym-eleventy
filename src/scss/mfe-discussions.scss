@@ -22,6 +22,10 @@
 
 @import 'mfe/discussions/app';
 
+main.container {
+  margin-bottom: 1.5rem;
+}
+
 #post,
 #comment,
 #reply,
@@ -512,6 +516,16 @@ code {
   .pgn__avatar {
     flex-shrink: 0;
   }
+}
+
+// Really messy way to ensure the avatar icon maintains aspect ratio
+.pgn__avatar {
+  height: auto !important;
+  min-height: 2rem;
+  max-height: 2rem;
+  width: auto !important;
+  min-width: 2rem;
+  max-width: 2rem;
 }
 
 .spinner-dimensions {

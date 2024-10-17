@@ -37,7 +37,7 @@
     <ul class="list-unstyled">
       {%- for item in items %}
       <li>
-        <h3>{{ item.heading }}</h3>
+        <h3>{{ item.heading | safe }}</h3>
         <p>{{ item.description | safe }}</p>
       </li>
       {%- endfor -%}

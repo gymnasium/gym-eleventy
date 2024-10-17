@@ -50,10 +50,10 @@ $border-left-color_1: var(--mono-100);
   border-radius: 0;
   color: $color_1;
   display: block;
-  font-size: 1.125rem;
+  font-size: rem-calc(16);
   font-weight: 400;
   margin: 0;
-  height: calc(1.3333em + 1.125rem + 2px);
+  height: rem-calc(44);
   line-height: 1.3333;
   padding: 0.5625rem 1rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -80,6 +80,7 @@ $border-left-color_1: var(--mono-100);
   &::placeholder {
     color: $color_2;
     opacity: 1;
+    font-size: rem-calc(14);
   }
   &:disabled {
     background-color: $background-color_3;
@@ -1873,6 +1874,7 @@ textarea.form-control {
     transition: transform 0.15s ease, background-color 0.15s linear;
     white-space: nowrap;
     transform-origin: left top;
+    font-size: rem-calc(14);
   }
 }
 .has-leading-element {

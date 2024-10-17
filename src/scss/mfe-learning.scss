@@ -19,7 +19,7 @@
 @use "mfe/animations";
 // @use "mfe/layout";
 
-@use "mfe/buttons";
+@use "mfe/learning/buttons";
 @use "mfe/course-header";
 @use "mfe/course-tabs-nav";
 @use "mfe/learning/date-summary";
@@ -683,7 +683,19 @@ div.d-flex.ml-auto {
   @include breakpoint(medium) {
     flex-direction: row;
   }
+
+  
 }
+
+// Hide course license?
+.text-right.small:has(.text-gray-500) {
+  display: none;
+}
+// Hide course license
+.course-license-wrapper {
+  display: none;
+}
+
 @include breakpoint(medium) {
   .sequence {
     border: 1px solid #eaeaea;
@@ -896,5 +908,220 @@ div.d-flex.ml-auto {
   .sequence-navigation .next-btn {
     border-right-width: 1px;
     border-top-right-radius: 4px;
+  }
+}
+
+// Alert stuff (copied from learning_original)
+.alert {
+  background-color: var(--mono-100);
+  border: rem-calc(1) solid var(--mono-300);
+  border-radius: 0;
+  // box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.15),
+  //   0 0.0625rem 0.25rem rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+// Theoretically, the last div in the alert that pops up when a user isn't enrolled (could be any alert in that section TBH
+.alert .alert-message-content > :last-child {
+  margin-bottom: 0;
+  // font-size: 1rem;
+  line-height: 1;
+
+  // Theoretically, the "Enroll Now" button in the alert that pops up
+  button {
+    margin-right: 0.33rem;
+  }
+}
+
+.alert .alert-icon {
+  flex-shrink: 0;
+  float: left;
+  height: 1.5rem;
+  margin-inline-end: 0.8rem;
+  width: 1.5rem;
+}
+
+.alert-heading {
+  color: #000;
+  display: flex;
+}
+
+.alert-content {
+  color: #454545;
+  display: flex;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  text-align: start;
+
+  div {
+    flex-grow: 1;
+  }
+}
+
+.alert-link {
+  font-weight: 400;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.alert-dismissible {
+  padding-right: 4.6875rem;
+
+  .close {
+    color: inherit;
+    padding: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.pgn__alert-message-wrapper {
+  align-items: center;
+  display: flex;
+}
+.pgn__alert-message-wrapper .pgn__alert-actions {
+  margin-inline-start: 1rem;
+}
+.pgn__alert-message-wrapper-stacked .pgn__alert-actions {
+  margin-top: 1rem;
+}
+
+.alert-primary {
+  background-color: #f0f3f5;
+  border-color: #c2cbd5;
+  color: inherit;
+
+  .alert-icon {
+    color: var(--primary);
+  }
+}
+
+.alert-secondary {
+  background-color: #f4f4f4;
+  border-color: #d1d1d1;
+  color: inherit;
+
+  .alert-icon {
+    color: #454545;
+  }
+}
+
+.alert-brand {
+  background-color: #f9f0f5;
+  border-color: #e7bfd4;
+  color: inherit;
+
+  .alert-icon {
+    color: var(--primary);
+  }
+}
+
+.alert-success {
+  background-color: #f1f8f5;
+  border-color: #c5e0d4;
+  color: inherit;
+
+  .alert-icon {
+    color: var(--green-600);
+  }
+}
+
+.alert-info {
+  background-color: #f0f6fa;
+  border-color: #bfdbea;
+  color: inherit;
+
+  .alert-icon {
+    color: #006daa;
+  }
+}
+
+.alert-warning {
+  background-color: #fffdf0;
+  border-color: #fff6bf;
+  color: inherit;
+
+  .alert-icon {
+    color: #ffd900;
+  }
+}
+
+.alert-danger {
+  background-color: #fbf2f3;
+  border-color: #f0cbce;
+  color: inherit;
+
+  .alert-icon {
+    color: var(--red-600);
+  }
+}
+
+.alert-light {
+  background-color: var(--mono-100);
+  border-color: var(--mono-300);
+  color: inherit;
+
+  .alert-icon {
+    color: #e1dddb;
+  }
+}
+
+.alert-dark {
+  background-color: #f2f3f3;
+  border-color: #c9cfcb;
+  color: inherit;
+
+  .alert-icon {
+    color: var(--green-700);
+  }
+}
+
+.alert-gray {
+  background-color: #ebebeb;
+  border-color: #ccc;
+  color: inherit;
+
+  .alert-icon {
+    color: #707070;
+  }
+}
+
+.alert-accent-a {
+  background-color: #00bbf9;
+  border-color: #00bbf9;
+  color: inherit;
+
+  .alert-icon {
+    color: #00bbf9;
+  }
+}
+
+.alert-accent-b {
+  background-color: #fe8;
+  border-color: #fe8;
+  color: inherit;
+
+  .alert-icon {
+    color: #fe8;
+  }
+}
+
+// Enroll Now Alert Box
+[data-testid="private-course-alert"],
+.private-course-alert {
+  p {
+    font-size: rem-calc(20);
+  }
+  div.d-flex {
+    font-size: rem-calc(18);
+
+    button {
+      font-size: rem-calc(18);
+    }
   }
 }

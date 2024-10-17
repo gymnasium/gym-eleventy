@@ -35,3 +35,12 @@ window.intercomSettings = {
 {%- else -%}
 <!-- INTERCOM_APP_ID missing! -->
 {%- endif -%}
+
+{#- Start OneTrust Cookies Consent Notice -#}
+{%- if env.ONETRUST_COOKIE_SCRIPT_ID -%}
+<script async src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="{{ env.ONETRUST_COOKIE_SCRIPT_ID }}"></script>
+<script type="text/javascript">function OptanonWrapper(){}</script>
+{%- else -%}
+<!-- ONETRUST_COOKIE_SCRIPT_ID missing! -->
+{%- endif -%}
+{#- End OneTrust Cookies Consent Notice -#}
