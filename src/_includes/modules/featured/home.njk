@@ -6,14 +6,14 @@
       {%- include 'modules/components/header.njk' -%}
     {%- endif -%}
 
-    <ul>
+    <ul class="list-unstyled">
       {%- for idx in range(0, module.items.length) -%}
         {%- if module.items[idx].id -%}
           {%- set id = module.items[idx].id | upper -%}
         {%- else -%}
           {%- set id = module.items[idx] | upper -%}
         {%- endif -%}
-        
+
         {%- set filteredId = collections.catalog | get_key(module.items[idx].id) -%}
 
         {%- set obj = collections.catalog[filteredId] -%}
@@ -39,9 +39,9 @@
           {%- set destUrl = '/webinars/' + obj.slug -%}
           {%- set src = '/img/og/webinars/' + obj.recording_ogimage -%}
         {%- elif type == 'short' or type == 'full' -%}
-          {%- set destUrl = id | course_endpoint('course_about') -%}
+          {%- set destUrl = '/courses/' + obj.title | slugify + '/' -%}
         {%- elif type == 'tutorial' -%}
-          {%- set destUrl = '/courses/take5/' + obj.title | slugify -%}
+          {%- set destUrl = '/courses/take5/' + obj.title | slugify + '/' -%}
         {%- else -%}
           TYPE IS SOMETHING ELSE
         {%- endif -%}
@@ -95,7 +95,7 @@
     {%- endif -%}
 
     {%- if module.cta -%}
-      <div class="cta">
+      <div class="cta" hidden>
         {%- if module["cta"]["description"] -%}
           <p class="description">{{ module["cta"]["description"] | safe }}</p>
         {%- endif -%}

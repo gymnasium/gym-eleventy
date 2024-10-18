@@ -11,10 +11,18 @@
 
 @use "mfe/root";
 @use "mfe/flex";
-@use "mfe/buttons";
+@use "mfe/learner-dashboard/buttons";
+@use 'mfe/layout';
+@use 'mfe/modal';
 
 .container-fluid {
   @include container;
+}
+
+// Course List Loading
+.course-list-loading {
+  // TODO: add back a spinner or something
+  min-height: 50vh;
 }
 
 // Dashboard Heading
@@ -42,9 +50,19 @@
   @include breakpoint(medium, min) {
     align-self: flex-start;
   }
+}
 
-  // #course-filter-controls
+#course-filter-controls {
+  display: flex;
+
   button {
+    padding: 0.5rem 1rem;
+    align-items: center;
+
+    &[disabled] {
+      display: none;
+    }
+
     .btn-icon-before {
       margin-left: -0.25rem;
       margin-inline-end: 0.5rem;
@@ -59,19 +77,19 @@
 #course-list-active-filters {
 }
 
-// TODO: do we need this?
+// Chip/Pill Buttons once filters are selected
 .pgn__chip {
   background: var(--mono-600);
-  border-radius: 0.25rem;
+  color: var(--mono-100);
+  border-radius: var(--global-button-radius);
   box-sizing: border-box;
   display: inline-flex;
-  margin: 0.125rem;
+  margin: 0 1rem 1rem 0;
 
   &__label {
-    padding-right: rem-calc(3);
     box-sizing: border-box;
     cursor: default;
-    font-size: 0.875rem;
+    font-size: 1rem;
     overflow: hidden;
     padding: 0.125rem 0.5rem;
     text-overflow: ellipsis;
@@ -80,37 +98,39 @@
 
   &__icon-after,
   &__icon-before {
-    border-radius: 0 0.25rem 0.25rem 0;
+    border-radius: 0;
     align-items: center;
     box-sizing: border-box;
-    cursor: default;
+    cursor: pointer;
     display: flex;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+    // padding-left: 0.25rem;
+    // padding-right: 0.25rem;
     line-height: 1;
   }
 
-  * {
-    fill: var(--mono-900);
-    color: var(--mono-900);
+  svg {
+    // width: rem-calc(24);
+    // height: rem-calc(24);
+    // fill: var(--mono-900);
+    // color: var(--mono-900);
   }
 }
 
 .pgn__icon {
-  height: 1.25rem;
-  width: 1.25rem;
-  display: block;
-  flex-shrink: 0;
-  position: relative;
+  // height: 1.25rem;
+  // width: 1.25rem;
+  // display: block;
+  // flex-shrink: 0;
+  // position: relative;
 
-  svg {
-    display: block;
-    height: 100%;
-    max-height: 100%;
-    max-width: 100%;
-    position: relative;
-    width: 100%;
-  }
+  // svg {
+  //   display: block;
+  //   height: 100%;
+  //   max-height: 100%;
+  //   max-width: 100%;
+  //   position: relative;
+  //   width: 100%;
+  // }
 }
 
 // Course Filter button
@@ -370,7 +390,7 @@
 .course-card-banners {
 }
 
-.alert-info {
+.alert {
   border-radius: 0;
   box-shadow: none;
   padding: 1rem 1.5rem;
@@ -381,13 +401,13 @@
   font-size: 0.875rem;
   line-height: 1.5rem;
   text-align: start;
-}
 
-.alert .alert-icon {
-  flex-shrink: 0;
-  height: 1.5rem;
-  margin-inline-end: 0.8rem;
-  width: 1.5rem;
+  .alert-icon {
+    flex-shrink: 0;
+    height: 1.5rem;
+    margin-inline-end: 0.8rem;
+    width: 1.5rem;
+  }
 }
 
 // 3 dot icon
@@ -439,17 +459,15 @@
   }
 }
 
+// 3 dot icon dropdown
 .pgn__dropdown-item {
   align-items: center;
+  justify-content: center;
   display: flex;
   background-color: transparent;
   border: 0;
-  clear: both;
   color: var(--mono-900);
-  display: block;
-  font-weight: 400;
   padding: 0.25rem 1rem;
-  text-align: inherit;
   white-space: nowrap;
   width: 100%;
 }
@@ -457,4 +475,82 @@
 // Hice sidebar (for now)
 .sidebar-column {
   display: none;
+}
+
+
+// Unenroll course modal
+.pgn__modal-content-container {
+
+}
+.pgn__modal-backdrop {
+  background: var(--mono-900);
+  bottom: 0;
+  left: 0;
+  opacity: 0.75;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.pgn__modal {
+  padding: 1rem;
+
+  // button wrapper
+  .pgn__action-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include breakpoint(medium) {
+      flex-direction: row;
+    }
+  }
+}
+
+// pagination when there are many courses
+.pagination {
+  display: inline-flex;
+  gap: 1rem;
+
+  .page-item {
+    margin: 0;
+
+    &.active {
+      .btn {
+        border: 1px solid var(--primary);
+      }
+    }
+
+    &.disabled {
+      .btn-icon {
+        pointer-events: none;
+        cursor: not-allowed;
+        border-color: var(--mono-400);
+      }
+    }
+  }
+
+  .btn-icon {
+    border-color: var(--mono-700);
+
+    &:hover {
+      border-color: var(--mono-900);
+    }
+  }
+
+  .btn {
+    padding: 0.66rem 1rem;
+    background-color: var(--mono-100);
+    border: 1px solid var(--mono-300);
+    color: var(--mono-900);
+  }
+}
+
+#no-courses-content-view {
+  display: block;
+
+  h1 {
+    font-size: 2rem;
+  }
 }

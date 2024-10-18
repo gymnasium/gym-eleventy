@@ -1,8 +1,12 @@
 id: GYM-009
 title: "Creating A Drupal 8 Theme"
 date: 2019-10-28T00:00:00-04:00
+redirectFrom:
+  - /courses/GYM/009/0/about
 color: magenta
 type: short
+path_slug: gym-shorts
+credential: badge
 tags:
   - course
   - gym-short
@@ -24,11 +28,13 @@ audience:
   - label: "Drupal 8 beginners"
 lessons_duration: "1 hour"
 completion_duration: "Up to 2.5 hours"
+duration_8601_format: PT2.5H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
   <strong><cite>Creating A Drupal 8 Theme</cite></strong> will show you how to take your existing static website and convert it into a dynamic theme for Drupal 8. Couple your existing knowledge of HTML and CSS with the easy to use TWIG templating engine to create fast, secure, and flexible themes for the Drupal CMS. No PHP required!
-preview_video_src:
+preview_video_id:
+preview_video_duration:
 about: >
   <p>This course will teach you how to install Drupal 8 locally and dive into the essential components of a Drupal 8 theme. Specifically, you will learn the following: How to register a theme with Drupal 8, how to integrate Bootstrap into a theme, how to use the TWIG templating engine to define and customize Drupal components and how to import pre-existing assets including images and CSS styles.</p>
 outline:

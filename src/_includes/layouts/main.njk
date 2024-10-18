@@ -1,7 +1,12 @@
 ---
 layout: layouts/base.njk
 ---
-<main id="main" tabindex="-1">
+{# If any page passes in a `layoutClass`, append it to the default class #}
+{%- set mainWrapperClass = 'default' -%}
+{%- if layoutClass -%}
+  {%- set mainWrapperClass = 'default ' + layoutClass -%}
+{%- endif -%}
+<main id="main" class="{{ mainWrapperClass }}" tabindex="-1">
   <div class="container">
     {{ content | safe }}
   </div><!-- .container -->

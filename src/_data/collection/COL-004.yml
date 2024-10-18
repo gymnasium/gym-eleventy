@@ -2,10 +2,13 @@ meta:
   id: COL-004
   title: "Accessibility"
   topic: "Accessibility"
-  description: "No matter what your title is, creating an inclusive web is everyone’s job."
+  description: "Explore our free collection of accessibility courses, tutorials, resources, and services."
   slug: accessibility
   color: magenta
   order: 6
+
+card:
+  description: "No matter what your title is, creating an inclusive web is everyone’s job."
 
 header:
   header_id: # default is null
@@ -26,6 +29,7 @@ courses:
     label: View More Courses
     class: btn
   accessibility-courses:
+    schema: true
     ids:
     - id: GYM-016
     - id: GYM-007
@@ -85,7 +89,7 @@ articles:
     - href: https://medium.com/gymnasium/advocating-for-accessibility-with-aaron-gustafson-54079c132152
       label: "Advocating for Accessibility with Aaron Gustafson"
       description: "Learn the fundamentals of how to get started with creating a more inclusive web. (Hint: It starts with awareness.)"
-    - href: https://aquentstudios.com/thinking/web-accessibility-drivers-start-your-engines-wcag-2-2-is-here/
+    - href: https://aquentstudios.com/blog/web-accessibility-drivers-start-your-engines-wcag-2-2-is-here/
       label: "Web Accessibility Drivers, Start Your Engines. WCAG 2.2 Is Here."
       description: "Learn about the new global guidelines and what to expect."
     - href: https://aquenttalent.com/blog/seven-steps-to-improving-accessibility

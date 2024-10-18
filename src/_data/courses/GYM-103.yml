@@ -1,8 +1,12 @@
 id: GYM-103
 title: "UX Fundamentals"
 date: 2019-10-28T00:00:00-04:00
+redirectFrom:
+  - /courses/GYM/103/0/about
 color: teal
 type: full
+path_slug: full
+credential: certificate
 tags:
   - course
   - full
@@ -25,11 +29,13 @@ audience:
   - label: "Anyone who works on UX projects"
 lessons_duration: "3 hours"
 completion_duration: "Up to 12 hours"
+duration_8601_format: PT12H
 skill_level: "Beginner"
 # Begin Overview
 intro: >
   <strong><cite>UX Fundamentals</cite></strong> will teach you how to apply user-centered design principles to improve your website and mobile app design. A must-take course for anyone working in web design and development.
-preview_video_src: https://www.youtube.com/embed/-H_6aO0-RLQ?list=PL0Y6L6nQtNzdSadhkPAAJv-wN3UVZQUai
+preview_video_id: -H_6aO0-RLQ?list=PL0Y6L6nQtNzdSadhkPAAJv-wN3UVZQUai
+preview_video_duration: PT03M05S
 about: >
   <p>You will learn how to conduct basic user research and create user personas; approaches to information design, wireframing, and prototyping; how to organize a site’s content in a way that meets user expectations; how to facilitate a positive user experience by relying on common design patterns; and finally, how to conduct user testing. By the end of the course, you should have a solid framework for assessing a site’s usability and a methodology for applying UX principles to site design and development.</p>
 outline:

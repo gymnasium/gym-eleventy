@@ -11,13 +11,20 @@
 
 @use 'mfe/root';
 
-
 @use 'mfe/layout';
 @use 'mfe/course-header';
+@use "mfe/course-tabs-nav";
+@use "mfe/tooltips";
 
 // copied from MFE
 @import 'mfe/paragon-variables';
-@import 'mfe/discussions/original';
+// @import 'mfe/discussions/original';
+
+@import 'mfe/discussions/app';
+
+main.container {
+  margin-bottom: 1.5rem;
+}
 
 #post,
 #comment,
@@ -260,7 +267,7 @@ header {
 }
 
 .border-primary-500-2 {
-  border: 2px solid $primary-500 !important;
+  border: 2px solid var(--primary);
   border-width: 2px !important;
 }
 
@@ -316,8 +323,8 @@ header {
 }
 
 #courseTabsNavigation {
-  font-size: 18px !important;
-  z-index: 3;
+  // font-size: 18px !important;
+  // z-index: 3;
 
   .container-xl {
     font-size: 1.125rem;
@@ -333,25 +340,18 @@ header {
 }
 
 .min-content-height {
-  min-height: 80vh !important;
+  min-height: 80vh;
+  background-color: var(--mono-300);
+
+  // Hide ridiculous SVG
+  > div > svg {
+    display: none;
+  }
 }
 
 .header-action-bar {
-  z-index: 2 !important;
-  box-shadow: 0px 2px 4px rgb(0 0 0 / 15%), 0px 2px 8px rgb(0 0 0 / 15%);
+  z-index: 2;
   top: 0;
-
-  .nav-button-group{
-    .nav-item:not(:last-child){
-      .nav-link {
-          border-right: 0;
-
-          @media screen and (max-width: 567px) {
-            border-right: solid 1px #e9e6e4;
-          }
-      }
-    }
-  }
 }
 
 .tox-tinymce-aux {
@@ -384,7 +384,7 @@ header {
 
 .btn-icon.btn-icon-primary:hover {
   background-color: $light-300 !important;
-  color: $primary-500 !important
+  color: var(--primary)
 }
 
 
@@ -436,25 +436,43 @@ header {
 }
 
 .nav-button-group {
+  gap: 0.25rem;
+
   .nav-link {
+    border: 1px solid var(--mono-900);
+    text-decoration: none;
+    border-radius: var(--global-button-radius);
+    font-family: var(--font-family-custom);
+    font-weight: 400;
+
     &:hover {
-      background-color: $light-300 !important;
+      background-color: var(--mono-600);
+      color: var(--mono-100);
+    }
+
+    &.active {
+      border-color: var(--primary);
+
+      &:hover {
+        background-color: var(--mono-600);
+        border-color: var(--mono-600);
+      }
     }
   }
 
   .nav-link.active,
   .show>.nav-link {
-    background-color: $primary-500 !important;
+    background-color: var(--primary);
   }
 }
 
-.course-tabs-navigation {
-  .nav a {
-    &:hover {
-      background-color: $light-300 !important;;
-    }
-  }
-}
+// .course-tabs-navigation {
+//   .nav a {
+//     &:hover {
+//       background-color: $light-300 !important;
+//     }
+//   }
+// }
 
 .btn-tertiary:disabled {
   color: $gray-700 !important;
@@ -498,6 +516,16 @@ code {
   .pgn__avatar {
     flex-shrink: 0;
   }
+}
+
+// Really messy way to ensure the avatar icon maintains aspect ratio
+.pgn__avatar {
+  height: auto !important;
+  min-height: 2rem;
+  max-height: 2rem;
+  width: auto !important;
+  min-width: 2rem;
+  max-width: 2rem;
 }
 
 .spinner-dimensions {
@@ -567,7 +595,7 @@ code {
 .learning-header{
   z-index: 4;
   position: relative;
-  background-color: #fff;
+  background-color: var(--mono-100);
 }
 
 .spinner-container {

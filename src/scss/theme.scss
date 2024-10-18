@@ -1,6 +1,12 @@
 // | -------------------------------------------------------------
 // | This file is intended to only serve the theme
 // | -------------------------------------------------------------
+@use "sass:map";
+@use "base/breakpoints" as *;
+@use "base/functions" as *;
+@use "base/mixins" as *;
+@use "base/fonts" as *;
+
 
 @use 'shared';
 @use 'components/webfonts_absolute';
@@ -14,3 +20,11 @@
 @use 'theme/instructor';
 
 @use 'theme/view-in-course';
+
+.gym-theme.view-in-mfe {
+  .content-wrapper,
+  .course-content {
+    padding: 0;
+  }
+}
+

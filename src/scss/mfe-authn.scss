@@ -10,10 +10,11 @@
 @use 'components/webfonts_absolute';
 
 @use 'mfe/root';
+@use 'mfe/layout';
 
 @use "mfe/flex";
 @use "mfe/animations";
-@use "mfe/buttons";
+@use "mfe/authn/buttons";
 @use "mfe/dropdowns";
 @use "mfe/icons";
 @use "mfe/tooltips";

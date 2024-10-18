@@ -1,8 +1,12 @@
 id: GYM-008
 title: "Advanced Rapid Prototyping with Axure"
 date: 2019-10-28T00:00:00-04:00
+redirectFrom:
+  - /courses/GYM/008/0/about
 color: grey
 type: short
+path_slug: gym-shorts
+credential: badge
 tags:
   - course
   - gym-short
@@ -11,7 +15,7 @@ tags:
 live: false
 sitemapExclude: true
 retired_message:
-  1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons."
+  post: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a badge for this course, but you can still view the lessons."
 url: /courses/course-v1:GYM+008+0/about
 img: /img/courses/svg/gym-008.svg
 topic: "UX"
@@ -30,11 +34,13 @@ audience:
   - label: "Information Architects"
 lessons_duration: "1 hour"
 completion_duration: "Up to 2 hours"
+duration_8601_format: PT2H
 skill_level: "Intermediate"
 # Begin Overview
 intro: >
   <strong><cite>Advanced Rapid Prototyping with Axure</cite></strong> will teach you how to use Axure’s variable and conditional logic to create rapid prototypes that are richer and more representative of the final product.
-preview_video_src:
+preview_video_id:
+preview_video_duration:
 about: >
   <p>Rapid prototyping is used to quickly simulate an interactive experience long before a developer even cracks his or her knuckles. It can help save time and money by refining interactions early on and is a great way to ensure that your end-users and stakeholders can visualize your UI plans well enough to give you feedback. Prototyping tools such as Axure allow us to create simulations of web applications, websites, mobile applications, and mobile sites in a fraction of the time it’d take for actual development.</p>
   <p>In this course, you'll learn how to create an interactive prototype in Axure that can pass data from one page to another and do different things based on the conditions that you set. Specifically, you will learn how to set variable values to pass data across pages, set the text on widgets to include variable values, add conditions in Axure's Case Editor and use the Condition Builder to apply the conditions to a prototype’s interaction. At the end of the course, you will have built a simple four-page prototype capable of demonstrating multiple userflows.</p>

@@ -50,7 +50,6 @@
       grid-auto-flow: column;
       grid-template-columns: auto;
       justify-content: start;
-      align-items: start;
     }
   }
 }
@@ -74,11 +73,10 @@
   .intro {
 
     @include breakpoint(large, min) {
-      & {
+      > div {
         display: grid;
         grid-template-columns: 2fr 3fr;
         gap: 1.2rem;
-        align-items: start;
       }
     }
 
@@ -142,7 +140,6 @@
         display: grid;
         grid-template-columns: 1fr 5fr;
         gap: 1.6rem;
-        align-items: start;
       }
     }
   }
@@ -191,6 +188,7 @@
   .elective,
   #all-topics:target ~ * .elective,
   #featured:target ~ * .course:not(.featured),
+  #featured:target ~ * .course.elective,
   #design:target ~ * .course:not(.design),
   #development:target ~ * .course:not(.development),
   #accessibility:target ~ * .course:not(.accessibility),
@@ -316,6 +314,7 @@
 
     .topic {
       font: 900 1.25rem/1 var(--font-family-custom);
+      margin-bottom: -0.125rem;
 
       b {
         font: inherit;
@@ -330,6 +329,7 @@
     .instructor {
       font-weight: bold;
       font-size: 1.09375rem;
+      line-height: 1.4;
       letter-spacing: 0.0125ex;
       margin-top: 1.125rem;
       margin-bottom: 1.2rem;
@@ -337,7 +337,6 @@
   }
 
   .description {
-    max-width: 40rem;
     font-size: 1.09375rem;
     letter-spacing: 0.01ex;
   }
@@ -370,7 +369,6 @@
 
       hgroup {
         grid-area: header;
-        max-width: 28.5rem;
 
         .topic {
           display: inline-block;
@@ -391,7 +389,7 @@
         .btn {
           display: inline-block;
           width: 100%;
-          max-width: 16rem;
+          max-width: 12rem;
         }
       }
 
@@ -399,14 +397,13 @@
         & {
           display: grid;
           grid-template-columns: 3fr 5fr;
-          grid-template-rows: auto 1fr auto auto;
+          grid-template-rows: min-content auto;
           grid-template-areas:
             "art  header"
             "art  cta"
             "aside aside"
             "info info";
           gap: 0 1.4rem;
-          align-items: start;
         }
 
         > a[href*="about"] {
@@ -456,7 +453,7 @@
       h3,
       p {
         font-size: 0.9375rem;
-        line-height: 1;
+        line-height: 1.1;
         letter-spacing: 0.0125ex;
         margin-bottom: 0;
 
@@ -611,7 +608,7 @@
 // Courses index page-specific style rules
 
 [class="courses"] {
-  .intro {
+  .intro > div {
     grid-template-columns: 1fr;
   }
 
@@ -644,12 +641,11 @@
   @include breakpoint(large, min) {
     & {
       grid-template-columns: 2fr 1fr;
-      grid-template-rows: auto auto auto;
+      grid-template-rows: auto;
       grid-template-areas:
         "header resources"
         "video  resources"
         "transcript transcript";
-      align-items: start;
     }
 
     .embed-responsive {
@@ -684,10 +680,6 @@
       text-wrap: balance;
       margin-bottom: 0.8rem;
     }
-
-    .instructor {
-      margin-top: 0;
-    }
   }
 
   .resources {
@@ -719,10 +711,8 @@
 
   #tutorial-transcript {
     @include breakpoint(large, max) {
-      & {
-        padding-bottom: 1.4rem;
-        border-bottom: 1px dashed var(--mono-400);
-      }
+      padding-bottom: 1.4rem;
+      border-bottom: 1px dashed var(--mono-400);
     }
 
     summary span {

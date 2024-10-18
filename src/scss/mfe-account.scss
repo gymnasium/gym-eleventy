@@ -10,6 +10,7 @@
 @use 'components/webfonts_absolute';
 
 @use 'mfe/root';
+@use 'mfe/layout';
 
 .page__account-settings {
   h1 {
@@ -23,6 +24,8 @@
   .h6, h6 {
     margin-bottom: .25rem;
     font-size: 1.1rem;
+    margin-right: 1rem;
+    display: inline-block;
   }
 
   p {
@@ -111,4 +114,11 @@
 // Hide entire jump menu
 .col-md-2 {
   display: none;
+}
+
+svg {
+  // pencil icon
+  &.svg-inline--fa {
+    margin-right: 0.33rem;
+  }
 }

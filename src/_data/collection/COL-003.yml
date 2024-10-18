@@ -2,10 +2,13 @@ meta:
   id: COL-003
   title: "Prototyping"
   topic: "Prototyping"
-  description: "Take the guesswork out of your design process and build better products."
+  description: "Explore our free collection of prototyping courses, tutorials, webinars, articles, and jobs."
   slug: prototyping
   color: teal
   order: 5
+
+card:
+  description: "Take the guesswork out of your design process and build better products."
 
 header:
   header_id: # default is null

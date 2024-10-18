@@ -2,11 +2,14 @@ meta:
   id: COL-001
   title: "Development"
   topic: "Development"
-  description: "Develop the skills you need to build fast, responsive websites."
+  description: "Explore our free web development collection of courses, tutorials, webinars, articles, and jobs."
   slug: development
   color: magenta
   order: 3
   redirectFrom: '/web-development/'
+
+card:
+  description: "Develop the skills you need to build fast, responsive websites."
 
 header:
   header_id: # default is null

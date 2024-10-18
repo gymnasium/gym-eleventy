@@ -1,8 +1,12 @@
 id: GYM-101
 title: "Responsive Web Design"
 date: 2022-05-27T00:00:00-04:00
+redirectFrom:
+  - /courses/GYM/101/0/about
 color: grey
 type: full
+path_slug: full
+credential: certificate
 tags:
   - course
   - full
@@ -10,7 +14,7 @@ tags:
 live: false
 sitemapExclude: true
 retired_message:
-  1: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a certificate for this course, but you can still view the lessons. <span class='text-wrap'>We recommend taking the course <a href='/courses/course-v1:GYM+109+0/about'>Responsive Web Design Fundamentals</a> (and earning a certificate) instead.</span>"
+  post: "<strong>This course has been retired.</strong> Due to outdated content, we don’t offer a certificate for this course, but you can still view the lessons. <span class='text-wrap'>We recommend taking the course <a href='/courses/course-v1:GYM+109+0/about'>Responsive Web Design Fundamentals</a> (and earning a certificate) instead.</span>"
 url: /courses/course-v1:GYM+101+0/about
 img: /img/courses/svg/gym-101.svg
 topic: "Development"
@@ -26,11 +30,13 @@ audience:
   - label: "Front-End Developers"
 lessons_duration: "6 hours"
 completion_duration: "Up to 24 hours"
+duration_8601_format: PT24H
 skill_level: "Beginner"
 # Begin Overview
 intro: >
   <strong><cite>Responsive Web Design</cite></strong> will teach you best practices for building responsive websites that adapt to different devices and user behaviors.
-preview_video_src: https://www.youtube.com/embed/n0SHr9Ig-6I?list=PL0Y6L6nQtNzdxIdocpFi92_B1t0IAQ6bf
+preview_video_id: n0SHr9Ig-6I?list=PL0Y6L6nQtNzdxIdocpFi92_B1t0IAQ6bf
+preview_video_duration: PT08M39S
 about: >
   <p>At the end of this course you’ll have a responsive portfolio website you’ve built from scratch. You will learn the essential elements of responsive web design: designing with ﬂexible grids; creating layouts which incorporate typography and fluid media; using CSS media queries; responsive web typography; the Mobile First approach; in-browser design, tools, and resources; and Responsive Web Design workﬂows.</p>
 outline:

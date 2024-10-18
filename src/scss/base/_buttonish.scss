@@ -19,8 +19,8 @@ a, summary {
 
 .btn {
   background-color: var(--primary);
-  border: 3px solid var(--primary);
-  border-radius: 3px;
+  border: rem-calc(3) solid var(--primary);
+  border-radius: var(--global-button-radius);
   color: var(--mono-100);
   display: inline-flex;
   font-family: var(--font-family-custom);
@@ -161,8 +161,12 @@ a, summary {
     color: inherit;
 
     &:focus,
-    &:hover {
+    &:hover,
+    &:active,
+    &.active {
       background-color: transparent;
+      color: var(--primary);
+      text-decoration: underline;
     }
   }
 

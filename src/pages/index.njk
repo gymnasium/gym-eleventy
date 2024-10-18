@@ -30,14 +30,16 @@
   <div class="container">
     {%- set module = pages['home']['how-gymnasium-works'] -%}
     {%- set header = module['header'] -%}
+    {%- set description = module['description'] -%}
     {%- include 'modules/components/header.njk' -%}
+    <p class="hero">{{ description | safe }}</p>
     {% set items = module['items'] -%}
-    <ul>
+    <ul class="list-unstyled">
       {%- for item in items %}
-        <li>
-          <h2>{{ item.heading }}</h2>
-          <p>{{ item.description }}</p>
-        </li>
+      <li>
+        <h3>{{ item.heading | safe }}</h3>
+        <p>{{ item.description | safe }}</p>
+      </li>
       {%- endfor -%}
     </ul>
   </div>
