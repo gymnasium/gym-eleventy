@@ -16,18 +16,19 @@
 {%- if meta.robots -%}
   {%- set metaRobots = meta.robots -%}
 {%- else -%}
-  {%- set metaRobots = "index, follow" -%}
+  {# TODO: adjust logic for production release #}
+  {# {%- set metaRobots = "index, follow" -%} #}
+  {%- set metaRobots = "noindex, nofollow, noimageindex, noarchive, nosnippet, nocache" -%}
 {%- endif -%}
 {# automatically exlude unindexed pages #}
 {%- if (eleventyExcludeFromCollections or meta.sitemapExclude) -%}
-  {%- set metaRobots = "noindex, nofollow" -%}
+  {%- set metaRobots = "noindex, nofollow, noimageindex, noarchive, nosnippet, nocache" -%}
 {%- endif -%}
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ config.meta.title }}</title>
-<meta name="robots" content="noai, noimageai">
-<meta name="robots" content="{{ metaRobots }}">
+<meta name="robots" content="noai, noimageai, {{ metaRobots }}">
 <meta name="author" content="{{ metaAuthor }}">
 <meta property="og:site_name" content="{{ metaAuthor }}">
 <meta name="twitter:title" property="og:title" content="{{ metaAuthor }}">

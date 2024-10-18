@@ -925,12 +925,13 @@ div.d-flex.ml-auto {
 // Theoretically, the last div in the alert that pops up when a user isn't enrolled (could be any alert in that section TBH
 .alert .alert-message-content > :last-child {
   margin-bottom: 0;
+  margin-inline-end: 0.33rem;
   // font-size: 1rem;
   line-height: 1;
 
   // Theoretically, the "Enroll Now" button in the alert that pops up
   button {
-    margin-right: 0.33rem;
+    margin-inline-end: 0.33rem;
   }
 }
 
@@ -950,7 +951,7 @@ div.d-flex.ml-auto {
 .alert-content {
   color: #454545;
   display: flex;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5rem;
   text-align: start;
 
