@@ -123,6 +123,21 @@ main.container {
   border-right-style: solid !important;
 }
 
+.pgn_collapsible {
+  .collapsible-trigger {
+    > span:first-child {
+      color: var(--mono-900);
+      text-decoration: underline;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
 .discussion-post {
   .text-truncate {
     > span:first-child {
