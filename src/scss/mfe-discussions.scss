@@ -131,6 +131,14 @@ main.container {
   }
 }
 
+#post {
+  p {
+    font-size: 1.09375rem;
+    line-height: 1.35;
+    color: var(--mono-900);
+  }
+}
+
 .my-14px {
   margin-top: 14px;
   margin-bottom: 14px;
