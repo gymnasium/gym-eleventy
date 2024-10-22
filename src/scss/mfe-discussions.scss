@@ -153,7 +153,8 @@ main.container {
 }
 
 .discussion-post,
-.discussion-comments {
+.discussion-comments,
+.post-preview {
   * {
     color: var(--mono-900);
   }
@@ -173,6 +174,12 @@ main.container {
   p {
     font-size: 1.09375rem;
     line-height: 1.35;
+  }
+}
+
+.post-form {
+  .text-editor {
+    font-family: var(--font-family-default);
   }
 }
 
