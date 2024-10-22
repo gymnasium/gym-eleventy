@@ -127,7 +127,19 @@ main.container {
   .text-truncate {
     > span:first-child {
       display: block;
+      margin-bottom: 0.2rem;
     }
+  }
+  .author-name {
+    display: inline-block;
+    margin-top: 0.2rem;
+  }
+}
+
+.discussion-post,
+.discussion-comments {
+  * {
+    color: var(--mono-900);
   }
 }
 
@@ -135,7 +147,6 @@ main.container {
   h5 {
     font-weight: 900;
     font-size: 1.15rem;
-    color: var(--mono-900);
     text-transform: uppercase;
     letter-spacing: 0.0125ex;
     word-spacing: 0.25ex;
@@ -143,9 +154,6 @@ main.container {
 }
 
 #post {
-  * {
-    color: var(--mono-900);
-  }
   p {
     font-size: 1.09375rem;
     line-height: 1.35;
