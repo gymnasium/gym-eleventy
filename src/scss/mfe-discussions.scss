@@ -123,6 +123,14 @@ main.container {
   border-right-style: solid !important;
 }
 
+.discussion-post {
+  .text-truncate {
+    > span:first-child {
+      display: block;
+    }
+  }
+}
+
 .my-14px {
   margin-top: 14px;
   margin-bottom: 14px;
