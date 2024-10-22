@@ -131,11 +131,24 @@ main.container {
   }
 }
 
+.discussion-comments {
+  h5 {
+    font-weight: 900;
+    font-size: 1.15rem;
+    color: var(--mono-900);
+    text-transform: uppercase;
+    letter-spacing: 0.0125ex;
+    word-spacing: 0.25ex;
+  }
+}
+
 #post {
+  * {
+    color: var(--mono-900);
+  }
   p {
     font-size: 1.09375rem;
     line-height: 1.35;
-    color: var(--mono-900);
   }
 }
 
