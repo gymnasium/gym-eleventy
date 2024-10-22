@@ -48,6 +48,7 @@ main {
 // Course Header (non-nav version, only appears under "Course" tab)
 div[data-learner-type] {
   margin: 0 !important;
+  display: none;
 }
 
 // headings (course tab)
@@ -90,6 +91,9 @@ div.d-flex.ml-auto {
 
 // Start/Resume Card at top
 .start-resume-card {
+  // hide this card
+  display: none;
+
   border: rem-calc(1) solid var(--mono-300);
   padding: 1rem;
 
@@ -172,6 +176,12 @@ div.d-flex.ml-auto {
   padding: 1rem;
 }
 
+.unit {
+  // hide in-unit bookmarks button
+  button[aria-live='assertive'] {
+    display: none;
+  }
+}
 // IFRAME
 .unit-iframe-wrapper {
   iframe {
@@ -305,6 +315,11 @@ div.d-flex.ml-auto {
 }
 .collapsed .outline-sidebar-toggle-btn {
   transform: scaleX(-1);
+}
+
+// Course Outline Right Sidebar (Course Tools, Dates, etc)
+.sidebar-course-tools, .sidebar-course-dates {
+  display: none;
 }
 
 // Course Left Sidebar Navigation
