@@ -124,6 +124,11 @@ div.d-flex.ml-auto {
   .pgn__card-footer {
     display: none;
   }
+
+  // hide expand/contract button without a dedicated class name on the wrapper
+  + .row.w-100.m-0.mb-3.justify-content-end {
+    display: none;
+  }
 }
 
 // Course Home Outline Menu
