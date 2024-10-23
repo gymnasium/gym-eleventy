@@ -254,10 +254,6 @@ div.d-flex.ml-auto {
 }
 
 
-
-
-
-
 // Course Sidebar Navigation
 // @media (max-width: 991px) {
 //   #course-sidebar {
@@ -542,6 +538,10 @@ div.d-flex.ml-auto {
     "b b b"
     "c c c"
   ;
+
+  > div[class*="col"]:empty + * .start-resume-card {
+    margin-top: -1rem;
+  }
 
   > div:nth-child(1) {
     grid-area: a;
