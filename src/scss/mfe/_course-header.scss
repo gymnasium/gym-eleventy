@@ -8,6 +8,39 @@
   background-color: var(--mono-600);
   padding: 1rem 0;
 
+  &[data-course-num="106"],
+  &[data-course-num="017"],
+  &[data-course-num="006"],
+  &[data-course-num="001"] {
+    background-color: var(--green-500);
+  }
+
+  &[data-course-num="107"],
+  &[data-course-num="109"],
+  &[data-course-num="019"],
+  &[data-course-num="016"],
+  &[data-course-num="011"],
+  &[data-course-num="009"],
+  &[data-course-num="007"],
+  &[data-course-num="004"] {
+    background-color: var(--magenta-500);
+  }
+
+  &[data-course-num="108"],
+  &[data-course-num="104"],
+  &[data-course-num="102"],
+  &[data-course-num="012"] {
+    background-color: var(--purple-500);
+  }
+
+  &[data-course-num="020"],
+  &[data-course-num="018"],
+  &[data-course-num="015"],
+  &[data-course-num="014"],
+  &[data-course-num="013"] {
+    background-color: var(--teal-500);
+  }
+
   span {
     display: inline-block;
     font-weight: bold;
@@ -28,3 +61,5 @@
     }
   }
 }
+
+
