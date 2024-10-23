@@ -369,6 +369,7 @@
     flex-grow: 1;
     text-align: start;
     margin: 1rem 0 1.25rem;
+    visibility: hidden; // Use to display other data, e.g. course topic/type?
   }
 
   &-footer {
@@ -378,9 +379,9 @@
     display: flex;
     width: 100%;
 
-    @include breakpoint(medium, min) {
-      justify-content: flex-end;
-    }
+//     @include breakpoint(medium, min) {
+//       justify-content: flex-end;
+//     }
   }
 }
 
@@ -399,6 +400,10 @@
 .course-card-banners {
 }
 
+.pgn__alert-message-wrapper {
+  align-self: center;
+}
+
 .alert {
   border-radius: 0;
   box-shadow: none;
@@ -408,7 +413,7 @@
   color: inherit;
   display: flex;
   font-size: 1.05rem;
-  line-height: 1.5rem;
+  line-height: 1.15rem;
   text-align: start;
 
   .alert-icon {
