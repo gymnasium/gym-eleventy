@@ -16,7 +16,7 @@
 
     a {
       display: inline-block;
-      font: bold 1.2rem/1.15 var(--font-family-custom);
+      font: bold 1.125rem/1.15 var(--font-family-custom);
       text-decoration: none;
       text-transform: uppercase;
       padding: 0;
@@ -32,7 +32,6 @@
       &:focus,
       &.active {
         border-bottom-width: 2px;
-        margin-bottom: -2px;
       }
     }
   }
