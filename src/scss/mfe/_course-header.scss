@@ -7,10 +7,6 @@
 .course-header {
   background-color: var(--mono-600);
   padding: 1rem 0;
-  font-size: 1.3rem;
-  font-family: var(--font-family-custom);
-  text-transform: uppercase;
-  font-weight: bold;
 
   span {
     display: inline-block;
@@ -23,7 +19,13 @@
     &.course-id {
       display: none;
     }
+
+    &.course-title {
+      font: 900 1.8rem/1.15 var(--font-family-custom);
+      text-transform: uppercase;
+      letter-spacing: 0.0125ex;
+      word-spacing: 0.25ex;
+    }
   }
 
-  
 }
