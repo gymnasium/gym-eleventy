@@ -539,8 +539,12 @@ div.d-flex.ml-auto {
     "c c c"
   ;
 
-  > div[class*="col"]:empty + * + * {
-    margin-top: -1rem;
+
+  > div[class*="col"]:empty {
+    + *,
+    + * + * {
+      margin-top: -1rem;
+    }
   }
 
   > div:nth-child(1) {
