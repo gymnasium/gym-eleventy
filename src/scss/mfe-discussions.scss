@@ -127,6 +127,7 @@ main.container {
   .collapsible-trigger {
     > span:first-child {
       color: var(--mono-900);
+      font-size: 1.05rem;
       text-decoration: underline;
 
       &:hover,
