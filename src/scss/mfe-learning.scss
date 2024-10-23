@@ -69,6 +69,14 @@ h2, .h2 {
   .small {
     font-size: 100%;
   }
+  dl {
+    div:not(:first-child) {
+      margin-top: 0.75rem;
+    }
+    dt {
+      font-weight: bold;
+    }
+  }
 }
 
 .row {
