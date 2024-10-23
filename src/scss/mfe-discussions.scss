@@ -140,10 +140,10 @@ main.container {
 }
 
 .discussion-post {
-  span {
-    font-size: 1.05rem;
-  }
   .text-truncate {
+    span {
+      font-size: 1.05rem;
+    }
     > span:first-child {
       display: block;
       font-weight: bold;
