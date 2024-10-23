@@ -63,7 +63,7 @@ main.container {
 }
 
 .font-size-14 {
-  font-size: 14px !important;
+  font-size: 14px;
 }
 
 .font-size-12 {
@@ -592,9 +592,9 @@ code {
   white-space: normal;
 }
 
-// .font-style {
-//   font-style: normal !important;
-// }
+.font-style {
+  font-style: normal;
+}
 
 .in-context-navbar {
   line-height: 44px;
