@@ -58,6 +58,19 @@ h2, .h2 {
   text-transform: uppercase;
 }
 
+// course sidebar (handouts)
+sidebar-course-handouts {
+  h2 {
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: 0.0125ex;
+    word-spacing: 0.25ex;
+  }
+  small {
+    font-size: 100%;
+  }
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -78,7 +91,7 @@ h2, .h2 {
   }
 }
 
-// menu icon at the top. Warning! This disappears automatically on wide screens, so the one built into the sidebar navigation is the only one remaining 
+// menu icon at the top. Warning! This disappears automatically on wide screens, so the one built into the sidebar navigation is the only one remaining
 .course-nav-trigger {
   margin-bottom: 1rem;
   margin-right: 1rem;
@@ -108,14 +121,14 @@ div.d-flex.ml-auto {
       font-family: var(--font-family-custom);
       justify-content: center;
     }
-  
+
     .pgn__card-header-actions {
       margin: 0;
-  
+
       .btn {
         font-size: 1rem;
       }
-      
+
     }
   }
 
@@ -141,7 +154,7 @@ div.d-flex.ml-auto {
       &:first-child {
         padding-top: 0;
       }
-  
+
       &:last-child {
         border-bottom: 0;
       }
@@ -332,17 +345,17 @@ div.d-flex.ml-auto {
     border: rem-calc(1) solid var(--mono-300);
     align-items: center;
     align-self: flex-start;
-    
+
     padding: 0.75rem;
     padding-left: 1rem;
-  
+
     &.sticky {
       position: sticky;
       left: 0;
       top: 0;
       z-index: 5;
     }
-  
+
     .outline-sidebar-heading {
       text-align: left;
       font-weight: 700;
@@ -350,7 +363,7 @@ div.d-flex.ml-auto {
       font-family: var(--font-family-custom);
       align-self: center;
       align-items: center;
-  
+
       // left caret icon
       span.pgn__icon {
         //
@@ -362,7 +375,7 @@ div.d-flex.ml-auto {
     @media (min-width: 1200px) {
       margin-bottom: 0;
     }
-  
+
     // Individual unit links
     a:not(.btn) {
       padding: 1rem;
@@ -379,23 +392,23 @@ div.d-flex.ml-auto {
         border-color: var(--mono-400);
       }
     }
-  
+
     li {
       font-size: 1rem;
       line-height: 1.5rem;
-    
+
       .collapsible-trigger {
         border-radius: 0;
         padding: 1.25rem 1.5rem 1.25rem 3rem;
-  
+
         @media (max-width: 575px) {
           padding-left: 1.5rem;
         }
-  
+
         &:hover {
           background-color: #e1dddb;
         }
-  
+
         .collapsible-icon {
           margin-inline-start: 0;
         }
@@ -406,17 +419,17 @@ div.d-flex.ml-auto {
         border: rem-calc(1) solid var(--primary);
       }
     }
-  
+
     .collapsible-body {
       padding: 0;
-  
+
       ol li > a {
         padding: 1.25rem 1.5rem 1.25rem 4rem;
-  
+
         @media (max-width: 575px) {
           padding-left: 2rem;
         }
-  
+
         &:hover {
           background-color: #e1dddb;
           text-decoration: none;
@@ -462,7 +475,7 @@ div.d-flex.ml-auto {
   .dropdown {
     position: relative;
   }
-  
+
   .dropdown-toggle {
     white-space: nowrap;
 
@@ -515,7 +528,7 @@ div.d-flex.ml-auto {
   display: grid;
   gap: 1rem;
 
-  grid-template-areas: 
+  grid-template-areas:
     "a a a"
     "b b b"
     "c c c"
@@ -543,7 +556,7 @@ div.d-flex.ml-auto {
   @include breakpoint(medium) {
     grid-template-columns: auto 7fr 3fr;
 
-    grid-template-areas: 
+    grid-template-areas:
       "a a a"
       "b b c"
       "b b c"
@@ -702,7 +715,7 @@ div.d-flex.ml-auto {
     flex-direction: row;
   }
 
-  
+
 }
 
 // Hide course license?
