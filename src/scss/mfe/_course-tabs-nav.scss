@@ -6,10 +6,10 @@
 
 // course tab nav
 #courseTabsNavigation.course-tabs-navigation {
-  margin: 0 auto;
+  width: 100%;
   background: transparent;
   padding: 0;
-  width: 100%;
+  margin: 0 auto;
 
   nav {
     padding: 1.4rem 0;
@@ -24,7 +24,7 @@
       margin-bottom: 1px;
       cursor: pointer;
 
-      &:not(:last-child) {
+      &:not(:first-child) {
         margin-left: 1.4rem;
       }
 
