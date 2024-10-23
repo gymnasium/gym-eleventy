@@ -495,9 +495,9 @@ header {
   .nav-link {
     border: 1px solid var(--mono-900);
     text-decoration: none;
+    text-transform: capitalize;
     border-radius: var(--global-button-radius);
-    font-family: var(--font-family-custom);
-    font-weight: 400;
+    font: 900 1.05rem/1 var(--font-family-custom);
 
     &:hover {
       background-color: var(--mono-600);
@@ -515,7 +515,7 @@ header {
   }
 
   .nav-link.active,
-  .show>.nav-link {
+  .show >.nav-link {
     background-color: var(--primary);
   }
 }
@@ -591,9 +591,9 @@ code {
   white-space: normal;
 }
 
-.font-style {
-  font-style: normal !important;
-}
+// .font-style {
+//   font-style: normal !important;
+// }
 
 .in-context-navbar {
   line-height: 44px;
