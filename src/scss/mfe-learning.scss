@@ -539,7 +539,7 @@ div.d-flex.ml-auto {
     "c c c"
   ;
 
-  > div[class*="col"]:empty + * .start-resume-card {
+  > div[class*="col"]:empty + * + * {
     margin-top: -1rem;
   }
 
