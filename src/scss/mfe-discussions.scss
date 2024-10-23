@@ -141,6 +141,9 @@ main.container {
 
 .discussion-post {
   .text-truncate {
+    span {
+      font-weight: 1.05rem;
+    }
     > span:first-child {
       display: block;
       font-weight: bold;
