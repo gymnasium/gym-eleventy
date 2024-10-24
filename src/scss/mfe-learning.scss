@@ -543,11 +543,22 @@ div.d-flex.ml-auto {
     "c c c"
   ;
 
+  // Remove layout gap for empty element
 
   > div[class*="col"]:empty {
     + *,
     + * + * {
       margin-top: -1rem;
+    }
+  }
+
+  // Disable course content before enrollment
+
+  > div[class*="col"]:not(:empty) {
+    + * {
+      opacity: 25%;
+      pointer-events: none;
+      user-select: none;
     }
   }
 
@@ -979,8 +990,10 @@ div.d-flex.ml-auto {
 
   // Theoretically, the "Enroll Now" button in the alert that pops up
   button {
+    // font: 700 1.25rem/1 var(--font-family-custom);
+    // padding: 1.05rem;
     margin-inline-end: 0.33rem;
-  }
+
 }
 
 .alert .alert-icon {
