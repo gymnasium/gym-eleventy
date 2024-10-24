@@ -545,7 +545,7 @@ div.d-flex.ml-auto {
 
   // Remove layout gap for empty element
 
-  > div[class*="col"]:empty {
+  > div[class*="col"]:first-child:empty {
     + *,
     + * + * {
       margin-top: -1rem;
@@ -554,7 +554,9 @@ div.d-flex.ml-auto {
 
   // Disable course content before enrollment
 
-  > div[class*="col"]:not(:empty) {
+  > div[class*="col"]:first-child:not(:empty) {
+    margin-bottom: -1rem;
+
     + * {
       opacity: 25%;
       pointer-events: none;
