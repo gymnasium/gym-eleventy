@@ -434,6 +434,7 @@
   padding: 0;
   width: 2.75rem;
   white-space: nowrap;
+  position: relative;
 
   &.btn-icon-primary {
     background-color: transparent;
@@ -442,7 +443,7 @@
   }
 
   &__icon-container {
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
   }
