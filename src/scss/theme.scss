@@ -21,10 +21,10 @@
 
 @use 'theme/view-in-course';
 
-.gym-theme.view-in-mfe {
+// padding around course unit IFRAMEs
+.view-in-mfe {
   .content-wrapper,
   .course-content {
     padding: 0;
   }
 }
-
