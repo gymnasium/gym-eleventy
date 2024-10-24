@@ -22,7 +22,7 @@
 @use 'theme/view-in-course';
 
 // padding around course unit IFRAMEs
-.view-in-mfe {
+body.view-in-mfe {
   .content-wrapper,
   .course-content {
     padding: 0;
