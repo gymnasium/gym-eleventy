@@ -6,7 +6,7 @@
 // Course Header below 2ndary nav in MFEs
 .course-header {
   background-color: var(--mono-600);
-  padding: 1rem 0;
+  padding: 1.2rem 0;
 
   &[data-course-num="106"],
   &[data-course-num="017"],
@@ -33,6 +33,7 @@
     background-color: var(--purple-500);
   }
 
+  &[data-course-num="103"],
   &[data-course-num="020"],
   &[data-course-num="018"],
   &[data-course-num="015"],
