@@ -33,6 +33,13 @@
       &.active {
         border-bottom-width: 2px;
       }
+
+      // hide tabs in course tab navigation
+      &[href*="dates"],
+      &[href*="progress"],
+      &[href*="syllabus"] {
+        display: none !important;
+      }
     }
   }
 }
