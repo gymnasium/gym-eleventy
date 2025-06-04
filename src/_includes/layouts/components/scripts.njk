@@ -17,12 +17,3 @@
   <script async src="{{ meta.js | cachebust }}"></script>
   {%- endif -%}
 {%- endif %}
-
-{#- Start OneTrust Cookies Consent Notice -#}
-{%- if config.env.ONETRUST_COOKIE_SCRIPT_ID -%}
-<script async src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-domain-script="{{ config.env.ONETRUST_COOKIE_SCRIPT_ID }}"></script>
-<script>function OptanonWrapper(){}</script>
-{%- else -%}
-<!-- ONETRUST_COOKIE_SCRIPT_ID missing! -->
-{%- endif -%}
-{#- End OneTrust Cookies Consent Notice -#}
