@@ -1,8 +1,8 @@
 slug: take5-featured
 type: tutorial
-id: GYM-5062
+id: GYM-5017
 subtitle: "Featured Tutorial"
-new: true
+new: false
 cta:
   label: Watch and Learn
 # includes
