@@ -44,3 +44,15 @@ package = "netlify-plugin-cache"
   # framework = "#static"
   port=8888
   targetPort=4040
+
+[[redirects]]
+  from = "https://gym.soy/*"
+  to = "https://thegymnasium.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://gymnasium.day/*"
+  to = "https://thegymnasium.com/:splat"
+  status = 301
+  force = true
