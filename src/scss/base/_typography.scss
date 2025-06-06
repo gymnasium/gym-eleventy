@@ -120,7 +120,7 @@ p {
   text-wrap: pretty;
 }
 
-p + *,
+p:not([class]:first-child) + *,
 * + p {
   margin-top: 1rem;
 }
