@@ -5,13 +5,12 @@ header:
   lede: Explore courses
   topics: on design, development, UX, prototyping, accessibility, and career skills.
   promo:
-    pitch: Looking to earn a certificate?
+    pitch: Looking to grow your skills?
     action: Explore our Full Courses.
 info:
   - title: Benefits
     items:
     - label: 100% free self-paced online learning
-    - label: Earn a Badge to share on your résumé and social media
     - label: Short, concise courses on a wide range of topics
     - label: High-quality and in-depth content by industry experts
   - title: Video Lessons
