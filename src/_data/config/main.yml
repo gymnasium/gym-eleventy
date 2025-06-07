@@ -265,9 +265,9 @@ colors:
 msg:
   banner:
     active: true
-    class: 
+    class:
     content: |
-      <p><span aria-label="Pushpin emoji" role="img">📌</span> <strong>Some things have changed, but our courses and content remain free.</strong> We no longer offer credentials. <a href="/faq/">Please see the FAQ for details</a>.</p>
+      <p><span aria-label="Pushpin emoji" role="img">📌</span> <strong>Some things have changed, but our courses and content remain free.</strong> We no longer offer credentials. <a href="/faq/">Please see our FAQ for details</a>.</p>
   errors:
     error_404:
       heading: '404: Page Not Found'
