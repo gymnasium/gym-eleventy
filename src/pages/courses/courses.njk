@@ -185,16 +185,22 @@
       {%- endif -%}
 
       {%- if item.instructor -%}
-      <section class="course-instructor">
-        <h2>{{ config.main.msg.mfe.course_about.headings.instructor }}</h2>
-        <img src="{{ bios[item.instructor].img }}" alt="Image of {{ bios[item.instructor].name }}">
-        <h3>{{ bios[item.instructor].name }}</h3>
-        <p>{{ bios[item.instructor].description | safe }}</p>
-
-        {%- if bios[item.instructor].extended_description -%}
-          {{ bios[item.instructor].extended_description | safe }}
-        {%- endif -%}
-      </section>
+        {%- set bio = bios[item.instructor] -%}
+        <section class="course-instructor">
+          <h2>{{ config.main.msg.mfe.course_about.headings.instructor }}</h2>
+          {%- if bio.img and bio.img != '/img/bios/placeholder.jpg' -%}
+            <img alt="Headshot of {{ bio.name }}." src="{{ bio.img }}">
+          {%- endif -%}
+          <h3>{{ bio.name }}</h3>
+          {%- if bio.extended_description -%}
+            {%- if not (bio.extended_description | lower).includes(bio.name | lower) and bio.description -%}
+              <p>{{ bio.description | safe }}</p>
+            {%- endif -%}
+            {{ bio.extended_description | safe }}
+          {%- elif bio.description -%}
+            <p>{{ bio.description | safe }}</p>
+          {%- endif -%}
+        </section>
       {%- endif -%}
     </aside>
   </div>
