@@ -120,7 +120,7 @@ p {
   text-wrap: pretty;
 }
 
-p:not([class]) + *,
+p:not(.topic) + *,
 * + p {
   margin-top: 1rem;
 }
