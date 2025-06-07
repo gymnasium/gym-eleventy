@@ -17,6 +17,8 @@ topic: "Development"
 subtopics:
   - label: "Design Systems"
   - label: "Pattern Library"
+  - label: "Prototyping"
+  - label: "UX"
 description: "Learn how to use Atomic Design methodology within Pattern Lab to create reusable user interface components."
 instructor: bfrost
 skills:
