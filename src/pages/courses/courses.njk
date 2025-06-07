@@ -193,7 +193,7 @@
           {%- endif -%}
           <h3>{{ bio.name }}</h3>
           {%- if bio.extended_description -%}
-            {%- if not (bio.extended_description | lower).includes(bio.name | lower) and bio.description -%}
+            {%- if not bio.extended_description.includes(bio.name) and bio.description -%}
               <p>{{ bio.description | safe }}</p>
             {%- endif -%}
             {{ bio.extended_description | safe }}
