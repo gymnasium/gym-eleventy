@@ -193,9 +193,8 @@
           {%- endif -%}
           <h3>{{ bio.name }}</h3>
           {%- if bio.extended_description -%}
-            {%- set clean = bio.extended_description | replace(r/<\/?p>/g, '') | trim -%}
-            {%- set startsWithName = clean.startsWith(bio.name) -%}
-            {%- if startsWithName -%}
+            {%- set clean_description = bio.extended_description | replace(r/<\/?p>/g, '') | trim -%}
+            {%- if clean_description.startsWith(bio.name) -%}
               {{ bio.extended_description | safe }}
             {%- else -%}
               {%- if bio.description -%}
